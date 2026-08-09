@@ -10,21 +10,15 @@ https://www.gamerpower.com/api-read?ref=freepublicapis.com#apps
 https://www.inchcalculator.com/
 https://www.omnicalculator.com/
 https://www.thecalculatorsite.com/
+https://t2tool.sbs/
 
 
 
-In @tools folder, I have added several categories folder, make sure u add index.html file for each categories folder, and each page should have same layout style and list all tools inside that folder.
 also there will tags, like tool @json-formatter.html tool page will have tags: JSON and in categories of Coding (folder).
 
-also in hero section live search bar for users to search tools 
 
-also in navbar section add below the troolify txt in small (by F9XR Team)
-also add logo of F9XR Team (https://f9xr.github.io/logo.webp)
-
-use icons from font awsome 
 make sure to use images of @hero-images in footer as well 
 
-also link all categories folder in homepage     
 
 
 Each Tools Page:
@@ -68,8 +62,6 @@ Comments:
         async>
 </script>
 
-CTA section for F9XR Team just above the footer
-footer 
+Mobile responsiveness
 
-
-
+https://www.threads.com/@f9xrteam

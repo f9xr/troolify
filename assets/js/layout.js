@@ -1,16 +1,17 @@
 /* ============================================================================
    Troolify — Shared Layout Injector
    ----------------------------------------------------------------------------
-   Auto-injects the site header + footer into every page so navigation and
-   footer markup stay DRY (single source of truth).
+   Auto-injects the site header, CTA and footer into every page so navigation
+   and footer markup stay DRY (single source of truth).
 
-   Two design themes are supported:
+   A single design is used everywhere (matching index.html):
 
-     • "main"  — dark theme (style.css):      .navbar / .mobile-menu / .footer
-     • "tool"  — light theme (tool.css):      .site-header / .footer-row
+     • Header — dark navbar + mobile menu (style.css / site-shell.css)
+     • CTA    — conversion band injected just above the footer
+     • Footer — rich brand footer (Tailwind utilities in tailwind.css)
 
-   Opt a page into the tool theme by adding  data-layout="tool"  to <body>.
-   Pages without the attribute use the main theme.
+   The CTA is skipped on pages that already ship their own (e.g. index.html,
+   which has a static  .final-cta  section).
 
    Include this script on every page with (adjust the path for subfolders):
 
@@ -65,9 +66,6 @@
         // Absolute (from this page) links to the two key destinations.
         var homeHref = prefix + "index.html";
         var toolsHref = pageDir === "tools" ? "./index.html" : prefix + "tools/index.html";
-
-        var isTool = body.getAttribute("data-layout") === "tool";
-        var isCatalog = isTool && pageDir === "tools" && fileName === "index.html";
 
         /* --------------------------------------------------------------------
            MAIN theme — dark navbar + mobile menu + footer (style.css)
@@ -196,48 +194,40 @@
             '</footer>';
 
         /* --------------------------------------------------------------------
-           TOOL theme — light header + privacy footer (tool.css)
+           CTA band — conversion section injected just above the footer
+           (skipped on pages that already ship a static CTA, e.g. index.html)
            -------------------------------------------------------------------- */
 
-        var headerTool =
-            '<header class="site-header">' +
-                '<div class="container">' +
-                    '<a class="brand" href="' + homeHref + '" aria-label="Troolify home">' +
-                        '<span class="brand-logo" aria-hidden="true"><img src="https://f9xr.github.io/logo.webp" alt=""></span>' +
-                        '<span class="brand-meta">' +
-                            '<span class="brand-name">Troolify</span>' +
-                            '<span class="brand-sub">by F9XR Team</span>' +
-                        '</span>' +
-                    '</a>' +
-                    '<nav class="header-nav main-nav" aria-label="Primary">' +
-                        '<a href="' + homeHref + '#about">Features</a>' +
-                        '<a href="https://f9xr.github.io/legals/privacy.html" target="_blank" rel="noopener">Privacy</a>' +
-                        '<a href="' + toolsHref + '">All tools</a>' +
-                    '</nav>' +
-                    '<button type="button" class="nav-search-btn" aria-label="Search tools" aria-haspopup="dialog">' +
-                        '<i class="fa-solid fa-magnifying-glass"></i>' +
-                    '</button>' +
-                    '<a class="back-link" href="' + (isCatalog ? homeHref : toolsHref) + '">' +
-                        '<i class="fa-solid fa-arrow-left"></i>' + (isCatalog ? "Back to Home" : "All tools") +
-                    '</a>' +
-                '</div>' +
-            '</header>';
+        var ctaMain =
+            '<section class="tx-cta" aria-label="Call to action">' +
+                '<div class="mx-4 my-8 rounded-[32px] bg-[#3B82F6] p-[3px] shadow-[0_0_60px_rgba(59,130,246,0.25)] sm:mx-6">' +
+                    '<div class="relative overflow-hidden rounded-[29px] bg-[#0A0A0A] px-6 py-16 text-center sm:px-10 sm:py-20">' +
 
-        var footerTool =
-            '<footer>' +
-                '<div class="footer-bg" style="background-image:url(\'' + prefix + 'assets/images/hero-image-1.webp\')"></div>' +
-                '<div class="footer-bg-overlay"></div>' +
-                '<div class="container">' +
-                    '<div class="footer-row">' +
-                        '<span class="privacy-badge"><i class="fa-solid fa-shield-halved"></i>100% Client-Side Processing Assurance</span>' +
-                        '<div class="footer-links">' +
-                            '<a href="' + toolsHref + '">All tools</a>' +
-                            '<a href="https://f9xr.github.io/legals/privacy.html" target="_blank" rel="noopener">Privacy</a>' +
-                            '<a href="https://f9xr.github.io/legals/terms.html" target="_blank" rel="noopener">Terms</a>' +
+                        /* Ambient brand glow — radial accent-blue blobs */
+                        '<div class="pointer-events-none absolute -top-40 left-1/2 h-80 w-[720px] -translate-x-1/2 rounded-full bg-[#3B82F6]/15 blur-[120px]" aria-hidden="true"></div>' +
+                        '<div class="pointer-events-none absolute -bottom-32 -right-24 h-72 w-72 rounded-full bg-[#3B82F6]/10 blur-[100px]" aria-hidden="true"></div>' +
+
+                        '<div class="relative">' +
+                            '<span class="inline-block rounded-full border border-[#3B82F6]/40 bg-[#3B82F6]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-[#60A5FA]">Troolify &middot; Free Tools</span>' +
+                            '<h2 class="mx-auto mt-6 max-w-2xl text-3xl font-black uppercase italic leading-tight tracking-tight text-white sm:text-5xl">Your Next Useful Tool Is Already Here.</h2>' +
+                            '<p class="mx-auto mt-5 max-w-xl text-base leading-[1.8] text-[#9CA3AF] sm:text-lg">Explore Troolify and discover a growing collection of tools built to make everyday digital tasks simpler &mdash; free, fast and 100% client-side.</p>' +
+                            '<div class="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">' +
+                                '<a href="' + toolsHref + '" class="inline-flex items-center gap-2 rounded-xl bg-[#3B82F6] px-7 py-3.5 text-sm font-bold text-white shadow-[0_4px_20px_rgba(59,130,246,0.35)] transition hover:bg-[#2563EB]">Explore All Tools <i class="fa-solid fa-arrow-right"></i></a>' +
+                                '<a href="' + homeHref + '#about" class="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-7 py-3.5 text-sm font-bold text-white transition hover:border-[#3B82F6] hover:text-[#60A5FA]">Learn More</a>' +
+                            '</div>' +
                         '</div>' +
                     '</div>' +
                 '</div>' +
-            '</footer>';
+            '</section>';
+
+        /* --------------------------------------------------------------------
+           Back-to-top button — small floating control, injected on every page
+           -------------------------------------------------------------------- */
+
+        var backToTopMarkup =
+            '<button type="button" id="backToTop" aria-label="Back to top" class="fixed bottom-6 right-6 z-[1500] hidden h-11 w-11 place-items-center rounded-full bg-[#3B82F6] text-white shadow-[0_4px_20px_rgba(59,130,246,0.35)] transition hover:bg-[#2563EB]">' +
+                '<i class="fa-solid fa-arrow-up" aria-hidden="true"></i>' +
+            '</button>';
 
         /* --------------------------------------------------------------------
            Global search modal markup (DESIGN.md §9 Search Modal)
@@ -261,14 +251,16 @@
            Inject into the page
            -------------------------------------------------------------------- */
 
-        if (isTool) {
-            body.insertAdjacentHTML("afterbegin", headerTool);
-            body.insertAdjacentHTML("beforeend", footerTool);
+        if (document.querySelector(".final-cta, .tx-cta")) {
+            body.insertAdjacentHTML("afterbegin", headerMain);
+            body.insertAdjacentHTML("beforeend", footerMain);
         } else {
             body.insertAdjacentHTML("afterbegin", headerMain);
+            body.insertAdjacentHTML("beforeend", ctaMain);
             body.insertAdjacentHTML("beforeend", footerMain);
         }
         body.insertAdjacentHTML("beforeend", searchModalMarkup);
+        body.insertAdjacentHTML("beforeend", backToTopMarkup);
 
         /* --------------------------------------------------------------------
            Header behaviour — scroll effect, mobile menu, active link
@@ -281,6 +273,20 @@
         }
         updateScrolled();
         window.addEventListener("scroll", updateScrolled, { passive: true });
+
+        /* Back-to-top button */
+        var backToTop = document.getElementById("backToTop");
+
+        function updateBackToTop() {
+            if (backToTop) backToTop.classList.toggle("hidden", window.scrollY < 400);
+        }
+        updateBackToTop();
+        window.addEventListener("scroll", updateBackToTop, { passive: true });
+        if (backToTop) {
+            backToTop.addEventListener("click", function () {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+        }
 
         var menuBtn = document.querySelector(".mobile-menu-btn");
         var mobileMenu = document.querySelector(".mobile-menu");
@@ -311,9 +317,9 @@
             if (e.key === "Escape" && isMenuOpen) toggleMenu(false);
         });
 
-        // Highlight the active nav link on the home page (main theme only).
-        var isHome = fileName === "" || fileName === "index.html";
-        if (!isTool && isHome) {
+        // Highlight the active nav link on the root home page only.
+        var isHome = dirs.length === 1 && (fileName === "" || fileName === "index.html");
+        if (isHome) {
             document.querySelectorAll(".nav-links a").forEach(function (link) {
                 if (link.getAttribute("href").indexOf("#home") !== -1) {
                     link.classList.add("active");
