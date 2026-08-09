@@ -1,0 +1,75 @@
+https://www.freepublicapis.com/tags/popular
+
+https://www.freepublicapis.com/railway-station-photos
+
+https://abhi-api.vercel.app/docs
+
+https://www.gamerpower.com/api-read?ref=freepublicapis.com#apps
+
+
+https://www.inchcalculator.com/
+https://www.omnicalculator.com/
+https://www.thecalculatorsite.com/
+
+
+
+In @tools folder, I have added several categories folder, make sure u add index.html file for each categories folder, and each page should have same layout style and list all tools inside that folder.
+also there will tags, like tool @json-formatter.html tool page will have tags: JSON and in categories of Coding (folder).
+
+also in hero section live search bar for users to search tools 
+
+also in navbar section add below the troolify txt in small (by F9XR Team)
+also add logo of F9XR Team (https://f9xr.github.io/logo.webp)
+
+use icons from font awsome 
+make sure to use images of @hero-images in footer as well 
+
+also link all categories folder in homepage     
+
+
+Each Tools Page:
+
+Breadcrumps: Home Icon / category / Tags / tool name 
+
+Tool Name
+Very Short Tool Description
+Option to Share, Embed Tool, Feedback button 
+Tool Published by: F9XR Editorial Team | Reviewed by: Review Board |  Last Updated: 2026-08-09
+
+Actuall Tool
+
+Disclaimer: Whilst every effort has been made in building our calculator tools, we are not to be held liable for any damages or monetary losses arising out of or in connection with their use. Full disclaimer (linked to disclaimer page).
+
+
+On this page (Table of Content) - collapsed by deafult
+
+ How to use this tool?
+How Tool Works
+What is Tool Name and Topic
+How to calculate 
+Formula for 
+Example 
+Key Takeaways
+Related Questions (FAQ)
+Conclusion
+References Box
+Keyword & Tags Box
+Publisher / Author Box
+
+
+Related Tools with live search bar Icon
+
+Comments:
+<script src="https://utteranc.es/client.js"
+        repo="f9xr/troolify"
+        issue-term="pathname"
+        theme="github-dark"
+        crossorigin="anonymous"
+        async>
+</script>
+
+CTA section for F9XR Team just above the footer
+footer 
+
+
+

@@ -1,0 +1,11 @@
+# Troolify robots.txt
+# Allow all crawlers to access the site.
+
+User-agent: *
+Allow: /
+
+# Empty category pages are kept out of the index via per-page meta robots noindex.
+# Do not crawl utility/temporary paths.
+Disallow: /todo.txt
+
+Sitemap: https://f9xr.github.io/troolify/sitemap.xml

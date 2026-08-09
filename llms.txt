@@ -1,0 +1,25 @@
+# Troolify
+
+> Online tools hub by F9XR Team — free, fast, 100% client-side web utilities.
+
+Every Troolify tool runs entirely in your browser. Your data never leaves your device.
+
+## Tools
+- [Word Counter](https://f9xr.github.io/troolify/tools/Text/word-counter.html): Live word, character, sentence and reading-time stats.
+- [JSON Formatter](https://f9xr.github.io/troolify/tools/Coding/json-formatter.html): Format, validate, minify and copy JSON instantly.
+
+## Catalog
+- [Utility Catalog](https://f9xr.github.io/troolify/tools/index.html): Browse every category and tool.
+
+## About
+- [Home](https://f9xr.github.io/troolify/index.html)
+- [Editorial Policies](https://f9xr.github.io/troolify/press/editorial-policies.html)
+
+## Company
+- [F9XR Team](https://f9xr.github.io)
+- [GitHub](https://github.com/f9xr/troolify)
+- [Privacy](https://f9xr.github.io/legals/privacy.html)
+- [Terms](https://f9xr.github.io/legals/terms.html)
+
+## Contact
+- Email: tontufytservices@gmail.com
