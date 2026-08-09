@@ -161,6 +161,7 @@
                                     '<li><a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener" class="inline-flex items-center gap-2.5 text-white/80 transition hover:text-[#3B82F6]"><i class="fa-brands fa-linkedin w-4 text-center"></i>LinkedIn</a></li>' +
                                     '<li><a href="https://instagram.com/f9xrteam" target="_blank" rel="noopener" class="inline-flex items-center gap-2.5 text-white/80 transition hover:text-[#3B82F6]"><i class="fa-brands fa-instagram w-4 text-center"></i>Instagram</a></li>' +
                                     '<li><a href="https://youtube.com/@QuarterlyLIV" target="_blank" rel="noopener" class="inline-flex items-center gap-2.5 text-white/80 transition hover:text-[#3B82F6]"><i class="fa-brands fa-youtube w-4 text-center"></i>YouTube</a></li>' +
+                                    '<li><a href="https://www.threads.com/@f9xrteam" target="_blank" rel="noopener" class="inline-flex items-center gap-2.5 text-white/80 transition hover:text-[#3B82F6]"><i class="fa-brands fa-threads w-4 text-center"></i>Threads</a></li>' +
                                 '</ul>' +
                             '</nav>' +
 
