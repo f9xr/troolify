@@ -82,7 +82,7 @@
                     '</nav>' +
                     /* Centered brand */
                     '<a href="' + homeHref + '" class="brand">' +
-                        '<img src="https://f9xr.github.io/logo.webp" alt="F9XR Team" class="brand-logo-img">' +
+                        '<img src="' + prefix + 'assets/images/logo_nobg.png" alt="F9XR Team" class="brand-logo-img">' +
                         '<span class="brand-text">Troolify<span class="brand-sub">by F9XR Team</span></span>' +
                     '</a>' +
                     /* Right-side menu + actions */
@@ -112,9 +112,8 @@
 
         var footerMain =
             '<footer class="tx-footer">' +
-                /* Accent-blue border frame with blue-tinted shadow (DESIGN.md §3, §5) */
-                '<div class="mx-4 my-8 rounded-[32px] bg-[#3B82F6] p-[3px] shadow-[0_0_60px_rgba(59,130,246,0.25)] sm:mx-6">' +
-                    '<div class="relative overflow-hidden rounded-[29px] bg-[#0A0A0A] px-6 py-12 sm:px-10 sm:py-14 lg:px-16">' +
+                /* Full-width canvas — transparent bg so the footer merges with the page content bg */
+                '<div class="relative px-6 py-12 sm:px-10 sm:py-14 lg:px-16">' +
 
                         /* Ambient brand glow — radial accent-blue blobs (DESIGN.md §5) */
                         '<div class="pointer-events-none absolute -top-40 left-1/2 h-80 w-[720px] -translate-x-1/2 rounded-full bg-[#3B82F6]/15 blur-[120px]" aria-hidden="true"></div>' +
@@ -129,7 +128,7 @@
                             /* Left column — brand mission */
                             '<div>' +
                                 '<a href="' + homeHref + '" class="inline-flex items-center gap-3">' +
-                                    '<span class="grid h-9 w-9 place-items-center rounded-xl bg-[#3B82F6] text-white shadow-[0_0_20px_rgba(59,130,246,0.45)]"><i class="fa-solid fa-cube"></i></span>' +
+                                    '<img src="' + prefix + 'assets/images/logo_nobg.png" alt="Troolify" class="h-9 w-auto object-contain">' +
                                     '<span class="text-xl font-bold tracking-tight text-white">Troolify</span>' +
                                 '</a>' +
                                 '<p class="mt-7 max-w-md text-base leading-[1.8] text-[#F8F9FA]/90 sm:text-lg">Troolify is a privacy-first workspace on the internet where your digital workflows run instantly, securely, and entirely inside your browser.</p>' +
@@ -191,7 +190,6 @@
                             '</div>' +
                         '</div>' +
                     '</div>' +
-                '</div>' +
             '</footer>';
 
         /* --------------------------------------------------------------------
@@ -201,21 +199,20 @@
 
         var ctaMain =
             '<section class="tx-cta" aria-label="Call to action">' +
-                '<div class="mx-4 my-8 rounded-[32px] bg-[#3B82F6] p-[3px] shadow-[0_0_60px_rgba(59,130,246,0.25)] sm:mx-6">' +
-                    '<div class="relative overflow-hidden rounded-[29px] bg-[#0A0A0A] px-6 py-16 text-center sm:px-10 sm:py-20">' +
+                '<div class="cta-3d">' +
+                    '<div class="cta-panel">' +
 
-                        /* Ambient brand glow — radial accent-blue blobs */
-                        '<div class="pointer-events-none absolute -top-40 left-1/2 h-80 w-[720px] -translate-x-1/2 rounded-full bg-[#3B82F6]/15 blur-[120px]" aria-hidden="true"></div>' +
-                        '<div class="pointer-events-none absolute -bottom-32 -right-24 h-72 w-72 rounded-full bg-[#3B82F6]/10 blur-[100px]" aria-hidden="true"></div>' +
+                        /* Glassmorphism shapes — frosted cyan/white blobs behind the copy */
+                        '<div class="cta-blob cta-blob-1" aria-hidden="true"></div>' +
+                        '<div class="cta-blob cta-blob-2" aria-hidden="true"></div>' +
+                        '<div class="cta-blob cta-blob-3" aria-hidden="true"></div>' +
+                        '<div class="cta-blob cta-blob-4" aria-hidden="true"></div>' +
 
-                        '<div class="relative">' +
-                            '<span class="inline-block rounded-full border border-[#3B82F6]/40 bg-[#3B82F6]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-[#60A5FA]">Troolify &middot; Free Tools</span>' +
-                            '<h2 class="mx-auto mt-6 max-w-2xl text-3xl font-black uppercase italic leading-tight tracking-tight text-white sm:text-5xl">Your Next Useful Tool Is Already Here.</h2>' +
-                            '<p class="mx-auto mt-5 max-w-xl text-base leading-[1.8] text-[#9CA3AF] sm:text-lg">Explore Troolify and discover a growing collection of tools built to make everyday digital tasks simpler &mdash; free, fast and 100% client-side.</p>' +
-                            '<div class="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">' +
-                                '<a href="' + toolsHref + '" class="inline-flex items-center gap-2 rounded-xl bg-[#3B82F6] px-7 py-3.5 text-sm font-bold text-white shadow-[0_4px_20px_rgba(59,130,246,0.35)] transition hover:bg-[#2563EB]">Explore All Tools <i class="fa-solid fa-arrow-right"></i></a>' +
-                                '<a href="' + homeHref + '#about" class="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-7 py-3.5 text-sm font-bold text-white transition hover:border-[#3B82F6] hover:text-[#60A5FA]">Learn More</a>' +
-                            '</div>' +
+                        '<div class="cta-inner">' +
+                            '<h2 class="cta-h2">Simplify Tech Deployments, Optimize <i class="fa-solid fa-circle-nodes" aria-hidden="true"></i> Systems.</h2>' +
+                            '<p class="cta-sub">No tech bloat, no manual bottlenecks, just a better way to scale your digital infrastructure.</p>' +
+                            '<a href="https://f9xr.github.io/pages/contact.html" target="_blank" rel="noopener" class="cta-pill">GET A FREE TECH AUDIT</a>' +
+                            '<p class="cta-foot"><i class="fa-solid fa-check" aria-hidden="true"></i>Zero commitment required.</p>' +
                         '</div>' +
                     '</div>' +
                 '</div>' +
@@ -249,15 +246,50 @@
             '</div>';
 
         /* --------------------------------------------------------------------
+           Custom styles for the injected CTA + footer wordmark.
+           Tailwind utilities are pre-compiled (no build step in this repo), so
+           anything new is shipped as plain CSS scoped under .cta-* / .footer-*.
+           -------------------------------------------------------------------- */
+
+        var shellStyles =
+            '<style>' +
+                '.cta-panel{position:relative;overflow:hidden;border-radius:30px;padding:clamp(2.25rem,5vw,3.75rem) clamp(1.5rem,4.5vw,3.5rem);background:linear-gradient(140deg,#38BDF8 0%,#2563EB 42%,#1D4ED8 72%,#172554 100%);text-align:center}' +
+                '.cta-blob{position:absolute;border-radius:50%;pointer-events:none}' +
+                '.cta-blob-1{width:clamp(200px,30vw,340px);height:clamp(200px,30vw,340px);top:-30%;left:-12%;background:linear-gradient(135deg,rgba(224,242,254,.85),rgba(125,211,252,.2));backdrop-filter:blur(8px);filter:blur(2px)}' +
+                '.cta-blob-2{width:clamp(220px,32vw,380px);height:clamp(220px,32vw,380px);bottom:-35%;right:-14%;background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.75),rgba(147,197,253,.12));backdrop-filter:blur(10px);filter:blur(3px)}' +
+                '.cta-blob-3{width:clamp(120px,18vw,200px);height:clamp(120px,18vw,200px);top:12%;right:10%;background:rgba(165,243,252,.5);backdrop-filter:blur(12px)}' +
+                '.cta-blob-4{width:clamp(100px,14vw,160px);height:clamp(100px,14vw,160px);bottom:8%;left:10%;background:rgba(255,255,255,.28);backdrop-filter:blur(14px)}' +
+                '.cta-inner{position:relative;z-index:2;margin:0 auto;max-width:840px;display:flex;flex-direction:column;align-items:center}' +
+                '.cta-h2{margin:0;font-size:clamp(1.6rem,4vw,3.1rem);line-height:1.14;font-weight:800;letter-spacing:-.02em;color:#fff;text-wrap:balance}' +
+                '.cta-h2 .fa-circle-nodes{display:inline-block;margin:0 .12em;font-size:1.06em;color:#fff;vertical-align:-.06em;text-shadow:0 0 26px rgba(255,255,255,.65)}' +
+                '.cta-sub{margin:.95rem auto 0;max-width:560px;font-size:clamp(.95rem,1.9vw,1.12rem);line-height:1.7;color:#BFDBFE}' +
+                '.cta-pill{margin-top:1.6rem;display:inline-flex;align-items:center;justify-content:center;padding:.95rem 2.3rem;border-radius:999px;background:rgba(15,23,42,.55);border:1px solid rgba(255,255,255,.85);backdrop-filter:blur(8px);color:#fff;font-size:.78rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;box-shadow:0 18px 40px -16px rgba(2,6,23,.55);transition:transform .25s ease,background .25s ease,box-shadow .25s ease}' +
+                '.cta-pill:hover{background:rgba(15,23,42,.78);transform:scale(1.045);box-shadow:0 24px 55px -16px rgba(2,6,23,.65)}' +
+                '.cta-pill:focus-visible{outline:2px solid #fff;outline-offset:3px}' +
+                '.cta-foot{margin:1.2rem 0 0;display:inline-flex;align-items:center;gap:.5rem;font-size:.8rem;color:#BAE6FD}' +
+                '.cta-foot i{width:16px;height:16px;flex-shrink:0;display:inline-grid;place-items:center;border:1px solid rgba(255,255,255,.65);border-radius:999px;font-size:8px;color:#fff}' +
+
+                '.tx-cta{perspective:1400px}' +
+                '.cta-3d{position:relative;z-index:0;max-width:1280px;width:calc(100% - 2rem);margin:2.5rem auto 0;border-radius:30px;transition:transform .45s cubic-bezier(.16,1,.3,1),box-shadow .45s ease;box-shadow:0 26px 55px -10px rgba(0,0,0,.6),0 14px 28px -12px rgba(0,0,0,.55)}' +
+                '.tx-cta:hover .cta-3d{transform:rotateX(3deg) translateY(-5px) scale(1.005);box-shadow:0 40px 80px -16px rgba(0,0,0,.65),0 20px 40px -16px rgba(0,0,0,.6)}' +
+
+                '.tx-footer{background:transparent;padding:0}' +
+
+                '@media(max-width:640px){.cta-panel{padding:clamp(2rem,12vw,3rem) 1.25rem}.cta-blob-1{left:-35%;top:-18%}.cta-blob-2{right:-35%;bottom:-25%}.cta-h2{font-size:clamp(1.5rem,7vw,2.1rem)}}' +
+            '</style>';
+
+        /* --------------------------------------------------------------------
            Inject into the page
            -------------------------------------------------------------------- */
 
         if (document.querySelector(".final-cta, .tx-cta")) {
             body.insertAdjacentHTML("afterbegin", headerMain);
+            body.insertAdjacentHTML("beforeend", shellStyles);
             body.insertAdjacentHTML("beforeend", footerMain);
         } else {
             body.insertAdjacentHTML("afterbegin", headerMain);
             body.insertAdjacentHTML("beforeend", ctaMain);
+            body.insertAdjacentHTML("beforeend", shellStyles);
             body.insertAdjacentHTML("beforeend", footerMain);
         }
         body.insertAdjacentHTML("beforeend", searchModalMarkup);

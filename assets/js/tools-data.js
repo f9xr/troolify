@@ -1,6 +1,6 @@
 window.TOOLS = [
-  { name:"Word Counter", desc:"Live word, character, sentence and reading-time stats as you type — processed in this tab.", icon:"fa-solid fa-align-left", tag:"Text", category:"Text", href:"tools/Text/word-counter.html" },
-  { name:"JSON Formatter", desc:"Format, validate, minify and copy JSON instantly without ever sending it to a server.", icon:"fa-solid fa-code", tag:"JSON", category:"Coding", href:"tools/Coding/json-formatter.html" }
+  { name:"Word Counter", desc:"Live word, character, sentence and reading-time stats as you type — processed in this tab.", icon:"fa-solid fa-align-left", tag:"Text", category:"Text", href:"tools/text/word-counter.html" },
+  { name:"JSON Formatter", desc:"Format, validate, minify and copy JSON instantly without ever sending it to a server.", icon:"fa-solid fa-code", tag:"JSON", category:"Coding", href:"tools/coding/json-formatter.html" }
 ];
 
 window.CATEGORIES = [

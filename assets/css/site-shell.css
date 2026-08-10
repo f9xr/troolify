@@ -57,11 +57,10 @@
 }
 
 .navbar .brand-logo-img {
-    width: 34px;
     height: 34px;
-    border-radius: 10px;
-    object-fit: cover;
-    box-shadow: 0 4px 14px rgba(59, 130, 246, 0.35);
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 14px rgba(59, 130, 246, 0.35));
 }
 
 .navbar .brand-text {

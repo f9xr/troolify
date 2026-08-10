@@ -20,7 +20,7 @@
 | Brand/entity | Troolify by F9XR Team (https://f9xr.github.io) |
 | Primary conversion | Tool usage (client-side utilities, 100% browser-based) |
 
-**Known-good baseline (established pre-audit):** All 23 pages have `lang="en"`, `charset="UTF-8"` first, correct `viewport`, unique `<title>` tags, Plus Jakarta Sans + Font Awesome, and a functioning injected header/footer/search modal. Two pages (`tools/Text/word-counter.html`, `tools/Coding/json-formatter.html`) had broken `layout.js`/`tool.css` relative paths — **these were found and fixed during this audit**; re-verification shows 23/23 pages now resolve `layout.js` correctly.
+**Known-good baseline (established pre-audit):** All 23 pages have `lang="en"`, `charset="UTF-8"` first, correct `viewport`, unique `<title>` tags, Plus Jakarta Sans + Font Awesome, and a functioning injected header/footer/search modal. Two pages (`tools/text/word-counter.html`, `tools/coding/json-formatter.html`) had broken `layout.js`/`tool.css` relative paths — **these were found and fixed during this audit**; re-verification shows 23/23 pages now resolve `layout.js` correctly.
 
 ---
 
@@ -108,7 +108,7 @@
 
   - **Issue 1: Duplicate-pattern meta descriptions on 17 category pages**
     - **Severity:** Medium
-    - **Location:** `tools/**/index.html` (17 category pages + catalog) — e.g. `tools/AI/index.html:7`, `tools/Finance/index.html:7`
+    - **Location:** `tools/**/index.html` (17 category pages + catalog) — e.g. `tools/ai/index.html:7`, `tools/finance/index.html:7`
     - **Problem:** Every category page uses the same sentence skeleton "X tools on Troolify — 100% client-side utilities…". Google collapses these into near-duplicate entries; only a single template is served, which weakens each category's SERP presence and risks the cluster being treated as doorway/thin.
     - **Current Code:**
       ```html
@@ -385,9 +385,9 @@
 
   - **Issue 1b: 15 empty "coming soon" category pages + thin catalog/press pages**
     - **Severity:** High
-    - **Location:** `tools/{AI,Converters,Cooking,Crypto,Finance,Fun,Health,Image,Misc,PDF,Prompts,SEO,Statistics,Time,Video}/index.html`; `tools/index.html`; `press/editorial-policies.html`
+    - **Location:** `tools/{ai,converters,cooking,crypto,finance,fun,health,image,misc,pdf,prompts,seo,statistics,time,video}/index.html`; `tools/index.html`; `press/editorial-policies.html`
     - **Problem:** 15 of 17 category pages render zero tools (static text 44–50 words each, identical template, "This category is coming soon"). `tools/index.html` is 50 static words. `press/editorial-policies.html` is 24 words ("under construction") and is orphaned (no inbound links). Google indexes thin pages poorly and can classify near-identical template pages as doorway/thin content, diluting the site's overall quality signal.
-    - **Current Code:** `tools/AI/index.html:37` → `<h3>This category is coming soon</h3>` + 2 sentences.
+    - **Current Code:** `tools/ai/index.html:37` → `<h3>This category is coming soon</h3>` + 2 sentences.
     - **Root Cause:** The category tree was scaffolded before any tools existed; pages were shipped rather than hidden.
     - **Ranking Impact:** Index-quality dilution and crawl-budget waste (skill Pillar 21: index bloat assessment).
     - **Fix:** Add to the `<head>` of each of the 15 empty categories:
@@ -407,9 +407,9 @@
 |---|---|---|
 | /index.html | Indexable | none (needs canonical) |
 | /tools/index.html | Indexable | none (thin — add copy) |
-| /tools/Text/word-counter.html | Indexable | none (add schema/copy) |
-| /tools/Coding/json-formatter.html | Indexable | none (add schema/copy) |
-| /tools/Text/index.html, /tools/Coding/index.html | Indexable (1 tool each) | none — keep |
+| /tools/text/word-counter.html | Indexable | none (add schema/copy) |
+| /tools/coding/json-formatter.html | Indexable | none (add schema/copy) |
+| /tools/text/index.html, /tools/coding/index.html | Indexable (1 tool each) | none — keep |
 | 15 empty category pages | **Indexable today — should be noindex** | add `noindex, follow` |
 | /press/editorial-policies.html | Orphaned, thin | noindex or publish |
 | /404.html | Orphaned (server-referenced) | OK |

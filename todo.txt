@@ -28,11 +28,11 @@ Breadcrumps: Home Icon / category / Tags / tool name
 Tool Name
 Very Short Tool Description
 Option to Share, Embed Tool, Feedback button 
-Tool Published by: F9XR Editorial Team | Reviewed by: Review Board |  Last Updated: 2026-08-09
+Tool Published by: F9XR Editorial Team | Reviewed by: Review Board |  Last Updated: today's date
 
 Actuall Tool
 
-Disclaimer: Whilst every effort has been made in building our calculator tools, we are not to be held liable for any damages or monetary losses arising out of or in connection with their use. Full disclaimer (linked to disclaimer page).
+Disclaimer: Whilst every effort has been made in building our tools, we are not to be held liable for any damages or monetary losses arising out of or in connection with their use. Full disclaimer (linked to disclaimer page).
 
 
 On this page (Table of Content) - collapsed by deafult
@@ -64,4 +64,3 @@ Comments:
 
 Mobile responsiveness
 
-https://www.threads.com/@f9xrteam
