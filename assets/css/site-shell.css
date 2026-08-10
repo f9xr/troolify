@@ -57,9 +57,13 @@
 }
 
 .navbar .brand-logo-img {
-    height: 34px;
+    height: 36px;
     width: auto;
     object-fit: contain;
+    padding: 3px 6px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     filter: drop-shadow(0 4px 14px rgba(59, 130, 246, 0.35));
 }
 

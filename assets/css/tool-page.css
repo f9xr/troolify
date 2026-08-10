@@ -1,0 +1,176 @@
+/* ============================================================================
+   Troolify — Shared Tool-Page Chrome
+   ----------------------------------------------------------------------------
+   Reusable styles for every tool page (tools/<category>/<tool>.html). Extracted
+   from the original JSON Formatter page so all current and future tools share
+   one identical structure: hero header, breadcrumbs, tool panel, disclaimer,
+   modals, and page polish.
+
+   Depends on tool-shared.css design tokens (loaded via tool.css).
+
+   Page-specific files stay in each tool's <style> block:
+   - the actual tool UI (e.g. .json-panel textarea rules)
+   - tool-specific output/syntax colours
+   ============================================================================ */
+
+/* Entry animation */
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.breadcrumbs,.tool-head,.panel{animation:rise .55s cubic-bezier(.16,1,.3,1) both}
+
+/* Breadcrumbs */
+.breadcrumbs{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;margin-bottom:30px}
+.breadcrumbs ol{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px;list-style:none;font-size:13px;font-weight:600;color:var(--faint)}
+.breadcrumbs li{display:inline-flex;align-items:center;gap:8px}
+.breadcrumbs li+li::before{content:"/";color:var(--border)}
+.breadcrumbs a{display:inline-flex;align-items:center;gap:6px;color:var(--faint);transition:color .18s ease}
+.breadcrumbs a:hover{color:#60A5FA}
+.breadcrumbs a i{font-size:12px}
+.breadcrumbs .current{color:var(--muted)}
+
+/* Share / Embed / Feedback */
+.tool-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:24px}
+.tool-byline{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:14px;font-size:12.5px;font-weight:600;color:var(--faint)}
+.tool-byline a{color:#93C5FD;font-weight:700}
+.tool-byline a:hover{color:#fff}
+
+/* Disclaimer */
+.disclaimer{display:flex;gap:12px;align-items:flex-start;margin-top:24px;padding:16px 18px;border:1px solid rgba(250,204,21,.25);background:rgba(250,204,21,.06);border-radius:14px;font-size:13px;line-height:1.65;color:var(--muted)}
+.disclaimer i{color:#FACC15;margin-top:3px}
+.disclaimer a{color:#FDE68A;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+
+/* Section divider (decorative split line with icon) */
+.section-divider{display:flex;align-items:center;gap:16px;margin:44px 0 8px}
+.section-divider span{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(96,165,250,.55),transparent)}
+.section-divider i{font-size:13px;color:var(--accent)}
+
+/* ============================================================================
+   Boxy hero header (breadcrumbs + title + category/quick actions/details boxes)
+   ============================================================================ */
+
+.tool-head.hero{text-align:left;display:grid;grid-template-areas:"crumbs crumbs crumbs" "main main main" "td cat qa";grid-template-columns:repeat(3,1fr);gap:18px 22px;align-items:stretch;background:linear-gradient(180deg,rgba(52,58,64,.4),rgba(33,37,41,.3));border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:26px 28px;box-shadow:0 6px 24px rgba(0,0,0,.18);position:relative;overflow:hidden}
+.tool-head.hero::before{content:"";position:absolute;top:-80px;right:-60px;width:200px;height:200px;background:radial-gradient(closest-side,rgba(59,130,246,.15),transparent);pointer-events:none}
+.tool-head.hero::after{content:"";position:absolute;bottom:-90px;left:-60px;width:180px;height:180px;background:radial-gradient(closest-side,rgba(16,185,129,.1),transparent);pointer-events:none}
+
+.tool-head.hero .breadcrumbs{grid-area:crumbs;justify-content:flex-start;margin:0;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.06)}
+.tool-head.hero .breadcrumbs ol{justify-content:flex-start;font-size:12.5px}
+.tool-head.hero .breadcrumbs a{color:#ADB5BD}
+.tool-head.hero .breadcrumbs .current{color:var(--muted)}
+
+.hero-main{grid-area:main;position:relative;z-index:1}
+.hero-main .tool-badge{margin-bottom:16px}
+.hero-main h1{margin-top:0;text-align:left;font-size:clamp(2.1rem,4.6vw,3.2rem);line-height:1.05;font-weight:900;letter-spacing:-.02em;background:linear-gradient(135deg,#fff 0%,#93C5FD 50%,#3B82F6 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 8px 26px rgba(59,130,246,.35))}
+.hero-main p{margin:18px 0 0;max-width:none;margin-inline:0;font-size:15.5px;line-height:1.75;color:var(--muted)}
+
+.hero-box{position:relative;z-index:1;display:flex;flex-direction:column;gap:10px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.015));border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:16px 18px;transition:border-color .2s ease}
+.hero-box:hover{border-color:rgba(255,255,255,.16)}
+.hero-cat{grid-area:cat}
+.hero-qa{grid-area:qa}
+.hero-details{grid-area:td}
+.hero-box-title{display:flex;align-items:center;gap:7px;font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--faint);margin:0}
+.hero-box-title i{color:var(--accent);font-size:10.5px}
+
+.hero-box .tool-meta{margin:0;justify-content:flex-start;gap:8px}
+.hero-box .tool-tag,.hero-box .tool-cat{font-size:12px;padding:6px 12px}
+.hero-box .tool-cat:hover{color:#fff;border-color:rgba(96,165,250,.5);transform:translateY(-1px)}
+.hero-box .tool-actions{margin:0;flex-direction:column;align-items:stretch;gap:6px}
+.hero-box .tool-actions .rt-btn{justify-content:center;width:100%;border:1px solid rgba(255,255,255,.09);background:rgba(255,255,255,.03);border-radius:10px;padding:8px 12px;font-size:12.5px;color:var(--muted);gap:8px;transition:color .18s ease,border-color .18s ease,background .18s ease,transform .18s ease}
+.hero-box .tool-actions .rt-btn:hover{color:#fff;border-color:rgba(96,165,250,.5);background:rgba(59,130,246,.12);transform:translateY(-1px)}
+.hero-box .tool-actions .rt-btn i{font-size:11px;color:#60A5FA;transition:color .18s ease}
+.hero-box .tool-actions .rt-btn:hover i{color:#fff}
+.tool-details{display:flex;flex-direction:column}
+.detail-row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:7px 2px;font-size:12.5px}
+.detail-row+.detail-row{border-top:1px solid rgba(255,255,255,.06)}
+.detail-label{display:inline-flex;align-items:center;gap:7px;color:var(--faint);font-weight:600;font-size:12px}
+.detail-label i{color:#60A5FA;font-size:11px}
+.detail-value{color:#93C5FD;font-weight:600;text-align:right;font-size:12.5px}
+a.detail-value:hover{color:#fff}
+
+@media(max-width:900px){
+  .tool-head.hero{grid-template-areas:"crumbs" "main" "td" "cat" "qa";grid-template-columns:1fr;gap:16px;padding:24px}
+}
+
+/* ============================================================================
+   Panel variants
+   ============================================================================ */
+
+/* "clean" panel: no outer padding, inner content uses .panel-inner */
+.panel.clean{overflow:hidden;padding:0}
+.panel .panel-inner{padding:22px}
+.panel.clean textarea:focus{box-shadow:0 0 0 4px rgba(59,130,246,.18),0 0 30px rgba(59,130,246,.12)}
+
+/* Toolbar rows */
+.toolbar-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px}
+.tool-label{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--faint)}
+.tool-label i{color:var(--accent);font-size:12px}
+.toolbar-actions{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+
+/* Small chip buttons */
+.chip-btn{display:inline-flex;align-items:center;gap:6px;padding:7px 13px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.04);font-size:12.5px;font-weight:700;color:var(--muted);font-family:inherit;cursor:pointer;transition:color .18s ease,background .18s ease,border-color .18s ease,transform .18s ease}
+.chip-btn:hover{color:#fff;border-color:rgba(96,165,250,.55);background:rgba(59,130,246,.12);transform:translateY(-1px)}
+.chip-btn i{font-size:12px;color:#93C5FD}
+.chip-btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.chip-btn.primary:hover{background:var(--accent-strong);border-color:var(--accent-strong);color:#fff}
+.chip-btn.primary i{color:#fff}
+
+/* Options row — toggles + selects */
+.opts-row{margin-top:14px}
+.auto-chk{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:600;color:var(--muted);cursor:pointer;user-select:none}
+.auto-chk input{display:none}
+.auto-ui{width:38px;height:21px;border-radius:999px;background:var(--border);position:relative;transition:background .2s ease;flex-shrink:0}
+.auto-ui::after{content:"";position:absolute;top:2.5px;left:3px;width:16px;height:16px;border-radius:50%;background:#fff;transition:transform .22s cubic-bezier(.16,1,.3,1);box-shadow:0 1px 3px rgba(0,0,0,.35)}
+.auto-chk input:checked + .auto-ui{background:var(--accent)}
+.auto-chk input:checked + .auto-ui::after{transform:translateX(16px)}
+.indent-lbl{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--muted)}
+.indent-lbl select{background:#1B2028;border:1px solid var(--border);color:var(--ink);border-radius:10px;padding:6px 10px;font-family:inherit;font-size:13px;font-weight:600;outline:none;cursor:pointer;transition:border-color .18s ease,box-shadow .18s ease}
+.indent-lbl select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+
+/* Action buttons row inside a clean panel */
+.panel.clean .actions{margin-top:16px}
+.panel.clean .actions .btn,.panel.clean .actions .rt-btn{flex:1;justify-content:center;min-width:120px}
+@media(max-width:560px){.panel.clean .actions .btn,.panel.clean .actions .rt-btn{min-width:0}}
+
+/* Output header */
+.output-head{margin-top:20px;padding-top:16px;border-top:1px dashed rgba(255,255,255,.09)}
+.stats-pill{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--green);background:var(--green-soft);border:1px solid rgba(52,211,153,.25);padding:4px 12px;border-radius:999px;white-space:nowrap}
+.stats-pill::before{content:"\f00c";font-family:"Font Awesome 6 Free";font-weight:900;font-size:10px}
+
+/* Output pane defaults for code-style tools */
+.panel.clean .output{min-height:240px;max-height:440px;margin-top:14px;font-size:13px;line-height:1.65;white-space:pre;tab-size:4}
+
+/* Status + proc line polish */
+.panel .status{margin-top:14px;font-size:13px}
+.panel .proc-line{margin-top:14px}
+
+/* Custom scrollbars */
+.panel textarea::-webkit-scrollbar,.panel .output::-webkit-scrollbar{width:10px;height:10px}
+.panel textarea::-webkit-scrollbar-thumb,.panel .output::-webkit-scrollbar-thumb{background:var(--border);border-radius:99px;border:2px solid transparent;background-clip:content-box}
+.panel textarea::-webkit-scrollbar-thumb:hover,.panel .output::-webkit-scrollbar-thumb:hover{background:var(--faint)}
+.panel textarea::-webkit-scrollbar-track,.panel .output::-webkit-scrollbar-track{background:transparent}
+
+/* Responsive helpers */
+@media(max-width:520px){.hide-sm{display:none!important}}
+@media(max-width:960px){.hide-md{display:none!important}}
+
+/* ============================================================================
+   Share / Embed modals
+   ============================================================================ */
+
+.modal{position:fixed;inset:0;z-index:2500;display:none;align-items:center;justify-content:center;padding:24px}
+.modal.open{display:flex}
+.modal-backdrop{position:absolute;inset:0;background:rgba(10,10,10,.72);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.modal-panel{position:relative;width:100%;max-width:520px;background:#1F2429;border:1px solid rgba(255,255,255,.1);border-radius:24px;box-shadow:var(--shadow-pop);padding:26px}
+.modal-panel h3{font-size:1.15rem;font-weight:800;letter-spacing:-.01em}
+.modal-panel .modal-sub{font-size:13px;color:var(--faint);margin-top:4px}
+.modal-close{position:absolute;top:16px;right:16px;width:32px;height:32px;border-radius:50%;border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--faint);cursor:pointer;font-size:14px;transition:color .18s ease,border-color .18s ease}
+.modal-close:hover{color:#fff;border-color:rgba(255,255,255,.3)}
+.modal-body{margin-top:18px}
+.modal-field{display:flex;align-items:center;gap:10px;padding:12px 14px;border:1px solid var(--border);border-radius:12px;background:#1B2028}
+.modal-field input{flex:1;background:none;border:none;outline:none;color:var(--ink);font-family:inherit;font-size:13px;min-width:0}
+.modal-body textarea{width:100%;min-height:120px;background:#1B2028;border:1px solid var(--border);border-radius:12px;color:var(--ink);font-family:'SFMono-Regular',Consolas,Menlo,monospace;font-size:12.5px;padding:12px;resize:vertical}
+.modal-body textarea:focus{outline:none;border-color:var(--accent)}
+.modal-note{font-size:12.5px;color:var(--faint);margin-top:12px;line-height:1.6}
+.modal-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.modal-social{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.modal-social a{display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.04);font-size:12.5px;font-weight:700;color:var(--muted);transition:color .18s ease,border-color .18s ease}
+.modal-social a:hover{color:#fff;border-color:rgba(96,165,250,.5)}
+.modal-social a i{font-size:13px}

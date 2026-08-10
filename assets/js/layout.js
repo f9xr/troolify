@@ -76,19 +76,19 @@
                 '<div class="nav-container">' +
                     /* Left-side menu */
                     '<nav class="nav-links nav-links-left" aria-label="Primary">' +
-                        '<a href="' + homeHref + '#home">Home</a>' +
-                        '<a href="' + homeHref + '#tools">Tools</a>' +
-                        '<a href="' + homeHref + '#categories">Categories</a>' +
+                        '<a href="https://f9xr.github.io/troolify">Home</a>' +
+                        '<a href="' + prefix + 'tools.html">Tools</a>' +
+                        '<a href="' + prefix + 'tools/index.html">Category</a>' +
                     '</nav>' +
                     /* Centered brand */
                     '<a href="' + homeHref + '" class="brand">' +
-                        '<img src="' + prefix + 'assets/images/logo_nobg.png" alt="F9XR Team" class="brand-logo-img">' +
+                        '<img src="' + prefix + 'assets/images/logo_nobg.webp" alt="F9XR Team" class="brand-logo-img">' +
                         '<span class="brand-text">Troolify<span class="brand-sub">by F9XR Team</span></span>' +
                     '</a>' +
                     /* Right-side menu + actions */
                     '<div class="nav-actions">' +
                         '<nav class="nav-links nav-links-right" aria-label="Secondary">' +
-                            '<a href="' + homeHref + '#about">About</a>' +
+                            '<a href="' + prefix + 'pages/about.html">About</a>' +
                             '<a href="mailto:tontufytservices@gmail.com">Support</a>' +
                         '</nav>' +
                         '<button type="button" class="nav-search-btn" aria-label="Search tools" aria-haspopup="dialog">' +
@@ -102,10 +102,10 @@
                 '</div>' +
             '</header>' +
             '<div class="mobile-menu" aria-hidden="true">' +
-                '<a href="' + homeHref + '#home">Home</a>' +
-                '<a href="' + homeHref + '#tools">Tools</a>' +
-                '<a href="' + homeHref + '#categories">Categories</a>' +
-                '<a href="' + homeHref + '#about">About</a>' +
+                '<a href="https://f9xr.github.io/troolify">Home</a>' +
+                '<a href="' + prefix + 'tools.html">Tools</a>' +
+                '<a href="' + prefix + 'tools/index.html">Category</a>' +
+                '<a href="' + prefix + 'pages/about.html">About</a>' +
                 '<a href="mailto:tontufytservices@gmail.com">Support</a>' +
                 '<a href="' + toolsHref + '" class="btn btn-primary" style="margin-top: 1rem;">Explore Tools</a>' +
             '</div>';
@@ -123,12 +123,12 @@
                         '<div class="pointer-events-none absolute inset-0" style="background-image:linear-gradient(rgba(248,249,250,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(248,249,250,0.04) 1px,transparent 1px);background-size:48px 48px;-webkit-mask-image:radial-gradient(ellipse 90% 60% at 50% 0%,#000 30%,transparent 75%);mask-image:radial-gradient(ellipse 90% 60% at 50% 0%,#000 30%,transparent 75%)" aria-hidden="true"></div>' +
 
                         /* --- Top content grid --- */
-                        '<div class="relative grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-[1.6fr_1fr_1fr_1.35fr] lg:gap-14">' +
+                        '<div class="relative grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr_1.4fr] lg:gap-14">' +
 
                             /* Left column — brand mission */
                             '<div>' +
                                 '<a href="' + homeHref + '" class="inline-flex items-center gap-3">' +
-                                    '<img src="' + prefix + 'assets/images/logo_nobg.png" alt="Troolify" class="h-9 w-auto object-contain">' +
+                                    '<img src="' + prefix + 'assets/images/logo_nobg.webp" alt="Troolify" class="h-9 w-auto object-contain">' +
                                     '<span class="text-xl font-bold tracking-tight text-white">Troolify</span>' +
                                 '</a>' +
                                 '<p class="mt-7 max-w-md text-base leading-[1.8] text-[#F8F9FA]/90 sm:text-lg">Troolify is a privacy-first workspace on the internet where your digital workflows run instantly, securely, and entirely inside your browser.</p>' +
@@ -142,26 +142,40 @@
                             '<nav aria-label="Company">' +
                                 '<h4 class="text-xs font-semibold uppercase tracking-[0.22em] text-[#E9ECEF]">Company</h4>' +
                                 '<ul class="mt-6 space-y-3">' +
-                                    '<li><a href="' + homeHref + '#about" class="text-white/80 transition hover:text-[#3B82F6]">About</a></li>' +
-                                    '<li><a href="' + toolsHref + '" class="text-white/80 transition hover:text-[#3B82F6]">Utilities</a></li>' +
-                                    '<li><a href="https://f9xr.github.io/legals/privacy.html" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-white/80 transition hover:text-[#3B82F6]">Privacy Engine' +
-                                        '<span class="rounded-full bg-[#3B82F6] px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white">New</span>' +
-                                    '</a></li>' +
-                                    '<li><a href="https://github.com/f9xr/troolify/releases" target="_blank" rel="noopener" class="text-white/80 transition hover:text-[#3B82F6]">Changelog</a></li>' +
+                                    '<li><a href="' + prefix + 'pages/about.html" class="text-white/80 transition hover:text-[#3B82F6]">About</a></li>' +
+                                    '<li><a href="' + prefix + 'pages/contact.html" class="text-white/80 transition hover:text-[#3B82F6]">Contact</a></li>' +
+                                    '<li><a href="' + prefix + 'pages/feedback.html" class="text-white/80 transition hover:text-[#3B82F6]">Feedback</a></li>' +
+                                    '<li><a href="' + prefix + 'tools.html" class="text-white/80 transition hover:text-[#3B82F6]">Utilities</a></li>' +
+                                    '<li><a href="' + prefix + 'pages/sitemap.html" class="text-white/80 transition hover:text-[#3B82F6]">Sitemap</a></li>' +
+                                    '<li><a href="' + prefix + 'pages/accessibility-statement.html" class="text-white/80 transition hover:text-[#3B82F6]">Accessibility</a></li>' +
                                     '<li><a href="' + prefix + 'press/editorial-policies.html" class="text-white/80 transition hover:text-[#3B82F6]">Editorial Policies</a></li>' +
                                 '</ul>' +
                             '</nav>' +
 
-                            /* Middle column 2 — Follow us links + social icons */
+                            /* Middle column 2 — F9XR network links */
+                            '<nav aria-label="F9XR Network">' +
+                                '<h4 class="text-xs font-semibold uppercase tracking-[0.22em] text-[#E9ECEF]">F9XR Network</h4>' +
+                                '<ul class="mt-6 space-y-3">' +
+                                    '<li><a href="https://f9xr.github.io/" target="_blank" rel="noopener" class="text-white/80 transition hover:text-[#3B82F6]">F9XR Team</a></li>' +
+                                    '<li><a href="https://f9xr.github.io/services/index.html" target="_blank" rel="noopener" class="text-white/80 transition hover:text-[#3B82F6]">Services</a></li>' +
+                                    '<li><a href="https://f9xr.github.io/case-studies/index.html" target="_blank" rel="noopener" class="text-white/80 transition hover:text-[#3B82F6]">Case Studies</a></li>' +
+                                    '<li><a href="https://f9xr.github.io/announcements/index.html" target="_blank" rel="noopener" class="text-white/80 transition hover:text-[#3B82F6]">Announcements</a></li>' +
+                                    '<li><a href="https://f9xr.github.io/directories/index.html" target="_blank" rel="noopener" class="text-white/80 transition hover:text-[#3B82F6]">Directories</a></li>' +
+                                    '<li><a href="https://f9xr.github.io/BharatByDay/" target="_blank" rel="noopener" class="text-white/80 transition hover:text-[#3B82F6]">BharatByDay</a></li>' +
+                                    '<li><a href="https://f9xr.github.io/articles/" target="_blank" rel="noopener" class="text-white/80 transition hover:text-[#3B82F6]">Articles</a></li>' +
+                                '</ul>' +
+                            '</nav>' +
+
+                            /* Middle column 3 — Follow us social icons */
                             '<nav aria-label="Follow us">' +
                                 '<h4 class="text-xs font-semibold uppercase tracking-[0.22em] text-[#E9ECEF]">Follow us</h4>' +
-                                '<ul class="mt-6 space-y-3">' +
-                                    '<li><a href="https://github.com/f9xr" target="_blank" rel="noopener" class="inline-flex items-center gap-2.5 text-white/80 transition hover:text-[#3B82F6]"><i class="fa-brands fa-github w-4 text-center"></i>GitHub</a></li>' +
-                                    '<li><a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener" class="inline-flex items-center gap-2.5 text-white/80 transition hover:text-[#3B82F6]"><i class="fa-brands fa-linkedin w-4 text-center"></i>LinkedIn</a></li>' +
-                                    '<li><a href="https://instagram.com/f9xrteam" target="_blank" rel="noopener" class="inline-flex items-center gap-2.5 text-white/80 transition hover:text-[#3B82F6]"><i class="fa-brands fa-instagram w-4 text-center"></i>Instagram</a></li>' +
-                                    '<li><a href="https://youtube.com/@QuarterlyLIV" target="_blank" rel="noopener" class="inline-flex items-center gap-2.5 text-white/80 transition hover:text-[#3B82F6]"><i class="fa-brands fa-youtube w-4 text-center"></i>YouTube</a></li>' +
-                                    '<li><a href="https://www.threads.com/@f9xrteam" target="_blank" rel="noopener" class="inline-flex items-center gap-2.5 text-white/80 transition hover:text-[#3B82F6]"><i class="fa-brands fa-threads w-4 text-center"></i>Threads</a></li>' +
-                                '</ul>' +
+                                '<div class="mt-6 flex flex-wrap gap-3">' +
+                                    '<a href="https://github.com/f9xr" target="_blank" rel="noopener" aria-label="GitHub" class="grid h-10 w-10 place-items-center rounded-xl border border-[#343A40] bg-[#212529] text-[#9CA3AF] transition hover:border-[#3B82F6] hover:text-[#3B82F6]"><i class="fa-brands fa-github"></i></a>' +
+                                    '<a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener" aria-label="LinkedIn" class="grid h-10 w-10 place-items-center rounded-xl border border-[#343A40] bg-[#212529] text-[#9CA3AF] transition hover:border-[#3B82F6] hover:text-[#3B82F6]"><i class="fa-brands fa-linkedin"></i></a>' +
+                                    '<a href="https://instagram.com/f9xrteam" target="_blank" rel="noopener" aria-label="Instagram" class="grid h-10 w-10 place-items-center rounded-xl border border-[#343A40] bg-[#212529] text-[#9CA3AF] transition hover:border-[#3B82F6] hover:text-[#3B82F6]"><i class="fa-brands fa-instagram"></i></a>' +
+                                    '<a href="https://youtube.com/@QuarterlyLIV" target="_blank" rel="noopener" aria-label="YouTube" class="grid h-10 w-10 place-items-center rounded-xl border border-[#343A40] bg-[#212529] text-[#9CA3AF] transition hover:border-[#3B82F6] hover:text-[#3B82F6]"><i class="fa-brands fa-youtube"></i></a>' +
+                                    '<a href="https://www.threads.com/@f9xrteam" target="_blank" rel="noopener" aria-label="Threads" class="grid h-10 w-10 place-items-center rounded-xl border border-[#343A40] bg-[#212529] text-[#9CA3AF] transition hover:border-[#3B82F6] hover:text-[#3B82F6]"><i class="fa-brands fa-threads"></i></a>' +
+                                '</div>' +
                             '</nav>' +
 
                             /* Right column — contact + newsletter capture */
@@ -186,7 +200,7 @@
                             '<div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">' +
                                 '<a href="https://f9xr.github.io/legals/terms.html" target="_blank" rel="noopener" class="transition hover:text-[#3B82F6]">Terms</a>' +
                                 '<a href="https://f9xr.github.io/legals/privacy.html" target="_blank" rel="noopener" class="transition hover:text-[#3B82F6]">Privacy Policy</a>' +
-                                '<a href="mailto:tontufytservices@gmail.com" class="transition hover:text-[#3B82F6]">Contact</a>' +
+                                '<a href="' + prefix + 'pages/contact.html" class="transition hover:text-[#3B82F6]">Contact</a>' +
                             '</div>' +
                         '</div>' +
                     '</div>' +
@@ -211,7 +225,7 @@
                         '<div class="cta-inner">' +
                             '<h2 class="cta-h2">Simplify Tech Deployments, Optimize <i class="fa-solid fa-circle-nodes" aria-hidden="true"></i> Systems.</h2>' +
                             '<p class="cta-sub">No tech bloat, no manual bottlenecks, just a better way to scale your digital infrastructure.</p>' +
-                            '<a href="https://f9xr.github.io/pages/contact.html" target="_blank" rel="noopener" class="cta-pill">GET A FREE TECH AUDIT</a>' +
+                            '<a href="' + prefix + 'pages/contact.html" class="cta-pill">GET A FREE TECH AUDIT</a>' +
                             '<p class="cta-foot"><i class="fa-solid fa-check" aria-hidden="true"></i>Zero commitment required.</p>' +
                         '</div>' +
                     '</div>' +
@@ -354,7 +368,7 @@
         var isHome = dirs.length === 1 && (fileName === "" || fileName === "index.html");
         if (isHome) {
             document.querySelectorAll(".nav-links a").forEach(function (link) {
-                if (link.getAttribute("href").indexOf("#home") !== -1) {
+                if (link.getAttribute("href") === "https://f9xr.github.io/troolify") {
                     link.classList.add("active");
                 }
             });

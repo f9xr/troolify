@@ -267,7 +267,7 @@
         "@type": "Organization",
         "name": "Troolify",
         "url": "https://f9xr.github.io/troolify/",
-        "logo": "https://f9xr.github.io/logo.webp",
+        "logo": "https://f9xr.github.io/troolify/assets/images/logo_nobg.webp",
         "contactPoint": {
           "@type": "ContactPoint",
           "email": "tontufytservices@gmail.com",

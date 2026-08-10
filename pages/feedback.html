@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/webp" href="../assets/images/favicon.webp"><link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback &amp; Suggestions - Troolify</title>
+    <meta name="description" content="Send feedback or a suggestion to the Troolify team. Tell us about bugs, improvements, or ideas for new online tools.">
+    <link rel="canonical" href="https://f9xr.github.io/troolify/pages/feedback.html">
+    <meta property="og:site_name" content="Troolify">
+    <meta property="og:title" content="Feedback &amp; Suggestions - Troolify">
+    <meta property="og:description" content="Send feedback or a suggestion to the Troolify team.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://f9xr.github.io/troolify/pages/feedback.html">
+    <meta property="og:image" content="https://f9xr.github.io/troolify/assets/images/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Feedback &amp; Suggestions - Troolify">
+    <meta name="twitter:image" content="https://f9xr.github.io/troolify/assets/images/og-image.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Static Tailwind CSS (Preflight disabled; replaces the Play CDN for production) -->
+    <link rel="stylesheet" href="../assets/css/tailwind.css">
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- Header (navbar + mobile menu) and footer are auto-injected by assets/js/layout.js -->
+
+    <main class="container" style="max-width: 760px; padding-top: 10rem; padding-bottom: 6rem;">
+        <div class="eyebrow">FEEDBACK &middot; TROOLIFY</div>
+        <h1 class="heading-1">Feedback or a Suggestion</h1>
+        <p class="section-description" style="margin-bottom: 2rem;">Found a bug? Want a new tool? We read everything.</p>
+
+        <h2 class="heading-2" style="margin-top: 2rem;">How to send feedback</h2>
+        <p>Use the form below or email us directly at <a href="mailto:tontufytservices@gmail.com?subject=Troolify%20Feedback">tontufytservices@gmail.com</a> with the subject line <strong>Troolify Feedback</strong>.</p>
+
+        <form class="mt-8 flex flex-col gap-4" action="mailto:tontufytservices@gmail.com" method="post" enctype="text/plain" style="max-width: 520px;">
+            <div class="flex flex-col gap-2">
+                <label for="fb-type" class="text-sm font-semibold">Feedback type</label>
+                <select id="fb-type" name="type" class="rounded-xl border border-[#343A40] bg-[#212529] px-4 py-3 text-sm text-white outline-none focus:border-[#3B82F6]">
+                    <option value="suggestion">Suggestion for a new tool</option>
+                    <option value="improvement">Improvement to an existing tool</option>
+                    <option value="bug">Bug report</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="flex flex-col gap-2">
+                <label for="fb-name" class="text-sm font-semibold">Your name (optional)</label>
+                <input type="text" id="fb-name" name="name" class="rounded-xl border border-[#343A40] bg-[#212529] px-4 py-3 text-sm text-white outline-none focus:border-[#3B82F6]">
+            </div>
+            <div class="flex flex-col gap-2">
+                <label for="fb-message" class="text-sm font-semibold">Your feedback</label>
+                <textarea id="fb-message" name="message" rows="6" required class="rounded-xl border border-[#343A40] bg-[#212529] px-4 py-3 text-sm text-white outline-none focus:border-[#3B82F6]"></textarea>
+            </div>
+            <button type="submit" class="rounded-xl bg-[#3B82F6] px-6 py-3 text-sm font-bold text-white shadow-[0_4px_20px_rgba(59,130,246,0.35)] transition hover:bg-[#2563EB]">Send Feedback</button>
+            <p class="text-xs text-[#9CA3AF]">The form opens your email client with a pre-filled message &mdash; nothing is sent to a server.</p>
+        </form>
+
+        <h2 class="heading-2" style="margin-top: 2.5rem;">What we do with your feedback</h2>
+        <p>Every piece of feedback is reviewed by the F9XR Editorial Team and the Review Board. Popular tool suggestions are added to our roadmap, and bug reports are fixed as quickly as possible.</p>
+    </main>
+
+    <script src="../assets/js/layout.js" defer></script>
+</body>
+</html>
