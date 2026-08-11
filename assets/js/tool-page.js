@@ -106,7 +106,7 @@
   if (grid) {
     var search = document.getElementById("relatedSearch");
     var segs = location.pathname.split("/").filter(Boolean);
-    var depth = Math.max(1, segs.length - 2);
+    var depth = Math.max(0, segs.length - 1);
     var prefix = "";
     while (depth--) prefix += "../";
     var current = segs[segs.length - 1] || "";

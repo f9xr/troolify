@@ -17,6 +17,33 @@
     <meta name="twitter:title" content="Contact Us - Troolify">
     <meta name="twitter:image" content="https://f9xr.github.io/troolify/assets/images/og-image.png">
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact Troolify",
+      "url": "https://f9xr.github.io/troolify/pages/contact.html",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "F9XR Team",
+        "url": "https://f9xr.github.io/",
+        "email": "mailto:tontufytservices@gmail.com",
+        "sameAs": [
+          "https://github.com/f9xr",
+          "https://linkedin.com/company/f9xrteam",
+          "https://instagram.com/f9xrteam",
+          "https://youtube.com/@QuarterlyLIV"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "email": "tontufytservices@gmail.com",
+          "availableLanguage": "English"
+        }
+      }
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -26,33 +53,331 @@
     <link rel="stylesheet" href="../assets/css/tailwind.css">
 
     <link rel="stylesheet" href="../style.css">
+
+    <style>
+    /* ============================================================
+       Contact page — page-specific styles (style.css design tokens)
+       ============================================================ */
+
+    .contact-main {
+        max-width: 980px;
+        padding-top: 10rem;
+        padding-bottom: 6rem;
+    }
+
+    /* Hero */
+    .contact-hero { text-align: center; }
+    .contact-hero .heading-1 { margin-bottom: 0.5rem; }
+    .contact-hero .section-description { margin-bottom: 2rem; }
+    .contact-ctas { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3.5rem; }
+
+    /* Section headings with accent bar */
+    .contact-section { margin-top: 4rem; }
+    .contact-section-title {
+        display: flex; align-items: center; gap: 0.75rem;
+        font-size: clamp(1.4rem, 2.4vw, 1.8rem);
+        font-weight: 800; letter-spacing: -0.02em; margin-bottom: 0.5rem;
+    }
+    .contact-section-title::before {
+        content: ""; flex-shrink: 0; width: 6px; height: 1.3em; border-radius: 99px;
+        background: linear-gradient(180deg, var(--accent-light), var(--accent-main));
+    }
+    .contact-section-sub { color: var(--text-muted); font-size: 1rem; max-width: 640px; margin-bottom: 1.5rem; }
+
+    /* Quick contact cards */
+    .contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    .contact-card {
+        display: flex; flex-direction: column; align-items: flex-start; gap: 0.5rem;
+        background: linear-gradient(180deg, rgba(52, 58, 64, 0.55), rgba(33, 37, 41, 0.45));
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 18px; padding: 1.75rem;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 10px 30px rgba(0, 0, 0, 0.25);
+        transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .contact-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(96, 165, 250, 0.45);
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35), 0 0 24px rgba(59, 130, 246, 0.08);
+    }
+    .contact-card-icon {
+        width: 46px; height: 46px; border-radius: 13px; display: grid; place-items: center;
+        background: rgba(59, 130, 246, 0.14); color: var(--accent-light); font-size: 1.1rem;
+        border: 1px solid rgba(59, 130, 246, 0.28); margin-bottom: 0.5rem;
+    }
+    .contact-card h2 { font-size: 1.1rem; font-weight: 700; margin: 0; }
+    .contact-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; margin: 0; }
+    .contact-card-link {
+        margin-top: auto; padding-top: 0.75rem; display: inline-flex; align-items: center; gap: 0.5rem;
+        font-size: 0.875rem; font-weight: 600; color: var(--accent-light); text-decoration: none;
+        transition: color 0.2s ease, gap 0.2s ease;
+    }
+    .contact-card-link:hover { color: #fff; gap: 0.75rem; }
+    .contact-card-link i { font-size: 0.75rem; }
+
+    /* Contact form */
+    .contact-form {
+        display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 1.5rem;
+        background: linear-gradient(180deg, rgba(52, 58, 64, 0.5), rgba(33, 37, 41, 0.38));
+        border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 20px; padding: 2rem;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 10px 30px rgba(0, 0, 0, 0.25);
+    }
+    .contact-form .full { grid-column: 1 / -1; }
+    .contact-field { display: flex; flex-direction: column; gap: 0.5rem; }
+    .contact-field label {
+        display: flex; align-items: center; gap: 0.5rem;
+        font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--highlight);
+    }
+    .contact-field label i { color: var(--accent-light); font-size: 0.8rem; }
+    .contact-field input,
+    .contact-field select,
+    .contact-field textarea {
+        width: 100%; background: rgba(10, 10, 10, 0.55); border: 1px solid rgba(255, 255, 255, 0.1);
+        color: var(--text-main); font-family: inherit; font-size: 0.95rem; padding: 0.85rem 1rem;
+        border-radius: 12px; outline: none;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+    .contact-field input::placeholder,
+    .contact-field textarea::placeholder { color: rgba(173, 181, 189, 0.55); }
+    .contact-field input:focus,
+    .contact-field select:focus,
+    .contact-field textarea:focus {
+        border-color: var(--accent-main); background: rgba(10, 10, 10, 0.75);
+        box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+    }
+    .contact-field textarea { min-height: 150px; resize: vertical; line-height: 1.7; }
+    .contact-field select {
+        appearance: none; -webkit-appearance: none; cursor: pointer; padding-right: 2.75rem;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%2393C5FD' d='M4.5 6l3.5 3.5L11.5 6'/%3E%3C/svg%3E");
+        background-repeat: no-repeat; background-position: right 1rem center;
+    }
+    .contact-field .required { color: #F87171; margin-left: 0.25rem; }
+    .contact-submit-row { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; }
+    .contact-form-note { font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; }
+
+    /* Info note (response time / privacy) */
+    .contact-note {
+        display: flex; align-items: flex-start; gap: 0.75rem;
+        padding: 1rem 1.25rem; border-radius: 14px; font-size: 0.875rem;
+        color: var(--text-muted); line-height: 1.7; margin-top: 1.5rem;
+        background: rgba(16, 185, 129, 0.06); border: 1px solid rgba(52, 211, 153, 0.22);
+    }
+    .contact-note i { color: #6EE7B7; margin-top: 0.2rem; flex-shrink: 0; }
+
+    /* Before-you-contact checklist */
+    .before-list { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
+    .before-item {
+        display: flex; align-items: flex-start; gap: 0.85rem; padding: 1.25rem 1.35rem;
+        background: linear-gradient(180deg, rgba(52, 58, 64, 0.5), rgba(33, 37, 41, 0.38));
+        border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 10px 30px rgba(0, 0, 0, 0.2);
+        transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+    .before-item:hover { transform: translateY(-3px); border-color: rgba(96, 165, 250, 0.4); }
+    .before-icon {
+        flex-shrink: 0; width: 40px; height: 40px; border-radius: 11px; display: grid; place-items: center;
+        background: rgba(59, 130, 246, 0.14); color: var(--accent-light); font-size: 0.95rem;
+        border: 1px solid rgba(59, 130, 246, 0.28);
+    }
+    .before-item p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; margin: 0; }
+    .before-item strong { color: var(--text-main); }
+
+    /* Social cards */
+    .social-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-top: 1.5rem; }
+    .social-card {
+        display: flex; flex-direction: column; align-items: center; gap: 0.65rem;
+        padding: 1.5rem 1rem; border-radius: 16px; text-decoration: none; color: var(--text-main);
+        background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08);
+        font-size: 0.85rem; font-weight: 600;
+        transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+    }
+    .social-card i { font-size: 1.35rem; color: var(--accent-light); transition: color 0.25s ease, transform 0.25s ease; }
+    .social-card:hover { transform: translateY(-4px); border-color: rgba(96, 165, 250, 0.5); background: rgba(59, 130, 246, 0.12); }
+    .social-card:hover i { color: #fff; transform: scale(1.12); }
+
+    /* FAQ */
+    .faq-list { display: flex; flex-direction: column; gap: 0.85rem; margin-top: 1.5rem; }
+    .faq-item { border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 14px; background: rgba(52, 58, 64, 0.35); overflow: hidden; transition: border-color 0.2s ease; }
+    .faq-item[open] { border-color: rgba(96, 165, 250, 0.4); }
+    .faq-item summary {
+        list-style: none; cursor: pointer; padding: 1.05rem 1.25rem; font-weight: 600; font-size: 0.95rem;
+        display: flex; align-items: center; justify-content: space-between; gap: 1rem; user-select: none;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+        content: "\f078"; font-family: "Font Awesome 6 Free"; font-weight: 900; font-size: 0.7rem;
+        color: var(--accent-light); transition: transform 0.2s ease;
+    }
+    .faq-item[open] summary::after { transform: rotate(180deg); }
+    .faq-item p { padding: 0 1.25rem 1.1rem; color: var(--text-muted); font-size: 0.9rem; line-height: 1.7; }
+    .faq-item a { color: var(--accent-light); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+    .faq-item a:hover { color: #fff; }
+
+    /* Responsive */
+    @media (max-width: 820px) {
+        .contact-grid { grid-template-columns: 1fr; }
+        .social-grid { grid-template-columns: repeat(3, 1fr); }
+        .contact-form { grid-template-columns: 1fr; padding: 1.5rem; }
+        .before-list { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 520px) {
+        .social-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    </style>
 </head>
 <body>
     <!-- Header (navbar + mobile menu) and footer are auto-injected by assets/js/layout.js -->
 
-    <main class="container" style="max-width: 760px; padding-top: 10rem; padding-bottom: 6rem;">
-        <div class="eyebrow">CONTACT &middot; TROOLIFY</div>
-        <h1 class="heading-1">Contact Us</h1>
-        <p class="section-description" style="margin-bottom: 2rem;">Questions, partnerships, or technical support &mdash; we are happy to help.</p>
+    <main class="container contact-main" id="main">
 
-        <h2 class="heading-2" style="margin-top: 2rem;">Email</h2>
-        <p>For the fastest response, email us at <a href="mailto:tontufytservices@gmail.com">tontufytservices@gmail.com</a>. We usually reply within 1&ndash;2 business days.</p>
+        <!-- Hero -->
+        <header class="contact-hero">
+            <div class="eyebrow">CONTACT &middot; TROOLIFY</div>
+            <h1 class="heading-1 gradient-text">Contact Us</h1>
+            <p class="section-description">Questions, partnerships, or technical support &mdash; we are happy to help.</p>
+            <div class="contact-ctas">
+                <a href="mailto:tontufytservices@gmail.com?subject=Contact%20Troolify" class="btn btn-primary btn-large"><i class="fa-solid fa-envelope"></i> Email us</a>
+                <a href="feedback.html" class="btn btn-secondary btn-large"><i class="fa-solid fa-lightbulb"></i> Send feedback</a>
+            </div>
+        </header>
 
-        <h2 class="heading-2" style="margin-top: 2rem;">Follow the team</h2>
-        <p>Stay up to date with the F9XR Team across the web:</p>
-        <ul>
-            <li><i class="fa-brands fa-github"></i> <a href="https://github.com/f9xr" target="_blank" rel="noopener">GitHub</a></li>
-            <li><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener">LinkedIn</a></li>
-            <li><i class="fa-brands fa-instagram"></i> <a href="https://instagram.com/f9xrteam" target="_blank" rel="noopener">Instagram</a></li>
-            <li><i class="fa-brands fa-youtube"></i> <a href="https://youtube.com/@QuarterlyLIV" target="_blank" rel="noopener">YouTube</a></li>
-            <li><i class="fa-brands fa-threads"></i> <a href="https://www.threads.com/@f9xrteam" target="_blank" rel="noopener">Threads</a></li>
-        </ul>
+        <!-- Quick contact cards -->
+        <section class="contact-grid" aria-label="Ways to contact us">
+            <article class="contact-card">
+                <div class="contact-card-icon"><i class="fa-solid fa-envelope"></i></div>
+                <h2>Email</h2>
+                <p>For the fastest response, email us directly. We usually reply within 1&ndash;2 business days.</p>
+                <a class="contact-card-link" href="mailto:tontufytservices@gmail.com">tontufytservices@gmail.com <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+            <article class="contact-card">
+                <div class="contact-card-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                <h2>Feedback or a suggestion</h2>
+                <p>Have an idea for a new tool or a suggestion to improve an existing one? Tell us about it.</p>
+                <a class="contact-card-link" href="feedback.html">Go to the Feedback page <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+            <article class="contact-card">
+                <div class="contact-card-icon"><i class="fa-solid fa-briefcase"></i></div>
+                <h2>Business inquiries</h2>
+                <p>For website development, redesign, local SEO, and digital presence services, visit the F9XR Team.</p>
+                <a class="contact-card-link" href="https://f9xr.github.io/" target="_blank" rel="noopener">f9xr.github.io <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+        </section>
 
-        <h2 class="heading-2" style="margin-top: 2rem;">Feedback or a suggestion</h2>
-        <p>Have an idea for a new tool or a suggestion to improve an existing one? Let us know on our <a href="feedback.html">Feedback page</a>.</p>
+        <!-- Before you contact us -->
+        <section class="contact-section" id="before">
+            <h2 class="contact-section-title">Before You Contact Us</h2>
+            <p class="contact-section-sub">To help us assist you more efficiently, please:</p>
+            <div class="before-list">
+                <div class="before-item">
+                    <span class="before-icon"><i class="fa-solid fa-book-open"></i></span>
+                    <p><strong>Check the tool's documentation and FAQ section first</strong> &mdash; the answer may already be waiting for you.</p>
+                </div>
+                <div class="before-item">
+                    <span class="before-icon"><i class="fa-solid fa-circle-info"></i></span>
+                    <p><strong>Include specific details</strong> about your issue, feedback, or question so we can help without follow-up emails.</p>
+                </div>
+                <div class="before-item">
+                    <span class="before-icon"><i class="fa-solid fa-display"></i></span>
+                    <p><strong>Mention your browser, device, and operating system</strong> &mdash; this helps us reproduce and fix problems faster.</p>
+                </div>
+                <div class="before-item">
+                    <span class="before-icon"><i class="fa-solid fa-camera"></i></span>
+                    <p><strong>Attach screenshots if relevant</strong> to your inquiry. A picture can save a lot of back and forth.</p>
+                </div>
+            </div>
+        </section>
 
-        <h2 class="heading-2" style="margin-top: 2rem;">Business inquiries</h2>
-        <p>For website development, redesign, local SEO, and digital presence services, visit <a href="https://f9xr.github.io/" target="_blank" rel="noopener">F9XR Team</a>.</p>
+        <!-- Contact form -->
+        <section class="contact-section" id="message">
+            <h2 class="contact-section-title">Send us a message</h2>
+            <p class="contact-section-sub">Use the form below and it will open your email client with everything pre-filled. Nothing you type is stored or sent to a server.</p>
+
+            <form class="contact-form" action="mailto:tontufytservices@gmail.com" method="post" enctype="text/plain">
+                <div class="contact-field">
+                    <label for="ct-name"><i class="fa-solid fa-user"></i>Your name <span class="required" aria-hidden="true"></span></label>
+                    <input type="text" id="ct-name" name="name" placeholder="Optional">
+                </div>
+                <div class="contact-field">
+                    <label for="ct-email"><i class="fa-solid fa-at"></i>Your email</label>
+                    <input type="email" id="ct-email" name="email" placeholder="you@example.com" required>
+                </div>
+                <div class="contact-field full">
+                    <label for="ct-topic"><i class="fa-solid fa-tags"></i>Topic</label>
+                    <select id="ct-topic" name="topic">
+                        <option value="general">General question</option>
+                        <option value="support">Technical support</option>
+                        <option value="tool">Tool suggestion</option>
+                        <option value="partnership">Partnership</option>
+                        <option value="media">Media / press</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="contact-field full">
+                    <label for="ct-message"><i class="fa-solid fa-pen-nib"></i>Your message</label>
+                    <textarea id="ct-message" name="message" placeholder="How can we help?" required></textarea>
+                </div>
+                <div class="contact-submit-row">
+                    <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Send message</button>
+                    <p class="contact-form-note"><i class="fa-solid fa-shield-halved"></i> Privacy first &mdash; the form opens your email app, nothing is uploaded anywhere.</p>
+                </div>
+            </form>
+
+            <div class="contact-note" role="note">
+                <i class="fa-solid fa-clock"></i>
+                <p>Response time: we usually reply to emails within <strong>1&ndash;2 business days</strong>. For bug reports and tool suggestions, you may get a faster answer through the <a href="feedback.html">Feedback page</a>.</p>
+            </div>
+        </section>
+
+        <!-- Follow the team -->
+        <section class="contact-section">
+            <h2 class="contact-section-title">Follow the team</h2>
+            <p class="contact-section-sub">Stay up to date with the F9XR Team across the web.</p>
+            <div class="social-grid">
+                <a class="social-card" href="https://github.com/f9xr" target="_blank" rel="noopener" aria-label="F9XR on GitHub"><i class="fa-brands fa-github"></i><span>GitHub</span></a>
+                <a class="social-card" href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on LinkedIn"><i class="fa-brands fa-linkedin"></i><span>LinkedIn</span></a>
+                <a class="social-card" href="https://instagram.com/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on Instagram"><i class="fa-brands fa-instagram"></i><span>Instagram</span></a>
+                <a class="social-card" href="https://youtube.com/@QuarterlyLIV" target="_blank" rel="noopener" aria-label="F9XR on YouTube"><i class="fa-brands fa-youtube"></i><span>YouTube</span></a>
+                <a class="social-card" href="https://www.threads.com/@f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on Threads"><i class="fa-brands fa-threads"></i><span>Threads</span></a>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="contact-section">
+            <h2 class="contact-section-title">Common questions</h2>
+            <p class="contact-section-sub">Quick answers to the questions we hear most often.</p>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>How quickly will you reply to my email?</summary>
+                    <p>We usually reply within 1&ndash;2 business days. For urgent bug reports, the <a href="feedback.html">Feedback page</a> is often the fastest route.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Is Troolify really free and private?</summary>
+                    <p>Yes. Every Troolify tool is free, requires no sign up, and runs 100% client-side in your browser. Your data never leaves your device.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Can I suggest a new tool or report a bug?</summary>
+                    <p>Absolutely. Use our <a href="feedback.html">Feedback page</a> and the F9XR Editorial Team will review every submission. Popular suggestions are added to our roadmap.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Can the F9XR Team build or redesign my website?</summary>
+                    <p>Yes. F9XR works with startups, local businesses, and growing companies on website development, redesign, local SEO, and digital presence strategy. Visit <a href="https://f9xr.github.io/" target="_blank" rel="noopener">f9xr.github.io</a> to get started.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>I have a media or partnership inquiry. Who do I contact?</summary>
+                    <p>Email us at <a href="mailto:tontufytservices@gmail.com">tontufytservices@gmail.com</a> with the subject line starting with &ldquo;Media&rdquo; or &ldquo;Partnership&rdquo; so we can route it to the right person quickly.</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- We value your feedback -->
+        <section class="contact-section" id="feedback">
+            <h2 class="contact-section-title">We Value Your Feedback!</h2>
+            <p class="contact-section-sub">Your questions, suggestions, and feedback help us improve Free Media Tools for everyone. We're committed to providing excellent support and continuously enhancing the tools based on user needs.</p>
+            <div class="contact-ctas">
+                <a href="feedback.html" class="btn btn-primary"><i class="fa-solid fa-lightbulb"></i> Share your feedback</a>
+                <a href="mailto:tontufytservices@gmail.com?subject=Troolify%20Feedback" class="btn btn-secondary"><i class="fa-solid fa-envelope"></i> Email the team</a>
+            </div>
+        </section>
+
     </main>
 
     <script src="../assets/js/layout.js" defer></script>

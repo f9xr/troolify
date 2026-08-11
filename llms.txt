@@ -7,6 +7,7 @@ Every Troolify tool runs entirely in your browser. Your data never leaves your d
 ## Tools
 - [Word Counter](https://f9xr.github.io/troolify/tools/text/word-counter.html): Live word, character, sentence and reading-time stats.
 - [JSON Formatter](https://f9xr.github.io/troolify/tools/coding/json-formatter.html): Format, validate, minify and copy JSON instantly.
+- [YouTube Timestamp Link Generator](https://f9xr.github.io/troolify/tools/youtube/timestamp-link-generator.html): Clickable timestamp links and instant video-description chapters.
 
 ## Catalog
 - [Utility Catalog](https://f9xr.github.io/troolify/tools/index.html): Browse every category and tool.
