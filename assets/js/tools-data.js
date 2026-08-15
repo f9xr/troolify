@@ -1,10 +1,13 @@
 window.TOOLS = [
+  { name:"Song Length Calculator", desc:"Calculate exact song or track length from BPM and bar repetitions instantly — processed entirely in this tab.", icon:"fa-solid fa-music", tag:"Audio", category:"Audio", href:"tools/audio/song-length-calculator.html" },
   { name:"Word Counter", desc:"Live word, character, sentence and reading-time stats as you type — processed in this tab.", icon:"fa-solid fa-align-left", tag:"Text", category:"Text", href:"tools/text/word-counter.html" },
+  { name:"Numeronym Generator", desc:"Turn any word into a numeronym like i18n or k8s, or decode one back into its letter count — right in this tab.", icon:"fa-solid fa-font", tag:"Text", category:"Text", href:"tools/text/numeronym-generator.html" },
   { name:"JSON Formatter", desc:"Format, validate, minify and copy JSON instantly without ever sending it to a server.", icon:"fa-solid fa-code", tag:"JSON", category:"Coding", href:"tools/coding/json-formatter.html" },
   { name:"YouTube Timestamp Link Generator", desc:"Create clickable timestamp links and instant video-description chapters for any YouTube video — built entirely in your browser.", icon:"fa-brands fa-youtube", tag:"YouTube", category:"YouTube", href:"tools/youtube/timestamp-link-generator.html" }
 ];
 
 window.CATEGORIES = [
+  { folder:"Audio", name:"Audio Tools", icon:"fa-solid fa-music", desc:"BPM, song length and audio production utilities." },
   { folder:"AI", name:"AI Tools", icon:"fa-solid fa-brain", desc:"Prompt, text, image and code generation utilities." },
   { folder:"Coding", name:"Developer Tools", icon:"fa-solid fa-code", desc:"Utilities designed to make coding, debugging and web development easier." },
   { folder:"Converters", name:"Converters", icon:"fa-solid fa-arrows-rotate", desc:"Convert data between formats instantly." },

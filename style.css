@@ -73,7 +73,6 @@ body {
     background-color: var(--bg-dark);
     color: var(--text-main);
     line-height: 1.6;
-    overflow-x: hidden;
     position: relative;
 
     /* Smooth font rendering across platforms */
@@ -886,6 +885,90 @@ h1, h2, h3, h4, h5, h6 {
 
 .category-card:hover .category-arrow {
     transform: translateX(4px);
+}
+
+/* Skeleton loading — placeholder category cards shown while the catalog grid renders */
+.skel {
+    position: relative;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.skel::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transform: translateX(-100%);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    animation: skel-sweep 1.5s ease-in-out infinite;
+}
+
+.skel-cat-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    background: linear-gradient(180deg, rgba(52, 58, 64, 0.55), rgba(33, 37, 41, 0.42));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1.5rem;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 10px 30px rgba(0, 0, 0, 0.35);
+    animation: skel-pulse 1.6s ease-in-out infinite;
+}
+
+.skel-cat-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.skel-line {
+    height: 14px;
+    border-radius: 8px;
+}
+
+.skel-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.skel-chip {
+    width: 80px;
+    height: 16px;
+    border-radius: 99px;
+}
+
+.skel-square {
+    width: 18px;
+    height: 18px;
+    border-radius: 6px;
+}
+
+.skel-w-40 { width: 40%; }
+.skel-w-60 { width: 60%; }
+.skel-w-70 { width: 70%; }
+.skel-w-80 { width: 80%; }
+.skel-w-90 { width: 90%; }
+.skel-w-100 { width: 100%; }
+
+@keyframes skel-sweep {
+    100% { transform: translateX(100%); }
+}
+
+@keyframes skel-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.55; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .skel-cat-card { animation: none; }
+    .skel::after { animation: none; }
 }
 
 /* Featured Tools */

@@ -63,3 +63,21 @@ footer{padding:48px 0}
 .privacy-badge{padding:12px 16px;font-size:12.5px}
 .privacy-badge svg{width:19px;height:19px}
 .footer-links{gap:18px;font-size:13.5px}
+
+/* ============================================================================
+   Skeleton loading — placeholder tool cards shown while catalog.js renders.
+   Mirrors the .tool-card silhouette to avoid layout shift.
+   ============================================================================ */
+
+.skel{position:relative;overflow:hidden;background:rgba(255,255,255,.07);border-radius:10px;flex-shrink:0}
+.skel::after{content:"";position:absolute;inset:0;transform:translateX(-100%);background:linear-gradient(90deg,transparent,rgba(255,255,255,.1),transparent);animation:skel-sweep 1.5s ease-in-out infinite}
+.skel-card{display:flex;flex-direction:column;gap:16px;padding:26px;background:linear-gradient(180deg,rgba(52,58,64,.5),rgba(33,37,41,.38));border:1px solid rgba(255,255,255,.08);border-radius:var(--radius-lg);animation:skel-pulse 1.6s ease-in-out infinite}
+.skel-icon{width:46px;height:46px;border-radius:13px}
+.skel-line{height:12px;border-radius:6px}
+.skel-chip{width:64px;height:24px;border-radius:999px}
+.skel-square{width:34px;height:34px;border-radius:10px}
+.skel-row{display:flex;align-items:center;justify-content:space-between;margin-top:auto}
+.skel-w-40{width:40%}.skel-w-60{width:60%}.skel-w-70{width:70%}.skel-w-80{width:80%}.skel-w-90{width:90%}.skel-w-100{width:100%}
+@keyframes skel-sweep{100%{transform:translateX(100%)}}
+@keyframes skel-pulse{0%,100%{opacity:1}50%{opacity:.55}}
+@media (prefers-reduced-motion: reduce){.skel-card{animation:none}.skel::after{animation:none}}

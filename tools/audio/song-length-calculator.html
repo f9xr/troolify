@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Song Length Calculator | BPM to Track Time</title>
+<meta name="description" content="Calculate exact song length from BPM and bar repetitions with Troolify's free song length calculator. Instant results, no sign up needed.">
+<meta name="author" content="F9XR Editorial Team">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#212529">
+<link rel="canonical" href="https://f9xr.github.io/troolify/tools/audio/song-length-calculator.html">
+<meta property="og:site_name" content="Troolify">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Free Song Length Calculator | BPM to Track Time">
+<meta property="og:description" content="Calculate exact song length from BPM and bar repetitions with Troolify's free song length calculator. Instant results, no sign up needed.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://f9xr.github.io/troolify/tools/audio/song-length-calculator.html">
+<meta property="og:image" content="https://f9xr.github.io/troolify/assets/images/og-image.png">
+<meta property="article:published_time" content="2026-08-14">
+<meta property="article:modified_time" content="2026-08-14">
+<meta property="article:section" content="Audio Tools">
+<meta property="article:tag" content="Song Length Calculator">
+<meta property="article:tag" content="BPM Calculator">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Song Length Calculator | BPM to Track Time">
+<meta name="twitter:description" content="Calculate exact song length from BPM and bar repetitions with Troolify's free song length calculator. Instant results, no sign up needed.">
+<meta name="twitter:image" content="https://f9xr.github.io/troolify/assets/images/og-image.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://f9xr.github.io/troolify/" },
+    { "@type": "ListItem", "position": 2, "name": "Audio Tools", "item": "https://f9xr.github.io/troolify/tools/audio/" },
+    { "@type": "ListItem", "position": 3, "name": "Song Length Calculator", "item": "https://f9xr.github.io/troolify/tools/audio/song-length-calculator.html" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Song Length Calculator",
+  "url": "https://f9xr.github.io/troolify/tools/audio/song-length-calculator.html",
+  "applicationCategory": "UtilitiesApplication",
+  "applicationSubCategory": "BPM to Track Time Calculator",
+  "operatingSystem": "Any (web browser)",
+  "featureList": ["Calculate song length from BPM and repetitions", "Support bars and beats as repetition units", "Adjustable beats per bar (time signature)", "Copy results to clipboard", "100% client-side processing"],
+  "description": "Calculate exact song length from BPM and bar repetitions with Troolify's free song length calculator. Instant results, no sign up needed.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "datePublished": "2026-08-14",
+  "dateModified": "2026-08-14",
+  "author": {
+    "@type": "Organization",
+    "name": "F9XR Editorial Team",
+    "url": "https://f9xr.github.io/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Troolify",
+    "url": "https://f9xr.github.io/troolify/"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Song Length Calculator: Plan Your Track's Runtime Before You Even Hit Record",
+  "description": "Calculate exact song length from BPM and bar repetitions with Troolify's free song length calculator. Instant results, no sign up needed.",
+  "image": "https://f9xr.github.io/troolify/assets/images/og-image.png",
+  "datePublished": "2026-08-14",
+  "dateModified": "2026-08-14",
+  "mainEntityOfPage": "https://f9xr.github.io/troolify/tools/audio/song-length-calculator.html",
+  "author": {
+    "@type": "Organization",
+    "name": "F9XR Editorial Team",
+    "url": "https://f9xr.github.io/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Troolify",
+    "url": "https://f9xr.github.io/troolify/"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a song length calculator used for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A song length calculator determines the exact runtime of a piece of music based on its tempo (BPM) and the number of repetitions or bars in the arrangement. It is used by musicians, producers, marketers, and video editors to plan precise audio lengths before recording or editing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate song length from BPM?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To calculate song length from BPM, you need to know the tempo in beats per minute and the total number of beats or bars in the piece. Dividing the total number of beats by the BPM gives the runtime in minutes, which can then be converted to minutes and seconds."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does time signature affect song length calculations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Time signature determines how many beats are in each bar, which affects how repetitions translate into total runtime. Most calculators assume a standard 4/4 time signature unless otherwise specified, so adjustments may be needed for other signatures like 3/4 or 6/8."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do radio and podcast ads need exact runtime calculations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Radio and podcast ad slots are typically sold in fixed lengths, such as 15, 30, or 60 seconds. Audio that runs too long can be cut off mid message, while audio that runs too short can leave awkward silence. Calculating exact length before recording helps avoid both problems."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use a song length calculator for video background music?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Calculating BPM and bar count in advance helps producers create or select background music that naturally matches a video's exact runtime, avoiding abrupt cuts or looped audio that feels disjointed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the Troolify song length calculator free to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The tool is completely free, requires no account or sign up, and calculates results instantly in your browser."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="icon" type="image/webp" href="../../assets/images/favicon.webp"><link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../../assets/css/tool.css">
+<link rel="stylesheet" href="../../assets/css/tailwind.css">
+<link rel="stylesheet" href="../../assets/css/site-shell.css">
+<link rel="stylesheet" href="../../assets/css/tool-page.css">
+<link rel="stylesheet" href="../../assets/css/seo-article.css">
+
+<style>
+/* ============================================================
+   Song Length Calculator — page-specific styles
+   (matches tool-shared.css design tokens)
+   ============================================================ */
+
+.sl-field{margin-top:16px}
+.sl-label{display:flex;align-items:center;gap:7px;font-size:11.5px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--faint);margin-bottom:8px}
+.sl-label i{color:var(--accent);font-size:12px}
+.sl-input{width:100%;border:1px solid var(--border);border-radius:12px;padding:12px 14px;background:#1B2028;color:var(--ink);font-family:inherit;font-size:15px;font-weight:600;outline:none;transition:border-color .18s ease,box-shadow .18s ease;-moz-appearance:textfield;appearance:textfield}
+.sl-input::-webkit-outer-spin-button,.sl-input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.sl-input::placeholder{color:var(--faint);font-weight:400}
+.sl-input:focus{border-color:var(--accent);box-shadow:0 0 0 4px rgba(59,130,246,.18)}
+
+.sl-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.sl-select{cursor:pointer}
+.sl-select option{background:#1B2028;color:var(--ink)}
+
+.sl-options{display:flex;flex-wrap:wrap;align-items:flex-end;gap:18px;margin-top:4px}
+.sl-unit{display:flex;flex-direction:column;gap:8px}
+.sl-seg{display:inline-flex;background:#1B2028;border:1px solid var(--border);border-radius:12px;padding:4px;gap:4px}
+.sl-seg input{position:absolute;opacity:0;pointer-events:none}
+.sl-seg label{display:inline-flex;align-items:center;justify-content:center;padding:9px 20px;border-radius:9px;font-size:13px;font-weight:700;color:var(--faint);cursor:pointer;transition:color .18s ease,background .18s ease,box-shadow .18s ease;user-select:none}
+.sl-seg input:checked + label{background:var(--accent);color:#fff;box-shadow:0 4px 12px rgba(59,130,246,.32)}
+.sl-seg label:hover{color:var(--ink)}
+.sl-ts{flex:1;min-width:220px}
+
+.sl-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.sl-actions .btn,.sl-actions .rt-btn{flex:1;justify-content:center;min-width:130px}
+
+.sl-result{display:none;margin-top:20px;padding:22px;border-radius:14px;border:1px solid rgba(52,211,153,.3);background:linear-gradient(180deg,rgba(16,185,129,.08),rgba(16,185,129,.03))}
+.sl-result.visible{display:block}
+.sl-time{font-size:clamp(2.4rem,6vw,3.4rem);font-weight:900;letter-spacing:-.03em;line-height:1;color:#D1FAE5;font-variant-numeric:tabular-nums}
+.sl-time small{display:block;font-size:13px;font-weight:700;color:#6EE7B7;text-transform:uppercase;letter-spacing:.14em;margin-top:6px}
+.sl-note{display:flex;align-items:flex-start;gap:8px;margin-top:12px;font-size:13px;color:#A7F3D0;line-height:1.6}
+.sl-note i{color:var(--green);margin-top:3px;flex-shrink:0}
+.sl-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+.sl-stat{background:rgba(16,185,129,.1);border:1px solid rgba(52,211,153,.22);border-radius:12px;padding:14px;text-align:center}
+.sl-stat b{display:block;font-size:1.5rem;font-weight:800;color:#fff;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.sl-stat span{display:block;margin-top:3px;font-size:11px;font-weight:700;color:#6EE7B7;text-transform:uppercase;letter-spacing:.1em}
+@media(max-width:560px){.sl-row{grid-template-columns:1fr}.sl-stats{grid-template-columns:1fr}}
+</style>
+</head>
+<body data-layout="tool">
+
+<main class="tool-main">
+  <div class="container">
+
+    <div class="tool-head hero">
+
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="../index.html">Audio Tools</a></li>
+          <li class="current" aria-current="page">Song Length Calculator</li>
+        </ol>
+      </nav>
+
+      <div class="hero-main">
+        <span class="tool-badge"><span class="dot"></span>100% client-side &middot; zero data retention</span>
+        <h1>Song Length Calculator</h1>
+        <p>Calculate exact song length from BPM and bar repetitions with Troolify's free song length calculator. Instant results, no sign up needed.</p>
+      </div>
+
+      <div class="hero-box hero-cat">
+        <h3 class="hero-box-title"><i class="fa-solid fa-folder-open"></i>Category</h3>
+        <div class="tool-meta">
+          <span class="tool-tag"><i class="fa-solid fa-tag"></i>Audio</span>
+          <a class="tool-cat" href="../index.html" aria-label="Browse Audio Tools category"><i class="fa-solid fa-folder"></i>Audio Tools</a>
+        </div>
+      </div>
+
+      <div class="hero-box hero-qa">
+        <h3 class="hero-box-title"><i class="fa-solid fa-bolt"></i>Quick Actions</h3>
+        <div class="tool-actions">
+          <button class="rt-btn" type="button" id="btnShare"><i class="fa-solid fa-share-nodes"></i>Share</button>
+          <button class="rt-btn" type="button" id="btnEmbed"><i class="fa-solid fa-code"></i>Embed Tool</button>
+          <a class="rt-btn" href="mailto:tontufytservices@gmail.com?subject=Feedback%3A%20Song%20Length%20Calculator" rel="noopener"><i class="fa-solid fa-comment"></i>Feedback</a>
+        </div>
+      </div>
+
+      <div class="hero-box hero-details">
+        <h3 class="hero-box-title"><i class="fa-solid fa-circle-info"></i>Tool Details</h3>
+        <div class="tool-details">
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.github.io/" target="_blank" rel="noopener">F9XR Editorial Team</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-check-double"></i>Reviewed by</span><a class="detail-value" href="../../press/editorial-policies.html">Review Board</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-clock-rotate-left"></i>Last updated</span><span class="detail-value">14 August 2026</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Actual tool -->
+    <div class="panel clean sl-panel">
+      <div class="panel-inner">
+
+        <div class="toolbar-row">
+          <span class="tool-label"><i class="fa-solid fa-gauge-high"></i>Tempo &amp; Repetitions</span>
+          <div class="toolbar-actions">
+            <button class="chip-btn" type="button" id="slSample" title="Load a sample track"><i class="fa-solid fa-wand-magic-sparkles"></i><span class="hide-sm">Sample</span></button>
+            <button class="chip-btn" type="button" id="slClear" title="Clear the form"><i class="fa-solid fa-eraser"></i><span class="hide-sm">Clear</span></button>
+          </div>
+        </div>
+
+        <div class="sl-row">
+          <div class="sl-field">
+            <label class="sl-label" for="slBpm"><i class="fa-solid fa-gauge"></i>BPM (beats per minute)</label>
+            <input type="number" id="slBpm" class="sl-input" min="1" step="1" value="120" placeholder="e.g. 120" autocomplete="off">
+          </div>
+          <div class="sl-field">
+            <label class="sl-label" for="slReps"><i class="fa-solid fa-repeat"></i>Repetitions (bars or beats)</label>
+            <input type="number" id="slReps" class="sl-input" min="0.25" step="0.25" value="16" placeholder="e.g. 16" autocomplete="off">
+          </div>
+        </div>
+
+        <div class="sl-options">
+          <div class="sl-unit" role="radiogroup" aria-label="Count repetitions in">
+            <span class="sl-label"><i class="fa-solid fa-layer-group"></i>Count repetitions in</span>
+            <div class="sl-seg">
+              <input type="radio" id="slUnitBars" name="slUnit" value="bars" checked>
+              <label for="slUnitBars">Bars</label>
+              <input type="radio" id="slUnitBeats" name="slUnit" value="beats">
+              <label for="slUnitBeats">Beats</label>
+            </div>
+          </div>
+          <div class="sl-field sl-ts">
+            <label class="sl-label" for="slBpb"><i class="fa-solid fa-music"></i>Beats per bar (time signature)</label>
+            <select id="slBpb" class="sl-input sl-select" aria-label="Beats per bar">
+              <option value="3">3/4 &mdash; 3 beats per bar</option>
+              <option value="4" selected>4/4 &mdash; 4 beats per bar</option>
+              <option value="5">5/4 &mdash; 5 beats per bar</option>
+              <option value="6">6/8 &mdash; 6 beats per bar</option>
+              <option value="7">7/8 &mdash; 7 beats per bar</option>
+              <option value="9">9/8 &mdash; 9 beats per bar</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="sl-actions">
+          <button class="btn btn-primary" type="button" id="slCalc"><i class="fa-solid fa-calculator"></i>Calculate Length</button>
+          <button class="rt-btn" type="button" id="slCopy" disabled><i class="fa-solid fa-copy"></i>Copy</button>
+        </div>
+
+        <div class="sl-result" id="slResult" role="status" aria-live="polite"></div>
+        <p class="proc-line"><i class="fa-solid fa-bolt"></i><span id="slProc">Enter a BPM and repetition count, then hit Calculate.</span></p>
+
+      </div>
+    </div>
+
+    <!-- Disclaimer -->
+    <aside class="disclaimer" aria-label="Disclaimer">
+      <i class="fa-solid fa-circle-info"></i>
+      <p>Disclaimer: Whilst every effort has been made in building our tools, we are not to be held liable for any damages or monetary losses arising out of or in connection with their use. <a href="../../press/disclaimer.html">Full disclaimer</a>.</p>
+    </aside>
+
+    <!-- On this page (TOC) — collapsed by default -->
+    <details class="toc">
+      <summary>On this page</summary>
+      <ol>
+        <li><a href="#what-is"><i class="fa-solid fa-circle-question"></i>What Is a Song Length Calculator, and Why Does It Matter?</a></li>
+        <li><a href="#about-the-tool"><i class="fa-solid fa-toolbox"></i>About the Troolify Song Length Calculator</a></li>
+        <li><a href="#how-to-use"><i class="fa-solid fa-list-ol"></i>Guide: How to Use the Song Length Calculator</a></li>
+        <li><a href="#facts"><i class="fa-solid fa-table"></i>Facts About the Song Length Calculator Tool</a></li>
+        <li><a href="#use-cases"><i class="fa-solid fa-users"></i>Use Cases: Who Actually Needs a Song Length Calculator?</a></li>
+        <li><a href="#examples"><i class="fa-solid fa-file-lines"></i>Examples: Song Length Calculator in Everyday Use</a></li>
+        <li><a href="#tips"><i class="fa-solid fa-lightbulb"></i>Additional Tips for Using a Song Length Calculator Effectively</a></li>
+        <li><a href="#f9xr-services"><i class="fa-solid fa-handshake"></i>How the F9XR Team Can Help Your Business</a></li>
+        <li><a href="#key-takeaways"><i class="fa-solid fa-key"></i>Key Takeaways</a></li>
+        <li><a href="#faq"><i class="fa-solid fa-circle-question"></i>Frequently Asked Questions</a></li>
+        <li><a href="#conclusion"><i class="fa-solid fa-flag-checkered"></i>Conclusion</a></li>
+      </ol>
+    </details>
+
+    <!-- SEO article + right ad sidebar -->
+    <div class="article-layout">
+
+      <article class="seo-article">
+
+      <h2 id="article-title">Song Length Calculator: Plan Your Track's Runtime Before You Even Hit Record</h2>
+
+      <p>Ask any musician or producer how long a song "feels" while writing it, and they will usually be wrong. A verse that feels tight in your head can run 45 seconds longer once it is actually laid out over bars and tempo. If you are building a track for a client, a jingle for a local business ad, or background music for a video project, guessing at runtime is a risky way to work.</p>
+
+      <p>That is where a <strong>song length calculator</strong> earns its place in your toolkit. Instead of estimating, you plug in the tempo (BPM) and the number of repetitions or bars, and you get the exact runtime before a single note is recorded.</p>
+
+      <p>This guide walks through the <strong>Song Length Calculator tool on Troolify</strong>, why it matters even outside of pure music production, and how business owners, startups, and local businesses working with audio content can put it to use. We will cover a step by step guide, real use cases, examples, and answers to common questions people search for.</p>
+
+      <figure>
+        <img src="https://source.unsplash.com/1600x900/?music,studio,keyboard" alt="Music producer working on a laptop with a keyboard" loading="lazy" width="1600" height="900">
+        <figcaption>Photo via <a href="https://unsplash.com/?utm_source=troolify&utm_medium=referral" target="_blank" rel="noopener">Unsplash</a></figcaption>
+      </figure>
+
+      <h2 id="what-is">What Is a Song Length Calculator and Why Does It Matter?</h2>
+      <p>A song length calculator determines the exact runtime of a piece of music based on its tempo, measured in beats per minute (BPM), and how many repetitions of a bar or section it contains. Instead of eyeballing how long a section will play out, you get a precise time in minutes and seconds.</p>
+      <p>This matters more than casual listeners might expect. Tempo is the backbone of how long recorded music actually plays. A song at 60 BPM moves at half the speed of a song at 120 BPM, meaning the same number of bars will take twice as long to play. According to data commonly referenced in <a href="https://en.wikipedia.org/wiki/Tempo" target="_blank" rel="noopener nofollow">music production and audio engineering resources</a>, popular music across genres typically ranges from about 90 to 140 BPM, but the exact runtime for any given track still depends entirely on structure, not just tempo alone.</p>
+      <p>For businesses, this precision is not just a creative detail, it is often a hard requirement:</p>
+      <ul>
+        <li>A radio ad script needs to fit exactly 30 or 60 seconds</li>
+        <li>A podcast intro jingle usually needs to land under 10 seconds</li>
+        <li>A YouTube ad needs to hit specific runtime brackets to qualify for certain ad formats</li>
+        <li>A background track for a product video needs to match the video's length without abrupt cuts</li>
+      </ul>
+      <p>Getting this wrong after the fact means re-recording, re-editing, or awkwardly fading audio out mid phrase, none of which sound professional.</p>
+
+      <h2 id="about-the-tool">About the Troolify Song Length Calculator Tool</h2>
+      <p>The <a href="https://f9xr.github.io/troolify" target="_blank" rel="noopener">Troolify Song Length Calculator</a> is a free, browser based tool that calculates exact song or section length using two inputs: BPM (tempo) and the number of repetitions (bars or beats). It runs the math instantly, so you get a precise runtime without needing to open a digital audio workstation or do the calculation by hand.</p>
+
+      <h3>Why This Tool Is Useful Beyond Music Producers</h3>
+      <p>While this is a natural fit for musicians and producers, it is genuinely useful for a wider range of people, including:</p>
+      <ul>
+        <li>Marketing teams scripting radio or audio ads that must hit a precise time slot</li>
+        <li>Video editors syncing background music to a fixed video length</li>
+        <li>Podcasters building consistent intro and outro jingles</li>
+        <li>Local businesses commissioning custom audio for ads, on hold messages, or in store playlists</li>
+        <li>Content creators planning music for short form video platforms with strict length limits</li>
+      </ul>
+      <p>Like the rest of Troolify's tools, this one is completely free, requires no sign up, and works instantly in your browser.</p>
+
+      <h2 id="how-to-use">Guide: How to Use the Song Length Calculator</h2>
+      <p>Calculating exact song length takes just a few seconds.</p>
+
+      <h3>Step by Step Instructions</h3>
+      <ol>
+        <li><strong>Open the tool</strong> at <a href="https://f9xr.github.io/troolify" target="_blank" rel="noopener">f9xr.github.io/troolify</a>.</li>
+        <li><strong>Enter the BPM (beats per minute)</strong> of your track. This is usually visible in your DAW (digital audio workstation) software, or can be tapped out and measured if you are working from a reference track.</li>
+        <li><strong>Enter the number of repetitions</strong>, meaning how many bars or beat cycles the section or full song contains.</li>
+        <li><strong>Click Calculate</strong> to instantly see the resulting length in minutes and seconds.</li>
+        <li><strong>Adjust the BPM or repetition count</strong> if the runtime does not match your target, and recalculate instantly to see the new result.</li>
+        <li><strong>Use the final number</strong> to plan your arrangement, script your ad copy, or sync your track to a video timeline.</li>
+      </ol>
+      <p>No downloads, no software, no manual math with a calculator app on the side.</p>
+
+      <figure>
+        <img src="https://source.unsplash.com/1600x900/?audio,mixing,soundengineer" alt="Sound engineer mixing audio on a digital console" loading="lazy" width="1600" height="900">
+        <figcaption>Photo via <a href="https://unsplash.com/?utm_source=troolify&utm_medium=referral" target="_blank" rel="noopener">Unsplash</a></figcaption>
+      </figure>
+
+      <h3>Video Walkthrough</h3>
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/GZLXRc3aFxc" title="Understanding BPM and song length in music production" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+      </div>
+
+      <h2 id="facts">Facts About the Song Length Calculator Tool</h2>
+      <table>
+        <thead>
+          <tr><th scope="col">Feature</th><th scope="col">Detail</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Cost</td><td>100% free, no sign up required</td></tr>
+          <tr><td>Inputs needed</td><td>BPM (tempo) and number of repetitions or bars</td></tr>
+          <tr><td>Output</td><td>Exact runtime in minutes and seconds</td></tr>
+          <tr><td>Best for</td><td>Musicians, producers, marketers, video editors, podcasters</td></tr>
+          <tr><td>Device support</td><td>Works on desktop and mobile browsers</td></tr>
+          <tr><td>Speed</td><td>Instant calculation, no waiting</td></tr>
+          <tr><td>Learning curve</td><td>None, enter two numbers, get the result</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="use-cases">Use Cases: Who Actually Needs a Song Length Calculator?</h2>
+      <p>This tool solves a real, practical problem for a wider group of people than you might initially think.</p>
+
+      <h3>1. Local Businesses Commissioning Custom Audio</h3>
+      <p>A local business ordering a jingle or on hold message from a musician or agency can use this tool to communicate exactly how long the piece needs to be, based on the tempo the composer is working with, avoiding costly revisions later.</p>
+
+      <h3>2. Marketing Teams Producing Radio and Podcast Ads</h3>
+      <p>Broadcast ad slots are almost always sold in fixed lengths, typically 15, 30, or 60 seconds. A marketing team scripting the audio can work backward from BPM and bar count to make sure the final mix lands exactly on time.</p>
+
+      <h3>3. Video Editors Syncing Music to Footage</h3>
+      <p>When background music needs to match a video's exact runtime without an abrupt cut or awkward loop, calculating the precise song length in advance makes editing far smoother.</p>
+
+      <h3>4. Independent Musicians and Producers</h3>
+      <p>Musicians structuring an arrangement, verse, chorus, bridge, need to know how each section adds up to the final track length, especially when targeting a specific runtime for streaming platforms or radio submission.</p>
+
+      <h3>5. Podcasters Creating Consistent Branding</h3>
+      <p>A podcast intro or outro jingle often needs to be a very specific length to fit a show's format. This tool helps producers hit that target precisely instead of trimming audio awkwardly after recording.</p>
+
+      <figure>
+        <img src="https://source.unsplash.com/1600x900/?podcast,recording,microphone" alt="Small business owner recording audio content" loading="lazy" width="1600" height="900">
+        <figcaption>Photo via <a href="https://unsplash.com/?utm_source=troolify&utm_medium=referral" target="_blank" rel="noopener">Unsplash</a></figcaption>
+      </figure>
+
+      <h2 id="examples">Examples: Song Length Calculator in Everyday Use</h2>
+
+      <h3>Example 1: Radio Ad Script</h3>
+      <p>A local restaurant wants a 30 second radio jingle. The composer works at 100 BPM. Using the calculator, they determine that 12.5 bars (assuming 4 beats per bar) will land almost exactly at 30 seconds, giving them a clear structural target before recording begins.</p>
+
+      <h3>Example 2: Podcast Intro</h3>
+      <p>A podcaster wants a punchy 8 second intro jingle at 128 BPM, a common tempo for upbeat electronic style intros. Using the calculator, they work out that roughly 4 bars at that tempo gets them extremely close to their target length, then fine tune from there.</p>
+
+      <h3>Example 3: Background Music for a Product Video</h3>
+      <p>A startup is producing a 45 second product demo video and wants background music that matches without fading out mid phrase. By entering the composer's chosen BPM and testing different repetition counts, they land on a bar count that produces a track ending naturally right around 45 seconds.</p>
+
+      <h2 id="tips">Additional Tips for Using a Song Length Calculator Effectively</h2>
+      <ul>
+        <li><strong>Know your time signature.</strong> This calculator generally assumes a standard structure, so if you are working in a time signature other than 4/4, account for that when counting "repetitions" or bars.</li>
+        <li><strong>Leave a small buffer for mixing and mastering.</strong> Final mixes often shift slightly in length due to fades, intros, or outros. Aim a second or two under your hard limit when working toward a strict runtime.</li>
+        <li><strong>Use it early in the songwriting or scripting process.</strong> Calculating your target length before writing lyrics or structuring sections saves you from cutting content later.</li>
+        <li><strong>Cross check with reference tracks.</strong> If you are matching the feel of an existing song or ad, calculate its BPM and bar count first, then use that as your benchmark.</li>
+        <li><strong>Combine with a metronome or DAW click track.</strong> Once you have your target BPM and bar count, recording against a click track keeps your actual performance matching your planned runtime.</li>
+        <li><strong>Round conservatively for broadcast slots.</strong> If a radio slot is sold as "30 seconds," most stations expect the audio to land at or just under that mark, not over it.</li>
+      </ul>
+
+      <h2 id="f9xr-services">How the F9XR Team Can Help Your Business</h2>
+      <p>A song length calculator is a precise, practical tool for planning audio content. But turning that audio, whether it is a jingle, an ad, or background music, into something that actually reaches your customers takes a broader strategy.</p>
+      <p>The <strong>F9XR Team</strong> helps startups and local businesses with:</p>
+      <ul>
+        <li><strong><a href="https://f9xr.github.io/services/we-do-for-you.html" target="_blank" rel="noopener">Website development</a></strong> that integrates audio and video content cleanly into your site</li>
+        <li><strong><a href="https://f9xr.github.io/services/website-rentals.html" target="_blank" rel="noopener">Website redesign</a></strong> for businesses whose current site does not showcase their brand or media well</li>
+        <li><strong><a href="https://f9xr.github.io/services/google-business-optimization.html" target="_blank" rel="noopener">Local SEO</a></strong> so that when nearby customers search for your business, your website and content actually show up</li>
+        <li><strong><a href="https://f9xr.github.io/tools/digital-presence.html" target="_blank" rel="noopener">Digital presence strategy</a></strong>, connecting your website, media content, and marketing into one cohesive brand experience</li>
+      </ul>
+      <p>If your business is investing in custom audio, jingles, ads, or branded music, the F9XR Team can help make sure that content lives on a website and digital presence built to actually convert visitors into customers.</p>
+
+      <h2 id="key-takeaways">Key Takeaways</h2>
+      <ul>
+        <li>A song length calculator determines exact track runtime using BPM (tempo) and the number of repetitions or bars, removing the guesswork from music and audio planning.</li>
+        <li>The <strong>Troolify Song Length Calculator</strong> gives instant results with just two inputs, and requires no sign up or software installation.</li>
+        <li>Businesses commissioning jingles, radio ads, podcast intros, or background music all benefit from knowing exact runtime before recording begins.</li>
+        <li>Precise planning avoids costly re-recording, awkward fades, or mismatched audio and video syncing later in production.</li>
+        <li>For a broader digital presence that puts your audio and media content to real use, the F9XR Team can help with website development, redesign, and local SEO.</li>
+      </ul>
+
+      <hr class="divider" aria-hidden="true">
+
+      <h2 id="faq">Frequently Asked Questions</h2>
+
+      <h3>What is a song length calculator used for?</h3>
+      <p>A song length calculator determines the exact runtime of a piece of music based on its tempo (BPM) and the number of repetitions or bars in the arrangement. It is used by musicians, producers, marketers, and video editors to plan precise audio lengths before recording or editing.</p>
+
+      <h3>How do I calculate song length from BPM?</h3>
+      <p>To calculate song length from BPM, you need to know the tempo in beats per minute and the total number of beats or bars in the piece. Dividing the total number of beats by the BPM gives the runtime in minutes, which can then be converted to minutes and seconds.</p>
+
+      <h3>Does time signature affect song length calculations?</h3>
+      <p>Yes. Time signature determines how many beats are in each bar, which affects how repetitions translate into total runtime. Most calculators assume a standard 4/4 time signature unless otherwise specified, so adjustments may be needed for other signatures like 3/4 or 6/8.</p>
+
+      <h3>Why do radio and podcast ads need exact runtime calculations?</h3>
+      <p>Radio and podcast ad slots are typically sold in fixed lengths, such as 15, 30, or 60 seconds. Audio that runs too long can be cut off mid message, while audio that runs too short can leave awkward silence. Calculating exact length before recording helps avoid both problems.</p>
+
+      <h3>Can I use a song length calculator for video background music?</h3>
+      <p>Yes. Calculating BPM and bar count in advance helps producers create or select background music that naturally matches a video's exact runtime, avoiding abrupt cuts or looped audio that feels disjointed.</p>
+
+      <h3>Is the Troolify song length calculator free to use?</h3>
+      <p>Yes. The tool is completely free, requires no account or sign up, and calculates results instantly in your browser.</p>
+
+      <h2 id="conclusion">Conclusion</h2>
+      <p>Guessing at song length might work for a casual demo, but it falls apart fast once real deadlines, ad slots, or client expectations are involved. The <a href="https://f9xr.github.io/troolify" target="_blank" rel="noopener">Troolify Song Length Calculator</a> takes the guesswork out entirely, giving you exact runtime from just BPM and repetitions, instantly and for free.</p>
+      <p>And once your audio content is ready, whether that is a jingle, an ad, or branded background music, the <strong><a href="https://f9xr.github.io/pages/services.html" target="_blank" rel="noopener">F9XR Team</a></strong> can help make sure it lives on a website and digital presence built to actually bring in customers, with website development, redesign, and local SEO all working together.</p>
+    </article>
+
+      <aside class="ad-sidebar" aria-label="Advertisement">
+        <div class="ad-slot"><span class="ad-badge">Advertisement</span></div>
+        <div class="ad-slot hide-md"><span class="ad-badge">Advertisement</span></div>
+        <div class="ad-slot"><span class="ad-badge">Advertisement</span></div>
+      </aside>
+
+    </div><!-- /.article-layout -->
+
+    <!-- Keyword & Tags box -->
+    <section class="keyword-box" aria-label="Keywords and tags">
+      <h2><i class="fa-solid fa-tags"></i>Keyword &amp; Tags</h2>
+      <h3><i class="fa-solid fa-key"></i>Keywords</h3>
+      <div class="keywords">
+        <span class="keyword">Song Length Calculator</span>
+        <span class="keyword">BPM Calculator</span>
+        <span class="keyword">Track Length Calculator</span>
+        <span class="keyword">Tempo Calculator</span>
+        <span class="keyword">Free Music Tools</span>
+        <span class="keyword">Music Production Tools</span>
+        <span class="keyword">Podcast Production</span>
+        <span class="keyword">Radio Ad Production</span>
+      </div>
+      <h3><i class="fa-solid fa-tag"></i>Tags</h3>
+      <div class="tags">
+        <a class="tag" href="../index.html"><i class="fa-solid fa-tag"></i>Song Length Calculator</a>
+        <a class="tag" href="../index.html"><i class="fa-solid fa-folder"></i>Audio Tools</a>
+        <a class="tag" href="../../tools/index.html"><i class="fa-solid fa-cube"></i>Audio</a>
+      </div>
+    </section>
+
+    <!-- Publisher / Author box -->
+    <section class="author-box" aria-label="About the publisher">
+      <div class="author-avatar" aria-hidden="true"><img src="https://f9xr.github.io/logo.webp" alt="F9XR logo" loading="lazy"></div>
+      <div>
+        <span class="author-role">Published by</span>
+        <h2>F9XR Editorial Team</h2>
+        <p>Every Troolify tool is built and reviewed by the F9XR Editorial Team, then checked by our Review Board for correctness, accessibility, and clarity before publication. Tools run 100% client-side with zero data retention.</p>
+        <div class="author-links">
+          <a href="https://f9xr.github.io/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i>F9XR Team</a>
+          <a href="../../press/editorial-policies.html"><i class="fa-solid fa-scale-balanced"></i>Editorial Policies</a>
+          <a href="https://github.com/f9xr" target="_blank" rel="noopener" aria-label="F9XR on GitHub"><i class="fa-brands fa-github"></i>GitHub</a>
+          <a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on LinkedIn"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+          <a href="https://instagram.com/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on Instagram"><i class="fa-brands fa-instagram"></i>Instagram</a>
+          <a href="https://youtube.com/@QuarterlyLIV" target="_blank" rel="noopener" aria-label="F9XR on YouTube"><i class="fa-brands fa-youtube"></i>YouTube</a>
+          <a href="https://f9xr.github.io/pages/contact.html" target="_blank" rel="noopener"><i class="fa-solid fa-envelope"></i>Contact</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related tools with live search -->
+    <section class="related-tools" aria-label="Related tools">
+      <h2>Related Tools</h2>
+      <div class="related-search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" id="relatedSearch" placeholder="Search all Troolify tools&hellip;" autocomplete="off" aria-label="Search related tools">
+      </div>
+      <div class="related-grid" id="relatedGrid" aria-busy="true">
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+      </div>
+    </section>
+
+    <!-- Comments -->
+    <section class="comments" aria-label="Comments">
+      <h2>Comments</h2>
+      <div id="comments">
+        <script src="https://utteranc.es/client.js"
+                repo="f9xr/troolify"
+                issue-term="pathname"
+                theme="github-dark"
+                crossorigin="anonymous"
+                async>
+        </script>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"><span></span><i class="fa-solid fa-layer-group"></i><span></span></div>
+
+  </div>
+</main>
+
+<!-- Share modal -->
+<div class="modal" id="shareModal" role="dialog" aria-modal="true" aria-labelledby="shareModalTitle">
+  <div class="modal-backdrop"></div>
+  <div class="modal-panel">
+    <button type="button" class="modal-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <h3 id="shareModalTitle">Share this tool</h3>
+    <p class="modal-sub">Send the Song Length Calculator to a teammate, client, or friend.</p>
+    <div class="modal-body">
+      <div class="modal-field">
+        <i class="fa-solid fa-link" style="color:var(--faint);font-size:13px"></i>
+        <input type="text" id="shareLink" readonly aria-label="Share link">
+      </div>
+      <div class="modal-social">
+        <a href="#" id="shareTwitter" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i>Post on X</a>
+        <a href="#" id="shareLinkedin" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+        <a href="#" id="shareWhatsapp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i>WhatsApp</a>
+      </div>
+      <div class="modal-actions">
+        <button class="btn btn-primary" type="button" id="copyShareLink"><i class="fa-solid fa-copy"></i>Copy link</button>
+      </div>
+      <p class="modal-note">Tip: on mobile you can also use your browser's native share menu.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Embed modal -->
+<div class="modal" id="embedModal" role="dialog" aria-modal="true" aria-labelledby="embedModalTitle">
+  <div class="modal-backdrop"></div>
+  <div class="modal-panel">
+    <button type="button" class="modal-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <h3 id="embedModalTitle">Embed this tool</h3>
+    <p class="modal-sub">Copy the snippet below and paste it into your site's HTML.</p>
+    <div class="modal-body">
+      <textarea id="embedCode" readonly spellcheck="false" aria-label="Embed code"></textarea>
+      <div class="modal-actions">
+        <button class="btn btn-primary" type="button" id="copyEmbedCode"><i class="fa-solid fa-copy"></i>Copy code</button>
+      </div>
+      <p class="modal-note">The embedded tool stays 100% client-side. No server, no data collection.</p>
+    </div>
+  </div>
+</div>
+
+<script src="../../assets/js/layout.js" defer></script>
+<script src="../../assets/js/tools-data.js" defer></script>
+<script src="../../assets/js/tool-page.js" defer></script>
+<script>
+(function(){
+  "use strict";
+
+  var bpmInput = document.getElementById("slBpm");
+  var repsInput = document.getElementById("slReps");
+  var unitBars = document.getElementById("slUnitBars");
+  var unitBeats = document.getElementById("slUnitBeats");
+  var bpbSelect = document.getElementById("slBpb");
+  var calcBtn = document.getElementById("slCalc");
+  var copyBtn = document.getElementById("slCopy");
+  var resultBox = document.getElementById("slResult");
+  var proc = document.getElementById("slProc");
+
+  var SAMPLE_BPM = 100;
+  var SAMPLE_REPS = 12.5;
+  var lastResult = "";
+
+  /* -------------------- Helpers -------------------- */
+
+  function getUnit() { return unitBars.checked ? "bars" : "beats"; }
+  function getBpm() { var n = parseFloat(bpmInput.value); return isFinite(n) && n > 0 ? n : null; }
+  function getReps() { var n = parseFloat(repsInput.value); return isFinite(n) && n > 0 ? n : null; }
+  function getBpb() { var n = parseInt(bpbSelect.value, 10); return isFinite(n) && n > 0 ? n : 4; }
+
+  function pad(n) { return (n < 10 ? "0" : "") + n; }
+
+  function fmtNum(n) {
+    return parseFloat(n.toFixed(4)).toString();
+  }
+
+  function fmtClock(sec) {
+    sec = Math.max(0, sec);
+    var h = Math.floor(sec / 3600);
+    var m = Math.floor((sec % 3600) / 60);
+    var s = Math.round(sec % 60);
+    if (s === 60) { s = 0; m++; }
+    if (m === 60) { m = 0; h++; }
+    return h > 0 ? h + ":" + pad(m) + ":" + pad(s) : m + ":" + pad(s);
+  }
+
+  function fmtWords(sec) {
+    sec = Math.max(0, sec);
+    var h = Math.floor(sec / 3600);
+    var m = Math.floor((sec % 3600) / 60);
+    var s = Math.round(sec % 60);
+    if (s === 60) { s = 0; m++; }
+    if (m === 60) { m = 0; h++; }
+    var parts = [];
+    if (h) parts.push(h + " hour" + (h > 1 ? "s" : ""));
+    if (m) parts.push(m + " minute" + (m > 1 ? "s" : ""));
+    if (s) parts.push(s + " second" + (s > 1 ? "s" : ""));
+    return parts.join(" ") || "0 seconds";
+  }
+
+  function setProc(msg) {
+    proc.innerHTML = "<i class=\"fa-solid fa-bolt\"></i><span>" + msg + "</span>";
+  }
+
+  function copyToClipboard(text, okMsg) {
+    function done() { setProc(okMsg); }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, done);
+    } else {
+      var ta = document.createElement("textarea");
+      ta.value = text;
+      ta.style.position = "fixed";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand("copy"); } catch (e) {}
+      document.body.removeChild(ta);
+      done();
+    }
+  }
+
+  /* -------------------- Calculation -------------------- */
+
+  function calculate() {
+    var bpm = getBpm();
+    var reps = getReps();
+    var bpb = getBpb();
+    var unit = getUnit();
+    if (bpm === null || reps === null) {
+      setProc("Enter a valid BPM (greater than 0) and a valid repetition count.");
+      resultBox.classList.remove("visible");
+      copyBtn.disabled = true;
+      return;
+    }
+
+    var beats = unit === "bars" ? reps * bpb : reps;
+    var sec = beats * 60 / bpm;
+    var bars = unit === "bars" ? reps : beats / bpb;
+
+    var clock = fmtClock(sec);
+    var note = unit === "bars"
+      ? fmtNum(reps) + " bar" + (reps === 1 ? "" : "s") + " &times; " + bpb + " beats per bar = " + fmtNum(beats) + " total beat" + (beats === 1 ? "" : "s") + " at " + fmtNum(bpm) + " BPM"
+      : fmtNum(reps) + " beat" + (reps === 1 ? "" : "s") + " at " + fmtNum(bpm) + " BPM = " + fmtNum(bars) + " bar" + (bars === 1 ? "" : "s") + " (" + bpb + " beats per bar)";
+
+    resultBox.innerHTML =
+      '<div class="sl-time">' + clock + '<small>Track length</small></div>' +
+      '<p class="sl-note"><i class="fa-solid fa-circle-info"></i><span>' + note + '</span></p>' +
+      '<div class="sl-stats">' +
+        '<div class="sl-stat"><b>' + fmtNum(sec) + '</b><span>Seconds</span></div>' +
+        '<div class="sl-stat"><b>' + fmtNum(beats) + '</b><span>Total beats</span></div>' +
+        '<div class="sl-stat"><b>' + fmtNum(bars) + '</b><span>Bars</span></div>' +
+      '</div>';
+    resultBox.classList.add("visible");
+    copyBtn.disabled = false;
+
+    lastResult = fmtWords(sec) + " (" + clock + ") - " +
+      (unit === "bars" ? fmtNum(reps) + " bars" : fmtNum(reps) + " beats") +
+      " at " + fmtNum(bpm) + " BPM";
+    setProc("Ready &mdash; track length is " + fmtWords(sec) + " at " + fmtNum(bpm) + " BPM.");
+  }
+
+  calcBtn.addEventListener("click", calculate);
+
+  [bpmInput, repsInput].forEach(function (el) {
+    el.addEventListener("input", function () {
+      if (getBpm() !== null && getReps() !== null) calculate();
+    });
+  });
+
+  unitBars.addEventListener("change", calculate);
+  unitBeats.addEventListener("change", calculate);
+  bpbSelect.addEventListener("change", calculate);
+
+  copyBtn.addEventListener("click", function () {
+    if (!lastResult) return;
+    copyToClipboard(lastResult, "Result copied to clipboard &mdash; the bytes never left your device.");
+  });
+
+  /* -------------------- Sample / Clear -------------------- */
+
+  document.getElementById("slSample").addEventListener("click", function () {
+    bpmInput.value = SAMPLE_BPM;
+    repsInput.value = SAMPLE_REPS;
+    unitBars.checked = true;
+    bpbSelect.value = "4";
+    calculate();
+    bpmInput.focus();
+  });
+
+  document.getElementById("slClear").addEventListener("click", function () {
+    bpmInput.value = 120;
+    repsInput.value = 16;
+    unitBars.checked = true;
+    bpbSelect.value = "4";
+    lastResult = "";
+    resultBox.classList.remove("visible");
+    resultBox.innerHTML = "";
+    copyBtn.disabled = true;
+    setProc("Enter a BPM and repetition count, then hit Calculate.");
+    bpmInput.focus();
+  });
+
+  setProc("Enter a BPM and repetition count, then hit Calculate.");
+})();
+</script>
+</body>
+</html>

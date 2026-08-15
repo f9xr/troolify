@@ -123,6 +123,7 @@
           .toLowerCase().indexOf(q) !== -1;
       });
       grid.innerHTML = "";
+      grid.setAttribute("aria-busy", "false");
       if (!list.length) {
         grid.innerHTML = '<div class="related-empty"><i class="fa-solid fa-magnifying-glass"></i>No tools match that search.</div>';
         return;

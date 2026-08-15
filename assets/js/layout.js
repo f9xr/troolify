@@ -310,6 +310,39 @@
         body.insertAdjacentHTML("beforeend", backToTopMarkup);
 
         /* --------------------------------------------------------------------
+           Entity schema — inject an Organization JSON-LD block on any page that
+           ships no structured data yet (About, Feedback, Sitemap, Press, etc.).
+           Pages with their own JSON-LD (home, tools, contact) are left untouched.
+           -------------------------------------------------------------------- */
+
+        if (document.head && !document.head.querySelector('script[type="application/ld+json"]')) {
+            var orgScript = document.createElement("script");
+            orgScript.type = "application/ld+json";
+            orgScript.text = JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "Troolify",
+                "url": "https://f9xr.github.io/troolify/",
+                "logo": "https://f9xr.github.io/troolify/assets/images/logo_nobg.webp",
+                "email": "tontufytservices@gmail.com",
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "contactType": "customer support",
+                    "email": "tontufytservices@gmail.com",
+                    "availableLanguage": "English"
+                },
+                "sameAs": [
+                    "https://github.com/f9xr",
+                    "https://linkedin.com/company/f9xrteam",
+                    "https://instagram.com/f9xrteam",
+                    "https://youtube.com/@QuarterlyLIV",
+                    "https://www.threads.com/@f9xrteam"
+                ]
+            });
+            document.head.appendChild(orgScript);
+        }
+
+        /* --------------------------------------------------------------------
            Header behaviour — scroll effect, mobile menu, active link
            -------------------------------------------------------------------- */
 

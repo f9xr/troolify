@@ -13,6 +13,10 @@
     var filterRow = document.getElementById("filterRow");
     if (!grid || !count || !empty || !searchInput || !filterRow) return;
 
+    var params = new URLSearchParams(window.location.search);
+    var qParam = (params.get("q") || "").trim();
+    if (qParam) searchInput.value = qParam;
+
     var activeFilter = "All";
 
     function rootPrefix() {
@@ -71,6 +75,7 @@
 
     function render() {
         grid.innerHTML = "";
+        grid.setAttribute("aria-busy", "false");
         var shown = 0;
         scoped.forEach(function (t) {
             if (!matches(t)) return;

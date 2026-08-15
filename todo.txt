@@ -100,14 +100,6 @@ Publisher / Author Box
 
 Related Tools with live search bar Icon
 
-Comments:
-<script src="https://utteranc.es/client.js"
-        repo="f9xr/troolify"
-        issue-term="pathname"
-        theme="github-dark"
-        crossorigin="anonymous"
-        async>
-</script>
 
 Mobile responsiveness
 

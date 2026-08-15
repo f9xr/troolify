@@ -94,6 +94,19 @@
 .related-card .rc-more{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;color:#93C5FD}
 .related-empty{grid-column:1/-1;text-align:center;padding:30px;color:var(--faint);font-size:14px}
 .related-empty i{font-size:22px;display:block;margin-bottom:8px;color:var(--border)}
+
+/* Skeleton loading — placeholder related-tool cards */
+.skel{position:relative;overflow:hidden;background:rgba(255,255,255,.07);border-radius:10px;flex-shrink:0}
+.skel::after{content:"";position:absolute;inset:0;transform:translateX(-100%);background:linear-gradient(90deg,transparent,rgba(255,255,255,.1),transparent);animation:skel-sweep 1.5s ease-in-out infinite}
+.skel-related-card{display:flex;flex-direction:column;gap:10px;padding:20px;background:linear-gradient(180deg,rgba(52,58,64,.5),rgba(33,37,41,.38));border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);animation:skel-pulse 1.6s ease-in-out infinite}
+.skel-icon{width:40px;height:40px;border-radius:11px}
+.skel-line{height:11px;border-radius:6px}
+.skel-more{width:72px;height:13px;border-radius:6px}
+.skel-w-40{width:40%}.skel-w-60{width:60%}.skel-w-70{width:70%}.skel-w-80{width:80%}.skel-w-90{width:90%}.skel-w-100{width:100%}
+@keyframes skel-sweep{100%{transform:translateX(100%)}}
+@keyframes skel-pulse{0%,100%{opacity:1}50%{opacity:.55}}
+@media (prefers-reduced-motion: reduce){.skel-related-card{animation:none}.skel::after{animation:none}}
+
 @media(max-width:760px){.related-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:520px){.related-grid{grid-template-columns:1fr}}
 

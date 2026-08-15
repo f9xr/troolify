@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Text Tools — Troolify</title>
-<meta name="description" content="Text Tools on Troolify - text formatting, conversion and analysis. 100% client-side and zero data retention.">
+<meta name="description" content="Free text tools on Troolify - format, convert, analyze and count words and characters in your browser. No sign up, zero data retention.">
 <meta name="theme-color" content="#212529">
 <link rel="icon" type="image/webp" href="../../assets/images/favicon.webp"><link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,7 +43,14 @@
       </div>
 
       <p class="count" id="toolCount" aria-live="polite"></p>
-      <div class="tool-grid" id="toolGrid"></div>
+      <div class="tool-grid" id="toolGrid" aria-busy="true">
+      <div class="skel skel-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-100"></span><span class="skel skel-line skel-w-90"></span><span class="skel-row"><span class="skel skel-chip"></span><span class="skel skel-square"></span></span></div>
+      <div class="skel skel-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-100"></span><span class="skel skel-line skel-w-90"></span><span class="skel-row"><span class="skel skel-chip"></span><span class="skel skel-square"></span></span></div>
+      <div class="skel skel-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-100"></span><span class="skel skel-line skel-w-90"></span><span class="skel-row"><span class="skel skel-chip"></span><span class="skel skel-square"></span></span></div>
+      <div class="skel skel-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-100"></span><span class="skel skel-line skel-w-90"></span><span class="skel-row"><span class="skel skel-chip"></span><span class="skel skel-square"></span></span></div>
+      <div class="skel skel-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-100"></span><span class="skel skel-line skel-w-90"></span><span class="skel-row"><span class="skel skel-chip"></span><span class="skel skel-square"></span></span></div>
+      <div class="skel skel-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-100"></span><span class="skel skel-line skel-w-90"></span><span class="skel-row"><span class="skel skel-chip"></span><span class="skel skel-square"></span></span></div>
+    </div>
       <div class="empty" id="emptyState">
         <i class="fa-solid fa-magnifying-glass"></i>
         <h3>No utilities match your search</h3>
@@ -54,8 +61,8 @@
   </section>
 </main>
 
-<script src="../../assets/js/tools-data.js"></script>
-<script src="../../assets/js/catalog.js"></script>
+<script src="../../assets/js/tools-data.js" defer></script>
+<script src="../../assets/js/catalog.js" defer></script>
 <script src="../../assets/js/layout.js" defer></script>
 </body>
 </html>

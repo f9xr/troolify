@@ -506,7 +506,11 @@
         <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
         <input type="search" id="relatedSearch" placeholder="Search all Troolify tools&hellip;" autocomplete="off" aria-label="Search related tools">
       </div>
-      <div class="related-grid" id="relatedGrid"></div>
+      <div class="related-grid" id="relatedGrid" aria-busy="true">
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+      </div>
     </section>
 
     <!-- Comments -->
@@ -571,7 +575,7 @@
 </div>
 
 <script src="../../assets/js/layout.js" defer></script>
-<script src="../../assets/js/tools-data.js"></script>
+<script src="../../assets/js/tools-data.js" defer></script>
 <script src="../../assets/js/tool-page.js" defer></script>
 <script>
 (function(){
