@@ -1,13 +1,11 @@
-#,Pillar,Issue,Severity,File,Effort,Traffic Impact,Revenue Impact,Time to Impact,Business Value
-1,Content Pruning,15 empty 'coming soon' category pages indexable (duplicate thin content),High,"tools/{AI,Converters,Cooking,Crypto,Finance,Fun,Health,Image,Misc,PDF,Prompts,SEO,Statistics,Time,Video}/index.html",S (<4hr),Protects index quality / avoids cannibalization,Low,Immediate,Risk / Traffic
-2,Internal Linking,6 featured-tool cards + nav anchors link to '#' / missing sections,High,"index.html:115,135,155,175,195,215; layout.js:94,217-219",S (<4hr),CTR/UX recovery,Medium,Immediate,Traffic / Brand
-3,Technical SEO,Missing robots.txt + sitemap.xml + llms.txt,Medium,"/robots.txt, /sitemap.xml, /llms.txt (new)",S (<4hr),Faster discovery of all pages,Low,1-4 weeks,Traffic
-4,Performance,3 hero PNGs (~1.5MB) no preload/WebP; Tailwind Play CDN render-blocking,High,"index.html:23,37; layout.js:232",M (1-3d),LCP improvement / mobile speed,Medium,1-4 weeks,Traffic / UX
-5,Semantic SEO,No JSON-LD anywhere (Org, WebSite+SearchAction, SoftwareApplication, FAQ),Medium,"all pages (inject via layout.js)",M (1-3d),Rich-result eligibility,Medium,1-4 weeks,Traffic / Brand
-6,Social SEO,Missing og:image/og:url/twitter:card on all pages; only 3 partial OG tags on homepage,Medium,"index.html:9-12; all pages",S (<4hr),Social share CTR,Low,Immediate,Brand
-7,E-E-A-T,Footer socials are generic placeholders; no contact email; fake reCAPTCHA; dead newsletter form,Medium,"layout.js:161-180,193-195",S (<4hr),Trust signals / entity verification,Medium,Immediate,Brand / Risk
-8,Technical SEO,No canonical on any page,High,All 23 pages,S (<4hr),Duplicate-content protection,Low,Immediate,Risk
-9,On-Page,False '100+ Useful Tools' stat; thin tool/category pages,Medium,"index.html:264-269",S (<4hr),Trust/UX,Medium,Immediate,Brand / Risk
-10,On-Page,Duplicate-pattern meta descriptions on category pages,Medium,"tools/**/index.html",S (<4hr),SERP CTR,Low,1-4 weeks,Traffic
-11,Content Pruning,press/editorial-policies.html orphaned 'under construction' (24 words),Low,press/editorial-policies.html,S (<4hr),None today,Low,Immediate,Risk
-12,Repo Hygiene,Unrelated openapi.yaml (railway-stations.org) + all-urls.txt committed,Low,"/openapi.yaml, /all-urls.txt",S (<4hr),None,Low,Immediate,Risk / Compliance
+#,Pillar,Detected Issue,Severity,Target File(s),Effort,Est. Traffic Impact,Business Value
+1,Technical / JS SEO,Nav, footer, tool grids and Organization schema are 100% JS-injected (layout.js) - zero crawlable fallback,High,assets/js/layout.js:53-343, assets/js/catalog.js:76-125, assets/js/home-catalog.js:14-28, all pages,M (1-3d),Crawl-efficiency; protects indexation of category + tool pages,Risk / Traffic
+2,Internal Linking,10 broken internal links on the HTML sitemap page,High,pages/sitemap.html:48-69,S (<4hr),Removes broken crawl paths; restores internal links to 2 real tools,Traffic / UX
+3,Technical SEO,Homepage canonical (/index.html) conflicts with root-URL links + JSON-LD (/troolify/),High,index.html:10,49,66; layout.js:79,105; 5 tool pages (breadcrumb); llms.txt:17,S (<4hr),Clean deduplication signal on the #1 page,Traffic / Risk
+4,Social SEO,Missing og:description (2 pages), twitter:description (9 pages), no og:image:width/height anywhere; og-image 169 KB PNG,Medium,all non-tool pages,S (<4hr),Social-share CTR / snippet completeness,Brand / Traffic
+5,Image / Performance,12 article images hotlinked from deprecated source.unsplash.com (no self-hosted WebP),Medium,5 tool pages (.seo-article <img>),S (<4hr),Image reliability + page weight,UX / Traffic
+6,Sitemap / Content Accuracy,tools/audio/index.html indexable but missing from sitemap; homepage stats stale (3 Live Tools, 18 Categories); llms.txt omits numeronym + licensing,Medium,sitemap.xml; index.html:338-340; llms.txt,S (<4hr),Index coverage + trust accuracy,Traffic / Brand
+7,URL Architecture,Primary nav "Tools"/"Utilities" routes through tools.html meta-refresh redirect,Low,assets/js/layout.js:80,106,148,S (<4hr),Remove an extra hop on main nav,Traffic
+8,Structured Data,Article schema missing publisher.logo (Rich Results Test warning),Low,5 tool pages (Article JSON-LD),S (<4hr),Article rich-result warning cleanup,Brand
+9,Video SEO,5 YouTube embeds: no VideoObject schema, no transcript, not privacy-enhanced,Low,5 tool pages,S (<4hr),Video rich-result eligibility,Traffic
+10,IndexNow,Protocol not implemented (Bing/Yandex instant submission),Low,root <key>.txt (new),S (<4hr),Faster Bing/Yandex indexing,Traffic

@@ -46,6 +46,26 @@
         return dirs.map(function () { return "../"; }).join("");
     }
 
+    // "Featured On" directory badges (ProductBurst, Pro Launch, Nick Launches,
+    // PeerPush, LiftOff) shown in the header dropdown + mobile menu, moving as
+    // a marquee. Each badge link is duplicated in the track to loop seamlessly.
+    var featuredBadges =
+        '<a class="badge-link" href="https://productburst.com/product/troolify" target="_blank" rel="noopener noreferrer">' +
+            '<img src="https://3188a5210b07f4ad511bbcdc967bc67b.cdn.bubble.io/f1747781918344x939992978866771600/pB-Badge.png" alt="Featured on ProductBurst" width="160" />' +
+        '</a>' +
+        '<a class="badge-link" href="https://prolaunch.net" target="_blank" title="Pro Launch Featured Badge">' +
+            '<img src="https://prolaunch.net/images/badges/featured-dark.svg" alt="Pro Launch Featured Badge" style="width: 240px; height: auto;" />' +
+        '</a>' +
+        '<a class="badge-link" href="https://nicklaunches.com/products/troolify/?utm_source=f9xr.github.io&utm_medium=badge&utm_campaign=featured" target="_blank" rel="noopener">' +
+            '<img src="https://nicklaunches.com/badges/featured-dark.png" alt="Troolify on Nick Launches" width="244" height="56" />' +
+        '</a>' +
+        '<a class="badge-link" href="https://peerpush.com/p/troolify" target="_blank" rel="noopener">' +
+            '<img src="https://peerpush.com/p/troolify/badge.png" alt="Troolify on PeerPush" style="width: 230px;" />' +
+        '</a>' +
+        '<a class="badge-link" href="https://lift-off.sh/p/troolify" target="_blank" title="LiftOff launch badge">' +
+            '<img src="https://lift-off.sh/images/badges/badgeLaunchedDarkBAR.webp" alt="LiftOff launch badge" width="200" height="auto" />' +
+        '</a>';
+
     /* ------------------------------------------------------------------------
        Main injection routine
        ------------------------------------------------------------------------ */
@@ -76,9 +96,18 @@
                 '<div class="nav-container">' +
                     /* Left-side menu */
                     '<nav class="nav-links nav-links-left" aria-label="Primary">' +
-                        '<a href="https://f9xr.github.io/troolify">Home</a>' +
-                        '<a href="' + prefix + 'tools.html">Tools</a>' +
+                        '<a href="' + homeHref + '">Home</a>' +
+                        '<a href="' + prefix + 'tools/index.html">Tools</a>' +
                         '<a href="' + prefix + 'tools/index.html">Category</a>' +
+                        '<div class="nav-dropdown">' +
+                            '<button type="button" class="nav-dropdown-btn" aria-expanded="false" aria-haspopup="true">Featured On <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>' +
+                            '<div class="nav-dropdown-menu" role="region" aria-label="Featured On">' +
+                                '<span class="nav-dropdown-label">Featured On</span>' +
+                                '<div class="featured-marquee">' +
+                                    '<div class="featured-marquee-track">' + featuredBadges + featuredBadges + '</div>' +
+                                '</div>' +
+                            '</div>' +
+                        '</div>' +
                     '</nav>' +
                     /* Centered brand */
                     '<a href="' + homeHref + '" class="brand">' +
@@ -102,10 +131,16 @@
                 '</div>' +
             '</header>' +
             '<div class="mobile-menu" aria-hidden="true">' +
-                '<a href="https://f9xr.github.io/troolify">Home</a>' +
-                '<a href="' + prefix + 'tools.html">Tools</a>' +
+                '<a href="' + homeHref + '">Home</a>' +
+                '<a href="' + prefix + 'tools/index.html">Tools</a>' +
                 '<a href="' + prefix + 'tools/index.html">Category</a>' +
                 '<a href="' + prefix + 'pages/about.html">About</a>' +
+                '<details class="mobile-featured">' +
+                    '<summary>Featured On</summary>' +
+                    '<div class="mobile-marquee">' +
+                        '<div class="mobile-marquee-track">' + featuredBadges + featuredBadges + '</div>' +
+                    '</div>' +
+                '</details>' +
                 '<a href="mailto:tontufytservices@gmail.com">Support</a>' +
                 '<a href="' + toolsHref + '" class="btn btn-primary" style="margin-top: 1rem;">Explore Tools</a>' +
             '</div>';
@@ -145,7 +180,7 @@
                                     '<li><a href="' + prefix + 'pages/about.html" class="text-white/80 transition hover:text-[#3B82F6]">About</a></li>' +
                                     '<li><a href="' + prefix + 'pages/contact.html" class="text-white/80 transition hover:text-[#3B82F6]">Contact</a></li>' +
                                     '<li><a href="' + prefix + 'pages/feedback.html" class="text-white/80 transition hover:text-[#3B82F6]">Feedback</a></li>' +
-                                    '<li><a href="' + prefix + 'tools.html" class="text-white/80 transition hover:text-[#3B82F6]">Utilities</a></li>' +
+                                    '<li><a href="' + prefix + 'tools/index.html" class="text-white/80 transition hover:text-[#3B82F6]">Utilities</a></li>' +
                                     '<li><a href="' + prefix + 'pages/sitemap.html" class="text-white/80 transition hover:text-[#3B82F6]">Sitemap</a></li>' +
                                     '<li><a href="' + prefix + 'pages/accessibility-statement.html" class="text-white/80 transition hover:text-[#3B82F6]">Accessibility</a></li>' +
                                     '<li><a href="' + prefix + 'press/editorial-policies.html" class="text-white/80 transition hover:text-[#3B82F6]">Editorial Policies</a></li>' +
@@ -290,6 +325,36 @@
                 '.tx-footer{background:transparent;padding:0}' +
 
                 '@media(max-width:640px){.cta-panel{padding:clamp(2rem,12vw,3rem) 1.25rem}.cta-blob-1{left:-35%;top:-18%}.cta-blob-2{right:-35%;bottom:-25%}.cta-h2{font-size:clamp(1.5rem,7vw,2.1rem)}}' +
+
+                '.nav-dropdown{position:relative}' +
+                '.nav-dropdown-btn{display:inline-flex;align-items:center;gap:.45rem;padding:.25rem 0;background:none;border:none;color:#ADB5BD;font-family:inherit;font-size:.95rem;font-weight:500;line-height:inherit;cursor:pointer;transition:color .2s ease}' +
+                '.nav-dropdown-btn:hover,.nav-dropdown.open .nav-dropdown-btn{color:#F8F9FA}' +
+                '.nav-dropdown-btn .fa-chevron-down{font-size:.68rem;transition:transform .25s ease}' +
+                '.nav-dropdown.open .nav-dropdown-btn .fa-chevron-down{transform:rotate(180deg)}' +
+                '.nav-dropdown-btn:focus-visible{outline:2px solid #3B82F6;outline-offset:3px;border-radius:6px}' +
+                '.nav-dropdown-menu{position:absolute;top:calc(100% + 1rem);left:0;z-index:1200;width:min(560px,calc(100vw - 3rem));padding:.9rem .25rem .75rem;background:#17191D;border:1px solid rgba(255,255,255,.09);border-radius:16px;box-shadow:0 24px 50px -12px rgba(0,0,0,.5);opacity:0;visibility:hidden;transform:translateY(10px) scale(.98);transition:opacity .22s ease,transform .22s ease,visibility .22s}' +
+                '.nav-dropdown-menu::before{content:"";position:absolute;top:-6px;left:26px;width:12px;height:12px;background:#17191D;border-left:1px solid rgba(255,255,255,.09);border-top:1px solid rgba(255,255,255,.09);transform:rotate(45deg)}' +
+                '.nav-dropdown.open .nav-dropdown-menu,.nav-dropdown:hover .nav-dropdown-menu,.nav-dropdown:focus-within .nav-dropdown-menu{opacity:1;visibility:visible;transform:translateY(0) scale(1)}' +
+                '.nav-dropdown-label{display:block;margin:0 .75rem .65rem;font-size:.66rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#6C757D}' +
+                '.featured-marquee{overflow:hidden;white-space:nowrap}' +
+                '.featured-marquee:hover .featured-marquee-track,.featured-marquee:focus-within .featured-marquee-track{animation-play-state:paused}' +
+                '.featured-marquee-track{display:inline-flex;align-items:center;width:max-content;animation:featured-scroll 32s linear infinite;will-change:transform}' +
+                '.featured-marquee-track .badge-link{display:inline-flex;align-items:center;flex-shrink:0;padding-right:2.25rem;line-height:0}' +
+                '.featured-marquee-track .badge-link img{display:block;max-height:42px !important;width:auto !important;height:auto !important;object-fit:contain;filter:grayscale(25%) brightness(.98);opacity:.9;transition:opacity .2s ease,filter .2s ease}' +
+                '.featured-marquee-track .badge-link:hover img{opacity:1;filter:grayscale(0) brightness(1.05)}' +
+                '.featured-marquee-track .badge-link:focus-visible{outline:2px solid #3B82F6;outline-offset:3px;border-radius:6px}' +
+                '@keyframes featured-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}' +
+                '.mobile-featured{width:100%;max-width:460px;text-align:center}' +
+                '.mobile-featured summary{list-style:none;cursor:pointer;font-size:1.4rem;font-weight:600;color:#F8F9FA;transition:color .2s ease}' +
+                '.mobile-featured summary::-webkit-details-marker{display:none}' +
+                '.mobile-featured summary:focus-visible{outline:2px solid #3B82F6;outline-offset:4px;border-radius:8px}' +
+                '.mobile-featured[open] summary{color:#60A5FA}' +
+                '.mobile-featured .mobile-marquee{margin-top:1.25rem;overflow:hidden;white-space:nowrap}' +
+                '.mobile-featured .mobile-marquee-track{display:inline-flex;align-items:center;width:max-content;animation:featured-scroll 32s linear infinite}' +
+                '.mobile-featured .mobile-marquee-track .badge-link{display:inline-flex;align-items:center;flex-shrink:0;padding-right:1.75rem;line-height:0}' +
+                '.mobile-featured .badge-link img{display:block;max-height:38px !important;width:auto !important;height:auto !important;object-fit:contain;opacity:.9}' +
+                '@media(max-width:768px){.nav-dropdown{display:none}}' +
+                '@media(prefers-reduced-motion:reduce){.featured-marquee-track,.mobile-featured .mobile-marquee-track{animation:none}}' +
             '</style>';
 
         /* --------------------------------------------------------------------
@@ -322,7 +387,7 @@
                 "@context": "https://schema.org",
                 "@type": "Organization",
                 "name": "Troolify",
-                "url": "https://f9xr.github.io/troolify/",
+                "url": "https://f9xr.github.io/troolify/index.html",
                 "logo": "https://f9xr.github.io/troolify/assets/images/logo_nobg.webp",
                 "email": "tontufytservices@gmail.com",
                 "contactPoint": {
@@ -397,11 +462,35 @@
             if (e.key === "Escape" && isMenuOpen) toggleMenu(false);
         });
 
+        // "Featured On" dropdown — toggle on click, close on outside click / Escape.
+        var navDropdown = document.querySelector(".nav-dropdown");
+        var navDropdownBtn = navDropdown ? navDropdown.querySelector(".nav-dropdown-btn") : null;
+        if (navDropdown && navDropdownBtn) {
+            navDropdownBtn.addEventListener("click", function (e) {
+                e.stopPropagation();
+                var open = navDropdown.classList.toggle("open");
+                navDropdownBtn.setAttribute("aria-expanded", String(open));
+            });
+            document.addEventListener("click", function (e) {
+                if (!e.target.closest(".nav-dropdown")) {
+                    navDropdown.classList.remove("open");
+                    navDropdownBtn.setAttribute("aria-expanded", "false");
+                }
+            });
+            navDropdown.addEventListener("keydown", function (e) {
+                if (e.key === "Escape") {
+                    navDropdown.classList.remove("open");
+                    navDropdownBtn.setAttribute("aria-expanded", "false");
+                    navDropdownBtn.focus();
+                }
+            });
+        }
+
         // Highlight the active nav link on the root home page only.
         var isHome = dirs.length === 1 && (fileName === "" || fileName === "index.html");
         if (isHome) {
             document.querySelectorAll(".nav-links a").forEach(function (link) {
-                if (link.getAttribute("href") === "https://f9xr.github.io/troolify") {
+                if (link.getAttribute("href") === homeHref) {
                     link.classList.add("active");
                 }
             });

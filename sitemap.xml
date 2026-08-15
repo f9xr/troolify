@@ -61,6 +61,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://f9xr.github.io/troolify/tools/audio/index.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://f9xr.github.io/troolify/pages/about.html</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>yearly</changefreq>
