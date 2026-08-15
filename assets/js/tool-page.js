@@ -119,7 +119,7 @@
       q = (q || "").trim().toLowerCase();
       var list = tools.filter(function (t) {
         if (!q) return true;
-        return (t.name + " " + (t.desc || "") + " " + (t.tag || "") + " " + (t.category || ""))
+        return (t.name + " " + (t.desc || "") + " " + (t.tag || "") + " " + (t.category || "") + " " + ((t.keywords || []).join(" ")))
           .toLowerCase().indexOf(q) !== -1;
       });
       grid.innerHTML = "";

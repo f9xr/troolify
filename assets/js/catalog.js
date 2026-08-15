@@ -69,7 +69,8 @@
             t.name.toLowerCase().indexOf(q) !== -1 ||
             t.desc.toLowerCase().indexOf(q) !== -1 ||
             t.tag.toLowerCase().indexOf(q) !== -1 ||
-            t.category.toLowerCase().indexOf(q) !== -1;
+            t.category.toLowerCase().indexOf(q) !== -1 ||
+            (t.keywords || []).join(" ").toLowerCase().indexOf(q) !== -1;
         return okFilter && okQuery;
     }
 

@@ -181,7 +181,7 @@
                                     '<li><a href="https://f9xr.github.io/case-studies/index.html" target="_blank" rel="noopener" class="text-white/80 transition hover:text-[#3B82F6]">Case Studies</a></li>' +
                                     '<li><a href="https://f9xr.github.io/announcements/index.html" target="_blank" rel="noopener" class="text-white/80 transition hover:text-[#3B82F6]">Announcements</a></li>' +
                                     '<li><a href="https://f9xr.github.io/directories/index.html" target="_blank" rel="noopener" class="text-white/80 transition hover:text-[#3B82F6]">Directories</a></li>' +
-                                    '<li><a href="https://f9xr.github.io/BharatByDay/" target="_blank" rel="noopener" class="text-white/80 transition hover:text-[#3B82F6]">BharatByDay</a></li>' +
+                                    '<li><a href="https://f9xr.github.io/BharatByDay/" target="_blank" rel="noopener" class="text-white/80 transition hover:text-[#3B82F6]">भारतByDay</a></li>' +
                                     '<li><a href="https://f9xr.github.io/articles/" target="_blank" rel="noopener" class="text-white/80 transition hover:text-[#3B82F6]">Articles</a></li>' +
                                 '</ul>' +
                             '</nav>' +
@@ -273,7 +273,11 @@
 
         var backToTopMarkup =
             '<button type="button" id="backToTop" aria-label="Back to top" class="fixed bottom-6 right-6 z-[1500] hidden h-11 w-11 place-items-center rounded-full bg-[#3B82F6] text-white shadow-[0_4px_20px_rgba(59,130,246,0.35)] transition hover:bg-[#2563EB]">' +
-                '<i class="fa-solid fa-arrow-up" aria-hidden="true"></i>' +
+                '<svg class="btt-ring" viewBox="0 0 44 44" aria-hidden="true">' +
+                    '<circle class="btt-track" cx="22" cy="22" r="20"></circle>' +
+                    '<circle class="btt-progress" cx="22" cy="22" r="20"></circle>' +
+                '</svg>' +
+                '<i class="fa-solid fa-arrow-up btt-icon" aria-hidden="true"></i>' +
             '</button>';
 
         /* --------------------------------------------------------------------
@@ -290,7 +294,7 @@
                         '<button type="button" class="search-modal-close" aria-label="Close search"><i class="fa-solid fa-xmark"></i></button>' +
                     '</div>' +
                     '<div class="search-modal-results"></div>' +
-                    '<div class="search-modal-hint">Press <kbd>Enter</kbd> to open tool \u00b7 <kbd>Esc</kbd> to close</div>' +
+                    '<div class="search-modal-hint">Press <kbd>Ctrl</kbd>+<kbd>K</kbd> to search \u00b7 <kbd>Enter</kbd> to open tool \u00b7 <kbd>Esc</kbd> to close</div>' +
                 '</div>' +
             '</div>';
 
@@ -322,7 +326,17 @@
                 '.cta-3d{position:relative;z-index:0;max-width:1280px;width:calc(100% - 2rem);margin:2.5rem auto 0;border-radius:30px;transition:transform .45s cubic-bezier(.16,1,.3,1),box-shadow .45s ease;box-shadow:0 26px 55px -10px rgba(0,0,0,.6),0 14px 28px -12px rgba(0,0,0,.55)}' +
                 '.tx-cta:hover .cta-3d{transform:rotateX(3deg) translateY(-5px) scale(1.005);box-shadow:0 40px 80px -16px rgba(0,0,0,.65),0 20px 40px -16px rgba(0,0,0,.6)}' +
 
-                '.tx-footer{background:transparent;padding:0}' +
+                '.tx-footer{background:transparent;padding:0;border-top:1px solid rgba(255,255,255,.06)}' +
+                '.tx-footer a{text-decoration:none}' +
+                '.tx-footer a:not(.grid){position:relative}' +
+                '.tx-footer a:not(.grid)::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:1px;background:linear-gradient(90deg,#60A5FA,#3B82F6);transform:scaleX(0);transform-origin:left;transition:transform .28s cubic-bezier(.16,1,.3,1)}' +
+                '.tx-footer a:not(.grid):hover::after,.tx-footer a:not(.grid):focus-visible::after{transform:scaleX(1)}' +
+
+                '.btt-ring{position:absolute;inset:0;width:100%;height:100%}' +
+                '.btt-ring .btt-track,.btt-ring .btt-progress{fill:none;stroke-width:3}' +
+                '.btt-ring .btt-track{stroke:rgba(255,255,255,.18)}' +
+                '.btt-ring .btt-progress{stroke:#BFDBFE;stroke-linecap:round;transform:rotate(-90deg);transform-origin:center;transition:stroke-dashoffset .15s linear}' +
+                '.btt-icon{position:relative;z-index:1}' +
 
                 '@media(max-width:640px){.cta-panel{padding:clamp(2rem,12vw,3rem) 1.25rem}.cta-blob-1{left:-35%;top:-18%}.cta-blob-2{right:-35%;bottom:-25%}.cta-h2{font-size:clamp(1.5rem,7vw,2.1rem)}}' +
 
@@ -406,14 +420,25 @@
         updateScrolled();
         window.addEventListener("scroll", updateScrolled, { passive: true });
 
-        /* Back-to-top button */
+        /* Back-to-top button with circular scroll-progress ring */
         var backToTop = document.getElementById("backToTop");
+        var backToTopRing = backToTop ? backToTop.querySelector(".btt-progress") : null;
+        var backToTopRadius = backToTopRing ? backToTopRing.r.baseVal.value : 20;
+        var backToTopCirc = 2 * Math.PI * backToTopRadius;
 
         function updateBackToTop() {
-            if (backToTop) backToTop.classList.toggle("hidden", window.scrollY < 400);
+            if (!backToTop) return;
+            var max = document.documentElement.scrollHeight - window.innerHeight;
+            var p = max > 0 ? Math.min(1, window.scrollY / max) : 0;
+            if (backToTopRing) {
+                backToTopRing.style.strokeDasharray = String(backToTopCirc);
+                backToTopRing.style.strokeDashoffset = String(backToTopCirc * (1 - p));
+            }
+            backToTop.classList.toggle("hidden", window.scrollY < 400);
         }
         updateBackToTop();
         window.addEventListener("scroll", updateBackToTop, { passive: true });
+        window.addEventListener("resize", updateBackToTop, { passive: true });
         if (backToTop) {
             backToTop.addEventListener("click", function () {
                 window.scrollTo({ top: 0, behavior: "smooth" });
@@ -500,23 +525,46 @@
             var tools = window.TOOLS || [];
             var q = query.trim().toLowerCase();
             if (!q) return [];
-            return tools.filter(function (t) {
-                return (t.name + " " + (t.desc || "") + " " + (t.tag || "") + " " + (t.category || ""))
-                    .toLowerCase().indexOf(q) !== -1;
-            }).slice(0, 8);
+            var out = [];
+            tools.forEach(function (t) {
+                var name = (t.name || "").toLowerCase();
+                var body = ((t.desc || "") + " " + (t.tag || "") + " " + (t.category || "")).toLowerCase();
+                var kws = (t.keywords || []).map(function (k) { return k.toLowerCase(); });
+                var kwJoined = kws.join(" ");
+                if (name.indexOf(q) === -1 && body.indexOf(q) === -1 && kwJoined.indexOf(q) === -1) return;
+                var score = 0;
+                var kwMatch = "";
+                if (name === q) score += 200;
+                else if (name.indexOf(q) === 0) score += 120;
+                else if (name.indexOf(q) !== -1) score += 60;
+                if ((t.tag || "").toLowerCase() === q) score += 50;
+                if (body.indexOf(q) !== -1) score += 15;
+                kws.forEach(function (k) {
+                    if (k === q) { score += 30; kwMatch = kwMatch || k; }
+                    else if (k.indexOf(q) !== -1) { score += 10; kwMatch = kwMatch || k; }
+                });
+                if (kwMatch) kwMatch = (t.keywords || [])[kws.indexOf(kwMatch)];
+                out.push({ tool: t, score: score, kwMatch: kwMatch });
+            });
+            out.sort(function (a, b) { return b.score - a.score; });
+            return out.slice(0, 8);
         }
 
         function resultHref(href) {
             return href && href.indexOf("tools/") === 0 ? prefix + href : href;
         }
 
-        function buildResultItem(t) {
+        function buildResultItem(r) {
+            var t = r.tool;
             var a = document.createElement("a");
             a.className = "search-dropdown-item";
             a.href = resultHref(t.href) || "#";
             a.innerHTML =
                 '<span class="sd-icon"><i class="' + (t.icon || "fa-solid fa-wrench") + '"></i></span>' +
-                '<span class="sd-meta"><span class="sd-name">' + t.name + '</span><br><span class="sd-cat">' + (t.category || "Tool") + '</span></span>';
+                '<span class="sd-meta"><span class="sd-name">' + t.name + '</span><br><span class="sd-cat">' + (t.category || "Tool") + '</span></span>' +
+                (r.kwMatch
+                    ? '<span class="sd-kw"><i class="fa-solid fa-bolt"></i>' + r.kwMatch + '</span>'
+                    : '');
             return a;
         }
 
@@ -531,7 +579,7 @@
                 container.appendChild(empty);
                 return;
             }
-            list.forEach(function (t) { container.appendChild(buildResultItem(t)); });
+            list.forEach(function (r) { container.appendChild(buildResultItem(r)); });
         }
 
         function initLiveSearch(input, container, isModal) {
@@ -573,6 +621,12 @@
 
         document.addEventListener("keydown", function (e) {
             if (e.key === "Escape" && modalOpen) { closeSearchModal(); return; }
+            if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
+                e.preventDefault();
+                if (modalOpen) { if (modalInput) modalInput.focus(); return; }
+                openSearchModal();
+                return;
+            }
             if (e.key === "/" && !modalOpen) {
                 var tag = (e.target && e.target.tagName) || "";
                 if (tag !== "INPUT" && tag !== "TEXTAREA") {

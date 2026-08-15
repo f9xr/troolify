@@ -76,6 +76,8 @@ footer .container{position:relative;z-index:1}
 .sd-meta{min-width:0;line-height:1.3}
 .sd-name{font-weight:700;font-size:14px}
 .sd-cat{font-size:11px;color:var(--faint);text-transform:uppercase;letter-spacing:.08em}
+.sd-kw{margin-left:auto;flex-shrink:0;font-size:10px;font-weight:600;color:var(--accent);background:rgba(59,130,246,.12);border:1px solid rgba(59,130,246,.25);border-radius:999px;padding:2px 8px;white-space:nowrap}
+.sd-kw i{margin-right:4px;font-size:9px}
 .search-dropdown-empty{padding:24px;text-align:center;color:var(--faint);font-size:13px}
 
 /* Global search modal */
