@@ -11,30 +11,17 @@ https://www.inchcalculator.com/
 https://www.omnicalculator.com/
 https://www.thecalculatorsite.com/
 https://t2tool.sbs/
-
 https://www.techgrapple.com/online-tools/
-
 https://www.zickty.com/
 https://www.tunepocket.com/tools/
-
 https://www.gillmeister-software.com/online-tools/start.aspx
 https://www.site24x7.com/tools/
-
 https://iancoleman.io/bip39
-
-https://sendeyo.com/
 https://toolsvale.com/
 https://www.convertsimple.com
-
 https://sugeng.id/tools/
-
 https://tools.completejavascript.com/
-
-https://free-apis.github.io/#/browse
-
-https://atozpdftools.com/
 https://image.pi7.org/
-https://onlineboost.in/online-tools/
 https://it-tools.tech/
 https://qodex.ai/all-tools
 https://freemediatools.com/
@@ -43,6 +30,8 @@ https://www.devglan.com/cryptotools/cryptography-tools
 https://www.textfixer.com
 
 https://www.piliapp.com/actual-size/cm-ruler/
+https://onlineboost.in/online-tools/
+
 
 https://www.blogger.com/profile/11925536241380727429
 
@@ -52,51 +41,16 @@ http://populu.com/
 
 https://hilite.me
 https://embedcodegenerator.com/
-https://farotech.com
 
 
 https://pinetools.com
-
 https://100plus.tools/newest-tools
-
-https://safeaudiokit.com/crop-mp3-online
+https://safeaudiokit.com
 
 
 also there will tags, like tool @json-formatter.html tool page will have tags: JSON and in categories of Coding (folder).
 
 
-make sure to use images of @hero-images in footer as well 
-
-
-
-Each Tools Page:
-
-Breadcrumps: Home Icon / category / Tags / tool name 
-
-Tool Name
-Very Short Tool Description
-Option to Share, Embed Tool, Feedback button 
-Tool Published by: F9XR Editorial Team | Reviewed by: Review Board |  Last Updated: today's date
-
-Actuall Tool
-
-Disclaimer: Whilst every effort has been made in building our tools, we are not to be held liable for any damages or monetary losses arising out of or in connection with their use. Full disclaimer (linked to disclaimer page).
-
-
-On this page (Table of Content) - collapsed by deafult
-
- How to use this tool?
-How Tool Works
-What is Tool Name and Topic
-How to calculate 
-Formula for 
-Example 
-Key Takeaways
-Related Questions (FAQ)
-Conclusion
-References Box
-Keyword & Tags Box
-Publisher / Author Box
 
 
 Related Tools with live search bar Icon
@@ -104,3 +58,25 @@ Related Tools with live search bar Icon
 
 Mobile responsiveness
 
+
+
+add lazy load
+Image is missing width and/or height attributes
+
+
+https://dayslaunch.com/
+https://mediapronet.com/
+https://navifyai.com/
+https://www.techtrendin.com/
+https://newtool.site/
+https://theonestartup.com/
+https://www.stork.ai/
+https://starterbest.com/
+https://code.market/
+https://submitaitools.org/
+
+
+https://seoimage.com/seo-tools/#all-audit-checks
+
+
+https://sendeyo.com/
