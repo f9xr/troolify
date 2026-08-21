@@ -13,6 +13,7 @@ Every Troolify tool runs entirely in your browser. Your data never leaves your d
 - [YouTube Timestamp Link Generator](https://f9xr.github.io/troolify/tools/youtube/timestamp-link-generator.html): Clickable timestamp links and instant video-description chapters.
 - [Song Length Calculator](https://f9xr.github.io/troolify/tools/audio/song-length-calculator.html): Calculate exact track runtime from BPM and bar repetitions.
 - [Password Generator](https://f9xr.github.io/troolify/tools/misc/password-generator.html): Create strong random passwords or memorable passphrases with custom rules and entropy strength.
+- [Password Entropy Calculator](https://f9xr.github.io/troolify/tools/misc/password-entropy-calculator.html): Measure password entropy in bits and estimate crack time across five real-world attack scenarios.
 
 ## Catalog
 - [Utility Catalog](https://f9xr.github.io/troolify/tools/index.html): Browse every category and tool.
