@@ -1,5 +1,6 @@
 # Internal / non-deployed files
 skills/
+.opencode/
 todo.txt
 seo_audit_report.md
 seo_audit_report.csv
