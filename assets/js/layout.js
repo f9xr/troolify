@@ -53,16 +53,16 @@
         '<a class="badge-link" href="https://productburst.com/product/troolify" target="_blank" rel="noopener noreferrer">' +
             '<img src="https://3188a5210b07f4ad511bbcdc967bc67b.cdn.bubble.io/f1747781918344x939992978866771600/pB-Badge.png" alt="Featured on ProductBurst" width="160" />' +
         '</a>' +
-        '<a class="badge-link" href="https://prolaunch.net" target="_blank" title="Pro Launch Featured Badge">' +
+        '<a class="badge-link" href="https://prolaunch.net" target="_blank" rel="noopener noreferrer" title="Pro Launch Featured Badge">' +
             '<img src="https://prolaunch.net/images/badges/featured-dark.svg" alt="Pro Launch Featured Badge" style="width: 240px; height: auto;" />' +
         '</a>' +
-        '<a class="badge-link" href="https://nicklaunches.com/products/troolify/?utm_source=f9xr.github.io&utm_medium=badge&utm_campaign=featured" target="_blank" rel="noopener">' +
+        '<a class="badge-link" href="https://nicklaunches.com/products/troolify/?utm_source=f9xr.github.io&utm_medium=badge&utm_campaign=featured" target="_blank" rel="noopener noreferrer">' +
             '<img src="https://nicklaunches.com/badges/featured-dark.png" alt="Troolify on Nick Launches" width="244" height="56" />' +
         '</a>' +
-        '<a class="badge-link" href="https://peerpush.com/p/troolify" target="_blank" rel="noopener">' +
+        '<a class="badge-link" href="https://peerpush.com/p/troolify" target="_blank" rel="noopener noreferrer">' +
             '<img src="https://peerpush.com/p/troolify/badge.png" alt="Troolify on PeerPush" style="width: 230px;" />' +
         '</a>' +
-        '<a class="badge-link" href="https://lift-off.sh/p/troolify" target="_blank" title="LiftOff launch badge">' +
+        '<a class="badge-link" href="https://lift-off.sh/p/troolify" target="_blank" rel="noopener noreferrer" title="LiftOff launch badge">' +
             '<img src="https://lift-off.sh/images/badges/badgeLaunchedDarkBAR.webp" alt="LiftOff launch badge" width="200" height="auto" />' +
         '</a>';
 
@@ -153,8 +153,8 @@
                                 '</a>' +
                                 '<p class="mt-7 max-w-md text-base leading-[1.8] text-[#F8F9FA]/90 sm:text-lg">Troolify is a privacy-first workspace on the internet where your digital workflows run instantly, securely, and entirely inside your browser.</p>' +
                                 '<div class="mt-8 flex flex-col gap-2 text-sm text-[#9CA3AF]">' +
-                                    '<span>Made by <a href="https://f9xr.github.io" target="_blank" rel="noopener" class="font-medium text-white/80 transition hover:text-[#3B82F6]">F9XR Team</a></span>' +
-                                    '<a href="https://github.com/f9xr/troolify" target="_blank" rel="noopener" class="font-medium text-white/80 transition hover:text-[#3B82F6]">This website is Open Source</a>' +
+                                    '<span>Made by <a href="https://f9xr.github.io" target="_blank" rel="noopener noreferrer" class="font-medium text-white/80 transition hover:text-[#3B82F6]">F9XR Team</a></span>' +
+                                    '<a href="https://github.com/f9xr/troolify" target="_blank" rel="noopener noreferrer" class="font-medium text-white/80 transition hover:text-[#3B82F6]">This website is Open Source</a>' +
                                 '</div>' +
                             '</div>' +
 
@@ -176,13 +176,13 @@
                             '<nav aria-label="F9XR Network">' +
                                 '<h4 class="text-xs font-semibold uppercase tracking-[0.22em] text-[#E9ECEF]">F9XR Network</h4>' +
                                 '<ul class="mt-6 space-y-3">' +
-                                    '<li><a href="https://f9xr.github.io/" target="_blank" rel="noopener" class="text-white/80 transition hover:text-[#3B82F6]">F9XR Team</a></li>' +
-                                    '<li><a href="https://f9xr.github.io/services/index.html" target="_blank" rel="noopener" class="text-white/80 transition hover:text-[#3B82F6]">Services</a></li>' +
-                                    '<li><a href="https://f9xr.github.io/case-studies/index.html" target="_blank" rel="noopener" class="text-white/80 transition hover:text-[#3B82F6]">Case Studies</a></li>' +
-                                    '<li><a href="https://f9xr.github.io/announcements/index.html" target="_blank" rel="noopener" class="text-white/80 transition hover:text-[#3B82F6]">Announcements</a></li>' +
-                                    '<li><a href="https://f9xr.github.io/directories/index.html" target="_blank" rel="noopener" class="text-white/80 transition hover:text-[#3B82F6]">Directories</a></li>' +
-                                    '<li><a href="https://f9xr.github.io/BharatByDay/" target="_blank" rel="noopener" class="text-white/80 transition hover:text-[#3B82F6]">भारतByDay</a></li>' +
-                                    '<li><a href="https://f9xr.github.io/articles/" target="_blank" rel="noopener" class="text-white/80 transition hover:text-[#3B82F6]">Articles</a></li>' +
+                                    '<li><a href="https://f9xr.github.io/" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-[#3B82F6]">F9XR Team</a></li>' +
+                                    '<li><a href="https://f9xr.github.io/services/index.html" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-[#3B82F6]">Services</a></li>' +
+                                    '<li><a href="https://f9xr.github.io/case-studies/index.html" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-[#3B82F6]">Case Studies</a></li>' +
+                                    '<li><a href="https://f9xr.github.io/announcements/index.html" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-[#3B82F6]">Announcements</a></li>' +
+                                    '<li><a href="https://f9xr.github.io/directories/index.html" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-[#3B82F6]">Directories</a></li>' +
+                                    '<li><a href="https://f9xr.github.io/BharatByDay/" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-[#3B82F6]">भारतByDay</a></li>' +
+                                    '<li><a href="https://f9xr.github.io/articles/" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-[#3B82F6]">Articles</a></li>' +
                                 '</ul>' +
                             '</nav>' +
 
@@ -190,11 +190,11 @@
                             '<nav aria-label="Follow us">' +
                                 '<h4 class="text-xs font-semibold uppercase tracking-[0.22em] text-[#E9ECEF]">Follow us</h4>' +
                                 '<div class="mt-6 flex flex-wrap gap-3">' +
-                                    '<a href="https://github.com/f9xr" target="_blank" rel="noopener" aria-label="GitHub" class="grid h-10 w-10 place-items-center rounded-xl border border-[#343A40] bg-[#212529] text-[#9CA3AF] transition hover:border-[#3B82F6] hover:text-[#3B82F6]"><i class="fa-brands fa-github"></i></a>' +
-                                    '<a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener" aria-label="LinkedIn" class="grid h-10 w-10 place-items-center rounded-xl border border-[#343A40] bg-[#212529] text-[#9CA3AF] transition hover:border-[#3B82F6] hover:text-[#3B82F6]"><i class="fa-brands fa-linkedin"></i></a>' +
-                                    '<a href="https://instagram.com/f9xrteam" target="_blank" rel="noopener" aria-label="Instagram" class="grid h-10 w-10 place-items-center rounded-xl border border-[#343A40] bg-[#212529] text-[#9CA3AF] transition hover:border-[#3B82F6] hover:text-[#3B82F6]"><i class="fa-brands fa-instagram"></i></a>' +
-                                    '<a href="https://youtube.com/@QuarterlyLIV" target="_blank" rel="noopener" aria-label="YouTube" class="grid h-10 w-10 place-items-center rounded-xl border border-[#343A40] bg-[#212529] text-[#9CA3AF] transition hover:border-[#3B82F6] hover:text-[#3B82F6]"><i class="fa-brands fa-youtube"></i></a>' +
-                                    '<a href="https://www.threads.com/@f9xrteam" target="_blank" rel="noopener" aria-label="Threads" class="grid h-10 w-10 place-items-center rounded-xl border border-[#343A40] bg-[#212529] text-[#9CA3AF] transition hover:border-[#3B82F6] hover:text-[#3B82F6]"><i class="fa-brands fa-threads"></i></a>' +
+                                    '<a href="https://github.com/f9xr" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="grid h-10 w-10 place-items-center rounded-xl border border-[#343A40] bg-[#212529] text-[#9CA3AF] transition hover:border-[#3B82F6] hover:text-[#3B82F6]"><i class="fa-brands fa-github"></i></a>' +
+                                    '<a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="grid h-10 w-10 place-items-center rounded-xl border border-[#343A40] bg-[#212529] text-[#9CA3AF] transition hover:border-[#3B82F6] hover:text-[#3B82F6]"><i class="fa-brands fa-linkedin"></i></a>' +
+                                    '<a href="https://instagram.com/f9xrteam" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="grid h-10 w-10 place-items-center rounded-xl border border-[#343A40] bg-[#212529] text-[#9CA3AF] transition hover:border-[#3B82F6] hover:text-[#3B82F6]"><i class="fa-brands fa-instagram"></i></a>' +
+                                    '<a href="https://youtube.com/@QuarterlyLIV" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="grid h-10 w-10 place-items-center rounded-xl border border-[#343A40] bg-[#212529] text-[#9CA3AF] transition hover:border-[#3B82F6] hover:text-[#3B82F6]"><i class="fa-brands fa-youtube"></i></a>' +
+                                    '<a href="https://www.threads.com/@f9xrteam" target="_blank" rel="noopener noreferrer" aria-label="Threads" class="grid h-10 w-10 place-items-center rounded-xl border border-[#343A40] bg-[#212529] text-[#9CA3AF] transition hover:border-[#3B82F6] hover:text-[#3B82F6]"><i class="fa-brands fa-threads"></i></a>' +
                                 '</div>' +
                             '</nav>' +
 
@@ -218,8 +218,8 @@
                         '<div class="relative mt-12 flex flex-col items-center justify-between gap-4 border-t border-[#343A40] pt-8 text-sm text-[#9CA3AF] md:flex-row">' +
                             '<p>&copy; 2026 Troolify. All rights reserved.</p>' +
                             '<div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">' +
-                                '<a href="https://f9xr.github.io/legals/terms.html" target="_blank" rel="noopener" class="transition hover:text-[#3B82F6]">Terms</a>' +
-                                '<a href="https://f9xr.github.io/legals/privacy.html" target="_blank" rel="noopener" class="transition hover:text-[#3B82F6]">Privacy Policy</a>' +
+                                '<a href="https://f9xr.github.io/legals/terms.html" target="_blank" rel="noopener noreferrer" class="transition hover:text-[#3B82F6]">Terms</a>' +
+                                '<a href="https://f9xr.github.io/legals/privacy.html" target="_blank" rel="noopener noreferrer" class="transition hover:text-[#3B82F6]">Privacy Policy</a>' +
                                 '<a href="' + prefix + 'pages/contact.html" class="transition hover:text-[#3B82F6]">Contact</a>' +
                             '</div>' +
                         '</div>' +
@@ -414,31 +414,35 @@
 
         var header = document.querySelector(".navbar, .site-header");
 
-        function updateScrolled() {
-            header.classList.toggle("scrolled", window.scrollY > 8);
-        }
-        updateScrolled();
-        window.addEventListener("scroll", updateScrolled, { passive: true });
-
         /* Back-to-top button with circular scroll-progress ring */
         var backToTop = document.getElementById("backToTop");
         var backToTopRing = backToTop ? backToTop.querySelector(".btt-progress") : null;
         var backToTopRadius = backToTopRing ? backToTopRing.r.baseVal.value : 20;
         var backToTopCirc = 2 * Math.PI * backToTopRadius;
+        if (backToTopRing) backToTopRing.style.strokeDasharray = String(backToTopCirc);
 
-        function updateBackToTop() {
-            if (!backToTop) return;
-            var max = document.documentElement.scrollHeight - window.innerHeight;
-            var p = max > 0 ? Math.min(1, window.scrollY / max) : 0;
-            if (backToTopRing) {
-                backToTopRing.style.strokeDasharray = String(backToTopCirc);
-                backToTopRing.style.strokeDashoffset = String(backToTopCirc * (1 - p));
+        /* Single rAF-batched scroll frame: reads first, then writes (no layout thrash) */
+        var scrollScheduled = false;
+        function onScrollFrame() {
+            scrollScheduled = false;
+            var y = window.scrollY;
+            if (header) header.classList.toggle("scrolled", y > 8);
+            if (backToTop) {
+                var max = document.documentElement.scrollHeight - window.innerHeight;
+                var p = max > 0 ? Math.min(1, y / max) : 0;
+                if (backToTopRing) backToTopRing.style.strokeDashoffset = String(backToTopCirc * (1 - p));
+                backToTop.classList.toggle("hidden", y < 400);
             }
-            backToTop.classList.toggle("hidden", window.scrollY < 400);
         }
-        updateBackToTop();
-        window.addEventListener("scroll", updateBackToTop, { passive: true });
-        window.addEventListener("resize", updateBackToTop, { passive: true });
+        function scheduleScroll() {
+            if (!scrollScheduled) {
+                scrollScheduled = true;
+                requestAnimationFrame(onScrollFrame);
+            }
+        }
+        onScrollFrame();
+        window.addEventListener("scroll", scheduleScroll, { passive: true });
+        window.addEventListener("resize", scheduleScroll, { passive: true });
         if (backToTop) {
             backToTop.addEventListener("click", function () {
                 window.scrollTo({ top: 0, behavior: "smooth" });
@@ -448,11 +452,13 @@
         var menuBtn = document.querySelector(".mobile-menu-btn");
         var mobileMenu = document.querySelector(".mobile-menu");
         var isMenuOpen = false;
+        if (mobileMenu) mobileMenu.style.visibility = "hidden";
 
         function toggleMenu(force) {
             isMenuOpen = typeof force === "boolean" ? force : !isMenuOpen;
             if (mobileMenu) {
                 mobileMenu.classList.toggle("open", isMenuOpen);
+                mobileMenu.style.visibility = isMenuOpen ? "visible" : "hidden";
                 mobileMenu.setAttribute("aria-hidden", String(!isMenuOpen));
             }
             if (menuBtn) {
@@ -495,6 +501,7 @@
 
         function openSearchModal() {
             if (!modal) return;
+            if (isMenuOpen) toggleMenu(false);
             modalOpen = true;
             modal.classList.add("open");
             modal.setAttribute("aria-hidden", "false");
@@ -507,7 +514,7 @@
             modalOpen = false;
             modal.classList.remove("open");
             modal.setAttribute("aria-hidden", "true");
-            document.body.style.overflow = "";
+            document.body.style.overflow = isMenuOpen ? "hidden" : "";
             if (modalInput) modalInput.value = "";
             if (modalResults) modalResults.innerHTML = "";
         }
@@ -601,7 +608,7 @@
                     var first = container.querySelector(".search-dropdown-item");
                     if (first) {
                         e.preventDefault();
-                        closeSearchModal();
+                        if (isModal) closeSearchModal();
                         window.location.href = first.getAttribute("href");
                     }
                 }

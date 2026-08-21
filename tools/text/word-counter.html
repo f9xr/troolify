@@ -181,8 +181,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="../../assets/css/tool.css">
 <link rel="stylesheet" href="../../assets/css/tailwind.css">
+<link rel="stylesheet" href="../../assets/css/tool.css">
 <link rel="stylesheet" href="../../assets/css/site-shell.css">
 <link rel="stylesheet" href="../../assets/css/tool-page.css">
 <link rel="stylesheet" href="../../assets/css/seo-article.css">
@@ -267,7 +267,7 @@
 
         <textarea id="wcInput" spellcheck="false" aria-label="Text to analyze" placeholder="Paste or type anything &mdash; the stats update instantly, right here in your browser&hellip;"></textarea>
 
-        <div class="stats-grid">
+        <div class="stats-grid" role="status" aria-live="polite" aria-label="Live text statistics">
           <div class="stat"><b id="wcWords">0</b><span>Words</span></div>
           <div class="stat"><b id="wcChars">0 / 0</b><span>Characters</span></div>
           <div class="stat"><b id="wcSent">0</b><span>Sentences</span></div>
@@ -576,48 +576,6 @@
   </div>
 </main>
 
-<!-- Share modal -->
-<div class="modal" id="shareModal" role="dialog" aria-modal="true" aria-labelledby="shareModalTitle">
-  <div class="modal-backdrop"></div>
-  <div class="modal-panel">
-    <button type="button" class="modal-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
-    <h3 id="shareModalTitle">Share this tool</h3>
-    <p class="modal-sub">Send the Word Counter to a teammate, client, or friend.</p>
-    <div class="modal-body">
-      <div class="modal-field">
-        <i class="fa-solid fa-link" style="color:var(--faint);font-size:13px"></i>
-        <input type="text" id="shareLink" readonly aria-label="Share link">
-      </div>
-      <div class="modal-social">
-        <a href="#" id="shareTwitter" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i>Post on X</a>
-        <a href="#" id="shareLinkedin" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
-        <a href="#" id="shareWhatsapp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i>WhatsApp</a>
-      </div>
-      <div class="modal-actions">
-        <button class="btn btn-primary" type="button" id="copyShareLink"><i class="fa-solid fa-copy"></i>Copy link</button>
-      </div>
-      <p class="modal-note">Tip: on mobile you can also use your browser's native share menu.</p>
-    </div>
-  </div>
-</div>
-
-<!-- Embed modal -->
-<div class="modal" id="embedModal" role="dialog" aria-modal="true" aria-labelledby="embedModalTitle">
-  <div class="modal-backdrop"></div>
-  <div class="modal-panel">
-    <button type="button" class="modal-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
-    <h3 id="embedModalTitle">Embed this tool</h3>
-    <p class="modal-sub">Copy the snippet below and paste it into your site's HTML.</p>
-    <div class="modal-body">
-      <textarea id="embedCode" readonly spellcheck="false" aria-label="Embed code"></textarea>
-      <div class="modal-actions">
-        <button class="btn btn-primary" type="button" id="copyEmbedCode"><i class="fa-solid fa-copy"></i>Copy code</button>
-      </div>
-      <p class="modal-note">The embedded tool stays 100% client-side. No server, no data collection.</p>
-    </div>
-  </div>
-</div>
-
 <script src="../../assets/js/layout.js" defer></script>
 <script src="../../assets/js/tools-data.js" defer></script>
 <script src="../../assets/js/tool-page.js" defer></script>
@@ -659,20 +617,10 @@
       var v = input.value;
       if (action === "upper") v = v.toUpperCase();
       else if (action === "lower") v = v.toLowerCase();
-      else if (action === "title") v = v.replace(/\b\w/g, function(c){ return c.toUpperCase(); });
+      else if (action === "title") v = v.toLowerCase().replace(/(^|[^\w'])(\w)/g, function(_, p, c){ return p + c.toUpperCase(); });
       else if (action === "clear") v = "";
       else if (action === "copy") {
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(v).then(done, done);
-        } else {
-          var ta = document.createElement("textarea");
-          ta.value = v;
-          document.body.appendChild(ta);
-          ta.select();
-          try { document.execCommand("copy"); } catch (e) {}
-          document.body.removeChild(ta);
-          done();
-        }
+        window.Troolify.copyToClipboard(v, done);
         return;
       }
       input.value = v;

@@ -302,7 +302,7 @@
             <h2 class="contact-section-title">Send us a message</h2>
             <p class="contact-section-sub">Use the form below and it will open your email client with everything pre-filled. Nothing you type is stored or sent to a server.</p>
 
-            <form class="contact-form" action="mailto:tontufytservices@gmail.com" method="post" enctype="text/plain">
+            <form class="contact-form" id="contactForm" novalidate>
                 <div class="contact-field">
                     <label for="ct-name"><i class="fa-solid fa-user"></i>Your name <span class="required" aria-hidden="true"></span></label>
                     <input type="text" id="ct-name" name="name" placeholder="Optional">
@@ -392,5 +392,33 @@
     </main>
 
     <script src="../assets/js/layout.js" defer></script>
+    <script>
+    (function () {
+      "use strict";
+      var form = document.getElementById("contactForm");
+      if (!form) return;
+      var email = document.getElementById("ct-email");
+      var message = document.getElementById("ct-message");
+      var note = form.querySelector(".contact-form-note");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        if (!email.value.trim() || !email.checkValidity() || !message.value.trim()) {
+          if (note) {
+            note.innerHTML = '<i class="fa-solid fa-circle-exclamation"></i> Please fill in a valid email and a message.';
+            note.style.color = "#f87171";
+          }
+          (!email.value.trim() || !email.checkValidity() ? email : message).focus();
+          return;
+        }
+        var subject = "[Troolify] " + document.getElementById("ct-topic").value + " - " + (document.getElementById("ct-name").value.trim() || email.value.trim());
+        var body = message.value.trim() + "\n\n---\nFrom: " + (document.getElementById("ct-name").value.trim() || "(no name)") + "\nReply-to: " + email.value.trim();
+        window.location.href = "mailto:tontufytservices@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+        if (note) {
+          note.innerHTML = '<i class="fa-solid fa-envelope-circle-check"></i> Your email app should open now. If it did not, write us directly at tontufytservices@gmail.com.';
+          note.style.color = "";
+        }
+      });
+    })();
+    </script>
 </body>
 </html>

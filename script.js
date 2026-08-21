@@ -31,16 +31,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     if (!prefersReducedMotion) {
+        let parallaxScheduled = false;
         window.addEventListener('scroll', () => {
-            const scrollY = window.scrollY;
-            
-            parallaxBgs.forEach(bg => {
-                // Adjust this multiplier to change the intensity of the parallax
-                const speed = 0.3;
-                // Use translate3d for better performance (GPU acceleration)
-                bg.style.transform = `scale(1.05) translate3d(0, ${scrollY * speed}px, 0)`;
+            if (parallaxScheduled) return;
+            parallaxScheduled = true;
+            requestAnimationFrame(() => {
+                parallaxScheduled = false;
+                const scrollY = window.scrollY;
+
+                parallaxBgs.forEach(bg => {
+                    // Adjust this multiplier to change the intensity of the parallax
+                    const speed = 0.3;
+                    // Use translate3d for better performance (GPU acceleration)
+                    bg.style.transform = `scale(1.05) translate3d(0, ${scrollY * speed}px, 0)`;
+                });
             });
-        });
+        }, { passive: true });
     }
     
     // 3. Category Filter active state (UI only demonstration)

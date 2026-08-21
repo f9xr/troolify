@@ -181,8 +181,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="../../assets/css/tool.css">
 <link rel="stylesheet" href="../../assets/css/tailwind.css">
+<link rel="stylesheet" href="../../assets/css/tool.css">
 <link rel="stylesheet" href="../../assets/css/site-shell.css">
 <link rel="stylesheet" href="../../assets/css/tool-page.css">
 <link rel="stylesheet" href="../../assets/css/seo-article.css">
@@ -595,48 +595,6 @@
   </div>
 </main>
 
-<!-- Share modal -->
-<div class="modal" id="shareModal" role="dialog" aria-modal="true" aria-labelledby="shareModalTitle">
-  <div class="modal-backdrop"></div>
-  <div class="modal-panel">
-    <button type="button" class="modal-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
-    <h3 id="shareModalTitle">Share this tool</h3>
-    <p class="modal-sub">Send the Numeronym Generator to a teammate, client, or friend.</p>
-    <div class="modal-body">
-      <div class="modal-field">
-        <i class="fa-solid fa-link" style="color:var(--faint);font-size:13px"></i>
-        <input type="text" id="shareLink" readonly aria-label="Share link">
-      </div>
-      <div class="modal-social">
-        <a href="#" id="shareTwitter" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i>Post on X</a>
-        <a href="#" id="shareLinkedin" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
-        <a href="#" id="shareWhatsapp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i>WhatsApp</a>
-      </div>
-      <div class="modal-actions">
-        <button class="btn btn-primary" type="button" id="copyShareLink"><i class="fa-solid fa-copy"></i>Copy link</button>
-      </div>
-      <p class="modal-note">Tip: on mobile you can also use your browser's native share menu.</p>
-    </div>
-  </div>
-</div>
-
-<!-- Embed modal -->
-<div class="modal" id="embedModal" role="dialog" aria-modal="true" aria-labelledby="embedModalTitle">
-  <div class="modal-backdrop"></div>
-  <div class="modal-panel">
-    <button type="button" class="modal-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
-    <h3 id="embedModalTitle">Embed this tool</h3>
-    <p class="modal-sub">Copy the snippet below and paste it into your site's HTML.</p>
-    <div class="modal-body">
-      <textarea id="embedCode" readonly spellcheck="false" aria-label="Embed code"></textarea>
-      <div class="modal-actions">
-        <button class="btn btn-primary" type="button" id="copyEmbedCode"><i class="fa-solid fa-copy"></i>Copy code</button>
-      </div>
-      <p class="modal-note">The embedded tool stays 100% client-side. No server, no data collection.</p>
-    </div>
-  </div>
-</div>
-
 <script src="../../assets/js/layout.js" defer></script>
 <script src="../../assets/js/tools-data.js" defer></script>
 <script src="../../assets/js/tool-page.js" defer></script>
@@ -667,6 +625,14 @@
     return w.charAt(0) + (w.length - 2) + w.charAt(w.length - 1);
   }
 
+  function renderNotes(notes){
+    brk.textContent = "";
+    notes.forEach(function(note, i){
+      if (i > 0) brk.appendChild(document.createElement("br"));
+      brk.appendChild(document.createTextNode(note));
+    });
+  }
+
   function encode(text){
     var tokens = text.trim().split(/\s+/).filter(Boolean);
     if (!tokens.length) { setEmpty(); return; }
@@ -682,7 +648,7 @@
       notes.push(clean.charAt(0) + " + " + (clean.length - 2) + " + " + clean.charAt(clean.length - 1) + " = " + encodeWord(clean));
     });
     result.textContent = parts.join(" ");
-    brk.innerHTML = notes.join("<br>");
+    renderNotes(notes);
     proc.textContent = "Converted in this tab \u2014 0 bytes uploaded.";
   }
 
@@ -701,7 +667,7 @@
       notes.push("First letter: " + m[1] + "  \u00b7  Middle: " + m[2] + " letters  \u00b7  Last letter: " + m[3]);
     });
     result.textContent = parts.join("    ");
-    brk.innerHTML = notes.join("<br>");
+    renderNotes(notes);
     proc.textContent = "Decoded in this tab \u2014 0 bytes uploaded.";
   }
 
@@ -765,22 +731,11 @@
   copyBtn.addEventListener("click", function(){
     var txt = result.textContent;
     if (!txt || txt === "\u2014") return;
-    function done(){
+    window.Troolify.copyToClipboard(txt, function(){
       var old = copyBtn.innerHTML;
       copyBtn.innerHTML = '<i class="fa-solid fa-check"></i>Copied';
       setTimeout(function(){ copyBtn.innerHTML = old; }, 1600);
-    }
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(txt).then(done, done);
-    } else {
-      var ta = document.createElement("textarea");
-      ta.value = txt;
-      document.body.appendChild(ta);
-      ta.select();
-      try { document.execCommand("copy"); } catch (e) {}
-      document.body.removeChild(ta);
-      done();
-    }
+    });
   });
 
   update();

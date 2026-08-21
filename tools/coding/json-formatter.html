@@ -181,8 +181,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="../../assets/css/tool.css">
 <link rel="stylesheet" href="../../assets/css/tailwind.css">
+<link rel="stylesheet" href="../../assets/css/tool.css">
 <link rel="stylesheet" href="../../assets/css/site-shell.css">
 <link rel="stylesheet" href="../../assets/css/tool-page.css">
 <link rel="stylesheet" href="../../assets/css/seo-article.css">
@@ -312,8 +312,8 @@
           </div>
         </div>
 
-        <pre class="output" id="jsonOutput" aria-live="polite" aria-label="Formatted JSON output"></pre>
-        <p class="status" id="jsonStatus"></p>
+<pre class="output" id="jsonOutput" aria-label="Formatted JSON output"></pre>
+<p class="status" id="jsonStatus" role="status" aria-live="polite"></p>
         <p class="proc-line"><i class="fa-solid fa-bolt"></i><span id="jsonProc">Validated instantly in your browser &mdash; never sent anywhere.</span></p>
 
       </div>
@@ -616,48 +616,6 @@
   </div>
 </main>
 
-<!-- Share modal -->
-<div class="modal" id="shareModal" role="dialog" aria-modal="true" aria-labelledby="shareModalTitle">
-  <div class="modal-backdrop"></div>
-  <div class="modal-panel">
-    <button type="button" class="modal-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
-    <h3 id="shareModalTitle">Share this tool</h3>
-    <p class="modal-sub">Send the JSON Formatter to a teammate, client, or friend.</p>
-    <div class="modal-body">
-      <div class="modal-field">
-        <i class="fa-solid fa-link" style="color:var(--faint);font-size:13px"></i>
-        <input type="text" id="shareLink" readonly aria-label="Share link">
-      </div>
-      <div class="modal-social">
-        <a href="#" id="shareTwitter" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i>Post on X</a>
-        <a href="#" id="shareLinkedin" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
-        <a href="#" id="shareWhatsapp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i>WhatsApp</a>
-      </div>
-      <div class="modal-actions">
-        <button class="btn btn-primary" type="button" id="copyShareLink"><i class="fa-solid fa-copy"></i>Copy link</button>
-      </div>
-      <p class="modal-note">Tip: on mobile you can also use your browser's native share menu.</p>
-    </div>
-  </div>
-</div>
-
-<!-- Embed modal -->
-<div class="modal" id="embedModal" role="dialog" aria-modal="true" aria-labelledby="embedModalTitle">
-  <div class="modal-backdrop"></div>
-  <div class="modal-panel">
-    <button type="button" class="modal-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
-    <h3 id="embedModalTitle">Embed this tool</h3>
-    <p class="modal-sub">Copy the snippet below and paste it into your site's HTML.</p>
-    <div class="modal-body">
-      <textarea id="embedCode" readonly spellcheck="false" aria-label="Embed code"></textarea>
-      <div class="modal-actions">
-        <button class="btn btn-primary" type="button" id="copyEmbedCode"><i class="fa-solid fa-copy"></i>Copy code</button>
-      </div>
-      <p class="modal-note">The embedded tool stays 100% client-side. No server, no data collection.</p>
-    </div>
-  </div>
-</div>
-
 <script src="../../assets/js/layout.js" defer></script>
 <script src="../../assets/js/tools-data.js" defer></script>
 <script src="../../assets/js/tool-page.js" defer></script>
@@ -746,8 +704,18 @@
     return c;
   }
 
+  var MAX_INPUT = 5000000;
+
   function parseJson(){
     var text = input.value;
+    if (text.length > MAX_INPUT) {
+      output.classList.remove("visible");
+      output.innerHTML = "";
+      status.textContent = "Input too large (" + text.length + " bytes). The limit is 5 MB \u2014 split the document and process it in parts.";
+      status.className = "status err";
+      statsEl.textContent = "";
+      return null;
+    }
     if (text.trim() === "") {
       output.classList.remove("visible");
       output.innerHTML = "";
@@ -758,7 +726,7 @@
     }
     try {
       var obj = JSON.parse(text);
-      status.textContent = "Valid JSON — parsed locally in your browser.";
+      status.textContent = "Valid JSON \u2014 parsed locally in your browser.";
       status.className = "status ok";
       return obj;
     } catch (err) {
@@ -772,39 +740,45 @@
 
   function render(obj, minified){
     var t0 = performance.now();
-    var text = minified ? JSON.stringify(obj) : JSON.stringify(obj, null, getIndent());
+    var text, keys;
+    try {
+      text = minified ? JSON.stringify(obj) : JSON.stringify(obj, null, getIndent());
+      keys = countKeys(obj);
+    } catch (err) {
+      output.classList.remove("visible");
+      output.innerHTML = "";
+      status.textContent = "Could not process this JSON: " + err.message;
+      status.className = "status err";
+      statsEl.textContent = "";
+      return;
+    }
     output.innerHTML = highlight(text);
     output.classList.add("visible");
-    statsEl.textContent = countKeys(obj) + " keys · " + text.split("\n").length + " lines · " + text.length + " B";
-    proc.textContent = "Processed in " + (performance.now() - t0).toFixed(1) + " ms — in this tab, never sent anywhere.";
+    statsEl.textContent = keys + " keys \u00b7 " + text.split("\n").length + " lines \u00b7 " + text.length + " B";
+    proc.textContent = "Processed in " + (performance.now() - t0).toFixed(1) + " ms \u2014 in this tab, never sent anywhere.";
   }
 
   function copyText(txt, btn){
-    function done(){
+    window.Troolify.copyToClipboard(txt, function(){
       if (btn) {
         var old = btn.innerHTML;
         btn.innerHTML = '<i class="fa-solid fa-check"></i>Copied';
         setTimeout(function(){ btn.innerHTML = old; }, 1600);
       }
-    }
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(txt).then(done, done);
-    } else {
-      var ta = document.createElement("textarea");
-      ta.value = txt;
-      document.body.appendChild(ta);
-      ta.select();
-      try { document.execCommand("copy"); } catch (e) {}
-      document.body.removeChild(ta);
-      done();
-    }
+    });
   }
 
+  var renderTimer = null;
   input.addEventListener("input", function(){
     var t0 = performance.now();
     var obj = parseJson();
-    if (obj && autoChk.checked) render(obj, false);
-    else proc.textContent = "Validated in " + (performance.now() - t0).toFixed(1) + " ms — in this tab, never sent anywhere.";
+    if (renderTimer) { clearTimeout(renderTimer); renderTimer = null; }
+    if (obj && autoChk.checked) {
+      renderTimer = setTimeout(function(){ renderTimer = null; render(obj, false); }, 250);
+      proc.textContent = "Validated in " + (performance.now() - t0).toFixed(1) + " ms \u2014 formatting\u2026";
+    } else {
+      proc.textContent = "Validated in " + (performance.now() - t0).toFixed(1) + " ms \u2014 in this tab, never sent anywhere.";
+    }
   });
 
   document.getElementById("jsonFormat").addEventListener("click", function(){
@@ -815,7 +789,7 @@
   document.getElementById("jsonValidate").addEventListener("click", function(){
     var t0 = performance.now();
     parseJson();
-    proc.textContent = "Validated in " + (performance.now() - t0).toFixed(1) + " ms — in this tab, never sent anywhere.";
+    proc.textContent = "Validated in " + (performance.now() - t0).toFixed(1) + " ms \u2014 in this tab, never sent anywhere.";
   });
 
   document.getElementById("jsonMinify").addEventListener("click", function(){
@@ -870,6 +844,16 @@
   fileInput.addEventListener("change", function(){
     var f = fileInput.files && fileInput.files[0];
     if (!f) return;
+    if (f.size > MAX_INPUT) {
+      input.value = "";
+      fileInput.value = "";
+      output.classList.remove("visible");
+      output.innerHTML = "";
+      status.textContent = "File too large (" + f.size + " bytes). The limit is 5 MB \u2014 split the file and process it in parts.";
+      status.className = "status err";
+      statsEl.textContent = "";
+      return;
+    }
     var reader = new FileReader();
     reader.onload = function(){
       input.value = String(reader.result || "");

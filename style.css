@@ -1503,58 +1503,6 @@ h1, h2, h3, h4, h5, h6 {
     gap: 1rem;
 }
 
-/* Footer */
-.footer {
-    background: var(--bg-navy);
-    padding: 4rem 0 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
-    gap: 3rem;
-    margin-bottom: 4rem;
-}
-
-.footer-desc {
-    color: var(--text-muted);
-    margin-top: 1rem;
-    font-size: 0.9rem;
-    max-width: 250px;
-}
-
-.footer-heading {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-    color: var(--text-main);
-}
-
-.footer-links-col {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-}
-
-.footer-links-col a {
-    color: var(--text-muted);
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: var(--transition-fast);
-}
-
-.footer-links-col a:hover {
-    color: var(--highlight);
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    color: var(--text-muted);
-    font-size: 0.85rem;
-}
-
 /* Reveal Animations */
 .reveal {
     opacity: 0;

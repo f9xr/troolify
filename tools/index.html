@@ -24,8 +24,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="../assets/css/catalog.css">
 <link rel="stylesheet" href="../assets/css/tailwind.css">
+<link rel="stylesheet" href="../assets/css/catalog.css">
 <link rel="stylesheet" href="../assets/css/site-shell.css">
 </head>
 <body data-layout="tool">
@@ -55,12 +55,36 @@
 
       <p class="count" id="toolCount" aria-live="polite"></p>
       <div class="tool-grid" id="toolGrid" aria-busy="true">
-      <div class="skel skel-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-100"></span><span class="skel skel-line skel-w-90"></span><span class="skel-row"><span class="skel skel-chip"></span><span class="skel skel-square"></span></span></div>
-      <div class="skel skel-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-100"></span><span class="skel skel-line skel-w-90"></span><span class="skel-row"><span class="skel skel-chip"></span><span class="skel skel-square"></span></span></div>
-      <div class="skel skel-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-100"></span><span class="skel skel-line skel-w-90"></span><span class="skel-row"><span class="skel skel-chip"></span><span class="skel skel-square"></span></span></div>
-      <div class="skel skel-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-100"></span><span class="skel skel-line skel-w-90"></span><span class="skel-row"><span class="skel skel-chip"></span><span class="skel skel-square"></span></span></div>
-      <div class="skel skel-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-100"></span><span class="skel skel-line skel-w-90"></span><span class="skel-row"><span class="skel skel-chip"></span><span class="skel skel-square"></span></span></div>
-      <div class="skel skel-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-100"></span><span class="skel skel-line skel-w-90"></span><span class="skel-row"><span class="skel skel-chip"></span><span class="skel skel-square"></span></span></div>
+      <a class="tool-card" href="song-length-calculator.html">
+        <span class="tool-icon"><i class="fa-solid fa-music"></i></span>
+        <span class="tool-body"><span class="tool-name">Song Length Calculator</span><span class="tool-desc">Calculate exact song or track length from BPM and bar repetitions instantly &#8212; processed entirely in this tab.</span></span>
+        <span class="tool-foot"><span class="tool-tag"><i class="fa-solid fa-tag"></i>Audio</span><span class="tool-go"><i class="fa-solid fa-arrow-right"></i></span></span>
+      </a>
+      <a class="tool-card" href="word-counter.html">
+        <span class="tool-icon"><i class="fa-solid fa-align-left"></i></span>
+        <span class="tool-body"><span class="tool-name">Word Counter</span><span class="tool-desc">Live word, character, sentence and reading-time stats as you type &#8212; processed in this tab.</span></span>
+        <span class="tool-foot"><span class="tool-tag"><i class="fa-solid fa-tag"></i>Text</span><span class="tool-go"><i class="fa-solid fa-arrow-right"></i></span></span>
+      </a>
+      <a class="tool-card" href="numeronym-generator.html">
+        <span class="tool-icon"><i class="fa-solid fa-font"></i></span>
+        <span class="tool-body"><span class="tool-name">Numeronym Generator</span><span class="tool-desc">Turn any word into a numeronym like i18n or k8s, or decode one back into its letter count &#8212; right in this tab.</span></span>
+        <span class="tool-foot"><span class="tool-tag"><i class="fa-solid fa-tag"></i>Text</span><span class="tool-go"><i class="fa-solid fa-arrow-right"></i></span></span>
+      </a>
+      <a class="tool-card" href="json-formatter.html">
+        <span class="tool-icon"><i class="fa-solid fa-code"></i></span>
+        <span class="tool-body"><span class="tool-name">JSON Formatter</span><span class="tool-desc">Format, validate, minify and copy JSON instantly without ever sending it to a server.</span></span>
+        <span class="tool-foot"><span class="tool-tag"><i class="fa-solid fa-tag"></i>JSON</span><span class="tool-go"><i class="fa-solid fa-arrow-right"></i></span></span>
+      </a>
+      <a class="tool-card" href="timestamp-link-generator.html">
+        <span class="tool-icon"><i class="fa-brands fa-youtube"></i></span>
+        <span class="tool-body"><span class="tool-name">YouTube Timestamp Link Generator</span><span class="tool-desc">Create clickable timestamp links and instant video-description chapters for any YouTube video &#8212; built entirely in your browser.</span></span>
+        <span class="tool-foot"><span class="tool-tag"><i class="fa-solid fa-tag"></i>YouTube</span><span class="tool-go"><i class="fa-solid fa-arrow-right"></i></span></span>
+      </a>
+      <a class="tool-card" href="password-generator.html">
+        <span class="tool-icon"><i class="fa-solid fa-key"></i></span>
+        <span class="tool-body"><span class="tool-name">Password Generator</span><span class="tool-desc">Generate strong, random passwords or memorable passphrases with custom length, character sets and entropy strength &#8212; right in this tab.</span></span>
+        <span class="tool-foot"><span class="tool-tag"><i class="fa-solid fa-tag"></i>Security</span><span class="tool-go"><i class="fa-solid fa-arrow-right"></i></span></span>
+      </a>
     </div>
       <div class="empty" id="emptyState">
         <i class="fa-solid fa-magnifying-glass"></i>
@@ -76,4 +100,4 @@
 <script src="../assets/js/catalog.js" defer></script>
 <script src="../assets/js/layout.js" defer></script>
 </body>
-</html>
+</html>\n
