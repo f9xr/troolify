@@ -75,3 +75,11 @@ footer{padding:48px 0}
 @keyframes skel-sweep{100%{transform:translateX(100%)}}
 @keyframes skel-pulse{0%,100%{opacity:1}50%{opacity:.55}}
 @media (prefers-reduced-motion: reduce){.skel-card{animation:none}.skel::after{animation:none}}
+/* Breadcrumbs */
+.crumbs{display:flex;flex-wrap:wrap;align-items:center;margin-bottom:20px}
+.crumbs ol{display:flex;flex-wrap:wrap;align-items:center;gap:8px;list-style:none;font-size:12.5px;font-weight:600;color:var(--faint)}
+.crumbs li{display:inline-flex;align-items:center;gap:8px}
+.crumbs li+li::before{content:"/";color:var(--border)}
+.crumbs a{color:#ADB5BD;text-decoration:none;transition:color .18s ease}
+.crumbs a:hover{color:#60A5FA}
+.crumbs .current{color:var(--muted)}

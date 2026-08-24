@@ -125,11 +125,12 @@
 .comments .utterances{max-width:100%}
 
 /* ============================================================================
-   SEO article layout + right sidebar (banner ads)
+   SEO article layout — single wide column (sidebar removed until AdSense is
+   approved; ad slots can be re-introduced later as a right rail)
    ============================================================================ */
 
-.article-layout{display:grid;grid-template-areas:"article sidebar";grid-template-columns:minmax(0,1fr) 300px;gap:36px;align-items:start;margin-top:48px}
-.article-layout .seo-article{grid-area:article;margin-top:0;min-width:0}
+.article-layout{margin-top:48px}
+.article-layout .seo-article{margin-top:0;min-width:0;max-width:none}
 .article-layout .seo-article .video-wrap{border-radius:18px;overflow:hidden}
 .article-layout .seo-article table{font-size:13.5px}
 
@@ -141,14 +142,28 @@
 .article-layout figcaption a{color:var(--muted);text-decoration:underline;text-decoration-color:rgba(255,255,255,.25);text-underline-offset:2px}
 .article-layout figcaption a:hover{color:var(--accent);text-decoration-color:var(--accent)}
 
-/* Ad sidebar (Google AdSense auto ads fill these reserved slots) */
-.ad-sidebar{grid-area:sidebar;position:sticky;top:96px;display:flex;flex-direction:column;gap:22px}
-.ad-slot{border:1px solid rgba(255,255,255,.08);background:linear-gradient(180deg,rgba(52,58,64,.4),rgba(33,37,41,.3));border-radius:16px;padding:12px;min-height:150px}
-.ad-slot .ad-badge{display:flex;align-items:center;gap:6px;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.14em;color:var(--faint)}
-.ad-slot .ad-badge::after{content:"";flex:1;height:1px;background:rgba(255,255,255,.08)}
+/* Collapsible Frequently Asked Questions */
+.faq-item{margin:12px 0;border:1px solid rgba(255,255,255,.08);border-radius:14px;background:linear-gradient(180deg,rgba(52,58,64,.4),rgba(33,37,41,.3));overflow:hidden;transition:border-color .2s ease}
+.faq-item:hover{border-color:rgba(96,165,250,.35)}
+.faq-item[open]{border-color:rgba(96,165,250,.5);box-shadow:0 6px 22px rgba(0,0,0,.25)}
+.faq-item summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 18px;font-weight:700;font-size:15.5px;line-height:1.5;color:var(--ink);user-select:none;scroll-margin-top:120px}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"\f107";font-family:"Font Awesome 6 Free";font-weight:900;color:var(--accent);flex-shrink:0;transition:transform .2s ease}
+.faq-item[open] summary::after{transform:rotate(180deg)}
+.faq-item .faq-a{padding:0 18px;border-top:1px solid rgba(255,255,255,.07)}
+.faq-item .faq-a p{margin:14px 0 15px;font-size:15px;line-height:1.85}
 
-@media(max-width:960px){
-  .article-layout{grid-template-areas:"article" "sidebar";grid-template-columns:1fr;gap:28px}
-  .ad-sidebar{position:static;flex-direction:row;flex-wrap:wrap}
-  .ad-slot{flex:1 1 240px}
-}
+/* F9XR custom-development promo band (injected by tool-page.js) */
+.f9xr-promo{position:relative;margin-top:48px;padding:36px 30px;border:1px solid rgba(96,165,250,.28);border-radius:26px;background:linear-gradient(140deg,rgba(59,130,246,.18),rgba(33,37,41,.35) 62%);box-shadow:inset 0 1px 0 rgba(255,255,255,.06);overflow:hidden}
+.fp-inner{max-width:720px;margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px}
+.fp-kicker{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.16em;color:#93C5FD}
+.fp-kicker i{font-size:11px}
+.f9xr-promo h2{font-size:clamp(1.25rem,2.4vw,1.7rem);font-weight:800;letter-spacing:-.015em;margin:6px 0 0;border-bottom:none;padding-bottom:0}
+.f9xr-promo p{color:var(--muted);font-size:15.5px;line-height:1.8;margin:0}
+.f9xr-promo p strong{color:#fff}
+.fp-actions{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:14px;margin-top:10px}
+.fp-btn{background:var(--accent);border-color:var(--accent);color:#fff;padding:11px 22px;border-radius:999px;font-weight:700}
+.fp-btn:hover{background:var(--accent-strong);transform:translateY(-1px)}
+.fp-url{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:700;color:var(--faint);border:1px dashed var(--border);padding:8px 14px;border-radius:999px}
+.fp-url i{font-size:11px;color:var(--accent)}
+@media(max-width:520px){.f9xr-promo{padding:28px 18px}}

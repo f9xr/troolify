@@ -1,5 +1,5 @@
-/* ------------------------------------------------------------------
-   Typography — Plus Jakarta Sans is loaded from Google Fonts
+﻿/* ------------------------------------------------------------------
+   Typography â€” Plus Jakarta Sans is loaded from Google Fonts
    (weights 300-800) via <link> in the document <head>.
 ------------------------------------------------------------------ */
 
@@ -91,7 +91,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ------------------------------------------------------------------
    NEUE MONTREAL TYPOGRAPHY SYSTEM
    Semantic type-scale utilities. Each tier bundles font-size + line-height.
-   Large tiers (display-1 → heading-3) carry the -2% tight tracking.
+   Large tiers (display-1 â†’ heading-3) carry the -2% tight tracking.
 ------------------------------------------------------------------ */
 .display-1 { font-size: var(--fs-display-1); line-height: var(--lh-display-1); letter-spacing: var(--ls-tight); }
 .display-2 { font-size: var(--fs-display-2); line-height: var(--lh-display-2); letter-spacing: var(--ls-tight); }
@@ -438,7 +438,7 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 1;
 }
 
-/* Ambient hero effects — glow blobs + subtle grid (matches footer aesthetic) */
+/* Ambient hero effects â€” glow blobs + subtle grid (matches footer aesthetic) */
 .hero-ambient {
     position: absolute;
     inset: 0;
@@ -768,7 +768,7 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 1.25rem;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 24px rgba(59, 130, 246, 0.1);
     overflow: hidden;
-    z-index: 50;
+    z-index: 600;
     display: none;
 }
 .search-dropdown.open {
@@ -838,7 +838,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.9rem;
 }
 
-/* Global search modal (DESIGN.md §9 Search Modal) */
+/* Global search modal (DESIGN.md Â§9 Search Modal) */
 .search-modal {
     position: fixed;
     inset: 0;
@@ -1060,7 +1060,7 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateX(4px);
 }
 
-/* Skeleton loading — placeholder category cards shown while the catalog grid renders */
+/* Skeleton loading â€” placeholder category cards shown while the catalog grid renders */
 .skel {
     position: relative;
     overflow: hidden;

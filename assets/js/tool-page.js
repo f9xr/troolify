@@ -1,10 +1,10 @@
 /* ============================================================================
-   Troolify — Shared Tool-Page Script
+   Troolify - Shared Tool-Page Script
    ----------------------------------------------------------------------------
    Behaviour shared by every tool page:
-   - Share / Embed modals (auto-injected if missing, wiring, backdrop/Esc close)
-   - Shared clipboard primitive exposed as window.Troolify.copyToClipboard
-   - Related tools live search (reads window.TOOLS from tools-data.js)
+  - Share / Embed modals (auto-injected if missing, wiring, backdrop/Esc close)
+  - Shared clipboard primitive exposed as window.Troolify.copyToClipboard
+  - Related tools live search (reads window.TOOLS from tools-data.js)
 
    The page supplies its own <script> for the tool's unique logic only.
    Everything here is opt-in: if an element is missing, that feature is skipped.
@@ -128,7 +128,7 @@
   var btnShare = document.getElementById("btnShare");
   if (btnShare) {
     btnShare.addEventListener("click", function () {
-      var shareUrl = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(pageTitle) + "&url=" + encodeURIComponent(pageUrl);
+      var shareUrl = "https://x.com/intent/tweet?text=" + encodeURIComponent(pageTitle) + "&url=" + encodeURIComponent(pageUrl);
       var link = document.getElementById("shareLink");
       var tw = document.getElementById("shareTwitter");
       var li = document.getElementById("shareLinkedin");
@@ -171,11 +171,19 @@
   var grid = document.getElementById("relatedGrid");
   if (grid) {
     var search = document.getElementById("relatedSearch");
-    var segs = location.pathname.split("/").filter(Boolean);
-    var depth = Math.max(0, segs.length - 1);
+    var pathNorm = location.pathname.replace(/\/+$/, "").toLowerCase();
+    var isProjectSite = pathNorm === "/troolify" || pathNorm.indexOf("/troolify/") === 0;
     var prefix = "";
-    while (depth--) prefix += "../";
-    var current = segs[segs.length - 1] || "";
+    if (isProjectSite) {
+      /* GitHub Pages project site: root every computed link at /troolify/. */
+      prefix = "/troolify/";
+    } else {
+      var segs = location.pathname.split("/").filter(Boolean);
+      var depth = Math.max(0, segs.length - 1);
+      while (depth--) prefix += "../";
+    }
+    var segs2 = location.pathname.split("/").filter(Boolean);
+    var current = segs2[segs2.length - 1] || "";
 
     var tools = (window.TOOLS || []).filter(function (t) {
       return (t.href || "").indexOf(current) === -1;
@@ -210,5 +218,25 @@
 
     if (search) search.addEventListener("input", function () { renderRelated(search.value); });
     renderRelated("");
+  }
+
+  /* ---------------------- F9XR custom-development promo ---------------------- */
+
+  var promoAnchor = document.querySelector(".author-box") || document.querySelector(".related-tools");
+  if (promoAnchor && promoAnchor.parentNode && !document.querySelector(".f9xr-promo")) {
+    var promo = document.createElement("section");
+    promo.className = "f9xr-promo";
+    promo.setAttribute("aria-label", "Custom website development by the F9XR Development Team");
+    promo.innerHTML =
+      '<div class="fp-inner">' +
+        '<span class="fp-kicker"><i class="fa-solid fa-code" aria-hidden="true"></i>F9XR Team &middot; Custom Web Development</span>' +
+        '<h2>Want to develop your own tools site like this?</h2>' +
+        '<p>Meet the <strong>F9XR Development Team</strong> - we develop custom, high-quality websites designed just as per your needs.</p>' +
+        '<div class="fp-actions">' +
+          '<a class="rt-btn fp-btn" href="https://f9xr.github.io/" target="_blank" rel="noopener noreferrer">Meet F9XR Team <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>' +
+          '<span class="fp-url"><i class="fa-solid fa-globe" aria-hidden="true"></i>f9xr.github.io</span>' +
+        '</div>' +
+      '</div>';
+    promoAnchor.parentNode.insertBefore(promo, promoAnchor.nextSibling);
   }
 })();

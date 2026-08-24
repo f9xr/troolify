@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Online Word Counter | Count Words, Characters &amp; Reading Time</title>
 <meta name="description" content="Count words, characters, sentences and reading time instantly with Troolify's free online word counter. Live stats, nothing ever leaves your browser.">
-<meta name="author" content="F9XR Editorial Team">
+<meta name="author" content="F9XR Development Team">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="theme-color" content="#212529">
 <link rel="canonical" href="https://f9xr.github.io/troolify/tools/text/word-counter.html">
@@ -34,8 +34,9 @@
   "@type": "BreadcrumbList",
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://f9xr.github.io/troolify/index.html" },
-    { "@type": "ListItem", "position": 2, "name": "Text Tools", "item": "https://f9xr.github.io/troolify/tools/text/" },
-    { "@type": "ListItem", "position": 3, "name": "Word Counter", "item": "https://f9xr.github.io/troolify/tools/text/word-counter.html" }
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://f9xr.github.io/troolify/tools/index.html" },
+    { "@type": "ListItem", "position": 3, "name": "Text Tools", "item": "https://f9xr.github.io/troolify/tools/text/" },
+    { "@type": "ListItem", "position": 4, "name": "Word Counter", "item": "https://f9xr.github.io/troolify/tools/text/word-counter.html" }
   ]
 }
 </script>
@@ -56,7 +57,7 @@
   "dateModified": "2026-08-10",
   "author": {
     "@type": "Organization",
-    "name": "F9XR Editorial Team",
+    "name": "F9XR Development Team",
     "url": "https://f9xr.github.io/"
   },
   "publisher": {
@@ -85,7 +86,7 @@
   "mainEntityOfPage": "https://f9xr.github.io/troolify/tools/text/word-counter.html",
   "author": {
     "@type": "Organization",
-    "name": "F9XR Editorial Team",
+    "name": "F9XR Development Team",
     "url": "https://f9xr.github.io/"
   },
   "publisher": {
@@ -189,7 +190,7 @@
 
 <style>
 /* ============================================================
-   Word Counter — page-specific styles (matches design tokens)
+   Word Counter - page-specific styles (matches design tokens)
    ============================================================ */
 
 .wc-panel textarea{min-height:260px}
@@ -215,6 +216,7 @@
       <nav class="breadcrumbs" aria-label="Breadcrumb">
         <ol>
           <li><a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="../../tools/index.html">Tools</a></li>
           <li><a href="../index.html">Text Tools</a></li>
           <li class="current" aria-current="page">Word Counter</li>
         </ol>
@@ -239,14 +241,14 @@
         <div class="tool-actions">
           <button class="rt-btn" type="button" id="btnShare"><i class="fa-solid fa-share-nodes"></i>Share</button>
           <button class="rt-btn" type="button" id="btnEmbed"><i class="fa-solid fa-code"></i>Embed Tool</button>
-          <a class="rt-btn" href="mailto:tontufytservices@gmail.com?subject=Feedback%3A%20Word%20Counter%20Tool" rel="noopener"><i class="fa-solid fa-comment"></i>Feedback</a>
+          <a class="rt-btn" href="../../pages/feedback.html"><i class="fa-solid fa-comment"></i>Feedback</a>
         </div>
       </div>
 
       <div class="hero-box hero-details">
         <h3 class="hero-box-title"><i class="fa-solid fa-circle-info"></i>Tool Details</h3>
         <div class="tool-details">
-          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.github.io/" target="_blank" rel="noopener">F9XR Editorial Team</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.github.io/" target="_blank" rel="noopener">F9XR Development Team</a></div>
           <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-check-double"></i>Reviewed by</span><a class="detail-value" href="../../press/editorial-policies.html">Review Board</a></div>
           <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-clock-rotate-left"></i>Last updated</span><span class="detail-value">10 August 2026</span></div>
         </div>
@@ -265,7 +267,7 @@
           </div>
         </div>
 
-        <textarea id="wcInput" spellcheck="false" aria-label="Text to analyze" placeholder="Paste or type anything &mdash; the stats update instantly, right here in your browser&hellip;"></textarea>
+        <textarea id="wcInput" spellcheck="false" aria-label="Text to analyze" placeholder="Paste or type anything - the stats update instantly, right here in your browser&hellip;"></textarea>
 
         <div class="stats-grid" role="status" aria-live="polite" aria-label="Live text statistics">
           <div class="stat"><b id="wcWords">0</b><span>Words</span></div>
@@ -281,7 +283,7 @@
           <button class="btn btn-primary" type="button" data-action="copy"><i class="fa-solid fa-copy"></i>Copy text</button>
         </div>
 
-        <p class="proc-line"><i class="fa-solid fa-bolt"></i><span id="wcProc">Ready &mdash; processing happens in this tab.</span></p>
+        <p class="proc-line"><i class="fa-solid fa-bolt"></i><span id="wcProc">Ready - processing happens in this tab.</span></p>
 
       </div>
     </div>
@@ -292,7 +294,7 @@
       <p>Disclaimer: Whilst every effort has been made in building our tools, we are not to be held liable for any damages or monetary losses arising out of or in connection with their use. <a href="../../press/disclaimer.html">Full disclaimer</a>.</p>
     </aside>
 
-    <!-- On this page (TOC) — collapsed by default -->
+    <!-- On this page (TOC) - collapsed by default -->
     <details class="toc">
       <summary>On this page</summary>
       <ol>
@@ -309,8 +311,7 @@
         <li><a href="#conclusion"><i class="fa-solid fa-flag-checkered"></i>Conclusion</a></li>
       </ol>
     </details>
-
-    <!-- SEO article + right ad sidebar -->
+    <!-- SEO article -->
     <div class="article-layout">
 
       <article class="seo-article">
@@ -380,7 +381,7 @@
 
       <details class="video-transcript">
         <summary>Read the transcript</summary>
-        <p>Word count and character count matter far more than most people expect, because every platform you publish on enforces a limit &mdash; Google Ads headlines cap out at 30 characters, meta descriptions at around 160, and social posts all have their own ceilings. Exceeding any of these means your text gets cut off at the worst possible moment. The Troolify Word Counter solves this by giving you live word, character, sentence, and reading-time stats as you type, entirely inside your browser, so nothing you paste is ever uploaded anywhere. That lets writers, marketers, and business owners match platform limits with confidence and keep their content readable.</p>
+        <p>Word count and character count matter far more than most people expect, because every platform you publish on enforces a limit - Google Ads headlines cap out at 30 characters, meta descriptions at around 160, and social posts all have their own ceilings. Exceeding any of these means your text gets cut off at the worst possible moment. The Troolify Word Counter solves this by giving you live word, character, sentence, and reading-time stats as you type, entirely inside your browser, so nothing you paste is ever uploaded anywhere. That lets writers, marketers, and business owners match platform limits with confidence and keep their content readable.</p>
       </details>
 
       <h2 id="facts">Facts About the Online Word Counter Tool</h2>
@@ -469,35 +470,50 @@
 
       <h2 id="faq">Frequently Asked Questions</h2>
 
-      <h3>What does an online word counter measure?</h3>
-      <p>An online word counter measures the number of words, characters, sentences, and paragraphs in a piece of text, and typically estimates reading time based on average reading speed. It helps writers and businesses stay within platform specific limits and content length targets.</p>
+      <details class="faq-item">
+        <summary>What does an online word counter measure?</summary>
+        <div class="faq-a">
+          <p>An online word counter measures the number of words, characters, sentences, and paragraphs in a piece of text, and typically estimates reading time based on average reading speed. It helps writers and businesses stay within platform specific limits and content length targets.</p>
+        </div>
+      </details>
 
-      <h3>Is the Troolify word counter safe for confidential text?</h3>
-      <p>Yes. The tool processes all text locally within your browser tab. Nothing you type or paste is uploaded, stored, or transmitted to an external server, making it safe for drafts, internal notes, or unpublished content.</p>
+      <details class="faq-item">
+        <summary>Is the Troolify word counter safe for confidential text?</summary>
+        <div class="faq-a">
+          <p>Yes. The tool processes all text locally within your browser tab. Nothing you type or paste is uploaded, stored, or transmitted to an external server, making it safe for drafts, internal notes, or unpublished content.</p>
+        </div>
+      </details>
 
-      <h3>How is reading time calculated?</h3>
-      <p>Reading time is typically estimated using an average adult reading speed, commonly around 200 to 250 words per minute, divided into the total word count of the text. This gives readers a rough idea of how long an article or document will take to read.</p>
+      <details class="faq-item">
+        <summary>How is reading time calculated?</summary>
+        <div class="faq-a">
+          <p>Reading time is typically estimated using an average adult reading speed, commonly around 200 to 250 words per minute, divided into the total word count of the text. This gives readers a rough idea of how long an article or document will take to read.</p>
+        </div>
+      </details>
 
-      <h3>Does word count actually affect SEO rankings?</h3>
-      <p>Word count alone does not directly determine rankings. Google's ranking systems prioritize content that thoroughly and accurately answers a search query. Longer content often performs well because it tends to cover a topic more completely, but padding content just to increase length can actually hurt readability and rankings.</p>
+      <details class="faq-item">
+        <summary>Does word count actually affect SEO rankings?</summary>
+        <div class="faq-a">
+          <p>Word count alone does not directly determine rankings. Google's ranking systems prioritize content that thoroughly and accurately answers a search query. Longer content often performs well because it tends to cover a topic more completely, but padding content just to increase length can actually hurt readability and rankings.</p>
+        </div>
+      </details>
 
-      <h3>What is a good word count for a blog post?</h3>
-      <p>There is no single correct number, since it depends on the topic and competition. Many well performing blog posts fall between 1,000 and 2,500 words, but the priority should always be covering the topic clearly and usefully rather than hitting an arbitrary target.</p>
+      <details class="faq-item">
+        <summary>What is a good word count for a blog post?</summary>
+        <div class="faq-a">
+          <p>There is no single correct number, since it depends on the topic and competition. Many well performing blog posts fall between 1,000 and 2,500 words, but the priority should always be covering the topic clearly and usefully rather than hitting an arbitrary target.</p>
+        </div>
+      </details>
 
-      <h3>Can I use a word counter for social media captions and ads?</h3>
-      <p>Yes. A word and character counter is especially useful for social media captions, ad headlines, and meta descriptions, all of which have strict character limits. Checking your text before publishing helps avoid content being cut off or rejected by the platform.</p>
-
-      <h2 id="conclusion">Conclusion</h2>
+      <details class="faq-item">
+        <summary>Can I use a word counter for social media captions and ads?</summary>
+        <div class="faq-a">
+          <p>Yes. A word and character counter is especially useful for social media captions, ad headlines, and meta descriptions, all of which have strict character limits. Checking your text before publishing helps avoid content being cut off or rejected by the platform.</p>
+        </div>
+      </details><h2 id="conclusion">Conclusion</h2>
       <p>Counting words by hand, or worse, guessing, is not a great use of anyone's time, whether you are writing a homepage, a Google Ads headline, or a blog post aimed at ranking on search. The <a href="https://f9xr.github.io/troolify" target="_blank" rel="noopener">Troolify Online Word Counter</a> gives you instant, private, and accurate stats so you can write with confidence and stay within whatever limit matters for the platform you are publishing to.</p>
       <p>And if writing itself is not the hard part, but figuring out what your website should say, how it should look, and how local customers will actually find it, the <strong><a href="https://f9xr.github.io/pages/services.html" target="_blank" rel="noopener">F9XR Team</a></strong> builds websites, handles redesigns, and runs local SEO strategies for businesses that want their content and their digital presence to work together properly.</p>
     </article>
-
-      <aside class="ad-sidebar" aria-label="Advertisement">
-        <div class="ad-slot"><span class="ad-badge">Advertisement</span></div>
-        <div class="ad-slot hide-md"><span class="ad-badge">Advertisement</span></div>
-        <div class="ad-slot"><span class="ad-badge">Advertisement</span></div>
-      </aside>
-
     </div><!-- /.article-layout -->
 
     <!-- Keyword & Tags box -->
@@ -526,11 +542,11 @@
 
     <!-- Publisher / Author box -->
     <section class="author-box" aria-label="About the publisher">
-      <div class="author-avatar" aria-hidden="true"><img src="https://f9xr.github.io/logo.webp" alt="F9XR logo" loading="lazy"></div>
+      <div class="author-avatar" aria-hidden="true"><img src="../../assets/images/logo_nobg.webp" alt="F9XR logo" loading="lazy" decoding="async" width="1407" height="768"></div>
       <div>
         <span class="author-role">Published by</span>
-        <h2>F9XR Editorial Team</h2>
-        <p>Every Troolify tool is built and reviewed by the F9XR Editorial Team, then checked by our Review Board for correctness, accessibility, and clarity before publication. Tools run 100% client-side with zero data retention.</p>
+        <h2>F9XR Development Team</h2>
+        <p>Every Troolify tool is built and reviewed by the F9XR Development Team, then checked by our Review Board for correctness, accessibility, and clarity before publication. Tools run 100% client-side with zero data retention.</p>
         <div class="author-links">
           <a href="https://f9xr.github.io/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i>F9XR Team</a>
           <a href="../../press/editorial-policies.html"><i class="fa-solid fa-scale-balanced"></i>Editorial Policies</a>
@@ -592,24 +608,29 @@
 
   var SAMPLE = "A strong meta description is the first thing a searcher reads before clicking your result. Keep it under 160 characters, lead with the benefit, and include the keyword your page targets. Google often rewrites descriptions that read like filler, so make every word earn its place. Write the copy first, then count: words, characters, sentences, and reading time.";
 
+  /* Mask dots that belong to common abbreviations so they are not
+     mistaken for sentence endings when counting. */
+  var RE_ABBR = /\b(?:Mr|Mrs|Ms|Dr|Prof|Sr|Jr|St|Mt|vs|etc|Inc|Ltd|Co|Corp|Dept|Univ|Ave|Blvd|approx|est|min|max)\.|(?:e\.g|i\.e)\./gi;
+
   function analyze(){
     var t0 = performance.now();
     var text = input.value;
     var words = text.trim() === "" ? 0 : text.trim().split(/\s+/).filter(function(w){ return w.length > 0; }).length;
     var noSpace = text.replace(/\s+/g, "").length;
     var total = text.length;
-    var sentences = text.split(/[.!?]+/).filter(function(s){ return s.trim().length > 0; }).length;
+    var masked = text.replace(RE_ABBR, function(m){ return m.replace(/\./g, "\u0001"); });
+    var sentences = masked.split(/[.!?]+/).filter(function(s){ return s.trim().length > 0; }).length;
     var mins = words === 0 ? 0 : Math.max(1, Math.ceil(words / 200));
     elWords.textContent = words;
     elChars.textContent = total + " / " + noSpace;
     elSent.textContent = sentences;
     elRead.textContent = mins === 0 ? "0 min" : mins + " min";
-    elProc.textContent = "Processed in " + (performance.now() - t0).toFixed(1) + " ms — inside your browser. 0 bytes uploaded.";
+    elProc.textContent = "Processed in " + (performance.now() - t0).toFixed(1) + " ms - inside your browser. 0 bytes uploaded.";
   }
 
   input.addEventListener("input", analyze);
 
-  function done(){ elProc.textContent = "Copied to clipboard — the bytes never left your device."; }
+  function done(){ elProc.textContent = "Copied to clipboard - the bytes never left your device."; }
 
   document.querySelectorAll("[data-action]").forEach(function(btn){
     btn.addEventListener("click", function(){

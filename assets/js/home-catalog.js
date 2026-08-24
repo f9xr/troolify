@@ -1,4 +1,4 @@
-/* Homepage catalog — renders the category grid from the shared TOOLS/CATEGORIES data.
+/* Homepage catalog - renders the category grid from the shared TOOLS/CATEGORIES data.
    Runs deferred after tools-data.js. Replaces the in-page skeleton placeholders. */
 (function () {
     "use strict";

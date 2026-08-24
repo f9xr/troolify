@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Numeronym Generator Online | Make i18n, l10n &amp; k8s Instantly</title>
 <meta name="description" content="Turn any word into a numeronym like i18n or l10n instantly with Troolify's free numeronym generator. No sign up, works right in your browser.">
-<meta name="author" content="F9XR Editorial Team">
+<meta name="author" content="F9XR Development Team">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="theme-color" content="#212529">
 <link rel="canonical" href="https://f9xr.github.io/troolify/tools/text/numeronym-generator.html">
@@ -34,8 +34,9 @@
   "@type": "BreadcrumbList",
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://f9xr.github.io/troolify/index.html" },
-    { "@type": "ListItem", "position": 2, "name": "Text Tools", "item": "https://f9xr.github.io/troolify/tools/text/" },
-    { "@type": "ListItem", "position": 3, "name": "Numeronym Generator", "item": "https://f9xr.github.io/troolify/tools/text/numeronym-generator.html" }
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://f9xr.github.io/troolify/tools/index.html" },
+    { "@type": "ListItem", "position": 3, "name": "Text Tools", "item": "https://f9xr.github.io/troolify/tools/text/" },
+    { "@type": "ListItem", "position": 4, "name": "Numeronym Generator", "item": "https://f9xr.github.io/troolify/tools/text/numeronym-generator.html" }
   ]
 }
 </script>
@@ -56,7 +57,7 @@
   "dateModified": "2026-08-15",
   "author": {
     "@type": "Organization",
-    "name": "F9XR Editorial Team",
+    "name": "F9XR Development Team",
     "url": "https://f9xr.github.io/"
   },
   "publisher": {
@@ -85,7 +86,7 @@
   "mainEntityOfPage": "https://f9xr.github.io/troolify/tools/text/numeronym-generator.html",
   "author": {
     "@type": "Organization",
-    "name": "F9XR Editorial Team",
+    "name": "F9XR Development Team",
     "url": "https://f9xr.github.io/"
   },
   "publisher": {
@@ -189,7 +190,7 @@
 
 <style>
 /* ============================================================
-   Numeronym Generator — page-specific styles (matches design tokens)
+   Numeronym Generator - page-specific styles (matches design tokens)
    ============================================================ */
 
 .num-panel .num-input{width:100%;padding:14px 16px;border-radius:var(--radius-sm);border:1px solid var(--border);background:var(--surface);color:var(--ink);font-size:16px;font-family:inherit;transition:border-color .18s ease,box-shadow .18s ease}
@@ -223,6 +224,7 @@
       <nav class="breadcrumbs" aria-label="Breadcrumb">
         <ol>
           <li><a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="../../tools/index.html">Tools</a></li>
           <li><a href="../index.html">Text Tools</a></li>
           <li class="current" aria-current="page">Numeronym Generator</li>
         </ol>
@@ -247,14 +249,14 @@
         <div class="tool-actions">
           <button class="rt-btn" type="button" id="btnShare"><i class="fa-solid fa-share-nodes"></i>Share</button>
           <button class="rt-btn" type="button" id="btnEmbed"><i class="fa-solid fa-code"></i>Embed Tool</button>
-          <a class="rt-btn" href="mailto:tontufytservices@gmail.com?subject=Feedback%3A%20Numeronym%20Generator%20Tool" rel="noopener"><i class="fa-solid fa-comment"></i>Feedback</a>
+          <a class="rt-btn" href="../../pages/feedback.html"><i class="fa-solid fa-comment"></i>Feedback</a>
         </div>
       </div>
 
       <div class="hero-box hero-details">
         <h3 class="hero-box-title"><i class="fa-solid fa-circle-info"></i>Tool Details</h3>
         <div class="tool-details">
-          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.github.io/" target="_blank" rel="noopener">F9XR Editorial Team</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.github.io/" target="_blank" rel="noopener">F9XR Development Team</a></div>
           <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-check-double"></i>Reviewed by</span><a class="detail-value" href="../../press/editorial-policies.html">Review Board</a></div>
           <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-clock-rotate-left"></i>Last updated</span><span class="detail-value">15 August 2026</span></div>
         </div>
@@ -301,7 +303,7 @@
           <button class="chip-btn" type="button" data-sample="canonicalization">canonicalization</button>
         </div>
 
-        <p class="proc-line"><i class="fa-solid fa-bolt"></i><span id="numProc">Ready &mdash; processing happens in this tab.</span></p>
+        <p class="proc-line"><i class="fa-solid fa-bolt"></i><span id="numProc">Ready - processing happens in this tab.</span></p>
 
       </div>
     </div>
@@ -312,7 +314,7 @@
       <p>Disclaimer: Whilst every effort has been made in building our tools, we are not to be held liable for any damages or monetary losses arising out of or in connection with their use. <a href="../../press/disclaimer.html">Full disclaimer</a>.</p>
     </aside>
 
-    <!-- On this page (TOC) — collapsed by default -->
+    <!-- On this page (TOC) - collapsed by default -->
     <details class="toc">
       <summary>On this page</summary>
       <ol>
@@ -329,8 +331,7 @@
         <li><a href="#conclusion"><i class="fa-solid fa-flag-checkered"></i>Conclusion</a></li>
       </ol>
     </details>
-
-    <!-- SEO article + right ad sidebar -->
+    <!-- SEO article -->
     <div class="article-layout">
 
       <article class="seo-article">
@@ -395,7 +396,7 @@
 
       <details class="video-transcript">
         <summary>Read the transcript</summary>
-        <p>Internationalization, often shortened to i18n, is the practice of designing products and content so they can easily be adapted to other languages and regions without rebuilding everything from scratch. The &ldquo;i18n&rdquo; shorthand itself is a numeronym &mdash; the first and last letters of &ldquo;internationalization&rdquo; with the number 18 in between, standing for the letters skipped. The same pattern shows up in common words like &ldquo;l10n&rdquo; for localization and &ldquo;a11y&rdquo; for accessibility. The Troolify Numeronym Generator applies that exact rule to any phrase you type: take the first letter, count the characters in the middle, and append the final letter, giving you a clean shorthand in one click, 100% inside your browser.</p>
+        <p>Internationalization, often shortened to i18n, is the practice of designing products and content so they can easily be adapted to other languages and regions without rebuilding everything from scratch. The &ldquo;i18n&rdquo; shorthand itself is a numeronym - the first and last letters of &ldquo;internationalization&rdquo; with the number 18 in between, standing for the letters skipped. The same pattern shows up in common words like &ldquo;l10n&rdquo; for localization and &ldquo;a11y&rdquo; for accessibility. The Troolify Numeronym Generator applies that exact rule to any phrase you type: take the first letter, count the characters in the middle, and append the final letter, giving you a clean shorthand in one click, 100% inside your browser.</p>
       </details>
 
       <h2 id="facts">Facts About the Numeronym Generator Tool</h2>
@@ -488,35 +489,50 @@
 
       <h2 id="faq">Frequently Asked Questions</h2>
 
-      <h3>What is a numeronym?</h3>
-      <p>A numeronym is a word where a number is used to form an abbreviation, typically by replacing the letters between the first and last letter of the original word with a digit representing how many letters were removed. A common example is i18n for internationalization.</p>
+      <details class="faq-item">
+        <summary>What is a numeronym?</summary>
+        <div class="faq-a">
+          <p>A numeronym is a word where a number is used to form an abbreviation, typically by replacing the letters between the first and last letter of the original word with a digit representing how many letters were removed. A common example is i18n for internationalization.</p>
+        </div>
+      </details>
 
-      <h3>Why is i18n used instead of writing internationalization?</h3>
-      <p>i18n is used because "internationalization" is a long, frequently repeated word in software development and documentation. The numeronym form saves space and typing time while remaining instantly recognizable to developers and technical audiences familiar with the convention.</p>
+      <details class="faq-item">
+        <summary>Why is i18n used instead of writing internationalization?</summary>
+        <div class="faq-a">
+          <p>i18n is used because "internationalization" is a long, frequently repeated word in software development and documentation. The numeronym form saves space and typing time while remaining instantly recognizable to developers and technical audiences familiar with the convention.</p>
+        </div>
+      </details>
 
-      <h3>How do you create a numeronym manually?</h3>
-      <p>To create a numeronym manually, count the number of letters between the first and last letter of the word, then replace those middle letters with that number. For example, "localization" has 10 letters between the first "l" and last "n," producing l10n.</p>
+      <details class="faq-item">
+        <summary>How do you create a numeronym manually?</summary>
+        <div class="faq-a">
+          <p>To create a numeronym manually, count the number of letters between the first and last letter of the word, then replace those middle letters with that number. For example, "localization" has 10 letters between the first "l" and last "n," producing l10n.</p>
+        </div>
+      </details>
 
-      <h3>What are some common numeronym examples besides i18n?</h3>
-      <p>Common numeronym examples include l10n for localization, a11y for accessibility, k8s for Kubernetes, and c14n for canonicalization. These are widely recognized within software development and technical writing communities.</p>
+      <details class="faq-item">
+        <summary>What are some common numeronym examples besides i18n?</summary>
+        <div class="faq-a">
+          <p>Common numeronym examples include l10n for localization, a11y for accessibility, k8s for Kubernetes, and c14n for canonicalization. These are widely recognized within software development and technical writing communities.</p>
+        </div>
+      </details>
 
-      <h3>Is the Troolify numeronym generator free to use?</h3>
-      <p>Yes. The tool is completely free, requires no account or sign up, and processes everything locally in your browser without sending any data to a server.</p>
+      <details class="faq-item">
+        <summary>Is the Troolify numeronym generator free to use?</summary>
+        <div class="faq-a">
+          <p>Yes. The tool is completely free, requires no account or sign up, and processes everything locally in your browser without sending any data to a server.</p>
+        </div>
+      </details>
 
-      <h3>When should businesses avoid using numeronyms?</h3>
-      <p>Businesses should avoid using numeronyms in customer facing marketing materials or content aimed at non technical audiences, since the abbreviations can be confusing without context. They work best in technical documentation, internal communication, and developer focused content where the terms are already well understood.</p>
-
-      <h2 id="conclusion">Conclusion</h2>
+      <details class="faq-item">
+        <summary>When should businesses avoid using numeronyms?</summary>
+        <div class="faq-a">
+          <p>Businesses should avoid using numeronyms in customer facing marketing materials or content aimed at non technical audiences, since the abbreviations can be confusing without context. They work best in technical documentation, internal communication, and developer focused content where the terms are already well understood.</p>
+        </div>
+      </details><h2 id="conclusion">Conclusion</h2>
       <p>Numeronyms might look like odd little pieces of internet shorthand at first glance, but once you understand the pattern, they become a useful way to shorten long, repetitive terms in technical writing, documentation, and product naming. The <a href="https://f9xr.github.io/troolify" target="_blank" rel="noopener">Troolify Numeronym Generator</a> makes creating them instant and error free, no manual letter counting required.</p>
       <p>And if your business is growing internationally, building out technical documentation, or simply needs a website that presents your product clearly to both developers and everyday customers, the <strong><a href="https://f9xr.github.io/pages/services.html" target="_blank" rel="noopener">F9XR Team</a></strong> can help with website development, redesign, and local SEO built around exactly that kind of growth.</p>
     </article>
-
-      <aside class="ad-sidebar" aria-label="Advertisement">
-        <div class="ad-slot"><span class="ad-badge">Advertisement</span></div>
-        <div class="ad-slot hide-md"><span class="ad-badge">Advertisement</span></div>
-        <div class="ad-slot"><span class="ad-badge">Advertisement</span></div>
-      </aside>
-
     </div><!-- /.article-layout -->
 
     <!-- Keyword & Tags box -->
@@ -545,11 +561,11 @@
 
     <!-- Publisher / Author box -->
     <section class="author-box" aria-label="About the publisher">
-      <div class="author-avatar" aria-hidden="true"><img src="https://f9xr.github.io/logo.webp" alt="F9XR logo" loading="lazy"></div>
+      <div class="author-avatar" aria-hidden="true"><img src="../../assets/images/logo_nobg.webp" alt="F9XR logo" loading="lazy" decoding="async" width="1407" height="768"></div>
       <div>
         <span class="author-role">Published by</span>
-        <h2>F9XR Editorial Team</h2>
-        <p>Every Troolify tool is built and reviewed by the F9XR Editorial Team, then checked by our Review Board for correctness, accessibility, and clarity before publication. Tools run 100% client-side with zero data retention.</p>
+        <h2>F9XR Development Team</h2>
+        <p>Every Troolify tool is built and reviewed by the F9XR Development Team, then checked by our Review Board for correctness, accessibility, and clarity before publication. Tools run 100% client-side with zero data retention.</p>
         <div class="author-links">
           <a href="https://f9xr.github.io/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i>F9XR Team</a>
           <a href="../../press/editorial-policies.html"><i class="fa-solid fa-scale-balanced"></i>Editorial Policies</a>
@@ -617,8 +633,8 @@
   };
 
   var EMPTY = {
-    encode: { res: "\u2014", brk: "Type or paste a word above, ideally 8+ letters.", proc: "Ready \u2014 processing happens in this tab." },
-    decode: { res: "\u2014", brk: "Paste a numeronym like i18n to see its letter breakdown.", proc: "Ready \u2014 processing happens in this tab." }
+    encode: { res: "-", brk: "Type or paste a word above, ideally 8+ letters.", proc: "Ready - processing happens in this tab." },
+    decode: { res: "-", brk: "Paste a numeronym like i18n to see its letter breakdown.", proc: "Ready - processing happens in this tab." }
   };
 
   function encodeWord(w){
@@ -649,7 +665,7 @@
     });
     result.textContent = parts.join(" ");
     renderNotes(notes);
-    proc.textContent = "Converted in this tab \u2014 0 bytes uploaded.";
+    proc.textContent = "Converted in this tab - 0 bytes uploaded.";
   }
 
   function decode(text){
@@ -668,7 +684,7 @@
     });
     result.textContent = parts.join("    ");
     renderNotes(notes);
-    proc.textContent = "Decoded in this tab \u2014 0 bytes uploaded.";
+    proc.textContent = "Decoded in this tab - 0 bytes uploaded.";
   }
 
   function setEmpty(){
@@ -730,7 +746,7 @@
 
   copyBtn.addEventListener("click", function(){
     var txt = result.textContent;
-    if (!txt || txt === "\u2014") return;
+    if (!txt || txt === "-") return;
     window.Troolify.copyToClipboard(txt, function(){
       var old = copyBtn.innerHTML;
       copyBtn.innerHTML = '<i class="fa-solid fa-check"></i>Copied';

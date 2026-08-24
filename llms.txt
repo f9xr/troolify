@@ -1,6 +1,6 @@
 # Troolify
 
-> Online tools hub by F9XR Team — free, fast, 100% client-side web utilities.
+> Online tools hub by F9XR Team - free, fast, 100% client-side web utilities.
 
 Every Troolify tool runs entirely in your browser. Your data never leaves your device.
 
@@ -15,23 +15,50 @@ Every Troolify tool runs entirely in your browser. Your data never leaves your d
 - [Password Generator](https://f9xr.github.io/troolify/tools/misc/password-generator.html): Create strong random passwords or memorable passphrases with custom rules and entropy strength.
 - [Password Entropy Calculator](https://f9xr.github.io/troolify/tools/misc/password-entropy-calculator.html): Measure password entropy in bits and estimate crack time across five real-world attack scenarios.
 
+## Categories
+- [AI Tools](https://f9xr.github.io/troolify/tools/ai/index.html)
+- [Audio Tools](https://f9xr.github.io/troolify/tools/audio/index.html)
+- [Developer Tools](https://f9xr.github.io/troolify/tools/coding/index.html)
+- [Converters](https://f9xr.github.io/troolify/tools/converters/index.html)
+- [Cooking Tools](https://f9xr.github.io/troolify/tools/cooking/index.html)
+- [Crypto Tools](https://f9xr.github.io/troolify/tools/crypto/index.html)
+- [Finance Tools](https://f9xr.github.io/troolify/tools/finance/index.html)
+- [Fun & Games](https://f9xr.github.io/troolify/tools/fun/index.html)
+- [Health Tools](https://f9xr.github.io/troolify/tools/health/index.html)
+- [Image Tools](https://f9xr.github.io/troolify/tools/image/index.html)
+- [Misc Tools](https://f9xr.github.io/troolify/tools/misc/index.html)
+- [PDF Tools](https://f9xr.github.io/troolify/tools/pdf/index.html)
+- [Prompt Tools](https://f9xr.github.io/troolify/tools/prompts/index.html)
+- [SEO & Marketing](https://f9xr.github.io/troolify/tools/seo/index.html)
+- [Statistics](https://f9xr.github.io/troolify/tools/statistics/index.html)
+- [Text Tools](https://f9xr.github.io/troolify/tools/text/index.html)
+- [Time Tools](https://f9xr.github.io/troolify/tools/time/index.html)
+- [Video Tools](https://f9xr.github.io/troolify/tools/video/index.html)
+- [YouTube Tools](https://f9xr.github.io/troolify/tools/youtube/index.html)
+
 ## Catalog
 - [Utility Catalog](https://f9xr.github.io/troolify/tools/index.html): Browse every category and tool.
 
 ## About
 - [Home](https://f9xr.github.io/troolify/index.html)
+- [About Us](https://f9xr.github.io/troolify/pages/about.html)
 - [Editorial Policies](https://f9xr.github.io/troolify/press/editorial-policies.html)
+- [Accessibility Statement](https://f9xr.github.io/troolify/pages/accessibility-statement.html)
+- [Disclaimer](https://f9xr.github.io/troolify/press/disclaimer.html)
 
 ## Company
 - [F9XR Team](https://f9xr.github.io)
 - [GitHub](https://github.com/f9xr/troolify)
-- [Privacy](https://f9xr.github.io/legals/privacy.html)
-- [Terms](https://f9xr.github.io/legals/terms.html)
+- [Contact](https://f9xr.github.io/troolify/pages/contact.html)
+- [Feedback](https://f9xr.github.io/troolify/pages/feedback.html)
+- [Privacy Policy](https://f9xr.github.io/troolify/pages/privacy-policy.html)
+- [Terms of Service](https://f9xr.github.io/troolify/pages/terms.html)
+- [HTML Sitemap](https://f9xr.github.io/troolify/pages/sitemap.html)
 
 ## Contact
 - Email: tontufytservices@gmail.com
 
 ## License
 - Code: open source under the repository license (see GitHub).
-- Website content: &copy; 2026 Troolify / F9XR Team. All rights reserved.
+- Website content: © 2026 Troolify / F9XR Team. All rights reserved.
 - Citation: when referencing Troolify, cite the site as "Troolify by F9XR Team" and link to https://f9xr.github.io/troolify/index.html

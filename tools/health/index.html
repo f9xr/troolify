@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Health Tools  - Troolify</title>
+<title>Health Tools - Troolify</title>
 <meta name="description" content="Health Tools on Troolify - health, fitness and wellness helpers. 100% client-side and zero data retention.">
 <meta name="robots" content="noindex, follow">
 <meta name="theme-color" content="#212529">
@@ -28,6 +28,29 @@
 <meta name="twitter:title" content="Health Tools - Troolify">
 <meta name="twitter:description" content="Health Tools on Troolify - health, fitness and wellness helpers. 100% client-side and zero data retention.">
 <meta name="twitter:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://f9xr.github.io/troolify/index.html" },
+        { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://f9xr.github.io/troolify/tools/index.html" },
+        { "@type": "ListItem", "position": 3, "name": "Health Tools", "item": "https://f9xr.github.io/troolify/tools/health/index.html" }
+      ]
+    },
+    {
+      "@type": "CollectionPage",
+      "name": "Health Tools - Troolify",
+      "url": "https://f9xr.github.io/troolify/tools/health/index.html",
+      "description": "Health Tools on Troolify - health, fitness and wellness helpers. 100% client-side and zero data retention.",
+      "isPartOf": { "@type": "WebSite", "name": "Troolify", "url": "https://f9xr.github.io/troolify/index.html" },
+      "publisher": { "@type": "Organization", "name": "F9XR Development Team", "url": "https://f9xr.github.io/" }
+    }
+  ]
+}
+</script>
 </head>
 <body data-layout="tool" data-category="Health">
 <noscript>
@@ -42,9 +65,16 @@
 <main>
   <section class="hero">
     <div class="container">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="../index.html">Tools</a></li>
+          <li class="current" aria-current="page">Health Tools</li>
+        </ol>
+      </nav>
       <span class="hero-badge"><span class="dot"></span>100% client-side &middot; zero data retention</span>
       <h1>Health Tools</h1>
-      <p class="sub">Health, fitness and wellness tools &mdash; every tool runs entirely in your browser with zero data retention.</p>
+      <p class="sub">Health, fitness and wellness tools - every tool runs entirely in your browser with zero data retention.</p>
 
       <div class="toolbar">
         <label class="search">

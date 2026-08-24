@@ -1,14 +1,14 @@
 /* ============================================================================
-   Troolify — Shared Layout Injector
+   Troolify - Shared Layout Injector
    ----------------------------------------------------------------------------
    Auto-injects the site header, CTA and footer into every page so navigation
    and footer markup stay DRY (single source of truth).
 
    A single design is used everywhere (matching index.html):
 
-     • Header — dark navbar + mobile menu (style.css / site-shell.css)
-     • CTA    — conversion band injected just above the footer
-     • Footer — rich brand footer (Tailwind utilities in tailwind.css)
+     • Header - dark navbar + mobile menu (style.css / site-shell.css)
+     • CTA - conversion band injected just above the footer
+     • Footer - rich brand footer (Tailwind utilities in tailwind.css)
 
    The CTA is skipped on pages that already ship their own (e.g. index.html,
    which has a static  .final-cta  section).
@@ -36,11 +36,15 @@
         }
     }
 
-    // Directory depth of the current page relative to the site root.
-    //   /index.html                     -> 0 levels -> ""
-    //   /tools/word-counter.html        -> 1 level  -> "../"
-    //   /press/editorial-policies.html  -> 1 level  -> "../"
+    // Site base path. Troolify is deployed to GitHub Pages as a project site,
+    // so every JS-computed link must be rooted at /troolify/ - a relative
+    // "../" chain breaks there because the project folder counts as a level.
+    var SITE_BASE = "/troolify/";
+
     function rootPrefix() {
+        var path = window.location.pathname.replace(/\/+$/, "").toLowerCase();
+        if (path === "/troolify" || path.indexOf("/troolify/") === 0) return SITE_BASE;
+        /* Local preview served from the repo root: fall back to relative paths. */
         var dirs = window.location.pathname.split("/").filter(Boolean);
         dirs.pop(); // drop the file name
         return dirs.map(function () { return "../"; }).join("");
@@ -51,19 +55,19 @@
     // a marquee. Each badge link is duplicated in the track to loop seamlessly.
     var featuredBadges =
         '<a class="badge-link" href="https://productburst.com/product/troolify" target="_blank" rel="noopener noreferrer">' +
-            '<img src="https://3188a5210b07f4ad511bbcdc967bc67b.cdn.bubble.io/f1747781918344x939992978866771600/pB-Badge.png" alt="Featured on ProductBurst" width="160" />' +
+            '<img src="https://3188a5210b07f4ad511bbcdc967bc67b.cdn.bubble.io/f1747781918344x939992978866771600/pB-Badge.png" alt="Featured on ProductBurst" width="160" height="50" loading="lazy" decoding="async" />' +
         '</a>' +
         '<a class="badge-link" href="https://prolaunch.net" target="_blank" rel="noopener noreferrer" title="Pro Launch Featured Badge">' +
-            '<img src="https://prolaunch.net/images/badges/featured-dark.svg" alt="Pro Launch Featured Badge" style="width: 240px; height: auto;" />' +
+            '<img src="https://prolaunch.net/images/badges/featured-dark.svg" alt="Pro Launch Featured Badge" width="240" height="52" loading="lazy" decoding="async" />' +
         '</a>' +
         '<a class="badge-link" href="https://nicklaunches.com/products/troolify/?utm_source=f9xr.github.io&utm_medium=badge&utm_campaign=featured" target="_blank" rel="noopener noreferrer">' +
             '<img src="https://nicklaunches.com/badges/featured-dark.png" alt="Troolify on Nick Launches" width="244" height="56" />' +
         '</a>' +
         '<a class="badge-link" href="https://peerpush.com/p/troolify" target="_blank" rel="noopener noreferrer">' +
-            '<img src="https://peerpush.com/p/troolify/badge.png" alt="Troolify on PeerPush" style="width: 230px;" />' +
+            '<img src="https://peerpush.com/p/troolify/badge.png" alt="Troolify on PeerPush" width="230" height="56" loading="lazy" decoding="async" />' +
         '</a>' +
         '<a class="badge-link" href="https://lift-off.sh/p/troolify" target="_blank" rel="noopener noreferrer" title="LiftOff launch badge">' +
-            '<img src="https://lift-off.sh/images/badges/badgeLaunchedDarkBAR.webp" alt="LiftOff launch badge" width="200" height="auto" />' +
+            '<img src="https://lift-off.sh/images/badges/badgeLaunchedDarkBAR.webp" alt="LiftOff launch badge" width="200" height="56" loading="lazy" decoding="async" />' +
         '</a>';
 
     /* ------------------------------------------------------------------------
@@ -88,7 +92,7 @@
         var toolsHref = pageDir === "tools" ? "./index.html" : prefix + "tools/index.html";
 
         /* --------------------------------------------------------------------
-           MAIN theme — dark navbar + mobile menu + footer (style.css)
+           MAIN theme - dark navbar + mobile menu + footer (style.css)
            -------------------------------------------------------------------- */
 
         var headerMain =
@@ -98,7 +102,7 @@
                     '<nav class="nav-links nav-links-left" aria-label="Primary">' +
                         '<a href="' + homeHref + '">Home</a>' +
                         '<a href="' + prefix + 'tools/index.html">Tools</a>' +
-                        '<a href="' + prefix + 'tools/index.html">Category</a>' +
+                        '<a href="' + homeHref + '#categories">Category</a>' +
                     '</nav>' +
                     /* Centered brand */
                     '<a href="' + homeHref + '" class="brand">' +
@@ -109,7 +113,7 @@
                     '<div class="nav-actions">' +
                         '<nav class="nav-links nav-links-right" aria-label="Secondary">' +
                             '<a href="' + prefix + 'pages/about.html">About</a>' +
-                            '<a href="mailto:tontufytservices@gmail.com">Support</a>' +
+                            '<a href="' + prefix + 'pages/contact.html">Support</a>' +
                         '</nav>' +
                         '<button type="button" class="nav-search-btn" aria-label="Search tools" aria-haspopup="dialog">' +
                             '<i class="fa-solid fa-magnifying-glass"></i>' +
@@ -124,18 +128,18 @@
             '<div class="mobile-menu" aria-hidden="true">' +
                 '<a href="' + homeHref + '">Home</a>' +
                 '<a href="' + prefix + 'tools/index.html">Tools</a>' +
-                '<a href="' + prefix + 'tools/index.html">Category</a>' +
+                '<a href="' + homeHref + '#categories">Category</a>' +
                 '<a href="' + prefix + 'pages/about.html">About</a>' +
-                '<a href="mailto:tontufytservices@gmail.com">Support</a>' +
+                '<a href="' + prefix + 'pages/contact.html">Support</a>' +
                 '<a href="' + toolsHref + '" class="btn btn-primary" style="margin-top: 1rem;">Explore Tools</a>' +
             '</div>';
 
         var footerMain =
             '<footer class="tx-footer">' +
-                /* Full-width canvas — transparent bg so the footer merges with the page content bg */
+                /* Full-width canvas - transparent bg so the footer merges with the page content bg */
                 '<div class="relative px-6 py-12 sm:px-10 sm:py-14 lg:px-16">' +
 
-                        /* Ambient brand glow — radial accent-blue blobs (DESIGN.md §5) */
+                        /* Ambient brand glow - radial accent-blue blobs (DESIGN.md §5) */
                         '<div class="pointer-events-none absolute -top-40 left-1/2 h-80 w-[720px] -translate-x-1/2 rounded-full bg-[#3B82F6]/15 blur-[120px]" aria-hidden="true"></div>' +
                         '<div class="pointer-events-none absolute -bottom-32 -right-24 h-72 w-72 rounded-full bg-[#3B82F6]/10 blur-[100px]" aria-hidden="true"></div>' +
 
@@ -145,7 +149,7 @@
                         /* --- Top content grid --- */
                         '<div class="relative grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr_1.4fr] lg:gap-14">' +
 
-                            /* Left column — brand mission */
+                            /* Left column - brand mission */
                             '<div>' +
                                 '<a href="' + homeHref + '" class="inline-flex items-center gap-3">' +
                                     '<img src="' + prefix + 'assets/images/logo_nobg.webp" alt="Troolify" class="h-9 w-auto object-contain">' +
@@ -158,7 +162,7 @@
                                 '</div>' +
                             '</div>' +
 
-                            /* Middle column 1 — Company links */
+                            /* Middle column 1 - Company links */
                             '<nav aria-label="Company">' +
                                 '<h4 class="text-xs font-semibold uppercase tracking-[0.22em] text-[#E9ECEF]">Company</h4>' +
                                 '<ul class="mt-6 space-y-3">' +
@@ -169,10 +173,12 @@
                                     '<li><a href="' + prefix + 'pages/sitemap.html" class="text-white/80 transition hover:text-[#3B82F6]">Sitemap</a></li>' +
                                     '<li><a href="' + prefix + 'pages/accessibility-statement.html" class="text-white/80 transition hover:text-[#3B82F6]">Accessibility</a></li>' +
                                     '<li><a href="' + prefix + 'press/editorial-policies.html" class="text-white/80 transition hover:text-[#3B82F6]">Editorial Policies</a></li>' +
+'                                    <li><a href="' + prefix + 'pages/privacy-policy.html" class="text-white/80 transition hover:text-[#3B82F6]">Privacy Policy</a></li>' +
+'                                    <li><a href="' + prefix + 'pages/terms.html" class="text-white/80 transition hover:text-[#3B82F6]">Terms of Service</a></li>' +
                                 '</ul>' +
                             '</nav>' +
 
-                            /* Middle column 2 — F9XR network links */
+                            /* Middle column 2 - F9XR network links */
                             '<nav aria-label="F9XR Network">' +
                                 '<h4 class="text-xs font-semibold uppercase tracking-[0.22em] text-[#E9ECEF]">F9XR Network</h4>' +
                                 '<ul class="mt-6 space-y-3">' +
@@ -186,7 +192,7 @@
                                 '</ul>' +
                             '</nav>' +
 
-                            /* Middle column 3 — Follow us social icons */
+                            /* Middle column 3 - Follow us social icons */
                             '<nav aria-label="Follow us">' +
                                 '<h4 class="text-xs font-semibold uppercase tracking-[0.22em] text-[#E9ECEF]">Follow us</h4>' +
                                 '<div class="mt-6 flex flex-wrap gap-3">' +
@@ -198,7 +204,7 @@
                                 '</div>' +
                             '</nav>' +
 
-                            /* Right column — contact + newsletter capture */
+                            /* Right column - contact + newsletter capture */
                             '<div>' +
                                 '<h4 class="text-xs font-semibold uppercase tracking-[0.22em] text-[#E9ECEF]">Stay up to date</h4>' +
                                 '<form class="mt-6 flex flex-col gap-3 sm:flex-row" action="mailto:tontufytservices@gmail.com" method="post" enctype="text/plain">' +
@@ -218,8 +224,8 @@
                         '<div class="relative mt-12 flex flex-col items-center justify-between gap-4 border-t border-[#343A40] pt-8 text-sm text-[#9CA3AF] md:flex-row">' +
                             '<p>&copy; 2026 Troolify. All rights reserved.</p>' +
                             '<div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">' +
-                                '<a href="https://f9xr.github.io/legals/terms.html" target="_blank" rel="noopener noreferrer" class="transition hover:text-[#3B82F6]">Terms</a>' +
-                                '<a href="https://f9xr.github.io/legals/privacy.html" target="_blank" rel="noopener noreferrer" class="transition hover:text-[#3B82F6]">Privacy Policy</a>' +
+                                '<a href="' + prefix + 'pages/terms.html" class="transition hover:text-[#3B82F6]">Terms</a>' +
+                                '<a href="' + prefix + 'pages/privacy-policy.html" class="transition hover:text-[#3B82F6]">Privacy Policy</a>' +
                                 '<a href="' + prefix + 'pages/contact.html" class="transition hover:text-[#3B82F6]">Contact</a>' +
                             '</div>' +
                         '</div>' +
@@ -227,7 +233,7 @@
             '</footer>';
 
         /* --------------------------------------------------------------------
-           CTA band — conversion section injected just above the footer
+           CTA band - conversion section injected just above the footer
            (skipped on pages that already ship a static CTA, e.g. index.html)
            -------------------------------------------------------------------- */
 
@@ -236,7 +242,7 @@
                 '<div class="cta-3d">' +
                     '<div class="cta-panel">' +
 
-                        /* Glassmorphism shapes — frosted cyan/white blobs behind the copy */
+                        /* Glassmorphism shapes - frosted cyan/white blobs behind the copy */
                         '<div class="cta-blob cta-blob-1" aria-hidden="true"></div>' +
                         '<div class="cta-blob cta-blob-2" aria-hidden="true"></div>' +
                         '<div class="cta-blob cta-blob-3" aria-hidden="true"></div>' +
@@ -253,7 +259,7 @@
             '</section>';
 
         /* --------------------------------------------------------------------
-           "Featured On" band — scrolling directory badges injected just above
+           "Featured On" band - scrolling directory badges injected just above
            the CTA on every page (replaces the old nav dropdown placement).
            -------------------------------------------------------------------- */
 
@@ -268,11 +274,11 @@
             '</section>';
 
         /* --------------------------------------------------------------------
-           Back-to-top button — small floating control, injected on every page
+           Back-to-top button - small floating control, injected on every page
            -------------------------------------------------------------------- */
 
         var backToTopMarkup =
-            '<button type="button" id="backToTop" aria-label="Back to top" class="fixed bottom-6 right-6 z-[1500] hidden h-11 w-11 place-items-center rounded-full bg-[#3B82F6] text-white shadow-[0_4px_20px_rgba(59,130,246,0.35)] transition hover:bg-[#2563EB]">' +
+            '<button type="button" id="backToTop" aria-label="Back to top" class="fixed bottom-5 right-5 z-[1500] hidden h-8 w-8 place-items-center rounded-full bg-[#3B82F6] text-white shadow-[0_3px_14px_rgba(59,130,246,0.35)] transition hover:bg-[#2563EB]">' +
                 '<svg class="btt-ring" viewBox="0 0 44 44" aria-hidden="true">' +
                     '<circle class="btt-track" cx="22" cy="22" r="20"></circle>' +
                     '<circle class="btt-progress" cx="22" cy="22" r="20"></circle>' +
@@ -336,7 +342,7 @@
                 '.btt-ring .btt-track,.btt-ring .btt-progress{fill:none;stroke-width:3}' +
                 '.btt-ring .btt-track{stroke:rgba(255,255,255,.18)}' +
                 '.btt-ring .btt-progress{stroke:#BFDBFE;stroke-linecap:round;transform:rotate(-90deg);transform-origin:center;transition:stroke-dashoffset .15s linear}' +
-                '.btt-icon{position:relative;z-index:1}' +
+                '.btt-icon{position:relative;z-index:1;font-size:.72rem}' +
 
                 '@media(max-width:640px){.cta-panel{padding:clamp(2rem,12vw,3rem) 1.25rem}.cta-blob-1{left:-35%;top:-18%}.cta-blob-2{right:-35%;bottom:-25%}.cta-h2{font-size:clamp(1.5rem,7vw,2.1rem)}}' +
 
@@ -376,7 +382,7 @@
         body.insertAdjacentHTML("beforeend", backToTopMarkup);
 
         /* --------------------------------------------------------------------
-           Entity schema — inject an Organization JSON-LD block on any page that
+           Entity schema - inject an Organization JSON-LD block on any page that
            ships no structured data yet (About, Feedback, Sitemap, Press, etc.).
            Pages with their own JSON-LD (home, tools, contact) are left untouched.
            -------------------------------------------------------------------- */
@@ -409,7 +415,7 @@
         }
 
         /* --------------------------------------------------------------------
-           Header behaviour — scroll effect, mobile menu, active link
+           Header behaviour - scroll effect, mobile menu, active link
            -------------------------------------------------------------------- */
 
         var header = document.querySelector(".navbar, .site-header");
@@ -491,7 +497,7 @@
         }
 
         /* --------------------------------------------------------------------
-           Global live search — navbar modal + inline search bars
+           Global live search - navbar modal + inline search bars
            -------------------------------------------------------------------- */
 
         var modal = document.getElementById("searchModal");

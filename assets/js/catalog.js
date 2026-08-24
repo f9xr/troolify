@@ -20,6 +20,9 @@
     var activeFilter = "All";
 
     function rootPrefix() {
+        var path = window.location.pathname.replace(/\/+$/, "").toLowerCase();
+        /* GitHub Pages project site: all JS-computed links root at /troolify/. */
+        if (path === "/troolify" || path.indexOf("/troolify/") === 0) return "/troolify/";
         var dirs = window.location.pathname.split("/").filter(Boolean);
         dirs.pop();
         return dirs.map(function () { return "../"; }).join("");
@@ -93,7 +96,7 @@
         });
 
         if (isCategoryPage && scoped.length === 0) {
-            count.textContent = "No utilities in " + catName(category) + " yet — check back soon";
+            count.textContent = "No utilities in " + catName(category) + " yet - check back soon";
             empty.classList.add("show");
             empty.querySelector("h3").textContent = "This category is coming soon";
             empty.querySelector("p").textContent = "We are actively building " + catName(category) + " utilities. They will appear here automatically.";
