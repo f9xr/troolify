@@ -14,6 +14,7 @@ Every Troolify tool runs entirely in your browser. Your data never leaves your d
 - [Song Length Calculator](https://f9xr.github.io/troolify/tools/audio/song-length-calculator.html): Calculate exact track runtime from BPM and bar repetitions.
 - [Password Generator](https://f9xr.github.io/troolify/tools/misc/password-generator.html): Create strong random passwords or memorable passphrases with custom rules and entropy strength.
 - [Password Entropy Calculator](https://f9xr.github.io/troolify/tools/misc/password-entropy-calculator.html): Measure password entropy in bits and estimate crack time across five real-world attack scenarios.
+- [Advance Ovulation Calculator](https://f9xr.github.io/troolify/tools/health/ovulation-calculator.html): Predict ovulation day, fertile window, peak fertility and upcoming periods from your last cycle.
 
 ## Categories
 - [AI Tools](https://f9xr.github.io/troolify/tools/ai/index.html)
