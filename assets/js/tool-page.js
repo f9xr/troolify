@@ -189,31 +189,60 @@
       return (t.href || "").indexOf(current) === -1;
     });
 
+    var RELATED_PAGE_SIZE = 6;
+    var relatedVisible = RELATED_PAGE_SIZE;
+    var relatedFiltered = [];
+
+    function buildRelatedCard(t) {
+      var card = document.createElement("a");
+      card.className = "related-card";
+      card.href = (t.href || "").indexOf("tools/") === 0 ? prefix + t.href : t.href;
+      card.setAttribute("aria-label", "Open " + t.name);
+      card.innerHTML =
+        '<span class="rc-icon"><i class="' + (t.icon || "fa-solid fa-wrench") + '"></i></span>' +
+        '<span class="rc-name">' + t.name + "</span>" +
+        '<span class="rc-desc">' + (t.desc || "") + "</span>" +
+        '<span class="rc-more">Open tool <i class="fa-solid fa-arrow-right"></i></span>';
+      return card;
+    }
+
     function renderRelated(q) {
       q = (q || "").trim().toLowerCase();
-      var list = tools.filter(function (t) {
+      relatedFiltered = tools.filter(function (t) {
         if (!q) return true;
         return (t.name + " " + (t.desc || "") + " " + (t.tag || "") + " " + (t.category || "") + " " + ((t.keywords || []).join(" ")))
           .toLowerCase().indexOf(q) !== -1;
       });
+      relatedVisible = RELATED_PAGE_SIZE;
       grid.innerHTML = "";
       grid.setAttribute("aria-busy", "false");
-      if (!list.length) {
+      if (!relatedFiltered.length) {
         grid.innerHTML = '<div class="related-empty"><i class="fa-solid fa-magnifying-glass"></i>No tools match that search.</div>';
         return;
       }
-      list.forEach(function (t) {
-        var card = document.createElement("a");
-        card.className = "related-card";
-        card.href = (t.href || "").indexOf("tools/") === 0 ? prefix + t.href : t.href;
-        card.setAttribute("aria-label", "Open " + t.name);
-        card.innerHTML =
-          '<span class="rc-icon"><i class="' + (t.icon || "fa-solid fa-wrench") + '"></i></span>' +
-          '<span class="rc-name">' + t.name + "</span>" +
-          '<span class="rc-desc">' + (t.desc || "") + "</span>" +
-          '<span class="rc-more">Open tool <i class="fa-solid fa-arrow-right"></i></span>';
-        grid.appendChild(card);
-      });
+      renderRelatedPage();
+    }
+
+    function renderRelatedPage() {
+      var existing = grid.querySelector(".related-load-more");
+      if (existing) existing.remove();
+
+      var end = Math.min(relatedVisible, relatedFiltered.length);
+      for (var i = grid.querySelectorAll(".related-card").length; i < end; i++) {
+        grid.appendChild(buildRelatedCard(relatedFiltered[i]));
+      }
+
+      if (end < relatedFiltered.length) {
+        var btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "related-load-more";
+        btn.innerHTML = '<i class="fa-solid fa-plus"></i>Load more (' + (relatedFiltered.length - end) + ' remaining)';
+        btn.addEventListener("click", function () {
+          relatedVisible += RELATED_PAGE_SIZE;
+          renderRelatedPage();
+        });
+        grid.appendChild(btn);
+      }
     }
 
     if (search) search.addEventListener("input", function () { renderRelated(search.value); });

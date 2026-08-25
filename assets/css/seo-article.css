@@ -81,9 +81,9 @@
 .author-box .author-role{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--accent)}
 .author-box p{font-size:14px;color:var(--muted);margin-top:8px;line-height:1.7}
 .author-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
-.author-links a{display:inline-flex;align-items:center;gap:7px;padding:7px 14px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.04);font-size:12.5px;font-weight:700;color:var(--muted);transition:color .18s ease,border-color .18s ease}
-.author-links a:hover{color:#fff;border-color:rgba(96,165,250,.5)}
-.author-links a i{font-size:12px;color:#93C5FD}
+.author-links a{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;padding:0;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--muted);font-size:0;transition:color .18s ease,border-color .18s ease,background .18s ease}
+.author-links a:hover{color:#fff;border-color:rgba(96,165,250,.5);background:rgba(96,165,250,.12)}
+.author-links a i{font-size:14px;color:#93C5FD}
 @media(max-width:560px){.author-box{flex-direction:column}}
 
 /* Related tools with live search */
@@ -103,6 +103,9 @@
 .related-card .rc-more{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;color:#93C5FD}
 .related-empty{grid-column:1/-1;text-align:center;padding:30px;color:var(--faint);font-size:14px}
 .related-empty i{font-size:22px;display:block;margin-bottom:8px;color:var(--border)}
+.related-load-more{grid-column:1/-1;display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;max-width:280px;margin:8px auto 0;padding:12px 24px;border:1px solid rgba(255,255,255,.12);border-radius:12px;background:rgba(255,255,255,.04);color:var(--ink);font-family:inherit;font-size:13.5px;font-weight:700;cursor:pointer;transition:background .2s ease,border-color .2s ease,transform .2s ease}
+.related-load-more:hover{background:rgba(59,130,246,.12);border-color:rgba(59,130,246,.45);color:#93C5FD;transform:translateY(-2px)}
+.related-load-more i{font-size:11px}
 
 /* Skeleton loading — placeholder related-tool cards */
 .skel{position:relative;overflow:hidden;background:rgba(255,255,255,.07);border-radius:10px;flex-shrink:0}
