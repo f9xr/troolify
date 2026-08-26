@@ -16,6 +16,7 @@ Every Troolify tool runs entirely in your browser. Your data never leaves your d
 - [Password Entropy Calculator](https://f9xr.github.io/troolify/tools/misc/password-entropy-calculator.html): Measure password entropy in bits and estimate crack time across five real-world attack scenarios.
 - [Advance Ovulation Calculator](https://f9xr.github.io/troolify/tools/health/ovulation-calculator.html): Predict ovulation day, fertile window, peak fertility and upcoming periods from your last cycle.
 - [Advance Average Calculator](https://f9xr.github.io/troolify/tools/statistics/advance-average-calculator.html): Find the mean, median, sum and count of any list of numbers instantly.
+- [Markdown to Word Converter](https://f9xr.github.io/troolify/tools/converters/markdown-to-word-converter.html): Convert Markdown to Word instantly. Turn .md files into polished .docx documents, no signup needed.
 
 ## Categories
 - [AI Tools](https://f9xr.github.io/troolify/tools/ai/index.html)
