@@ -343,6 +343,10 @@
                 '.btt-ring .btt-track{stroke:rgba(255,255,255,.18)}' +
                 '.btt-ring .btt-progress{stroke:#BFDBFE;stroke-linecap:round;transform:rotate(-90deg);transform-origin:center;transition:stroke-dashoffset .15s linear}' +
                 '.btt-icon{position:relative;z-index:1;font-size:.72rem}' +
+                '#backToTop{position:fixed;bottom:1.25rem;right:1.25rem;z-index:1500;width:2rem;height:2rem;display:grid;place-items:center;border-radius:9999px;background:#3B82F6;color:#fff;box-shadow:0 3px 14px rgba(59,130,246,.35);cursor:pointer;border:none;padding:0;transition:background .18s ease,transform .18s ease,box-shadow .18s ease}' +
+                '#backToTop:hover{background:#2563EB;transform:translateY(-1px);box-shadow:0 6px 20px rgba(59,130,246,.45)}' +
+                '#backToTop:focus-visible{outline:2px solid #60A5FA;outline-offset:2px}' +
+                '#backToTop.hidden,body #backToTop.hidden{display:none}' +
 
                 '@media(max-width:640px){.cta-panel{padding:clamp(2rem,12vw,3rem) 1.25rem}.cta-blob-1{left:-35%;top:-18%}.cta-blob-2{right:-35%;bottom:-25%}.cta-h2{font-size:clamp(1.5rem,7vw,2.1rem)}}' +
 
