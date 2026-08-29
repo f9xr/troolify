@@ -526,11 +526,25 @@
         }
 
         function loadToolsData(cb) {
-            if (window.TOOLS) { cb(); return; }
+            if (window.TOOLS) {
+                if (cb) cb();
+                return;
+            }
+            /* Shared pending list (also used by tool-page.js) prevents
+               duplicate <script> injections when several consumers ask for
+               the catalog while it is still loading. */
+            if (window.__TOOLS_PENDING) {
+                if (cb) window.__TOOLS_PENDING.push(cb);
+                return;
+            }
+            window.__TOOLS_PENDING = [cb];
             var s = document.createElement("script");
             s.src = prefix + "assets/js/tools-data.js";
-            s.onload = function () { cb(); };
-            s.onerror = function () { cb(); };
+            s.onload = s.onerror = function () {
+                var list = window.__TOOLS_PENDING || [];
+                window.__TOOLS_PENDING = null;
+                list.forEach(function (fn) { if (fn) fn(); });
+            };
             document.head.appendChild(s);
         }
 
@@ -601,8 +615,10 @@
                     container.classList.remove("open");
                     return;
                 }
-                renderResults(searchResults(input.value), container, input.value);
-                if (!isModal) container.classList.add("open");
+                loadToolsData(function () {
+                    renderResults(searchResults(input.value), container, input.value);
+                    if (!isModal) container.classList.add("open");
+                });
             });
             input.addEventListener("focus", function () {
                 if (!isModal && input.value.trim() && !container.classList.contains("open")) {
@@ -657,35 +673,33 @@
             }
         });
 
-        loadToolsData(function () {
-            if (modalInput && modalResults) initLiveSearch(modalInput, modalResults, true);
+        if (modalInput && modalResults) initLiveSearch(modalInput, modalResults, true);
 
-            var heroInput = document.getElementById("heroSearchInput");
-            var heroDropdown = document.getElementById("heroSearchDropdown");
-            var heroClear = document.getElementById("heroSearchClear");
-            if (heroInput && heroDropdown) {
-                initLiveSearch(heroInput, heroDropdown, false);
-                heroInput.addEventListener("input", function () {
-                    if (heroClear) heroClear.classList.toggle("show", !!heroInput.value.trim());
-                });
-            }
-            if (heroClear && heroInput) {
-                heroClear.addEventListener("click", function () {
-                    heroInput.value = "";
-                    heroClear.classList.remove("show");
-                    heroDropdown.classList.remove("open");
-                    heroInput.focus();
-                });
-            }
+        var heroInput = document.getElementById("heroSearchInput");
+        var heroDropdown = document.getElementById("heroSearchDropdown");
+        var heroClear = document.getElementById("heroSearchClear");
+        if (heroInput && heroDropdown) {
+            initLiveSearch(heroInput, heroDropdown, false);
+            heroInput.addEventListener("input", function () {
+                if (heroClear) heroClear.classList.toggle("show", !!heroInput.value.trim());
+            });
+        }
+        if (heroClear && heroInput) {
+            heroClear.addEventListener("click", function () {
+                heroInput.value = "";
+                heroClear.classList.remove("show");
+                heroDropdown.classList.remove("open");
+                heroInput.focus();
+            });
+        }
 
-            var discInput = document.querySelector(".search-input");
-            var discWrap = document.querySelector(".search-container");
-            if (discInput && discWrap) {
-                var dd = document.createElement("div");
-                dd.className = "search-dropdown";
-                discWrap.appendChild(dd);
-                initLiveSearch(discInput, dd, false);
-            }
-        });
+        var discInput = document.querySelector(".search-input");
+        var discWrap = document.querySelector(".search-container");
+        if (discInput && discWrap) {
+            var dd = document.createElement("div");
+            dd.className = "search-dropdown";
+            discWrap.appendChild(dd);
+            initLiveSearch(discInput, dd, false);
+        }
     });
 })();

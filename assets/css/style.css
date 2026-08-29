@@ -1097,6 +1097,26 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0.5rem;
 }
 
+.skel-tool-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1.5rem;
+    background: linear-gradient(180deg, rgba(52, 58, 64, 0.55), rgba(33, 37, 41, 0.42));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1.25rem;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 10px 30px rgba(0, 0, 0, 0.35);
+    animation: skel-pulse 1.6s ease-in-out infinite;
+}
+
+.skel-tool-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    margin-bottom: 0.25rem;
+    align-self: flex-start;
+}
+
 .skel-line {
     height: 14px;
     border-radius: 8px;
@@ -1141,6 +1161,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (prefers-reduced-motion: reduce) {
     .skel-cat-card { animation: none; }
+    .skel-tool-card { animation: none; }
     .skel::after { animation: none; }
 }
 
@@ -1154,6 +1175,20 @@ h1, h2, h3, h4, h5, h6 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
+}
+
+.featured-tools .discovery-filters {
+    margin-bottom: 1.75rem;
+}
+
+.featured-empty {
+    grid-column: 1 / -1;
+    padding: 3rem 1.5rem;
+    text-align: center;
+    color: var(--text-muted);
+    background: linear-gradient(180deg, rgba(52, 58, 64, 0.55), rgba(33, 37, 41, 0.42));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1.25rem;
 }
 
 .tool-card {
@@ -1171,6 +1206,17 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateY(-5px);
     border-color: rgba(59, 130, 246, 0.4);
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(59, 130, 246, 0.1);
+}
+
+.tool-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.tool-card-link:focus-visible {
+    outline: 2px solid var(--accent-light);
+    outline-offset: 3px;
 }
 
 .tool-header {
@@ -1230,6 +1276,46 @@ h1, h2, h3, h4, h5, h6 {
 .tool-link-disabled:hover {
     color: #6c757d;
     gap: 0.5rem;
+}
+
+/* Random Tool For You */
+.random-tool {
+    padding: var(--section-pad) 0;
+    background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-navy) 100%);
+    text-align: center;
+}
+
+.random-tool .how-head {
+    margin-bottom: 2.5rem;
+}
+
+.random-tool-card-wrap {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+#randomToolCard {
+    text-align: left;
+}
+
+.random-tool-actions {
+    margin-top: 1.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.skel-random-tool {
+    padding: 2rem;
+    background: linear-gradient(180deg, rgba(52, 58, 64, 0.55), rgba(33, 37, 41, 0.42));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1.25rem;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 10px 30px rgba(0, 0, 0, 0.35);
+    animation: skel-pulse 1.6s ease-in-out infinite;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
 }
 
 /* Features */

@@ -88,10 +88,11 @@
             card.className = "tool-card";
             card.href = prefix + t.href;
             card.setAttribute("aria-label", "Open " + t.name);
+            var badge = category ? t.tag : catName(t.category);
             card.innerHTML =
                 '<span class="tool-icon"><i class="' + t.icon + '"></i></span>' +
                 '<span class="tool-body"><span class="tool-name">' + t.name + '</span><span class="tool-desc">' + t.desc + '</span></span>' +
-                '<span class="tool-foot"><span class="tool-tag"><i class="fa-solid fa-tag"></i>' + t.tag + '</span><span class="tool-go"><i class="fa-solid fa-arrow-right"></i></span></span>';
+                '<span class="tool-foot"><span class="tool-tag"><i class="fa-solid fa-tag"></i>' + badge + '</span><span class="tool-go"><i class="fa-solid fa-arrow-right"></i></span></span>';
             grid.appendChild(card);
         });
 

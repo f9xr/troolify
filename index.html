@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/webp" href="assets/images/favicon.webp"><link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#212529">
     <title>Troolify - Powerful Tools. One Smarter Hub.</title>
     <meta name="description" content="Troolify is a free hub of online tools - word counter, JSON formatter and more that run 100% in your browser. No sign-up, zero data retention, by F9XR Team.">
     <meta name="robots" content="index, follow">
@@ -25,10 +26,10 @@
     <meta name="twitter:description" content="Free online tools that run 100% in your browser - word counter, JSON formatter and more by F9XR Team. No sign-up, zero data retention.">
     <meta name="twitter:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
 
-    <!-- Fonts: Plus Jakarta Sans (300-800) per F9XR design system; self-hosted @font-face fallbacks kept in style.css -->
+    <!-- Fonts: Plus Jakarta Sans (400-800) per F9XR design system; self-hosted @font-face fallbacks kept in style.css -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -137,13 +138,6 @@
                 <i class="fa-solid fa-search search-icon"></i>
                 <input type="text" class="search-input" placeholder="Search for a tool..." aria-label="Search tools">
             </div>
-
-            <div class="discovery-filters">
-                <button class="filter-btn active">All</button>
-                <button class="filter-btn">Popular tools</button>
-                <button class="filter-btn">Recently added</button>
-                <button class="filter-btn">Featured tools</button>
-            </div>
         </div>
     </section>
 
@@ -151,121 +145,33 @@
     <section class="categories" id="categories">
         <div class="container reveal">
             <h2 class="section-title sr-only">Categories</h2>
-            <div class="category-grid" id="categoryGrid" aria-busy="true">
-                <a href="tools/audio/index.html" class="category-card">
-                  <div class="category-icon"><i class="fa-solid fa-music"></i></div>
-                  <h3 class="category-title">Audio Tools</h3>
-                  <p class="category-desc">BPM, song length and audio production utilities.</p>
-                  <div class="category-footer"><span class="tool-count">1 Tool</span><i class="fa-solid fa-arrow-right category-arrow"></i></div>
-                </a>
-                <a href="tools/ai/index.html" class="category-card">
-                  <div class="category-icon"><i class="fa-solid fa-brain"></i></div>
-                  <h3 class="category-title">AI Tools</h3>
-                  <p class="category-desc">Prompt, text, image and code generation utilities.</p>
-                  <div class="category-footer"><span class="tool-count">0 Tools</span><i class="fa-solid fa-arrow-right category-arrow"></i></div>
-                </a>
-                <a href="tools/coding/index.html" class="category-card">
-                  <div class="category-icon"><i class="fa-solid fa-code"></i></div>
-                  <h3 class="category-title">Developer Tools</h3>
-                  <p class="category-desc">Utilities designed to make coding, debugging and web development easier.</p>
-                  <div class="category-footer"><span class="tool-count">2 Tools</span><i class="fa-solid fa-arrow-right category-arrow"></i></div>
-                </a>
-                <a href="tools/converters/index.html" class="category-card">
-                  <div class="category-icon"><i class="fa-solid fa-arrows-rotate"></i></div>
-                  <h3 class="category-title">Converters</h3>
-                  <p class="category-desc">Convert data between formats instantly.</p>
-                  <div class="category-footer"><span class="tool-count">1 Tool</span><i class="fa-solid fa-arrow-right category-arrow"></i></div>
-                </a>
-                <a href="tools/cooking/index.html" class="category-card">
-                  <div class="category-icon"><i class="fa-solid fa-utensils"></i></div>
-                  <h3 class="category-title">Cooking Tools</h3>
-                  <p class="category-desc">Cooking, recipe and kitchen helpers.</p>
-                  <div class="category-footer"><span class="tool-count">0 Tools</span><i class="fa-solid fa-arrow-right category-arrow"></i></div>
-                </a>
-                <a href="tools/crypto/index.html" class="category-card">
-                  <div class="category-icon"><i class="fa-solid fa-coins"></i></div>
-                  <h3 class="category-title">Crypto Tools</h3>
-                  <p class="category-desc">Cryptocurrency and blockchain calculators.</p>
-                  <div class="category-footer"><span class="tool-count">0 Tools</span><i class="fa-solid fa-arrow-right category-arrow"></i></div>
-                </a>
-                <a href="tools/finance/index.html" class="category-card">
-                  <div class="category-icon"><i class="fa-solid fa-sack-dollar"></i></div>
-                  <h3 class="category-title">Finance Tools</h3>
-                  <p class="category-desc">Money, savings and finance calculators.</p>
-                  <div class="category-footer"><span class="tool-count">0 Tools</span><i class="fa-solid fa-arrow-right category-arrow"></i></div>
-                </a>
-                <a href="tools/fun/index.html" class="category-card">
-                  <div class="category-icon"><i class="fa-solid fa-face-smile"></i></div>
-                  <h3 class="category-title">Fun &amp; Games</h3>
-                  <p class="category-desc">Fun, games and entertainment utilities.</p>
-                  <div class="category-footer"><span class="tool-count">0 Tools</span><i class="fa-solid fa-arrow-right category-arrow"></i></div>
-                </a>
-                <a href="tools/health/index.html" class="category-card">
-                  <div class="category-icon"><i class="fa-solid fa-heart-pulse"></i></div>
-                  <h3 class="category-title">Health Tools</h3>
-                  <p class="category-desc">Health, fitness and wellness tools.</p>
-                  <div class="category-footer"><span class="tool-count">1 Tool</span><i class="fa-solid fa-arrow-right category-arrow"></i></div>
-                </a>
-                <a href="tools/image/index.html" class="category-card">
-                  <div class="category-icon"><i class="fa-solid fa-image"></i></div>
-                  <h3 class="category-title">Image Tools</h3>
-                  <p class="category-desc">Resize, compress, convert and edit images effortlessly.</p>
-                  <div class="category-footer"><span class="tool-count">0 Tools</span><i class="fa-solid fa-arrow-right category-arrow"></i></div>
-                </a>
-                <a href="tools/misc/index.html" class="category-card">
-                  <div class="category-icon"><i class="fa-solid fa-shapes"></i></div>
-                  <h3 class="category-title">Misc Tools</h3>
-                  <p class="category-desc">Useful utilities that don&#39;t fit anywhere else.</p>
-                  <div class="category-footer"><span class="tool-count">2 Tools</span><i class="fa-solid fa-arrow-right category-arrow"></i></div>
-                </a>
-                <a href="tools/pdf/index.html" class="category-card">
-                  <div class="category-icon"><i class="fa-solid fa-file-pdf"></i></div>
-                  <h3 class="category-title">PDF Tools</h3>
-                  <p class="category-desc">PDF creation, merging and conversion tools.</p>
-                  <div class="category-footer"><span class="tool-count">0 Tools</span><i class="fa-solid fa-arrow-right category-arrow"></i></div>
-                </a>
-                <a href="tools/prompts/index.html" class="category-card">
-                  <div class="category-icon"><i class="fa-solid fa-comment-dots"></i></div>
-                  <h3 class="category-title">Prompt Tools</h3>
-                  <p class="category-desc">Ready-made prompts for AI workflows.</p>
-                  <div class="category-footer"><span class="tool-count">0 Tools</span><i class="fa-solid fa-arrow-right category-arrow"></i></div>
-                </a>
-                <a href="tools/seo/index.html" class="category-card">
-                  <div class="category-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
-                  <h3 class="category-title">SEO Tools</h3>
-                  <p class="category-desc">Schema markup, meta tags and search visibility helpers.</p>
-                  <div class="category-footer"><span class="tool-count">1 Tool</span><i class="fa-solid fa-arrow-right category-arrow"></i></div>
-                </a>
-                <a href="tools/statistics/index.html" class="category-card">
-                  <div class="category-icon"><i class="fa-solid fa-chart-bar"></i></div>
-                  <h3 class="category-title">Statistics</h3>
-                  <p class="category-desc">Statistics, math and data analysis tools.</p>
-                  <div class="category-footer"><span class="tool-count">1 Tool</span><i class="fa-solid fa-arrow-right category-arrow"></i></div>
-                </a>
-                <a href="tools/text/index.html" class="category-card">
-                  <div class="category-icon"><i class="fa-solid fa-align-left"></i></div>
-                  <h3 class="category-title">Text Tools</h3>
-                  <p class="category-desc">Format, convert, analyze and manipulate text documents.</p>
-                  <div class="category-footer"><span class="tool-count">2 Tools</span><i class="fa-solid fa-arrow-right category-arrow"></i></div>
-                </a>
-                <a href="tools/time/index.html" class="category-card">
-                  <div class="category-icon"><i class="fa-solid fa-clock"></i></div>
-                  <h3 class="category-title">Time Tools</h3>
-                  <p class="category-desc">Time, date and scheduling tools.</p>
-                  <div class="category-footer"><span class="tool-count">0 Tools</span><i class="fa-solid fa-arrow-right category-arrow"></i></div>
-                </a>
-                <a href="tools/video/index.html" class="category-card">
-                  <div class="category-icon"><i class="fa-solid fa-video"></i></div>
-                  <h3 class="category-title">Video Tools</h3>
-                  <p class="category-desc">Video editing and conversion tools.</p>
-                  <div class="category-footer"><span class="tool-count">0 Tools</span><i class="fa-solid fa-arrow-right category-arrow"></i></div>
-                </a>
-                <a href="tools/youtube/index.html" class="category-card">
-                  <div class="category-icon"><i class="fa-brands fa-youtube"></i></div>
-                  <h3 class="category-title">YouTube Tools</h3>
-                  <p class="category-desc">YouTube utilities for creators, marketers and support teams.</p>
-                  <div class="category-footer"><span class="tool-count">1 Tool</span><i class="fa-solid fa-arrow-right category-arrow"></i></div>
-                </a>
+                <div class="category-grid" id="categoryGrid" aria-busy="true">
+                <div class="skel skel-cat-card" aria-hidden="true"><span class="skel skel-cat-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-foot"><span class="skel skel-chip"></span><span class="skel skel-square"></span></span></div>
+                <div class="skel skel-cat-card" aria-hidden="true"><span class="skel skel-cat-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-foot"><span class="skel skel-chip"></span><span class="skel skel-square"></span></span></div>
+                <div class="skel skel-cat-card" aria-hidden="true"><span class="skel skel-cat-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-foot"><span class="skel skel-chip"></span><span class="skel skel-square"></span></span></div>
+                <div class="skel skel-cat-card" aria-hidden="true"><span class="skel skel-cat-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-foot"><span class="skel skel-chip"></span><span class="skel skel-square"></span></span></div>
+                <div class="skel skel-cat-card" aria-hidden="true"><span class="skel skel-cat-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-foot"><span class="skel skel-chip"></span><span class="skel skel-square"></span></span></div>
+                <div class="skel skel-cat-card" aria-hidden="true"><span class="skel skel-cat-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-foot"><span class="skel skel-chip"></span><span class="skel skel-square"></span></span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Random Tool For You -->
+    <section class="random-tool">
+        <div class="container reveal">
+            <div class="how-head">
+                <span class="eyebrow">Can&#39;t decide?</span>
+                <h2 class="section-title text-center">Random Tool For You</h2>
+                <p class="section-description">Not sure where to start? Kick off your session with a tool picked just for you.</p>
+            </div>
+            <div class="random-tool-card-wrap">
+                <div id="randomToolCard" aria-live="polite" aria-busy="true">
+                    <div class="skel skel-random-tool" aria-hidden="true"><span class="skel skel-tool-icon"></span><span class="skel skel-line skel-w-40"></span><span class="skel skel-line skel-w-80"></span><span class="skel skel-line skel-w-100"></span></div>
+                </div>
+            </div>
+            <div class="random-tool-actions">
+                <button type="button" class="btn btn-primary" id="randomToolBtn"><i class="fa-solid fa-shuffle"></i> Shuffle Again</button>
+                <a href="#tools" class="btn btn-secondary">Browse All Tools</a>
             </div>
         </div>
     </section>
@@ -274,108 +180,19 @@
     <section class="featured-tools">
         <div class="container reveal">
             <h2 class="section-title text-center">Tools Worth Exploring</h2>
-            <div class="tool-grid">
-                
-                <div class="tool-card">
-                    <div class="tool-header">
-                        <div class="tool-icon"><i class="fa-solid fa-qrcode"></i></div>
-                        <span class="badge">Utilities</span>
-                    </div>
-                    <h3 class="tool-title">QR Code Generator</h3>
-                    <p class="tool-desc">Create customizable QR codes for links, text, emails, and more.</p>
-                    <span class="tool-link tool-link-disabled">Coming Soon</span>
-                </div>
-
-                <div class="tool-card">
-                    <div class="tool-header">
-                        <div class="tool-icon"><i class="fa-solid fa-file-word"></i></div>
-                        <span class="badge">Text Tools</span>
-                    </div>
-                    <h3 class="tool-title">Word Counter</h3>
-                    <p class="tool-desc">Quickly count words, characters, and paragraphs in your text.</p>
-                    <a href="tools/text/word-counter.html" class="tool-link">Open Tool <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-
-                <div class="tool-card">
-                    <div class="tool-header">
-                        <div class="tool-icon"><i class="fa-solid fa-align-left"></i></div>
-                        <span class="badge">Text Tools</span>
-                    </div>
-                    <h3 class="tool-title">Numeronym Generator</h3>
-                    <p class="tool-desc">Turn any word into a numeronym like i18n or k8s, or decode one back into its letter count.</p>
-                    <a href="tools/text/numeronym-generator.html" class="tool-link">Open Tool <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-
-                <div class="tool-card">
-                    <div class="tool-header">
-                        <div class="tool-icon"><i class="fa-solid fa-crop-simple"></i></div>
-                        <span class="badge">Image Tools</span>
-                    </div>
-                    <h3 class="tool-title">Image Resizer</h3>
-                    <p class="tool-desc">Resize and optimize your images for web without losing quality.</p>
-                    <span class="tool-link tool-link-disabled">Coming Soon</span>
-                </div>
-
-                <div class="tool-card">
-                    <div class="tool-header">
-                        <div class="tool-icon"><i class="fa-solid fa-key"></i></div>
-                        <span class="badge">Utilities</span>
-                    </div>
-                    <h3 class="tool-title">Password Generator</h3>
-                    <p class="tool-desc">Generate secure, random passwords with custom requirements.</p>
-                    <span class="tool-link tool-link-disabled">Coming Soon</span>
-                </div>
-
-                <div class="tool-card">
-                    <div class="tool-header">
-                        <div class="tool-icon"><i class="fa-brands fa-js"></i></div>
-                        <span class="badge">Dev Tools</span>
-                    </div>
-                    <h3 class="tool-title">JSON Formatter</h3>
-                    <p class="tool-desc">Format, validate, and beautify your JSON data instantly.</p>
-                    <a href="tools/coding/json-formatter.html" class="tool-link">Open Tool <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-
-                <div class="tool-card">
-                    <div class="tool-header">
-                        <div class="tool-icon"><i class="fa-brands fa-youtube"></i></div>
-                        <span class="badge">YouTube Tools</span>
-                    </div>
-                    <h3 class="tool-title">YouTube Timestamp Link Generator</h3>
-                    <p class="tool-desc">Create clickable timestamp links and instant video-description chapters for any YouTube video.</p>
-                    <a href="tools/youtube/timestamp-link-generator.html" class="tool-link">Open Tool <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-
-                <div class="tool-card">
-                    <div class="tool-header">
-                        <div class="tool-icon"><i class="fa-solid fa-palette"></i></div>
-                        <span class="badge">Design Tools</span>
-                    </div>
-                    <h3 class="tool-title">Color Generator</h3>
-                    <p class="tool-desc">Create harmonious color palettes and extract colors from images.</p>
-                    <span class="tool-link tool-link-disabled">Coming Soon</span>
-                </div>
-
-                <div class="tool-card">
-                    <div class="tool-header">
-                        <div class="tool-icon"><i class="fa-solid fa-tags"></i></div>
-                        <span class="badge">SEO Tools</span>
-                    </div>
-                    <h3 class="tool-title">Meta Tag Generator</h3>
-                    <p class="tool-desc">Generate optimized HTML meta tags for better search rankings.</p>
-                    <span class="tool-link tool-link-disabled">Coming Soon</span>
-                </div>
-
-                <div class="tool-card">
-                    <div class="tool-header">
-                        <div class="tool-icon"><i class="fa-brands fa-markdown"></i></div>
-                        <span class="badge">Text Tools</span>
-                    </div>
-                    <h3 class="tool-title">Markdown Converter</h3>
-                    <p class="tool-desc">Convert Markdown text to HTML and preview in real-time.</p>
-                    <span class="tool-link tool-link-disabled">Coming Soon</span>
-                </div>
-
+            <div class="discovery-filters" aria-label="Filter tools by group">
+                <button type="button" class="filter-btn active" data-filter="all">All</button>
+                <button type="button" class="filter-btn" data-filter="popular">Popular tools</button>
+                <button type="button" class="filter-btn" data-filter="recent">Recently added</button>
+                <button type="button" class="filter-btn" data-filter="featured">Featured tools</button>
+            </div>
+            <div class="tool-grid" id="featuredGrid" aria-busy="true">
+                <div class="skel skel-tool-card" aria-hidden="true"><span class="skel skel-tool-icon"></span><span class="skel skel-line skel-w-40"></span><span class="skel skel-line skel-w-80"></span><span class="skel skel-line skel-w-100"></span></div>
+                <div class="skel skel-tool-card" aria-hidden="true"><span class="skel skel-tool-icon"></span><span class="skel skel-line skel-w-40"></span><span class="skel skel-line skel-w-80"></span><span class="skel skel-line skel-w-100"></span></div>
+                <div class="skel skel-tool-card" aria-hidden="true"><span class="skel skel-tool-icon"></span><span class="skel skel-line skel-w-40"></span><span class="skel skel-line skel-w-80"></span><span class="skel skel-line skel-w-100"></span></div>
+                <div class="skel skel-tool-card" aria-hidden="true"><span class="skel skel-tool-icon"></span><span class="skel skel-line skel-w-40"></span><span class="skel skel-line skel-w-80"></span><span class="skel skel-line skel-w-100"></span></div>
+                <div class="skel skel-tool-card" aria-hidden="true"><span class="skel skel-tool-icon"></span><span class="skel skel-line skel-w-40"></span><span class="skel skel-line skel-w-80"></span><span class="skel skel-line skel-w-100"></span></div>
+                <div class="skel skel-tool-card" aria-hidden="true"><span class="skel skel-tool-icon"></span><span class="skel skel-line skel-w-40"></span><span class="skel skel-line skel-w-80"></span><span class="skel skel-line skel-w-100"></span></div>
             </div>
         </div>
     </section>
@@ -476,11 +293,11 @@
         <div class="container reveal">
             <div class="stats-grid">
                 <div class="stat-item">
-                    <div class="stat-number">6</div>
+                    <div class="stat-number" id="statLiveTools">12</div>
                     <div class="stat-label">Live Tools</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">19</div>
+                    <div class="stat-number" id="statCategories">19</div>
                     <div class="stat-label">Categories</div>
                 </div>
                 <div class="stat-item">
@@ -527,6 +344,6 @@
     <script src="assets/js/tools-data.js" defer></script>
     <script src="assets/js/home-catalog.js" defer></script>
     <script src="assets/js/layout.js" defer></script>
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js" defer></script>
 </body>
 </html>\n

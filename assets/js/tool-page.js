@@ -185,13 +185,37 @@
     var segs2 = location.pathname.split("/").filter(Boolean);
     var current = segs2[segs2.length - 1] || "";
 
-    var tools = (window.TOOLS || []).filter(function (t) {
-      return (t.href || "").indexOf(current) === -1;
-    });
+    /* tools-data.js is fetched lazily: only when the related-tools grid is
+       about to scroll into view, or the user focuses/types in it. The navbar
+       search in layout.js loads the same file on demand too. A shared pending
+       callback list (window.__TOOLS_PENDING) prevents duplicate injections
+       while a load is already in flight. */
+    function loadToolsData(cb) {
+      if (window.TOOLS) {
+        if (cb) cb();
+        return;
+      }
+      if (window.__TOOLS_PENDING) {
+        if (cb) window.__TOOLS_PENDING.push(cb);
+        return;
+      }
+      window.__TOOLS_PENDING = [cb];
+      var s = document.createElement("script");
+      s.src = prefix + "assets/js/tools-data.js";
+      s.onload = s.onerror = function () {
+        var list = window.__TOOLS_PENDING || [];
+        window.__TOOLS_PENDING = null;
+        list.forEach(function (fn) { if (fn) fn(); });
+      };
+      document.head.appendChild(s);
+    }
 
     var RELATED_PAGE_SIZE = 6;
     var relatedVisible = RELATED_PAGE_SIZE;
     var relatedFiltered = [];
+
+    var tools = [];
+    var toolsStarted = false;
 
     function buildRelatedCard(t) {
       var card = document.createElement("a");
@@ -245,8 +269,42 @@
       }
     }
 
-    if (search) search.addEventListener("input", function () { renderRelated(search.value); });
-    renderRelated("");
+    function relatedTools() {
+      return (window.TOOLS || []).filter(function (t) {
+        return (t.href || "").indexOf(current) === -1;
+      });
+    }
+
+    function initRelated() {
+      if (toolsStarted) return;
+      toolsStarted = true;
+      loadToolsData(function () {
+        tools = relatedTools();
+        renderRelated(search ? search.value : "");
+      });
+    }
+
+    if (search) search.addEventListener("focus", initRelated);
+    if (search) {
+      search.addEventListener("input", function () {
+        if (!toolsStarted) { initRelated(); return; }
+        if (window.TOOLS) renderRelated(search.value);
+      });
+    }
+
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            io.disconnect();
+            initRelated();
+          }
+        });
+      }, { rootMargin: "600px 0px", threshold: 0.01 });
+      io.observe(grid);
+    } else {
+      initRelated();
+    }
   }
 
   /* ---------------------- F9XR custom-development promo ---------------------- */
