@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Age Calculator | Exact Age in Years, Months, Days &amp; More</title>
+<meta name="description" content="Find your exact age in years, months and days, plus total days lived, weeks, hours and a next birthday countdown. Free online age calculator - 100% client-side, nothing leaves your browser.">
+<meta name="author" content="F9XR Development Team">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#212529">
+<link rel="canonical" href="https://f9xr.github.io/troolify/tools/time/age-calculator.html">
+<meta property="og:site_name" content="Troolify">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Age Calculator | Exact Age in Years, Months, Days &amp; More">
+<meta property="og:description" content="Find your exact age in years, months and days, plus total days lived, weeks, hours and a next birthday countdown. Free, private and 100% client-side.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://f9xr.github.io/troolify/tools/time/age-calculator.html">
+<meta property="og:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-08-28">
+<meta property="article:modified_time" content="2026-08-28">
+<meta property="article:section" content="Time Tools">
+<meta property="article:tag" content="Age Calculator">
+<meta property="article:tag" content="Time Tools">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Age Calculator | Exact Age in Years, Months, Days &amp; More">
+<meta name="twitter:description" content="Find your exact age in years, months and days, plus total days lived, weeks, hours and a next birthday countdown - 100% browser based.">
+<meta name="twitter:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://f9xr.github.io/troolify/index.html" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://f9xr.github.io/troolify/tools/index.html" },
+    { "@type": "ListItem", "position": 3, "name": "Time Tools", "item": "https://f9xr.github.io/troolify/tools/time/" },
+    { "@type": "ListItem", "position": 4, "name": "Age Calculator", "item": "https://f9xr.github.io/troolify/tools/time/age-calculator.html" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Age Calculator",
+  "url": "https://f9xr.github.io/troolify/tools/time/age-calculator.html",
+  "applicationCategory": "UtilitiesApplication",
+  "applicationSubCategory": "Exact Age & Birthday Calculator",
+  "operatingSystem": "Any (web browser)",
+  "featureList": ["Exact age in years, months and days", "Total days, weeks and hours lived", "Next birthday countdown", "Any 'as of' reference date", "100% client-side processing"],
+  "description": "Find your exact age in years, months and days, plus total days lived, weeks, hours and a next birthday countdown. Free online age calculator - 100% client-side.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "datePublished": "2026-08-28",
+  "dateModified": "2026-08-28",
+  "author": { "@type": "Organization", "name": "F9XR Development Team", "url": "https://f9xr.github.io/" },
+  "publisher": { "@type": "Organization", "name": "Troolify", "url": "https://f9xr.github.io/troolify/", "logo": { "@type": "ImageObject", "url": "https://f9xr.github.io/troolify/assets/images/logo_nobg.webp", "width": 1407, "height": 768 } }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate my exact age in years, months and days?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Enter your date of birth and a reference date (by default today). The calculator counts full years first, then full months, then the remaining days, respecting real calendar month lengths. Your age is 31 years, 4 months and 9 days, for example, only once each unit has fully completed." }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I was born on February 29?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The calculator handles leap-day birthdays by treating February 28 as your birthday in non-leap years, which is the commonly accepted convention. This keeps the age in whole years, months and days correct even when the exact anniversary does not exist in a given year." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the Troolify age calculator safe to use?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every calculation runs locally inside your browser tab. Your birthdate is never uploaded, stored, or transmitted to a server, so your personal details stay completely private." }
+    },
+    {
+      "@type": "Question",
+      "name": "How are total days and hours lived calculated?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Total days lived is the exact number of calendar days between your birthdate and the reference date. Weeks are the full weeks within that total and hours are total days multiplied by 24. These are calendar-based figures that ignore timezone differences." }
+    }
+  ]
+}
+</script>
+
+<link rel="icon" type="image/webp" href="../../assets/images/favicon.webp"><link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../../assets/css/tailwind.css">
+<link rel="stylesheet" href="../../assets/css/tool.css">
+<link rel="stylesheet" href="../../assets/css/site-shell.css">
+<link rel="stylesheet" href="../../assets/css/tool-page.css">
+<link rel="stylesheet" href="../../assets/css/seo-article.css">
+<style>
+.calc-grid{display:grid;grid-template-columns:1fr;gap:18px}
+@media(min-width:720px){.calc-grid{grid-template-columns:1fr 1fr}}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:12.5px;font-weight:700;color:var(--muted)}
+.field input,.field select{background:#1B2028;border:1px solid var(--border);color:var(--ink);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:15px;font-weight:600;outline:none;width:100%;box-sizing:border-box}
+.field input:focus,.field select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+.result-card{background:linear-gradient(180deg,rgba(59,130,246,.12),rgba(59,130,246,.03));border:1px solid rgba(96,165,250,.25);border-radius:14px;padding:18px;margin-top:18px}
+.result-row{display:flex;justify-content:space-between;gap:10px;padding:8px 2px;font-size:14px}
+.result-row+.result-row{border-top:1px dashed rgba(255,255,255,.08)}
+.result-row b{color:#93C5FD;font-weight:800;text-align:right}
+.result-row.hero-row b{color:#6EE7B7;font-size:17px}
+.result-error{color:#FCA5A5;font-size:14px;font-weight:700;text-align:center;padding:10px 0}
+</style>
+</head>
+<body data-layout="tool">
+<noscript>
+    <nav aria-label="Primary" style="position:static;display:block;padding:1rem 1.5rem;background:#212529;border-bottom:1px solid #343A40;text-align:center;font-size:0.9rem;">
+        <a href="../../index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Home</a>
+        <a href="../../tools/index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Tools</a>
+        <a href="../../pages/about.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">About</a>
+        <a href="../../pages/contact.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Contact</a>
+    </nav>
+</noscript>
+
+<main class="tool-main">
+  <div class="container">
+
+    <div class="tool-head hero">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="../../tools/index.html">Tools</a></li>
+          <li><a href="../index.html">Time Tools</a></li>
+          <li class="current" aria-current="page">Age Calculator</li>
+        </ol>
+      </nav>
+      <div class="hero-main">
+        <span class="tool-badge"><span class="dot"></span>100% client-side &middot; zero data retention</span>
+        <h1>Age Calculator</h1>
+        <p>Find your exact age in years, months and days from any birthdate. The tool also shows total days, weeks and hours lived, plus a live countdown to your next birthday.</p>
+      </div>
+      <div class="hero-box hero-cat">
+        <h3 class="hero-box-title"><i class="fa-solid fa-folder-open"></i>Category</h3>
+        <div class="tool-meta">
+          <span class="tool-tag"><i class="fa-solid fa-tag"></i>Date</span>
+          <a class="tool-cat" href="../index.html" aria-label="Browse Time Tools category"><i class="fa-solid fa-folder"></i>Time Tools</a>
+        </div>
+      </div>
+      <div class="hero-box hero-qa">
+        <h3 class="hero-box-title"><i class="fa-solid fa-bolt"></i>Quick Actions</h3>
+        <div class="tool-actions">
+          <button class="rt-btn" type="button" id="btnShare"><i class="fa-solid fa-share-nodes"></i>Share</button>
+          <button class="rt-btn" type="button" id="btnEmbed"><i class="fa-solid fa-code"></i>Embed Tool</button>
+          <a class="rt-btn" href="../../pages/feedback.html"><i class="fa-solid fa-comment"></i>Feedback</a>
+        </div>
+      </div>
+      <div class="hero-box hero-details">
+        <h3 class="hero-box-title"><i class="fa-solid fa-circle-info"></i>Tool Details</h3>
+        <div class="tool-details">
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.github.io/" target="_blank" rel="noopener">F9XR Development Team</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-check-double"></i>Reviewed by</span><a class="detail-value" href="../../press/editorial-policies.html">Review Board</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-clock-rotate-left"></i>Last updated</span><span class="detail-value">28 August 2026</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel clean">
+      <div class="panel-inner">
+        <div class="calc-grid">
+          <div class="field"><label for="agBirth">Date of birth</label><input id="agBirth" type="date" value="1995-06-15"></div>
+          <div class="field"><label for="agAsOf">Age on (reference date)</label><input id="agAsOf" type="date"></div>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn-primary" type="button" id="btnCopy"><i class="fa-solid fa-copy"></i>Copy result</button>
+          <button class="chip-btn" type="button" id="btnToday"><i class="fa-solid fa-clock"></i>Use today's date</button>
+        </div>
+
+        <div class="result-card" id="agResults" aria-live="polite"></div>
+        <p class="proc-line"><i class="fa-solid fa-bolt"></i><span id="agProc">Ready - calculations happen in this tab.</span></p>
+      </div>
+    </div>
+
+    <aside class="disclaimer" aria-label="Disclaimer">
+      <i class="fa-solid fa-circle-info"></i>
+      <p>Disclaimer: Whilst every effort has been made in building our tool, we are not to be held liable for any damages or monetary losses arising out of or in connection with its use. Age figures are calendar-based estimates and not legal or medical determinations. <a href="../../press/disclaimer.html">Full disclaimer</a>.</p>
+    </aside>
+
+    <div class="article-layout">
+      <article class="seo-article">
+        <h2 id="article-title">Age Calculator: Know Exactly How Old You Are</h2>
+        <p>Most of the time a simple "years old" number is enough. But for applying for a visa, calculating benefit eligibility, filling in official forms, or just satisfying curiosity, you often need the full answer exact to the day. This age calculator gives you your precise age in years, months and days from any reference point you choose.</p>
+
+        <h2 id="what-is-exact-age">What an Exact Age (Years, Months, Days) Means</h2>
+        <p>An exact calendar age counts in three steps: full <strong>years</strong> since your birth, then full <strong>months</strong> remaining inside the current year, then the leftover <strong>days</strong>. Because months have different lengths, the calculator works on real calendar month boundaries rather than fixed 30-day blocks, so the answer always matches what a calendar shows.</p>
+        <p>It also reports total <strong>days lived</strong>, the full <strong>weeks</strong> within that total, and the equivalent <strong>hours</strong>, which is handy for medical records, sports masters categories, or simply watching the numbers grow.</p>
+
+        <h2 id="how-to-use">How to Use the Troolify Age Calculator</h2>
+        <ol>
+          <li><strong>Pick your date of birth</strong> using the date picker.</li>
+          <li><strong>Choose the reference date</strong> - it defaults to today, but you can set any past or future date (e.g., a contract date).</li>
+          <li><strong>Use the "Use today's date" button</strong> to snap the reference date back to now at any time.</li>
+        </ol>
+        <p>The results update instantly as you type, showing exact age, totals and your next birthday countdown.</p>
+
+        <h2 id="why-track">Why Track Days, Weeks and Hours Lived?</h2>
+        <p>Days and weeks lived turn age from a vague number into something you can measure. Estimate how much of an hour you spend commuting, how many weeks remain until a milestone, or compare lifespans between generations. Pair this tool with our <a href="date-difference-calculator.html">Date Difference Calculator</a> when you need the span between two arbitrary dates, and check our <a href="time-duration-calculator.html">Time Duration Calculator</a> when you are working with times rather than days.</p>
+
+        <h2 id="next-birthday">Using the Next Birthday Countdown</h2>
+        <p>Because the calculator knows your birth day and month, it can compute your next birthday even when it falls in the next calendar year, and tell you exactly how many days away it is. Leap-day birthdays are folded back to February 28 in non-leap years so the countdown always lands on a date that exists.</p>
+
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+
+        <details class="faq-item">
+          <summary>How do I calculate my exact age in years, months and days?</summary>
+          <div class="faq-a">
+            <p>Enter your date of birth and a reference date (by default today). The calculator counts full years first, then full months, then the remaining days, respecting real calendar month lengths. Your age is 31 years, 4 months and 9 days, for example, only once each unit has fully completed.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>What if I was born on February 29?</summary>
+          <div class="faq-a">
+            <p>The calculator handles leap-day birthdays by treating February 28 as your birthday in non-leap years, which is the commonly accepted convention. This keeps the age in whole years, months and days correct even when the exact anniversary does not exist in a given year.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Is the Troolify age calculator safe to use?</summary>
+          <div class="faq-a">
+            <p>Yes. Every calculation runs locally inside your browser tab. Your birthdate is never uploaded, stored, or transmitted to a server, so your personal details stay completely private.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>How are total days and hours lived calculated?</summary>
+          <div class="faq-a">
+            <p>Total days lived is the exact number of calendar days between your birthdate and the reference date. Weeks are the full weeks within that total and hours are total days multiplied by 24. These are calendar-based figures that ignore timezone differences.</p>
+          </div>
+        </details>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>Knowing your precise age to the day is more useful than it first sounds. Enter your birthdate once and the calculator gives you years, months, days, weeks, hours and your next birthday - all computed privately in your browser.</p>
+      </article>
+    </div>
+
+    <section class="keyword-box" aria-label="Keywords and tags">
+      <h2>Keyword &amp; Tags</h2>
+      <h3>Keywords</h3>
+      <div class="keywords">
+        <span class="keyword">age calculator</span>
+        <span class="keyword">how old am I</span>
+        <span class="keyword">exact age</span>
+        <span class="keyword">age in years months days</span>
+        <span class="keyword">days lived</span>
+        <span class="keyword">weeks lived</span>
+        <span class="keyword">birthday countdown</span>
+        <span class="keyword">date calculator</span>
+      </div>
+      <h3>Tags</h3>
+      <div class="tags">
+        <a class="tag" href="../index.html"><i class="fa-solid fa-tag"></i>Age</a>
+        <a class="tag" href="../index.html"><i class="fa-solid fa-folder"></i>Time Tools</a>
+        <a class="tag" href="../../tools/index.html"><i class="fa-solid fa-cube"></i>Calculator</a>
+      </div>
+    </section>
+
+    <section class="author-box" aria-label="About the publisher">
+      <div class="author-avatar" aria-hidden="true"><img src="../../assets/images/logo_nobg.webp" alt="F9XR logo" loading="lazy" decoding="async" width="1407" height="768"></div>
+      <div>
+        <span class="author-role">Published by</span>
+        <h2>F9XR Development Team</h2>
+        <p>Every Troolify tool is built and reviewed by the F9XR Development Team, then checked by our Review Board for correctness, accessibility, and clarity. Tools run 100% client-side with zero data retention.</p>
+        <div class="author-links">
+          <a href="https://f9xr.github.io/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i>F9XR Team</a>
+          <a href="../../press/editorial-policies.html"><i class="fa-solid fa-scale-balanced"></i>Editorial Policies</a>
+          <a href="https://github.com/f9xr" target="_blank" rel="noopener" aria-label="F9XR on GitHub"><i class="fa-brands fa-github"></i>GitHub</a>
+          <a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on LinkedIn"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+          <a href="https://instagram.com/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on Instagram"><i class="fa-brands fa-instagram"></i>Instagram</a>
+          <a href="https://youtube.com/@QuarterlyLIV" target="_blank" rel="noopener" aria-label="F9XR on YouTube"><i class="fa-brands fa-youtube"></i>YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-tools" aria-label="Related tools">
+      <h2>Related Tools</h2>
+      <div class="related-search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" id="relatedSearch" placeholder="Search all Troolify tools&hellip;" autocomplete="off" aria-label="Search related tools">
+      </div>
+      <div class="related-grid" id="relatedGrid" aria-busy="true">
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+      </div>
+    </section>
+
+    <section class="comments" aria-label="Comments">
+      <h2>Comments</h2>
+      <div id="comments">
+        <script src="https://utteranc.es/client.js" repo="f9xr/troolify" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async></script>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"><span></span><i class="fa-solid fa-layer-group"></i><span></span></div>
+
+  </div>
+</main>
+
+<script src="../../assets/js/layout.js" defer></script>
+<script src="../../assets/js/tools-data.js" defer></script>
+<script src="../../assets/js/tool-page.js" defer></script>
+<script>
+(function(){
+  "use strict";
+  var B=document.getElementById("agBirth");
+  var A=document.getElementById("agAsOf");
+  var out=document.getElementById("agResults");
+  var proc=document.getElementById("agProc");
+  var lastText="";
+
+  function todayStr(){ var d=new Date(); return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); }
+  function parse(v){ if(!v) return null; var p=v.split("-").map(Number); return new Date(p[0],p[1]-1,p[2]); }
+  function clampBD(y){ var m=B.value?parse(B.value).getMonth():0; var dd=B.value?parse(B.value).getDate():1; var maxD=new Date(y,m+1,0).getDate(); if(dd>maxD) dd=maxD; return new Date(y,m,dd); }
+  function fmtDate(d){ return d.toLocaleDateString("en-US",{day:"numeric",month:"short",year:"numeric"}); }
+  function comma(n){ return n.toLocaleString("en-US"); }
+  function plural(n,word){ return comma(n)+" "+word+(n===1?"":"s"); }
+
+  function calc(){
+    var t0=performance.now();
+    var b=A.value?parse(A.value):null;
+    if(!B.value && !b){ out.innerHTML='<div class="result-error">Please enter your date of birth.</div>'; proc.textContent="Awaiting a valid birthdate."; return; }
+    var birth=parse(B.value);
+    var asOf=b||new Date();
+    A.value=A.value||todayStr();
+
+    if(birth>asOf){
+      out.innerHTML='<div class="result-error">Your date of birth is after the reference date. Please check both dates.</div>';
+      proc.textContent="Dates do not validate - the reference date must be on or after birth.";
+      return;
+    }
+
+    var bMaxD=new Date(asOf.getFullYear(),birth.getMonth()+1,0).getDate();
+    var bDay=Math.min(birth.getDate(),bMaxD);
+    var y=asOf.getFullYear()-birth.getFullYear();
+    var m=asOf.getMonth()-birth.getMonth();
+    var d=asOf.getDate()-bDay;
+    if(d<0){ m--; d+=new Date(asOf.getFullYear(),asOf.getMonth(),0).getDate(); }
+    if(m<0){ y--; m+=12; }
+
+    var days=Math.round((Date.UTC(asOf.getFullYear(),asOf.getMonth(),asOf.getDate())-Date.UTC(birth.getFullYear(),birth.getMonth(),birth.getDate()))/86400000);
+    var weeks=Math.floor(days/7);
+    var wrem=days%7;
+    var hours=days*24;
+
+    var asOfMid=new Date(asOf.getFullYear(),asOf.getMonth(),asOf.getDate());
+    var cand=clampBD(asOf.getFullYear());
+    if(cand.getTime()<=asOfMid.getTime()){ cand=clampBD(asOf.getFullYear()+1); }
+    var daysBday=Math.round((cand.getTime()-asOfMid.getTime())/86400000);
+
+    var ageStr=y+" year"+(y===1?"":"s")+", "+m+" month"+(m===1?"":"s")+", "+d+" day"+(d===1?"":"s");
+    out.innerHTML=
+      '<div class="result-row hero-row"><span>Exact age</span><b>'+ageStr+'</b></div>'+
+      '<div class="result-row"><span>Total days lived</span><b>'+comma(days)+'</b></div>'+
+      '<div class="result-row"><span>Total weeks</span><b>'+comma(weeks)+' w '+(wrem===0?"0 d":wrem+" d")+'</b></div>'+
+      '<div class="result-row"><span>Total hours lived</span><b>'+comma(hours)+' h</b></div>'+
+      '<div class="result-row"><span>Next birthday</span><b>'+fmtDate(cand)+' &middot; in '+comma(daysBday)+' day'+(daysBday===1?"":"s")+'</b></div>';
+    lastText="Exact age: "+y+" years, "+m+" months, "+d+" days\nTotal days lived: "+days+"\nTotal weeks: "+weeks+" w "+wrem+" d\nTotal hours lived: "+hours+"\nNext birthday: "+fmtDate(cand)+" (in "+daysBday+" days)";
+    proc.textContent="Calculated in "+(performance.now()-t0).toFixed(1)+" ms - inside your browser. 0 bytes uploaded.";
+  }
+
+  function onInput(){ calc(); }
+  B.addEventListener("input",onInput);
+  A.addEventListener("input",onInput);
+  document.getElementById("btnToday").addEventListener("click",function(){
+    A.value=todayStr();
+    calc();
+    proc.textContent="Reference date set to today - "+todayStr()+".";
+  });
+  document.getElementById("btnCopy").addEventListener("click",function(){
+    window.Troolify.copyToClipboard(lastText,function(){ proc.textContent="Copied to clipboard - the bytes never left your device."; });
+  });
+
+  A.value=A.value||todayStr();
+  calc();
+})();
+</script>
+</body>
+</html>

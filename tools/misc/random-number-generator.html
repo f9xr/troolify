@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Number Generator | Random Integers &amp; Sequences</title>
+<meta name="description" content="Generate cryptographically-secure random integers, sequences and lottery-style picks right in your browser - with or without duplicates. Free, private and 100% client-side.">
+<meta name="author" content="F9XR Development Team">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#212529">
+<link rel="canonical" href="https://f9xr.github.io/troolify/tools/misc/random-number-generator.html">
+<meta property="og:site_name" content="Troolify">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Random Number Generator | Random Integers &amp; Sequences">
+<meta property="og:description" content="Generate cryptographically-secure random integers and sequences in your browser - with or without duplicates. Free, private and 100% client-side.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://f9xr.github.io/troolify/tools/misc/random-number-generator.html">
+<meta property="og:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-08-28">
+<meta property="article:modified_time" content="2026-08-28">
+<meta property="article:section" content="Misc Tools">
+<meta property="article:tag" content="Random Number Generator">
+<meta property="article:tag" content="Misc Tools">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Random Number Generator | Random Integers &amp; Sequences">
+<meta name="twitter:description" content="Generate cryptographically-secure random integers and sequences - 100% browser based.">
+<meta name="twitter:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://f9xr.github.io/troolify/index.html" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://f9xr.github.io/troolify/tools/index.html" },
+    { "@type": "ListItem", "position": 3, "name": "Misc Tools", "item": "https://f9xr.github.io/troolify/tools/misc/" },
+    { "@type": "ListItem", "position": 4, "name": "Random Number Generator", "item": "https://f9xr.github.io/troolify/tools/misc/random-number-generator.html" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Random Number Generator",
+  "url": "https://f9xr.github.io/troolify/tools/misc/random-number-generator.html",
+  "applicationCategory": "UtilitiesApplication",
+  "applicationSubCategory": "Cryptographically Secure Random Number Generation",
+  "operatingSystem": "Any (web browser)",
+  "featureList": ["Cryptographic randomness (CSPRNG)", "Custom min and max", "1 to 1000 numbers", "Duplicate-free option", "One-click copy", "100% client-side processing"],
+  "description": "Generate cryptographically-secure random integers, sequences and lottery-style picks right in your browser - with or without duplicates. Free, private and 100% client-side.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "datePublished": "2026-08-28",
+  "dateModified": "2026-08-28",
+  "author": { "@type": "Organization", "name": "F9XR Development Team", "url": "https://f9xr.github.io/" },
+  "publisher": { "@type": "Organization", "name": "Troolify", "url": "https://f9xr.github.io/troolify/", "logo": { "@type": "ImageObject", "url": "https://f9xr.github.io/troolify/assets/images/logo_nobg.webp", "width": 1407, "height": 768 } }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Are these numbers truly random?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, in the strongest practical sense. The tool uses crypto.getRandomValues, the browser's cryptographically secure pseudo-random number generator. Its output is intended for security purposes and is far less predictable than typical Math.random() output." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is crypto.getRandomValues?",
+      "acceptedAnswer": { "@type": "Answer", "text": "crypto.getRandomValues is a Web API that fills an array with cryptographically secure random bytes. Unlike Math.random(), it is seeded from sources like the operating system's entropy pool, matching the quality of randomness used in encryption and session tokens." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I generate unique numbers without repeats?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Untick 'Allow duplicates' and the generator will draw a random sequence with no repeated values, like a lottery draw or class roster. Your range must contain at least as many integers as the count you request, otherwise the tool will show an error." }
+    },
+    {
+      "@type": "Question",
+      "name": "Why use a browser-based generator instead of a spreadsheet?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Spreadsheets and most calculator apps use deterministic pseudo-random algorithms, and their 'random' buttons can repeat or skew. A browser-based CSPRNG gives you higher-quality entropy with zero installation and no data leaving your device." }
+    }
+  ]
+}
+</script>
+
+<link rel="icon" type="image/webp" href="../../assets/images/favicon.webp"><link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../../assets/css/tailwind.css">
+<link rel="stylesheet" href="../../assets/css/tool.css">
+<link rel="stylesheet" href="../../assets/css/site-shell.css">
+<link rel="stylesheet" href="../../assets/css/tool-page.css">
+<link rel="stylesheet" href="../../assets/css/seo-article.css">
+<style>
+.calc-grid{display:grid;grid-template-columns:1fr;gap:18px}
+@media(min-width:720px){.calc-grid{grid-template-columns:1fr 1fr}}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:12.5px;font-weight:700;color:var(--muted)}
+.field input{background:#1B2028;border:1px solid var(--border);color:var(--ink);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:15px;font-weight:600;outline:none;width:100%;box-sizing:border-box}
+.field input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+.uc-check{display:flex;align-items:center;gap:9px;font-size:13.5px;font-weight:700;color:var(--muted);cursor:pointer;margin-top:4px}
+.uc-check input{accent-color:var(--accent);width:16px;height:16px;cursor:pointer}
+.result-card{background:linear-gradient(180deg,rgba(59,130,246,.12),rgba(59,130,246,.03));border:1px solid rgba(96,165,250,.25);border-radius:14px;padding:18px;margin-top:18px}
+.result-row{display:flex;justify-content:space-between;gap:10px;padding:8px 2px;font-size:14px}
+.result-row+.result-row{border-top:1px dashed rgba(255,255,255,.08)}
+.result-row b{color:#93C5FD;font-weight:800;text-align:right}
+.result-row.hero-row b{color:#6EE7B7}
+.rng-err{display:none;padding:.7rem 1rem;border-radius:10px;background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.4);color:#FCA5A5;font-size:.85rem;margin-top:14px}
+.rng-err.show{display:block}
+.rng-grid{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.rng-chip{min-width:52px;text-align:center;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,.05);border:1px solid rgba(96,165,250,.22);color:#93C5FD;font-weight:800;font-size:14px;font-variant-numeric:tabular-nums}
+.rng-note{font-size:12.5px;color:var(--faint);margin-top:12px;line-height:1.5}
+</style>
+</head>
+<body data-layout="tool">
+<noscript>
+    <nav aria-label="Primary" style="position:static;display:block;padding:1rem 1.5rem;background:#212529;border-bottom:1px solid #343A40;text-align:center;font-size:0.9rem;">
+        <a href="../../index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Home</a>
+        <a href="../../tools/index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Tools</a>
+        <a href="../../pages/about.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">About</a>
+        <a href="../../pages/contact.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Contact</a>
+    </nav>
+</noscript>
+
+<main class="tool-main">
+  <div class="container">
+
+    <div class="tool-head hero">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="../../tools/index.html">Tools</a></li>
+          <li><a href="../index.html">Misc Tools</a></li>
+          <li class="current" aria-current="page">Random Number Generator</li>
+        </ol>
+      </nav>
+      <div class="hero-main">
+        <span class="tool-badge"><span class="dot"></span>100% client-side &middot; zero data retention</span>
+        <h1>Random Number Generator</h1>
+        <p>Draw one number or a thousand with cryptographically secure randomness. Choose a range, set a count, and optionally forbid duplicates - all inside your browser.</p>
+      </div>
+      <div class="hero-box hero-cat">
+        <h3 class="hero-box-title"><i class="fa-solid fa-folder-open"></i>Category</h3>
+        <div class="tool-meta">
+          <span class="tool-tag"><i class="fa-solid fa-tag"></i>Randomness</span>
+          <a class="tool-cat" href="../index.html" aria-label="Browse Misc Tools category"><i class="fa-solid fa-folder"></i>Misc Tools</a>
+        </div>
+      </div>
+      <div class="hero-box hero-qa">
+        <h3 class="hero-box-title"><i class="fa-solid fa-bolt"></i>Quick Actions</h3>
+        <div class="tool-actions">
+          <button class="rt-btn" type="button" id="btnShare"><i class="fa-solid fa-share-nodes"></i>Share</button>
+          <button class="rt-btn" type="button" id="btnEmbed"><i class="fa-solid fa-code"></i>Embed Tool</button>
+          <a class="rt-btn" href="../../pages/feedback.html"><i class="fa-solid fa-comment"></i>Feedback</a>
+        </div>
+      </div>
+      <div class="hero-box hero-details">
+        <h3 class="hero-box-title"><i class="fa-solid fa-circle-info"></i>Tool Details</h3>
+        <div class="tool-details">
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.github.io/" target="_blank" rel="noopener">F9XR Development Team</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-check-double"></i>Reviewed by</span><a class="detail-value" href="../../press/editorial-policies.html">Review Board</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-clock-rotate-left"></i>Last updated</span><span class="detail-value">28 August 2026</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel clean">
+      <div class="panel-inner">
+        <div class="toolbar-row">
+          <span class="tool-label"><i class="fa-solid fa-dice" aria-hidden="true"></i>Random Integer Generator</span>
+          <div class="toolbar-actions">
+            <button class="chip-btn" type="button" id="rngRoll" title="Generate a fresh set of numbers"><i class="fa-solid fa-shuffle" aria-hidden="true"></i><span class="hide-sm">Regenerate</span></button>
+            <button class="chip-btn" type="button" id="rngCopy" title="Copy the generated numbers"><i class="fa-solid fa-copy"></i><span class="hide-sm">Copy</span></button>
+          </div>
+        </div>
+
+        <div class="calc-grid">
+          <div class="field"><label for="rngMin">Minimum</label><input id="rngMin" type="number" inputmode="decimal" step="any" value="1"></div>
+          <div class="field"><label for="rngMax">Maximum</label><input id="rngMax" type="number" inputmode="decimal" step="any" value="100"></div>
+          <div class="field"><label for="rngCount">Number of values (1-1000)</label><input id="rngCount" type="number" inputmode="numeric" min="1" max="1000" step="1" value="5"></div>
+          <div class="field"><label class="uc-check"><input type="checkbox" id="rngDup" checked> Allow duplicates</label></div>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn-primary" type="button" id="rngGo"><i class="fa-solid fa-dice"></i>Generate Numbers</button>
+        </div>
+
+        <p class="rng-err" id="rngErr" role="alert"></p>
+
+        <div class="result-card">
+          <div class="result-row hero-row"><span>Generated numbers</span><b id="rngStats">-</b></div>
+          <div class="rng-grid" id="rngOut" aria-live="polite"></div>
+        </div>
+        <p class="proc-line"><i class="fa-solid fa-bolt"></i><span id="rngProc">Ready - calculations happen in this tab.</span></p>
+      </div>
+    </div>
+
+    <aside class="disclaimer" aria-label="Disclaimer">
+      <i class="fa-solid fa-circle-info"></i>
+      <p>Disclaimer: Whilst every effort has been made in building our tool, we are not to be held liable for any damages or losses arising out of or in connection with its use. Generated numbers are provided as-is for informational purposes. <a href="../../press/disclaimer.html">Full disclaimer</a>.</p>
+    </aside>
+
+    <div class="article-layout">
+      <article class="seo-article">
+        <h2 id="article-title">Random Number Generator: Fair, Fast and Cryptographically Secure</h2>
+        <p>Random numbers are everywhere - sample selection, classroom draws, game testing, giveaways, lottery-style picks. But not all "random" is equal. This tool uses the same cryptographic source your browser relies on for secure connections, so every draw is fair and unpredictable.</p>
+
+        <h2 id="how-it-works">How Randomness Actually Works Here</h2>
+        <p>The generator uses <strong>crypto.getRandomValues</strong>, the browser's cryptographically secure pseudo-random number generator (CSPRNG). It is seeded from low-level sources such as operating-system entropy, making its output vastly harder to predict than the algorithm behind Math.random() or a spreadsheet's RAND function.</p>
+        <p>Each integer is drawn with rejection sampling, which guarantees an unbiased distribution across your range - every value in the range has exactly the same chance of appearing.</p>
+
+        <h2 id="how-to-use">How to Use the Random Number Generator</h2>
+        <ol>
+          <li><strong>Set your minimum and maximum</strong> - any integers, including negatives.</li>
+          <li><strong>Choose how many values</strong> you need, from 1 up to 1,000.</li>
+          <li><strong>Decide on duplicates</strong> - tick "Allow duplicates" for independent draws (like dice), or untick it for unique picks (like a lottery).</li>
+          <li><strong>Press Generate</strong> and copy the result with one click.</li>
+        </ol>
+
+        <h2 id="unique-draws">Drawing Unique Numbers Without Repeats</h2>
+        <p>When duplicates are disabled, the tool retries each draw until it finds a value the set does not already contain. That produces an evenly shuffled selection, suitable for ordering raffle winners, seating plans or sample batches. Your range must be at least as large as your count - if you ask for ten unique values between 1 and 5, the tool will flag the conflict instead of guessing.</p>
+
+        <h2 id="why-it-matters">Where Securely Random Numbers Matter</h2>
+        <p>For anything where fairness or security matters - drawing winners, creating test data, choosing verification codes - weak randomness can be a real weakness. If you log in to sites regularly, pair this with the <a href="password-generator.html">Password Generator</a> for strong credentials, and check how resistant they are with the <a href="password-entropy-calculator.html">Password Entropy Calculator</a>. For applying statistics to a generated batch, the <a href="../statistics/standard-deviation-calculator.html">Standard Deviation Calculator</a> will summarize your sample instantly.</p>
+
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+
+        <details class="faq-item">
+          <summary>Are these numbers truly random?</summary>
+          <div class="faq-a">
+            <p>Yes, in the strongest practical sense. The tool uses crypto.getRandomValues, the browser's cryptographically secure pseudo-random number generator. Its output is intended for security purposes and is far less predictable than typical Math.random() output.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>What is crypto.getRandomValues?</summary>
+          <div class="faq-a">
+            <p>crypto.getRandomValues is a Web API that fills an array with cryptographically secure random bytes. Unlike Math.random(), it is seeded from sources like the operating system's entropy pool, matching the quality of randomness used in encryption and session tokens.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Can I generate unique numbers without repeats?</summary>
+          <div class="faq-a">
+            <p>Yes. Untick 'Allow duplicates' and the generator will draw a random sequence with no repeated values, like a lottery draw or class roster. Your range must contain at least as many integers as the count you request, otherwise the tool will show an error.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Why use a browser-based generator instead of a spreadsheet?</summary>
+          <div class="faq-a">
+            <p>Spreadsheets and most calculator apps use deterministic pseudo-random algorithms, and their 'random' buttons can repeat or skew. A browser-based CSPRNG gives you higher-quality entropy with zero installation and no data leaving your device.</p>
+          </div>
+        </details>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>For fair draws, unbiased sampling or any task where randomness should not be guessed, this generator delivers cryptographic-grade quality with a single click - no files to install, no data uploaded, ever.</p>
+      </article>
+    </div>
+
+    <section class="keyword-box" aria-label="Keywords and tags">
+      <h2>Keyword &amp; Tags</h2>
+      <h3>Keywords</h3>
+      <div class="keywords">
+        <span class="keyword">random number generator</span>
+        <span class="keyword">random integer generator</span>
+        <span class="keyword">random sequence</span>
+        <span class="keyword">lottery number generator</span>
+        <span class="keyword">random number picker</span>
+        <span class="keyword">unique random numbers</span>
+        <span class="keyword">crypto secure random</span>
+        <span class="keyword">misc tools</span>
+      </div>
+      <h3>Tags</h3>
+      <div class="tags">
+        <a class="tag" href="../index.html"><i class="fa-solid fa-tag"></i>Randomness</a>
+        <a class="tag" href="../index.html"><i class="fa-solid fa-folder"></i>Misc Tools</a>
+        <a class="tag" href="../../tools/index.html"><i class="fa-solid fa-cube"></i>Utilities</a>
+      </div>
+    </section>
+
+    <section class="author-box" aria-label="About the publisher">
+      <div class="author-avatar" aria-hidden="true"><img src="../../assets/images/logo_nobg.webp" alt="F9XR logo" loading="lazy" decoding="async" width="1407" height="768"></div>
+      <div>
+        <span class="author-role">Published by</span>
+        <h2>F9XR Development Team</h2>
+        <p>Every Troolify tool is built and reviewed by the F9XR Development Team, then checked by our Review Board for correctness, accessibility, and clarity. Tools run 100% client-side with zero data retention.</p>
+        <div class="author-links">
+          <a href="https://f9xr.github.io/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i>F9XR Team</a>
+          <a href="../../press/editorial-policies.html"><i class="fa-solid fa-scale-balanced"></i>Editorial Policies</a>
+          <a href="https://github.com/f9xr" target="_blank" rel="noopener" aria-label="F9XR on GitHub"><i class="fa-brands fa-github"></i>GitHub</a>
+          <a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on LinkedIn"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+          <a href="https://instagram.com/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on Instagram"><i class="fa-brands fa-instagram"></i>Instagram</a>
+          <a href="https://youtube.com/@QuarterlyLIV" target="_blank" rel="noopener" aria-label="F9XR on YouTube"><i class="fa-brands fa-youtube"></i>YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-tools" aria-label="Related tools">
+      <h2>Related Tools</h2>
+      <div class="related-search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" id="relatedSearch" placeholder="Search all Troolify tools&hellip;" autocomplete="off" aria-label="Search related tools">
+      </div>
+      <div class="related-grid" id="relatedGrid" aria-busy="true">
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+      </div>
+    </section>
+
+    <section class="comments" aria-label="Comments">
+      <h2>Comments</h2>
+      <div id="comments">
+        <script src="https://utteranc.es/client.js" repo="f9xr/troolify" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async></script>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"><span></span><i class="fa-solid fa-layer-group"></i><span></span></div>
+
+  </div>
+</main>
+
+<script src="../../assets/js/layout.js" defer></script>
+<script src="../../assets/js/tools-data.js" defer></script>
+<script src="../../assets/js/tool-page.js" defer></script>
+<script>
+(function(){
+  "use strict";
+  var f=function(a){ return document.getElementById(a); };
+  var minEl=f("rngMin"), maxEl=f("rngMax"), countEl=f("rngCount"), dupEl=f("rngDup");
+  var outEl=f("rngOut"), statsEl=f("rngStats"), errEl=f("rngErr"), procEl=f("rngProc");
+  var lastText="";
+
+  function ui32(){ var a=new Uint32Array(1); window.crypto.getRandomValues(a); return a[0]; }
+
+  function randInt(min,max){
+    var range=max-min+1;
+    var limit=Math.floor(4294967296/range)*range;
+    var r=ui32();
+    while(r>=limit){ r=ui32(); }
+    return min+(r%range);
+  }
+
+  function clamp(v,lo,hi){ return Math.max(lo,Math.min(hi,v)); }
+
+  function generate(){
+    var t0=performance.now();
+    errEl.classList.remove("show");
+    errEl.textContent="";
+    var min=Math.round(parseFloat(minEl.value));
+    var max=Math.round(parseFloat(maxEl.value));
+    var count=Math.round(parseFloat(countEl.value));
+    if(!isFinite(min)||!isFinite(max)){ min=1; max=100; }
+    if(!isFinite(count)){ count=5; }
+    minEl.value=min; maxEl.value=max; countEl.value=count;
+    count=clamp(count,1,1000);
+    if(min>max){ var t=min; min=max; max=t; minEl.value=min; maxEl.value=max; }
+    var range=max-min+1;
+    if(!dupEl.checked && count>range){
+      errEl.textContent="Not enough unique values in this range. Your range has "+range+" integers, but you asked for "+count+". Increase the range or allow duplicates.";
+      errEl.classList.add("show");
+      outEl.innerHTML="";
+      statsEl.textContent="-";
+      lastText="";
+      procEl.textContent="Stopped after "+(performance.now()-t0).toFixed(1)+" ms - the range is too small for "+count+" unique numbers.";
+      return;
+    }
+    var nums=[];
+    if(dupEl.checked){
+      for(var i=0;i<count;i++){ nums.push(randInt(min,max)); }
+    }else{
+      var seen={};
+      var guard=0;
+      while(nums.length<count && guard<100000){
+        guard++;
+        var v=randInt(min,max);
+        if(!seen[v]){ seen[v]=1; nums.push(v); }
+      }
+    }
+    nums.sort(function(a,b){ return a-b; });
+    var bits=[];
+    for(var j=0;j<nums.length;j++){ bits.push('<span class="rng-chip">'+nums[j]+'</span>'); }
+    outEl.innerHTML=bits.join("");
+    statsEl.textContent=nums.length+" value"+(nums.length===1?"":"s")+" between "+min+" and "+max+(dupEl.checked?" (duplicates allowed)":" (unique)");
+    lastText=nums.length===1 ? String(nums[0]) : nums.join(", ");
+    procEl.textContent="Generated in "+(performance.now()-t0).toFixed(1)+" ms using crypto.getRandomValues - inside your browser. 0 bytes uploaded.";
+  }
+
+  var guardTime=0;
+  [minEl,maxEl,countEl].forEach(function(el){
+    el.addEventListener("input",function(){ clearTimeout(guardTime); guardTime=setTimeout(generate,250); });
+  });
+  dupEl.addEventListener("change",generate);
+  f("rngGo").addEventListener("click",generate);
+  f("rngRoll").addEventListener("click",generate);
+  f("rngCopy").addEventListener("click",function(){
+    window.Troolify.copyToClipboard(lastText,function(){ procEl.textContent="Copied to clipboard - the bytes never left your device."; });
+  });
+  generate();
+})();
+</script>
+</body>
+</html>

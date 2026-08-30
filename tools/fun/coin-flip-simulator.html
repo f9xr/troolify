@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coin Flip Simulator | Heads or Tails &amp; Streak Tracker</title>
+<meta name="description" content="Flip a virtual coin online with real cryptographic randomness, track running heads/tails counts and your longest streak, and replay up to 100 flips of history. Free online coin flip simulator - 100% client-side.">
+<meta name="author" content="F9XR Development Team">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#212529">
+<link rel="canonical" href="https://f9xr.github.io/troolify/tools/fun/coin-flip-simulator.html">
+<meta property="og:site_name" content="Troolify">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Coin Flip Simulator | Heads or Tails &amp; Streak Tracker">
+<meta property="og:description" content="Flip a virtual coin with cryptographic randomness, track counts and your longest streak. Free, private and 100% client-side.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://f9xr.github.io/troolify/tools/fun/coin-flip-simulator.html">
+<meta property="og:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-08-28">
+<meta property="article:modified_time" content="2026-08-28">
+<meta property="article:section" content="Fun &amp; Games">
+<meta property="article:tag" content="Coin Flip Simulator">
+<meta property="article:tag" content="Fun &amp; Games">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Coin Flip Simulator | Heads or Tails &amp; Streak Tracker">
+<meta name="twitter:description" content="Flip a virtual coin with cryptographic randomness and track your longest streak - 100% browser based.">
+<meta name="twitter:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://f9xr.github.io/troolify/index.html" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://f9xr.github.io/troolify/tools/index.html" },
+    { "@type": "ListItem", "position": 3, "name": "Fun &amp; Games", "item": "https://f9xr.github.io/troolify/tools/fun/" },
+    { "@type": "ListItem", "position": 4, "name": "Coin Flip Simulator", "item": "https://f9xr.github.io/troolify/tools/fun/coin-flip-simulator.html" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Coin Flip Simulator",
+  "url": "https://f9xr.github.io/troolify/tools/fun/coin-flip-simulator.html",
+  "applicationCategory": "GameApplication",
+  "applicationSubCategory": "Virtual Coin Flipper",
+  "operatingSystem": "Any (web browser)",
+  "featureList": ["Flip 1, 10 or 100 coins at a time", "Track running heads and tails counts", "Show longest streak and current streak", "Replay flip history", "100% client-side processing"],
+  "description": "Flip a virtual coin online with real cryptographic randomness, track running heads/tails counts and your longest streak, and replay up to 100 flips of history. Free online coin flip simulator - 100% client-side.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "datePublished": "2026-08-28",
+  "dateModified": "2026-08-28",
+  "author": { "@type": "Organization", "name": "F9XR Development Team", "url": "https://f9xr.github.io/" },
+  "publisher": { "@type": "Organization", "name": "Troolify", "url": "https://f9xr.github.io/troolify/", "logo": { "@type": "ImageObject", "url": "https://f9xr.github.io/troolify/assets/images/logo_nobg.webp", "width": 1407, "height": 768 } }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is a cryptocurrency-grade flip fair?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. The simulator uses crypto.getRandomValues from the Web Crypto API, so each flip is close to a true 50/50 draw rather than the predictable output of Math.random." },
+    {
+      "@type": "Question",
+      "name": "How long can a streak get?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Streaks of six or seven same-side flips are surprisingly common in long runs. The simulator tracks and reports your longest streak precisely, so you can see luck in action." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does flipping 100 coins change the chance of heads?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Every single flip starts fresh at 50/50. Across many flips the totals tend to hover near equal, but short runs can legitimately look lopsided - that is normal randomness, not a biased coin." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the Troolify coin flip simulator safe to use?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every flip happens locally inside your browser tab. No results are uploaded, stored, or transmitted to a server, so your coin-flip statistics stay completely private." }
+    }
+  ]
+}
+</script>
+
+<link rel="icon" type="image/webp" href="../../assets/images/favicon.webp"><link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../../assets/css/tailwind.css">
+<link rel="stylesheet" href="../../assets/css/tool.css">
+<link rel="stylesheet" href="../../assets/css/site-shell.css">
+<link rel="stylesheet" href="../../assets/css/tool-page.css">
+<link rel="stylesheet" href="../../assets/css/seo-article.css">
+<style>
+.calc-grid{display:grid;grid-template-columns:1fr;gap:18px}
+@media(min-width:720px){.calc-grid{grid-template-columns:1fr 1fr}}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:12.5px;font-weight:700;color:var(--muted)}
+.field input,.field select{background:#1B2028;border:1px solid var(--border);color:var(--ink);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:15px;font-weight:600;outline:none;width:100%;box-sizing:border-box}
+.field input:focus,.field select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+.result-card{background:linear-gradient(180deg,rgba(59,130,246,.12),rgba(59,130,246,.03));border:1px solid rgba(96,165,250,.25);border-radius:14px;padding:18px;margin-top:18px}
+.result-row{display:flex;justify-content:space-between;gap:10px;padding:8px 2px;font-size:14px}
+.result-row+.result-row{border-top:1px dashed rgba(255,255,255,.08)}
+.result-row b{color:#93C5FD;font-weight:800;text-align:right}
+.coin-stage{display:flex;flex-direction:column;align-items:center;gap:10px;padding:8px 0 4px}
+.coin-face{width:96px;height:96px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:44px;background:radial-gradient(circle at 35% 30%,#FBBF24,#B45309);box-shadow:0 10px 26px rgba(0,0,0,.35),inset 0 -6px 12px rgba(0,0,0,.25);border:3px solid #92400E;animation:cfSpin .3s ease}
+@keyframes cfSpin{0%{transform:rotateY(0) scale(.7);opacity:.4}100%{transform:rotateY(360deg) scale(1);opacity:1}}
+.coin-label{font-size:1.3rem;font-weight:800;letter-spacing:.02em}
+.coin-label.heads{color:#6EE7B7}
+.coin-label.tails{color:#93C5FD}
+.coin-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.coin-actions .btn,.coin-actions .rt-btn{flex:1;justify-content:center;min-width:110px}
+.cf-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+.cf-stat{background:rgba(59,130,246,.08);border:1px solid rgba(96,165,250,.22);border-radius:12px;padding:12px;text-align:center}
+.cf-stat b{display:block;font-size:1.4rem;font-weight:800;color:#fff;font-variant-numeric:tabular-nums}
+.cf-stat span{display:block;margin-top:3px;font-size:10.5px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.cf-history{margin-top:18px}
+.cf-history h4{font-size:11.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.cf-seq{display:flex;flex-wrap:wrap;gap:4px}
+.cf-chip{width:26px;height:26px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;background:#1B2028;border:1px solid var(--border)}
+.cf-chip.H{color:#6EE7B7;border-color:rgba(52,211,153,.35)}
+.cf-chip.T{color:#93C5FD;border-color:rgba(96,165,250,.35)}
+@media(max-width:520px){.cf-stats{grid-template-columns:1fr}}
+</style>
+</head>
+<body data-layout="tool">
+<noscript>
+    <nav aria-label="Primary" style="position:static;display:block;padding:1rem 1.5rem;background:#212529;border-bottom:1px solid #343A40;text-align:center;font-size:0.9rem;">
+        <a href="../../index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Home</a>
+        <a href="../../tools/index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Tools</a>
+        <a href="../../pages/about.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">About</a>
+        <a href="../../pages/contact.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Contact</a>
+    </nav>
+</noscript>
+
+<main class="tool-main">
+  <div class="container">
+
+    <div class="tool-head hero">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="../../tools/index.html">Tools</a></li>
+          <li><a href="../index.html">Fun &amp; Games</a></li>
+          <li class="current" aria-current="page">Coin Flip Simulator</li>
+        </ol>
+      </nav>
+      <div class="hero-main">
+        <span class="tool-badge"><span class="dot"></span>100% client-side &middot; zero data retention</span>
+        <h1>Coin Flip Simulator</h1>
+        <p>Need a fair decision or just like watching streaks happen? Flip one coin, ten, or a hundred with cryptographic randomness, and let the tracker show your running totals, current streak and longest run.</p>
+      </div>
+      <div class="hero-box hero-cat">
+        <h3 class="hero-box-title"><i class="fa-solid fa-folder-open"></i>Category</h3>
+        <div class="tool-meta">
+          <span class="tool-tag"><i class="fa-solid fa-tag"></i>Decisions</span>
+          <a class="tool-cat" href="../index.html" aria-label="Browse Fun &amp; Games category"><i class="fa-solid fa-folder"></i>Fun &amp; Games</a>
+        </div>
+      </div>
+      <div class="hero-box hero-qa">
+        <h3 class="hero-box-title"><i class="fa-solid fa-bolt"></i>Quick Actions</h3>
+        <div class="tool-actions">
+          <button class="rt-btn" type="button" id="btnShare"><i class="fa-solid fa-share-nodes"></i>Share</button>
+          <button class="rt-btn" type="button" id="btnEmbed"><i class="fa-solid fa-code"></i>Embed Tool</button>
+          <a class="rt-btn" href="../../pages/feedback.html"><i class="fa-solid fa-comment"></i>Feedback</a>
+        </div>
+      </div>
+      <div class="hero-box hero-details">
+        <h3 class="hero-box-title"><i class="fa-solid fa-circle-info"></i>Tool Details</h3>
+        <div class="tool-details">
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.github.io/" target="_blank" rel="noopener">F9XR Development Team</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-check-double"></i>Reviewed by</span><a class="detail-value" href="../../press/editorial-policies.html">Review Board</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-clock-rotate-left"></i>Last updated</span><span class="detail-value">28 August 2026</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel clean">
+      <div class="panel-inner">
+        <div class="result-card" id="cfResults" aria-live="polite"></div>
+
+        <div class="coin-actions">
+          <button class="btn btn-primary" type="button" id="cfFlip1"><i class="fa-solid fa-coins"></i>Flip once</button>
+          <button class="btn btn-primary" type="button" id="cfFlip10"><i class="fa-solid fa-rotate"></i>Flip 10</button>
+          <button class="btn btn-primary" type="button" id="cfFlip100"><i class="fa-solid fa-rotate-right"></i>Flip 100</button>
+          <button class="rt-btn" type="button" id="btnCopy"><i class="fa-solid fa-copy"></i>Copy result</button>
+          <button class="rt-btn" type="button" id="cfReset" title="Reset all stats"><i class="fa-solid fa-eraser"></i>Reset</button>
+        </div>
+
+        <p class="proc-line"><i class="fa-solid fa-bolt"></i><span id="cfProc">Ready - flips happen in this tab.</span></p>
+      </div>
+    </div>
+
+    <aside class="disclaimer" aria-label="Disclaimer">
+      <i class="fa-solid fa-circle-info"></i>
+      <p>Disclaimer: Whilst every effort has been made in building our tool, we are not to be held liable for any damages or monetary losses arising out of or in connection with its use. This simulator is for fun and decisions without real stakes, not for gambling. <a href="../../press/disclaimer.html">Full disclaimer</a>.</p>
+    </aside>
+
+    <div class="article-layout">
+      <article class="seo-article">
+        <h2 id="article-title">Coin Flip Simulator: Fair Decision-Making, Streaks Included</h2>
+        <p>A coin that always lands its own way is no coin at all. This simulator flips with cryptographic-grade randomness, tracks every heads and tails result, and chases your longest streak - the moment luck turns into a run. Use it to settle debates, pick a side, or just learn what random really looks like.</p>
+
+        <h2 id="how-to-use">How to Use the Coin Flip Simulator</h2>
+        <ol>
+          <li><strong>Flip once</strong> for a simple decision or demonstration.</li>
+          <li><strong>Flip 10 or 100</strong> to build real statistics fast.</li>
+          <li><strong>Watch the counters</strong> - running heads, tails, total flips, current streak and longest streak update after every batch.</li>
+          <li><strong>Reset</strong> when you want a clean slate, and read the history strip showing recent H/T results.</li>
+        </ol>
+        <p>Want to weight the odds differently? Roll virtual dice with the <a href="dice-roller.html">Dice Roller</a>, or unscramble random letters with the <a href="anagram-solver.html">Anagram Solver</a>.</p>
+
+        <h2 id="the-randomness">Fair by Default</h2>
+        <p>Each flip uses <strong>crypto.getRandomValues</strong>, so the outcome is extracted from a cryptographic random source rather than the weaker Math.random. Every flip is independent - the coin has no memory, and no streak changes the next result's odds.</p>
+
+        <h2 id="streaks">Streaks and the Gambler's Fallacy</h2>
+        <p>Watch out for the classic trap: after six heads in a row, players feel "tails is due". It is not. Each flip remains exactly 50/50 regardless of everything before it. The streak counter is entertainment and analysis, not a prediction - though seeing a 10-long run happen in a hundred flips is always a small thrill.</p>
+
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+
+        <details class="faq-item">
+          <summary>Is a cryptocurrency-grade flip fair?</summary>
+          <div class="faq-a">
+            <p>Yes. The simulator uses crypto.getRandomValues from the Web Crypto API, so each flip is close to a true 50/50 draw rather than the predictable output of Math.random.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>How long can a streak get?</summary>
+          <div class="faq-a">
+            <p>Streaks of six or seven same-side flips are surprisingly common in long runs. The simulator tracks and reports your longest streak precisely, so you can see luck in action.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Does flipping 100 coins change the chance of heads?</summary>
+          <div class="faq-a">
+            <p>No. Every single flip starts fresh at 50/50. Across many flips the totals tend to hover near equal, but short runs can legitimately look lopsided - that is normal randomness, not a biased coin.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Is the Troolify coin flip simulator safe to use?</summary>
+          <div class="faq-a">
+            <p>Yes. Every flip happens locally inside your browser tab. No results are uploaded, stored, or transmitted to a server, so your coin-flip statistics stay completely private.</p>
+          </div>
+        </details>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>A fair flip, live counters, and a streak tracker make this the fastest way to settle a tie or study randomness. Set your preference between heads and tails, hit flip once - and let the browser's own entropy call it.</p>
+      </article>
+    </div>
+
+    <section class="keyword-box" aria-label="Keywords and tags">
+      <h2>Keyword &amp; Tags</h2>
+      <h3>Keywords</h3>
+      <div class="keywords">
+        <span class="keyword">coin flip simulator</span>
+        <span class="keyword">heads or tails coin</span>
+        <span class="keyword">virtual coin flip</span>
+        <span class="keyword">flip a coin online</span>
+        <span class="keyword">coin streak tracker</span>
+        <span class="keyword">random coin toss</span>
+        <span class="keyword">coin flip 100 times</span>
+        <span class="keyword">fun tools</span>
+      </div>
+      <h3>Tags</h3>
+      <div class="tags">
+        <a class="tag" href="../index.html"><i class="fa-solid fa-tag"></i>Decisions</a>
+        <a class="tag" href="../index.html"><i class="fa-solid fa-folder"></i>Fun &amp; Games</a>
+        <a class="tag" href="../../tools/index.html"><i class="fa-solid fa-cube"></i>Fun</a>
+      </div>
+    </section>
+
+    <section class="author-box" aria-label="About the publisher">
+      <div class="author-avatar" aria-hidden="true"><img src="../../assets/images/logo_nobg.webp" alt="F9XR logo" loading="lazy" decoding="async" width="1407" height="768"></div>
+      <div>
+        <span class="author-role">Published by</span>
+        <h2>F9XR Development Team</h2>
+        <p>Every Troolify tool is built and reviewed by the F9XR Development Team, then checked by our Review Board for correctness, accessibility, and clarity. Tools run 100% client-side with zero data retention.</p>
+        <div class="author-links">
+          <a href="https://f9xr.github.io/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i>F9XR Team</a>
+          <a href="../../press/editorial-policies.html"><i class="fa-solid fa-scale-balanced"></i>Editorial Policies</a>
+          <a href="https://github.com/f9xr" target="_blank" rel="noopener" aria-label="F9XR on GitHub"><i class="fa-brands fa-github"></i>GitHub</a>
+          <a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on LinkedIn"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+          <a href="https://instagram.com/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on Instagram"><i class="fa-brands fa-instagram"></i>Instagram</a>
+          <a href="https://youtube.com/@QuarterlyLIV" target="_blank" rel="noopener" aria-label="F9XR on YouTube"><i class="fa-brands fa-youtube"></i>YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-tools" aria-label="Related tools">
+      <h2>Related Tools</h2>
+      <div class="related-search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" id="relatedSearch" placeholder="Search all Troolify tools&hellip;" autocomplete="off" aria-label="Search related tools">
+      </div>
+      <div class="related-grid" id="relatedGrid" aria-busy="true">
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+      </div>
+    </section>
+
+    <section class="comments" aria-label="Comments">
+      <h2>Comments</h2>
+      <div id="comments">
+        <script src="https://utteranc.es/client.js" repo="f9xr/troolify" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async></script>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"><span></span><i class="fa-solid fa-layer-group"></i><span></span></div>
+
+  </div>
+</main>
+
+<script src="../../assets/js/layout.js" defer></script>
+<script src="../../assets/js/tools-data.js" defer></script>
+<script src="../../assets/js/tool-page.js" defer></script>
+<script>
+(function(){
+  "use strict";
+  var out=document.getElementById("cfResults");
+  var proc=document.getElementById("cfProc");
+  var lastText="";
+  var heads=0, tails=0, total=0, curStreak=0, curSide="", longest=0, history=[];
+  var cryptoObj=window.crypto||window.msCrypto;
+
+  function flipOnce(){
+    var v;
+    if(cryptoObj&&cryptoObj.getRandomValues){
+      var u=new Uint32Array(1);
+      cryptoObj.getRandomValues(u);
+      v=u[0]&1;
+    }else{
+      v=Math.random()<0.5?0:1;
+    }
+    return v===0?"H":"T";
+  }
+
+  function flip(n){
+    var res;
+    for(var i=0;i<n;i++){
+      res=flipOnce();
+      history.push(res);
+      if(history.length>100){ history.shift(); }
+      if(res==="H"){ heads++; }else{ tails++; }
+      total++;
+      if(res===curSide){ curStreak++; }else{ curStreak=1; curSide=res; }
+      if(curStreak>longest){ longest=curStreak; }
+    }
+    render(res);
+  }
+
+  function render(lastSide){
+    var coinClass=lastSide==="H"?"heads":"tails";
+    var emoji=lastSide==="H"?"&#128081;":"&#127769;";
+    var label=lastSide==="H"?"HEADS":"TAILS";
+    var seqHtml='<div class="cf-seq">';
+    history.forEach(function(h){ seqHtml+='<span class="cf-chip '+h+'">'+h+'</span>'; });
+    seqHtml+='</div>';
+    var html=
+      '<div class="coin-stage">'+
+        '<div class="coin-face" aria-hidden="true">'+emoji+'</div>'+
+        '<div class="coin-label '+coinClass+'">'+label+'</div>'+
+      '</div>'+
+      '<div class="cf-stats">'+
+        '<div class="cf-stat"><b>'+heads+'</b><span>Heads</span></div>'+
+        '<div class="cf-stat"><b>'+tails+'</b><span>Tails</span></div>'+
+        '<div class="cf-stat"><b>'+total+'</b><span>Total flips</span></div>'+
+        '<div class="cf-stat"><b>'+longest+'</b><span>Longest streak</span></div>'+
+        '<div class="cf-stat"><b>'+curStreak+'</b><span>Current streak</span></div>'+
+        '<div class="cf-stat"><b>'+ (total?Math.round(heads/total*1000)/10:0)+'%</b><span>Heads %</span></div>'+
+      '</div>'+
+      '<div class="cf-history"><h4>History (H = heads, T = tails)</h4>'+seqHtml+'</div>';
+    out.innerHTML=html;
+    lastText=label+" - Heads "+heads+", Tails "+tails+", Total "+total+", Longest streak "+longest;
+  }
+
+  document.getElementById("cfFlip1").addEventListener("click",function(){ flip(1); });
+  document.getElementById("cfFlip10").addEventListener("click",function(){ flip(10); });
+  document.getElementById("cfFlip100").addEventListener("click",function(){ flip(100); });
+
+  document.getElementById("cfReset").addEventListener("click",function(){
+    heads=0; tails=0; total=0; curStreak=0; curSide=""; longest=0; history=[];
+    out.innerHTML='<div class="result-row"><span>Session reset</span><b>&mdash;</b></div>';
+    proc.textContent="All stats cleared - ready for a fresh session.";
+  });
+
+  document.getElementById("btnCopy").addEventListener("click",function(){
+    window.Troolify.copyToClipboard(lastText,function(){ proc.textContent="Copied to clipboard - the bytes never left your device."; });
+  });
+
+  flip(1);
+})();
+</script>
+</body>
+</html>

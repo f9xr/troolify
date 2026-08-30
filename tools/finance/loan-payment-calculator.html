@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loan Payment Calculator | Monthly Payments, Interest &amp; Total Cost</title>
+<meta name="description" content="Calculate monthly loan payments, total interest and total cost of your loan. Free online loan payment calculator - 100% client-side, nothing leaves your browser.">
+<meta name="author" content="F9XR Development Team">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#212529">
+<link rel="canonical" href="https://f9xr.github.io/troolify/tools/finance/loan-payment-calculator.html">
+<meta property="og:site_name" content="Troolify">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Loan Payment Calculator | Monthly Payments, Interest &amp; Total Cost">
+<meta property="og:description" content="Find your monthly payment, total interest and total loan cost. Free, private and 100% client-side.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://f9xr.github.io/troolify/tools/finance/loan-payment-calculator.html">
+<meta property="og:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-08-28">
+<meta property="article:modified_time" content="2026-08-28">
+<meta property="article:section" content="Finance Tools">
+<meta property="article:tag" content="Loan Payment">
+<meta property="article:tag" content="Finance Tools">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Loan Payment Calculator | Monthly Payments, Interest &amp; Total Cost">
+<meta name="twitter:description" content="Calculate monthly payments, total interest and total cost of any loan - 100% browser based.">
+<meta name="twitter:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://f9xr.github.io/troolify/index.html" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://f9xr.github.io/troolify/tools/index.html" },
+    { "@type": "ListItem", "position": 3, "name": "Finance Tools", "item": "https://f9xr.github.io/troolify/tools/finance/" },
+    { "@type": "ListItem", "position": 4, "name": "Loan Payment Calculator", "item": "https://f9xr.github.io/troolify/tools/finance/loan-payment-calculator.html" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Loan Payment Calculator",
+  "url": "https://f9xr.github.io/troolify/tools/finance/loan-payment-calculator.html",
+  "applicationCategory": "FinanceApplication",
+  "applicationSubCategory": "Loan Amortization & Monthly Payment Calculator",
+  "operatingSystem": "Any (web browser)",
+  "featureList": ["Calculate monthly payments", "Show total interest", "Show total cost", "Fixed-payment payoff mode", "100% client-side processing"],
+  "description": "Calculate monthly loan payments, total interest and total cost of your loan. Free online loan payment calculator - 100% client-side.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "datePublished": "2026-08-28",
+  "dateModified": "2026-08-28",
+  "author": { "@type": "Organization", "name": "F9XR Development Team", "url": "https://f9xr.github.io/" },
+  "publisher": { "@type": "Organization", "name": "Troolify", "url": "https://f9xr.github.io/troolify/", "logo": { "@type": "ImageObject", "url": "https://f9xr.github.io/troolify/assets/images/logo_nobg.webp", "width": 1407, "height": 768 } }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is my monthly loan payment calculated?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The standard amortization formula is M = P * (r/12) / (1 - (1 + r/12)^(-n)), where P is the loan amount, r is the annual interest rate as a decimal, and n is the number of monthly payments. Each month a portion covers interest and the rest reduces the principal." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is an amortizing loan?",
+      "acceptedAnswer": { "@type": "Answer", "text": "An amortizing loan is repaid in equal installments over a fixed term. Early payments are mostly interest, but as the principal shrinks a larger share of each payment goes toward the balance, so the loan is fully paid off at the end of the term." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the Troolify loan payment calculator safe to use?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every calculation runs locally inside your browser tab. Your numbers are never uploaded, stored, or transmitted to a server, so your financial figures stay completely private." }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I pay off my loan faster?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Paying any amount above the required monthly payment goes directly to the principal, which cuts the remaining interest. Our fixed-payment mode shows exactly how a higher monthly amount shortens the term and lowers the total cost." }
+    }
+  ]
+}
+</script>
+
+<link rel="icon" type="image/webp" href="../../assets/images/favicon.webp"><link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../../assets/css/tailwind.css">
+<link rel="stylesheet" href="../../assets/css/tool.css">
+<link rel="stylesheet" href="../../assets/css/site-shell.css">
+<link rel="stylesheet" href="../../assets/css/tool-page.css">
+<link rel="stylesheet" href="../../assets/css/seo-article.css">
+<style>
+.calc-grid{display:grid;grid-template-columns:1fr;gap:18px}
+@media(min-width:720px){.calc-grid{grid-template-columns:1fr 1fr}}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:12.5px;font-weight:700;color:var(--muted)}
+.field input,.field select{background:#1B2028;border:1px solid var(--border);color:var(--ink);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:15px;font-weight:600;outline:none;width:100%;box-sizing:border-box}
+.field input:focus,.field select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+.seg{display:flex;background:#161B22;border:1px solid var(--border);border-radius:10px;padding:4px;gap:4px}
+.seg-btn{flex:1;border:0;background:transparent;color:var(--muted);font-family:inherit;font-size:13px;font-weight:700;padding:9px 10px;border-radius:7px;cursor:pointer;transition:background .15s,color .15s}
+.seg-btn.active{background:rgba(59,130,246,.16);color:#93C5FD}
+.seg-btn:hover:not(.active){background:rgba(255,255,255,.04)}
+.hidden{display:none}
+.result-card{background:linear-gradient(180deg,rgba(59,130,246,.12),rgba(59,130,246,.03));border:1px solid rgba(96,165,250,.25);border-radius:14px;padding:18px;margin-top:18px}
+.result-row{display:flex;justify-content:space-between;gap:10px;padding:8px 2px;font-size:14px}
+.result-row+.result-row{border-top:1px dashed rgba(255,255,255,.08)}
+.result-row b{color:#93C5FD;font-weight:800;text-align:right}
+.result-row.hero-row b{color:#6EE7B7}
+.note{font-size:13px;color:var(--muted);margin-top:12px}
+.note.warn{color:#FBBF24}
+</style>
+</head>
+<body data-layout="tool">
+<noscript>
+    <nav aria-label="Primary" style="position:static;display:block;padding:1rem 1.5rem;background:#212529;border-bottom:1px solid #343A40;text-align:center;font-size:0.9rem;">
+        <a href="../../index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Home</a>
+        <a href="../../tools/index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Tools</a>
+        <a href="../../pages/about.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">About</a>
+        <a href="../../pages/contact.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Contact</a>
+    </nav>
+</noscript>
+
+<main class="tool-main">
+  <div class="container">
+
+    <div class="tool-head hero">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="../../tools/index.html">Tools</a></li>
+          <li><a href="../index.html">Finance Tools</a></li>
+          <li class="current" aria-current="page">Loan Payment Calculator</li>
+        </ol>
+      </nav>
+      <div class="hero-main">
+        <span class="tool-badge"><span class="dot"></span>100% client-side &middot; zero data retention</span>
+        <h1>Loan Payment Calculator</h1>
+        <p>Work out your monthly loan payment, total interest and total cost before you commit. Enter the amount, interest rate and term - or set your own payment to see how early you can finish.</p>
+      </div>
+      <div class="hero-box hero-cat">
+        <h3 class="hero-box-title"><i class="fa-solid fa-folder-open"></i>Category</h3>
+        <div class="tool-meta">
+          <span class="tool-tag"><i class="fa-solid fa-tag"></i>Borrowing</span>
+          <a class="tool-cat" href="../index.html" aria-label="Browse Finance Tools category"><i class="fa-solid fa-folder"></i>Finance Tools</a>
+        </div>
+      </div>
+      <div class="hero-box hero-qa">
+        <h3 class="hero-box-title"><i class="fa-solid fa-bolt"></i>Quick Actions</h3>
+        <div class="tool-actions">
+          <button class="rt-btn" type="button" id="btnShare"><i class="fa-solid fa-share-nodes"></i>Share</button>
+          <button class="rt-btn" type="button" id="btnEmbed"><i class="fa-solid fa-code"></i>Embed Tool</button>
+          <a class="rt-btn" href="../../pages/feedback.html"><i class="fa-solid fa-comment"></i>Feedback</a>
+        </div>
+      </div>
+      <div class="hero-box hero-details">
+        <h3 class="hero-box-title"><i class="fa-solid fa-circle-info"></i>Tool Details</h3>
+        <div class="tool-details">
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.github.io/" target="_blank" rel="noopener">F9XR Development Team</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-check-double"></i>Reviewed by</span><a class="detail-value" href="../../press/editorial-policies.html">Review Board</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-clock-rotate-left"></i>Last updated</span><span class="detail-value">28 August 2026</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel clean">
+      <div class="panel-inner">
+        <div class="calc-grid">
+          <div class="field"><label for="lpMode">Calculate</label>
+            <div class="seg" role="tablist" aria-label="Calculation mode">
+              <button class="seg-btn active" type="button" data-mode="payment" role="tab" aria-selected="true">Monthly payment</button>
+              <button class="seg-btn" type="button" data-mode="payoff" role="tab" aria-selected="false">Fixed payment</button>
+            </div>
+          </div>
+          <div class="field"><label for="lpAmount">Loan amount ($)</label><input id="lpAmount" type="number" inputmode="decimal" min="0" step="any" value="25000"></div>
+          <div class="field"><label for="lpRate">Annual interest rate (%)</label><input id="lpRate" type="number" inputmode="decimal" min="0" step="any" value="7.5"></div>
+          <div class="field" id="lpTermField"><label for="lpTerm">Loan term (years)</label><input id="lpTerm" type="number" inputmode="decimal" min="0.5" step="any" value="5"></div>
+          <div class="field hidden" id="lpPayField"><label for="lpPayment">Fixed monthly payment ($)</label><input id="lpPayment" type="number" inputmode="decimal" min="0" step="any" value="600"></div>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn-primary" type="button" id="btnCopy"><i class="fa-solid fa-copy"></i>Copy result</button>
+        </div>
+
+        <div class="result-card" id="lpResults" aria-live="polite"></div>
+        <p class="proc-line"><i class="fa-solid fa-bolt"></i><span id="lpProc">Ready - calculations happen in this tab.</span></p>
+      </div>
+    </div>
+
+    <aside class="disclaimer" aria-label="Disclaimer">
+      <i class="fa-solid fa-circle-info"></i>
+      <p>Disclaimer: Whilst every effort has been made in building our tool, we are not to be held liable for any damages or monetary losses arising out of or in connection with its use. This calculator is an estimate, not financial advice. <a href="../../press/disclaimer.html">Full disclaimer</a>.</p>
+    </aside>
+
+    <div class="article-layout">
+      <article class="seo-article">
+        <h2 id="article-title">Loan Payment Calculator: Know Your Real Cost Before You Borrow</h2>
+        <p>Loans are quoted in interest rates and terms, but what you actually pay is a monthly figure plus interest on top. This calculator turns a loan amount, rate and term into the numbers that matter: your monthly payment, total interest, and the real total cost of borrowing.</p>
+
+        <h2 id="how-payments-are-calculated">How Loan Payments Are Calculated</h2>
+        <p>Most consumer loans use the standard amortization formula:</p>
+        <p><strong>Monthly payment = P &times; (r/12) / (1 - (1 + r/12)<sup>-n</sup>)</strong></p>
+        <p>where <strong>P</strong> is the loan amount, <strong>r</strong> is the annual interest rate as a decimal, and <strong>n</strong> is the total number of monthly payments. Each payment covers the interest that has accrued since the last payment; the remainder reduces the principal.</p>
+
+        <h2 id="how-to-use">How to Use the Loan Payment Calculator</h2>
+        <ol>
+          <li><strong>Enter the loan amount</strong> you plan to borrow.</li>
+          <li><strong>Add the annual interest rate</strong> quoted by the lender.</li>
+          <li><strong>Choose the term in years</strong>, or switch to fixed-payment mode and enter the monthly amount you can afford.</li>
+        </ol>
+        <p>The results show your monthly payment, total interest, total cost, and - in fixed-payment mode - how many months it takes to be debt-free.</p>
+
+        <h2 id="total-cost-matters">Why Total Cost Matters More Than the Rate</h2>
+        <p>A slightly lower rate can save thousands over a long term, but extending the term to shrink the payment usually raises the total interest paid. Compare totals rather than just monthly amounts, and pair this tool with our <a href="simple-interest-calculator.html">Simple Interest Calculator</a> for quick interest checks, or our <a href="compound-interest-calculator.html">Compound Interest Calculator</a> to see the same math working for your savings instead.</p>
+
+        <h2 id="pay-off-faster">Paying Off Your Loan Faster</h2>
+        <p>Because interest accrues on the outstanding balance, every extra dollar you pay early saves interest later. Use fixed-payment mode to see how an additional amount each month shortens the term and trims the total cost. Even a modest increase makes a big difference across several years.</p>
+
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+
+        <details class="faq-item">
+          <summary>How is my monthly loan payment calculated?</summary>
+          <div class="faq-a">
+            <p>The standard amortization formula is M = P &times; (r/12) / (1 - (1 + r/12)^(-n)), where P is the loan amount, r is the annual rate as a decimal, and n is the number of monthly payments. Each payment covers accrued interest first, with the remainder reducing the principal.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>What is an amortizing loan?</summary>
+          <div class="faq-a">
+            <p>An amortizing loan is repaid in equal installments over a fixed term. Early payments are mostly interest; as the principal shrinks, a larger share of each payment goes to the balance until the loan is fully paid off.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Is the Troolify loan payment calculator safe to use?</summary>
+          <div class="faq-a">
+            <p>Yes. Every calculation runs locally inside your browser tab. Your numbers are never uploaded, stored, or transmitted to a server, so your financial figures stay completely private.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>How can I pay off my loan faster?</summary>
+          <div class="faq-a">
+            <p>Paying above your required monthly amount goes straight to the principal, cutting the remaining interest. The fixed-payment mode shows exactly how a higher monthly payment shortens your term and lowers the total cost.</p>
+          </div>
+        </details>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>Understanding the real cost of a loan keeps you in control of your money. Run the numbers here before signing anything, and you will never be surprised by how much borrowing actually costs.</p>
+      </article>
+    </div>
+
+    <section class="keyword-box" aria-label="Keywords and tags">
+      <h2>Keyword &amp; Tags</h2>
+      <h3>Keywords</h3>
+      <div class="keywords">
+        <span class="keyword">loan payment calculator</span>
+        <span class="keyword">monthly payment</span>
+        <span class="keyword">amortization formula</span>
+        <span class="keyword">total interest</span>
+        <span class="keyword">loan cost</span>
+        <span class="keyword">pay off loan faster</span>
+        <span class="keyword">auto loan calculator</span>
+        <span class="keyword">finance tools</span>
+      </div>
+      <h3>Tags</h3>
+      <div class="tags">
+        <a class="tag" href="../index.html"><i class="fa-solid fa-tag"></i>Borrowing</a>
+        <a class="tag" href="../index.html"><i class="fa-solid fa-folder"></i>Finance Tools</a>
+        <a class="tag" href="../../tools/index.html"><i class="fa-solid fa-cube"></i>Finance</a>
+      </div>
+    </section>
+
+    <section class="author-box" aria-label="About the publisher">
+      <div class="author-avatar" aria-hidden="true"><img src="../../assets/images/logo_nobg.webp" alt="F9XR logo" loading="lazy" decoding="async" width="1407" height="768"></div>
+      <div>
+        <span class="author-role">Published by</span>
+        <h2>F9XR Development Team</h2>
+        <p>Every Troolify tool is built and reviewed by the F9XR Development Team, then checked by our Review Board for correctness, accessibility, and clarity. Tools run 100% client-side with zero data retention.</p>
+        <div class="author-links">
+          <a href="https://f9xr.github.io/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i>F9XR Team</a>
+          <a href="../../press/editorial-policies.html"><i class="fa-solid fa-scale-balanced"></i>Editorial Policies</a>
+          <a href="https://github.com/f9xr" target="_blank" rel="noopener" aria-label="F9XR on GitHub"><i class="fa-brands fa-github"></i>GitHub</a>
+          <a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on LinkedIn"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+          <a href="https://instagram.com/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on Instagram"><i class="fa-brands fa-instagram"></i>Instagram</a>
+          <a href="https://youtube.com/@QuarterlyLIV" target="_blank" rel="noopener" aria-label="F9XR on YouTube"><i class="fa-brands fa-youtube"></i>YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-tools" aria-label="Related tools">
+      <h2>Related Tools</h2>
+      <div class="related-search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" id="relatedSearch" placeholder="Search all Troolify tools&hellip;" autocomplete="off" aria-label="Search related tools">
+      </div>
+      <div class="related-grid" id="relatedGrid" aria-busy="true">
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+      </div>
+    </section>
+
+    <section class="comments" aria-label="Comments">
+      <h2>Comments</h2>
+      <div id="comments">
+        <script src="https://utteranc.es/client.js" repo="f9xr/troolify" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async></script>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"><span></span><i class="fa-solid fa-layer-group"></i><span></span></div>
+
+  </div>
+</main>
+
+<script src="../../assets/js/layout.js" defer></script>
+<script src="../../assets/js/tools-data.js" defer></script>
+<script src="../../assets/js/tool-page.js" defer></script>
+<script>
+(function(){
+  "use strict";
+  var amt=document.getElementById("lpAmount");
+  var rate=document.getElementById("lpRate");
+  var term=document.getElementById("lpTerm");
+  var pay=document.getElementById("lpPayment");
+  var termField=document.getElementById("lpTermField");
+  var payField=document.getElementById("lpPayField");
+  var segBtns=document.querySelectorAll(".seg-btn");
+  var out=document.getElementById("lpResults");
+  var proc=document.getElementById("lpProc");
+  var mode="payment";
+  var lastText="";
+  var fmt=function(n){ return n.toLocaleString("en-US",{style:"currency",currency:"USD",maximumFractionDigits:n>=1e5?0:2}); };
+  function calc(){
+    var t0=performance.now();
+    var P=parseFloat(amt.value)||0;
+    var r=(parseFloat(rate.value)||0)/100;
+    var note="";
+    var html="";
+    if(mode==="payment"){
+      var y=Math.max(parseFloat(term.value)||0,0);
+      var n=y*12;
+      var payment, interest, total;
+      if(n<=0){ note="Enter a loan term greater than zero."; html='<div class="result-row hero-row"><span>Monthly payment</span><b>&mdash;</b></div>'; }
+      else if(r<=0){ payment=P/n; interest=0; total=P; }
+      else{
+        var i=r/12;
+        payment=P*i/(1-Math.pow(1+i,-n));
+        total=payment*n;
+        interest=total-P;
+      }
+      if(!note){
+        var yrs=Math.floor(n/12), rem=Math.round(n%12);
+        html=
+          '<div class="result-row hero-row"><span>Monthly payment</span><b>'+fmt(payment)+'</b></div>'+
+          '<div class="result-row"><span>Total interest</span><b>'+fmt(interest)+'</b></div>'+
+          '<div class="result-row"><span>Total cost</span><b>'+fmt(total)+'</b></div>'+
+          '<div class="result-row"><span>Payoff time</span><b>'+yrs+' yr'+(yrs===1?"":"s")+(rem?(" "+rem+" mo"):"")+'</b></div>';
+        lastText="Monthly payment: $"+payment.toFixed(2)+"\nTotal interest: $"+interest.toFixed(2)+"\nTotal cost: $"+total.toFixed(2);
+      }else{
+        lastText="";
+      }
+      if(note){ html+='<p class="note warn">'+note+'</p>'; }
+    }else{
+      var M=parseFloat(pay.value)||0;
+      var n2;
+      if(P<=0 || M<=0){ note="Enter both a loan amount and a fixed monthly payment."; html='<div class="result-row hero-row"><span>Payoff time</span><b>&mdash;</b></div>'; }
+      else if(r>0 && M<=P*(r/12)){ note="This payment only covers the monthly interest, so the loan would never be paid off. Increase the payment above $"+((P*(r/12)).toFixed(2))+". "; html='<div class="result-row hero-row"><span>Payoff time</span><b>Never</b></div>'; }
+      else{
+        if(r>0){
+          var i2=r/12;
+          n2=Math.ceil(-Math.log(1-P*i2/M)/Math.log(1+i2));
+        }else{ n2=Math.ceil(P/M); }
+        var total2=M*n2;
+        var interest2=total2-P;
+        var yrs2=Math.floor(n2/12), rem2=Math.round(n2%12);
+        html=
+          '<div class="result-row hero-row"><span>Payoff time</span><b>'+n2+' payments ('+yrs2+' yr'+(yrs2===1?"":"s")+(rem2?(" "+rem2+" mo"):"")+')</b></div>'+
+          '<div class="result-row"><span>Monthly payment</span><b>'+fmt(M)+'</b></div>'+
+          '<div class="result-row"><span>Total interest</span><b>'+fmt(interest2)+'</b></div>'+
+          '<div class="result-row"><span>Total cost</span><b>'+fmt(total2)+'</b></div>';
+        lastText="Payoff time: "+n2+" payments\nTotal interest: $"+interest2.toFixed(2)+"\nTotal cost: $"+total2.toFixed(2);
+      }
+      if(note){ html+='<p class="note warn">'+note+'</p>'; }
+    }
+    out.innerHTML=html;
+    proc.textContent="Calculated in "+(performance.now()-t0).toFixed(1)+" ms - inside your browser. 0 bytes uploaded.";
+  }
+  segBtns.forEach(function(btn){
+    btn.addEventListener("click",function(){
+      segBtns.forEach(function(b){ b.classList.remove("active"); b.setAttribute("aria-selected","false"); });
+      btn.classList.add("active");
+      btn.setAttribute("aria-selected","true");
+      mode=btn.getAttribute("data-mode");
+      if(mode==="payoff"){ termField.classList.add("hidden"); payField.classList.remove("hidden"); }
+      else{ payField.classList.add("hidden"); termField.classList.remove("hidden"); }
+      calc();
+    });
+  });
+  [amt,rate,term,pay].forEach(function(el){ el.addEventListener("input",calc); });
+  document.getElementById("btnCopy").addEventListener("click",function(){
+    window.Troolify.copyToClipboard(lastText,function(){ proc.textContent="Copied to clipboard - the bytes never left your device."; });
+  });
+  calc();
+})();
+</script>
+</body>
+</html>

@@ -137,7 +137,7 @@
         var footerMain =
             '<footer class="tx-footer">' +
                 /* Full-width canvas - transparent bg so the footer merges with the page content bg */
-                '<div class="relative px-6 py-12 sm:px-10 sm:py-14 lg:px-16">' +
+                '<div class="relative px-6 py-8 sm:px-10 sm:py-9 lg:px-14">' +
 
                         /* Ambient brand glow - radial accent-blue blobs (DESIGN.md §5) */
                         '<div class="pointer-events-none absolute -top-40 left-1/2 h-80 w-[720px] -translate-x-1/2 rounded-full bg-[#3B82F6]/15 blur-[120px]" aria-hidden="true"></div>' +
@@ -147,7 +147,7 @@
                         '<div class="pointer-events-none absolute inset-0" style="background-image:linear-gradient(rgba(248,249,250,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(248,249,250,0.04) 1px,transparent 1px);background-size:48px 48px;-webkit-mask-image:radial-gradient(ellipse 90% 60% at 50% 0%,#000 30%,transparent 75%);mask-image:radial-gradient(ellipse 90% 60% at 50% 0%,#000 30%,transparent 75%)" aria-hidden="true"></div>' +
 
                         /* --- Top content grid --- */
-                        '<div class="relative grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr_1.4fr] lg:gap-14">' +
+                        '<div class="relative grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr_1.4fr] lg:gap-10">' +
 
                             /* Left column - brand mission */
                             '<div>' +
@@ -155,8 +155,8 @@
                                     '<img src="' + prefix + 'assets/images/logo_nobg.webp" alt="Troolify" class="h-9 w-auto object-contain">' +
                                     '<span class="text-xl font-bold tracking-tight text-white">Troolify</span>' +
                                 '</a>' +
-                                '<p class="mt-7 max-w-md text-base leading-[1.8] text-[#F8F9FA]/90 sm:text-lg">Troolify is a privacy-first workspace on the internet where your digital workflows run instantly, securely, and entirely inside your browser.</p>' +
-                                '<div class="mt-8 flex flex-col gap-2 text-sm text-[#9CA3AF]">' +
+                                '<p class="mt-4 max-w-md text-sm leading-[1.7] text-[#F8F9FA]/90 sm:text-[15px]">Troolify is a privacy-first workspace on the internet where your digital workflows run instantly, securely, and entirely inside your browser.</p>' +
+                                '<div class="mt-5 flex flex-col gap-1.5 text-sm text-[#9CA3AF]">' +
                                     '<span>Made by <a href="https://f9xr.github.io" target="_blank" rel="noopener noreferrer" class="font-medium text-white/80 transition hover:text-[#3B82F6]">F9XR Team</a></span>' +
                                     '<a href="https://github.com/f9xr/troolify" target="_blank" rel="noopener noreferrer" class="font-medium text-white/80 transition hover:text-[#3B82F6]">This website is Open Source</a>' +
                                 '</div>' +
@@ -165,7 +165,7 @@
                             /* Middle column 1 - Company links */
                             '<nav aria-label="Company">' +
                                 '<h4 class="text-xs font-semibold uppercase tracking-[0.22em] text-[#E9ECEF]">Company</h4>' +
-                                '<ul class="mt-6 space-y-3">' +
+                                '<ul class="mt-3.5 space-y-2">' +
                                     '<li><a href="' + prefix + 'pages/about.html" class="text-white/80 transition hover:text-[#3B82F6]">About</a></li>' +
                                     '<li><a href="' + prefix + 'pages/contact.html" class="text-white/80 transition hover:text-[#3B82F6]">Contact</a></li>' +
                                     '<li><a href="' + prefix + 'pages/feedback.html" class="text-white/80 transition hover:text-[#3B82F6]">Feedback</a></li>' +
@@ -181,7 +181,7 @@
                             /* Middle column 2 - F9XR network links */
                             '<nav aria-label="F9XR Network">' +
                                 '<h4 class="text-xs font-semibold uppercase tracking-[0.22em] text-[#E9ECEF]">F9XR Network</h4>' +
-                                '<ul class="mt-6 space-y-3">' +
+                                '<ul class="mt-3.5 space-y-2">' +
                                     '<li><a href="https://f9xr.github.io/" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-[#3B82F6]">F9XR Team</a></li>' +
                                     '<li><a href="https://f9xr.github.io/services/index.html" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-[#3B82F6]">Services</a></li>' +
                                     '<li><a href="https://f9xr.github.io/case-studies/index.html" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-[#3B82F6]">Case Studies</a></li>' +
@@ -195,7 +195,7 @@
                             /* Middle column 3 - Follow us social icons */
                             '<nav aria-label="Follow us">' +
                                 '<h4 class="text-xs font-semibold uppercase tracking-[0.22em] text-[#E9ECEF]">Follow us</h4>' +
-                                '<div class="mt-6 flex flex-wrap gap-3">' +
+                                '<div class="mt-4 flex flex-wrap gap-2.5">' +
                                     '<a href="https://github.com/f9xr" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="grid h-10 w-10 place-items-center rounded-xl border border-[#343A40] bg-[#212529] text-[#9CA3AF] transition hover:border-[#3B82F6] hover:text-[#3B82F6]"><i class="fa-brands fa-github"></i></a>' +
                                     '<a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="grid h-10 w-10 place-items-center rounded-xl border border-[#343A40] bg-[#212529] text-[#9CA3AF] transition hover:border-[#3B82F6] hover:text-[#3B82F6]"><i class="fa-brands fa-linkedin"></i></a>' +
                                     '<a href="https://instagram.com/f9xrteam" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="grid h-10 w-10 place-items-center rounded-xl border border-[#343A40] bg-[#212529] text-[#9CA3AF] transition hover:border-[#3B82F6] hover:text-[#3B82F6]"><i class="fa-brands fa-instagram"></i></a>' +
@@ -207,7 +207,7 @@
                             /* Right column - contact + newsletter capture */
                             '<div>' +
                                 '<h4 class="text-xs font-semibold uppercase tracking-[0.22em] text-[#E9ECEF]">Stay up to date</h4>' +
-                                '<form class="mt-6 flex flex-col gap-3 sm:flex-row" action="mailto:tontufytservices@gmail.com" method="post" enctype="text/plain">' +
+                                '<form class="mt-4 flex flex-col gap-3 sm:flex-row" action="mailto:tontufytservices@gmail.com" method="post" enctype="text/plain">' +
                                     '<input type="email" name="email" placeholder="Enter your email" aria-label="Enter your email" class="w-full flex-1 rounded-xl border border-[#343A40] bg-[#212529] px-4 py-3 text-sm text-white outline-none transition placeholder:text-[#9CA3AF] focus:border-[#3B82F6] focus:shadow-[0_0_0_4px_rgba(59,130,246,0.15)]">' +
                                     '<button type="submit" class="rounded-xl bg-[#3B82F6] px-5 py-3 text-sm font-bold text-white shadow-[0_4px_20px_rgba(59,130,246,0.35)] transition hover:bg-[#2563EB]">Sign Up</button>' +
                                 '</form>' +
@@ -215,13 +215,13 @@
                             '</div>' +
                         '</div>' +
 
-                        /* --- Massive brand marquee watermark --- */
-                        '<div class="relative mt-16 select-none lg:mt-20">' +
-                            '<div class="text-center text-[clamp(64px,15vw,210px)] font-black leading-[0.8] tracking-tighter text-[#3B82F6] drop-shadow-[0_0_30px_rgba(59,130,246,0.4)]">troolify</div>' +
+                        /* --- Compact brand wordmark --- */
+                        '<div class="relative mt-6 select-none lg:mt-8">' +
+                            '<div class="text-center text-3xl font-black tracking-tight text-[#3B82F6] sm:text-4xl">troolify</div>' +
                         '</div>' +
 
                         /* --- Bottom baseline metadata --- */
-                        '<div class="relative mt-12 flex flex-col items-center justify-between gap-4 border-t border-[#343A40] pt-8 text-sm text-[#9CA3AF] md:flex-row">' +
+                        '<div class="relative mt-6 flex flex-col items-center justify-between gap-3 border-t border-[#343A40] pt-4 text-xs text-[#9CA3AF] md:flex-row">' +
                             '<p>&copy; 2026 Troolify. All rights reserved.</p>' +
                             '<div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">' +
                                 '<a href="' + prefix + 'pages/terms.html" class="transition hover:text-[#3B82F6]">Terms</a>' +
@@ -332,7 +332,14 @@
                 '.cta-3d{position:relative;z-index:0;max-width:1280px;width:calc(100% - 2rem);margin:2.5rem auto 0;border-radius:30px;transition:transform .45s cubic-bezier(.16,1,.3,1),box-shadow .45s ease;box-shadow:0 26px 55px -10px rgba(0,0,0,.6),0 14px 28px -12px rgba(0,0,0,.55)}' +
                 '.tx-cta:hover .cta-3d{transform:rotateX(3deg) translateY(-5px) scale(1.005);box-shadow:0 40px 80px -16px rgba(0,0,0,.65),0 20px 40px -16px rgba(0,0,0,.6)}' +
 
-                '.tx-footer{background:transparent;padding:0;border-top:1px solid rgba(255,255,255,.06)}' +
+                '.tx-footer{position:fixed;bottom:0;left:0;right:0;z-index:0;background:var(--bg-dark,#0A0A0A);padding:0;border-top:1px solid rgba(255,255,255,.06);max-height:100dvh;overflow-y:auto;-webkit-overflow-scrolling:touch}' +
+                /* Footer-reveal shell: the outer .page-reveal layer carries NO background so its bottom
+                   padding strip stays transparent, letting the pinned footer show through when the user
+                   scrolls to the bottom. The opaque page background lives on the inner .reveal-inner so
+                   it starts above the footer and slides up to uncover it. (Its color is applied inline
+                   from the page body so it matches the page theme.) */
+                '.page-reveal{position:relative;z-index:1;min-height:100vh}' +
+                '.reveal-inner{min-height:inherit}' +
                 '.tx-footer a{text-decoration:none}' +
                 '.tx-footer a:not(.grid){position:relative}' +
                 '.tx-footer a:not(.grid)::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:1px;background:linear-gradient(90deg,#60A5FA,#3B82F6);transform:scaleX(0);transform-origin:left;transition:transform .28s cubic-bezier(.16,1,.3,1)}' +
@@ -363,6 +370,19 @@
                 '@keyframes featured-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}' +
                 '@media(max-width:640px){.tx-featured{margin-top:2rem;padding:1.25rem 1rem 1.4rem}.featured-marquee-track .badge-link{padding-right:1.5rem}}' +
                 '@media(prefers-reduced-motion:reduce){.featured-marquee-track{animation:none}}' +
+
+                /* CSS View Transitions API - smooth cross-document page transitions.
+                   Enabled only when the browser supports it and the user has not opted
+                   out of reduced motion. Named pseudos allow a subtle rise/fade on the
+                   new page and keep the footer pinned during the swap. */
+                '@supports (view-transition-name: root){' +
+                    '@view-transition{ navigation:auto }' +
+                    '::view-transition-old(root){animation:opencode-vt-fade .28s ease both}' +
+                    '::view-transition-new(root){animation:opencode-vt-rise .45s cubic-bezier(.16,1,.3,1) both}' +
+                    '@keyframes opencode-vt-fade{to{opacity:0}}' +
+                    '@keyframes opencode-vt-rise{from{opacity:0;transform:translateY(16px)}}' +
+                    '@media(prefers-reduced-motion:reduce){::view-transition-old(root),::view-transition-new(root){animation-duration:.01ms}}' +
+                '}' +
             '</style>';
 
         /* --------------------------------------------------------------------
@@ -384,6 +404,55 @@
         body.insertAdjacentHTML("beforeend", footerMain);
         body.insertAdjacentHTML("beforeend", searchModalMarkup);
         body.insertAdjacentHTML("beforeend", backToTopMarkup);
+
+        /* --------------------------------------------------------------------
+           Footer-reveal shell
+           Wrap all page content in a .page-reveal layer that sits on top of the
+           pinned .tx-footer. The outer layer carries no background, so its bottom
+           padding strip stays transparent and the fixed footer shows through it
+           when the user reaches the bottom of the page. The opaque page background
+           lives on the inner .reveal-inner, which slides up to uncover the footer.
+           -------------------------------------------------------------------- */
+
+        var revealWrap = document.createElement("div");
+        revealWrap.className = "page-reveal";
+        var revealInner = document.createElement("div");
+        revealInner.className = "reveal-inner";
+        revealWrap.appendChild(revealInner);
+        var afterWrap = document.createDocumentFragment();
+        var txFooter = null;
+        var keepAtBodyLevel = function (el) {
+            var id = el.id;
+            var cls = typeof el.className === "string" ? el.className : "";
+            return el.tagName === "STYLE" || el.tagName === "SCRIPT" || el.tagName === "NOSCRIPT" ||
+                   cls.indexOf("tx-footer") !== -1 || id === "searchModal" || id === "backToTop";
+        };
+        Array.prototype.slice.call(body.children).forEach(function (el) {
+            if (keepAtBodyLevel(el)) {
+                if (typeof el.className === "string" && el.className.indexOf("tx-footer") !== -1) txFooter = el;
+                afterWrap.appendChild(el);
+            } else {
+                revealInner.appendChild(el);
+            }
+        });
+        body.innerHTML = "";
+        body.appendChild(revealWrap);
+        body.appendChild(afterWrap);
+
+        if (txFooter) {
+            var syncFooterSpace = function () {
+                /* Match the opaque content layer to the page background so it hides the
+                   pinned footer until the user scrolls to the very bottom. */
+                var bodyBg = window.getComputedStyle(body).backgroundColor;
+                revealInner.style.backgroundColor = bodyBg && bodyBg !== "rgba(0, 0, 0, 0)"
+                    ? bodyBg
+                    : "var(--bg-dark,#0A0A0A)";
+                var fh = txFooter.offsetHeight || 0;
+                revealWrap.style.paddingBottom = fh + "px";
+            };
+            syncFooterSpace();
+            window.addEventListener("resize", syncFooterSpace, { passive: true });
+        }
 
         /* --------------------------------------------------------------------
            Entity schema - inject an Organization JSON-LD block on any page that

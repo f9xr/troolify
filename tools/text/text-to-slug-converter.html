@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text to Slug Converter | URL &amp; SEO Slug Generator</title>
+<meta name="description" content="Turn any headline into a clean, URL-friendly SEO slug instantly. Lowercase, strip accents and punctuation, choose separators and preview the final URL - 100% client-side.">
+<meta name="author" content="F9XR Development Team">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#212529">
+<link rel="canonical" href="https://f9xr.github.io/troolify/tools/text/text-to-slug-converter.html">
+<meta property="og:site_name" content="Troolify">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Text to Slug Converter | URL &amp; SEO Slug Generator">
+<meta property="og:description" content="Turn any headline into a clean, URL-friendly SEO slug instantly - 100% client-side.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://f9xr.github.io/troolify/tools/text/text-to-slug-converter.html">
+<meta property="og:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-08-28">
+<meta property="article:modified_time" content="2026-08-28">
+<meta property="article:section" content="Text Tools">
+<meta property="article:tag" content="Slug Generator">
+<meta property="article:tag" content="Text Tools">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Text to Slug Converter | URL &amp; SEO Slug Generator">
+<meta name="twitter:description" content="Turn any headline into a clean, URL-friendly SEO slug instantly - 100% browser based, zero data retention.">
+<meta name="twitter:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://f9xr.github.io/troolify/index.html" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://f9xr.github.io/troolify/tools/index.html" },
+    { "@type": "ListItem", "position": 3, "name": "Text Tools", "item": "https://f9xr.github.io/troolify/tools/text/" },
+    { "@type": "ListItem", "position": 4, "name": "Text to Slug Converter", "item": "https://f9xr.github.io/troolify/tools/text/text-to-slug-converter.html" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Text to Slug Converter",
+  "url": "https://f9xr.github.io/troolify/tools/text/text-to-slug-converter.html",
+  "applicationCategory": "UtilitiesApplication",
+  "applicationSubCategory": "URL & SEO Slug Generator",
+  "operatingSystem": "Any (web browser)",
+  "featureList": ["Live slug generation", "Accent and punctuation stripping", "Hyphen or underscore separators", "URL preview", "Copy-ready output", "100% client-side processing"],
+  "description": "Turn any headline into a clean, URL-friendly SEO slug instantly, with lowercasing, accented-character stripping and a live URL preview.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "datePublished": "2026-08-28",
+  "dateModified": "2026-08-28",
+  "author": { "@type": "Organization", "name": "F9XR Development Team", "url": "https://f9xr.github.io/" },
+  "publisher": { "@type": "Organization", "name": "Troolify", "url": "https://f9xr.github.io/troolify/", "logo": { "@type": "ImageObject", "url": "https://f9xr.github.io/troolify/assets/images/logo_nobg.webp", "width": 1407, "height": 768 } }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a URL slug?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A slug is the part of a URL that identifies a page in a readable way, such as best-coffee-shops-2026 in example.com/blog/best-coffee-shops-2026. Slugs usually use lowercase words separated by hyphens and are derived from the page title or headline." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a slug affect SEO?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, indirectly. Google uses the URL, including the slug, when assessing and displaying search results. Short, descriptive slugs that include the target keyword tend to earn higher click-through rates and make page content easier to understand." }
+    },
+    {
+      "@type": "Question",
+      "name": "Why strip accents from text before making a slug?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Accented characters such as &eacute;, &ouml; and &ntilde; may not be encoded consistently across systems and can look ugly in URLs. Converting them to their base letters (e -> e, o -> o, n -> n) produces clean, predictable slugs that work everywhere." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the Troolify slug converter private?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Conversion runs entirely inside your browser tab. Your headlines and text are never uploaded, stored, or transmitted to a server." }
+    }
+  ]
+}
+</script>
+
+<link rel="icon" type="image/webp" href="../../assets/images/favicon.webp"><link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../../assets/css/tailwind.css">
+<link rel="stylesheet" href="../../assets/css/tool.css">
+<link rel="stylesheet" href="../../assets/css/site-shell.css">
+<link rel="stylesheet" href="../../assets/css/tool-page.css">
+<link rel="stylesheet" href="../../assets/css/seo-article.css">
+<style>
+.opts-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:14px}
+@media(min-width:720px){.opts-grid{grid-template-columns:1fr 1fr}}
+.slug-url{font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace;font-size:13.5px;word-break:break-all}
+.auto-chk{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:600;color:var(--muted);cursor:pointer;user-select:none}
+.auto-chk input{display:none}
+.auto-ui{width:38px;height:21px;border-radius:999px;background:var(--border);position:relative;transition:background .2s ease;flex-shrink:0}
+.auto-ui::after{content:"";position:absolute;top:2.5px;left:3px;width:16px;height:16px;border-radius:50%;background:#fff;transition:transform .22s cubic-bezier(.16,1,.3,1);box-shadow:0 1px 3px rgba(0,0,0,.35)}
+.auto-chk input:checked + .auto-ui{background:var(--accent)}
+.auto-chk input:checked + .auto-ui::after{transform:translateX(16px)}
+</style>
+</head>
+<body data-layout="tool">
+<noscript>
+    <nav aria-label="Primary" style="position:static;display:block;padding:1rem 1.5rem;background:#212529;border-bottom:1px solid #343A40;text-align:center;font-size:0.9rem;">
+        <a href="../../index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Home</a>
+        <a href="../../tools/index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Tools</a>
+        <a href="../../pages/about.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">About</a>
+        <a href="../../pages/contact.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Contact</a>
+    </nav>
+</noscript>
+
+<main class="tool-main">
+  <div class="container">
+
+    <div class="tool-head hero">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="../../tools/index.html">Tools</a></li>
+          <li><a href="../index.html">Text Tools</a></li>
+          <li class="current" aria-current="page">Text to Slug Converter</li>
+        </ol>
+      </nav>
+      <div class="hero-main">
+        <span class="tool-badge"><span class="dot"></span>100% client-side &middot; zero data retention</span>
+        <h1>Text to Slug Converter</h1>
+        <p>Type a headline and get a clean, SEO-friendly URL slug instantly: lowercase, accent-free, punctuation stripped, with hyphens or underscores. Preview the final URL as you type.</p>
+      </div>
+      <div class="hero-box hero-cat">
+        <h3 class="hero-box-title"><i class="fa-solid fa-folder-open"></i>Category</h3>
+        <div class="tool-meta">
+          <span class="tool-tag"><i class="fa-solid fa-tag"></i>SEO</span>
+          <a class="tool-cat" href="../index.html" aria-label="Browse Text Tools category"><i class="fa-solid fa-folder"></i>Text Tools</a>
+        </div>
+      </div>
+      <div class="hero-box hero-qa">
+        <h3 class="hero-box-title"><i class="fa-solid fa-bolt"></i>Quick Actions</h3>
+        <div class="tool-actions">
+          <button class="rt-btn" type="button" id="btnShare"><i class="fa-solid fa-share-nodes"></i>Share</button>
+          <button class="rt-btn" type="button" id="btnEmbed"><i class="fa-solid fa-code"></i>Embed Tool</button>
+          <a class="rt-btn" href="../../pages/feedback.html"><i class="fa-solid fa-comment"></i>Feedback</a>
+        </div>
+      </div>
+      <div class="hero-box hero-details">
+        <h3 class="hero-box-title"><i class="fa-solid fa-circle-info"></i>Tool Details</h3>
+        <div class="tool-details">
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.github.io/" target="_blank" rel="noopener">F9XR Development Team</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-check-double"></i>Reviewed by</span><a class="detail-value" href="../../press/editorial-policies.html">Review Board</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-clock-rotate-left"></i>Last updated</span><span class="detail-value">28 August 2026</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel clean">
+      <div class="panel-inner">
+        <div class="toolbar-row">
+          <span class="tool-label"><i class="fa-solid fa-heading"></i>Headline</span>
+          <div class="toolbar-actions">
+            <button class="chip-btn" type="button" id="slugSample" title="Load a sample headline"><i class="fa-solid fa-wand-magic-sparkles"></i><span class="hide-sm">Sample</span></button>
+            <button class="chip-btn" type="button" id="slugClear" title="Clear the input"><i class="fa-solid fa-eraser"></i><span class="hide-sm">Clear</span></button>
+          </div>
+        </div>
+
+        <textarea id="slugInput" spellcheck="false" aria-label="Headline to convert" placeholder="Type a headline, e.g. 10 Best Coffee Shops in Paris - 2026 Edition!&hellip;" style="min-height:120px"></textarea>
+
+        <div class="opts-grid">
+          <label class="auto-chk" for="slugLower">
+            <input type="checkbox" id="slugLower" checked>
+            <span class="auto-ui" aria-hidden="true"></span>
+            <span>Lowercase only (recommended for SEO)</span>
+          </label>
+          <label class="auto-chk" for="slugUnderscore">
+            <input type="checkbox" id="slugUnderscore">
+            <span class="auto-ui" aria-hidden="true"></span>
+            <span>Use underscores instead of hyphens</span>
+          </label>
+          <label class="auto-chk" for="slugTrim">
+            <input type="checkbox" id="slugTrim">
+            <span class="auto-ui" aria-hidden="true"></span>
+            <span>Trim trailing number suffix (e.g. -2026)</span>
+          </label>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn-primary" type="button" id="slugCopy"><i class="fa-solid fa-copy"></i>Copy slug</button>
+          <button class="btn" type="button" id="urlCopy"><i class="fa-solid fa-link"></i>Copy URL</button>
+        </div>
+
+        <div class="output slug-url" id="slugOut" aria-live="polite"></div>
+
+        <div class="result-card">
+          <div class="result-row hero-row"><span>Final URL preview</span><b>https://example.com/</b></div>
+          <div class="result-row"><span>Slug</span><b class="slug-url" id="slugPreview" style="text-align:left"></b></div>
+        </div>
+
+        <p class="proc-line"><i class="fa-solid fa-bolt"></i><span id="slugProc">Ready - conversion happens in this tab.</span></p>
+      </div>
+    </div>
+
+    <aside class="disclaimer" aria-label="Disclaimer">
+      <i class="fa-solid fa-circle-info"></i>
+      <p>Disclaimer: Whilst every effort has been made in building our tools, we are not to be held liable for any damages or monetary losses arising out of or in connection with their use. <a href="../../press/disclaimer.html">Full disclaimer</a>.</p>
+    </aside>
+
+    <div class="article-layout">
+      <article class="seo-article">
+        <h2 id="article-title">Text to Slug Converter: Build Clean URLs That Rank Better</h2>
+        <p>A readable URL tells both users and search engines what a page is about before they click. This slug converter turns any headline into that clean URL string automatically - lowercase, accent-free, punctuation stripped, and ready to paste into your CMS.</p>
+
+        <h2 id="what-is-a-slug">What Is a URL Slug?</h2>
+        <p>A slug is the tail of a URL that describes a specific page, such as <code>best-coffee-shops-paris</code> in <code>example.com/guides/best-coffee-shops-paris</code>. WordPress and other platforms generate slugs from titles, but the defaults are often messy - full of capital letters, accented characters and odd punctuation.</p>
+        <p>Great slugs are short, lowercase, use hyphens between words, and carry the page's main keyword. Words separated by hyphens are the convention Google explicitly recommends for URLs.</p>
+
+        <h2 id="how-it-works">How the Converter Cleans Text</h2>
+        <ol>
+          <li><strong>Accent folding</strong> - café and São become cafe and Sao using Unicode normalization.</li>
+          <li><strong>Lowercasing</strong> - every letter becomes lowercase (toggleable).</li>
+          <li><strong>Punctuation stripping</strong> - commas, apostrophes, exclamation marks and symbols are removed.</li>
+          <li><strong>Joining</strong> - remaining words are joined with hyphens (or underscores).</li>
+        </ol>
+        <p>The result previews as a full URL so you can see exactly what your post link will look like before publishing.</p>
+
+        <h2 id="options">Useful Options</h2>
+        <ul>
+          <li><strong>Lowercase only</strong> - recommended so slugs stay consistent regardless of how they are typed.</li>
+          <li><strong>Use underscores</strong> - for file names or systems that expect snake_case instead of kebab-case.</li>
+          <li><strong>Trim number suffix</strong> - drops patterns like -2026 from the end, handy when republishing year-marked posts.</li>
+        </ul>
+
+        <h2 id="seo-tips">Slug Best Practices for SEO</h2>
+        <p>Keep slugs under about 60 characters, include the exact target keyword, and avoid stop words like the, and, or of when they add nothing. Do not change a slug after a post starts getting traffic unless you set up a redirect. For more around keyword planning, pair this with the <a href="word-frequency-counter.html">Word Frequency Counter</a> to pick the right phrases, and the <a href="character-case-converter.html">Character Case Converter</a> to normalise headings before slugging them.</p>
+
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+
+        <details class="faq-item">
+          <summary>What is a URL slug?</summary>
+          <div class="faq-a">
+            <p>A slug is the part of a URL that identifies a page in a readable way, such as best-coffee-shops-2026 in example.com/blog/best-coffee-shops-2026. Slugs usually use lowercase words separated by hyphens and are derived from the page title or headline.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Does a slug affect SEO?</summary>
+          <div class="faq-a">
+            <p>Yes, indirectly. Google uses the URL, including the slug, when assessing and displaying search results. Short, descriptive slugs that include the target keyword tend to earn higher click-through rates and make page content easier to understand.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Why strip accents from text before making a slug?</summary>
+          <div class="faq-a">
+            <p>Accented characters such as &eacute;, &ouml; and &ntilde; may not be encoded consistently across systems and can look ugly in URLs. Converting them to their base letters produces clean, predictable slugs that work everywhere.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Is the Troolify slug converter private?</summary>
+          <div class="faq-a">
+            <p>Yes. Conversion runs entirely inside your browser tab. Your headlines and text are never uploaded, stored, or transmitted to a server.</p>
+          </div>
+        </details>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>A great slug is free SEO. Convert your headlines here, copy the clean result into your publishing platform, and publish links that look professional and describe their content at a glance.</p>
+      </article>
+    </div>
+
+    <section class="keyword-box" aria-label="Keywords and tags">
+      <h2>Keyword &amp; Tags</h2>
+      <h3>Keywords</h3>
+      <div class="keywords">
+        <span class="keyword">slug generator</span>
+        <span class="keyword">url slug</span>
+        <span class="keyword">seo slug</span>
+        <span class="keyword">text to slug</span>
+        <span class="keyword">clean url generator</span>
+        <span class="keyword">permalink generator</span>
+        <span class="keyword">kebab case</span>
+        <span class="keyword">text tools</span>
+      </div>
+      <h3>Tags</h3>
+      <div class="tags">
+        <a class="tag" href="../index.html"><i class="fa-solid fa-tag"></i>SEO</a>
+        <a class="tag" href="../index.html"><i class="fa-solid fa-folder"></i>Text Tools</a>
+        <a class="tag" href="../../tools/index.html"><i class="fa-solid fa-cube"></i>Text</a>
+      </div>
+    </section>
+
+    <section class="author-box" aria-label="About the publisher">
+      <div class="author-avatar" aria-hidden="true"><img src="../../assets/images/logo_nobg.webp" alt="F9XR logo" loading="lazy" decoding="async" width="1407" height="768"></div>
+      <div>
+        <span class="author-role">Published by</span>
+        <h2>F9XR Development Team</h2>
+        <p>Every Troolify tool is built and reviewed by the F9XR Development Team, then checked by our Review Board for correctness, accessibility, and clarity. Tools run 100% client-side with zero data retention.</p>
+        <div class="author-links">
+          <a href="https://f9xr.github.io/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i>F9XR Team</a>
+          <a href="../../press/editorial-policies.html"><i class="fa-solid fa-scale-balanced"></i>Editorial Policies</a>
+          <a href="https://github.com/f9xr" target="_blank" rel="noopener" aria-label="F9XR on GitHub"><i class="fa-brands fa-github"></i>GitHub</a>
+          <a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on LinkedIn"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+          <a href="https://instagram.com/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on Instagram"><i class="fa-brands fa-instagram"></i>Instagram</a>
+          <a href="https://youtube.com/@QuarterlyLIV" target="_blank" rel="noopener" aria-label="F9XR on YouTube"><i class="fa-brands fa-youtube"></i>YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-tools" aria-label="Related tools">
+      <h2>Related Tools</h2>
+      <div class="related-search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" id="relatedSearch" placeholder="Search all Troolify tools&hellip;" autocomplete="off" aria-label="Search related tools">
+      </div>
+      <div class="related-grid" id="relatedGrid" aria-busy="true">
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+      </div>
+    </section>
+
+    <section class="comments" aria-label="Comments">
+      <h2>Comments</h2>
+      <div id="comments">
+        <script src="https://utteranc.es/client.js" repo="f9xr/troolify" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async></script>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"><span></span><i class="fa-solid fa-layer-group"></i><span></span></div>
+
+  </div>
+</main>
+
+<script src="../../assets/js/layout.js" defer></script>
+<script src="../../assets/js/tools-data.js" defer></script>
+<script src="../../assets/js/tool-page.js" defer></script>
+<script>
+(function(){
+  "use strict";
+  var input = document.getElementById("slugInput");
+  var lowerCk = document.getElementById("slugLower");
+  var underscoreCk = document.getElementById("slugUnderscore");
+  var trimCk = document.getElementById("slugTrim");
+  var out = document.getElementById("slugOut");
+  var preview = document.getElementById("slugPreview");
+  var proc = document.getElementById("slugProc");
+  var lastSlug = "";
+  var lastUrl = "";
+
+  function build(){
+    var t0 = performance.now();
+    var s = String(input.value || "").replace(/\r?\n/g, " ").trim();
+    s = s.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    if (lowerCk.checked) s = s.toLowerCase();
+    s = s.replace(/[^\p{L}\p{N}\s-]/gu, "");
+    var sep = underscoreCk.checked ? "_" : "-";
+    var parts = s.split(/[\s_\-]+/).filter(Boolean);
+    var slug = parts.join(sep);
+    slug = slug.replace(new RegExp("^[" + sep + "]+|[" + sep + "]+$", "g"), "");
+    if (trimCk.checked) slug = slug.replace(new RegExp(sep + "\\d+$"), "");
+
+    lastSlug = slug;
+    lastUrl = slug ? "https://example.com/" + slug : "";
+    out.textContent = slug || "(empty - type a headline above)";
+    out.classList.add("visible");
+    preview.textContent = slug || "-";
+    proc.textContent = "Slug generated in " + (performance.now() - t0).toFixed(1) + " ms - inside your browser. 0 bytes uploaded.";
+  }
+
+  input.addEventListener("input", build);
+  lowerCk.addEventListener("change", build);
+  underscoreCk.addEventListener("change", build);
+  trimCk.addEventListener("change", build);
+
+  document.getElementById("slugCopy").addEventListener("click", function(){
+    window.Troolify.copyToClipboard(lastSlug, function(){ proc.textContent = "Copied slug to clipboard - it never left your device."; });
+  });
+
+  document.getElementById("urlCopy").addEventListener("click", function(){
+    window.Troolify.copyToClipboard(lastUrl, function(){ proc.textContent = "Copied final URL to clipboard - it never left your device."; });
+  });
+
+  document.getElementById("slugSample").addEventListener("click", function(){
+    input.value = "10 Best Coffee Shops in Paris - 2026 Edition!";
+    build();
+    input.focus();
+  });
+
+  document.getElementById("slugClear").addEventListener("click", function(){
+    input.value = "";
+    build();
+    input.focus();
+  });
+
+  build();
+})();
+</script>
+</body>
+</html>

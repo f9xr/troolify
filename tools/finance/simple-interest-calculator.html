@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Interest Calculator | Interest, Principal, Rate or Time</title>
+<meta name="description" content="Calculate simple interest, or solve for principal, rate or time. Free online simple interest calculator - 100% client-side, nothing leaves your browser.">
+<meta name="author" content="F9XR Development Team">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#212529">
+<link rel="canonical" href="https://f9xr.github.io/troolify/tools/finance/simple-interest-calculator.html">
+<meta property="og:site_name" content="Troolify">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Simple Interest Calculator | Interest, Principal, Rate or Time">
+<meta property="og:description" content="Find simple interest, total amount, rate or time for any loan or deposit. Free, private and 100% client-side.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://f9xr.github.io/troolify/tools/finance/simple-interest-calculator.html">
+<meta property="og:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-08-28">
+<meta property="article:modified_time" content="2026-08-28">
+<meta property="article:section" content="Finance Tools">
+<meta property="article:tag" content="Simple Interest">
+<meta property="article:tag" content="Finance Tools">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Simple Interest Calculator | Interest, Principal, Rate or Time">
+<meta name="twitter:description" content="Solve simple interest problems in any direction - 100% browser based and private.">
+<meta name="twitter:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://f9xr.github.io/troolify/index.html" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://f9xr.github.io/troolify/tools/index.html" },
+    { "@type": "ListItem", "position": 3, "name": "Finance Tools", "item": "https://f9xr.github.io/troolify/tools/finance/" },
+    { "@type": "ListItem", "position": 4, "name": "Simple Interest Calculator", "item": "https://f9xr.github.io/troolify/tools/finance/simple-interest-calculator.html" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Simple Interest Calculator",
+  "url": "https://f9xr.github.io/troolify/tools/finance/simple-interest-calculator.html",
+  "applicationCategory": "FinanceApplication",
+  "applicationSubCategory": "Simple Interest & Rate-of-Return Calculator",
+  "operatingSystem": "Any (web browser)",
+  "featureList": ["Calculate simple interest", "Find total amount", "Solve for interest rate", "Solve for time period", "100% client-side processing"],
+  "description": "Calculate simple interest, or solve for principal, rate or time. Free online simple interest calculator - 100% client-side.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "datePublished": "2026-08-28",
+  "dateModified": "2026-08-28",
+  "author": { "@type": "Organization", "name": "F9XR Development Team", "url": "https://f9xr.github.io/" },
+  "publisher": { "@type": "Organization", "name": "Troolify", "url": "https://f9xr.github.io/troolify/", "logo": { "@type": "ImageObject", "url": "https://f9xr.github.io/troolify/assets/images/logo_nobg.webp", "width": 1407, "height": 768 } }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is simple interest?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Simple interest is interest calculated only on the original principal, never on previously earned interest. The formula is Interest = Principal × Rate × Time. It is commonly used for short-term loans, bonds and promissory notes." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between simple and compound interest?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Simple interest is charged only on the original principal each period, so growth is linear. Compound interest adds each period's interest to the balance so growth accelerates. Over long periods compound interest produces dramatically larger totals." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the Troolify simple interest calculator safe to use?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every calculation runs locally inside your browser tab. Your numbers are never uploaded, stored, or transmitted to a server, so your financial figures stay completely private." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I find the interest rate or time in simple interest?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Rearrange the formula: Rate = Interest / (Principal × Time) and Time = Interest / (Principal × Rate). Our calculator solves for the unknown automatically in the Find rate and Find time modes." }
+    }
+  ]
+}
+</script>
+
+<link rel="icon" type="image/webp" href="../../assets/images/favicon.webp"><link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../../assets/css/tailwind.css">
+<link rel="stylesheet" href="../../assets/css/tool.css">
+<link rel="stylesheet" href="../../assets/css/site-shell.css">
+<link rel="stylesheet" href="../../assets/css/tool-page.css">
+<link rel="stylesheet" href="../../assets/css/seo-article.css">
+<style>
+.calc-grid{display:grid;grid-template-columns:1fr;gap:18px}
+@media(min-width:720px){.calc-grid{grid-template-columns:1fr 1fr}}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:12.5px;font-weight:700;color:var(--muted)}
+.field input,.field select{background:#1B2028;border:1px solid var(--border);color:var(--ink);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:15px;font-weight:600;outline:none;width:100%;box-sizing:border-box}
+.field input:focus,.field select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+.seg{display:flex;background:#161B22;border:1px solid var(--border);border-radius:10px;padding:4px;gap:4px;flex-wrap:wrap}
+.seg-btn{flex:1;min-width:120px;border:0;background:transparent;color:var(--muted);font-family:inherit;font-size:13px;font-weight:700;padding:9px 10px;border-radius:7px;cursor:pointer;transition:background .15s,color .15s}
+.seg-btn.active{background:rgba(59,130,246,.16);color:#93C5FD}
+.seg-btn:hover:not(.active){background:rgba(255,255,255,.04)}
+.hidden{display:none}
+.result-card{background:linear-gradient(180deg,rgba(59,130,246,.12),rgba(59,130,246,.03));border:1px solid rgba(96,165,250,.25);border-radius:14px;padding:18px;margin-top:18px}
+.result-row{display:flex;justify-content:space-between;gap:10px;padding:8px 2px;font-size:14px}
+.result-row+.result-row{border-top:1px dashed rgba(255,255,255,.08)}
+.result-row b{color:#93C5FD;font-weight:800;text-align:right}
+.result-row.hero-row b{color:#6EE7B7}
+.result-row.interest-row b{color:#FBBF24}
+.note{font-size:13px;color:var(--muted);margin-top:12px}
+.note.warn{color:#FBBF24}
+</style>
+</head>
+<body data-layout="tool">
+<noscript>
+    <nav aria-label="Primary" style="position:static;display:block;padding:1rem 1.5rem;background:#212529;border-bottom:1px solid #343A40;text-align:center;font-size:0.9rem;">
+        <a href="../../index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Home</a>
+        <a href="../../tools/index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Tools</a>
+        <a href="../../pages/about.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">About</a>
+        <a href="../../pages/contact.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Contact</a>
+    </nav>
+</noscript>
+
+<main class="tool-main">
+  <div class="container">
+
+    <div class="tool-head hero">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="../../tools/index.html">Tools</a></li>
+          <li><a href="../index.html">Finance Tools</a></li>
+          <li class="current" aria-current="page">Simple Interest Calculator</li>
+        </ol>
+      </nav>
+      <div class="hero-main">
+        <span class="tool-badge"><span class="dot"></span>100% client-side &middot; zero data retention</span>
+        <h1>Simple Interest Calculator</h1>
+        <p>Simple interest is linear and easy - if you know the formula. This calculator works it in any direction: compute the interest from a principal, rate and time, or solve for the rate or time when you already know the interest.</p>
+      </div>
+      <div class="hero-box hero-cat">
+        <h3 class="hero-box-title"><i class="fa-solid fa-folder-open"></i>Category</h3>
+        <div class="tool-meta">
+          <span class="tool-tag"><i class="fa-solid fa-tag"></i>Interest</span>
+          <a class="tool-cat" href="../index.html" aria-label="Browse Finance Tools category"><i class="fa-solid fa-folder"></i>Finance Tools</a>
+        </div>
+      </div>
+      <div class="hero-box hero-qa">
+        <h3 class="hero-box-title"><i class="fa-solid fa-bolt"></i>Quick Actions</h3>
+        <div class="tool-actions">
+          <button class="rt-btn" type="button" id="btnShare"><i class="fa-solid fa-share-nodes"></i>Share</button>
+          <button class="rt-btn" type="button" id="btnEmbed"><i class="fa-solid fa-code"></i>Embed Tool</button>
+          <a class="rt-btn" href="../../pages/feedback.html"><i class="fa-solid fa-comment"></i>Feedback</a>
+        </div>
+      </div>
+      <div class="hero-box hero-details">
+        <h3 class="hero-box-title"><i class="fa-solid fa-circle-info"></i>Tool Details</h3>
+        <div class="tool-details">
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.github.io/" target="_blank" rel="noopener">F9XR Development Team</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-check-double"></i>Reviewed by</span><a class="detail-value" href="../../press/editorial-policies.html">Review Board</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-clock-rotate-left"></i>Last updated</span><span class="detail-value">28 August 2026</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel clean">
+      <div class="panel-inner">
+        <div class="field"><label for="siMode">Solve for</label>
+          <div class="seg" role="tablist" aria-label="Calculation mode">
+            <button class="seg-btn active" type="button" data-mode="interest" role="tab" aria-selected="true">Calculate interest</button>
+            <button class="seg-btn" type="button" data-mode="rate" role="tab" aria-selected="false">Find rate</button>
+            <button class="seg-btn" type="button" data-mode="time" role="tab" aria-selected="false">Find time</button>
+          </div>
+        </div>
+        <div class="calc-grid">
+          <div class="field" id="siPField"><label for="siP">Principal ($)</label><input id="siP" type="number" inputmode="decimal" min="0" step="any" value="10000"></div>
+          <div class="field" id="siRField"><label for="siR">Annual interest rate (%)</label><input id="siR" type="number" inputmode="decimal" min="0" step="any" value="5"></div>
+          <div class="field" id="siTField"><label for="siT">Time (years)</label><input id="siT" type="number" inputmode="decimal" min="0" step="any" value="3"></div>
+          <div class="field" id="siIField"><label for="siI">Interest ($)</label><input id="siI" type="number" inputmode="decimal" min="0" step="any" value="1500"></div>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn-primary" type="button" id="btnCopy"><i class="fa-solid fa-copy"></i>Copy result</button>
+        </div>
+
+        <div class="result-card" id="siResults" aria-live="polite"></div>
+        <p class="proc-line"><i class="fa-solid fa-bolt"></i><span id="siProc">Ready - calculations happen in this tab.</span></p>
+      </div>
+    </div>
+
+    <aside class="disclaimer" aria-label="Disclaimer">
+      <i class="fa-solid fa-circle-info"></i>
+      <p>Disclaimer: Whilst every effort has been made in building our tool, we are not to be held liable for any damages or monetary losses arising out of or in connection with its use. This calculator is an estimate, not financial advice. <a href="../../press/disclaimer.html">Full disclaimer</a>.</p>
+    </aside>
+
+    <div class="article-layout">
+      <article class="seo-article">
+        <h2 id="article-title">Simple Interest Calculator: One Formula, Any Direction</h2>
+        <p>Simple interest is the most transparent way money is priced: a fixed percentage of your principal, every year, with no snowballing. This calculator lets you use the formula forwards (find the interest and total amount) or backwards (find the rate or the time).</p>
+
+        <h2 id="the-formula">The Simple Interest Formula</h2>
+        <p><strong>Interest = Principal &times; Rate &times; Time</strong></p>
+        <p>with the rate as a decimal and time in years. The <strong>total amount</strong> is simply principal + interest. Because the rate is steady and the principal never grows, the math stays linear and easy to check by hand.</p>
+
+        <h2 id="how-to-use">How to Use the Simple Interest Calculator</h2>
+        <ol>
+          <li><strong>Calculate interest</strong> - enter principal, rate and time to get the interest and the total amount.</li>
+          <li><strong>Find rate</strong> - if you know the interest earned, enter principal, time and interest to solve the rate.</li>
+          <li><strong>Find time</strong> - enter principal, rate and interest to see how many years it takes.</li>
+        </ol>
+        <p>In the Calculate mode, the time field accepts decimals and fractions of a year (for example 0.5 for six months), so short loans and deposits work exactly as well as long ones.</p>
+
+        <h2 id="simple-vs-compound">Simple vs Compound Interest</h2>
+        <p>Simple interest suits short-term loans and bonds. For anything spanning years, compounding changes the picture dramatically - that is why long-term savings are quoted with compounding. Compare both before you decide: use this calculator for the linear view and our <a href="compound-interest-calculator.html">Compound Interest Calculator</a> for the grow-on-earnings view.</p>
+
+        <h2 id="real-world-uses">Where Simple Interest Shows Up</h2>
+        <p>Vehicle loans, personal loans and payday lending often use simple interest, as do many bonds and most bank interest calculations on short terms. When you lend to a friend, this is also the honest way to price the favor - principal, rate and time, nothing hidden. Our <a href="loan-payment-calculator.html">Loan Payment Calculator</a> covers the amortizing counterpart for bigger purchases.</p>
+
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+
+        <details class="faq-item">
+          <summary>What is simple interest?</summary>
+          <div class="faq-a">
+            <p>Simple interest is interest calculated only on the original principal, never on previously earned interest. The formula is Interest = Principal &times; Rate &times; Time, and it is common for short-term loans, bonds and promissory notes.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>What is the difference between simple and compound interest?</summary>
+          <div class="faq-a">
+            <p>Simple interest is charged only on the original principal, so growth is linear. Compound interest adds each period's interest to the balance so growth accelerates. Over long periods compound interest produces dramatically larger totals.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Is the Troolify simple interest calculator safe to use?</summary>
+          <div class="faq-a">
+            <p>Yes. Every calculation runs locally inside your browser tab. Your numbers are never uploaded, stored, or transmitted to a server, so your financial figures stay completely private.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>How do I find the interest rate or time in simple interest?</summary>
+          <div class="faq-a">
+            <p>Rearrange the formula: Rate = Interest / (Principal &times; Time) and Time = Interest / (Principal &times; Rate). The calculator solves for the unknown automatically in the Find rate and Find time modes.</p>
+          </div>
+        </details>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>Simple interest is predictable but easy to misjudge. Whether you are lending, borrowing, or checking a quoted rate, running it through this calculator means you always know the real number before you agree to the deal.</p>
+      </article>
+    </div>
+
+    <section class="keyword-box" aria-label="Keywords and tags">
+      <h2>Keyword &amp; Tags</h2>
+      <h3>Keywords</h3>
+      <div class="keywords">
+        <span class="keyword">simple interest calculator</span>
+        <span class="keyword">simple interest formula</span>
+        <span class="keyword">calculate interest</span>
+        <span class="keyword">interest rate</span>
+        <span class="keyword">loan interest</span>
+        <span class="keyword">total amount</span>
+        <span class="keyword">principal</span>
+        <span class="keyword">finance tools</span>
+      </div>
+      <h3>Tags</h3>
+      <div class="tags">
+        <a class="tag" href="../index.html"><i class="fa-solid fa-tag"></i>Interest</a>
+        <a class="tag" href="../index.html"><i class="fa-solid fa-folder"></i>Finance Tools</a>
+        <a class="tag" href="../../tools/index.html"><i class="fa-solid fa-cube"></i>Finance</a>
+      </div>
+    </section>
+
+    <section class="author-box" aria-label="About the publisher">
+      <div class="author-avatar" aria-hidden="true"><img src="../../assets/images/logo_nobg.webp" alt="F9XR logo" loading="lazy" decoding="async" width="1407" height="768"></div>
+      <div>
+        <span class="author-role">Published by</span>
+        <h2>F9XR Development Team</h2>
+        <p>Every Troolify tool is built and reviewed by the F9XR Development Team, then checked by our Review Board for correctness, accessibility, and clarity. Tools run 100% client-side with zero data retention.</p>
+        <div class="author-links">
+          <a href="https://f9xr.github.io/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i>F9XR Team</a>
+          <a href="../../press/editorial-policies.html"><i class="fa-solid fa-scale-balanced"></i>Editorial Policies</a>
+          <a href="https://github.com/f9xr" target="_blank" rel="noopener" aria-label="F9XR on GitHub"><i class="fa-brands fa-github"></i>GitHub</a>
+          <a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on LinkedIn"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+          <a href="https://instagram.com/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on Instagram"><i class="fa-brands fa-instagram"></i>Instagram</a>
+          <a href="https://youtube.com/@QuarterlyLIV" target="_blank" rel="noopener" aria-label="F9XR on YouTube"><i class="fa-brands fa-youtube"></i>YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-tools" aria-label="Related tools">
+      <h2>Related Tools</h2>
+      <div class="related-search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" id="relatedSearch" placeholder="Search all Troolify tools&hellip;" autocomplete="off" aria-label="Search related tools">
+      </div>
+      <div class="related-grid" id="relatedGrid" aria-busy="true">
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+      </div>
+    </section>
+
+    <section class="comments" aria-label="Comments">
+      <h2>Comments</h2>
+      <div id="comments">
+        <script src="https://utteranc.es/client.js" repo="f9xr/troolify" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async></script>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"><span></span><i class="fa-solid fa-layer-group"></i><span></span></div>
+
+  </div>
+</main>
+
+<script src="../../assets/js/layout.js" defer></script>
+<script src="../../assets/js/tools-data.js" defer></script>
+<script src="../../assets/js/tool-page.js" defer></script>
+<script>
+(function(){
+  "use strict";
+  var P=document.getElementById("siP");
+  var R=document.getElementById("siR");
+  var T=document.getElementById("siT");
+  var I=document.getElementById("siI");
+  var fields={P:P,R:R,T:T,I:I};
+  var segBtns=document.querySelectorAll(".seg-btn");
+  var out=document.getElementById("siResults");
+  var proc=document.getElementById("siProc");
+  var mode="interest";
+  var lastText="";
+  var fmt=function(n){ return n.toLocaleString("en-US",{style:"currency",currency:"USD",maximumFractionDigits:n>=1e5?0:2}); };
+  function show(id,show){
+    var el=document.getElementById(id);
+    if(el){ el.classList.toggle("hidden",!show); }
+  }
+  function calc(){
+    var t0=performance.now();
+    var p=parseFloat(P.value);
+    var r=parseFloat(R.value);
+    var t=parseFloat(T.value);
+    var i=parseFloat(I.value);
+    var html="", note="";
+    if(mode==="interest"){
+      if(r===0){ note="Note: a 0% rate produces no interest. Enter a positive rate to see growth."; }
+      if(isNaN(p)||isNaN(r)||isNaN(t)){ html='<div class="result-row hero-row"><span>Interest</span><b>&mdash;</b></div>'; }
+      else{
+        var interest=p*r/100*t;
+        var total=p+interest;
+        html=
+          '<div class="result-row hero-row"><span>Interest</span><b>'+fmt(interest)+'</b></div>'+
+          '<div class="result-row interest-row"><span>Total amount (principal + interest)</span><b>'+fmt(total)+'</b></div>'+
+          '<div class="result-row"><span>Principal</span><b>'+fmt(p)+'</b></div>';
+        lastText="Interest: $"+interest.toFixed(2)+"\nTotal amount: $"+total.toFixed(2)+"\nPrincipal: $"+p.toFixed(2);
+      }
+    }
+    else if(mode==="rate"){
+      if(p===0||t===0){ note="Principal and time must be greater than zero to find a rate."; html='<div class="result-row hero-row"><span>Annual interest rate</span><b>&mdash;</b></div>'; }
+      else if(isNaN(i)){ html='<div class="result-row hero-row"><span>Annual interest rate</span><b>&mdash;</b></div>'; }
+      else{
+        var rate=i/(p*t)*100;
+        var total2=p+i;
+        html=
+          '<div class="result-row hero-row"><span>Annual interest rate</span><b>'+rate.toFixed(3)+'%</b></div>'+
+          '<div class="result-row interest-row"><span>Total amount (principal + interest)</span><b>'+fmt(total2)+'</b></div>'+
+          '<div class="result-row"><span>Interest</span><b>'+fmt(i)+'</b></div>';
+        lastText="Annual interest rate: "+rate.toFixed(3)+"%\nTotal amount: $"+total2.toFixed(2)+"\nInterest: $"+i.toFixed(2);
+      }
+    }
+    else{
+      if(p===0||r===0){ note="Principal and rate must be greater than zero to find time."; html='<div class="result-row hero-row"><span>Time (years)</span><b>&mdash;</b></div>'; }
+      else if(isNaN(i)){ html='<div class="result-row hero-row"><span>Time (years)</span><b>&mdash;</b></div>'; }
+      else{
+        var time=i/(p*r/100);
+        var yrs=Math.floor(time), mo=Math.round((time-yrs)*12);
+        html=
+          '<div class="result-row hero-row"><span>Time (years)</span><b>'+time.toFixed(2)+'</b></div>'+
+          '<div class="result-row"><span>Approximately</span><b>'+yrs+' yr'+(yrs===1?"":"s")+(mo?(" "+mo+" mo"):"")+'</b></div>'+
+          '<div class="result-row interest-row"><span>Total amount (principal + interest)</span><b>'+fmt(p+i)+'</b></div>';
+        lastText="Time: "+time.toFixed(2)+" years\nTotal amount: $"+(p+i).toFixed(2);
+      }
+    }
+    if(note){ html+='<p class="note warn">'+note+'</p>'; }
+    out.innerHTML=html;
+    proc.textContent="Calculated in "+(performance.now()-t0).toFixed(1)+" ms - inside your browser. 0 bytes uploaded.";
+  }
+  function setLabels(){
+    var L={
+      interest:{P:"Principal ($)",R:"Annual interest rate (%)",T:"Time (years)",I:"Interest ($)"},
+      rate:{P:"Principal ($)",R:"Annual interest rate (%)",T:"Time (years)",I:"Interest ($)"},
+      time:{P:"Principal ($)",R:"Annual interest rate (%)",T:"Time (years)",I:"Interest ($)"}
+    };
+    var active=L[mode];
+    ["siP","siR","siT","siI"].forEach(function(id){
+      var el=document.getElementById(id);
+      if(!el){ return; }
+      var key=id.replace("si","");
+      var lbl=el.closest(".field").querySelector("label");
+      if(lbl){ lbl.textContent=active[key]; }
+    });
+    show("siPField",true);
+    show("siRField",true);
+    show("siIField",true);
+    show("siTField",true);
+  }
+  segBtns.forEach(function(btn){
+    btn.addEventListener("click",function(){
+      segBtns.forEach(function(b){ b.classList.remove("active"); b.setAttribute("aria-selected","false"); });
+      btn.classList.add("active");
+      btn.setAttribute("aria-selected","true");
+      mode=btn.getAttribute("data-mode");
+      setLabels();
+      calc();
+    });
+  });
+  [P,R,T,I].forEach(function(el){ el.addEventListener("input",calc); });
+  document.getElementById("btnCopy").addEventListener("click",function(){
+    window.Troolify.copyToClipboard(lastText,function(){ proc.textContent="Copied to clipboard - the bytes never left your device."; });
+  });
+  setLabels();
+  calc();
+})();
+</script>
+</body>
+</html>

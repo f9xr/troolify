@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Savings Goal Calculator | Monthly Savings to Reach Your Target</title>
+<meta name="description" content="Find your monthly savings contribution to hit any savings goal, with interest growth included. Free online savings goal calculator - 100% client-side, nothing leaves your browser.">
+<meta name="author" content="F9XR Development Team">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#212529">
+<link rel="canonical" href="https://f9xr.github.io/troolify/tools/finance/savings-goal-calculator.html">
+<meta property="og:site_name" content="Troolify">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Savings Goal Calculator | Monthly Savings to Reach Your Target">
+<meta property="og:description" content="Work out the monthly savings you need to hit your goal, with interest growth included. Free, private and 100% client-side.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://f9xr.github.io/troolify/tools/finance/savings-goal-calculator.html">
+<meta property="og:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-08-28">
+<meta property="article:modified_time" content="2026-08-28">
+<meta property="article:section" content="Finance Tools">
+<meta property="article:tag" content="Savings Goals">
+<meta property="article:tag" content="Finance Tools">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Savings Goal Calculator | Monthly Savings to Reach Your Target">
+<meta name="twitter:description" content="Calculate the monthly savings needed to reach your goal, with interest growth - 100% browser based.">
+<meta name="twitter:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://f9xr.github.io/troolify/index.html" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://f9xr.github.io/troolify/tools/index.html" },
+    { "@type": "ListItem", "position": 3, "name": "Finance Tools", "item": "https://f9xr.github.io/troolify/tools/finance/" },
+    { "@type": "ListItem", "position": 4, "name": "Savings Goal Calculator", "item": "https://f9xr.github.io/troolify/tools/finance/savings-goal-calculator.html" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Savings Goal Calculator",
+  "url": "https://f9xr.github.io/troolify/tools/finance/savings-goal-calculator.html",
+  "applicationCategory": "FinanceApplication",
+  "applicationSubCategory": "Savings Targets & Monthly Contribution Planner",
+  "operatingSystem": "Any (web browser)",
+  "featureList": ["Set savings goal and deadline", "Show required monthly contribution", "Factor in current savings", "Include interest growth", "100% client-side processing"],
+  "description": "Find your monthly savings contribution to hit any savings goal, with interest growth included. Free online savings goal calculator - 100% client-side.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "datePublished": "2026-08-28",
+  "dateModified": "2026-08-28",
+  "author": { "@type": "Organization", "name": "F9XR Development Team", "url": "https://f9xr.github.io/" },
+  "publisher": { "@type": "Organization", "name": "Troolify", "url": "https://f9xr.github.io/troolify/", "logo": { "@type": "ImageObject", "url": "https://f9xr.github.io/troolify/assets/images/logo_nobg.webp", "width": 1407, "height": 768 } }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much should I save per month to reach a goal?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Divide the shortfall - your goal minus the future value of your current savings - by the future value of a monthly annuity at your interest rate. The calculator does exactly this, factoring in how interest grows both your current balance and each monthly deposit." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do interest rates affect my savings goal?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A higher interest rate means your money works harder, so the required monthly contribution is lower. Even small rate differences matter over long horizons, which is why it is worth comparing accounts before you commit." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the Troolify savings goal calculator safe to use?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every calculation runs locally inside your browser tab. Your numbers are never uploaded, stored, or transmitted to a server, so your financial figures stay completely private." }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I already have most of the goal saved?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The calculator accounts for your current savings and shows if regular contributions are even needed. If your current balance will already grow past the goal thanks to interest, the required monthly contribution drops to zero." }
+    }
+  ]
+}
+</script>
+
+<link rel="icon" type="image/webp" href="../../assets/images/favicon.webp"><link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../../assets/css/tailwind.css">
+<link rel="stylesheet" href="../../assets/css/tool.css">
+<link rel="stylesheet" href="../../assets/css/site-shell.css">
+<link rel="stylesheet" href="../../assets/css/tool-page.css">
+<link rel="stylesheet" href="../../assets/css/seo-article.css">
+<style>
+.calc-grid{display:grid;grid-template-columns:1fr;gap:18px}
+@media(min-width:720px){.calc-grid{grid-template-columns:1fr 1fr}}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:12.5px;font-weight:700;color:var(--muted)}
+.field input,.field select{background:#1B2028;border:1px solid var(--border);color:var(--ink);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:15px;font-weight:600;outline:none;width:100%;box-sizing:border-box}
+.field input:focus,.field select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+.seg{display:flex;background:#161B22;border:1px solid var(--border);border-radius:10px;padding:4px;gap:4px}
+.seg-btn{flex:1;border:0;background:transparent;color:var(--muted);font-family:inherit;font-size:13px;font-weight:700;padding:9px 10px;border-radius:7px;cursor:pointer;transition:background .15s,color .15s}
+.seg-btn.active{background:rgba(59,130,246,.16);color:#93C5FD}
+.seg-btn:hover:not(.active){background:rgba(255,255,255,.04)}
+.hidden{display:none}
+.result-card{background:linear-gradient(180deg,rgba(59,130,246,.12),rgba(59,130,246,.03));border:1px solid rgba(96,165,250,.25);border-radius:14px;padding:18px;margin-top:18px}
+.result-row{display:flex;justify-content:space-between;gap:10px;padding:8px 2px;font-size:14px}
+.result-row+.result-row{border-top:1px dashed rgba(255,255,255,.08)}
+.result-row b{color:#93C5FD;font-weight:800;text-align:right}
+.result-row.hero-row b{color:#6EE7B7}
+.note{font-size:13px;color:var(--muted);margin-top:12px}
+.note.warn{color:#FBBF24}
+</style>
+</head>
+<body data-layout="tool">
+<noscript>
+    <nav aria-label="Primary" style="position:static;display:block;padding:1rem 1.5rem;background:#212529;border-bottom:1px solid #343A40;text-align:center;font-size:0.9rem;">
+        <a href="../../index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Home</a>
+        <a href="../../tools/index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Tools</a>
+        <a href="../../pages/about.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">About</a>
+        <a href="../../pages/contact.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Contact</a>
+    </nav>
+</noscript>
+
+<main class="tool-main">
+  <div class="container">
+
+    <div class="tool-head hero">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="../../tools/index.html">Tools</a></li>
+          <li><a href="../index.html">Finance Tools</a></li>
+          <li class="current" aria-current="page">Savings Goal Calculator</li>
+        </ol>
+      </nav>
+      <div class="hero-main">
+        <span class="tool-badge"><span class="dot"></span>100% client-side &middot; zero data retention</span>
+        <h1>Savings Goal Calculator</h1>
+        <p>Turn any savings target into a concrete monthly plan. Enter your goal, what you already have, a deadline, and let interest do part of the work - the calculator returns the exact monthly contribution you need.</p>
+      </div>
+      <div class="hero-box hero-cat">
+        <h3 class="hero-box-title"><i class="fa-solid fa-folder-open"></i>Category</h3>
+        <div class="tool-meta">
+          <span class="tool-tag"><i class="fa-solid fa-tag"></i>Savings</span>
+          <a class="tool-cat" href="../index.html" aria-label="Browse Finance Tools category"><i class="fa-solid fa-folder"></i>Finance Tools</a>
+        </div>
+      </div>
+      <div class="hero-box hero-qa">
+        <h3 class="hero-box-title"><i class="fa-solid fa-bolt"></i>Quick Actions</h3>
+        <div class="tool-actions">
+          <button class="rt-btn" type="button" id="btnShare"><i class="fa-solid fa-share-nodes"></i>Share</button>
+          <button class="rt-btn" type="button" id="btnEmbed"><i class="fa-solid fa-code"></i>Embed Tool</button>
+          <a class="rt-btn" href="../../pages/feedback.html"><i class="fa-solid fa-comment"></i>Feedback</a>
+        </div>
+      </div>
+      <div class="hero-box hero-details">
+        <h3 class="hero-box-title"><i class="fa-solid fa-circle-info"></i>Tool Details</h3>
+        <div class="tool-details">
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.github.io/" target="_blank" rel="noopener">F9XR Development Team</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-check-double"></i>Reviewed by</span><a class="detail-value" href="../../press/editorial-policies.html">Review Board</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-clock-rotate-left"></i>Last updated</span><span class="detail-value">28 August 2026</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel clean">
+      <div class="panel-inner">
+        <div class="calc-grid">
+          <div class="field"><label for="sgGoal">Savings goal ($)</label><input id="sgGoal" type="number" inputmode="decimal" min="0" step="any" value="50000"></div>
+          <div class="field"><label for="sgCurrent">Current savings ($)</label><input id="sgCurrent" type="number" inputmode="decimal" min="0" step="any" value="5000"></div>
+          <div class="field"><label for="sgRate">Annual interest rate (%)</label><input id="sgRate" type="number" inputmode="decimal" min="0" step="any" value="4"></div>
+          <div class="field"><label for="sgHorizon">Set deadline by</label>
+            <div class="seg" role="tablist" aria-label="Deadline type">
+              <button class="seg-btn active" type="button" data-hz="months" role="tab" aria-selected="true">Months</button>
+              <button class="seg-btn" type="button" data-hz="date" role="tab" aria-selected="false">Target date</button>
+            </div>
+          </div>
+          <div class="field" id="sgMonthsField"><label for="sgMonths">Months horizon</label><input id="sgMonths" type="number" inputmode="decimal" min="1" step="1" value="60"></div>
+          <div class="field hidden" id="sgDateField"><label for="sgDate">Target date</label><input id="sgDate" type="date" min="2026-09-01"></div>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn-primary" type="button" id="btnCopy"><i class="fa-solid fa-copy"></i>Copy result</button>
+        </div>
+
+        <div class="result-card" id="sgResults" aria-live="polite"></div>
+        <p class="proc-line"><i class="fa-solid fa-bolt"></i><span id="sgProc">Ready - calculations happen in this tab.</span></p>
+      </div>
+    </div>
+
+    <aside class="disclaimer" aria-label="Disclaimer">
+      <i class="fa-solid fa-circle-info"></i>
+      <p>Disclaimer: Whilst every effort has been made in building our tool, we are not to be held liable for any damages or monetary losses arising out of or in connection with its use. This calculator is an estimate, not financial advice. <a href="../../press/disclaimer.html">Full disclaimer</a>.</p>
+    </aside>
+
+    <div class="article-layout">
+      <article class="seo-article">
+        <h2 id="article-title">Savings Goal Calculator: Your Saving Plan, Backwards-Engineered</h2>
+        <p>Goals feel abstract until they have a number and a date. This calculator works backwards from your target: it tells you the exact monthly contribution that gets you there on time, taking your current savings and interest growth into account.</p>
+
+        <h2 id="how-the-math-works">The Math Behind the Monthly Figure</h2>
+        <p>Your goal is reached by a starting balance that grows, plus a stream of monthly deposits that each grow in turn:</p>
+        <p><strong>Monthly contribution = (goal - current &times; (1 + i)<sup>n</sup>) &divide; ((1 + i)<sup>n</sup> - 1) / i</strong></p>
+        <p>where <strong>i</strong> is your monthly interest rate (annual rate &divide; 12) and <strong>n</strong> is the number of months. The denominator is the future value of a monthly annuity - interest is credited to every deposit, so early contributions work harder than late ones.</p>
+
+        <h2 id="how-to-use">How to Use the Savings Goal Calculator</h2>
+        <ol>
+          <li><strong>Enter your goal</strong> and what you already have saved.</li>
+          <li><strong>Set a deadline</strong> as a number of months or a specific date.</li>
+          <li><strong>Add an annual interest rate</strong> for the account or investment you plan to use (type 0 for a plain cash jar).</li>
+        </ol>
+        <p>The result shows the monthly contribution, total money you will put in, and the interest earned on top.</p>
+
+        <h2 id="rate-and-time">How Rates and Deadlines Change the Plan</h2>
+        <p>Stretch the deadline and the monthly figure falls - but interest has longer to accumulate, so the total you put in stays lower too. Raising the rate has the same effect: your money works instead of you. Compare a few scenarios before locking a number into your budget.</p>
+
+        <h2 id="beyond-the-kitchen-table">Pair It With the Other Money Math</h2>
+        <p>Once your monthly contribution is set, check the growth side of the same math with our <a href="compound-interest-calculator.html">Compound Interest Calculator</a> to model what your deposits become over time, and our <a href="simple-interest-calculator.html">Simple Interest Calculator</a> for the quick, no-compounding version of the projection.</p>
+
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+
+        <details class="faq-item">
+          <summary>How much should I save per month to reach a goal?</summary>
+          <div class="faq-a">
+            <p>Divide the shortfall - your goal minus the future value of your current savings - by the future value of a monthly annuity at your interest rate. The calculator does exactly this, factoring in how interest grows both your current balance and each monthly deposit.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>How do interest rates affect my savings goal?</summary>
+          <div class="faq-a">
+            <p>A higher rate means your money works harder, so the required monthly contribution is lower. Even small rate differences matter over long horizons, so it is worth comparing accounts before you commit.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Is the Troolify savings goal calculator safe to use?</summary>
+          <div class="faq-a">
+            <p>Yes. Every calculation runs locally inside your browser tab. Your numbers are never uploaded, stored, or transmitted to a server, so your financial figures stay completely private.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>What happens if I already have most of the goal saved?</summary>
+          <div class="faq-a">
+            <p>The calculator factors in your current savings. If your existing balance will already grow past the goal thanks to interest, the required monthly contribution drops to zero.</p>
+          </div>
+        </details>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>A plan you can actually follow beats a vague ambition. Decide on the target and deadline, run the numbers here, and start with the small monthly amount - it compounds into something real.</p>
+      </article>
+    </div>
+
+    <section class="keyword-box" aria-label="Keywords and tags">
+      <h2>Keyword &amp; Tags</h2>
+      <h3>Keywords</h3>
+      <div class="keywords">
+        <span class="keyword">savings goal calculator</span>
+        <span class="keyword">monthly savings</span>
+        <span class="keyword">savings target</span>
+        <span class="keyword">monthly contribution</span>
+        <span class="keyword">savings plan</span>
+        <span class="keyword">interest earned</span>
+        <span class="keyword">savings calculator</span>
+        <span class="keyword">finance tools</span>
+      </div>
+      <h3>Tags</h3>
+      <div class="tags">
+        <a class="tag" href="../index.html"><i class="fa-solid fa-tag"></i>Savings</a>
+        <a class="tag" href="../index.html"><i class="fa-solid fa-folder"></i>Finance Tools</a>
+        <a class="tag" href="../../tools/index.html"><i class="fa-solid fa-cube"></i>Finance</a>
+      </div>
+    </section>
+
+    <section class="author-box" aria-label="About the publisher">
+      <div class="author-avatar" aria-hidden="true"><img src="../../assets/images/logo_nobg.webp" alt="F9XR logo" loading="lazy" decoding="async" width="1407" height="768"></div>
+      <div>
+        <span class="author-role">Published by</span>
+        <h2>F9XR Development Team</h2>
+        <p>Every Troolify tool is built and reviewed by the F9XR Development Team, then checked by our Review Board for correctness, accessibility, and clarity. Tools run 100% client-side with zero data retention.</p>
+        <div class="author-links">
+          <a href="https://f9xr.github.io/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i>F9XR Team</a>
+          <a href="../../press/editorial-policies.html"><i class="fa-solid fa-scale-balanced"></i>Editorial Policies</a>
+          <a href="https://github.com/f9xr" target="_blank" rel="noopener" aria-label="F9XR on GitHub"><i class="fa-brands fa-github"></i>GitHub</a>
+          <a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on LinkedIn"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+          <a href="https://instagram.com/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on Instagram"><i class="fa-brands fa-instagram"></i>Instagram</a>
+          <a href="https://youtube.com/@QuarterlyLIV" target="_blank" rel="noopener" aria-label="F9XR on YouTube"><i class="fa-brands fa-youtube"></i>YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-tools" aria-label="Related tools">
+      <h2>Related Tools</h2>
+      <div class="related-search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" id="relatedSearch" placeholder="Search all Troolify tools&hellip;" autocomplete="off" aria-label="Search related tools">
+      </div>
+      <div class="related-grid" id="relatedGrid" aria-busy="true">
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+      </div>
+    </section>
+
+    <section class="comments" aria-label="Comments">
+      <h2>Comments</h2>
+      <div id="comments">
+        <script src="https://utteranc.es/client.js" repo="f9xr/troolify" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async></script>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"><span></span><i class="fa-solid fa-layer-group"></i><span></span></div>
+
+  </div>
+</main>
+
+<script src="../../assets/js/layout.js" defer></script>
+<script src="../../assets/js/tools-data.js" defer></script>
+<script src="../../assets/js/tool-page.js" defer></script>
+<script>
+(function(){
+  "use strict";
+  var goal=document.getElementById("sgGoal");
+  var current=document.getElementById("sgCurrent");
+  var rate=document.getElementById("sgRate");
+  var months=document.getElementById("sgMonths");
+  var dateInput=document.getElementById("sgDate");
+  var monthsField=document.getElementById("sgMonthsField");
+  var dateField=document.getElementById("sgDateField");
+  var hzBtns=document.querySelectorAll("[data-hz]");
+  var out=document.getElementById("sgResults");
+  var proc=document.getElementById("sgProc");
+  var hz="months";
+  var lastText="";
+  var today=function(){ var d=new Date(); var m=("0"+(d.getMonth()+1)).slice(-2); var day=("0"+d.getDate()).slice(-2); return d.getFullYear()+"-"+m+"-"+day; };
+  function setDefaultDate(){ dateInput.value=today(); }
+  if(!dateInput.value){ setDefaultDate(); }
+  var fmt=function(n){ return n.toLocaleString("en-US",{style:"currency",currency:"USD",maximumFractionDigits:n>=1e5?0:2}); };
+  function monthsUntil(target){
+    var now=new Date(); now.setHours(0,0,0,0);
+    var t=new Date(target); t.setHours(0,0,0,0);
+    var diff=(t-now)/(1000*60*60*24);
+    if(diff<0) return -1;
+    return Math.max(diff/30.44,1);
+  }
+  function calc(){
+    var t0=performance.now();
+    var G=parseFloat(goal.value)||0;
+    var C=parseFloat(current.value)||0;
+    var ar=(parseFloat(rate.value)||0)/100;
+    var n=hz==="months" ? (Math.floor(parseFloat(months.value))||0) : monthsUntil(dateInput.value);
+    var html="", note="";
+    if(n<0){ html='<div class="result-row hero-row"><span>Monthly contribution</span><b>&mdash;</b></div><p class="note warn">This target date is in the past. Pick a future date.</p>'; }
+    else if(n<=0){ html='<div class="result-row hero-row"><span>Monthly contribution</span><b>&mdash;</b></div><p class="note warn">Enter a horizon of at least one month.</p>'; }
+    else{
+      var i=ar/12;
+      var fvCur=C*Math.pow(1+i,n);
+      var annuity=i>0 ? (Math.pow(1+i,n)-1)/i : n;
+      var contrib;
+      if(fvCur>=G){ contrib=0; note="You already have enough saved - it will grow past the goal before the deadline. Contributions are not required."; }
+      else{ contrib=(G-fvCur)/annuity; }
+      var totalSaved=C+contrib*n;
+      var interest=G-totalSaved;
+      var mRounded=Math.ceil(contrib/10)*10;
+      html=
+        '<div class="result-row hero-row"><span>Monthly contribution required</span><b>'+fmt(contrib)+'</b></div>'+
+        '<div class="result-row"><span>Months needed</span><b>'+Math.round(n)+' (approx. '+(Math.round(n)/12).toFixed(1)+' years)</b></div>'+
+        '<div class="result-row"><span>Total you will save</span><b>'+fmt(totalSaved)+'</b></div>'+
+        '<div class="result-row"><span>Interest earned</span><b>'+fmt(Math.max(interest,0))+'</b></div>';
+      lastText="Monthly contribution required: $"+contrib.toFixed(2)+"\nMonths needed: "+Math.round(n)+"\nTotal you will save: $"+totalSaved.toFixed(2)+"\nInterest earned: $"+Math.max(interest,0).toFixed(2);
+      if(mRounded>contrib){ note="Round up to $"+mRounded.toLocaleString("en-US")+" per month for a comfortable buffer and an earlier finish."; }
+    }
+    if(note){ html+='<p class="note'+(n<0||n<=0?" warn":"")+'">'+note+'</p>'; }
+    out.innerHTML=html;
+    proc.textContent="Calculated in "+(performance.now()-t0).toFixed(1)+" ms - inside your browser. 0 bytes uploaded.";
+  }
+  hzBtns.forEach(function(btn){
+    btn.addEventListener("click",function(){
+      hzBtns.forEach(function(b){ b.classList.remove("active"); b.setAttribute("aria-selected","false"); });
+      btn.classList.add("active");
+      btn.setAttribute("aria-selected","true");
+      hz=btn.getAttribute("data-hz");
+      if(hz==="date"){ monthsField.classList.add("hidden"); dateField.classList.remove("hidden"); if(!dateInput.value){ setDefaultDate(); } }
+      else{ dateField.classList.add("hidden"); monthsField.classList.remove("hidden"); }
+      calc();
+    });
+  });
+  [goal,current,rate,months,dateInput].forEach(function(el){ el.addEventListener("input",calc); });
+  document.getElementById("btnCopy").addEventListener("click",function(){
+    window.Troolify.copyToClipboard(lastText,function(){ proc.textContent="Copied to clipboard - the bytes never left your device."; });
+  });
+  calc();
+})();
+</script>
+</body>
+</html>

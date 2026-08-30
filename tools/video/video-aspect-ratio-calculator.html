@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Aspect Ratio Calculator | 16:9, 9:16 Dimensions</title>
+<meta name="description" content="Calculate the missing dimension for any video aspect ratio - 16:9, 9:16, 4:3, 1:1, 21:9 or 2.39:1. See matching platform resolutions for YouTube, TikTok &amp; more - free, client-side.">
+<meta name="author" content="F9XR Development Team">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#212529">
+<link rel="canonical" href="https://f9xr.github.io/troolify/tools/video/video-aspect-ratio-calculator.html">
+<meta property="og:site_name" content="Troolify">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Video Aspect Ratio Calculator | 16:9, 9:16 Dimensions">
+<meta property="og:description" content="Find the missing dimension for any video ratio - 16:9, 9:16, 4:3, 1:1, 21:9 or 2.39:1 - with matching platform resolutions. Free, client-side.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://f9xr.github.io/troolify/tools/video/video-aspect-ratio-calculator.html">
+<meta property="og:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-08-28">
+<meta property="article:modified_time" content="2026-08-28">
+<meta property="article:section" content="Video Tools">
+<meta property="article:tag" content="Video Aspect Ratio Calculator">
+<meta property="article:tag" content="16:9 9:16 Tools">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Video Aspect Ratio Calculator | 16:9, 9:16 Dimensions">
+<meta name="twitter:description" content="Find the missing dimension for any video ratio - 16:9, 9:16, 4:3, 1:1, 21:9 or 2.39:1 - with platform resolutions. 100% browser based.">
+<meta name="twitter:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://f9xr.github.io/troolify/index.html" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://f9xr.github.io/troolify/tools/index.html" },
+    { "@type": "ListItem", "position": 3, "name": "Video Tools", "item": "https://f9xr.github.io/troolify/tools/video/" },
+    { "@type": "ListItem", "position": 4, "name": "Video Aspect Ratio Calculator", "item": "https://f9xr.github.io/troolify/tools/video/video-aspect-ratio-calculator.html" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Video Aspect Ratio Calculator",
+  "url": "https://f9xr.github.io/troolify/tools/video/video-aspect-ratio-calculator.html",
+  "applicationCategory": "MultimediaApplication",
+  "applicationSubCategory": "Video Aspect Ratio & Platform Size Calculator",
+  "operatingSystem": "Any (web browser)",
+  "featureList": ["Compute missing dimensions for any ratio", "Presets 16:9, 9:16, 4:3, 1:1, 21:9 and 2.39:1", "Show decimal ratio", "Highlight matching platform resolutions", "100% client-side processing"],
+  "description": "Calculate the missing dimension for any video aspect ratio - 16:9, 9:16, 4:3, 1:1, 21:9 or 2.39:1. See matching platform resolutions for YouTube, TikTok & more - free, client-side.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "datePublished": "2026-08-28",
+  "dateModified": "2026-08-28",
+  "author": { "@type": "Organization", "name": "F9XR Development Team", "url": "https://f9xr.github.io/" },
+  "publisher": { "@type": "Organization", "name": "Troolify", "url": "https://f9xr.github.io/troolify/", "logo": { "@type": "ImageObject", "url": "https://f9xr.github.io/troolify/assets/images/logo_nobg.webp", "width": 1407, "height": 768 } }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What video ratio should I use for YouTube?",
+      "acceptedAnswer": { "@type": "Answer", "text": "16:9 is the standard for horizontal YouTube videos, displayed at 1920 x 1080 (Full HD) or 1280 x 720. Shorts use 9:16 vertical video at 1080 x 1920." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert 16:9 to a specific size?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Divide your known dimension by the matching side of the ratio. At 16:9, a width of 1280 gives a height of 1280 x (9/16) = 720. The calculator does this instantly for any ratio and any dimension." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between 16:9 and 9:16?",
+      "acceptedAnswer": { "@type": "Answer", "text": "16:9 is a landscape (wide) orientation used for standard video, while 9:16 is the exact same relationship rotated into portrait orientation - used for vertical formats like TikTok, Instagram Reels and YouTube Shorts." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the Troolify video aspect ratio calculator free?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. It is completely free, requires no account, and all calculations run locally inside your browser. Nothing is uploaded or stored anywhere." }
+    }
+  ]
+}
+</script>
+
+<link rel="icon" type="image/webp" href="../../assets/images/favicon.webp"><link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../../assets/css/tailwind.css">
+<link rel="stylesheet" href="../../assets/css/tool.css">
+<link rel="stylesheet" href="../../assets/css/site-shell.css">
+<link rel="stylesheet" href="../../assets/css/tool-page.css">
+<link rel="stylesheet" href="../../assets/css/seo-article.css">
+<style>
+.va-grid{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:720px){.va-grid{grid-template-columns:1fr 1fr}}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:12.5px;font-weight:700;color:var(--muted)}
+.field input,.field select{background:#1B2028;border:1px solid var(--border);color:var(--ink);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:15px;font-weight:600;outline:none;width:100%;box-sizing:border-box}
+.field input:focus,.field select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+.radio-row{display:flex;flex-wrap:wrap;gap:8px}
+.radio-row label{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:700;color:var(--muted);cursor:pointer;user-select:none}
+.radio-row input{accent-color:var(--accent);width:15px;height:15px;cursor:pointer}
+.result-card{background:linear-gradient(180deg,rgba(59,130,246,.12),rgba(59,130,246,.03));border:1px solid rgba(96,165,250,.25);border-radius:14px;padding:18px;margin-top:18px}
+.result-row{display:flex;justify-content:space-between;gap:10px;padding:8px 2px;font-size:14px}
+.result-row+.result-row{border-top:1px dashed rgba(255,255,255,.08)}
+.result-row b{color:#93C5FD;font-weight:800;text-align:right}
+.result-row.hero-row b{color:#6EE7B7}
+.va-ref-title{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin:20px 0 12px}
+.va-ref-title i{font-size:12px}
+.va-ref{margin-top:6px;overflow-x:auto}
+.va-ref table{width:100%;border-collapse:collapse;font-size:13px}
+.va-ref th,.va-ref td{padding:9px 12px;text-align:left;border-bottom:1px solid rgba(255,255,255,.07)}
+.va-ref th{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--faint)}
+.va-ref tr.match{background:rgba(52,211,153,.08)}
+.va-ref tr.match td:first-child{color:#6EE7B7;font-weight:800}
+.va-ref b{color:#93C5FD}
+</style>
+</head>
+<body data-layout="tool">
+<noscript>
+    <nav aria-label="Primary" style="position:static;display:block;padding:1rem 1.5rem;background:#212529;border-bottom:1px solid #343A40;text-align:center;font-size:0.9rem;">
+        <a href="../../index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Home</a>
+        <a href="../../tools/index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Tools</a>
+        <a href="../../pages/about.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">About</a>
+        <a href="../../pages/contact.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Contact</a>
+    </nav>
+</noscript>
+
+<main class="tool-main">
+  <div class="container">
+
+    <div class="tool-head hero">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="../../tools/index.html">Tools</a></li>
+          <li><a href="../index.html">Video Tools</a></li>
+          <li class="current" aria-current="page">Video Aspect Ratio Calculator</li>
+        </ol>
+      </nav>
+      <div class="hero-main">
+        <span class="tool-badge"><span class="dot"></span>100% client-side &middot; zero data retention</span>
+        <h1>Video Aspect Ratio Calculator</h1>
+        <p>Compute the missing dimension for any video ratio - 16:9, 9:16, 4:3, 1:1, 21:9 or 2.39:1 - and see which platform resolutions match what you are making.</p>
+      </div>
+      <div class="hero-box hero-cat">
+        <h3 class="hero-box-title"><i class="fa-solid fa-folder-open"></i>Category</h3>
+        <div class="tool-meta">
+          <span class="tool-tag"><i class="fa-solid fa-tag"></i>Video</span>
+          <a class="tool-cat" href="../index.html" aria-label="Browse Video Tools category"><i class="fa-solid fa-folder"></i>Video Tools</a>
+        </div>
+      </div>
+      <div class="hero-box hero-qa">
+        <h3 class="hero-box-title"><i class="fa-solid fa-bolt"></i>Quick Actions</h3>
+        <div class="tool-actions">
+          <button class="rt-btn" type="button" id="btnShare"><i class="fa-solid fa-share-nodes"></i>Share</button>
+          <button class="rt-btn" type="button" id="btnEmbed"><i class="fa-solid fa-code"></i>Embed Tool</button>
+          <a class="rt-btn" href="../../pages/feedback.html"><i class="fa-solid fa-comment"></i>Feedback</a>
+        </div>
+      </div>
+      <div class="hero-box hero-details">
+        <h3 class="hero-box-title"><i class="fa-solid fa-circle-info"></i>Tool Details</h3>
+        <div class="tool-details">
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.github.io/" target="_blank" rel="noopener">F9XR Development Team</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-check-double"></i>Reviewed by</span><a class="detail-value" href="../../press/editorial-policies.html">Review Board</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-clock-rotate-left"></i>Last updated</span><span class="detail-value">28 August 2026</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel clean">
+      <div class="panel-inner">
+        <div class="toolbar-row">
+          <span class="tool-label"><i class="fa-solid fa-film"></i>Video Aspect Ratio Calculator</span>
+        </div>
+
+        <div class="va-grid">
+          <div class="field"><label for="vaPreset">Video ratio preset</label>
+            <select id="vaPreset">
+              <option value="16:9">16:9 (YouTube HD)</option>
+              <option value="9:16">9:16 (Shorts / Reels / TikTok)</option>
+              <option value="4:3">4:3 (classic)</option>
+              <option value="1:1">1:1 (square)</option>
+              <option value="21:9">21:9 (ultrawide)</option>
+              <option value="2.39:1">2.39:1 (cinematic)</option>
+              <option value="custom" selected>Custom</option>
+            </select>
+          </div>
+          <div class="field"><label for="vaKnown">I know the</label>
+            <div class="radio-row">
+              <label><input type="radio" name="vaKnown" id="vaKnownW" checked>Width</label>
+              <label><input type="radio" name="vaKnown" id="vaKnownH">Height</label>
+            </div>
+          </div>
+          <div class="field"><label for="vaOutput">Target dimension (px)</label><input id="vaOutput" type="number" inputmode="numeric" min="1" step="any" value="1920"></div>
+        </div>
+
+        <div class="result-card" id="vaResults" aria-live="polite"></div>
+
+        <div class="va-ref-title"><i class="fa-solid fa-table"></i>Common platform resolutions</div>
+        <div class="va-ref">
+          <table id="vaRefTable">
+            <thead>
+              <tr><th scope="col">Platform / format</th><th scope="col">Ratio</th><th scope="col">Recommended resolution</th></tr>
+            </thead>
+            <tbody>
+              <tr data-ratio="1.7778"><td>YouTube &amp; widescreen web video</td><td>16:9</td><td><b>1920 &times; 1080</b> (or 1280 &times; 720)</td></tr>
+              <tr data-ratio="0.5625"><td>YouTube Shorts / TikTok / Instagram Reels</td><td>9:16</td><td><b>1080 &times; 1920</b></td></tr>
+              <tr data-ratio="1.7778"><td>YouTube thumbnail</td><td>16:9</td><td><b>1280 &times; 720</b></td></tr>
+              <tr data-ratio="1.7778"><td>Facebook &amp; LinkedIn landscape videos</td><td>16:9</td><td><b>1280 &times; 720</b></td></tr>
+              <tr data-ratio="1.91"><td>Instagram feed &amp; LinkedIn post</td><td>1.91:1</td><td><b>1200 &times; 627</b></td></tr>
+              <tr data-ratio="1"><td>Instagram square post</td><td>1:1</td><td><b>1080 &times; 1080</b></td></tr>
+              <tr data-ratio="1.25"><td>Instagram portrait post</td><td>4:5</td><td><b>1080 &times; 1350</b></td></tr>
+              <tr data-ratio="2.39"><td>Cinematic / film look</td><td>2.39:1</td><td><b>2560 &times; 1080</b></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="proc-line"><i class="fa-solid fa-bolt"></i><span id="vaProc">Ready - matching platforms are highlighted in green.</span></p>
+      </div>
+    </div>
+
+    <aside class="disclaimer" aria-label="Disclaimer">
+      <i class="fa-solid fa-circle-info"></i>
+      <p>Disclaimer: Whilst every effort has been made in building our tools, we are not to be held liable for any damages or monetary losses arising out of or in connection with their use. Platform recommendations change; always confirm current specs on the platform you publish to. <a href="../../press/disclaimer.html">Full disclaimer</a>.</p>
+    </aside>
+
+    <div class="article-layout">
+      <article class="seo-article">
+        <h2 id="article-title">Video Aspect Ratio Calculator: Right Sizes for Every Platform</h2>
+        <p>Horizontal, vertical, square, cinematic - every video platform has its own shape, and uploading the wrong one means crops, black bars, or letterboxing your carefully shot footage. This calculator works out the missing dimension for any ratio in one step, and tells you which platform presets your ratio matches.</p>
+
+        <h2 id="ratios-explained">The Ratios You Will Actually Use</h2>
+        <ul>
+          <li><strong>16:9</strong> - the widescreen standard for YouTube, Facebook and most web video.</li>
+          <li><strong>9:16</strong> - vertical video for Shorts, Reels and TikTok - the same relationship, rotated.</li>
+          <li><strong>1:1</strong> and <strong>4:5</strong> - social media posts that survive Instagram's feed crop.</li>
+          <li><strong>21:9</strong> and <strong>2.39:1</strong> - ultrawide and cinematic framing.</li>
+        </ul>
+
+        <h2 id="how-to-use">How to Use the Calculator</h2>
+        <ol>
+          <li><strong>Pick a preset</strong> - 16:9, 9:16, 4:3, 1:1, 21:9 and 2.39:1 are built in, or choose Custom.</li>
+          <li><strong>Say whether you know the width or the height</strong> and enter your one known value.</li>
+          <li><strong>Read the missing dimension</strong> - plus the decimal ratio for reference.</li>
+          <li><strong>Scan the table</strong> - matching platform resolutions are highlighted automatically.</li>
+        </ol>
+
+        <h2 id="calculator-vs-camera">Camera or Export: Either Way It Works</h2>
+        <p>Know the ratio but not the pixels? Enter a target such as 1080 as the width of a 9:16 clip and the height comes back as 1920 - exactly the Shorts spec. Or feed it a camera's native resolution to see which ratio you are already shooting and where it will fit.</p>
+
+        <h2 id="plan-ahead">Plan the Whole Pipeline</h2>
+        <p>Use this tool to set your export dimensions, then check the storage impact with the <a href="video-file-size-calculator.html">Video File Size Calculator</a> before you render. For a photo thumbnail or still, the same ratio math applies - see the <a href="../image/aspect-ratio-calculator.html">Aspect Ratio Calculator</a>. When you are ready to publish, create jump links for your viewers with the <a href="../youtube/timestamp-link-generator.html">YouTube Timestamp Link Generator</a>.</p>
+
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+
+        <details class="faq-item">
+          <summary>What video ratio should I use for YouTube?</summary>
+          <div class="faq-a">
+            <p>16:9 is the standard for horizontal YouTube videos, displayed at 1920 x 1080 (Full HD) or 1280 x 720. Shorts use 9:16 vertical video at 1080 x 1920.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>How do I convert 16:9 to a specific size?</summary>
+          <div class="faq-a">
+            <p>Divide your known dimension by the matching side of the ratio. At 16:9, a width of 1280 gives a height of 1280 x (9/16) = 720. The calculator does this instantly for any ratio and any dimension.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>What is the difference between 16:9 and 9:16?</summary>
+          <div class="faq-a">
+            <p>16:9 is a landscape (wide) orientation used for standard video, while 9:16 is the exact same relationship rotated into portrait orientation - used for vertical formats like TikTok, Instagram Reels and YouTube Shorts.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Is the Troolify video aspect ratio calculator free?</summary>
+          <div class="faq-a">
+            <p>Yes. It is completely free, requires no account, and all calculations run locally inside your browser. Nothing is uploaded or stored anywhere.</p>
+          </div>
+        </details>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>One correct number saves you from every crop, bar and re-render. Pick your ratio, type your known dimension, and export with confidence the first time.</p>
+      </article>
+    </div>
+
+    <section class="keyword-box" aria-label="Keywords and tags">
+      <h2>Keyword &amp; Tags</h2>
+      <h3>Keywords</h3>
+      <div class="keywords">
+        <span class="keyword">video aspect ratio calculator</span>
+        <span class="keyword">16:9 aspect ratio video</span>
+        <span class="keyword">9:16 vertical video size</span>
+        <span class="keyword">TikTok video dimensions</span>
+        <span class="keyword">YouTube Shorts resolution</span>
+        <span class="keyword">4:3 vs 16:9 video</span>
+        <span class="keyword">21:9 ultrawide video</span>
+        <span class="keyword">cinematic 2.39:1 ratio</span>
+      </div>
+      <h3>Tags</h3>
+      <div class="tags">
+        <a class="tag" href="../index.html"><i class="fa-solid fa-tag"></i>Video</a>
+        <a class="tag" href="../index.html"><i class="fa-solid fa-folder"></i>Video Tools</a>
+        <a class="tag" href="../../tools/index.html"><i class="fa-solid fa-cube"></i>Video</a>
+      </div>
+    </section>
+
+    <section class="author-box" aria-label="About the publisher">
+      <div class="author-avatar" aria-hidden="true"><img src="../../assets/images/logo_nobg.webp" alt="F9XR logo" loading="lazy" decoding="async" width="1407" height="768"></div>
+      <div>
+        <span class="author-role">Published by</span>
+        <h2>F9XR Development Team</h2>
+        <p>Every Troolify tool is built and reviewed by the F9XR Development Team, then checked by our Review Board for correctness, accessibility, and clarity. Tools run 100% client-side with zero data retention.</p>
+        <div class="author-links">
+          <a href="https://f9xr.github.io/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i>F9XR Team</a>
+          <a href="../../press/editorial-policies.html"><i class="fa-solid fa-scale-balanced"></i>Editorial Policies</a>
+          <a href="https://github.com/f9xr" target="_blank" rel="noopener" aria-label="F9XR on GitHub"><i class="fa-brands fa-github"></i>GitHub</a>
+          <a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on LinkedIn"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+          <a href="https://instagram.com/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on Instagram"><i class="fa-brands fa-instagram"></i>Instagram</a>
+          <a href="https://youtube.com/@QuarterlyLIV" target="_blank" rel="noopener" aria-label="F9XR on YouTube"><i class="fa-brands fa-youtube"></i>YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-tools" aria-label="Related tools">
+      <h2>Related Tools</h2>
+      <div class="related-search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" id="relatedSearch" placeholder="Search all Troolify tools&hellip;" autocomplete="off" aria-label="Search related tools">
+      </div>
+      <div class="related-grid" id="relatedGrid" aria-busy="true">
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+      </div>
+    </section>
+
+    <section class="comments" aria-label="Comments">
+      <h2>Comments</h2>
+      <div id="comments">
+        <script src="https://utteranc.es/client.js" repo="f9xr/troolify" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async></script>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"><span></span><i class="fa-solid fa-layer-group"></i><span></span></div>
+
+  </div>
+</main>
+
+<script src="../../assets/js/layout.js" defer></script>
+<script src="../../assets/js/tools-data.js" defer></script>
+<script src="../../assets/js/tool-page.js" defer></script>
+<script>
+(function(){
+  "use strict";
+  var preset=document.getElementById("vaPreset");
+  var knownW=document.getElementById("vaKnownW");
+  var knownH=document.getElementById("vaKnownH");
+  var outIn=document.getElementById("vaOutput");
+  var resBox=document.getElementById("vaResults");
+  var proc=document.getElementById("vaProc");
+  var rows=document.querySelectorAll("#vaRefTable tbody tr");
+
+  var RATIOS={"16:9":[16,9],"9:16":[9,16],"4:3":[4,3],"1:1":[1,1],"21:9":[21,9],"2.39:1":[23.9,10]};
+
+  function compute(){
+    var r=RATIOS[preset.value];
+    if(!r){ return; }
+    var rw=r[0], rh=r[1];
+    var dec=rw/rh;
+    var t=parseFloat(outIn.value)||0;
+    var missing="",missingLbl="";
+    if(t>0){
+      if(knownW.checked){ missing=Math.round(t*rh/rw); missingLbl="height"; }
+      else{ missing=Math.round(t*rw/rh); missingLbl="width"; }
+    }
+    resBox.innerHTML=
+      '<div class="result-row hero-row"><span>Ratio</span><b>'+preset.value+'</b></div>'+
+      '<div class="result-row"><span>Decimal ratio</span><b>'+dec.toFixed(4)+'</b></div>'+
+      (t>0?'<div class="result-row"><span>Missing dimension ('+missingLbl+')</span><b>'+missing+' px</b></div>'+
+       '<div class="result-row"><span>Full size</span><b>'+(knownW.checked?Math.round(t)+' &#215; '+missing:missing+' &#215; '+Math.round(t))+' px</b></div>':'');
+
+    var match=preset.value;
+    var md={
+      "16:9":1.7778,"9:16":0.5625,"4:3":1.3333,"1:1":1,"21:9":2.3333,"2.39:1":2.39
+    }[match];
+    var tol=preset.value==="2.39:1"?0.02:0.02;
+    for(var i=0;i<rows.length;i++){
+      var target=parseFloat(rows[i].getAttribute("data-ratio"));
+      rows[i].classList.toggle("match",md!=null&&Math.abs(target-md)<=tol);
+    }
+    proc.textContent=(t>0?(preset.value+" @ "+missingLbl+" "+t+" px = "+missing+" px - "):"")+"ratio math ran locally, 0 bytes uploaded.";
+  }
+
+  preset.addEventListener("change",compute);
+  [knownW,knownH].forEach(function(r){ r.addEventListener("change",compute); });
+  outIn.addEventListener("input",compute);
+  compute();
+})();
+</script>
+</body>
+</html>

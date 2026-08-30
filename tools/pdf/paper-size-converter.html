@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A-Series Paper Size Converter | A4, A5, B Series in mm, px &amp; inches</title>
+<meta name="description" content="Convert standard paper sizes (A, B and US series) into millimetres, inches and pixels at any DPI. Get exact A4, A5, A3 pixel dimensions - free, 100% client-side.">
+<meta name="author" content="F9XR Development Team">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#212529">
+<link rel="canonical" href="https://f9xr.github.io/troolify/tools/pdf/paper-size-converter.html">
+<meta property="og:site_name" content="Troolify">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="A-Series Paper Size Converter | A4, A5, B Series in mm, px &amp; inches">
+<meta property="og:description" content="Convert standard paper sizes (A, B and US series) into millimetres, inches and pixels at any DPI - free, 100% client-side.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://f9xr.github.io/troolify/tools/pdf/paper-size-converter.html">
+<meta property="og:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-08-28">
+<meta property="article:modified_time" content="2026-08-28">
+<meta property="article:section" content="PDF Tools">
+<meta property="article:tag" content="Paper Size Converter">
+<meta property="article:tag" content="A4 Pixel Dimensions">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="A-Series Paper Size Converter | A4, A5, B Series in mm, px &amp; inches">
+<meta name="twitter:description" content="Convert standard paper sizes (A, B and US series) into millimetres, inches and pixels at any DPI - 100% browser based.">
+<meta name="twitter:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://f9xr.github.io/troolify/index.html" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://f9xr.github.io/troolify/tools/index.html" },
+    { "@type": "ListItem", "position": 3, "name": "PDF Tools", "item": "https://f9xr.github.io/troolify/tools/pdf/" },
+    { "@type": "ListItem", "position": 4, "name": "Paper Size Converter", "item": "https://f9xr.github.io/troolify/tools/pdf/paper-size-converter.html" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Paper Size Converter",
+  "url": "https://f9xr.github.io/troolify/tools/pdf/paper-size-converter.html",
+  "applicationCategory": "UtilitiesApplication",
+  "applicationSubCategory": "Standard Paper Size Converter (mm, inches, pixels)",
+  "operatingSystem": "Any (web browser)",
+  "featureList": ["A, B and US paper series", "Convert to mm, inches and pixels", "Any DPI from 72 to 300+", "Portrait and landscape orientation", "A-series reference table", "100% client-side processing"],
+  "description": "Convert standard paper sizes (A, B and US series) into millimetres, inches and pixels at any DPI. Get exact A4, A5, A3 pixel dimensions - free, 100% client-side.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "datePublished": "2026-08-28",
+  "dateModified": "2026-08-28",
+  "author": { "@type": "Organization", "name": "F9XR Development Team", "url": "https://f9xr.github.io/" },
+  "publisher": { "@type": "Organization", "name": "Troolify", "url": "https://f9xr.github.io/troolify/", "logo": { "@type": "ImageObject", "url": "https://f9xr.github.io/troolify/assets/images/logo_nobg.webp", "width": 1407, "height": 768 } }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the pixel size of A4 paper?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A4 is 210 x 297 mm. At 300 DPI that makes 2480 x 3508 pixels; at 96 DPI it is 794 x 1123 pixels. Exact pixel dimensions always depend on the DPI you choose." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert millimetres to pixels?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Divide the millimetre value by 25.4 to get inches, then multiply by the DPI. So 210 mm at 300 DPI is (210 / 25.4) x 300 = 2480 pixels." }
+    },
+    {
+      "@type": "Question",
+      "name": "What DPI should I use for print vs screen?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Use 300 DPI (or 600 DPI for fine detail) when preparing for print. Screens typically assume 72 or 96 DPI, so a design sized for print will appear much larger in pixels than the equivalent on-screen document." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the Troolify paper size converter free to use?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. It is completely free, requires no account, and all conversions run locally inside your browser. No document or data is uploaded anywhere." }
+    }
+  ]
+}
+</script>
+
+<link rel="icon" type="image/webp" href="../../assets/images/favicon.webp"><link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../../assets/css/tailwind.css">
+<link rel="stylesheet" href="../../assets/css/tool.css">
+<link rel="stylesheet" href="../../assets/css/site-shell.css">
+<link rel="stylesheet" href="../../assets/css/tool-page.css">
+<link rel="stylesheet" href="../../assets/css/seo-article.css">
+<style>
+.ps-grid{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:720px){.ps-grid{grid-template-columns:1fr 1fr}}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:12.5px;font-weight:700;color:var(--muted)}
+.field input,.field select{background:#1B2028;border:1px solid var(--border);color:var(--ink);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:15px;font-weight:600;outline:none;width:100%;box-sizing:border-box}
+.field input:focus,.field select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+.radio-row{display:flex;flex-wrap:wrap;gap:8px}
+.radio-row label{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:700;color:var(--muted);cursor:pointer;user-select:none}
+.radio-row input{accent-color:var(--accent);width:15px;height:15px;cursor:pointer}
+.result-card{background:linear-gradient(180deg,rgba(59,130,246,.12),rgba(59,130,246,.03));border:1px solid rgba(96,165,250,.25);border-radius:14px;padding:18px;margin-top:18px}
+.result-row{display:flex;justify-content:space-between;gap:10px;padding:8px 2px;font-size:14px}
+.result-row+.result-row{border-top:1px dashed rgba(255,255,255,.08)}
+.result-row b{color:#93C5FD;font-weight:800;text-align:right;word-break:break-all}
+.result-row.hero-row b{color:#6EE7B7}
+.ps-ref-title{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin:20px 0 12px}
+.ps-ref-title i{font-size:12px}
+.ps-ref{margin-top:6px;overflow-x:auto}
+.ps-ref table{width:100%;border-collapse:collapse;font-size:13px}
+.ps-ref th,.ps-ref td{padding:9px 12px;text-align:left;border-bottom:1px solid rgba(255,255,255,.07)}
+.ps-ref th{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--faint)}
+.ps-ref b{color:#93C5FD}
+</style>
+</head>
+<body data-layout="tool">
+<noscript>
+    <nav aria-label="Primary" style="position:static;display:block;padding:1rem 1.5rem;background:#212529;border-bottom:1px solid #343A40;text-align:center;font-size:0.9rem;">
+        <a href="../../index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Home</a>
+        <a href="../../tools/index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Tools</a>
+        <a href="../../pages/about.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">About</a>
+        <a href="../../pages/contact.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Contact</a>
+    </nav>
+</noscript>
+
+<main class="tool-main">
+  <div class="container">
+
+    <div class="tool-head hero">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="../../tools/index.html">Tools</a></li>
+          <li><a href="../index.html">PDF Tools</a></li>
+          <li class="current" aria-current="page">Paper Size Converter</li>
+        </ol>
+      </nav>
+      <div class="hero-main">
+        <span class="tool-badge"><span class="dot"></span>100% client-side &middot; zero data retention</span>
+        <h1>Paper Size Converter</h1>
+        <p>Convert any standard A, B or US paper size into millimetres, inches and exact pixels at the DPI you need - portrait or landscape, instantly.</p>
+      </div>
+      <div class="hero-box hero-cat">
+        <h3 class="hero-box-title"><i class="fa-solid fa-folder-open"></i>Category</h3>
+        <div class="tool-meta">
+          <span class="tool-tag"><i class="fa-solid fa-tag"></i>PDF</span>
+          <a class="tool-cat" href="../index.html" aria-label="Browse PDF Tools category"><i class="fa-solid fa-folder"></i>PDF Tools</a>
+        </div>
+      </div>
+      <div class="hero-box hero-qa">
+        <h3 class="hero-box-title"><i class="fa-solid fa-bolt"></i>Quick Actions</h3>
+        <div class="tool-actions">
+          <button class="rt-btn" type="button" id="btnShare"><i class="fa-solid fa-share-nodes"></i>Share</button>
+          <button class="rt-btn" type="button" id="btnEmbed"><i class="fa-solid fa-code"></i>Embed Tool</button>
+          <a class="rt-btn" href="../../pages/feedback.html"><i class="fa-solid fa-comment"></i>Feedback</a>
+        </div>
+      </div>
+      <div class="hero-box hero-details">
+        <h3 class="hero-box-title"><i class="fa-solid fa-circle-info"></i>Tool Details</h3>
+        <div class="tool-details">
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.github.io/" target="_blank" rel="noopener">F9XR Development Team</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-check-double"></i>Reviewed by</span><a class="detail-value" href="../../press/editorial-policies.html">Review Board</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-clock-rotate-left"></i>Last updated</span><span class="detail-value">28 August 2026</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel clean">
+      <div class="panel-inner">
+        <div class="toolbar-row">
+          <span class="tool-label"><i class="fa-solid fa-ruler-combined"></i>Paper Size Converter</span>
+        </div>
+
+        <div class="ps-grid">
+          <div class="field"><label for="psSeries">Paper series</label>
+            <select id="psSeries">
+              <option value="A" selected>A Series (ISO)</option>
+              <option value="B">B Series (ISO)</option>
+              <option value="US">US Sizes</option>
+            </select>
+          </div>
+          <div class="field"><label for="psSize">Paper size</label>
+            <select id="psSize"></select>
+          </div>
+          <div class="field"><label for="psDpi">DPI (pixels per inch)</label>
+            <select id="psDpi">
+              <option value="72">72 (screen)</option>
+              <option value="96" selected>96 (standard screen)</option>
+              <option value="120">120</option>
+              <option value="150">150</option>
+              <option value="300">300 (print)</option>
+              <option value="custom">Custom</option>
+            </select>
+          </div>
+          <div class="field" id="psDpiCustomWrap" style="display:none"><label for="psDpiCustom">Custom DPI</label><input id="psDpiCustom" type="number" inputmode="numeric" min="1" step="any" value="350"></div>
+          <div class="field"><label>Orientation</label>
+            <div class="radio-row">
+              <label><input type="radio" name="psOrient" id="psPortrait" checked>Portrait</label>
+              <label><input type="radio" name="psOrient" id="psLandscape">Landscape</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="result-card" id="psResults" aria-live="polite"></div>
+
+        <div class="ps-ref-title"><i class="fa-solid fa-table"></i>A-series reference (portrait, mm)</div>
+        <div class="ps-ref">
+          <table>
+            <thead>
+              <tr><th scope="col">Size</th><th scope="col">Width</th><th scope="col">Height</th><th scope="col">Common use</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><b>A0</b></td><td>841 mm</td><td>1189 mm</td><td>Posters, technical drawings</td></tr>
+              <tr><td><b>A1</b></td><td>594 mm</td><td>841 mm</td><td>Large posters, flip charts</td></tr>
+              <tr><td><b>A2</b></td><td>420 mm</td><td>594 mm</td><td>Medium posters, diagrams</td></tr>
+              <tr><td><b>A3</b></td><td>297 mm</td><td>420 mm</td><td>Posters, fold-out brochures</td></tr>
+              <tr><td><b>A4</b></td><td>210 mm</td><td>297 mm</td><td>Printers, letters, documents</td></tr>
+              <tr><td><b>A5</b></td><td>148 mm</td><td>210 mm</td><td>Notebooks, flyers, booklets</td></tr>
+              <tr><td><b>A6</b></td><td>105 mm</td><td>148 mm</td><td>Postcards, index cards</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="proc-line"><i class="fa-solid fa-bolt"></i><span id="psProc">Ready - pick a size and DPI. All conversions happen in this tab.</span></p>
+      </div>
+    </div>
+
+    <aside class="disclaimer" aria-label="Disclaimer">
+      <i class="fa-solid fa-circle-info"></i>
+      <p>Disclaimer: Whilst every effort has been made in building our tools, we are not to be held liable for any damages or monetary losses arising out of or in connection with their use. Actual manufacturing tolerances vary slightly from the nominal ISO/ANSI sizes. <a href="../../press/disclaimer.html">Full disclaimer</a>.</p>
+    </aside>
+
+    <div class="article-layout">
+      <article class="seo-article">
+        <h2 id="article-title">Paper Size Converter: Exact mm, Inches &amp; Pixel Dimensions</h2>
+        <p>Designers, printers and document builders constantly juggle three unit systems for the same sheet of paper. A4 is "210 by 297" in millimetres, "8.27 by 11.69" in inches, and "2480 by 3508" or "794 by 1123" in pixels depending on DPI. This converter produces all of them at once, for A, B and US series.</p>
+
+        <h2 id="paper-systems">Understanding the Paper Series</h2>
+        <p>The ISO A series is the global standard: each size down (A4 to A5) is exactly half the area of the previous one, with the same proportions. The <strong>B series</strong> sits between A sizes and is common for books and envelopes. <strong>US sizes</strong> (Letter, Legal, Tabloid) use imperial inches and are dominant in North America - a frequent source of conversion confusion.</p>
+
+        <h2 id="how-to-use">How to Use the Converter</h2>
+        <ol>
+          <li><strong>Pick a series</strong> - A (ISO), B (ISO) or US sizes.</li>
+          <li><strong>Choose the size</strong> - A4, A5, B5, Letter, and so on.</li>
+          <li><strong>Set the DPI</strong> - 72 or 96 for screen work, 300 for print, or enter a custom value.</li>
+          <li><strong>Flip the orientation</strong> if you need landscape instead of portrait.</li>
+        </ol>
+
+        <h2 id="pixel-math">The Pixel Math, Explained</h2>
+        <p>Pixels are the only unit that depends on output. First convert millimetres to inches (divide by 25.4), then multiply by the DPI: <code>pixels = mm &divide; 25.4 &times; DPI</code>. That is why the same A4 sheet is 794 &times; 1123 px at 96 DPI but 2480 &times; 3508 px at 300 DPI - the paper never changes, only the resolution it is captured at.</p>
+
+        <h2 id="real-world">Real-World Uses</h2>
+        <ul>
+          <li>Print designers set up A4 canvases at 300 DPI for sharp physical output.</li>
+          <li>Web developers export PDFs sized for exact on-screen dimensions at 96 DPI.</li>
+          <li>Anyone mixing US Letter and A4 files avoids the shrink-and-stretch surprise at the printer.</li>
+        </ul>
+
+        <h2 id="related">Related Tools</h2>
+        <p>Once your document dimensions are set, keep the quality bar high by checking our <a href="../converters/markdown-to-pdf-converter.html">Markdown to PDF Converter</a> for clean exports, and round-trip Word-friendly drafts with the <a href="../converters/markdown-to-word-converter.html">Markdown to Word Converter</a>.</p>
+
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+
+        <details class="faq-item">
+          <summary>What is the pixel size of A4 paper?</summary>
+          <div class="faq-a">
+            <p>A4 is 210 x 297 mm. At 300 DPI that makes 2480 x 3508 pixels; at 96 DPI it is 794 x 1123 pixels. Exact pixel dimensions always depend on the DPI you choose.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>How do I convert millimetres to pixels?</summary>
+          <div class="faq-a">
+            <p>Divide the millimetre value by 25.4 to get inches, then multiply by the DPI. So 210 mm at 300 DPI is (210 / 25.4) x 300 = 2480 pixels.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>What DPI should I use for print vs screen?</summary>
+          <div class="faq-a">
+            <p>Use 300 DPI (or 600 DPI for fine detail) when preparing for print. Screens typically assume 72 or 96 DPI, so a design sized for print will appear much larger in pixels than the equivalent on-screen document.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Is the Troolify paper size converter free to use?</summary>
+          <div class="faq-a">
+            <p>Yes. It is completely free, requires no account, and all conversions run locally inside your browser. No document or data is uploaded anywhere.</p>
+          </div>
+        </details>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>Whether you design at 300 DPI for the print shop or at 96 DPI for the screen, the sheet itself is a fixed physical object. Know its exact numbers in every unit, and export documents that fit perfectly every time.</p>
+      </article>
+    </div>
+
+    <section class="keyword-box" aria-label="Keywords and tags">
+      <h2>Keyword &amp; Tags</h2>
+      <h3>Keywords</h3>
+      <div class="keywords">
+        <span class="keyword">paper size converter</span>
+        <span class="keyword">A4 size in pixels</span>
+        <span class="keyword">A5 paper dimensions</span>
+        <span class="keyword">B series paper sizes</span>
+        <span class="keyword">US Letter size</span>
+        <span class="keyword">mm to inches paper</span>
+        <span class="keyword">A4 300 DPI pixels</span>
+        <span class="keyword">print size calculator</span>
+      </div>
+      <h3>Tags</h3>
+      <div class="tags">
+        <a class="tag" href="../index.html"><i class="fa-solid fa-tag"></i>PDF</a>
+        <a class="tag" href="../index.html"><i class="fa-solid fa-folder"></i>PDF Tools</a>
+        <a class="tag" href="../../tools/index.html"><i class="fa-solid fa-cube"></i>PDF</a>
+      </div>
+    </section>
+
+    <section class="author-box" aria-label="About the publisher">
+      <div class="author-avatar" aria-hidden="true"><img src="../../assets/images/logo_nobg.webp" alt="F9XR logo" loading="lazy" decoding="async" width="1407" height="768"></div>
+      <div>
+        <span class="author-role">Published by</span>
+        <h2>F9XR Development Team</h2>
+        <p>Every Troolify tool is built and reviewed by the F9XR Development Team, then checked by our Review Board for correctness, accessibility, and clarity. Tools run 100% client-side with zero data retention.</p>
+        <div class="author-links">
+          <a href="https://f9xr.github.io/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i>F9XR Team</a>
+          <a href="../../press/editorial-policies.html"><i class="fa-solid fa-scale-balanced"></i>Editorial Policies</a>
+          <a href="https://github.com/f9xr" target="_blank" rel="noopener" aria-label="F9XR on GitHub"><i class="fa-brands fa-github"></i>GitHub</a>
+          <a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on LinkedIn"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+          <a href="https://instagram.com/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on Instagram"><i class="fa-brands fa-instagram"></i>Instagram</a>
+          <a href="https://youtube.com/@QuarterlyLIV" target="_blank" rel="noopener" aria-label="F9XR on YouTube"><i class="fa-brands fa-youtube"></i>YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-tools" aria-label="Related tools">
+      <h2>Related Tools</h2>
+      <div class="related-search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" id="relatedSearch" placeholder="Search all Troolify tools&hellip;" autocomplete="off" aria-label="Search related tools">
+      </div>
+      <div class="related-grid" id="relatedGrid" aria-busy="true">
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+      </div>
+    </section>
+
+    <section class="comments" aria-label="Comments">
+      <h2>Comments</h2>
+      <div id="comments">
+        <script src="https://utteranc.es/client.js" repo="f9xr/troolify" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async></script>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"><span></span><i class="fa-solid fa-layer-group"></i><span></span></div>
+
+  </div>
+</main>
+
+<script src="../../assets/js/layout.js" defer></script>
+<script src="../../assets/js/tools-data.js" defer></script>
+<script src="../../assets/js/tool-page.js" defer></script>
+<script>
+(function(){
+  "use strict";
+  var seriesSel=document.getElementById("psSeries");
+  var sizeSel=document.getElementById("psSize");
+  var dpiSel=document.getElementById("psDpi");
+  var dpiCustomWrap=document.getElementById("psDpiCustomWrap");
+  var dpiCustom=document.getElementById("psDpiCustom");
+  var portrait=document.getElementById("psPortrait");
+  var landscape=document.getElementById("psLandscape");
+  var out=document.getElementById("psResults");
+  var proc=document.getElementById("psProc");
+
+  var SIZES={
+    A: [
+      ["A0",841,1189],["A1",594,841],["A2",420,594],["A3",297,420],["A4",210,297],
+      ["A5",148,210],["A6",105,148],["A7",74,105],["A8",52,74],["A9",37,52],["A10",26,37]
+    ],
+    B: [
+      ["B0",1000,1414],["B1",707,1000],["B2",500,707],["B3",353,500],["B4",250,353],
+      ["B5",176,250],["B6",125,176],["B7",88,125],["B8",62,88],["B9",44,62],["B10",31,44]
+    ],
+    US: [
+      ["Letter",215.9,279.4],["Legal",215.9,355.6],["Tabloid",279.4,431.8],
+      ["Executive",184.15,266.7],["Statement",139.7,215.9]
+    ]
+  };
+
+  function fillSizes(){
+    var current=sizeSel.value;
+    var list=SIZES[seriesSel.value];
+    sizeSel.innerHTML="";
+    var found=false;
+    list.forEach(function(s){
+      var o=document.createElement("option");
+      o.value=s[0];
+      o.textContent=s[0]+" ("+s[1].toLocaleString()+" x "+s[2].toLocaleString()+" mm)";
+      if(s[0]===current){ o.selected=true; found=true; }
+      sizeSel.appendChild(o);
+    });
+    if(!found){ sizeSel.selectedIndex=0; }
+    compute();
+  }
+
+  function dpi(){
+    if(dpiSel.value==="custom"){ return parseFloat(dpiCustom.value)||96; }
+    return parseFloat(dpiSel.value)||96;
+  }
+
+  function compute(){
+    var list=SIZES[seriesSel.value];
+    var item=null;
+    list.forEach(function(s){ if(s[0]===sizeSel.value){ item=s; } });
+    if(!item){ return; }
+    var w=item[1], h=item[2];
+    if(!portrait.checked){ var tmp=w; w=h; h=tmp; }
+    var d=dpi();
+    var pxW=Math.round(w/25.4*d);
+    var pxH=Math.round(h/25.4*d);
+    var inW=w/25.4, inH=h/25.4;
+    out.innerHTML=
+      '<div class="result-row hero-row"><span>'+item[0]+' ('+(portrait.checked?"portrait":"landscape")+', '+d+' DPI)</span><b>'+pxW+' &#215; '+pxH+' px</b></div>'+
+      '<div class="result-row"><span>Millimetres</span><b>'+w+' &#215; '+h+' mm</b></div>'+
+      '<div class="result-row"><span>Inches</span><b>'+inW.toFixed(2)+' &#215; '+inH.toFixed(2)+' in</b></div>'+
+      '<div class="result-row"><span>Pixels</span><b>'+pxW+' &#215; '+pxH+' px (at '+d+' DPI)</b></div>'+
+      '<div class="result-row"><span>Total pixels</span><b>'+Math.round(pxW*pxH).toLocaleString()+'</b></div>';
+    proc.textContent="Converted "+item[0]+" at "+d+" DPI - "+pxW+" x "+pxH+" px. 0 bytes uploaded.";
+  }
+
+  seriesSel.addEventListener("change",fillSizes);
+  sizeSel.addEventListener("change",compute);
+  dpiSel.addEventListener("change",function(){
+    dpiCustomWrap.style.display=dpiSel.value==="custom"?"flex":"none";
+    compute();
+  });
+  dpiCustom.addEventListener("input",compute);
+  [portrait,landscape].forEach(function(r){ r.addEventListener("change",compute); });
+  fillSizes();
+})();
+</script>
+</body>
+</html>

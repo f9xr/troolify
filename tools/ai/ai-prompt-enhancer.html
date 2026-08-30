@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Prompt Enhancer | Improve &amp; Structure Your ChatGPT Prompts</title>
+<meta name="description" content="Turn a one-line instruction into a powerful structured prompt for ChatGPT, Claude or Gemini. Role, context, steps and output format - free, 100% client-side, no AI API.">
+<meta name="author" content="F9XR Development Team">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#212529">
+<link rel="canonical" href="https://f9xr.github.io/troolify/tools/ai/ai-prompt-enhancer.html">
+<meta property="og:site_name" content="Troolify">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="AI Prompt Enhancer | Improve &amp; Structure Your ChatGPT Prompts">
+<meta property="og:description" content="Turn a one-line instruction into a powerful structured prompt for ChatGPT, Claude or Gemini. Free, private and 100% client-side.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://f9xr.github.io/troolify/tools/ai/ai-prompt-enhancer.html">
+<meta property="og:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-08-28">
+<meta property="article:modified_time" content="2026-08-28">
+<meta property="article:section" content="AI Tools">
+<meta property="article:tag" content="AI Prompt Enhancer">
+<meta property="article:tag" content="ChatGPT Prompt Builder">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Prompt Enhancer | Improve &amp; Structure Your ChatGPT Prompts">
+<meta name="twitter:description" content="Turn a one-line instruction into a powerful structured prompt for ChatGPT, Claude or Gemini. Free, private, 100% browser based.">
+<meta name="twitter:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://f9xr.github.io/troolify/index.html" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://f9xr.github.io/troolify/tools/index.html" },
+    { "@type": "ListItem", "position": 3, "name": "AI Tools", "item": "https://f9xr.github.io/troolify/tools/ai/" },
+    { "@type": "ListItem", "position": 4, "name": "AI Prompt Enhancer", "item": "https://f9xr.github.io/troolify/tools/ai/ai-prompt-enhancer.html" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "AI Prompt Enhancer",
+  "url": "https://f9xr.github.io/troolify/tools/ai/ai-prompt-enhancer.html",
+  "applicationCategory": "UtilitiesApplication",
+  "applicationSubCategory": "AI Prompt Structuring & Enhancement Tool",
+  "operatingSystem": "Any (web browser)",
+  "featureList": ["Structure prompts with role, context, task and steps", "Optimize for ChatGPT, Claude or Gemini", "Choose bullet, table or Markdown output", "One-click copy of the enhanced prompt", "100% client-side processing, no AI API"],
+  "description": "Turn a one-line instruction into a powerful structured prompt for ChatGPT, Claude or Gemini. Role, context, steps and output format - free, 100% client-side, no AI API.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "datePublished": "2026-08-28",
+  "dateModified": "2026-08-28",
+  "author": { "@type": "Organization", "name": "F9XR Development Team", "url": "https://f9xr.github.io/" },
+  "publisher": { "@type": "Organization", "name": "Troolify", "url": "https://f9xr.github.io/troolify/", "logo": { "@type": "ImageObject", "url": "https://f9xr.github.io/troolify/assets/images/logo_nobg.webp", "width": 1407, "height": 768 } }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does the AI prompt enhancer work?",
+      "acceptedAnswer": { "@type": "Answer", "text": "It wraps your plain instruction inside a structured template with clearly labeled sections: role, context, task, steps and output format. You paste that enhanced prompt into ChatGPT, Claude or Gemini instead of your raw one-liner, which produces more consistent and relevant answers." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the enhancer call an AI model?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. This is a pure text-templating tool that runs entirely in your browser. It rearranges and expands your own words into a better prompt structure, and you send the result to any AI tool you choose. Nothing is uploaded anywhere." }
+    },
+    {
+      "@type": "Question",
+      "name": "Which AI models does it support?",
+      "acceptedAnswer": { "@type": "Answer", "text": "You can pick an output optimized for ChatGPT, Claude or Gemini. The difference is mostly in framing - for example Claude responds well to explicit step-by-step reasoning, while Gemini rewards concise direct instructions." }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do structured prompts give better results?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Large language models respond more predictably when role, context, and expected output format are explicit. A structured prompt reduces ambiguity, gives the model clear constraints, and makes it easier to follow multi-part instructions without drifting off topic." }
+    }
+  ]
+}
+</script>
+
+<link rel="icon" type="image/webp" href="../../assets/images/favicon.webp"><link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../../assets/css/tailwind.css">
+<link rel="stylesheet" href="../../assets/css/tool.css">
+<link rel="stylesheet" href="../../assets/css/site-shell.css">
+<link rel="stylesheet" href="../../assets/css/tool-page.css">
+<link rel="stylesheet" href="../../assets/css/seo-article.css">
+<style>
+.pe-field{display:flex;flex-direction:column;gap:6px}
+.pe-field label{font-size:12.5px;font-weight:700;color:var(--muted)}
+.pe-field textarea{width:100%;min-height:130px;resize:vertical;border:1px solid var(--border);border-radius:10px;padding:12px 14px;font-family:inherit;font-size:14.5px;font-weight:600;color:var(--ink);background:#1B2028;line-height:1.6;outline:none}
+.pe-field textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+.pe-field input[type=text]{background:#1B2028;border:1px solid var(--border);color:var(--ink);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:14px;font-weight:600;outline:none;width:100%;box-sizing:border-box}
+.pe-field input[type=text]:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+.pe-field select{background:#1B2028;border:1px solid var(--border);color:var(--ink);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:14px;font-weight:600;outline:none;width:100%;box-sizing:border-box}
+.pe-field select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+.pe-grid{display:grid;grid-template-columns:1fr;gap:14px}
+@media(min-width:700px){.pe-grid{grid-template-columns:1fr 1fr 1fr}}
+.opt-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.opt-chk{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:600;color:var(--muted);cursor:pointer;user-select:none}
+.opt-chk input{display:none}
+.opt-ui{width:38px;height:21px;border-radius:999px;background:var(--border);position:relative;transition:background .2s ease;flex-shrink:0}
+.opt-ui::after{content:"";position:absolute;top:2.5px;left:3px;width:16px;height:16px;border-radius:50%;background:#fff;transition:transform .22s cubic-bezier(.16,1,.3,1);box-shadow:0 1px 3px rgba(0,0,0,.35)}
+.opt-chk input:checked + .opt-ui{background:var(--accent)}
+.opt-chk input:checked + .opt-ui::after{transform:translateX(16px)}
+.result-card{background:linear-gradient(180deg,rgba(59,130,246,.12),rgba(59,130,246,.03));border:1px solid rgba(96,165,250,.25);border-radius:14px;padding:18px;margin-top:18px}
+.result-row{display:flex;justify-content:space-between;gap:10px;padding:8px 2px;font-size:14px}
+.result-row+.result-row{border-top:1px dashed rgba(255,255,255,.08)}
+.result-row b{color:#93C5FD;font-weight:800;text-align:right;word-break:break-all}
+.result-row.hero-row b{color:#6EE7B7}
+</style>
+</head>
+<body data-layout="tool">
+<noscript>
+    <nav aria-label="Primary" style="position:static;display:block;padding:1rem 1.5rem;background:#212529;border-bottom:1px solid #343A40;text-align:center;font-size:0.9rem;">
+        <a href="../../index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Home</a>
+        <a href="../../tools/index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Tools</a>
+        <a href="../../pages/about.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">About</a>
+        <a href="../../pages/contact.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Contact</a>
+    </nav>
+</noscript>
+
+<main class="tool-main">
+  <div class="container">
+
+    <div class="tool-head hero">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="../../tools/index.html">Tools</a></li>
+          <li><a href="../index.html">AI Tools</a></li>
+          <li class="current" aria-current="page">AI Prompt Enhancer</li>
+        </ol>
+      </nav>
+      <div class="hero-main">
+        <span class="tool-badge"><span class="dot"></span>100% client-side &middot; zero data retention</span>
+        <h1>AI Prompt Enhancer</h1>
+        <p>Type a plain instruction and get a complete, structured prompt ready for ChatGPT, Claude or Gemini - with role, context, task steps and output format all laid out for you.</p>
+      </div>
+      <div class="hero-box hero-cat">
+        <h3 class="hero-box-title"><i class="fa-solid fa-folder-open"></i>Category</h3>
+        <div class="tool-meta">
+          <span class="tool-tag"><i class="fa-solid fa-tag"></i>AI Writing</span>
+          <a class="tool-cat" href="../index.html" aria-label="Browse AI Tools category"><i class="fa-solid fa-folder"></i>AI Tools</a>
+        </div>
+      </div>
+      <div class="hero-box hero-qa">
+        <h3 class="hero-box-title"><i class="fa-solid fa-bolt"></i>Quick Actions</h3>
+        <div class="tool-actions">
+          <button class="rt-btn" type="button" id="btnShare"><i class="fa-solid fa-share-nodes"></i>Share</button>
+          <button class="rt-btn" type="button" id="btnEmbed"><i class="fa-solid fa-code"></i>Embed Tool</button>
+          <a class="rt-btn" href="../../pages/feedback.html"><i class="fa-solid fa-comment"></i>Feedback</a>
+        </div>
+      </div>
+      <div class="hero-box hero-details">
+        <h3 class="hero-box-title"><i class="fa-solid fa-circle-info"></i>Tool Details</h3>
+        <div class="tool-details">
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.github.io/" target="_blank" rel="noopener">F9XR Development Team</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-check-double"></i>Reviewed by</span><a class="detail-value" href="../../press/editorial-policies.html">Review Board</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-clock-rotate-left"></i>Last updated</span><span class="detail-value">28 August 2026</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel clean">
+      <div class="panel-inner">
+        <div class="toolbar-row">
+          <span class="tool-label"><i class="fa-solid fa-wand-magic-sparkles"></i>Prompt Enhancer</span>
+          <div class="toolbar-actions">
+            <button class="chip-btn" type="button" id="peSample" title="Loads an example instruction"><i class="fa-solid fa-wand-magic-sparkles"></i><span class="hide-sm">Sample</span></button>
+          </div>
+        </div>
+
+        <div class="pe-field">
+          <label for="peInput">Your instruction</label>
+          <textarea id="peInput" placeholder="e.g. Write a blog post about the benefits of remote work for small teams."></textarea>
+        </div>
+
+        <div class="pe-grid" style="margin-top:16px">
+          <div class="pe-field"><label for="peModel">Target model style</label>
+            <select id="peModel">
+              <option value="chatgpt">ChatGPT</option>
+              <option value="claude">Claude</option>
+              <option value="gemini">Gemini</option>
+            </select>
+          </div>
+          <div class="pe-field"><label for="peRole">Custom role (optional)</label>
+            <input type="text" id="peRole" placeholder="e.g. senior content strategist">
+          </div>
+          <div class="pe-field"><label for="peFmt">Desired output format</label>
+            <select id="peFmt">
+              <option value="bullet">Bullet points</option>
+              <option value="table">Table</option>
+              <option value="markdown">Markdown article</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="opt-row">
+          <label class="opt-chk" for="peRoleChk">
+            <input type="checkbox" id="peRoleChk" checked>
+            <span class="opt-ui" aria-hidden="true"></span>
+            Add an "act as" role line
+          </label>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn-primary" type="button" id="peEnhance"><i class="fa-solid fa-wand-magic-sparkles"></i>Enhance prompt</button>
+          <button class="rt-btn" type="button" id="peCopy" disabled><i class="fa-solid fa-copy"></i>Copy prompt</button>
+        </div>
+
+        <div class="output" id="peOut" role="status" aria-live="polite"></div>
+
+        <div class="result-card" id="peStats" aria-live="polite" style="display:none"></div>
+
+        <p class="proc-line"><i class="fa-solid fa-bolt"></i><span id="peProc">Type an instruction and hit Enhance - this runs locally, no AI API, nothing uploaded.</span></p>
+      </div>
+    </div>
+
+    <aside class="disclaimer" aria-label="Disclaimer">
+      <i class="fa-solid fa-circle-info"></i>
+      <p>Disclaimer: Whilst every effort has been made in building our tools, we are not to be held liable for any damages or monetary losses arising out of or in connection with their use. The enhancer structures text locally and does not generate or send content to any AI service. <a href="../../press/disclaimer.html">Full disclaimer</a>.</p>
+    </aside>
+
+    <div class="article-layout">
+      <article class="seo-article">
+        <h2 id="article-title">AI Prompt Enhancer: Turn Weak Prompts Into Strong Results</h2>
+        <p>Most AI misses are not the model's fault - they are the prompt's. A vague "write something about marketing" gives back a generic essay, while a structured prompt with a role, context, steps and a specified output format returns work that reads like it was briefed by a professional. This enhancer builds that structure for you in one click.</p>
+
+        <h2 id="inside-the-template">What's Inside the Enhanced Prompt</h2>
+        <ul>
+          <li><strong>Role</strong> - an optional "act as" persona that frames the answer (add your own, like "senior content strategist").</li>
+          <li><strong>Context</strong> - the placeholders for audience, tone and constraints that ground the answer in realism.</li>
+          <li><strong>Task</strong> - your original instruction, stated clearly as the core job.</li>
+          <li><strong>Steps</strong> - a short checklist asking the model to restate, plan, execute and self-review.</li>
+          <li><strong>Output format</strong> - bullet points, tables or Markdown, whichever fits your use case.</li>
+        </ul>
+
+        <h2 id="how-to-use">How to Use the Enhancer</h2>
+        <ol>
+          <li><strong>Type your instruction</strong> - one sentence is enough, the enhancer expands on it.</li>
+          <li><strong>Pick a model style</strong> - ChatGPT, Claude or Gemini, each with slightly different framing.</li>
+          <li><strong>Set a role and output format</strong> - optional but powerful; "act as" roles dramatically change results.</li>
+          <li><strong>Hit Enhance</strong> - copy the finished prompt and paste it into your AI tool of choice.</li>
+        </ol>
+
+        <h2 id="why-it-works">Why Structured Prompts Work Better</h2>
+        <p>Large language models are far more predictable when the contract is explicit. A role constrains the style, context fills in what the model assumes, steps prevent skipped sub-tasks, and an output format stops rambling answers. The difference is most visible on multi-part requests - compare the same request sent raw and enhanced, and the improved prompt almost always wins.</p>
+
+        <h2 id="go-further">Going Further with Troolify</h2>
+        <p>Pair structured prompts with great raw material: run your drafts through the <a href="../text/word-counter.html">Word Counter</a> to hit a target length, or build specialized, scenario-ready prompts with the <a href="../prompts/css-view-transitions-prompt-generator.html">CSS View Transitions Prompt Generator</a>.</p>
+
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+
+        <details class="faq-item">
+          <summary>How does the AI prompt enhancer work?</summary>
+          <div class="faq-a">
+            <p>It wraps your plain instruction inside a structured template with clearly labeled sections: role, context, task, steps and output format. You paste that enhanced prompt into ChatGPT, Claude or Gemini instead of your raw one-liner, which produces more consistent and relevant answers.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Does the enhancer call an AI model?</summary>
+          <div class="faq-a">
+            <p>No. This is a pure text-templating tool that runs entirely in your browser. It rearranges and expands your own words into a better prompt structure, and you send the result to any AI tool you choose. Nothing is uploaded anywhere.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Which AI models does it support?</summary>
+          <div class="faq-a">
+            <p>You can pick an output optimized for ChatGPT, Claude or Gemini. The difference is mostly in framing - for example Claude responds well to explicit step-by-step reasoning, while Gemini rewards concise direct instructions.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Why do structured prompts give better results?</summary>
+          <div class="faq-a">
+            <p>Large language models respond more predictably when role, context, and expected output format are explicit. A structured prompt reduces ambiguity, gives the model clear constraints, and makes it easier to follow multi-part instructions without drifting off topic.</p>
+          </div>
+        </details>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>The single cheapest way to improve your AI output is to improve what you send in. Structure it, give it a role, and tell it exactly what format to return - then watch the quality jump.</p>
+      </article>
+    </div>
+
+    <section class="keyword-box" aria-label="Keywords and tags">
+      <h2>Keyword &amp; Tags</h2>
+      <h3>Keywords</h3>
+      <div class="keywords">
+        <span class="keyword">AI prompt enhancer</span>
+        <span class="keyword">ChatGPT prompt builder</span>
+        <span class="keyword">improve AI prompts</span>
+        <span class="keyword">prompt template generator</span>
+        <span class="keyword">Claude prompt writing</span>
+        <span class="keyword">Gemini prompt structure</span>
+        <span class="keyword">act as role prompt</span>
+        <span class="keyword">free AI tools</span>
+      </div>
+      <h3>Tags</h3>
+      <div class="tags">
+        <a class="tag" href="../index.html"><i class="fa-solid fa-tag"></i>AI Writing</a>
+        <a class="tag" href="../index.html"><i class="fa-solid fa-folder"></i>AI Tools</a>
+        <a class="tag" href="../../tools/index.html"><i class="fa-solid fa-cube"></i>AI</a>
+      </div>
+    </section>
+
+    <section class="author-box" aria-label="About the publisher">
+      <div class="author-avatar" aria-hidden="true"><img src="../../assets/images/logo_nobg.webp" alt="F9XR logo" loading="lazy" decoding="async" width="1407" height="768"></div>
+      <div>
+        <span class="author-role">Published by</span>
+        <h2>F9XR Development Team</h2>
+        <p>Every Troolify tool is built and reviewed by the F9XR Development Team, then checked by our Review Board for correctness, accessibility, and clarity. Tools run 100% client-side with zero data retention.</p>
+        <div class="author-links">
+          <a href="https://f9xr.github.io/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i>F9XR Team</a>
+          <a href="../../press/editorial-policies.html"><i class="fa-solid fa-scale-balanced"></i>Editorial Policies</a>
+          <a href="https://github.com/f9xr" target="_blank" rel="noopener" aria-label="F9XR on GitHub"><i class="fa-brands fa-github"></i>GitHub</a>
+          <a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on LinkedIn"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+          <a href="https://instagram.com/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on Instagram"><i class="fa-brands fa-instagram"></i>Instagram</a>
+          <a href="https://youtube.com/@QuarterlyLIV" target="_blank" rel="noopener" aria-label="F9XR on YouTube"><i class="fa-brands fa-youtube"></i>YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-tools" aria-label="Related tools">
+      <h2>Related Tools</h2>
+      <div class="related-search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" id="relatedSearch" placeholder="Search all Troolify tools&hellip;" autocomplete="off" aria-label="Search related tools">
+      </div>
+      <div class="related-grid" id="relatedGrid" aria-busy="true">
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+      </div>
+    </section>
+
+    <section class="comments" aria-label="Comments">
+      <h2>Comments</h2>
+      <div id="comments">
+        <script src="https://utteranc.es/client.js" repo="f9xr/troolify" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async></script>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"><span></span><i class="fa-solid fa-layer-group"></i><span></span></div>
+
+  </div>
+</main>
+
+<script src="../../assets/js/layout.js" defer></script>
+<script src="../../assets/js/tools-data.js" defer></script>
+<script src="../../assets/js/tool-page.js" defer></script>
+<script>
+(function(){
+  "use strict";
+  var input=document.getElementById("peInput");
+  var modelSel=document.getElementById("peModel");
+  var roleIn=document.getElementById("peRole");
+  var roleChk=document.getElementById("peRoleChk");
+  var fmtSel=document.getElementById("peFmt");
+  var enhanceBtn=document.getElementById("peEnhance");
+  var copyBtn=document.getElementById("peCopy");
+  var out=document.getElementById("peOut");
+  var stats=document.getElementById("peStats");
+  var proc=document.getElementById("peProc");
+  var lastPrompt="";
+  var sampleIdx=0;
+
+  var SAMPLES=[
+    "Write a blog post about the benefits of remote work for small teams.",
+    "Create a 7-day meal plan for a vegetarian who wants to gain muscle.",
+    "Explain how quantum computing works to a 10 year old.",
+    "Draft a polite reminder email to a client who is late with payment.",
+    "Plan a 3-day itinerary for a first trip to Tokyo on a mid-range budget."
+  ];
+
+  var MODEL_INTRO={
+    chatgpt:"You are an expert assistant who gives clear, practical, well-organized answers. Prioritize actionable advice over theory.",
+    claude:"You are Claude, a thoughtful and careful AI assistant. Think step by step, show your reasoning where relevant, and clearly flag any assumptions or uncertain claims.",
+    gemini:"You are Gemini, a useful and efficient AI assistant. Be direct and concise. Avoid filler, repetition and unnecessary hedging."
+  };
+
+  var FORMAT_LINES={
+    bullet:"Present the answer as clear bullet points grouped under short headings. Use one line per idea and keep each point scannable.",
+    table:"Present the answer using Markdown tables wherever structured or comparable data is involved. Use only short paragraph summaries between tables.",
+    markdown:"Format the final answer as a clean Markdown document: use ## headings, - bullet lists, numbered lists where order matters, and ``` code fences for any code or commands."
+  };
+
+  function modelName(){ return modelSel.value.charAt(0).toUpperCase()+modelSel.value.slice(1); }
+
+  function build(){
+    var brief=input.value.trim();
+    if(!brief){
+      out.textContent=""; out.classList.remove("visible");
+      copyBtn.disabled=true; stats.style.display="none";
+      proc.textContent="Please type an instruction first, then hit Enhance.";
+      return;
+    }
+    var role=roleIn.value.trim();
+    var prompt="";
+
+    prompt+="### ROLE\n";
+    if(roleChk.checked){
+      prompt+="You are acting as "+(role?role:"a subject-matter expert")+".\n";
+    }
+    prompt+=MODEL_INTRO[modelSel.value]+"\n\n";
+
+    prompt+="### CONTEXT\n";
+    prompt+="- Original brief: \""+brief+"\"\n";
+    prompt+="- Audience: [who is this for? e.g. busy founders, beginners, technical reviewers]\n";
+    prompt+="- Tone: [e.g. professional, friendly, persuasive, neutral]\n";
+    prompt+="- Constraints: [e.g. target length, avoid jargon, no sensational claims]\n\n";
+
+    prompt+="### TASK\n";
+    prompt+=brief+"\n\n";
+
+    prompt+="### STEPS\n";
+    prompt+="1. Restate your understanding of the task in one sentence before answering.\n";
+    prompt+="2. Break the task into logical parts and address every part explicitly.\n";
+    prompt+="3. Include concrete examples, numbers or named sources where they strengthen the answer.\n";
+    prompt+="4. Self-review: read your draft against the original brief, fix any gaps and remove anything off-topic.\n\n";
+
+    prompt+="### OUTPUT FORMAT\n";
+    prompt+=FORMAT_LINES[fmtSel.value]+"\n";
+    prompt+="- Do not invent facts, sources or statistics. If unsure, say so.\n\n";
+
+    prompt+="### FINAL CHECK\n";
+    prompt+="- Covers every requirement in the brief and nothing off-topic.\n";
+    prompt+="- Matches the requested "+(fmtSel.value==="table"?"table":"output format")+".\n";
+    prompt+="- Ready to paste into "+modelName()+" with no additional setup.";
+
+    lastPrompt=prompt;
+    out.textContent=prompt;
+    out.classList.add("visible");
+    copyBtn.disabled=false;
+    stats.style.display="block";
+    stats.innerHTML=
+      '<div class="result-row hero-row"><span>Enhanced prompt length</span><b>'+prompt.length.toLocaleString()+' characters / '+prompt.split(/\s+/).length+' words</b></div>'+
+      '<div class="result-row"><span>Target model</span><b>'+modelName()+'</b></div>'+
+      '<div class="result-row"><span>Output format</span><b>'+fmtSel.value.charAt(0).toUpperCase()+fmtSel.value.slice(1)+'</b></div>';
+    proc.textContent="Prompt structured for "+modelName()+" - pure client-side templating, 0 bytes uploaded.";
+  }
+
+  enhanceBtn.addEventListener("click",build);
+  copyBtn.addEventListener("click",function(){
+    if(!lastPrompt) return;
+    window.Troolify.copyToClipboard(lastPrompt,function(){ proc.textContent="Enhanced prompt copied - paste it into "+modelName()+". Your text never left this device."; });
+  });
+  document.getElementById("peSample").addEventListener("click",function(){
+    input.value=SAMPLES[sampleIdx%SAMPLES.length];
+    sampleIdx+=1;
+    build();
+    input.focus();
+  });
+})();
+</script>
+</body>
+</html>

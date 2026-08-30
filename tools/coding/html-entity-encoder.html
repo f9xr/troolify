@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Entity Encoder | Encode &amp; Decode Special Characters</title>
+<meta name="description" content="Encode text to HTML entities and decode entities back to readable text online. Safe for &amp; &lt; &gt; &quot; and named Unicode characters - 100% client-side.">
+<meta name="author" content="F9XR Development Team">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#212529">
+<link rel="canonical" href="https://f9xr.github.io/troolify/tools/coding/html-entity-encoder.html">
+<meta property="og:site_name" content="Troolify">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="HTML Entity Encoder | Encode &amp; Decode Special Characters">
+<meta property="og:description" content="Encode text to HTML entities and decode entities back to text instantly - 100% client-side.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://f9xr.github.io/troolify/tools/coding/html-entity-encoder.html">
+<meta property="og:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-08-28">
+<meta property="article:modified_time" content="2026-08-28">
+<meta property="article:section" content="Developer Tools">
+<meta property="article:tag" content="HTML Entity Encoder">
+<meta property="article:tag" content="Developer Tools">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="HTML Entity Encoder | Encode &amp; Decode Special Characters">
+<meta name="twitter:description" content="Encode text to HTML entities and decode entities back to text - 100% browser based, zero data retention.">
+<meta name="twitter:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://f9xr.github.io/troolify/index.html" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://f9xr.github.io/troolify/tools/index.html" },
+    { "@type": "ListItem", "position": 3, "name": "Developer Tools", "item": "https://f9xr.github.io/troolify/tools/coding/" },
+    { "@type": "ListItem", "position": 4, "name": "HTML Entity Encoder", "item": "https://f9xr.github.io/troolify/tools/coding/html-entity-encoder.html" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "HTML Entity Encoder",
+  "url": "https://f9xr.github.io/troolify/tools/coding/html-entity-encoder.html",
+  "applicationCategory": "UtilitiesApplication",
+  "applicationSubCategory": "HTML Entity Encoding & Decoding Tool",
+  "operatingSystem": "Any (web browser)",
+  "featureList": ["Encode <, >, &, quotes and apostrophes", "Named Unicode entities", "Decode numeric and named entities", "Live conversion", "100% client-side processing"],
+  "description": "Encode text to HTML entities and decode entities back to readable text, making any string safe to paste into a web page.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "datePublished": "2026-08-28",
+  "dateModified": "2026-08-28",
+  "author": { "@type": "Organization", "name": "F9XR Development Team", "url": "https://f9xr.github.io/" },
+  "publisher": { "@type": "Organization", "name": "Troolify", "url": "https://f9xr.github.io/troolify/", "logo": { "@type": "ImageObject", "url": "https://f9xr.github.io/troolify/assets/images/logo_nobg.webp", "width": 1407, "height": 768 } }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are HTML entities?",
+      "acceptedAnswer": { "@type": "Answer", "text": "HTML entities are special codes that represent characters in markup, starting with an ampersand and ending with a semicolon, like &amp; for & or &copy; for the copyright symbol. They let you display characters that would otherwise be interpreted as HTML syntax." }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do I need to escape special characters in HTML?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The characters &lt; &gt; &amp; &quot; and &apos; have structural meaning in HTML. If user content containing them is inserted directly into a page, the browser can parse it as markup, which breaks layout and can enable XSS attacks. Encoding the text prevents that." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between named and numeric entities?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Named entities use a readable name such as &copy; or &euro;, while numeric entities use a decimal or hex code such as &#169; or &#x00A9;. Browsers support both, but named entities are easier to read in source code." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the Troolify HTML entity encoder safe to use?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Encoding and decoding run entirely inside your browser tab on your own device. Your text is never uploaded, stored, or transmitted to any server." }
+    }
+  ]
+}
+</script>
+
+<link rel="icon" type="image/webp" href="../../assets/images/favicon.webp"><link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../../assets/css/tailwind.css">
+<link rel="stylesheet" href="../../assets/css/tool.css">
+<link rel="stylesheet" href="../../assets/css/site-shell.css">
+<link rel="stylesheet" href="../../assets/css/tool-page.css">
+<link rel="stylesheet" href="../../assets/css/seo-article.css">
+<style>
+.calc-grid{display:grid;grid-template-columns:1fr;gap:18px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:12.5px;font-weight:700;color:var(--muted)}
+.field select{background:#1B2028;border:1px solid var(--border);color:var(--ink);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:15px;font-weight:600;outline:none;width:100%;box-sizing:border-box}
+.field select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+.he-output{font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace;word-break:break-all}
+</style>
+</head>
+<body data-layout="tool">
+<noscript>
+    <nav aria-label="Primary" style="position:static;display:block;padding:1rem 1.5rem;background:#212529;border-bottom:1px solid #343A40;text-align:center;font-size:0.9rem;">
+        <a href="../../index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Home</a>
+        <a href="../../tools/index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Tools</a>
+        <a href="../../pages/about.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">About</a>
+        <a href="../../pages/contact.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Contact</a>
+    </nav>
+</noscript>
+
+<main class="tool-main">
+  <div class="container">
+
+    <div class="tool-head hero">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="../../tools/index.html">Tools</a></li>
+          <li><a href="../index.html">Developer Tools</a></li>
+          <li class="current" aria-current="page">HTML Entity Encoder</li>
+        </ol>
+      </nav>
+      <div class="hero-main">
+        <span class="tool-badge"><span class="dot"></span>100% client-side &middot; zero data retention</span>
+        <h1>HTML Entity Encoder</h1>
+        <p>Encode special characters into HTML entities to make any text safe to paste into a web page, or decode entities back into plain, readable text.</p>
+      </div>
+      <div class="hero-box hero-cat">
+        <h3 class="hero-box-title"><i class="fa-solid fa-folder-open"></i>Category</h3>
+        <div class="tool-meta">
+          <span class="tool-tag"><i class="fa-solid fa-tag"></i>HTML</span>
+          <a class="tool-cat" href="../index.html" aria-label="Browse Developer Tools category"><i class="fa-solid fa-folder"></i>Developer Tools</a>
+        </div>
+      </div>
+      <div class="hero-box hero-qa">
+        <h3 class="hero-box-title"><i class="fa-solid fa-bolt"></i>Quick Actions</h3>
+        <div class="tool-actions">
+          <button class="rt-btn" type="button" id="btnShare"><i class="fa-solid fa-share-nodes"></i>Share</button>
+          <button class="rt-btn" type="button" id="btnEmbed"><i class="fa-solid fa-code"></i>Embed Tool</button>
+          <a class="rt-btn" href="../../pages/feedback.html"><i class="fa-solid fa-comment"></i>Feedback</a>
+        </div>
+      </div>
+      <div class="hero-box hero-details">
+        <h3 class="hero-box-title"><i class="fa-solid fa-circle-info"></i>Tool Details</h3>
+        <div class="tool-details">
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.github.io/" target="_blank" rel="noopener">F9XR Development Team</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-check-double"></i>Reviewed by</span><a class="detail-value" href="../../press/editorial-policies.html">Review Board</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-clock-rotate-left"></i>Last updated</span><span class="detail-value">28 August 2026</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel clean">
+      <div class="panel-inner">
+        <div class="toolbar-row">
+          <span class="tool-label"><i class="fa-solid fa-code"></i>Input</span>
+          <div class="toolbar-actions">
+            <button class="chip-btn" type="button" id="heSample" title="Load a sample value"><i class="fa-solid fa-wand-magic-sparkles"></i><span class="hide-sm">Sample</span></button>
+            <button class="chip-btn" type="button" id="heClear" title="Clear the input"><i class="fa-solid fa-eraser"></i><span class="hide-sm">Clear</span></button>
+          </div>
+        </div>
+
+        <textarea id="heInput" spellcheck="false" aria-label="HTML entity input" placeholder="Type or paste text with < > &amp; &quot; ' and accented or Unicode characters&hellip;"></textarea>
+
+        <div class="calc-grid" style="margin-top:14px">
+          <div class="field"><label for="heMode">Conversion mode</label>
+            <select id="heMode">
+              <option value="encode" selected>Encode text &rarr; HTML entities</option>
+              <option value="decode">Decode entities &rarr; text</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn-primary" type="button" id="heCopy"><i class="fa-solid fa-copy"></i>Copy result</button>
+        </div>
+
+        <div class="output he-output" id="heOut" aria-live="polite"></div>
+        <p class="proc-line"><i class="fa-solid fa-bolt"></i><span id="heProc">Ready - conversion happens in this tab.</span></p>
+      </div>
+    </div>
+
+    <aside class="disclaimer" aria-label="Disclaimer">
+      <i class="fa-solid fa-circle-info"></i>
+      <p>Disclaimer: Whilst every effort has been made in building our tools, we are not to be held liable for any damages or monetary losses arising out of or in connection with their use. <a href="../../press/disclaimer.html">Full disclaimer</a>.</p>
+    </aside>
+
+    <div class="article-layout">
+      <article class="seo-article">
+        <h2 id="article-title">HTML Entity Encoder: Make Every String Safe for the Web</h2>
+        <p>When you place user-generated text inside an HTML page, a stray angle bracket or ampersand can silently break your markup - or worse, let an attacker inject script. Encoding those characters as HTML entities is a simple, reliable defence, and this tool automates the whole process in both directions.</p>
+
+        <h2 id="what-are-html-entities">What Are HTML Entities?</h2>
+        <p>HTML entities are codes that represent characters in markup. They always begin with an ampersand and end with a semicolon, such as <code>&amp;lt;</code> for the less-than sign or <code>&amp;copy;</code> for the copyright symbol. The five characters that shape HTML syntax itself are <code>&amp;</code>, <code>&lt;</code>, <code>&gt;</code>, <code>&quot;</code> and <code>&#39;</code>.</p>
+        <p>Named entities cover thousands of punctuation, currency, math and accented-letter characters, while numeric entities like <code>&amp;#169;</code> (decimal) or <code>&amp;#x00A9;</code> (hex) work universally.</p>
+
+        <h2 id="how-to-use">How to Use the Entity Encoder</h2>
+        <ol>
+          <li><strong>Pick encode or decode</strong> from the mode selector.</li>
+          <li><strong>Paste your text</strong> - the conversion runs live as you type.</li>
+          <li><strong>Copy the result</strong> into your HTML source, template, or content management system.</li>
+        </ol>
+        <p>Encode turns <code>&lt;b&gt;</code> into <code>&amp;lt;b&amp;gt;</code> and swaps Unicode characters for readable names, while decode resolves both &amp;**name**; and &#169; styles back to plain text.</p>
+
+        <h2 id="why-it-matters">Why Escaping Special Characters Matters</h2>
+        <p>Injecting raw user content into a page without escaping is the number one cause of cross-site scripting (XSS) vulnerabilities. Encoding the text denies the browser any chance to interpret it as markup, so quotes, tags and scripts display exactly as written. That is why escaping is a core rule of secure web development in every framework.</p>
+        <p>It is also handy for everyday publishing. Encode first, then hand the result to our <a href="markdown-to-html.html">Markdown to HTML Converter</a> for longer documents, or keep JSON safe with the <a href="json-formatter.html">JSON Formatter</a> when building payloads that carry user text.</p>
+
+        <h2 id="encode-vs-decode">When to Encode vs. Decode</h2>
+        <p>Encode when you are moving raw text <em>into</em> markup: comments, names, translations, database fields, anything dynamic. Decode when you are extracting text <em>out</em> of markup, such as scraping page source, cleaning exported CMS content, or reading escaped API responses. Getting the direction right is what keeps your output clean and your pages safe.</p>
+
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+
+        <details class="faq-item">
+          <summary>What are HTML entities?</summary>
+          <div class="faq-a">
+            <p>HTML entities are special codes that represent characters in markup, starting with an ampersand and ending with a semicolon, like &amp;amp; for &amp; or &amp;copy; for the copyright symbol. They let you display characters that would otherwise be interpreted as HTML syntax.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Why do I need to escape special characters in HTML?</summary>
+          <div class="faq-a">
+            <p>The characters &lt;, &gt;, &amp;, &quot; and &#39; have structural meaning in HTML. If user content containing them is inserted directly into a page, the browser can parse it as markup, which breaks layout and can enable XSS attacks. Encoding the text prevents that.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>What is the difference between named and numeric entities?</summary>
+          <div class="faq-a">
+            <p>Named entities use a readable name such as &amp;copy; or &amp;euro;, while numeric entities use a decimal or hex code such as &amp;#169; or &amp;#x00A9;. Browsers support both, but named entities are easier to read in source code.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Is the Troolify HTML entity encoder safe to use?</summary>
+          <div class="faq-a">
+            <p>Yes. Encoding and decoding run entirely inside your browser tab on your own device. Your text is never uploaded, stored, or transmitted to any server.</p>
+          </div>
+        </details>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>Escaping special characters is a tiny habit with outsized consequences for security and page quality. Keep the entity encoder bookmarked - it turns a fiddly manual task into a live, copy-paste operation that happens entirely on your device.</p>
+      </article>
+    </div>
+
+    <section class="keyword-box" aria-label="Keywords and tags">
+      <h2>Keyword &amp; Tags</h2>
+      <h3>Keywords</h3>
+      <div class="keywords">
+        <span class="keyword">html entity encoder</span>
+        <span class="keyword">encode html entities</span>
+        <span class="keyword">escape html special characters</span>
+        <span class="keyword">html entity decoder</span>
+        <span class="keyword">&amp;lt; &amp;gt; &amp;amp;</span>
+        <span class="keyword">xss safe text</span>
+        <span class="keyword">unicode entity converter</span>
+        <span class="keyword">developer tools</span>
+      </div>
+      <h3>Tags</h3>
+      <div class="tags">
+        <a class="tag" href="../index.html"><i class="fa-solid fa-tag"></i>HTML</a>
+        <a class="tag" href="../index.html"><i class="fa-solid fa-folder"></i>Developer Tools</a>
+        <a class="tag" href="../../tools/index.html"><i class="fa-solid fa-cube"></i>Coding</a>
+      </div>
+    </section>
+
+    <section class="author-box" aria-label="About the publisher">
+      <div class="author-avatar" aria-hidden="true"><img src="../../assets/images/logo_nobg.webp" alt="F9XR logo" loading="lazy" decoding="async" width="1407" height="768"></div>
+      <div>
+        <span class="author-role">Published by</span>
+        <h2>F9XR Development Team</h2>
+        <p>Every Troolify tool is built and reviewed by the F9XR Development Team, then checked by our Review Board for correctness, accessibility, and clarity. Tools run 100% client-side with zero data retention.</p>
+        <div class="author-links">
+          <a href="https://f9xr.github.io/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i>F9XR Team</a>
+          <a href="../../press/editorial-policies.html"><i class="fa-solid fa-scale-balanced"></i>Editorial Policies</a>
+          <a href="https://github.com/f9xr" target="_blank" rel="noopener" aria-label="F9XR on GitHub"><i class="fa-brands fa-github"></i>GitHub</a>
+          <a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on LinkedIn"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+          <a href="https://instagram.com/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on Instagram"><i class="fa-brands fa-instagram"></i>Instagram</a>
+          <a href="https://youtube.com/@QuarterlyLIV" target="_blank" rel="noopener" aria-label="F9XR on YouTube"><i class="fa-brands fa-youtube"></i>YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-tools" aria-label="Related tools">
+      <h2>Related Tools</h2>
+      <div class="related-search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" id="relatedSearch" placeholder="Search all Troolify tools&hellip;" autocomplete="off" aria-label="Search related tools">
+      </div>
+      <div class="related-grid" id="relatedGrid" aria-busy="true">
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+      </div>
+    </section>
+
+    <section class="comments" aria-label="Comments">
+      <h2>Comments</h2>
+      <div id="comments">
+        <script src="https://utteranc.es/client.js" repo="f9xr/troolify" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async></script>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"><span></span><i class="fa-solid fa-layer-group"></i><span></span></div>
+
+  </div>
+</main>
+
+<script src="../../assets/js/layout.js" defer></script>
+<script src="../../assets/js/tools-data.js" defer></script>
+<script src="../../assets/js/tool-page.js" defer></script>
+<script>
+(function(){
+  "use strict";
+  var input = document.getElementById("heInput");
+  var mode = document.getElementById("heMode");
+  var out = document.getElementById("heOut");
+  var proc = document.getElementById("heProc");
+  var last = "";
+
+  var NAMED = {
+    "\u00a9":"&copy;","\u00ae":"&reg;","\u2122":"&trade;","\u20ac":"&euro;",
+    "\u00a3":"&pound;","\u00a5":"&yen;","\u00a2":"&cent;","\u00a7":"&sect;",
+    "\u00b6":"&para;","\u00b0":"&deg;","\u00b1":"&plusmn;","\u00d7":"&times;",
+    "\u00f7":"&divide;","\u00b7":"&middot;","\u2022":"&bull;","\u00bf":"&iquest;",
+    "\u00a1":"&iexcl;","\u00ab":"&laquo;","\u00bb":"&raquo;","\u2014":"&mdash;",
+    "\u2013":"&ndash;","\u2026":"&hellip;","\u201c":"&ldquo;","\u201d":"&rdquo;",
+    "\u2018":"&lsquo;","\u2019":"&rsquo;","\u2248":"&asymp;","\u2260":"&ne;",
+    "\u2264":"&le;","\u2265":"&ge;","\u221e":"&infin;","\u221a":"&radic;",
+    "\u00b5":"&micro;","\u00b9":"&sup1;","\u00b2":"&sup2;","\u00b3":"&sup3;",
+    "\u00e0":"&agrave;","\u00e1":"&aacute;","\u00e2":"&acirc;","\u00e4":"&auml;",
+    "\u00e3":"&atilde;","\u00e5":"&aring;","\u00e6":"&aelig;","\u00e7":"&ccedil;",
+    "\u00e8":"&egrave;","\u00e9":"&eacute;","\u00ea":"&ecirc;","\u00eb":"&euml;",
+    "\u00ec":"&igrave;","\u00ed":"&iacute;","\u00ee":"&icirc;","\u00ef":"&iuml;",
+    "\u00f1":"&ntilde;","\u00f2":"&ograve;","\u00f3":"&oacute;","\u00f4":"&ocirc;",
+    "\u00f6":"&ouml;","\u00f5":"&otilde;","\u00f8":"&oslash;","\u00f9":"&ugrave;",
+    "\u00fa":"&uacute;","\u00fb":"&ucirc;","\u00fc":"&uuml;","\u00fd":"&yacute;",
+    "\u00ff":"&yuml;","\u00df":"&szlig;","\u00c7":"&Ccedil;","\u00c9":"&Eacute;",
+    "\u00dc":"&Uuml;","\u00d6":"&Ouml;","\u00c4":"&Auml;","\u00d1":"&Ntilde;"
+  };
+
+  function encode(str){
+    return String(str)
+      .replace(/[&<>"']/g, function(c){
+        return { "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[c];
+      })
+      .replace(/[^\x00-\x7F]/g, function(ch){
+        return NAMED[ch] || ("&#" + ch.codePointAt(0) + ";");
+      });
+  }
+
+  function decode(str){
+    var el = document.createElement("textarea");
+    el.innerHTML = String(str);
+    return el.value;
+  }
+
+  function convert(){
+    var t0 = performance.now();
+    var v = input.value;
+    last = mode.value === "encode" ? encode(v) : decode(v);
+    out.textContent = last;
+    out.classList.add("visible");
+    proc.textContent = "Converted " + (mode.value === "encode" ? "text to HTML entities" : "entities back to text") + " in " + (performance.now() - t0).toFixed(1) + " ms - inside your browser. 0 bytes uploaded.";
+  }
+
+  input.addEventListener("input", convert);
+  mode.addEventListener("change", convert);
+
+  document.getElementById("heCopy").addEventListener("click", function(){
+    window.Troolify.copyToClipboard(last, function(){ proc.textContent = "Copied to clipboard - the bytes never left your device."; });
+  });
+
+  document.getElementById("heSample").addEventListener("click", function(){
+    input.value = "R&D <b>bold</b> & \u201cquotes\u201d \u2014 50% off caf\u00e9 \u20ac100 \ud83c\udf89";
+    convert();
+    input.focus();
+  });
+
+  document.getElementById("heClear").addEventListener("click", function(){
+    input.value = "";
+    convert();
+    input.focus();
+  });
+
+  convert();
+})();
+</script>
+</body>
+</html>

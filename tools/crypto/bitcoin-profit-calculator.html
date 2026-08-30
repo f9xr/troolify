@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bitcoin Profit Calculator | BTC Buy &amp; Sell Gain or Loss</title>
+<meta name="description" content="Calculate your Bitcoin profit or loss from buy price, sell price and amount held, with optional trading fees. Free online bitcoin profit calculator - 100% client-side.">
+<meta name="author" content="F9XR Development Team">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#212529">
+<link rel="canonical" href="https://f9xr.github.io/troolify/tools/crypto/bitcoin-profit-calculator.html">
+<meta property="og:site_name" content="Troolify">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Bitcoin Profit Calculator | BTC Buy &amp; Sell Gain or Loss">
+<meta property="og:description" content="Calculate your Bitcoin profit or loss from buy price, sell price and amount held, with optional trading fees. Free, private and 100% client-side.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://f9xr.github.io/troolify/tools/crypto/bitcoin-profit-calculator.html">
+<meta property="og:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-08-28">
+<meta property="article:modified_time" content="2026-08-28">
+<meta property="article:section" content="Crypto Tools">
+<meta property="article:tag" content="Bitcoin Profit Calculator">
+<meta property="article:tag" content="Crypto Tools">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bitcoin Profit Calculator | BTC Buy &amp; Sell Gain or Loss">
+<meta name="twitter:description" content="Calculate your Bitcoin profit or loss from buy price, sell price and amount held, with optional trading fees - 100% browser based.">
+<meta name="twitter:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://f9xr.github.io/troolify/index.html" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://f9xr.github.io/troolify/tools/index.html" },
+    { "@type": "ListItem", "position": 3, "name": "Crypto Tools", "item": "https://f9xr.github.io/troolify/tools/crypto/" },
+    { "@type": "ListItem", "position": 4, "name": "Bitcoin Profit Calculator", "item": "https://f9xr.github.io/troolify/tools/crypto/bitcoin-profit-calculator.html" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Bitcoin Profit Calculator",
+  "url": "https://f9xr.github.io/troolify/tools/crypto/bitcoin-profit-calculator.html",
+  "applicationCategory": "FinanceApplication",
+  "applicationSubCategory": "Bitcoin Buy & Sell Profit Calculator",
+  "operatingSystem": "Any (web browser)",
+  "featureList": ["Calculate profit or loss in USD", "Show return percentage", "Account for optional trading fees", "Amount held in whole BTC or fractions", "100% client-side processing"],
+  "description": "Calculate your Bitcoin profit or loss from buy price, sell price and amount held, with optional trading fees. Free online bitcoin profit calculator - 100% client-side.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "datePublished": "2026-08-28",
+  "dateModified": "2026-08-28",
+  "author": { "@type": "Organization", "name": "F9XR Development Team", "url": "https://f9xr.github.io/" },
+  "publisher": { "@type": "Organization", "name": "Troolify", "url": "https://f9xr.github.io/troolify/", "logo": { "@type": "ImageObject", "url": "https://f9xr.github.io/troolify/assets/images/logo_nobg.webp", "width": 1407, "height": 768 } }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is Bitcoin profit calculated?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Profit equals the sale value minus the buy cost: (sell price - buy price) &times; amount in BTC. Trading fees are then subtracted to give the net figure." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do trading fees affect my Bitcoin profit?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Most exchanges charge a fee percentage on each trade. Over many trades those small percentages add up and can meaningfully eat into (or inflate the loss of) a position." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a good Bitcoin profit percentage?",
+      "acceptedAnswer": { "@type": "Answer", "text": "That depends on your entry point and time horizon. Long-term holders measure multi-year returns, while short-term traders often measure daily or weekly moves. Compare your result against a simple buy-and-hold benchmark." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the Troolify Bitcoin profit calculator safe to use?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every calculation runs locally inside your browser tab. Your prices and amounts are never uploaded, stored, or transmitted to a server, so your trading figures stay completely private." }
+    }
+  ]
+}
+</script>
+
+<link rel="icon" type="image/webp" href="../../assets/images/favicon.webp"><link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../../assets/css/tailwind.css">
+<link rel="stylesheet" href="../../assets/css/tool.css">
+<link rel="stylesheet" href="../../assets/css/site-shell.css">
+<link rel="stylesheet" href="../../assets/css/tool-page.css">
+<link rel="stylesheet" href="../../assets/css/seo-article.css">
+<style>
+.calc-grid{display:grid;grid-template-columns:1fr;gap:18px}
+@media(min-width:720px){.calc-grid{grid-template-columns:1fr 1fr}}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:12.5px;font-weight:700;color:var(--muted)}
+.field input,.field select{background:#1B2028;border:1px solid var(--border);color:var(--ink);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:15px;font-weight:600;outline:none;width:100%;box-sizing:border-box}
+.field input:focus,.field select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+.result-card{background:linear-gradient(180deg,rgba(59,130,246,.12),rgba(59,130,246,.03));border:1px solid rgba(96,165,250,.25);border-radius:14px;padding:18px;margin-top:18px}
+.result-row{display:flex;justify-content:space-between;gap:10px;padding:8px 2px;font-size:14px}
+.result-row+.result-row{border-top:1px dashed rgba(255,255,255,.08)}
+.result-row b{color:#93C5FD;font-weight:800;text-align:right}
+.result-row.hero-row b{color:#6EE7B7;font-size:1.5rem}
+.result-row.loss b{color:#F87171}
+.proc-tip{margin-top:12px;font-size:12.5px;color:var(--muted)}
+</style>
+</head>
+<body data-layout="tool">
+<noscript>
+    <nav aria-label="Primary" style="position:static;display:block;padding:1rem 1.5rem;background:#212529;border-bottom:1px solid #343A40;text-align:center;font-size:0.9rem;">
+        <a href="../../index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Home</a>
+        <a href="../../tools/index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Tools</a>
+        <a href="../../pages/about.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">About</a>
+        <a href="../../pages/contact.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Contact</a>
+    </nav>
+</noscript>
+
+<main class="tool-main">
+  <div class="container">
+
+    <div class="tool-head hero">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="../../tools/index.html">Tools</a></li>
+          <li><a href="../index.html">Crypto Tools</a></li>
+          <li class="current" aria-current="page">Bitcoin Profit Calculator</li>
+        </ol>
+      </nav>
+      <div class="hero-main">
+        <span class="tool-badge"><span class="dot"></span>100% client-side &middot; zero data retention</span>
+        <h1>Bitcoin Profit Calculator</h1>
+        <p>Work out exactly what a BTC trade made or lost. Enter your buy price, sell price and the amount you held, add an optional fee percentage and see total invested, received and net profit in seconds.</p>
+      </div>
+      <div class="hero-box hero-cat">
+        <h3 class="hero-box-title"><i class="fa-solid fa-folder-open"></i>Category</h3>
+        <div class="tool-meta">
+          <span class="tool-tag"><i class="fa-solid fa-tag"></i>Trading</span>
+          <a class="tool-cat" href="../index.html" aria-label="Browse Crypto Tools category"><i class="fa-solid fa-folder"></i>Crypto Tools</a>
+        </div>
+      </div>
+      <div class="hero-box hero-qa">
+        <h3 class="hero-box-title"><i class="fa-solid fa-bolt"></i>Quick Actions</h3>
+        <div class="tool-actions">
+          <button class="rt-btn" type="button" id="btnShare"><i class="fa-solid fa-share-nodes"></i>Share</button>
+          <button class="rt-btn" type="button" id="btnEmbed"><i class="fa-solid fa-code"></i>Embed Tool</button>
+          <a class="rt-btn" href="../../pages/feedback.html"><i class="fa-solid fa-comment"></i>Feedback</a>
+        </div>
+      </div>
+      <div class="hero-box hero-details">
+        <h3 class="hero-box-title"><i class="fa-solid fa-circle-info"></i>Tool Details</h3>
+        <div class="tool-details">
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.github.io/" target="_blank" rel="noopener">F9XR Development Team</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-check-double"></i>Reviewed by</span><a class="detail-value" href="../../press/editorial-policies.html">Review Board</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-clock-rotate-left"></i>Last updated</span><span class="detail-value">28 August 2026</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel clean">
+      <div class="panel-inner">
+        <div class="calc-grid">
+          <div class="field"><label for="bpBuy">Buy price (USD / BTC)</label><input id="bpBuy" type="number" inputmode="decimal" min="0" step="any" value="30000"></div>
+          <div class="field"><label for="bpSell">Sell price (USD / BTC)</label><input id="bpSell" type="number" inputmode="decimal" min="0" step="any" value="45000"></div>
+          <div class="field"><label for="bpAmt">Amount (BTC)</label><input id="bpAmt" type="number" inputmode="decimal" min="0" step="any" value="0.5"></div>
+          <div class="field"><label for="bpFee">Trading fee (%)</label><input id="bpFee" type="number" inputmode="decimal" min="0" step="any" value="0.1"></div>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn-primary" type="button" id="btnCopy"><i class="fa-solid fa-copy"></i>Copy result</button>
+        </div>
+
+        <div class="result-card" id="bpResults" aria-live="polite"></div>
+        <p class="proc-line"><i class="fa-solid fa-bolt"></i><span id="bpProc">Ready - calculations happen in this tab.</span></p>
+      </div>
+    </div>
+
+    <aside class="disclaimer" aria-label="Disclaimer">
+      <i class="fa-solid fa-circle-info"></i>
+      <p>Disclaimer: Whilst every effort has been made in building our tool, we are not to be held liable for any damages or monetary losses arising out of or in connection with its use. This calculator is an estimate, not financial advice. <a href="../../press/disclaimer.html">Full disclaimer</a>.</p>
+    </aside>
+
+    <div class="article-layout">
+      <article class="seo-article">
+        <h2 id="article-title">Bitcoin Profit Calculator: Know What Your Trade Really Made</h2>
+        <p>Bitcoin moves fast, and so do the mental calculations. Selling at a higher price than you paid feels like a win, but once fees and the exact amount held are factored in, the true number can look quite different. This Bitcoin profit calculator turns buy price, sell price and amount into a clear profit or loss figure - instantly and entirely in your browser.</p>
+
+        <h2 id="how-to-use">How to Use the Bitcoin Profit Calculator</h2>
+        <ol>
+          <li><strong>Enter the price you paid</strong> per Bitcoin, in USD.</li>
+          <li><strong>Enter the price you sold at</strong>, or the current price for an unrealised view.</li>
+          <li><strong>Enter the amount you hold</strong> in BTC - fractions like 0.5 work fine.</li>
+          <li><strong>Optionally add a trading fee percentage</strong> to see the net figure after exchange fees.</li>
+        </ol>
+        <p>The calculator returns total invested, total received, gross profit or loss, return percentage and the net result after fees.</p>
+
+        <h2 id="the-formula">The Profit Formula</h2>
+        <p>The core calculation is simple: <strong>profit = (sell price &minus; buy price) &times; amount in BTC</strong>. The total invested is buy price &times; amount, and total received is sell price &times; amount. When a fee percentage is given, the tool applies it to both sides of the trade and subtracts it, so the net profit reflects the cost of actually executing the round trip.</p>
+        <p>Compare different scenarios with the <a href="crypto-roi-calculator.html">Crypto ROI Calculator</a>, and convert any leftover satoshis into whole coins with the <a href="satoshi-to-bitcoin-converter.html">Satoshi to Bitcoin Converter</a>. For longer-horizon number crunching, the <a href="../finance/compound-interest-calculator.html">Compound Interest Calculator</a> shows what consistent returns could do over years.</p>
+
+        <h2 id="why-it-matters">Why Fees Matter More Than You Think</h2>
+        <p>At first glance a 0.1% fee sounds negligible. But it is charged on the notional size of each trade, so a $20,000 position costs $20 to open and another $20 to close before you have made anything. Frequent traders paying the fee on both sides of every trade give up a meaningful slice of their gains - this calculator makes that cost visible.</p>
+
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+
+        <details class="faq-item">
+          <summary>How is Bitcoin profit calculated?</summary>
+          <div class="faq-a">
+            <p>Profit equals the sale value minus the buy cost: (sell price - buy price) &times; amount in BTC. Trading fees are then subtracted to give the net figure.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Do trading fees affect my Bitcoin profit?</summary>
+          <div class="faq-a">
+            <p>Yes. Most exchanges charge a fee percentage on each trade. Over many trades those small percentages add up and can meaningfully eat into (or inflate the loss of) a position.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>What is a good Bitcoin profit percentage?</summary>
+          <div class="faq-a">
+            <p>That depends on your entry point and time horizon. Long-term holders measure multi-year returns, while short-term traders often measure daily or weekly moves. Compare your result against a simple buy-and-hold benchmark.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Is the Troolify Bitcoin profit calculator safe to use?</summary>
+          <div class="faq-a">
+            <p>Yes. Every calculation runs locally inside your browser tab. Your prices and amounts are never uploaded, stored, or transmitted to a server, so your trading figures stay completely private.</p>
+          </div>
+        </details>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>Knowing your real net outcome - not just "price went up" - is what separates informed from impulsive trading. Punch in the numbers, see the fees laid bare, and make your next move on clean information.</p>
+      </article>
+    </div>
+
+    <section class="keyword-box" aria-label="Keywords and tags">
+      <h2>Keyword &amp; Tags</h2>
+      <h3>Keywords</h3>
+      <div class="keywords">
+        <span class="keyword">bitcoin profit calculator</span>
+        <span class="keyword">BTC profit loss calculator</span>
+        <span class="keyword">crypto trading fee calculator</span>
+        <span class="keyword">bitcoin buy sell profit</span>
+        <span class="keyword">crypto gains calculator</span>
+        <span class="keyword">bitcoin return calculator</span>
+        <span class="keyword">crypto tools</span>
+        <span class="keyword">bitcoin calculator free</span>
+      </div>
+      <h3>Tags</h3>
+      <div class="tags">
+        <a class="tag" href="../index.html"><i class="fa-solid fa-tag"></i>Trading</a>
+        <a class="tag" href="../index.html"><i class="fa-solid fa-folder"></i>Crypto Tools</a>
+        <a class="tag" href="../../tools/index.html"><i class="fa-solid fa-cube"></i>Crypto</a>
+      </div>
+    </section>
+
+    <section class="author-box" aria-label="About the publisher">
+      <div class="author-avatar" aria-hidden="true"><img src="../../assets/images/logo_nobg.webp" alt="F9XR logo" loading="lazy" decoding="async" width="1407" height="768"></div>
+      <div>
+        <span class="author-role">Published by</span>
+        <h2>F9XR Development Team</h2>
+        <p>Every Troolify tool is built and reviewed by the F9XR Development Team, then checked by our Review Board for correctness, accessibility, and clarity. Tools run 100% client-side with zero data retention.</p>
+        <div class="author-links">
+          <a href="https://f9xr.github.io/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i>F9XR Team</a>
+          <a href="../../press/editorial-policies.html"><i class="fa-solid fa-scale-balanced"></i>Editorial Policies</a>
+          <a href="https://github.com/f9xr" target="_blank" rel="noopener" aria-label="F9XR on GitHub"><i class="fa-brands fa-github"></i>GitHub</a>
+          <a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on LinkedIn"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+          <a href="https://instagram.com/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on Instagram"><i class="fa-brands fa-instagram"></i>Instagram</a>
+          <a href="https://youtube.com/@QuarterlyLIV" target="_blank" rel="noopener" aria-label="F9XR on YouTube"><i class="fa-brands fa-youtube"></i>YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-tools" aria-label="Related tools">
+      <h2>Related Tools</h2>
+      <div class="related-search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" id="relatedSearch" placeholder="Search all Troolify tools&hellip;" autocomplete="off" aria-label="Search related tools">
+      </div>
+      <div class="related-grid" id="relatedGrid" aria-busy="true">
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+      </div>
+    </section>
+
+    <section class="comments" aria-label="Comments">
+      <h2>Comments</h2>
+      <div id="comments">
+        <script src="https://utteranc.es/client.js" repo="f9xr/troolify" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async></script>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"><span></span><i class="fa-solid fa-layer-group"></i><span></span></div>
+
+  </div>
+</main>
+
+<script src="../../assets/js/layout.js" defer></script>
+<script src="../../assets/js/tools-data.js" defer></script>
+<script src="../../assets/js/tool-page.js" defer></script>
+<script>
+(function(){
+  "use strict";
+  var buy=document.getElementById("bpBuy");
+  var sell=document.getElementById("bpSell");
+  var amt=document.getElementById("bpAmt");
+  var fee=document.getElementById("bpFee");
+  var out=document.getElementById("bpResults");
+  var proc=document.getElementById("bpProc");
+  var lastText="";
+  var fmtUSD=function(n){ return n.toLocaleString("en-US",{style:"currency",currency:"USD",maximumFractionDigits:0}); };
+  function calc(){
+    var t0=performance.now();
+    var b=parseFloat(buy.value)||0;
+    var s=parseFloat(sell.value)||0;
+    var a=parseFloat(amt.value)||0;
+    var f=parseFloat(fee.value)||0;
+    if(b<=0||s<=0||a<=0){
+      out.innerHTML='<div class="result-row"><span>Enter valid buy price, sell price and amount</span><b>&mdash;</b></div>';
+      proc.textContent="Waiting for valid inputs.";
+      lastText="";
+      return;
+    }
+    var invested=b*a;
+    var received=s*a;
+    var gross=received-invested;
+    var pct=(b>0)?(gross/invested*100):0;
+    var feeCost=(invested+received)*f/100;
+    var net=gross-feeCost;
+    var gain=net>=0;
+    var html=
+      '<div class="result-row"><span>Total invested</span><b>'+fmtUSD(invested)+'</b></div>'+
+      '<div class="result-row"><span>Total received</span><b>'+fmtUSD(received)+'</b></div>'+
+      '<div class="result-row '+(gain?"":"loss")+'"><span>'+(gross>=0?"Gross profit":"Gross loss")+'</span><b>'+(gross>=0?"+":"&minus;")+fmtUSD(Math.abs(gross))+'</b></div>'+
+      '<div class="result-row"><span>Profit / loss %</span><b>'+pct.toFixed(2)+'%</b></div>'+
+      '<div class="result-row"><span>Estimated fees</span><b>'+fmtUSD(feeCost)+'</b></div>'+
+      '<div class="result-row hero-row '+(gain?"":"loss")+'"><span>Net '+(gain?"profit":"loss")+'</span><b>'+(gain?"+":"&minus;")+fmtUSD(Math.abs(net))+'</b></div>'+
+      '<p class="proc-tip">Fee percentage is applied to both the buy and sell side.</p>';
+    out.innerHTML=html;
+    lastText="Total invested: $"+invested.toFixed(0)+", received: $"+received.toFixed(0)+", gross "+((gross>=0)?"profit":"loss")+": $"+Math.abs(gross).toFixed(0)+", net "+((gain)?"profit":"loss")+": $"+Math.abs(net).toFixed(0)+" ("+pct.toFixed(2)+"% before fees).";
+    proc.textContent="Calculated in "+(performance.now()-t0).toFixed(1)+" ms - inside your browser. 0 bytes uploaded.";
+  }
+  [buy,sell,amt,fee].forEach(function(el){ el.addEventListener("input",calc); });
+  document.getElementById("btnCopy").addEventListener("click",function(){
+    window.Troolify.copyToClipboard(lastText,function(){ proc.textContent="Copied to clipboard - the bytes never left your device."; });
+  });
+  calc();
+})();
+</script>
+</body>
+</html>
