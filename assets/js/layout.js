@@ -71,6 +71,180 @@
         '</a>';
 
     /* ------------------------------------------------------------------------
+       Dashboard right-sidebar builder
+       Generates the right sidebar content per page type inside the dashboard.
+
+         • Tool page  -> quick actions + tool details + related tools mini-list
+         • Catalog    -> category info + related categories ("browse more")
+
+       Depends on window.TOOLS / window.CATEGORIES (loaded lazily as needed).
+       ------------------------------------------------------------------------ */
+
+    function countCategoryTools(cats) {
+        var tools = window.TOOLS || [];
+        var count = {};
+        cats.forEach(function (c) { count[c.folder] = 0; });
+        tools.forEach(function (t) {
+            var cat = t.category;
+            if (cat && count[cat] !== undefined) count[cat]++;
+        });
+        return count;
+    }
+
+    function findCategory(folder) {
+        var cats = window.CATEGORIES || [];
+        for (var i = 0; i < cats.length; i++) {
+            if ((cats[i].folder || "").toLowerCase() === (folder || "").toLowerCase()) return cats[i];
+        }
+        return null;
+    }
+
+    function currentToolName() {
+        var path = window.location.pathname.replace(/\/+$/, "").toLowerCase();
+        var segs = path.split("/").filter(Boolean);
+        var fname = segs[segs.length - 1] || "";
+        return fname === "index.html" ? "" : fname;
+    }
+
+    function buildRightSidebar(sidebar, prefix) {
+        var isToolPage = !!document.querySelector(".tool-head.hero");
+
+        /* Load tool data before building related lists. */
+        loadToolsDataForSidebar(function () {
+            var tools = window.TOOLS || [];
+            var cats = window.CATEGORIES || [];
+
+            var html = "";
+
+            if (isToolPage) {
+                // Category context from the current folder path.
+                var path = window.location.pathname.replace(/\/+$/, "").toLowerCase();
+                var segs = path.split("/").filter(Boolean);
+                var toolsIdx = -1;
+                for (var i = 0; i < segs.length; i++) { if (segs[i] === "tools") { toolsIdx = i; break; } }
+                var catSeg = toolsIdx > -1 ? segs[toolsIdx + 1] : "";
+                var catFolder = catSeg ? catSeg.charAt(0).toUpperCase() + catSeg.slice(1) : "";
+                var catInfo = findCategory(catFolder);
+
+                // Current tool filename (e.g. "word-counter.html").
+                var cname = currentToolName();
+
+                // --- Quick actions -----------------------------------------
+                html += '<div class="dash-rs-panel">' +
+                            '<div class="panel-title"><i class="fa-solid fa-bolt"></i>Quick Actions</div>' +
+                            '<div class="dash-rs-actions">' +
+                                '<button type="button" class="rt-btn" id="rsShare"><i class="fa-solid fa-share-nodes"></i>Share</button>' +
+                                '<button type="button" class="rt-btn" id="rsEmbed"><i class="fa-solid fa-code"></i>Embed Tool</button>' +
+                                '<a class="rt-btn" href="' + prefix + 'pages/feedback.html"><i class="fa-solid fa-comment"></i>Feedback</a>' +
+                            '</div>' +
+                        '</div>';
+
+                // --- Category badge -----------------------------------------
+                if (catFolder) {
+                    html += '<div class="dash-rs-panel">' +
+                                '<div class="panel-title"><i class="fa-solid fa-folder-open"></i>Browse ' + (catInfo ? (catInfo.name || catFolder) : catFolder + " Tools") + '</div>' +
+                                '<a class="dash-rs-cat-badge" href="' + prefix + 'tools/' + catFolder.toLowerCase() + '/index.html">' +
+                                    '<i class="fa-solid fa-folder"></i>' + (catInfo ? (catInfo.name || catFolder) : catFolder + " Tools") +
+                                '</a>' +
+                            '</div>';
+                }
+
+                // --- Tool details (from hero-details if present) ------------
+                var details = document.querySelector(".hero-details .tool-details");
+                if (details) {
+                    var rows = details.querySelectorAll(".detail-row");
+                    if (rows.length) {
+                        var det = '<div class="dash-rs-panel">' +
+                                    '<div class="panel-title"><i class="fa-solid fa-circle-info"></i>Tool Details</div>';
+                        rows.forEach(function (row) {
+                            var lbl = row.querySelector(".detail-label") || null;
+                            var val = row.querySelector(".detail-value") || null;
+                            det += '<div class="dash-rs-detail-row">' +
+                                        '<span class="dash-rs-detail-label">' + (lbl ? lbl.innerHTML : "") + '</span>' +
+                                        '<span class="dash-rs-detail-value">' + (val ? val.innerHTML : "") + '</span>' +
+                                    '</div>';
+                        });
+                        det += '</div>';
+                        html += det;
+                    }
+                }
+
+                // --- Related tools (same category) ---------------------------
+                var related = tools.filter(function (t) {
+                    return (t.category || "").toLowerCase() === (catFolder || "").toLowerCase() &&
+                           (t.href || "").split("/").pop() !== cname;
+                }).slice(0, 7);
+                if (related.length) {
+                    var rel = '<div class="dash-rs-panel">' +
+                                '<div class="panel-title"><i class="fa-solid fa-shapes"></i>More ' + (catFolder || "Tools") + '</div>' +
+                                '<div class="dash-related-mini">';
+                    related.forEach(function (t) {
+                        rel += '<a class="dash-related-mini-card" href="' + resultHrefForSidebar(t.href) + '">' +
+                                    '<span class="rmm-icon"><i class="' + (t.icon || "fa-solid fa-wrench") + '"></i></span>' +
+                                    '<span class="rmm-name">' + t.name + '</span>' +
+                                    '<span class="rmm-arrow"><i class="fa-solid fa-arrow-right"></i></span>' +
+                                '</a>';
+                    });
+                    rel += '</div></div>';
+                    html += rel;
+                }
+            } else {
+                // --- Catalog page: category info + browse categories ---------
+                var count = countCategoryTools(cats);
+                var folders = [];
+                cats.forEach(function (c) {
+                    if (count[c.folder] > 0) folders.push(c);
+                });
+
+                html += '<div class="dash-rs-panel">' +
+                            '<div class="panel-title"><i class="fa-solid fa-compass"></i>Browse</div>' +
+                            '<div class="dash-related-mini">';
+                folders.slice(0, 9).forEach(function (c) {
+                    html += '<a class="dash-related-mini-card" href="' + prefix + 'tools/' + c.folder.toLowerCase() + '/index.html">' +
+                                '<span class="rmm-icon"><i class="' + (c.icon || "fa-solid fa-wrench") + '"></i></span>' +
+                                '<span class="rmm-name">' + (c.name || c.folder) + '</span>' +
+                                '<span class="rmm-arrow"><i class="fa-solid fa-arrow-right"></i></span>' +
+                            '</a>';
+                });
+                html += '</div></div>';
+            }
+
+            sidebar.innerHTML = html;
+
+            var shareBtn = document.getElementById("rsShare");
+            var embedBtn = document.getElementById("rsEmbed");
+            var originalShare = document.getElementById("btnShare");
+            var originalEmbed = document.getElementById("btnEmbed");
+            if (shareBtn && originalShare) shareBtn.addEventListener("click", function () { originalShare.click(); });
+            if (embedBtn && originalEmbed) embedBtn.addEventListener("click", function () { originalEmbed.click(); });
+        });
+    }
+
+    function resultHrefForSidebar(href) {
+        return href && href.indexOf("tools/") === 0 ? rootPrefix() + href : href;
+    }
+
+    function loadToolsDataForSidebar(cb) {
+        if (window.TOOLS) {
+            if (cb) cb();
+            return;
+        }
+        if (window.__DASH_TOOLS_PENDING) {
+            if (cb) window.__DASH_TOOLS_PENDING.push(cb);
+            return;
+        }
+        window.__DASH_TOOLS_PENDING = [cb];
+        var s = document.createElement("script");
+        s.src = rootPrefix() + "assets/js/tools-data.js";
+        s.onload = s.onerror = function () {
+            var list = window.__DASH_TOOLS_PENDING || [];
+            window.__DASH_TOOLS_PENDING = null;
+            list.forEach(function (fn) { if (fn) fn(); });
+        };
+        document.head.appendChild(s);
+    }
+
+    /* ------------------------------------------------------------------------
        Main injection routine
        ------------------------------------------------------------------------ */
 
@@ -81,6 +255,92 @@
         // Avoid double injection if the script is loaded more than once
         // or a page already ships a static header/footer.
         if (document.querySelector(".navbar, .site-header")) return;
+
+        /* --------------------------------------------------------------------
+           Dashboard conversion (2-sidebar glasmorphism layout)
+           Applied automatically to every body[data-layout="tool"] page (tool +
+           catalog pages). Wraps the page <main> into a .dashboard grid with a
+           sticky category-nav left sidebar and an auto-generated right sidebar,
+           plus a mobile toggle + overlay. No per-page HTML edits are required.
+           -------------------------------------------------------------------- */
+
+        var mainEl = document.querySelector("main");
+        if (mainEl && document.body.getAttribute("data-layout") === "tool") {
+            (function () {
+                // Inject dashboard.css if not already present.
+                if (!document.querySelector('link[href*="dashboard.css"]')) {
+                    var dlink = document.createElement("link");
+                    dlink.rel = "stylesheet";
+                    dlink.href = rootPrefix() + "assets/css/dashboard.css";
+                    document.head.appendChild(dlink);
+                }
+
+                mainEl.classList.add("dashboard");
+
+                // Wrap all existing main content in the center column.
+                var dashMain = document.createElement("div");
+                dashMain.className = "dash-main";
+                while (mainEl.firstChild) dashMain.appendChild(mainEl.firstChild);
+                mainEl.appendChild(dashMain);
+
+                // --- Left sidebar: category nav --------------------------------
+                var leftAside = document.createElement("aside");
+                leftAside.className = "dash-left";
+                leftAside.setAttribute("aria-label", "Category navigation");
+                leftAside.innerHTML =
+                    '<div class="dash-sidebar-head"><i class="fa-solid fa-layer-group"></i><span>Categories</span></div>' +
+                    '<div class="dash-cat-search"><i class="fa-solid fa-magnifying-glass"></i><input type="search" placeholder="Filter categories&hellip;" aria-label="Filter categories"></div>' +
+                    '<ul class="dash-cat-nav"></ul>' +
+                    '<div class="dash-sidebar-foot"><i class="fa-solid fa-shield-halved"></i>100% client-side &middot; private</div>';
+                mainEl.insertBefore(leftAside, dashMain);
+
+                // --- Right sidebar: auto-generated content ----------------------
+                var rightAside = document.createElement("aside");
+                rightAside.className = "dash-right";
+                rightAside.setAttribute("aria-label", "Sidebar");
+                mainEl.appendChild(rightAside);
+                buildRightSidebar(rightAside, rootPrefix());
+
+                // --- Mobile toggle + overlay -------------------------------------
+                var toggle = document.createElement("button");
+                toggle.type = "button";
+                toggle.className = "dash-sidebar-toggle";
+                toggle.setAttribute("aria-label", "Open categories");
+                toggle.innerHTML = '<i class="fa-solid fa-bars-staggered"></i>';
+                var overlay = document.createElement("div");
+                overlay.className = "dash-sidebar-overlay";
+                overlay.setAttribute("aria-hidden", "true");
+
+                function closeSidebar() {
+                    leftAside.classList.remove("open");
+                    overlay.classList.remove("open");
+                    overlay.setAttribute("aria-hidden", "true");
+                    toggle.innerHTML = '<i class="fa-solid fa-bars-staggered"></i>';
+                    document.body.style.overflow = "";
+                }
+                toggle.addEventListener("click", function () {
+                    var open = leftAside.classList.toggle("open");
+                    overlay.classList.toggle("open", open);
+                    overlay.setAttribute("aria-hidden", String(!open));
+                    toggle.innerHTML = open
+                        ? '<i class="fa-solid fa-xmark"></i>'
+                        : '<i class="fa-solid fa-bars-staggered"></i>';
+                    document.body.style.overflow = open ? "hidden" : "";
+                });
+                overlay.addEventListener("click", closeSidebar);
+                body.appendChild(toggle);
+                body.appendChild(overlay);
+
+                // Load the category nav builder (left sidebar).
+                if (!window.dashboardNavLoaded) {
+                    window.dashboardNavLoaded = true;
+                    var dnav = document.createElement("script");
+                    dnav.src = rootPrefix() + "assets/js/dashboard-nav.js";
+                    dnav.defer = true;
+                    document.body.appendChild(dnav);
+                }
+            })();
+        }
 
         var dirs = window.location.pathname.split("/").filter(Boolean);
         var fileName = dirs[dirs.length - 1] || "";

@@ -1,0 +1,582 @@
+/* ============================================================================
+   Troolify — Dashboard Layout (2-Sidebar Glasmorphism)
+   ----------------------------------------------------------------------------
+   Converts tool pages and catalog pages from single-column to a 3-column
+   dashboard layout with sticky sidebars, glassmorphism panels, and dark theme.
+
+   Depends on tool-shared.css design tokens (loaded via tool.css or catalog.css).
+   ============================================================================ */
+
+/* Entry animations */
+@keyframes dash-rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes dash-fade{from{opacity:0}to{opacity:1}}
+
+/* ---------------------------------------------------------------------------
+   Dashboard grid shell
+   Applied via .dashboard class on <main> or body[data-layout="tool"] pages.
+   --------------------------------------------------------------------------- */
+
+.dashboard{
+  display:grid;
+  grid-template-columns:260px 1fr 280px;
+  gap:24px;
+  max-width:1440px;
+  margin:0 auto;
+  padding:0 24px;
+  padding-top:calc(68px + 40px);
+  padding-bottom:80px;
+  min-height:100vh;
+  position:relative;
+}
+
+/* Sticky sidebars need an overflow-visible ancestor. The tool page shell
+   (.tool-main) sets overflow:hidden for its glow decorations, which would
+   break position:sticky on the sidebars — override it here. */
+main.dashboard,
+.tool-main.dashboard{
+  overflow:visible;
+}
+
+.dashboard::before{
+  content:"";
+  position:fixed;
+  top:-160px;
+  left:50%;
+  transform:translateX(-50%);
+  width:900px;
+  height:600px;
+  background:radial-gradient(closest-side,rgba(59,130,246,.1),transparent);
+  pointer-events:none;
+  z-index:0;
+}
+
+.dashboard>*{position:relative;z-index:1}
+
+/* ---------------------------------------------------------------------------
+   Left Sidebar — Category Navigation
+   --------------------------------------------------------------------------- */
+
+.dash-left{
+  position:sticky;
+  top:calc(68px + 24px);
+  height:calc(100vh - 68px - 48px);
+  overflow-y:auto;
+  overflow-x:hidden;
+  background:rgba(15,18,22,.65);
+  backdrop-filter:blur(24px);
+  -webkit-backdrop-filter:blur(24px);
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:20px;
+  padding:20px 14px;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  animation:dash-rise .55s cubic-bezier(.16,1,.3,1) both;
+  animation-delay:.1s;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.05),
+    0 8px 32px rgba(0,0,0,.35),
+    0 0 60px rgba(59,130,246,.06);
+}
+
+/* Ambient glow behind left sidebar */
+.dash-left::before{
+  content:"";
+  position:absolute;
+  top:-40px;
+  left:-30px;
+  width:160px;
+  height:160px;
+  background:radial-gradient(closest-side,rgba(59,130,246,.12),transparent);
+  border-radius:50%;
+  pointer-events:none;
+  z-index:-1;
+}
+
+/* Custom scrollbar for sidebars */
+.dash-left::-webkit-scrollbar,
+.dash-right::-webkit-scrollbar{width:6px}
+.dash-left::-webkit-scrollbar-thumb,
+.dash-right::-webkit-scrollbar-thumb{
+  background:rgba(255,255,255,.12);
+  border-radius:99px;
+}
+.dash-left::-webkit-scrollbar-thumb:hover,
+.dash-right::-webkit-scrollbar-thumb:hover{
+  background:rgba(255,255,255,.22);
+}
+.dash-left::-webkit-scrollbar-track,
+.dash-right::-webkit-scrollbar-track{background:transparent}
+
+/* Sidebar header */
+.dash-sidebar-head{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:0 8px 14px;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  margin-bottom:6px;
+}
+.dash-sidebar-head i{
+  color:var(--accent);
+  font-size:13px;
+}
+.dash-sidebar-head span{
+  font-size:10.5px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  color:var(--faint);
+}
+
+/* Category search input inside sidebar */
+.dash-cat-search{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:9px 12px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,.07);
+  background:rgba(255,255,255,.04);
+  margin-bottom:8px;
+  transition:border-color .18s ease,box-shadow .18s ease;
+}
+.dash-cat-search:focus-within{
+  border-color:rgba(59,130,246,.4);
+  box-shadow:0 0 0 3px rgba(59,130,246,.12);
+}
+.dash-cat-search i{font-size:12px;color:var(--faint);flex-shrink:0}
+.dash-cat-search input{
+  flex:1;
+  background:none;
+  border:none;
+  outline:none;
+  color:var(--ink);
+  font-family:inherit;
+  font-size:12.5px;
+  font-weight:500;
+  min-width:0;
+}
+.dash-cat-search input::placeholder{color:rgba(255,255,255,.3)}
+
+/* Category navigation list */
+.dash-cat-nav{
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+  flex:1;
+  overflow-y:auto;
+}
+
+.dash-cat-item{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:9px 12px;
+  border-radius:12px;
+  font-size:13px;
+  font-weight:600;
+  color:var(--muted);
+  text-decoration:none;
+  transition:all .18s ease;
+  border:1px solid transparent;
+  position:relative;
+}
+.dash-cat-item:hover{
+  background:rgba(59,130,246,.1);
+  color:#fff;
+  border-color:rgba(255,255,255,.06);
+}
+.dash-cat-item.active{
+  background:rgba(59,130,246,.15);
+  color:#fff;
+  border-color:rgba(59,130,246,.3);
+  box-shadow:0 2px 12px rgba(59,130,246,.12);
+}
+.dash-cat-item.active::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:50%;
+  transform:translateY(-50%);
+  width:3px;
+  height:20px;
+  border-radius:0 3px 3px 0;
+  background:var(--accent);
+  box-shadow:0 0 8px rgba(59,130,246,.5);
+}
+.dash-cat-item .cat-icon{
+  width:28px;
+  height:28px;
+  border-radius:8px;
+  display:grid;
+  place-items:center;
+  background:rgba(255,255,255,.05);
+  font-size:12px;
+  color:var(--accent);
+  flex-shrink:0;
+  transition:background .18s ease,color .18s ease;
+}
+.dash-cat-item:hover .cat-icon,
+.dash-cat-item.active .cat-icon{
+  background:rgba(59,130,246,.2);
+  color:#fff;
+}
+.dash-cat-item .cat-name{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dash-cat-item .cat-count{
+  font-size:10.5px;
+  font-weight:700;
+  color:var(--faint);
+  background:rgba(255,255,255,.06);
+  padding:2px 7px;
+  border-radius:999px;
+  flex-shrink:0;
+  transition:color .18s ease,background .18s ease;
+}
+.dash-cat-item:hover .cat-count,
+.dash-cat-item.active .cat-count{
+  color:var(--accent);
+  background:rgba(59,130,246,.12);
+}
+
+/* Sidebar footer note */
+.dash-sidebar-foot{
+  padding:12px 8px 0;
+  border-top:1px solid rgba(255,255,255,.06);
+  margin-top:auto;
+  font-size:11px;
+  color:var(--faint);
+  line-height:1.6;
+  text-align:center;
+}
+.dash-sidebar-foot i{color:var(--green);margin-right:4px}
+
+/* ---------------------------------------------------------------------------
+   Main Content Column
+   --------------------------------------------------------------------------- */
+
+.dash-main{
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+}
+
+/* Remove old container constraints when inside dashboard */
+.dashboard .container{max-width:none;padding:0;margin:0}
+.dashboard .tool-main{padding-top:0}
+.dashboard .tool-main::after{display:none}
+
+/* Hero adjustments inside dashboard */
+.dashboard .hero{
+  padding:0 0 40px;
+}
+.dashboard .tool-head.hero{
+  margin-top:0;
+}
+
+/* ---------------------------------------------------------------------------
+   Right Sidebar — Tool Details / Related Tools
+   --------------------------------------------------------------------------- */
+
+.dash-right{
+  position:sticky;
+  top:calc(68px + 24px);
+  height:calc(100vh - 68px - 48px);
+  overflow-y:auto;
+  overflow-x:hidden;
+  background:rgba(15,18,22,.65);
+  backdrop-filter:blur(24px);
+  -webkit-backdrop-filter:blur(24px);
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:20px;
+  padding:20px 16px;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+  animation:dash-rise .55s cubic-bezier(.16,1,.3,1) both;
+  animation-delay:.2s;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.05),
+    0 8px 32px rgba(0,0,0,.35),
+    0 0 60px rgba(59,130,246,.06);
+}
+
+/* Ambient glow behind right sidebar */
+.dash-right::after{
+  content:"";
+  position:absolute;
+  bottom:-30px;
+  right:-30px;
+  width:140px;
+  height:140px;
+  background:radial-gradient(closest-side,rgba(16,185,129,.08),transparent);
+  border-radius:50%;
+  pointer-events:none;
+  z-index:-1;
+}
+
+/* Right sidebar section panels */
+.dash-rs-panel{
+  padding:16px;
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,.06);
+  background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.015));
+  transition:border-color .2s ease;
+}
+.dash-rs-panel:hover{border-color:rgba(255,255,255,.12)}
+
+.dash-rs-panel .panel-title{
+  display:flex;
+  align-items:center;
+  gap:7px;
+  font-size:10.5px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  color:var(--faint);
+  margin-bottom:12px;
+}
+.dash-rs-panel .panel-title i{
+  color:var(--accent);
+  font-size:10.5px;
+}
+
+/* Tool details inside right sidebar */
+.dash-rs-detail-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+  padding:7px 0;
+  font-size:12.5px;
+}
+.dash-rs-detail-row + .dash-rs-detail-row{
+  border-top:1px solid rgba(255,255,255,.05);
+}
+.dash-rs-detail-label{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  color:var(--faint);
+  font-weight:600;
+  font-size:12px;
+}
+.dash-rs-detail-label i{color:#60A5FA;font-size:11px}
+.dash-rs-detail-value{
+  color:#93C5FD;
+  font-weight:600;
+  font-size:12.5px;
+  text-align:right;
+}
+a.dash-rs-detail-value:hover{color:#fff}
+
+/* Quick actions in right sidebar */
+.dash-rs-actions{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+.dash-rs-actions .rt-btn{
+  justify-content:center;
+  width:100%;
+  padding:8px 12px;
+  font-size:12.5px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,.08);
+  background:rgba(255,255,255,.03);
+  color:var(--muted);
+  transition:all .18s ease;
+}
+.dash-rs-actions .rt-btn:hover{
+  color:#fff;
+  border-color:rgba(96,165,250,.5);
+  background:rgba(59,130,246,.12);
+  transform:translateY(-1px);
+}
+.dash-rs-actions .rt-btn i{color:#60A5FA;font-size:11px;transition:color .18s ease}
+.dash-rs-actions .rt-btn:hover i{color:#fff}
+
+/* Category badge in right sidebar */
+.dash-rs-cat-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  padding:7px 14px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:700;
+  color:#93C5FD;
+  background:rgba(59,130,246,.12);
+  border:1px solid rgba(59,130,246,.28);
+  text-decoration:none;
+  transition:all .18s ease;
+}
+.dash-rs-cat-badge:hover{
+  background:rgba(59,130,246,.2);
+  border-color:rgba(59,130,246,.45);
+  color:#fff;
+}
+.dash-rs-cat-badge i{font-size:11px}
+
+/* Related tools mini-cards inside right sidebar */
+.dash-related-mini{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+.dash-related-mini-card{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:9px 10px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,.05);
+  background:rgba(255,255,255,.02);
+  text-decoration:none;
+  color:var(--ink);
+  font-size:12.5px;
+  font-weight:600;
+  transition:all .18s ease;
+}
+.dash-related-mini-card:hover{
+  background:rgba(59,130,246,.1);
+  border-color:rgba(59,130,246,.3);
+  color:#fff;
+  transform:translateX(2px);
+}
+.dash-related-mini-card .rmm-icon{
+  width:30px;
+  height:30px;
+  border-radius:8px;
+  display:grid;
+  place-items:center;
+  background:rgba(59,130,246,.12);
+  color:var(--accent);
+  font-size:12px;
+  flex-shrink:0;
+}
+.dash-related-mini-card .rmm-name{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dash-related-mini-card .rmm-arrow{
+  font-size:10px;
+  color:var(--faint);
+  transition:color .18s ease;
+}
+.dash-related-mini-card:hover .rmm-arrow{color:var(--accent)}
+
+/* SEO content that was in the main article — now shown below tool on mobile */
+.dash-below-tool{
+  display:none;
+}
+
+/* ---------------------------------------------------------------------------
+   Mobile sidebar toggle button
+   --------------------------------------------------------------------------- */
+
+.dash-sidebar-toggle{
+  display:none;
+  position:fixed;
+  bottom:20px;
+  left:20px;
+  z-index:1200;
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(15,18,22,.8);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  color:var(--ink);
+  font-size:16px;
+  cursor:pointer;
+  box-shadow:0 4px 20px rgba(0,0,0,.4),0 0 16px rgba(59,130,246,.15);
+  transition:all .2s ease;
+  place-items:center;
+}
+.dash-sidebar-toggle:hover{
+  background:rgba(59,130,246,.2);
+  border-color:rgba(59,130,246,.45);
+  transform:scale(1.05);
+}
+
+/* Mobile sidebar overlay */
+.dash-sidebar-overlay{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:1100;
+  background:rgba(10,10,10,.7);
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+}
+.dash-sidebar-overlay.open{display:block}
+
+/* ---------------------------------------------------------------------------
+   Responsive — Tablet (≤1024px)
+   Hide left sidebar, show toggle button
+   --------------------------------------------------------------------------- */
+
+@media(max-width:1024px){
+  .dashboard{
+    grid-template-columns:1fr 280px;
+    padding:0 20px;
+    padding-top:calc(68px + 32px);
+  }
+  .dash-left{
+    position:fixed;
+    top:0;
+    left:0;
+    width:280px;
+    height:100vh;
+    border-radius:0 20px 20px 0;
+    z-index:1200;
+    transform:translateX(-100%);
+    transition:transform .35s cubic-bezier(.16,1,.3,1);
+    padding-top:calc(68px + 20px);
+  }
+  .dash-left.open{transform:translateX(0)}
+  .dash-sidebar-toggle{display:grid}
+}
+
+/* ---------------------------------------------------------------------------
+   Responsive — Mobile (≤768px)
+   Single column, both sidebars hidden
+   --------------------------------------------------------------------------- */
+
+@media(max-width:768px){
+  .dashboard{
+    grid-template-columns:1fr;
+    padding:0 16px;
+    padding-top:calc(68px + 24px);
+    padding-bottom:60px;
+  }
+  .dash-left{
+    width:260px;
+    transform:translateX(-100%);
+  }
+  .dash-left.open{transform:translateX(0)}
+  .dash-right{
+    position:static;
+    height:auto;
+    border-radius:20px;
+    animation:none;
+    margin-top:32px;
+  }
+  .dash-sidebar-toggle{display:grid}
+  .dashboard .hero{padding-bottom:24px}
+  .dashboard .tool-head.hero{
+    grid-template-areas:"crumbs" "main" "td" "cat" "qa";
+    grid-template-columns:1fr;
+    gap:14px;
+    padding:20px;
+  }
+}
+
+@media(max-width:520px){
+  .dashboard{
+    padding:0 12px;
+    padding-top:calc(68px + 20px);
+  }
+  .dash-left{width:240px}
+  .dash-right{padding:16px 12px}
+}
