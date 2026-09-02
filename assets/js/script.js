@@ -49,14 +49,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { passive: true });
     }
     
-    // 3. Category Filter active state (UI only demonstration)
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            // Remove active from all
-            filterBtns.forEach(b => b.classList.remove('active'));
-            // Add active to clicked
-            btn.classList.add('active');
-        });
     });
-});
