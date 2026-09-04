@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VAT Calculator | Add or Remove VAT Online - Free</title>
+<meta name="description" content="Free online VAT calculator - add or remove VAT at any rate, and see net, VAT and gross amounts instantly. 100% client-side, zero data retention.">
+<meta name="author" content="F9XR Development Team">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#212529">
+<link rel="canonical" href="https://f9xr.github.io/troolify/tools/finance/vat-calculator.html">
+<meta property="og:site_name" content="Troolify">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="VAT Calculator | Add or Remove VAT Online - Free">
+<meta property="og:description" content="Add or remove VAT at any rate and see net, VAT and gross amounts instantly. Free, private and 100% client-side.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://f9xr.github.io/troolify/tools/finance/vat-calculator.html">
+<meta property="og:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-09-05">
+<meta property="article:modified_time" content="2026-09-05">
+<meta property="article:section" content="Finance Tools">
+<meta property="article:tag" content="VAT Calculator">
+<meta property="article:tag" content="Finance Tools">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="VAT Calculator | Add or Remove VAT Online - Free">
+<meta name="twitter:description" content="Add or remove VAT at any rate and see net, VAT and gross amounts instantly - 100% browser based, zero data retention.">
+<meta name="twitter:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://f9xr.github.io/troolify/index.html" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://f9xr.github.io/troolify/tools/index.html" },
+    { "@type": "ListItem", "position": 3, "name": "Finance Tools", "item": "https://f9xr.github.io/troolify/tools/finance/" },
+    { "@type": "ListItem", "position": 4, "name": "VAT Calculator", "item": "https://f9xr.github.io/troolify/tools/finance/vat-calculator.html" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "VAT Calculator",
+  "url": "https://f9xr.github.io/troolify/tools/finance/vat-calculator.html",
+  "applicationCategory": "FinanceApplication",
+  "applicationSubCategory": "Value Added Tax Calculator",
+  "operatingSystem": "Any (web browser)",
+  "featureList": ["Add VAT to a net price", "Remove VAT from a gross price", "Any VAT rate (0-100%)", "Live net, VAT and gross results", "100% client-side processing"],
+  "description": "Add or remove VAT at any rate and instantly see net amount, VAT amount and gross amount. Free VAT calculator that runs entirely in your browser.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "datePublished": "2026-09-05",
+  "dateModified": "2026-09-05",
+  "author": { "@type": "Organization", "name": "F9XR Development Team", "url": "https://f9xr.github.io/" },
+  "publisher": { "@type": "Organization", "name": "Troolify", "url": "https://f9xr.github.io/troolify/", "logo": { "@type": "ImageObject", "url": "https://f9xr.github.io/troolify/assets/images/logo_nobg.webp", "width": 1407, "height": 768 } }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I add VAT to a price?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Choose Add VAT, enter the net (ex-VAT) price and your VAT rate. The VAT amount is net multiplied by rate divided by 100, and the gross total is net plus VAT." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I remove VAT from a total (gross) price?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Choose Remove VAT, enter the gross (VAT-inclusive) price and your VAT rate. The net price is gross divided by (1 + rate/100), and the VAT is simply gross minus net." }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the standard VAT rates in different countries?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Common European rates are 20% (UK and France), 19% (Germany), 21% (Spain and the Netherlands), 22% (Italy) and 25% (Denmark and Sweden). Reduced and zero rates also exist for specific goods. You can type any rate between 0 and 100% into this calculator." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this VAT calculator safe for my financial data?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every calculation happens locally in your browser tab - no amounts are uploaded, stored or transmitted anywhere, and nothing is saved after you close the page." }
+    }
+  ]
+}
+</script>
+
+<link rel="icon" type="image/webp" href="../../assets/images/favicon.webp"><link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+<link rel="stylesheet" href="../../assets/css/tailwind.css">
+<link rel="stylesheet" href="../../assets/css/tool.css">
+<link rel="stylesheet" href="../../assets/css/site-shell.css">
+<link rel="stylesheet" href="../../assets/css/tool-page.css">
+<link rel="stylesheet" href="../../assets/css/seo-article.css">
+<style>
+.calc-grid{display:grid;grid-template-columns:1fr;gap:18px}
+@media(min-width:720px){.calc-grid.two{grid-template-columns:1fr 1fr}}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:12.5px;font-weight:700;color:var(--muted)}
+.field input,.field select{background:#1B2028;border:1px solid var(--border);color:var(--ink);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:15px;font-weight:600;outline:none;width:100%;box-sizing:border-box}
+.field input:focus,.field select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+.vat-results{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;margin-top:16px}
+.vat-result{background:linear-gradient(180deg,rgba(59,130,246,.12),rgba(59,130,246,.04));border:1px solid rgba(59,130,246,.25);border-radius:12px;padding:14px}
+.vat-result .vr-label{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.vat-result .vr-value{display:block;margin-top:6px;font-size:19px;font-weight:800;color:var(--ink);font-variant-numeric:tabular-nums}
+.vat-result.vr-strong{background:linear-gradient(180deg,rgba(37,211,102,.14),rgba(37,211,102,.05));border-color:rgba(37,211,102,.3)}
+</style>
+</head>
+<body data-layout="tool">
+<noscript>
+    <nav aria-label="Primary" style="position:static;display:block;padding:1rem 1.5rem;background:#212529;border-bottom:1px solid #343A40;text-align:center;font-size:0.9rem;">
+        <a href="../../index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Home</a>
+        <a href="../../tools/index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Tools</a>
+        <a href="../../pages/about.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">About</a>
+        <a href="../../pages/contact.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Contact</a>
+    </nav>
+</noscript>
+
+<main class="tool-main">
+  <div class="container">
+
+    <div class="tool-head hero">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="../../tools/index.html">Tools</a></li>
+          <li><a href="../index.html">Finance Tools</a></li>
+          <li class="current" aria-current="page">VAT Calculator</li>
+        </ol>
+      </nav>
+      <div class="hero-main">
+        <span class="tool-badge"><span class="dot"></span>100% client-side &middot; zero data retention</span>
+        <h1>VAT Calculator</h1>
+        <p>Add or remove VAT instantly at any rate. Enter an amount, pick a rate, and read off the net, VAT and gross figures - every calculation happens right in your browser.</p>
+      </div>
+      <div class="hero-box hero-cat">
+        <h3 class="hero-box-title"><i class="fa-solid fa-folder-open"></i>Category</h3>
+        <div class="tool-meta">
+          <span class="tool-tag"><i class="fa-solid fa-tag"></i>Tax</span>
+          <a class="tool-cat" href="../index.html" aria-label="Browse Finance Tools category"><i class="fa-solid fa-folder"></i>Finance Tools</a>
+        </div>
+      </div>
+      <div class="hero-box hero-qa">
+        <h3 class="hero-box-title"><i class="fa-solid fa-bolt"></i>Quick Actions</h3>
+        <div class="tool-actions">
+          <button class="rt-btn" type="button" id="btnShare"><i class="fa-solid fa-share-nodes"></i>Share</button>
+          <button class="rt-btn" type="button" id="btnEmbed"><i class="fa-solid fa-code"></i>Embed Tool</button>
+          <a class="rt-btn" href="../../pages/feedback.html"><i class="fa-solid fa-comment"></i>Feedback</a>
+        </div>
+      </div>
+      <div class="hero-box hero-details">
+        <h3 class="hero-box-title"><i class="fa-solid fa-circle-info"></i>Tool Details</h3>
+        <div class="tool-details">
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.github.io/" target="_blank" rel="noopener">F9XR Development Team</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-check-double"></i>Reviewed by</span><a class="detail-value" href="../../press/editorial-policies.html">Review Board</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-clock-rotate-left"></i>Last updated</span><span class="detail-value">5 September 2026</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel clean">
+      <div class="panel-inner">
+        <div class="toolbar-row">
+          <span class="tool-label"><i class="fa-solid fa-receipt"></i>VAT Calculation</span>
+        </div>
+
+        <div class="calc-grid two">
+          <div class="field"><label for="vatMode">What do you want to do?</label>
+            <select id="vatMode">
+              <option value="add" selected>Add VAT (net &rarr; gross)</option>
+              <option value="remove">Remove VAT (gross &rarr; net)</option>
+            </select>
+          </div>
+          <div class="field"><label for="vatRate">VAT rate (%)</label>
+            <input id="vatRate" type="number" inputmode="decimal" min="0" max="100" step="0.1" value="20" list="vatRates">
+            <datalist id="vatRates">
+              <option value="5">UK reduced rate</option>
+              <option value="10">France / Austria</option>
+              <option value="19">Germany</option>
+              <option value="20">UK / France</option>
+              <option value="21">Spain / Netherlands</option>
+              <option value="22">Italy</option>
+              <option value="25">Denmark / Sweden</option>
+            </datalist>
+          </div>
+          <div class="field"><label for="vatAmount">Amount (<span id="vatAmountLabel">net price</span>)</label>
+            <input id="vatAmount" type="number" inputmode="decimal" min="0" step="0.01" placeholder="e.g. 100.00"></div>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn-primary" type="button" id="vatSample"><i class="fa-solid fa-wand-magic-sparkles"></i>Try a sample</button>
+          <button class="btn btn-secondary" type="button" id="vatClear"><i class="fa-solid fa-eraser"></i>Clear</button>
+        </div>
+
+        <div class="vat-results" aria-live="polite">
+          <div class="vat-result"><span class="vr-label">Net amount</span><span class="vr-value" id="vatNet">&ndash;</span></div>
+          <div class="vat-result vr-strong"><span class="vr-label">VAT amount</span><span class="vr-value" id="vatVat">&ndash;</span></div>
+          <div class="vat-result vr-strong"><span class="vr-label">Gross amount</span><span class="vr-value" id="vatGross">&ndash;</span></div>
+        </div>
+
+        <p class="proc-line"><i class="fa-solid fa-bolt"></i><span id="vatProc">Ready - calculations happen in this tab.</span></p>
+      </div>
+    </div>
+
+    <aside class="disclaimer" aria-label="Disclaimer">
+      <i class="fa-solid fa-circle-info"></i>
+      <p>Disclaimer: Whilst every effort has been made in building our tools, we are not to be held liable for any damages or monetary losses arising out of or in connection with their use. This calculator provides estimates only and is not tax, legal or accounting advice. <a href="../../press/disclaimer.html">Full disclaimer</a>.</p>
+    </aside>
+
+    <div class="article-layout">
+      <article class="seo-article">
+        <h2 id="article-title">VAT Calculator: Add or Remove Tax in Seconds</h2>
+        <p>Value Added Tax (VAT) sits on top of most goods and services across the UK, Europe and beyond. Whether you are pricing products, invoicing a client, or checking a supplier&rsquo;s quote, you constantly move between net (ex-VAT) and gross (VAT-included) amounts. This free VAT calculator does that maths instantly for any rate.</p>
+
+        <h2 id="add-or-remove">Adding VAT vs Removing VAT</h2>
+        <p><strong>Add VAT</strong> starts from a net price and applies the tax: VAT = net &times; rate &divide; 100, and the gross total is net + VAT. This is what you do when setting a retail price from a wholesale cost.</p>
+        <p><strong>Remove VAT</strong> starts from a gross price and strips the tax out: net = gross &divide; (1 + rate/100), and the VAT is the difference. This is what you do when whether an invoice shows a VAT-inclusive total and you need the taxable base.</p>
+
+        <h2 id="how-to-use">How to Use the VAT Calculator</h2>
+        <ol>
+          <li><strong>Choose Add or Remove</strong> depending on which figure you have.</li>
+          <li><strong>Enter the rate</strong> - the drop-down suggests common European rates, or type any value from 0 to 100.</li>
+          <li><strong>Type the amount</strong> and read the net, VAT and gross results - they update as you type.</li>
+        </ol>
+
+        <h2 id="common-rates">Common VAT Rates Across Europe</h2>
+        <p>The standard rate differs by country: 20% in the UK and France, 19% in Germany, 21% in Spain and the Netherlands, 22% in Italy, and 25% in Denmark and Sweden. Most countries also apply reduced rates to essentials like food and books, plus zero rates in some cases - confirm the applicable rate for your goods before pricing. Pair results with the <a href="percentage-calculator.html">Percentage Calculator</a> for quick margin checks, or the <a href="discount-calculator.html">Discount Calculator</a> when running promotions.</p>
+
+        <h2 id="rounding">A Note on Rounding</h2>
+        <p>Formal VAT returns usually round to the nearest cent per line or per invoice depending on local rules. This calculator keeps full precision and displays money to two decimal places, which matches everyday invoice practice in the UK and most of the EU.</p>
+
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+
+        <details class="faq-item">
+          <summary>How do I add VAT to a price?</summary>
+          <div class="faq-a">
+            <p>Choose Add VAT, enter the net (ex-VAT) price and your VAT rate. The VAT amount equals net multiplied by rate divided by 100, and the gross total is net plus VAT.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>How do I remove VAT from a total (gross) price?</summary>
+          <div class="faq-a">
+            <p>Choose Remove VAT, enter the gross (VAT-inclusive) price and your VAT rate. The net price is gross divided by (1 + rate/100), and the VAT is the difference between gross and net.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>What are the standard VAT rates in different countries?</summary>
+          <div class="faq-a">
+            <p>Common European rates are 20% (UK and France), 19% (Germany), 21% (Spain and the Netherlands), 22% (Italy) and 25% (Denmark and Sweden). Reduced and zero rates exist for specific goods, so always confirm the rate that applies to yours.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Is this VAT calculator safe for my financial data?</summary>
+          <div class="faq-a">
+            <p>Yes. Every calculation happens locally in your browser tab - no amounts are uploaded, stored or transmitted, and nothing is saved after you close the page.</p>
+          </div>
+        </details>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>VAT maths is simple but easy to get wrong under deadline pressure. This tool removes the guesswork from everyday pricing and invoicing, with results that update as you type and a guarantee that your numbers never leave your device.</p>
+      </article>
+    </div>
+
+    <section class="keyword-box" aria-label="Keywords and tags">
+      <h2>Keyword &amp; Tags</h2>
+      <h3>Keywords</h3>
+      <div class="keywords">
+        <span class="keyword">vat calculator</span>
+        <span class="keyword">add vat</span>
+        <span class="keyword">remove vat</span>
+        <span class="keyword">vat rate</span>
+        <span class="keyword">value added tax</span>
+        <span class="keyword">net to gross</span>
+        <span class="keyword">price excluding vat</span>
+        <span class="keyword">price including vat</span>
+        <span class="keyword">uk vat calculator</span>
+        <span class="keyword">europe vat</span>
+      </div>
+      <h3>Tags</h3>
+      <div class="tags">
+        <a class="tag" href="../index.html"><i class="fa-solid fa-tag"></i>Tax</a>
+        <a class="tag" href="../index.html"><i class="fa-solid fa-folder"></i>Finance Tools</a>
+        <a class="tag" href="../../tools/index.html"><i class="fa-solid fa-cube"></i>Finance</a>
+      </div>
+    </section>
+
+    <section class="author-box" aria-label="About the publisher">
+      <div class="author-avatar" aria-hidden="true"><img src="../../assets/images/logo_nobg.webp" alt="F9XR logo" loading="lazy" decoding="async" width="1407" height="768"></div>
+      <div>
+        <span class="author-role">Published by</span>
+        <h2>F9XR Development Team</h2>
+        <p>Every Troolify tool is built and reviewed by the F9XR Development Team, then checked by our Review Board for correctness, accessibility, and clarity. Tools run 100% client-side with zero data retention.</p>
+        <div class="author-links">
+          <a href="https://f9xr.github.io/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i>F9XR Team</a>
+          <a href="../../press/editorial-policies.html"><i class="fa-solid fa-scale-balanced"></i>Editorial Policies</a>
+          <a href="https://github.com/f9xr" target="_blank" rel="noopener" aria-label="F9XR on GitHub"><i class="fa-brands fa-github"></i>GitHub</a>
+          <a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on LinkedIn"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+          <a href="https://instagram.com/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on Instagram"><i class="fa-brands fa-instagram"></i>Instagram</a>
+          <a href="https://youtube.com/@QuarterlyLIV" target="_blank" rel="noopener" aria-label="F9XR on YouTube"><i class="fa-brands fa-youtube"></i>YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-tools" aria-label="Related tools">
+      <h2>Related Tools</h2>
+      <div class="related-search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" id="relatedSearch" placeholder="Search all Troolify tools&hellip;" autocomplete="off" aria-label="Search related tools">
+      </div>
+      <div class="related-grid" id="relatedGrid" aria-busy="true">
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+      </div>
+    </section>
+
+    <section class="comments" aria-label="Comments">
+      <h2>Comments</h2>
+      <div id="comments">
+        <script src="https://utteranc.es/client.js" repo="f9xr/troolify" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async></script>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"><span></span><i class="fa-solid fa-layer-group"></i><span></span></div>
+
+  </div>
+</main>
+
+<script src="../../assets/js/layout.js" defer></script>
+<script src="../../assets/js/tools-data.js" defer></script>
+<script src="../../assets/js/tool-page.js" defer></script>
+<script>
+(function(){
+  "use strict";
+  var mode = document.getElementById("vatMode");
+  var rate = document.getElementById("vatRate");
+  var amount = document.getElementById("vatAmount");
+  var amountLabel = document.getElementById("vatAmountLabel");
+  var netEl = document.getElementById("vatNet");
+  var vatEl = document.getElementById("vatVat");
+  var grossEl = document.getElementById("vatGross");
+  var proc = document.getElementById("vatProc");
+
+  var fmt = new Intl.NumberFormat(undefined, { style:"currency", currency:"USD", minimumFractionDigits:2, maximumFractionDigits:2 });
+
+  function money(n){
+    return fmt.format(n);
+  }
+
+  function calculate(){
+    var r = parseFloat(rate.value);
+    if (isNaN(r)) r = 0;
+    if (r < 0) r = 0;
+    if (r > 100) r = 100;
+    rate.value = r;
+    var a = parseFloat(amount.value);
+    var isAdd = mode.value === "add";
+    amountLabel.textContent = isAdd ? "net price" : "gross price";
+
+    var net, vat, gross;
+    if (isNaN(a) || a < 0) {
+      netEl.textContent = "\u2013";
+      vatEl.textContent = "\u2013";
+      grossEl.textContent = "\u2013";
+      proc.textContent = "Enter a valid amount to see the breakdown.";
+      return;
+    }
+    if (isAdd) {
+      net = a;
+      vat = a * r / 100;
+      gross = net + vat;
+    } else {
+      gross = a;
+      net = gross / (1 + r / 100);
+      vat = gross - net;
+    }
+    netEl.textContent = money(net);
+    vatEl.textContent = money(vat);
+    grossEl.textContent = money(gross);
+    proc.textContent = "Computed " + r + "% VAT " + (isAdd ? "added to" : "removed from") + " the amount \u00b7 zero data leaves this tab.";
+  }
+
+  function clearAll(){
+    amount.value = "";
+    calculate();
+  }
+
+  mode.addEventListener("change", calculate);
+  rate.addEventListener("input", calculate);
+  amount.addEventListener("input", calculate);
+  document.getElementById("vatSample").addEventListener("click", function(){
+    if (mode.value !== "add") { mode.value = "add"; }
+    rate.value = 20;
+    amount.value = "100.00";
+    calculate();
+  });
+  document.getElementById("vatClear").addEventListener("click", clearAll);
+  calculate();
+})();
+</script>
+</body>
+</html>

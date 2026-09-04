@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multiline Slug Generator | URL Slug Creator With Keyword Optimization</title>
+<meta name="description" content="Turn multi-line text into SEO-friendly URL slugs with keyword optimization, stop-word removal and length control. Free slug generator - 100% client-side.">
+<meta name="author" content="F9XR Development Team">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#212529">
+<link rel="canonical" href="https://f9xr.github.io/troolify/tools/seo/multiline-slug-generator.html">
+<meta property="og:site_name" content="Troolify">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Multiline Slug Generator | URL Slug Creator With Keyword Optimization">
+<meta property="og:description" content="Convert multi-line text into SEO-friendly URL slugs with keyword optimization. One input, many slugs - free, private and instant.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://f9xr.github.io/troolify/tools/seo/multiline-slug-generator.html">
+<meta property="og:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-09-05">
+<meta property="article:modified_time" content="2026-09-05">
+<meta property="article:section" content="SEO Tools">
+<meta property="article:tag" content="Multiline Slug Generator">
+<meta property="article:tag" content="URL Slug Generator">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Multiline Slug Generator | URL Slug Creator With Keyword Optimization">
+<meta name="twitter:description" content="Convert multi-line text into SEO-friendly URL slugs with keyword optimization - free, private, in your browser.">
+<meta name="twitter:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://f9xr.github.io/troolify/index.html" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://f9xr.github.io/troolify/tools/index.html" },
+    { "@type": "ListItem", "position": 3, "name": "SEO &amp; Marketing", "item": "https://f9xr.github.io/troolify/tools/seo/" },
+    { "@type": "ListItem", "position": 4, "name": "Multiline Slug Generator", "item": "https://f9xr.github.io/troolify/tools/seo/multiline-slug-generator.html" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Multiline Slug Generator",
+  "url": "https://f9xr.github.io/troolify/tools/seo/multiline-slug-generator.html",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "URL Slug Generator",
+  "operatingSystem": "Any (web browser)",
+  "featureList": ["Multi-line batch slugging", "Hyphen or underscore separators", "Stop-word removal", "Max-length trimming at word boundaries", "Keyword-frequency optimization", "Copy per-slug or copy all", "100% client-side processing"],
+  "description": "Convert multi-line text into SEO-friendly URL slugs with keyword optimization, stop-word removal and length control. Free, private and 100% client-side.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "datePublished": "2026-09-05",
+  "dateModified": "2026-09-05",
+  "author": { "@type": "Organization", "name": "F9XR Development Team", "url": "https://f9xr.github.io/" },
+  "publisher": { "@type": "Organization", "name": "Troolify", "url": "https://f9xr.github.io/troolify/", "logo": { "@type": "ImageObject", "url": "https://f9xr.github.io/troolify/assets/images/logo_nobg.webp", "width": 1407, "height": 768 } }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a URL slug?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A URL slug is the readable part of a URL that identifies a page, such as 'multiline-slug-generator' in this page's address. Clean slugs use lowercase letters, numbers and hyphens, drop punctuation and filler words, and stay short enough to read at a glance." }
+    },
+    {
+      "@type": "Question",
+      "name": "How long should a URL slug be?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Keep slugs under about 50-60 characters. Shorter, descriptive slugs display fully in search results and serial links, are easier to share, and concentrate keyword value in fewer words." }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I use hyphens or underscores in slugs?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Hyphens. Google reads hyphens as word separators, while underscores are treated as joining characters, so 'best-coffee-beans' is parsed as three words but 'best_coffee_beans' is not separated the same way." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do keywords in a URL help rankings?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Slightly. Keywords in slugs are a small on-page signal and improve click-through by making the URL descriptive. Real ranking gains still come from content, relevance and authority - the slug just closes the deal." }
+    }
+  ]
+}
+</script>
+
+<link rel="icon" type="image/webp" href="../../assets/images/favicon.webp"><link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+<link rel="stylesheet" href="../../assets/css/tailwind.css">
+<link rel="stylesheet" href="../../assets/css/tool.css">
+<link rel="stylesheet" href="../../assets/css/site-shell.css">
+<link rel="stylesheet" href="../../assets/css/tool-page.css">
+<link rel="stylesheet" href="../../assets/css/seo-article.css">
+<style>
+.sg-grid{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:760px){.sg-grid{grid-template-columns:1fr 1fr}}
+.sg-field{display:flex;flex-direction:column;gap:6px}
+.sg-field label{font-size:12.5px;font-weight:700;color:var(--muted)}
+.sg-field textarea{width:100%;min-height:170px;resize:vertical;border:1px solid var(--border);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:14.5px;font-weight:600;color:var(--ink);background:#1B2028;line-height:1.6;outline:none;box-sizing:border-box}
+.sg-field textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+.sg-field select,.sg-field input[type=number]{background:#1B2028;border:1px solid var(--border);color:var(--ink);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:15px;font-weight:600;outline:none;width:100%;box-sizing:border-box}
+.sg-field select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+.chk{display:flex;align-items:center;gap:9px;font-size:13.5px;font-weight:600;color:var(--muted);cursor:pointer;min-height:38px;padding:0 2px;user-select:none}
+.chk input{width:17px;height:17px;accent-color:#3B82F6;cursor:pointer;margin:0;flex-shrink:0}
+.chk span{line-height:1.35}
+.range-row{display:flex;align-items:center;gap:12px}
+.range-row input[type=range]{flex:1}
+.range-row b{font-size:13px;color:#93C5FD;min-width:44px;text-align:right}
+.range-row select{background:#1B2028;border:1px solid var(--border);color:var(--ink);border-radius:10px;padding:8px 10px;font-family:inherit;font-size:13.5px;font-weight:600;outline:none}
+.result-card{background:linear-gradient(180deg,rgba(59,130,246,.12),rgba(59,130,246,.03));border:1px solid rgba(96,165,250,.25);border-radius:14px;padding:18px;margin-top:18px}
+.result-row{display:flex;justify-content:space-between;gap:10px;padding:8px 2px;font-size:14px}
+.result-row+.result-row{border-top:1px dashed rgba(255,255,255,.08)}
+.result-row b{color:#93C5FD;font-weight:800;text-align:right}
+.slug-count{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.slug-count b{font-size:14px;color:#93C5FD}
+.slug-list{margin-top:6px}
+.slug-item{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:10px 12px;border:1px solid rgba(255,255,255,.07);border-radius:10px;background:#161A20;margin-top:8px}
+.slug-orig{font-size:12px;color:var(--faint);line-height:1.4}
+.slug-val{font-size:14px;font-weight:700;color:#6EE7B7;word-break:break-all;line-height:1.45;margin-top:2px}
+.slug-val.muted{color:#93C5FD}
+.slug-actions{display:flex;gap:6px;align-items:center}
+.slug-chip{display:block;border:1px solid var(--border);background:#1B2028;color:var(--ink);border-radius:8px;padding:6px 10px;font-size:13px;font-weight:600;cursor:pointer;transition:border-color .15s,color .15s}
+.slug-chip:hover{border-color:rgba(96,165,250,.5);color:#93C5FD}
+.kw-box{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.kw{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;color:var(--muted);background:#1B2028;border:1px solid var(--border);padding:5px 10px;border-radius:99px}
+.kw b{color:#93C5FD}
+.empty-hint{font-size:13.5px;color:var(--faint);margin:0}
+</style>
+</head>
+<body data-layout="tool">
+<noscript>
+    <nav aria-label="Primary" style="position:static;display:block;padding:1rem 1.5rem;background:#212529;border-bottom:1px solid #343A40;text-align:center;font-size:0.9rem;">
+        <a href="../../index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Home</a>
+        <a href="../../tools/index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Tools</a>
+        <a href="../../pages/about.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">About</a>
+        <a href="../../pages/contact.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Contact</a>
+    </nav>
+</noscript>
+
+<main class="tool-main">
+  <div class="container">
+
+    <div class="tool-head hero">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="../../tools/index.html">Tools</a></li>
+          <li><a href="../index.html">SEO &amp; Marketing</a></li>
+          <li class="current" aria-current="page">Multiline Slug Generator</li>
+        </ol>
+      </nav>
+      <div class="hero-main">
+        <span class="tool-badge"><span class="dot"></span>100% client-side &middot; zero data retention</span>
+        <h1>Multiline Slug Generator</h1>
+        <p>Paste a list of titles, headlines or items and turn every line into an SEO-friendly URL slug - with stop-word removal, length control and keyword optimization. All in your browser.</p>
+      </div>
+      <div class="hero-box hero-cat">
+        <h3 class="hero-box-title"><i class="fa-solid fa-folder-open"></i>Category</h3>
+        <div class="tool-meta">
+          <span class="tool-tag"><i class="fa-solid fa-tag"></i>SEO</span>
+          <a class="tool-cat" href="../index.html" aria-label="Browse SEO &amp; Marketing category"><i class="fa-solid fa-folder"></i>SEO &amp; Marketing</a>
+        </div>
+      </div>
+      <div class="hero-box hero-qa">
+        <h3 class="hero-box-title"><i class="fa-solid fa-bolt"></i>Quick Actions</h3>
+        <div class="tool-actions">
+          <button class="rt-btn" type="button" id="btnShare"><i class="fa-solid fa-share-nodes"></i>Share</button>
+          <button class="rt-btn" type="button" id="btnEmbed"><i class="fa-solid fa-code"></i>Embed Tool</button>
+          <a class="rt-btn" href="../../pages/feedback.html"><i class="fa-solid fa-comment"></i>Feedback</a>
+        </div>
+      </div>
+      <div class="hero-box hero-details">
+        <h3 class="hero-box-title"><i class="fa-solid fa-circle-info"></i>Tool Details</h3>
+        <div class="tool-details">
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.github.io/" target="_blank" rel="noopener">F9XR Development Team</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-check-double"></i>Reviewed by</span><a class="detail-value" href="../../press/editorial-policies.html">Review Board</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-clock-rotate-left"></i>Last updated</span><span class="detail-value">5 September 2026</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel clean">
+      <div class="panel-inner">
+        <div class="toolbar-row">
+          <span class="tool-label"><i class="fa-solid fa-link" aria-hidden="true"></i>Multiline Slug Generator</span>
+          <div class="toolbar-actions">
+            <button class="chip-btn" type="button" id="sgSample" title="Load sample titles"><i class="fa-solid fa-wand-magic-sparkles"></i><span class="hide-sm">Sample</span></button>
+            <button class="chip-btn" type="button" id="sgClear" title="Clear the input"><i class="fa-solid fa-eraser"></i><span class="hide-sm">Clear</span></button>
+            <button class="chip-btn" type="button" id="sgReset" title="Reset options to defaults"><i class="fa-solid fa-rotate-left"></i><span class="hide-sm">Reset</span></button>
+          </div>
+        </div>
+
+        <div class="sg-grid">
+          <div class="sg-field">
+            <label for="sgInput">Text to slugify <span style="color:var(--faint);font-weight:600">(one item per line)</span></label>
+            <textarea id="sgInput" placeholder="How to Brew Better Coffee at Home&#10;The Ultimate Guide to Espresso Machines&#10;Top 10 Coffee Beans for Beginners&#10;" spellcheck="false"></textarea>
+            <div class="slug-count"><span style="font-size:12.5px;color:var(--faint)">Lines produce one slug each; common words can be removed with the options below.</span><b id="sgLineCount">0 lines</b></div>
+          </div>
+
+          <div class="sg-field">
+            <label for="sgSep">Separator</label>
+            <select id="sgSep">
+              <option value="-" selected>Hyphen (recommended)</option>
+              <option value="_">Underscore</option>
+            </select>
+          </div>
+
+          <div class="sg-field">
+            <label for="sgMax" style="width:100%">Maximum slug length: <span id="sgMaxVal" style="color:#93C5FD">60</span> chars</label>
+            <div class="range-row">
+              <input type="range" id="sgMax" min="10" max="120" step="5" value="60" aria-describedby="sgMaxHint">
+              <select id="sgMaxUnit" aria-label="Max length unit">
+                <option value="chars" selected>characters</option>
+                <option value="words">words</option>
+              </select>
+            </div>
+            <p style="font-size:12px;color:var(--faint);margin:2px 0 0;line-height:1.4" id="sgMaxHint">Slugs are cut at the nearest word boundary so they still read naturally.</p>
+          </div>
+
+          <div class="sg-field">
+            <label style="margin-bottom:6px">Options</label>
+            <label class="chk"><input type="checkbox" id="sgLower" checked><span>Lowercase everything</span></label>
+            <label class="chk"><input type="checkbox" id="sgStop"><span>Remove stop words (the, of, to, and...)</span></label>
+            <label class="chk"><input type="checkbox" id="sgNum" checked><span>Keep digits</span></label>
+            <label class="chk"><input type="checkbox" id="sgDedupe"><span>Collapse repeated words</span></label>
+          </div>
+
+          <div class="sg-field" style="grid-column:1/-1">
+            <label class="chk" style="align-items:flex-start">
+              <input type="checkbox" id="sgOpt">
+              <span><b style="color:#93C5FD">Keyword optimization</b> - ranks the words across all your lines by frequency, then builds each slug from the line's strongest keyword candidates. The top keywords are listed below the results.</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn-primary" type="button" id="sgCopy"><i class="fa-solid fa-copy"></i>Copy all slugs</button>
+        </div>
+
+        <div class="result-card" id="sgResults" aria-live="polite"></div>
+
+        <div class="result-card" id="sgKwCard" style="display:none">
+          <div class="result-row" style="border-top:none;padding-top:0"><span>Top keywords across your input</span><b id="sgKwCount">0</b></div>
+          <div class="kw-box" id="sgKwList"></div>
+        </div>
+
+        <p class="proc-line"><i class="fa-solid fa-bolt"></i><span id="sgProc">Ready - every slug is generated inside this tab.</span></p>
+      </div>
+    </div>
+
+    <aside class="disclaimer" aria-label="Disclaimer">
+      <i class="fa-solid fa-circle-info"></i>
+      <p>Disclaimer: Whilst every effort has been made in building our tools, we are not to be held liable for any damages or monetary losses arising out of or in connection with their use. Slug guidelines are general on-page SEO best practice, not a promise of rankings. <a href="../../press/disclaimer.html">Full disclaimer</a>.</p>
+    </aside>
+
+    <div class="article-layout">
+      <article class="seo-article">
+        <h2 id="article-title">Multiline Slug Generator: Batch-Clean Your URLs in One Paste</h2>
+        <p>Every page you publish needs a URL that is short, readable and descriptive. When you are rolling out a content calendar - ten new posts, fifty product pages, a site migration - converting each title by hand is slow and error-prone. This tool turns a whole list into clean slugs in one pass.</p>
+
+        <h2 id="what-is-slug">What a Slug Actually Is</h2>
+        <p>A slug is the part of the URL after the domain that names a page: <code>multiline-slug-generator</code> in this very address. Good slugs are lowercase, hyphens between words, punctuation stripped, and short enough to be read - and shared - at a glance.</p>
+
+        <h2 id="why-clean">Why Clean Slugs Matter</h2>
+        <ul>
+          <li><strong>Readability</strong> - humans scan URLs, and a readable URL has higher click-through.</li>
+          <li><strong>Search parsing</strong> - Google treats hyphens as word separators, so <code>best-coffee-beans</code> is understood as three relevant words.</li>
+          <li><strong>Sharing</strong> - an ugly, padded slug looks broken in a message or a printed QR code.</li>
+        </ul>
+
+        <h2 id="keyword-optimization">How Keyword Optimization Works</h2>
+        <p>Turn on <strong>Keyword optimization</strong> and the tool scans every line, counting how often each word appears across your whole list. It then keeps, in order, the highest-frequency words that each line contains - so the terms your audience actually repeats become the skeleton of the slug. The top keywords appear as chips under the results, ready to inspire titles too.</p>
+
+        <h2 id="workflow">A Fast Batch Workflow</h2>
+        <ol>
+          <li><strong>Paste your titles</strong> - one per line.</li>
+          <li><strong>Switch on "Remove stop words"</strong> to drop the, of, to and similar filler that adds nothing to a URL.</li>
+          <li><strong>Cap the length</strong> - 50-60 characters is a comfortable ceiling.</li>
+          <li><strong>Enable keyword optimization</strong> if you want slug suggestions biased toward the words that repeat most.</li>
+          <li><strong>Copy all slugs</strong> - or grab each one individually with its copy button - and paste straight into your CMS.</li>
+        </ol>
+        <p>Check the resulting slugs side by side with the <a href="meta-description-checker.html">Meta Description Checker</a> so the title and URL agree on the same keyword.</p>
+
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+
+        <details class="faq-item">
+          <summary>What is a URL slug?</summary>
+          <div class="faq-a">
+            <p>The readable part of a URL that names a page, like "multiline-slug-generator" here. Clean slugs use lowercase letters, numbers and hyphens, drop punctuation, and stay short.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>How long should a URL slug be?</summary>
+          <div class="faq-a">
+            <p>Under roughly 50-60 characters. Short descriptive slugs display fully in results, share cleanly, and concentrate keyword value in fewer words.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Hyphens or underscores in slugs?</summary>
+          <div class="faq-a">
+            <p>Hyphens. Search engines read hyphens as word separators but treat underscores as joining characters, so "best-coffee-beans" parses as three words.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Do keywords in a URL help rankings?</summary>
+          <div class="faq-a">
+            <p>Marginally. Slug keywords are a small on-page signal and a click-through boost. Content, relevance and authority do the heavy lifting - the slug just closes the deal.</p>
+          </div>
+        </details>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>Batch slugging turns an hour of tedious, inconsistent URL surgery into a thirty-second paste. Clean URLs, consistent formatting, and slugs that carry your most important keywords - every project should start that way.</p>
+      </article>
+    </div>
+
+    <section class="keyword-box" aria-label="Keywords and tags">
+      <h2>Keyword &amp; Tags</h2>
+      <h3>Keywords</h3>
+      <div class="keywords">
+        <span class="keyword">slug generator</span>
+        <span class="keyword">multiline slug generator</span>
+        <span class="keyword">URL slug</span>
+        <span class="keyword">SEO friendly URLs</span>
+        <span class="keyword">website URL cleaner</span>
+        <span class="keyword">permalinks</span>
+        <span class="keyword">wordpress slug</span>
+        <span class="keyword">stop words</span>
+        <span class="keyword">keyword optimization</span>
+        <span class="keyword">URL converter</span>
+      </div>
+      <h3>Tags</h3>
+      <div class="tags">
+        <a class="tag" href="../index.html"><i class="fa-solid fa-tag"></i>SEO</a>
+        <a class="tag" href="../index.html"><i class="fa-solid fa-folder"></i>SEO &amp; Marketing</a>
+        <a class="tag" href="../../tools/index.html"><i class="fa-solid fa-cube"></i>SEO</a>
+      </div>
+    </section>
+
+    <section class="author-box" aria-label="About the publisher">
+      <div class="author-avatar" aria-hidden="true"><img src="../../assets/images/logo_nobg.webp" alt="F9XR logo" loading="lazy" decoding="async" width="1407" height="768"></div>
+      <div>
+        <span class="author-role">Published by</span>
+        <h2>F9XR Development Team</h2>
+        <p>Every Troolify tool is built and reviewed by the F9XR Development Team, then checked by our Review Board for correctness, accessibility, and clarity. Tools run 100% client-side with zero data retention.</p>
+        <div class="author-links">
+          <a href="https://f9xr.github.io/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i>F9XR Team</a>
+          <a href="../../press/editorial-policies.html"><i class="fa-solid fa-scale-balanced"></i>Editorial Policies</a>
+          <a href="https://github.com/f9xr" target="_blank" rel="noopener" aria-label="F9XR on GitHub"><i class="fa-brands fa-github"></i>GitHub</a>
+          <a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on LinkedIn"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+          <a href="https://instagram.com/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on Instagram"><i class="fa-brands fa-instagram"></i>Instagram</a>
+          <a href="https://youtube.com/@QuarterlyLIV" target="_blank" rel="noopener" aria-label="F9XR on YouTube"><i class="fa-brands fa-youtube"></i>YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-tools" aria-label="Related tools">
+      <h2>Related Tools</h2>
+      <div class="related-search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" id="relatedSearch" placeholder="Search all Troolify tools&hellip;" autocomplete="off" aria-label="Search related tools">
+      </div>
+      <div class="related-grid" id="relatedGrid" aria-busy="true">
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+      </div>
+    </section>
+
+    <section class="comments" aria-label="Comments">
+      <h2>Comments</h2>
+      <div id="comments">
+        <script src="https://utteranc.es/client.js" repo="f9xr/troolify" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async></script>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"><span></span><i class="fa-solid fa-layer-group"></i><span></span></div>
+
+  </div>
+</main>
+
+<script src="../../assets/js/layout.js" defer></script>
+<script src="../../assets/js/tools-data.js" defer></script>
+<script src="../../assets/js/tool-page.js" defer></script>
+<script>
+(function(){
+  "use strict";
+  var f=function(a){ return document.getElementById(a); };
+  var inText=f("sgInput"), inSep=f("sgSep"), inMax=f("sgMax"), inMaxUnit=f("sgMaxUnit");
+  var inLower=f("sgLower"), inStop=f("sgStop"), inNum=f("sgNum"), inDedupe=f("sgDedupe"), inOpt=f("sgOpt");
+  var out=f("sgResults"), kwCard=f("sgKwCard"), kwCount=f("sgKwCount"), kwList=f("sgKwList");
+  var lineCount=f("sgLineCount"), maxVal=f("sgMaxVal"), proc=f("sgProc");
+  var lastCopy="";
+
+  var STOP=new Set(("a an and are as at be but by for from had have he her his how i if in into is it its of on or our she so that the their them then there these they this to was we were what when which who will with you your").split(" "));
+
+  function esc(s){ return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+
+  function words(line){
+    var t=line.normalize?line.normalize("NFKD"):line;
+    t=t.replace(/[\u0300-\u036f]/g,"");
+    t=t.toLowerCase();
+    t=t.replace(/[^a-z0-9\s-]/g," ").replace(/-/g," ");
+    return t.split(/\s+/).filter(Boolean);
+  }
+
+  function buildSlug(lower,stop,num,dedupe,sep,max,unit,wordKeepLimit){
+    var ws=words(lower);
+    if(stop) ws=ws.filter(function(w){ return !STOP.has(w); });
+    if(!num) ws=ws.filter(function(w){ return !/\d/.test(w); });
+    if(wordKeepLimit&&ws.length>wordKeepLimit){
+      ws=ws.slice(0,wordKeepLimit);
+    }
+    if(dedupe){
+      var d=[];
+      for(var i=0;i<ws.length;i++){ if(i===0||ws[i]!==ws[i-1]) d.push(ws[i]); }
+      ws=d;
+    }
+    if(unit==="words"&&ws.length>max){
+      ws=ws.slice(0,max);
+    }else if(unit==="chars"&&max>0){
+      var out=[],len=0;
+      for(var j=0;j<ws.length;j++){
+        var w=ws[j];
+        var add=w.length+(out.length?1:0);
+        if(len+add>max) break;
+        out.push(w); len+=add;
+      }
+      ws=out;
+    }
+    return ws.join(sep);
+  }
+
+  function globalRank(){
+    var freq=Object.create(null);
+    var texts=inText.value.split(/\r?\n/).filter(function(l){ return l.trim(); });
+    var i,w;
+    for(i=0;i<texts.length;i++){
+      var ws=words(texts[i]);
+      if(inStop.checked) ws=ws.filter(function(x){ return !STOP.has(x); });
+      for(var j=0;j<ws.length;j++){ w=ws[j]; freq[w]=(freq[w]||0)+1; }
+    }
+    return freq;
+  }
+
+  function render(){
+    var t0=performance.now();
+    var lines=inText.value.split(/\r?\n/).filter(function(l){ return l.trim()!==""; });
+    lineCount.textContent=lines.length+" line"+(lines.length===1?"":"s");
+    var sep=inSep.value;
+    var max=parseInt(inMax.value,10)||60;
+    var unit=inMaxUnit.value;
+    maxVal.textContent=max;
+    var freq=globalRank();
+
+    var kwHtml=[];
+    var sorted=Object.keys(freq).sort(function(a,b){ return freq[b]-freq[a] || (a<b?-1:1); }).slice(0,12);
+    sorted.forEach(function(w){ kwHtml.push("<span class=\"kw\">"+esc(w)+" <b>"+freq[w]+"</b></span>"); });
+    kwCard.style.display=(inOpt.checked&&lines.length)? "block":"none";
+    kwCount.textContent=sorted.length;
+    kwList.innerHTML=kwHtml.join("")||'<span class="empty-hint">No keywords to rank yet - add some text above.</span>';
+
+    if(!lines.length){
+      out.innerHTML='<p class="empty-hint" style="margin:0">Paste text above and each line becomes a slug here.</p>';
+      proc.textContent="Waiting for input - nothing uploaded.";
+      lastCopy="";
+      return;
+    }
+
+    var rows=[],copyLines=[];
+    for(var i=0;i<lines.length;i++){
+      var line=lines[i].trim();
+      var simple=buildSlug(inLower.checked,inStop.checked,inNum.checked,inDedupe.checked,sep,max,unit,0);
+      var opt="";
+      if(inOpt.checked){
+        var trimmed=words(line);
+        if(inStop.checked) trimmed=trimmed.filter(function(w){ return !STOP.has(w); });
+        trimmed.sort(function(a,b){ return (freq[b]||0)-(freq[a]||0); });
+        opt=buildSlug(inLower.checked,false,inNum.checked,inDedupe.checked,sep,max,unit,6);
+      }
+      var label=(inOpt.checked?"Optimized":"Slug");
+      rows.push(
+        '<div class="slug-item">'+
+          '<div><div class="slug-orig">'+esc(line)+'</div>'+
+          '<div class="slug-val' +(inOpt.checked?" muted":"")+'">'+esc(simple||"[empty after cleanup]")+'</div>'+
+          (inOpt.checked?'<div class="slug-val">'+esc(opt||"[no keywords left]")+'</div>':'')+
+          '</div>'+
+          '<div class="slug-actions">'+
+            '<button type="button" class="slug-chip" data-copy="'+(inOpt.checked?esc(opt):esc(simple))+'" title="Copy this slug"><i class="fa-solid fa-copy"></i></button>'+
+          '</div>'+
+        '</div>'
+      );
+      copyLines.push(inOpt.checked&&opt?opt:simple);
+    }
+    out.innerHTML='<div class="slug-count"><span>'+lines.length+' slug'+(lines.length===1?"":"s")+' generated</span><b>'+lines.length+'</b></div><div class="slug-list">'+rows.join("")+'</div>';
+    lastCopy=copyLines.join("\n");
+    proc.textContent="Generated "+lines.length+" slugs in "+(performance.now()-t0).toFixed(1)+" ms - inside your browser. 0 bytes uploaded.";
+  }
+
+  inText.addEventListener("input",render);
+  [inSep,inMax,inMaxUnit,inLower,inStop,inNum,inDedupe,inOpt].forEach(function(el){ el.addEventListener("change",render); el.addEventListener("input",render); });
+
+  out.addEventListener("click",function(e){
+    var btn=e.target.closest?e.target.closest(".slug-chip"):null;
+    if(!btn) return;
+    window.Troolify.copyToClipboard(btn.getAttribute("data-copy"),function(){ proc.textContent="Slug copied to clipboard - the bytes never left your device."; });
+  });
+
+  f("sgCopy").addEventListener("click",function(){
+    if(!lastCopy) return;
+    window.Troolify.copyToClipboard(lastCopy,function(){ proc.textContent="All "+inText.value.split(/\r?\n/).filter(function(l){return l.trim();}).length+" slugs copied - the bytes never left your device."; });
+  });
+
+  f("sgSample").addEventListener("click",function(){
+    inText.value="Beginner's Guide to Sourdough Baking\nThe Best Whole Wheat Bread Recipes\nHow Long Does Sourdough Keep Fresh?\nBaking Sourdough in a Dutch Oven\nSourdough Starter for Busy People";
+    inOpt.checked=true; inStop.checked=true;
+    render(); inText.focus();
+  });
+  f("sgClear").addEventListener("click",function(){
+    inText.value=""; render(); inText.focus();
+  });
+  f("sgReset").addEventListener("click",function(){
+    inText.value=""; inSep.value="-"; inMax.value="60"; inMaxUnit.value="chars";
+    inLower.checked=true; inStop.checked=false; inNum.checked=true; inDedupe.checked=false; inOpt.checked=false;
+    render();
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>

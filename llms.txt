@@ -14,14 +14,31 @@ Key facts about Troolify:
 - [JSON Formatter](https://f9xr.github.io/troolify/tools/coding/json-formatter.html): Format, validate, minify and copy JSON instantly without sending it to a server.
 - [Code Beautifier](https://f9xr.github.io/troolify/tools/coding/code-beautifier.html): Turn source code into clean, colorful, self-contained HTML with syntax highlighting.
 - [Schema Markup Generator](https://f9xr.github.io/troolify/tools/seo/schema-markup-generator.html): Create clean JSON-LD schema markup for LocalBusiness, Product, Article, FAQPage, Event and Review.
+- [Multiline Slug Generator](https://f9xr.github.io/troolify/tools/seo/multiline-slug-generator.html): Convert multi-line text into SEO-friendly URL slugs with keyword optimization and stop-word removal.
 - [YouTube Timestamp Link Generator](https://f9xr.github.io/troolify/tools/youtube/timestamp-link-generator.html): Create clickable timestamp links and instant video-description chapters for any YouTube video.
 - [Song Length Calculator](https://f9xr.github.io/troolify/tools/audio/song-length-calculator.html): Calculate exact track runtime from BPM and bar repetitions.
 - [Password Generator](https://f9xr.github.io/troolify/tools/misc/password-generator.html): Generate strong random passwords or memorable passphrases with custom length, character sets and entropy strength.
 - [Password Entropy Calculator](https://f9xr.github.io/troolify/tools/misc/password-entropy-calculator.html): Measure password entropy in bits and estimate crack time across five real-world attack scenarios.
-- [Advance Ovulation Calculator](https://f9xr.github.io/troolify/tools/health/ovulation-calculator.html): Predict ovulation day, fertile window, peak fertility and upcoming periods from your last cycle.
+- [Ovulation Calculator](https://f9xr.github.io/troolify/tools/health/ovulation-calculator.html): Predict ovulation day, fertile window, peak fertility and upcoming periods from your last cycle.
 - [Advance Average Calculator](https://f9xr.github.io/troolify/tools/statistics/advance-average-calculator.html): Find the mean, median, sum and count of any list of numbers instantly.
 - [Markdown to Word Converter](https://f9xr.github.io/troolify/tools/converters/markdown-to-word-converter.html): Convert Markdown to Word instantly. Turn .md files into polished .docx documents, no signup needed.
 - [Markdown to PDF Converter](https://f9xr.github.io/troolify/tools/converters/markdown-to-pdf-converter.html): Convert Markdown to PDF instantly. Turn .md files into clean, shareable PDF documents, no signup needed.
+- [VAT Calculator](https://f9xr.github.io/troolify/tools/finance/vat-calculator.html): Add, remove or split VAT on any amount with tax rates for 50+ countries. 100% client-side.
+- [URL Encoder & Decoder](https://f9xr.github.io/troolify/tools/coding/url-encoder-decoder.html): Encode or percent-decode URLs and text instantly for safe links and API work.
+- [CSV to JSON Converter](https://f9xr.github.io/troolify/tools/coding/csv-to-json-converter.html): Convert CSV into clean JSON with custom keys and separators, fully in the browser.
+- [SHA Hash Generator](https://f9xr.github.io/troolify/tools/coding/sha-hash-generator.html): Generate SHA-1, SHA-256, SHA-384 or SHA-512 hashes via the native Web Crypto API.
+- [Color Converter](https://f9xr.github.io/troolify/tools/image/color-converter.html): Convert any color between HEX, RGB and HSL with a live preview swatch.
+- [Random Word Generator](https://f9xr.github.io/troolify/tools/text/random-word-generator.html): Generate random words from six curated lists - common, nouns, verbs, adjectives, animals or food.
+- [Bra Size Calculator](https://f9xr.github.io/troolify/tools/health/bra-size-calculator.html): Find your bra size and sister sizes from underbust and bust measurements with a band and cup fit guide.
+- [Body Fat Percentage Calculator](https://f9xr.github.io/troolify/tools/health/body-fat-percentage-calculator.html): Estimate body fat percentage with the US Navy method from a few tape measurements.
+- [Lean Body Mass Calculator](https://f9xr.github.io/troolify/tools/health/lean-body-mass-calculator.html): Estimate lean body mass with the Boer formula, or sharpen it with a body fat reading.
+- [Waist to Hip Ratio Calculator](https://f9xr.github.io/troolify/tools/health/waist-to-hip-ratio-calculator.html): Calculate your waist-to-hip ratio and WHO risk category from two tape measurements.
+- [Macro Calculator](https://f9xr.github.io/troolify/tools/health/macro-calculator.html): Set protein, fat and carbohydrate targets from your TDEE and goal - cut, maintain or bulk.
+- [Protein Intake Calculator](https://f9xr.github.io/troolify/tools/health/protein-intake-calculator.html): Find your daily protein target in grams by weight, activity and goal, with a per-meal split.
+- [TDEE Calculator](https://f9xr.github.io/troolify/tools/health/tdee-calculator.html): Estimate total daily energy expenditure and maintenance calories with Mifflin-St Jeor and activity levels.
+- [Heart Rate Zones Calculator](https://f9xr.github.io/troolify/tools/health/heart-rate-zones-calculator.html): Find your max heart rate and five training zones by age and resting heart rate using Karvonen.
+- [Steps to Calories Calculator](https://f9xr.github.io/troolify/tools/health/steps-to-calories-calculator.html): Turn your step count into calories burned based on weight and pace, with a distance estimate.
+- [Pregnancy Due Date Calculator](https://f9xr.github.io/troolify/tools/health/pregnancy-due-date-calculator.html): Estimate your due date from LMP or conception using Naegele's rule, with gestational age and trimester.
 
 ## Categories
 - [AI Tools](https://f9xr.github.io/troolify/tools/ai/index.html): Prompt, text, image and code generation utilities.

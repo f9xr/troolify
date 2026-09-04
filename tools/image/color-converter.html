@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Color Converter | HEX to RGB to HSL Online - Free</title>
+<meta name="description" content="Free online color converter - enter HEX, RGB or HSL and instantly get all formats plus a live preview swatch. 100% client-side, zero data retention.">
+<meta name="author" content="F9XR Development Team">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#212529">
+<link rel="canonical" href="https://f9xr.github.io/troolify/tools/image/color-converter.html">
+<meta property="og:site_name" content="Troolify">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Color Converter | HEX to RGB to HSL Online - Free">
+<meta property="og:description" content="Convert any color between HEX, RGB and HSL with a live preview swatch. Free, private and 100% client-side.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://f9xr.github.io/troolify/tools/image/color-converter.html">
+<meta property="og:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-09-05">
+<meta property="article:modified_time" content="2026-09-05">
+<meta property="article:section" content="Image Tools">
+<meta property="article:tag" content="Color Converter">
+<meta property="article:tag" content="Image Tools">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Color Converter | HEX to RGB to HSL Online - Free">
+<meta name="twitter:description" content="Convert colors between HEX, RGB and HSL with a live swatch - 100% browser based, zero data retention.">
+<meta name="twitter:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://f9xr.github.io/troolify/index.html" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://f9xr.github.io/troolify/tools/index.html" },
+    { "@type": "ListItem", "position": 3, "name": "Image Tools", "item": "https://f9xr.github.io/troolify/tools/image/" },
+    { "@type": "ListItem", "position": 4, "name": "Color Converter", "item": "https://f9xr.github.io/troolify/tools/image/color-converter.html" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Color Converter",
+  "url": "https://f9xr.github.io/troolify/tools/image/color-converter.html",
+  "applicationCategory": "DesignApplication",
+  "applicationSubCategory": "Color Format Converter",
+  "operatingSystem": "Any (web browser)",
+  "featureList": ["Convert HEX, RGB and HSL in any direction", "Accept shorthand #RGB and full #RRGGBB", "Live preview swatch", "Copy-ready output for each format", "100% client-side processing"],
+  "description": "Convert any color between HEX, RGB and HSL instantly and see a live preview. Free color converter that runs entirely in your browser.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "datePublished": "2026-09-05",
+  "dateModified": "2026-09-05",
+  "author": { "@type": "Organization", "name": "F9XR Development Team", "url": "https://f9xr.github.io/" },
+  "publisher": { "@type": "Organization", "name": "Troolify", "url": "https://f9xr.github.io/troolify/", "logo": { "@type": "ImageObject", "url": "https://f9xr.github.io/troolify/assets/images/logo_nobg.webp", "width": 1407, "height": 768 } }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between HEX, RGB and HSL?",
+      "acceptedAnswer": { "@type": "Answer", "text": "HEX is a six-digit hexadecimal pair per channel (e.g. #3B82F6). RGB specifies red, green and blue on a 0-255 scale. HSL describes a color by hue (0-360 degrees), saturation and lightness (0-100%), which designers often find more intuitive to tweak. They are three descriptions of the same color." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert a hex color to RGB?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Split the six hex digits into red, green and blue pairs, then convert each pair from base-16 to decimal. For example #3B82F6 becomes rgb(59, 130, 246). This tool does that for you as you type." }
+    },
+    {
+      "@type": "Question",
+      "name": "Will my color data be sent to a server?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Never. Conversion runs entirely in your browser tab. Your color values are not uploaded, stored or transmitted anywhere." }
+    },
+    {
+      "@type": "Question",
+      "name": "Which color formats can I enter?",
+      "acceptedAnswer": { "@type": "Answer", "text": "This tool accepts shorthand and full HEX (#F00 or #FF0000), rgb(r, g, b) and hsl(h, s%, l%) strings. Pick the native color picker too for a visual shortcut." }
+    }
+  ]
+}
+</script>
+
+<link rel="icon" type="image/webp" href="../../assets/images/favicon.webp"><link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+<link rel="stylesheet" href="../../assets/css/tailwind.css">
+<link rel="stylesheet" href="../../assets/css/tool.css">
+<link rel="stylesheet" href="../../assets/css/site-shell.css">
+<link rel="stylesheet" href="../../assets/css/tool-page.css">
+<link rel="stylesheet" href="../../assets/css/seo-article.css">
+<style>
+.calc-grid{display:grid;grid-template-columns:1fr;gap:18px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:12.5px;font-weight:700;color:var(--muted)}
+.field input{background:#1B2028;border:1px solid var(--border);color:var(--ink);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:15px;font-weight:600;outline:none;width:100%;box-sizing:border-box;font-variant-ligatures:none}
+.field input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+.color-row{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:end}
+.color-preview{width:64px;height:64px;border-radius:14px;border:1px solid var(--border);background:#1B2028;position:relative;overflow:hidden}
+.color-preview input[type=color]{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}
+.color-swatch{position:absolute;inset:0}
+.color-modes{display:grid;grid-template-columns:1fr;gap:12px;margin-top:16px}
+@media(min-width:720px){.color-modes{grid-template-columns:repeat(3,1fr)}}
+.color-mode{background:#12161C;border:1px solid var(--border);border-radius:12px;padding:12px 14px}
+.color-mode .cm-label{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.color-mode .cm-value{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:7px;font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace;font-size:13px;color:var(--ink);word-break:break-all}
+.color-mode .cm-copy{flex-shrink:0;color:var(--muted);cursor:pointer;background:none;border:0;padding:4px}
+.color-mode .cm-copy:hover{color:var(--accent)}
+</style>
+</head>
+<body data-layout="tool">
+<noscript>
+    <nav aria-label="Primary" style="position:static;display:block;padding:1rem 1.5rem;background:#212529;border-bottom:1px solid #343A40;text-align:center;font-size:0.9rem;">
+        <a href="../../index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Home</a>
+        <a href="../../tools/index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Tools</a>
+        <a href="../../pages/about.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">About</a>
+        <a href="../../pages/contact.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Contact</a>
+    </nav>
+</noscript>
+
+<main class="tool-main">
+  <div class="container">
+
+    <div class="tool-head hero">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="../../tools/index.html">Tools</a></li>
+          <li><a href="../index.html">Image Tools</a></li>
+          <li class="current" aria-current="page">Color Converter</li>
+        </ol>
+      </nav>
+      <div class="hero-main">
+        <span class="tool-badge"><span class="dot"></span>100% client-side &middot; zero data retention</span>
+        <h1>Color Converter</h1>
+        <p>Convert any color between HEX, RGB and HSL instantly, with a live preview as you type. Pick a color visually or paste a value in any format - everything happens locally in your browser.</p>
+      </div>
+      <div class="hero-box hero-cat">
+        <h3 class="hero-box-title"><i class="fa-solid fa-folder-open"></i>Category</h3>
+        <div class="tool-meta">
+          <span class="tool-tag"><i class="fa-solid fa-tag"></i>Design</span>
+          <a class="tool-cat" href="../index.html" aria-label="Browse Image Tools category"><i class="fa-solid fa-folder"></i>Image Tools</a>
+        </div>
+      </div>
+      <div class="hero-box hero-qa">
+        <h3 class="hero-box-title"><i class="fa-solid fa-bolt"></i>Quick Actions</h3>
+        <div class="tool-actions">
+          <button class="rt-btn" type="button" id="btnShare"><i class="fa-solid fa-share-nodes"></i>Share</button>
+          <button class="rt-btn" type="button" id="btnEmbed"><i class="fa-solid fa-code"></i>Embed Tool</button>
+          <a class="rt-btn" href="../../pages/feedback.html"><i class="fa-solid fa-comment"></i>Feedback</a>
+        </div>
+      </div>
+      <div class="hero-box hero-details">
+        <h3 class="hero-box-title"><i class="fa-solid fa-circle-info"></i>Tool Details</h3>
+        <div class="tool-details">
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.github.io/" target="_blank" rel="noopener">F9XR Development Team</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-check-double"></i>Reviewed by</span><a class="detail-value" href="../../press/editorial-policies.html">Review Board</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-clock-rotate-left"></i>Last updated</span><span class="detail-value">5 September 2026</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel clean">
+      <div class="panel-inner">
+        <div class="toolbar-row">
+          <span class="tool-label"><i class="fa-solid fa-palette"></i>Color Value</span>
+        </div>
+
+        <div class="color-row">
+          <div class="field"><label for="colorInput">Enter HEX, rgb() or hsl()</label>
+            <input id="colorInput" type="text" spellcheck="false" value="#3B82F6" aria-label="Color value in HEX, RGB or HSL format" placeholder="#RRGGBB or rgb()/hsl()">
+          </div>
+          <div class="color-preview">
+            <div class="color-swatch" id="colorSwatch" aria-hidden="true"></div>
+            <input type="color" id="colorPicker" aria-label="Pick a color visually">
+          </div>
+        </div>
+
+        <div class="color-modes" aria-live="polite">
+          <div class="color-mode">
+            <div class="cm-label">HEX</div>
+            <div class="cm-value"><span id="cHex">#3b82f6</span><button type="button" class="cm-copy" data-copy="cHex" aria-label="Copy HEX"><i class="fa-solid fa-copy"></i></button></div>
+          </div>
+          <div class="color-mode">
+            <div class="cm-label">RGB</div>
+            <div class="cm-value"><span id="cRgb">rgb(59, 130, 246)</span><button type="button" class="cm-copy" data-copy="cRgb" aria-label="Copy RGB"><i class="fa-solid fa-copy"></i></button></div>
+          </div>
+          <div class="color-mode">
+            <div class="cm-label">HSL</div>
+            <div class="cm-value"><span id="cHsl">hsl(217, 91%, 60%)</span><button type="button" class="cm-copy" data-copy="cHsl" aria-label="Copy HSL"><i class="fa-solid fa-copy"></i></button></div>
+          </div>
+        </div>
+
+        <div class="status" id="colorStatus"></div>
+        <p class="proc-line"><i class="fa-solid fa-bolt"></i><span id="colorProc">Ready - conversion happens in this tab.</span></p>
+      </div>
+    </div>
+
+    <aside class="disclaimer" aria-label="Disclaimer">
+      <i class="fa-solid fa-circle-info"></i>
+      <p>Disclaimer: Whilst every effort has been made in building our tools, we are not to be held liable for any damages or monetary losses arising out of or in connection with their use. <a href="../../press/disclaimer.html">Full disclaimer</a>.</p>
+    </aside>
+
+    <div class="article-layout">
+      <article class="seo-article">
+        <h2 id="article-title">Color Converter: One Color, Every Format</h2>
+        <p>Designers hand hex codes to developers, developers paste RGB values into APIs, and CSS now happily accepts HSL everywhere. The three notations describe the same color, and jumping between them should take a second - this tool converts any value instantly and shows you exactly what it looks like.</p>
+
+        <h2 id="formats">HEX, RGB and HSL at a Glance</h2>
+        <p><strong>HEX</strong> packs one byte per channel into six hex digits: <code>#3B82F6</code> is red <code>3B</code>, green <code>82</code>, blue <code>F6</code>. <strong>RGB</strong> expresses those same channels in decimal: <code>rgb(59, 130, 246)</code>. <strong>HSL</strong> reframes the color as hue (0&ndash;360&deg;), saturation (%) and lightness (%), which is the most intuitive way to reason about a family of shades.</p>
+
+        <h2 id="how-to-use">How to Use the Converter</h2>
+        <ol>
+          <li><strong>Paste a value</strong> in #hex (3 or 6 digits), <code>rgb(r, g, b)</code> or <code>hsl(h, s%, l%)</code> form.</li>
+          <li><strong>Or click the swatch</strong> to pick a color visually from the native picker.</li>
+          <li><strong>Copy</strong> any output format - each value has its own copy button.</li>
+        </ol>
+        <p>Every format updates together as you type, and invalid values are flagged inline so you can fix them quickly.</p>
+
+        <h2 id="where-to-use-it">Why Swap Formats at All?</h2>
+        <p>Figma and brand guidelines usually store hex; legacy systems and some database columns want RGB numbers; CSS gradients and design systems increasingly use HSL for its predictable lightness control. Matching hex codes to RGB when <a href="image-to-base64.html">embedding images</a>, or normalizing swatches before <a href="image-resizer.html">exporting assets</a>, becomes copy-paste work with this tool.</p>
+
+        <h2 id="conversion-notes">Conversion Notes</h2>
+        <p>HSL to RGB and back is lossless within the precision shown here - round-trip conversions reproduce the same color. Values display in lowercase hex, the most common convention, and out-of-range inputs are clamped to valid ranges rather than crashing.</p>
+
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+
+        <details class="faq-item">
+          <summary>What is the difference between HEX, RGB and HSL?</summary>
+          <div class="faq-a">
+            <p>HEX is six hex digits (two per channel), RGB uses decimal 0-255 values, and HSL describes hue (0-360&deg;), saturation (%) and lightness (%). They are three equivalent notations for the same color.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>How do I convert a hex color to RGB?</summary>
+          <div class="faq-a">
+            <p>Split the six hex digits into red, green and blue pairs and convert each pair from base-16 to decimal. #3B82F6 becomes rgb(59, 130, 246). This tool does it as you type.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Will my color data be sent to a server?</summary>
+          <div class="faq-a">
+            <p>Never. Conversion runs entirely in your browser tab - your values are not uploaded, stored or transmitted anywhere.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Which color formats can I enter?</summary>
+          <div class="faq-a">
+            <p>Shorthand and full HEX (#F00 or #FF0000), rgb(r, g, b), and hsl(h, s%, l%). A native color picker is also attached to the swatch for visual selection.</p>
+          </div>
+        </details>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>Color formats are a translation problem, not a maths problem. Let this converter handle the arithmetic while you focus on the design - with live feedback on every change and zero data leaving your browser.</p>
+      </article>
+    </div>
+
+    <section class="keyword-box" aria-label="Keywords and tags">
+      <h2>Keyword &amp; Tags</h2>
+      <h3>Keywords</h3>
+      <div class="keywords">
+        <span class="keyword">color converter</span>
+        <span class="keyword">hex to rgb</span>
+        <span class="keyword">rgb to hex</span>
+        <span class="keyword">hex to hsl</span>
+        <span class="keyword">hsl to rgb</span>
+        <span class="keyword">color picker</span>
+        <span class="keyword">hex to rgba</span>
+        <span class="keyword">web colors</span>
+        <span class="keyword">css color</span>
+        <span class="keyword">design tool</span>
+      </div>
+      <h3>Tags</h3>
+      <div class="tags">
+        <a class="tag" href="../index.html"><i class="fa-solid fa-tag"></i>Design</a>
+        <a class="tag" href="../index.html"><i class="fa-solid fa-folder"></i>Image Tools</a>
+        <a class="tag" href="../../tools/index.html"><i class="fa-solid fa-cube"></i>Image</a>
+      </div>
+    </section>
+
+    <section class="author-box" aria-label="About the publisher">
+      <div class="author-avatar" aria-hidden="true"><img src="../../assets/images/logo_nobg.webp" alt="F9XR logo" loading="lazy" decoding="async" width="1407" height="768"></div>
+      <div>
+        <span class="author-role">Published by</span>
+        <h2>F9XR Development Team</h2>
+        <p>Every Troolify tool is built and reviewed by the F9XR Development Team, then checked by our Review Board for correctness, accessibility, and clarity. Tools run 100% client-side with zero data retention.</p>
+        <div class="author-links">
+          <a href="https://f9xr.github.io/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i>F9XR Team</a>
+          <a href="../../press/editorial-policies.html"><i class="fa-solid fa-scale-balanced"></i>Editorial Policies</a>
+          <a href="https://github.com/f9xr" target="_blank" rel="noopener" aria-label="F9XR on GitHub"><i class="fa-brands fa-github"></i>GitHub</a>
+          <a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on LinkedIn"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+          <a href="https://instagram.com/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on Instagram"><i class="fa-brands fa-instagram"></i>Instagram</a>
+          <a href="https://youtube.com/@QuarterlyLIV" target="_blank" rel="noopener" aria-label="F9XR on YouTube"><i class="fa-brands fa-youtube"></i>YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-tools" aria-label="Related tools">
+      <h2>Related Tools</h2>
+      <div class="related-search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" id="relatedSearch" placeholder="Search all Troolify tools&hellip;" autocomplete="off" aria-label="Search related tools">
+      </div>
+      <div class="related-grid" id="relatedGrid" aria-busy="true">
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+      </div>
+    </section>
+
+    <section class="comments" aria-label="Comments">
+      <h2>Comments</h2>
+      <div id="comments">
+        <script src="https://utteranc.es/client.js" repo="f9xr/troolify" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async></script>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"><span></span><i class="fa-solid fa-layer-group"></i><span></span></div>
+
+  </div>
+</main>
+
+<script src="../../assets/js/layout.js" defer></script>
+<script src="../../assets/js/tools-data.js" defer></script>
+<script src="../../assets/js/tool-page.js" defer></script>
+<script>
+(function(){
+  "use strict";
+  var input = document.getElementById("colorInput");
+  var picker = document.getElementById("colorPicker");
+  var swatch = document.getElementById("colorSwatch");
+  var statusEl = document.getElementById("colorStatus");
+  var proc = document.getElementById("colorProc");
+  var cHex = document.getElementById("cHex");
+  var cRgb = document.getElementById("cRgb");
+  var cHsl = document.getElementById("cHsl");
+
+  /* ---------- conversion helpers ---------- */
+
+  function clamp(v, lo, hi){ return Math.min(hi, Math.max(lo, v)); }
+
+  function rgbToHex(r, g, b){
+    return "#" + [r, g, b].map(function (n) {
+      var h = clamp(Math.round(n), 0, 255).toString(16);
+      return h.length === 1 ? "0" + h : h;
+    }).join("");
+  }
+
+  function rgbToHsl(r, g, b){
+    r /= 255; g /= 255; b /= 255;
+    var max = Math.max(r, g, b), min = Math.min(r, g, b);
+    var l = (max + min) / 2, h = 0, s = 0;
+    if (max !== min) {
+      var d = max - min;
+      s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+      if (max === r) h = (g - b) / d + (g < b ? 6 : 0);
+      else if (max === g) h = (b - r) / d + 2;
+      else h = (r - g) / d + 4;
+      h *= 60;
+    }
+    return "hsl(" + Math.round(h) + ", " + Math.round(s * 100) + "%, " + Math.round(l * 100) + "%)";
+  }
+
+  function hslToRgb(h, s, l){
+    h = ((h % 360) + 360) % 360;
+    s = clamp(s, 0, 100) / 100;
+    l = clamp(l, 0, 100) / 100;
+    var c = (1 - Math.abs(2 * l - 1)) * s;
+    var x = c * (1 - Math.abs((h / 60) % 2 - 1));
+    var m = l - c / 2;
+    var r = 0, g = 0, b = 0;
+    if (h < 60) { r = c; g = x; }
+    else if (h < 120) { r = x; g = c; }
+    else if (h < 180) { g = c; b = x; }
+    else if (h < 240) { g = x; b = c; }
+    else if (h < 300) { r = x; b = c; }
+    else { r = c; b = x; }
+    return [Math.round((r + m) * 255), Math.round((g + m) * 255), Math.round((b + m) * 255)];
+  }
+
+  /* ---------- parsing ---------- */
+
+  function parseHex(s){
+    var m = s.trim().replace(/^#/, "");
+    if (!/^[0-9a-f]{3}$/i.test(m) && !/^[0-9a-f]{6}$/i.test(m)) return null;
+    if (m.length === 3) m = m.split("").map(function (c) { return c + c; }).join("");
+    return {
+      r: parseInt(m.slice(0, 2), 16),
+      g: parseInt(m.slice(2, 4), 16),
+      b: parseInt(m.slice(4, 6), 16)
+    };
+  }
+
+  function parseRgb(s){
+    var m = s.trim().toLowerCase().match(/^rgb\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*\)$/);
+    if (!m) return null;
+    return { r: clamp(+m[1], 0, 255), g: clamp(+m[2], 0, 255), b: clamp(+m[3], 0, 255) };
+  }
+
+  function parseHsl(s){
+    var m = s.trim().toLowerCase().match(/^hsl\(\s*([\d.]+)\s*,\s*([\d.]+)%\s*,\s*([\d.]+)%\s*\)$/);
+    if (!m) return null;
+    var rgb = hslToRgb(parseFloat(m[1]), parseFloat(m[2]), parseFloat(m[3]));
+    return { r: rgb[0], g: rgb[1], b: rgb[2] };
+  }
+
+  function parseColor(s){
+    return parseHex(s) || parseRgb(s) || parseHsl(s);
+  }
+
+  /* ---------- render ---------- */
+
+  function setVal(el, txt){
+    el.textContent = txt;
+  }
+
+  function render(){
+    var v = input.value;
+    if (!v.trim()) {
+      statusEl.textContent = "";
+      statusEl.className = "status";
+      setVal(cHex, "\u2013"); setVal(cRgb, "\u2013"); setVal(cHsl, "\u2013");
+      swatch.style.background = "transparent";
+      proc.textContent = "Enter a color in HEX, rgb() or hsl() form.";
+      return;
+    }
+    var rgb = parseColor(v);
+    if (!rgb) {
+      statusEl.textContent = "Unrecognized color - try #RRGGBB, #RGB, rgb(r, g, b) or hsl(h, s%, l%).";
+      statusEl.className = "status error";
+      setVal(cHex, "\u2013"); setVal(cRgb, "\u2013"); setVal(cHsl, "\u2013");
+      proc.textContent = "No color was sent to a server - parsing happened locally.";
+      return;
+    }
+    statusEl.textContent = "";
+    statusEl.className = "status";
+    var hex = rgbToHex(rgb.r, rgb.g, rgb.b);
+    setVal(cHex, hex);
+    setVal(cRgb, "rgb(" + rgb.r + ", " + rgb.g + ", " + rgb.b + ")");
+    setVal(cHsl, rgbToHsl(rgb.r, rgb.g, rgb.b));
+    swatch.style.background = hex;
+    if (picker.value !== hex) picker.value = hex;
+    proc.textContent = "Converted " + (hex.length === 7 ? hex : "input") + " to all formats \u00b7 0 bytes uploaded.";
+  }
+
+  /* ---------- events ---------- */
+
+  input.addEventListener("input", render);
+  picker.addEventListener("input", function () {
+    input.value = picker.value;
+    render();
+  });
+
+  document.querySelectorAll(".cm-copy").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var src = document.getElementById(btn.getAttribute("data-copy"));
+      if (!src || src.textContent === "\u2013") return;
+      window.Troolify.copyToClipboard(src.textContent, function () {
+        var old = btn.innerHTML;
+        btn.innerHTML = '<i class="fa-solid fa-check"></i>';
+        setTimeout(function () { btn.innerHTML = old; }, 1200);
+      });
+    });
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -32,13 +32,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
     <!-- Static Tailwind CSS (Preflight disabled; replaces the Play CDN for production) -->
     <link rel="stylesheet" href="assets/css/tailwind.css">
     
-    <!-- Preload the LCP hero image (WebP) -->
-    <link rel="preload" as="image" href="assets/images/hero-image-1.webp">
+    <!-- Preconnect for the icon font CDN (fetch starts early even though CSS is async) -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    
+    <!-- Preload + boost the LCP hero image (WebP) -->
+    <link rel="preload" as="image" href="assets/images/hero-image-1.webp" fetchpriority="high">
     
     <!-- Main CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -75,6 +78,7 @@
 </head>
 <body>
 <noscript>
+    <style>.cinematic-bg{background-image:url('assets/images/hero-image-2.webp')}.final-cta-bg{background-image:url('assets/images/hero-image-3.webp')}</style>
     <nav aria-label="Primary" style="position:static;display:block;padding:1rem 1.5rem;background:#212529;border-bottom:1px solid #343A40;text-align:center;font-size:0.9rem;">
         <a href="index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Home</a>
         <a href="tools/index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Tools</a>
@@ -96,11 +100,11 @@
         </div>
         
         <div class="hero-content reveal">
-            <div class="eyebrow">F9XR TEAM • ONLINE TOOLS HUB</div>
+            <div class="eyebrow">F9XR TEAM â€¢ ONLINE TOOLS HUB</div>
             <h1 class="hero-title">Powerful Tools.<br>One <span class="gradient-text">Smarter Hub.</span></h1>
             <p class="hero-subtitle">Troolify brings powerful online tools together in one fast, simple and constantly evolving platform.</p>
             
-            <!-- Live search bar (DESIGN.md §9 Search Modal / hero search) -->
+            <!-- Live search bar (DESIGN.md Â§9 Search Modal / hero search) -->
             <div class="hero-search" id="heroSearch">
                 <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
                 <input type="text" class="hero-search-input" id="heroSearchInput" placeholder="Search the tool catalog&hellip; (e.g. word counter)" autocomplete="off" aria-label="Search tools">
@@ -244,8 +248,8 @@
 
     <!-- Cinematic Planet Section -->
     <section class="cinematic">
-        <!-- Using Image 2 for cinematic effect -->
-        <div class="cinematic-bg" style="background-image: url('assets/images/hero-image-2.webp');"></div>
+        <!-- Using Image 2 for cinematic effect (loaded lazily in script.js when it scrolls into view) -->
+        <div class="cinematic-bg" data-bg="assets/images/hero-image-2.webp"></div>
         <div class="cinematic-overlay"></div>
         <div class="container cinematic-content reveal">
             <h2 class="cinematic-title">One Hub. <br><span class="gradient-text">Endless Possibilities.</span></h2>
@@ -314,8 +318,8 @@
 
     <!-- Final CTA -->
     <section class="final-cta">
-        <!-- Optional third image for background or just CSS particles -->
-        <div class="final-cta-bg" style="background-image: url('assets/images/hero-image-3.webp');"></div>
+        <!-- Optional third image for background or just CSS particles (loaded lazily when scrolled into view) -->
+        <div class="final-cta-bg" data-bg="assets/images/hero-image-3.webp"></div>
         <div class="final-cta-overlay"></div>
         <div class="container final-content reveal">
             <h2 class="final-title">Your Next Useful Tool Is Already Here.</h2>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -93,7 +93,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
 <link rel="stylesheet" href="../../assets/css/tailwind.css">
 <link rel="stylesheet" href="../../assets/css/tool.css">
 <link rel="stylesheet" href="../../assets/css/site-shell.css">
@@ -214,7 +215,7 @@
         <p>If the input is not valid Base64 and you are in decode mode, the tool tells you clearly instead of silently returning garbage.</p>
 
         <h2 id="unicode-support">Unicode-Safe Encoding with UTF-8</h2>
-        <p>Plain <code>btoa()</code> breaks on non-Latin characters and emoji because it assumes one byte per character. This tool encodes text to UTF-8 bytes first with the TextEncoder API, then applies Base64, so Wörld, café, 日本語, and emoji all round-trip perfectly. The decoder reverses the same process with TextDecoder.</p>
+        <p>Plain <code>btoa()</code> breaks on non-Latin characters and emoji because it assumes one byte per character. This tool encodes text to UTF-8 bytes first with the TextEncoder API, then applies Base64, so WÃ¶rld, cafÃ©, æ—¥æœ¬èªž, and emoji all round-trip perfectly. The decoder reverses the same process with TextDecoder.</p>
         <p>Pair this with the <a href="html-entity-encoder.html">HTML Entity Encoder</a> when pasting text into web content, or with our <a href="uuid-generator.html">UUID Generator</a> when minting fresh identifiers for the data you encode.</p>
 
         <h2 id="is-it-encryption">Base64 Is Not Encryption</h2>

@@ -265,6 +265,7 @@
            -------------------------------------------------------------------- */
 
         var mainEl = document.querySelector("main");
+        if (mainEl && !mainEl.id) mainEl.id = "main";
         if (mainEl && document.body.getAttribute("data-layout") === "tool") {
             (function () {
                 // Inject dashboard.css if not already present.
@@ -551,7 +552,7 @@
            -------------------------------------------------------------------- */
 
         var searchModalMarkup =
-            '<div class="search-modal" id="searchModal" aria-hidden="true">' +
+            '<div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="Search the tool catalog" aria-hidden="true">' +
                 '<div class="search-modal-backdrop"></div>' +
                 '<div class="search-modal-panel">' +
                     '<div class="search-modal-input-wrap">' +
@@ -572,6 +573,8 @@
 
         var shellStyles =
             '<style>' +
+                '.skip-link{position:absolute;left:-9999px;top:0;z-index:9999;display:inline-block;padding:.85rem 1.4rem;background:#3B82F6;color:#fff;font-size:.9rem;font-weight:700;border-radius:0 0 10px 0;text-decoration:none}' +
+                '.skip-link:focus{left:0;outline:3px solid #BFDBFE;outline-offset:-3px}' +
                 '.cta-panel{position:relative;overflow:hidden;border-radius:30px;padding:clamp(2.25rem,5vw,3.75rem) clamp(1.5rem,4.5vw,3.5rem);background:linear-gradient(140deg,#38BDF8 0%,#2563EB 42%,#1D4ED8 72%,#172554 100%);text-align:center}' +
                 '.cta-blob{position:absolute;border-radius:50%;pointer-events:none}' +
                 '.cta-blob-1{width:clamp(200px,30vw,340px);height:clamp(200px,30vw,340px);top:-30%;left:-12%;background:linear-gradient(135deg,rgba(224,242,254,.85),rgba(125,211,252,.2));backdrop-filter:blur(8px);filter:blur(2px)}' +
@@ -649,7 +652,8 @@
            Inject into the page
            -------------------------------------------------------------------- */
 
-        body.insertAdjacentHTML("afterbegin", headerMain);
+        var skipLink = '<a class="skip-link" href="#main">Skip to main content</a>';
+        body.insertAdjacentHTML("afterbegin", skipLink + headerMain);
 
         // "Featured On" band is always placed directly above the CTA:
         // - pages with their own static CTA (index.html) -> insert before it
@@ -807,6 +811,12 @@
                 menuBtn.setAttribute("aria-expanded", String(isMenuOpen));
             }
             document.body.style.overflow = isMenuOpen ? "hidden" : "";
+            if (isMenuOpen) {
+                var firstLink = mobileMenu ? mobileMenu.querySelector("a") : null;
+                if (firstLink) setTimeout(function () { firstLink.focus(); }, 30);
+            } else if (menuBtn && menuBtn.focus) {
+                menuBtn.focus();
+            }
         }
 
         if (menuBtn) menuBtn.addEventListener("click", function () { toggleMenu(); });
@@ -837,10 +847,20 @@
         var modalInput = modal ? modal.querySelector(".search-modal-input") : null;
         var modalResults = modal ? modal.querySelector(".search-modal-results") : null;
         var modalOpen = false;
+        var searchTrigger = null;
 
-        function openSearchModal() {
+        function modalFocusables() {
+            if (!modal) return [];
+            var nodes = modal.querySelectorAll('a[href], button, input, select, textarea, [tabindex]:not([tabindex="-1"])');
+            return Array.prototype.filter.call(nodes, function (el) {
+                return el.offsetParent !== null && !el.disabled;
+            });
+        }
+
+        function openSearchModal(trigger) {
             if (!modal) return;
             if (isMenuOpen) toggleMenu(false);
+            searchTrigger = trigger && trigger.focus ? trigger : document.activeElement;
             modalOpen = true;
             modal.classList.add("open");
             modal.setAttribute("aria-hidden", "false");
@@ -856,6 +876,10 @@
             document.body.style.overflow = isMenuOpen ? "hidden" : "";
             if (modalInput) modalInput.value = "";
             if (modalResults) modalResults.innerHTML = "";
+            if (searchTrigger && searchTrigger.focus) {
+                searchTrigger.focus();
+                searchTrigger = null;
+            }
         }
 
         function loadToolsData(cb) {
@@ -971,7 +995,7 @@
         }
 
         document.querySelectorAll(".nav-search-btn").forEach(function (btn) {
-            btn.addEventListener("click", openSearchModal);
+            btn.addEventListener("click", function () { openSearchModal(this); });
         });
 
         if (modal) {
@@ -983,6 +1007,15 @@
 
         document.addEventListener("keydown", function (e) {
             if (e.key === "Escape" && modalOpen) { closeSearchModal(); return; }
+            if (e.key === "Tab" && modalOpen) {
+                var f = modalFocusables();
+                if (!f.length) { e.preventDefault(); return; }
+                var first = f[0];
+                var last = f[f.length - 1];
+                if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+                else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+                return;
+            }
             if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
                 e.preventDefault();
                 if (modalOpen) { if (modalInput) modalInput.focus(); return; }

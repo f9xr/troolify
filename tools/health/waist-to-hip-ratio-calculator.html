@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Waist to Hip Ratio Calculator | WHR by Sex</title>
+<meta name="description" content="Calculate your waist-to-hip ratio (WHR) and heart risk category using WHO cutoffs. Free, private and 100% client-side.">
+<meta name="author" content="F9XR Development Team">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#212529">
+<link rel="canonical" href="https://f9xr.github.io/troolify/tools/health/waist-to-hip-ratio-calculator.html">
+<meta property="og:site_name" content="Troolify">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Waist to Hip Ratio Calculator | WHR by Sex">
+<meta property="og:description" content="Get your waist-to-hip ratio and cardiovascular risk category from two measurements. Free, private and instant.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://f9xr.github.io/troolify/tools/health/waist-to-hip-ratio-calculator.html">
+<meta property="og:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-09-05">
+<meta property="article:modified_time" content="2026-09-05">
+<meta property="article:section" content="Health Tools">
+<meta property="article:tag" content="Waist to Hip Ratio Calculator">
+<meta property="article:tag" content="Health Tools">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Waist to Hip Ratio Calculator | WHR by Sex">
+<meta name="twitter:description" content="Waist-to-hip ratio and risk category with WHO cutoffs - free, private, in your browser.">
+<meta name="twitter:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://f9xr.github.io/troolify/index.html" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://f9xr.github.io/troolify/tools/index.html" },
+    { "@type": "ListItem", "position": 3, "name": "Health Tools", "item": "https://f9xr.github.io/troolify/tools/health/" },
+    { "@type": "ListItem", "position": 4, "name": "Waist to Hip Ratio Calculator", "item": "https://f9xr.github.io/troolify/tools/health/waist-to-hip-ratio-calculator.html" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Waist to Hip Ratio Calculator",
+  "url": "https://f9xr.github.io/troolify/tools/health/waist-to-hip-ratio-calculator.html",
+  "applicationCategory": "HealthApplication",
+  "applicationSubCategory": "Body Composition Estimator",
+  "operatingSystem": "Any (web browser)",
+  "featureList": ["Waist-to-hip ratio from two measurements", "Metric or imperial units", "WHO risk categories by sex", "Fat-distribution guidance", "Body-fat shortcut", "100% client-side processing"],
+  "description": "Calculate your waist-to-hip ratio and WHO category to gauge how body fat is distributed. Free, private and 100% client-side.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "datePublished": "2026-09-05",
+  "dateModified": "2026-09-05",
+  "author": { "@type": "Organization", "name": "F9XR Development Team", "url": "https://f9xr.github.io/" },
+  "publisher": { "@type": "Organization", "name": "Troolify", "url": "https://f9xr.github.io/troolify/", "logo": { "@type": "ImageObject", "url": "https://f9xr.github.io/troolify/assets/images/logo_nobg.webp", "width": 1407, "height": 768 } }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a healthy waist-to-hip ratio?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The WHO defines low risk as below 0.90 for men and below 0.85 for women. Values above 1.0 for men and above 0.85 for women indicate increasing health risk from abdominal fat." }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is waist-to-hip ratio important?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Belly fat is more metabolically active than fat stored around the hips, so central obesity raises the risk of heart disease and diabetes. WHR captures fat distribution, where BMI just measures overall size." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I measure my waist and hips correctly?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Waist: mid-point between the bottom rib and the top of the hip bone (ilium), relaxed, after breathing out. Hips: over the widest part of the buttocks. Use the same unit for both and keep the tape level." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is waist-to-hip ratio better than BMI?",
+      "acceptedAnswer": { "@type": "Answer", "text": "They complement each other. BMI indicates overall weight, while WHR shows where fat sits. A normal-weight person with a high WHR can still carry risky central fat, so it's worth checking both." }
+    }
+  ]
+}
+</script>
+
+<link rel="icon" type="image/webp" href="../../assets/images/favicon.webp"><link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+<link rel="stylesheet" href="../../assets/css/tailwind.css">
+<link rel="stylesheet" href="../../assets/css/tool.css">
+<link rel="stylesheet" href="../../assets/css/site-shell.css">
+<link rel="stylesheet" href="../../assets/css/tool-page.css">
+<link rel="stylesheet" href="../../assets/css/seo-article.css">
+<style>
+.calc-grid{display:grid;grid-template-columns:1fr;gap:18px}
+@media(min-width:720px){.calc-grid{grid-template-columns:1fr 1fr}}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:12.5px;font-weight:700;color:var(--muted)}
+.field input,.field select{background:#1B2028;border:1px solid var(--border);color:var(--ink);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:15px;font-weight:600;outline:none;width:100%;box-sizing:border-box}
+.field input:focus,.field select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+.seg{display:inline-flex;border:1px solid var(--border);border-radius:10px;overflow:hidden}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg label{padding:9px 16px;font-size:13.5px;font-weight:700;color:var(--muted);cursor:pointer;background:#1B2028;transition:all .15s;margin:0}
+.seg input:checked+label{background:rgba(59,130,246,.18);color:#93C5FD}
+.result-card{background:linear-gradient(180deg,rgba(59,130,246,.12),rgba(59,130,246,.03));border:1px solid rgba(96,165,250,.25);border-radius:14px;padding:18px;margin-top:18px}
+.result-row{display:flex;justify-content:space-between;gap:10px;padding:8px 2px;font-size:14px}
+.result-row+.result-row{border-top:1px dashed rgba(255,255,255,.08)}
+.result-row b{color:#93C5FD;font-weight:800;text-align:right}
+.result-row.hero-row b{color:#6EE7B7}
+</style>
+</head>
+<body data-layout="tool">
+<noscript>
+    <nav aria-label="Primary" style="position:static;display:block;padding:1rem 1.5rem;background:#212529;border-bottom:1px solid #343A40;text-align:center;font-size:0.9rem;">
+        <a href="../../index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Home</a>
+        <a href="../../tools/index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Tools</a>
+        <a href="../../pages/about.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">About</a>
+        <a href="../../pages/contact.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Contact</a>
+    </nav>
+</noscript>
+
+<main class="tool-main">
+  <div class="container">
+
+    <div class="tool-head hero">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="../../tools/index.html">Tools</a></li>
+          <li><a href="../index.html">Health Tools</a></li>
+          <li class="current" aria-current="page">Waist to Hip Ratio Calculator</li>
+        </ol>
+      </nav>
+      <div class="hero-main">
+        <span class="tool-badge"><span class="dot"></span>100% client-side &middot; zero data retention</span>
+        <h1>Waist to Hip Ratio Calculator</h1>
+        <p>Divide your waist measurement by your hip measurement to see how your body fat is distributed - and what WHO considers low, moderate or high risk. Two numbers, done in your browser.</p>
+      </div>
+      <div class="hero-box hero-cat">
+        <h3 class="hero-box-title"><i class="fa-solid fa-folder-open"></i>Category</h3>
+        <div class="tool-meta">
+          <span class="tool-tag"><i class="fa-solid fa-tag"></i>Body &amp; Shape</span>
+          <a class="tool-cat" href="../index.html" aria-label="Browse Health Tools category"><i class="fa-solid fa-folder"></i>Health Tools</a>
+        </div>
+      </div>
+      <div class="hero-box hero-qa">
+        <h3 class="hero-box-title"><i class="fa-solid fa-bolt"></i>Quick Actions</h3>
+        <div class="tool-actions">
+          <button class="rt-btn" type="button" id="btnShare"><i class="fa-solid fa-share-nodes"></i>Share</button>
+          <button class="rt-btn" type="button" id="btnEmbed"><i class="fa-solid fa-code"></i>Embed Tool</button>
+          <a class="rt-btn" href="../../pages/feedback.html"><i class="fa-solid fa-comment"></i>Feedback</a>
+        </div>
+      </div>
+      <div class="hero-box hero-details">
+        <h3 class="hero-box-title"><i class="fa-solid fa-circle-info"></i>Tool Details</h3>
+        <div class="tool-details">
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.github.io/" target="_blank" rel="noopener">F9XR Development Team</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-check-double"></i>Reviewed by</span><a class="detail-value" href="../../press/editorial-policies.html">Review Board</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-clock-rotate-left"></i>Last updated</span><span class="detail-value">5 September 2026</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel clean">
+      <div class="panel-inner">
+        <div class="toolbar-row">
+          <span class="tool-label"><i class="fa-solid fa-ruler" aria-hidden="true"></i>Waist to Hip Ratio</span>
+          <div class="toolbar-actions">
+            <button class="chip-btn" type="button" id="whReset" title="Clear inputs and start over"><i class="fa-solid fa-rotate-left"></i><span class="hide-sm">Reset</span></button>
+          </div>
+        </div>
+
+        <div class="calc-grid">
+          <div class="field">
+            <label>Units</label>
+            <div class="seg" role="radiogroup" aria-label="Units">
+              <input type="radio" name="whUnit" id="whMetric" value="metric" checked><label for="whMetric">cm</label>
+              <input type="radio" name="whUnit" id="whImperial" value="imperial"><label for="whImperial">in</label>
+            </div>
+          </div>
+          <div class="field"><label for="whSex">Sex</label>
+            <select id="whSex">
+              <option value="female">Female</option>
+              <option value="male">Male</option>
+            </select>
+          </div>
+          <div class="field"><label for="whWaist">Waist (cm)</label><input id="whWaist" type="number" inputmode="decimal" min="40" max="180" step="any" value="80"></div>
+          <div class="field"><label for="whHip">Hips (cm)</label><input id="whHip" type="number" inputmode="decimal" min="50" max="180" step="any" value="95"></div>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn-primary" type="button" id="whCopy"><i class="fa-solid fa-copy"></i>Copy result</button>
+        </div>
+
+        <div class="result-card" id="whResults" aria-live="polite"></div>
+        <p class="proc-line"><i class="fa-solid fa-bolt"></i><span id="whProc">Ready - calculations happen in this tab.</span></p>
+      </div>
+    </div>
+
+    <aside class="disclaimer" aria-label="Disclaimer">
+      <i class="fa-solid fa-circle-info"></i>
+      <p>Disclaimer: Waist-to-hip ratio is a screening estimate, not a diagnosis of health risk. See a clinician for a proper assessment - especially if you have high blood pressure, diabetes, or a history of heart disease. <a href="../../press/disclaimer.html">Full disclaimer</a>.</p>
+    </aside>
+
+    <div class="article-layout">
+      <article class="seo-article">
+        <h2 id="article-title">Waist to Hip Ratio: Where Fat Lives Matters</h2>
+        <p>Two identical people can carry the same weight in completely different places - and that difference changes health risk. Your waist-to-hip ratio (WHR) captures where your fat sits in one simple number.</p>
+
+        <h2 id="why-whr">Why Fat Distribution Counts</h2>
+        <p>Belly fat drains directly into the liver and is far more metabolically active than the fat stored around your hips, so "apple-shaped" bodies face more cardiovascular and diabetes risk at the same BMI. WHR is the fastest way to tell your body shape apart from the top of your BMI.</p>
+
+        <h2 id="cutoffs">WHR Categories (WHO)</h2>
+        <ul>
+          <li><strong>Men:</strong> below 0.90 is low risk; 0.90-0.99 moderate; 1.00+ high.</li>
+          <li><strong>Women:</strong> below 0.80 is low risk; 0.80-0.84 moderate; 0.85+ high.</li>
+        </ul>
+        <p>Measure at the right spots: waist between the bottom rib and the top of the hip bone, relaxed after breathing out; hips over the widest point of the buttocks.</p>
+
+        <h2 id="next-steps">Improving the Number</h2>
+        <p>Central fat responds well to a calorie deficit and to strength training. Track your WHR alongside the <a href="bmi-calculator.html">BMI calculator</a> and the <a href="body-fat-percentage-calculator.html">body fat percentage calculator</a> to watch progress from three angles, and pair training with the <a href="waist-to-hip-ratio-calculator.html">steps to calories</a> tracker.</p>
+
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+
+        <details class="faq-item">
+          <summary>What is a healthy waist-to-hip ratio?</summary>
+          <div class="faq-a">
+            <p>Low risk is below 0.90 for men and below 0.85 for women. Above 1.0 for men and above 0.85 for women points to increasing risk from central fat.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Why is waist-to-hip ratio important?</summary>
+          <div class="faq-a">
+            <p>Central fat is more metabolically active than hip fat, so it raises heart-disease and diabetes risk. WHR measures distribution; BMI only measures overall size.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>How do I measure correctly?</summary>
+          <div class="faq-a">
+            <p>Waist: mid-point between the bottom rib and hip bone, relaxed. Hips: over the widest part of the buttocks. Keep the tape level and use the same unit for both.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Is WHR better than BMI?</summary>
+          <div class="faq-a">
+            <p>They complement each other. A normal-weight person with a high WHR can still carry risky central fat, so check both.</p>
+          </div>
+        </details>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>Your WHR is a free, tape-measure screening you can repeat at home every few weeks. Combined with BMI, it paints a far truer picture than the scale alone.</p>
+      </article>
+    </div>
+
+    <section class="keyword-box" aria-label="Keywords and tags">
+      <h2>Keyword &amp; Tags</h2>
+      <h3>Keywords</h3>
+      <div class="keywords">
+        <span class="keyword">waist to hip ratio</span>
+        <span class="keyword">WHR calculator</span>
+        <span class="keyword">waist hip ratio calculator</span>
+        <span class="keyword">body fat distribution</span>
+        <span class="keyword">apple body shape</span>
+        <span class="keyword">healthy waist ratio</span>
+        <span class="keyword">WHO waist to hip</span>
+        <span class="keyword">central obesity</span>
+        <span class="keyword">belly fat</span>
+        <span class="keyword">body shape calculator</span>
+      </div>
+      <h3>Tags</h3>
+      <div class="tags">
+        <a class="tag" href="../index.html"><i class="fa-solid fa-tag"></i>Body &amp; Shape</a>
+        <a class="tag" href="../index.html"><i class="fa-solid fa-folder"></i>Health Tools</a>
+        <a class="tag" href="../../tools/index.html"><i class="fa-solid fa-cube"></i>Body</a>
+      </div>
+    </section>
+
+    <section class="author-box" aria-label="About the publisher">
+      <div class="author-avatar" aria-hidden="true"><img src="../../assets/images/logo_nobg.webp" alt="F9XR logo" loading="lazy" decoding="async" width="1407" height="768"></div>
+      <div>
+        <span class="author-role">Published by</span>
+        <h2>F9XR Development Team</h2>
+        <p>Every Troolify tool is built and reviewed by the F9XR Development Team, then checked by our Review Board for correctness, accessibility, and clarity. Tools run 100% client-side with zero data retention.</p>
+        <div class="author-links">
+          <a href="https://f9xr.github.io/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i>F9XR Team</a>
+          <a href="../../press/editorial-policies.html"><i class="fa-solid fa-scale-balanced"></i>Editorial Policies</a>
+          <a href="https://github.com/f9xr" target="_blank" rel="noopener" aria-label="F9XR on GitHub"><i class="fa-brands fa-github"></i>GitHub</a>
+          <a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on LinkedIn"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+          <a href="https://instagram.com/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on Instagram"><i class="fa-brands fa-instagram"></i>Instagram</a>
+          <a href="https://youtube.com/@QuarterlyLIV" target="_blank" rel="noopener" aria-label="F9XR on YouTube"><i class="fa-brands fa-youtube"></i>YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-tools" aria-label="Related tools">
+      <h2>Related Tools</h2>
+      <div class="related-search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" id="relatedSearch" placeholder="Search all Troolify tools&hellip;" autocomplete="off" aria-label="Search related tools">
+      </div>
+      <div class="related-grid" id="relatedGrid" aria-busy="true">
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+      </div>
+    </section>
+
+    <section class="comments" aria-label="Comments">
+      <h2>Comments</h2>
+      <div id="comments">
+        <script src="https://utteranc.es/client.js" repo="f9xr/troolify" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async></script>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"><span></span><i class="fa-solid fa-layer-group"></i><span></span></div>
+
+  </div>
+</main>
+
+<script src="../../assets/js/layout.js" defer></script>
+<script src="../../assets/js/tools-data.js" defer></script>
+<script src="../../assets/js/tool-page.js" defer></script>
+<script>
+(function(){
+  "use strict";
+  var f=function(a){ return document.getElementById(a); };
+  var inSex=f("whSex"), inWaist=f("whWaist"), inHip=f("whHip");
+  var lbWaist=document.querySelector('label[for="whWaist"]');
+  var lbHip=document.querySelector('label[for="whHip"]');
+  var out=f("whResults"), proc=f("whProc");
+  var lastText="";
+  function unit(){ return document.querySelector('input[name="whUnit"]:checked').value; }
+  function calc(){
+    var t0=performance.now();
+    var u=unit();
+    lbWaist.textContent="Waist ("+(u==="metric"?"cm":"in")+")";
+    lbHip.textContent="Hips ("+(u==="metric"?"cm":"in")+")";
+    var w=parseFloat(inWaist.value), h=parseFloat(inHip.value);
+    var sex=inSex.value;
+    if(w>0&&h>0){
+      var whr=w/h;
+      var cat;
+      if(sex==="male"){
+        cat= whr<0.90 ? "<b style='color:#6EE7B7'>Low risk</b>" : (whr<1.0 ? "<b style='color:#FCD34D'>Moderate risk</b>" : "<b style='color:#FCA5A5'>High risk</b>");
+      }else{
+        cat= whr<0.80 ? "<b style='color:#6EE7B7'>Low risk</b>" : (whr<0.85 ? "<b style='color:#FCD34D'>Moderate risk</b>" : "<b style='color:#FCA5A5'>High risk</b>");
+      }
+      out.innerHTML=
+        '<div class="result-row hero-row"><span>Waist-to-hip ratio</span><b>'+whr.toFixed(2)+'</b></div>'+
+        '<div class="result-row"><span>Risk category (WHO)</span><span>'+cat+'</span></div>'+
+        '<div class="result-row"><span>Shape</span><b>'+ (whr>=1? "Apple (central)":"Pear (gluteal)") +'</b></div>';
+      lastText="Waist-to-hip ratio: "+whr.toFixed(2)+" ("+cat.replace(/<\/?b[^>]*>/g,"")+")\nCategory: "+cat.replace(/<\/?b[^>]*>/g,"");
+    }else{
+      out.innerHTML='<p style="margin:0;color:var(--faint);font-size:13.5px">Enter waist and hips to calculate your ratio.</p>';
+      lastText="";
+    }
+    proc.textContent="Calculated in "+(performance.now()-t0).toFixed(1)+" ms - inside your browser. 0 bytes uploaded.";
+  }
+  [inWaist,inHip].forEach(function(el){ el.addEventListener("input",calc); });
+  inSex.addEventListener("change",calc);
+  document.querySelectorAll('input[name="whUnit"]').forEach(function(el){ el.addEventListener("change",calc); });
+  function reset(){
+    document.getElementById("whMetric").checked=true;
+    inSex.value="female"; inWaist.value="80"; inHip.value="95";
+    calc();
+  }
+  f("whReset").addEventListener("click",reset);
+  f("whCopy").addEventListener("click",function(){
+    if(!lastText) return;
+    window.Troolify.copyToClipboard(lastText,function(){ proc.textContent="Copied to clipboard - the bytes never left your device."; });
+  });
+  calc();
+})();
+</script>
+</body>
+</html>

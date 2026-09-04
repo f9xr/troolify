@@ -107,21 +107,57 @@
 
   /* ---------------------- Modal wiring ---------------------- */
 
+  /* ---------------------- Modal wiring (a11y: focus in, trap, return) ---------------------- */
+
+  var lastModalTrigger = null;
+
   function openModal(id) {
     var m = document.getElementById(id);
-    if (m) m.classList.add("open");
+    if (!m) return;
+    lastModalTrigger = document.activeElement;
+    m.classList.add("open");
+    m.setAttribute("aria-hidden", "false");
+    var panel = m.querySelector(".modal-panel");
+    if (panel && !panel.hasAttribute("tabindex")) panel.setAttribute("tabindex", "-1");
+    setTimeout(function () { if (panel) panel.focus(); }, 20);
+  }
+
+  function closeModal(m) {
+    if (!m) return;
+    m.classList.remove("open");
+    m.setAttribute("aria-hidden", "true");
+    if (lastModalTrigger && lastModalTrigger.focus) lastModalTrigger.focus();
+  }
+
+  function modalFocusables(m) {
+    var nodes = m.querySelectorAll('a[href], button, input, select, textarea, [tabindex]:not([tabindex="-1"])');
+    return Array.prototype.filter.call(nodes, function (el) {
+      return el.offsetParent !== null && !el.disabled;
+    });
   }
 
   document.querySelectorAll(".modal").forEach(function (m) {
     var backdrop = m.querySelector(".modal-backdrop");
     var closeBtn = m.querySelector(".modal-close");
-    if (backdrop) backdrop.addEventListener("click", function () { m.classList.remove("open"); });
-    if (closeBtn) closeBtn.addEventListener("click", function () { m.classList.remove("open"); });
+    if (backdrop) backdrop.addEventListener("click", function () { closeModal(m); });
+    if (closeBtn) closeBtn.addEventListener("click", function () { closeModal(m); });
   });
 
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") {
-      document.querySelectorAll(".modal.open").forEach(function (m) { m.classList.remove("open"); });
+      var openModals = document.querySelectorAll(".modal.open");
+      if (openModals.length) closeModal(openModals[openModals.length - 1]);
+      return;
+    }
+    if (e.key === "Tab") {
+      var open = document.querySelector(".modal.open");
+      if (!open) return;
+      var f = modalFocusables(open);
+      if (!f.length) { e.preventDefault(); return; }
+      var first = f[0];
+      var last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
     }
   });
 

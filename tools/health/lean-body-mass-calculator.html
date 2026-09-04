@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lean Body Mass Calculator | LBM From Weight and Height</title>
+<meta name="description" content="Calculate your lean body mass using the Boer formula or from a body fat reading. Free lean body mass calculator - 100% client-side and private.">
+<meta name="author" content="F9XR Development Team">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#212529">
+<link rel="canonical" href="https://f9xr.github.io/troolify/tools/health/lean-body-mass-calculator.html">
+<meta property="og:site_name" content="Troolify">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Lean Body Mass Calculator | LBM From Weight and Height">
+<meta property="og:description" content="Find your lean body mass from weight and height, or from a body fat percentage. Free, private and instant.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://f9xr.github.io/troolify/tools/health/lean-body-mass-calculator.html">
+<meta property="og:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-09-05">
+<meta property="article:modified_time" content="2026-09-05">
+<meta property="article:section" content="Health Tools">
+<meta property="article:tag" content="Lean Body Mass Calculator">
+<meta property="article:tag" content="Health Tools">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Lean Body Mass Calculator | LBM From Weight and Height">
+<meta name="twitter:description" content="Lean body mass from weight and height, or from body fat - free, private, in your browser.">
+<meta name="twitter:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://f9xr.github.io/troolify/index.html" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://f9xr.github.io/troolify/tools/index.html" },
+    { "@type": "ListItem", "position": 3, "name": "Health Tools", "item": "https://f9xr.github.io/troolify/tools/health/" },
+    { "@type": "ListItem", "position": 4, "name": "Lean Body Mass Calculator", "item": "https://f9xr.github.io/troolify/tools/health/lean-body-mass-calculator.html" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Lean Body Mass Calculator",
+  "url": "https://f9xr.github.io/troolify/tools/health/lean-body-mass-calculator.html",
+  "applicationCategory": "HealthApplication",
+  "applicationSubCategory": "Body Composition Estimator",
+  "operatingSystem": "Any (web browser)",
+  "featureList": ["Lean mass by Boer formula", "Fat mass calculation", "Optional body-fat input", "Metric or imperial units", "Protein-target tie-in", "100% client-side processing"],
+  "description": "Estimate your lean body mass from height and weight (Boer formula) or from an optional body fat reading. Free, private and 100% client-side.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "datePublished": "2026-09-05",
+  "dateModified": "2026-09-05",
+  "author": { "@type": "Organization", "name": "F9XR Development Team", "url": "https://f9xr.github.io/" },
+  "publisher": { "@type": "Organization", "name": "Troolify", "url": "https://f9xr.github.io/troolify/", "logo": { "@type": "ImageObject", "url": "https://f9xr.github.io/troolify/assets/images/logo_nobg.webp", "width": 1407, "height": 768 } }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is lean body mass?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Lean body mass (LBM) is everything in your body that is not fat - muscle, bone, organs, fluids and skin. It is a better number than total weight for setting protein targets and tracking body-composition changes." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a good lean body mass percentage?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Most healthy adults carry 20-35% body fat (and accordingly 65-80% lean mass). Athletes often lean toward the higher end. The useful skill is tracking your own LBM over time rather than chasing a universal number." }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate is the Boer formula?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Reasonably - within a few percent of DEXA scanning for most people. It is a height-and-weight estimate, so it becomes less reliable at extremes of body fat, where entering an actual body-fat reading improves accuracy." }
+    },
+    {
+      "@type": "Question",
+      "name": "Why should I track LBM instead of weight?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The scale can't tell fat from muscle. During a cut, watching LBM stay flat tells you your muscle is safe while weight falls; during a bulk, it tells you the gain is real tissue, not just fat." }
+    }
+  ]
+}
+</script>
+
+<link rel="icon" type="image/webp" href="../../assets/images/favicon.webp"><link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+<link rel="stylesheet" href="../../assets/css/tailwind.css">
+<link rel="stylesheet" href="../../assets/css/tool.css">
+<link rel="stylesheet" href="../../assets/css/site-shell.css">
+<link rel="stylesheet" href="../../assets/css/tool-page.css">
+<link rel="stylesheet" href="../../assets/css/seo-article.css">
+<style>
+.calc-grid{display:grid;grid-template-columns:1fr;gap:18px}
+@media(min-width:720px){.calc-grid{grid-template-columns:1fr 1fr}}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:12.5px;font-weight:700;color:var(--muted)}
+.field input,.field select{background:#1B2028;border:1px solid var(--border);color:var(--ink);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:15px;font-weight:600;outline:none;width:100%;box-sizing:border-box}
+.field input:focus,.field select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+.seg{display:inline-flex;border:1px solid var(--border);border-radius:10px;overflow:hidden}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg label{padding:9px 16px;font-size:13.5px;font-weight:700;color:var(--muted);cursor:pointer;background:#1B2028;transition:all .15s;margin:0}
+.seg input:checked+label{background:rgba(59,130,246,.18);color:#93C5FD}
+.result-card{background:linear-gradient(180deg,rgba(59,130,246,.12),rgba(59,130,246,.03));border:1px solid rgba(96,165,250,.25);border-radius:14px;padding:18px;margin-top:18px}
+.result-row{display:flex;justify-content:space-between;gap:10px;padding:8px 2px;font-size:14px}
+.result-row+.result-row{border-top:1px dashed rgba(255,255,255,.08)}
+.result-row b{color:#93C5FD;font-weight:800;text-align:right}
+.result-row.hero-row b{color:#6EE7B7}
+</style>
+</head>
+<body data-layout="tool">
+<noscript>
+    <nav aria-label="Primary" style="position:static;display:block;padding:1rem 1.5rem;background:#212529;border-bottom:1px solid #343A40;text-align:center;font-size:0.9rem;">
+        <a href="../../index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Home</a>
+        <a href="../../tools/index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Tools</a>
+        <a href="../../pages/about.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">About</a>
+        <a href="../../pages/contact.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Contact</a>
+    </nav>
+</noscript>
+
+<main class="tool-main">
+  <div class="container">
+
+    <div class="tool-head hero">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="../../tools/index.html">Tools</a></li>
+          <li><a href="../index.html">Health Tools</a></li>
+          <li class="current" aria-current="page">Lean Body Mass Calculator</li>
+        </ol>
+      </nav>
+      <div class="hero-main">
+        <span class="tool-badge"><span class="dot"></span>100% client-side &middot; zero data retention</span>
+        <h1>Lean Body Mass Calculator</h1>
+        <p>Estimate the non-fat part of your body - muscle, bone, organs and fluid - from your height and weight, or sharpen it with an actual body fat reading. No signup, all local.</p>
+      </div>
+      <div class="hero-box hero-cat">
+        <h3 class="hero-box-title"><i class="fa-solid fa-folder-open"></i>Category</h3>
+        <div class="tool-meta">
+          <span class="tool-tag"><i class="fa-solid fa-tag"></i>Body &amp; Shape</span>
+          <a class="tool-cat" href="../index.html" aria-label="Browse Health Tools category"><i class="fa-solid fa-folder"></i>Health Tools</a>
+        </div>
+      </div>
+      <div class="hero-box hero-qa">
+        <h3 class="hero-box-title"><i class="fa-solid fa-bolt"></i>Quick Actions</h3>
+        <div class="tool-actions">
+          <button class="rt-btn" type="button" id="btnShare"><i class="fa-solid fa-share-nodes"></i>Share</button>
+          <button class="rt-btn" type="button" id="btnEmbed"><i class="fa-solid fa-code"></i>Embed Tool</button>
+          <a class="rt-btn" href="../../pages/feedback.html"><i class="fa-solid fa-comment"></i>Feedback</a>
+        </div>
+      </div>
+      <div class="hero-box hero-details">
+        <h3 class="hero-box-title"><i class="fa-solid fa-circle-info"></i>Tool Details</h3>
+        <div class="tool-details">
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.github.io/" target="_blank" rel="noopener">F9XR Development Team</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-check-double"></i>Reviewed by</span><a class="detail-value" href="../../press/editorial-policies.html">Review Board</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-clock-rotate-left"></i>Last updated</span><span class="detail-value">5 September 2026</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel clean">
+      <div class="panel-inner">
+        <div class="toolbar-row">
+          <span class="tool-label"><i class="fa-solid fa-dumbbell" aria-hidden="true"></i>Lean Body Mass</span>
+          <div class="toolbar-actions">
+            <button class="chip-btn" type="button" id="lbReset" title="Clear inputs and start over"><i class="fa-solid fa-rotate-left"></i><span class="hide-sm">Reset</span></button>
+          </div>
+        </div>
+
+        <div class="calc-grid">
+          <div class="field" style="grid-column:1/-1">
+            <label>Units</label>
+            <div class="seg" role="radiogroup" aria-label="Units">
+              <input type="radio" name="lbUnit" id="lbMetric" value="metric" checked><label for="lbMetric">Metric (kg / cm)</label>
+              <input type="radio" name="lbUnit" id="lbImperial" value="imperial"><label for="lbImperial">Imperial (lb / in)</label>
+            </div>
+          </div>
+          <div class="field"><label for="lbSex">Sex</label>
+            <select id="lbSex">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+          <div class="field"><label for="lbHeight">Height (cm)</label><input id="lbHeight" type="number" inputmode="decimal" min="0" step="any" value="175"></div>
+          <div class="field"><label for="lbWeight">Weight (kg)</label><input id="lbWeight" type="number" inputmode="decimal" min="0" step="any" value="80"></div>
+          <div class="field"><label for="lbBf">Body fat % (optional)</label><input id="lbBf" type="number" inputmode="decimal" min="0" max="70" step="any" placeholder="e.g. 20" aria-describedby="lbBfHint"></div>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn-primary" type="button" id="lbCopy"><i class="fa-solid fa-copy"></i>Copy result</button>
+        </div>
+
+        <div class="result-card" id="lbResults" aria-live="polite"></div>
+        <p class="proc-line" id="lbBfHint" style="margin-top:8px"><i class="fa-solid fa-bolt"></i><span id="lbProc">Ready - calculations happen in this tab.</span></p>
+      </div>
+    </div>
+
+    <aside class="disclaimer" aria-label="Disclaimer">
+      <i class="fa-solid fa-circle-info"></i>
+      <p>Disclaimer: Lean body mass estimates are directional, not diagnostic. Scan-based methods are the reference standard; home formulas approximate them. This tool does not replace professional nutrition or medical guidance. <a href="../../press/disclaimer.html">Full disclaimer</a>.</p>
+    </aside>
+
+    <div class="article-layout">
+      <article class="seo-article">
+        <h2 id="article-title">Lean Body Mass: Watch the Signal Under the Noise</h2>
+        <p>Your scale reports everything - water, muscle, bone, food in transit. Lean body mass filters out the fat, leaving a number that actually responds to training and diet. This tool finds yours from height and weight, then sharpens the estimate if you know your body fat.</p>
+
+        <h2 id="what-is-lbm">What LBM Includes</h2>
+        <p>Lean body mass is literally non-fat body weight: skeletal muscle, bone, organs, fluid, connective tissue and skin. It's why two people at the same weight can look completely different - the mix of lean versus fat is what your eye sees.</p>
+
+        <h2 id="boer">The Boer Formula</h2>
+        <p>For men, Boer predicts LBM = 0.407 x weight (kg) + 0.267 x height (cm) - 19.2. For women: 0.252 x weight + 0.473 x height - 48.3. It lands within a few percent of a DEXA scan for most people and needs nothing but a tape measure and scale.</p>
+
+        <h2 id="why-track">Why Track LBM Instead of Weight</h2>
+        <ul>
+          <li><strong>Cutting</strong> - if LBM holds steady while weight falls, your muscle is safe.</li>
+          <li><strong>Bulk cycles</strong> - rising LBM means real tissue, not just fat.</li>
+          <li><strong>Protein goals</strong> - LBM is a more precise base than total weight for your <a href="protein-intake-calculator.html">protein target</a>.</li>
+        </ul>
+        <p>Pair it with the <a href="body-fat-percentage-calculator.html">body fat percentage calculator</a> to get both sides of the equation in one sitting, and run the <a href="macro-calculator.html">macros</a> off the result.</p>
+
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+
+        <details class="faq-item">
+          <summary>What is lean body mass?</summary>
+          <div class="faq-a">
+            <p>Everything in your body that isn't fat - muscle, bone, organs, fluids and skin. It's a better basis than total weight for protein targets and tracking composition changes.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>What is a good lean body mass percentage?</summary>
+          <div class="faq-a">
+            <p>Most healthy adults are 65-80% lean (20-35% body fat); athletes run higher. Track your own LBM over time instead of chasing a universal number.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>How accurate is the Boer formula?</summary>
+          <div class="faq-a">
+            <p>Within a few percent of DEXA for most people. As a height-and-weight estimate it is less reliable at body-fat extremes, where entering a real reading improves accuracy.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Why should I track LBM instead of weight?</summary>
+          <div class="faq-a">
+            <p>The scale can't separate fat from muscle. Flat LBM during a cut means your muscle is safe; rising LBM during a bulk means real gain.</p>
+          </div>
+        </details>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>Stop optimizing the number on the scale and start tracking the tissue that does the work. A monthly Boer reading - taken at the same time of day - is a free body-composition upgrade.</p>
+      </article>
+    </div>
+
+    <section class="keyword-box" aria-label="Keywords and tags">
+      <h2>Keyword &amp; Tags</h2>
+      <h3>Keywords</h3>
+      <div class="keywords">
+        <span class="keyword">lean body mass calculator</span>
+        <span class="keyword">LBM calculator</span>
+        <span class="keyword">lean mass</span>
+        <span class="keyword">Boer formula</span>
+        <span class="keyword">muscle mass calculator</span>
+        <span class="keyword">body composition</span>
+        <span class="keyword">fat free mass</span>
+        <span class="keyword">lean muscle</span>
+        <span class="keyword">body fat and lean mass</span>
+        <span class="keyword">muscle tracking</span>
+      </div>
+      <h3>Tags</h3>
+      <div class="tags">
+        <a class="tag" href="../index.html"><i class="fa-solid fa-tag"></i>Body &amp; Shape</a>
+        <a class="tag" href="../index.html"><i class="fa-solid fa-folder"></i>Health Tools</a>
+        <a class="tag" href="../../tools/index.html"><i class="fa-solid fa-cube"></i>Body</a>
+      </div>
+    </section>
+
+    <section class="author-box" aria-label="About the publisher">
+      <div class="author-avatar" aria-hidden="true"><img src="../../assets/images/logo_nobg.webp" alt="F9XR logo" loading="lazy" decoding="async" width="1407" height="768"></div>
+      <div>
+        <span class="author-role">Published by</span>
+        <h2>F9XR Development Team</h2>
+        <p>Every Troolify tool is built and reviewed by the F9XR Development Team, then checked by our Review Board for correctness, accessibility, and clarity. Tools run 100% client-side with zero data retention.</p>
+        <div class="author-links">
+          <a href="https://f9xr.github.io/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i>F9XR Team</a>
+          <a href="../../press/editorial-policies.html"><i class="fa-solid fa-scale-balanced"></i>Editorial Policies</a>
+          <a href="https://github.com/f9xr" target="_blank" rel="noopener" aria-label="F9XR on GitHub"><i class="fa-brands fa-github"></i>GitHub</a>
+          <a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on LinkedIn"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+          <a href="https://instagram.com/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on Instagram"><i class="fa-brands fa-instagram"></i>Instagram</a>
+          <a href="https://youtube.com/@QuarterlyLIV" target="_blank" rel="noopener" aria-label="F9XR on YouTube"><i class="fa-brands fa-youtube"></i>YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-tools" aria-label="Related tools">
+      <h2>Related Tools</h2>
+      <div class="related-search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" id="relatedSearch" placeholder="Search all Troolify tools&hellip;" autocomplete="off" aria-label="Search related tools">
+      </div>
+      <div class="related-grid" id="relatedGrid" aria-busy="true">
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+      </div>
+    </section>
+
+    <section class="comments" aria-label="Comments">
+      <h2>Comments</h2>
+      <div id="comments">
+        <script src="https://utteranc.es/client.js" repo="f9xr/troolify" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async></script>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"><span></span><i class="fa-solid fa-layer-group"></i><span></span></div>
+
+  </div>
+</main>
+
+<script src="../../assets/js/layout.js" defer></script>
+<script src="../../assets/js/tools-data.js" defer></script>
+<script src="../../assets/js/tool-page.js" defer></script>
+<script>
+(function(){
+  "use strict";
+  var f=function(a){ return document.getElementById(a); };
+  var inSex=f("lbSex"), inHeight=f("lbHeight"), inWeight=f("lbWeight"), inBf=f("lbBf");
+  var lbHeight=document.querySelector('label[for="lbHeight"]');
+  var lbWeight=document.querySelector('label[for="lbWeight"]');
+  var out=f("lbResults"), proc=f("lbProc");
+  var lastText="";
+  function unit(){ return document.querySelector('input[name="lbUnit"]:checked').value; }
+  function calc(){
+    var t0=performance.now();
+    var u=unit();
+    lbHeight.textContent="Height ("+(u==="metric"?"cm":"in")+")";
+    lbWeight.textContent="Weight ("+(u==="metric"?"kg":"lb")+")";
+    var h=parseFloat(inHeight.value), w=parseFloat(inWeight.value);
+    var kg=w, cm=h;
+    if(u==="imperial"){ kg=w*0.45359237; cm=h*2.54; }
+    var bf=parseFloat(inBf.value);
+    if(kg>0&&cm>0){
+      var lbm;
+      var method;
+      if(isFinite(bf)&&bf>0&&bf<70){
+        lbm=kg*(1-bf/100);
+        method="from your body fat reading";
+      }else{
+        if(inSex.value==="female"){ lbm=0.252*kg+0.473*cm-48.3; }
+        else { lbm=0.407*kg+0.267*cm-19.2; }
+        method="Boer formula";
+      }
+      lbm=Math.max(lbm,0);
+      var fat=kg-lbm;
+      var pct=lbm/kg*100;
+      out.innerHTML=
+        '<div class="result-row hero-row"><span>Lean body mass</span><b>'+(u==="imperial"?Math.round(lbm*2.20462262)+" lb":Math.round(lbm)+" kg")+'</b></div>'+
+        '<div class="result-row"><span>Lean mass %</span><b>'+Math.round(pct)+'%</b></div>'+
+        '<div class="result-row"><span>Fat mass ('+method+')</span><b>'+(u==="imperial"?Math.round(fat*2.20462262)+" lb":Math.round(fat)+" kg")+'</b></div>';
+      lastText="Lean body mass: "+(u==="imperial"?Math.round(lbm*2.20462262)+" lb":Math.round(lbm)+" kg")+" ("+Math.round(pct)+"% lean, "+method+")\nFat mass: "+(u==="imperial"?Math.round(fat*2.20462262)+" lb":Math.round(fat)+" kg");
+    }else{
+      out.innerHTML='<p style="margin:0;color:var(--faint);font-size:13.5px">Enter height and weight to estimate lean body mass.</p>';
+      lastText="";
+    }
+    proc.textContent="Calculated in "+(performance.now()-t0).toFixed(1)+" ms - inside your browser. 0 bytes uploaded.";
+  }
+  [inHeight,inWeight,inBf].forEach(function(el){ el.addEventListener("input",calc); });
+  inSex.addEventListener("change",calc);
+  document.querySelectorAll('input[name="lbUnit"]').forEach(function(el){ el.addEventListener("change",calc); });
+  function reset(){
+    document.getElementById("lbMetric").checked=true;
+    inSex.value="male"; inHeight.value="175"; inWeight.value="80"; inBf.value="";
+    calc();
+  }
+  f("lbReset").addEventListener("click",reset);
+  f("lbCopy").addEventListener("click",function(){
+    if(!lastText) return;
+    window.Troolify.copyToClipboard(lastText,function(){ proc.textContent="Copied to clipboard - the bytes never left your device."; });
+  });
+  calc();
+})();
+</script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -93,7 +93,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
 <link rel="stylesheet" href="../../assets/css/tailwind.css">
 <link rel="stylesheet" href="../../assets/css/tool.css">
 <link rel="stylesheet" href="../../assets/css/site-shell.css">
@@ -225,7 +226,7 @@
 
         <h2 id="how-it-works">How the Converter Cleans Text</h2>
         <ol>
-          <li><strong>Accent folding</strong> - café and São become cafe and Sao using Unicode normalization.</li>
+          <li><strong>Accent folding</strong> - cafÃ© and SÃ£o become cafe and Sao using Unicode normalization.</li>
           <li><strong>Lowercasing</strong> - every letter becomes lowercase (toggleable).</li>
           <li><strong>Punctuation stripping</strong> - commas, apostrophes, exclamation marks and symbols are removed.</li>
           <li><strong>Joining</strong> - remaining words are joined with hyphens (or underscores).</li>

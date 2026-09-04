@@ -40,6 +40,26 @@
         ? TOOLS.filter(function (t) { return t.category === category; })
         : TOOLS.slice();
 
+    /* ItemList structured data for category pages - keeps the schema in sync
+       automatically as tools are added to the registry. */
+    if (isCategoryPage && !document.querySelector('script[data-catalog-itemlist]')) {
+        var itemList = {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": catName(category),
+            "url": window.location.origin + prefix + "tools/" + category.toLowerCase() + "/index.html",
+            "numberOfItems": scoped.length,
+            "itemListElement": scoped.map(function (t, i) {
+                return { "@type": "ListItem", "position": i + 1, "name": t.name, "url": window.location.origin + prefix + t.href };
+            })
+        };
+        var itemListScript = document.createElement("script");
+        itemListScript.type = "application/ld+json";
+        itemListScript.setAttribute("data-catalog-itemlist", "");
+        itemListScript.text = JSON.stringify(itemList);
+        document.head.appendChild(itemListScript);
+    }
+
     /* Filter pills:
        catalog page  -> categories (matches the folder structure)
        category page -> tags used inside that category            */

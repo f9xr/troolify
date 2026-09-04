@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -93,7 +93,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
 <link rel="stylesheet" href="../../assets/css/tailwind.css">
 <link rel="stylesheet" href="../../assets/css/tool.css">
 <link rel="stylesheet" href="../../assets/css/site-shell.css">
@@ -238,6 +239,7 @@
         <h2 id="why-it-matters">Making the Numbers Work Day to Day</h2>
         <p>Pair the target with volume-based tracking rather than weighing food to the gram - most people stay consistent when the plan feels flexible. Check your weight trend weekly rather than daily, and adjust by 100-200 calories if the scale stalls for more than two weeks.</p>
         <p>For the full picture, combine this tool with the <a href="ideal-weight-calculator.html">Ideal Weight Calculator</a> (to set a realistic endpoint) and the <a href="water-intake-calculator.html">Water Intake Calculator</a> (to stay hydrated while changing your intake). You can also verify your body category with the <a href="bmi-calculator.html">BMI Calculator</a>.</p>
+        <p>Once your calorie target is set, split it into protein, fat and carbs with the <a href="macro-calculator.html">Macro Calculator</a>, and credit your daily movement with the <a href="steps-to-calories-calculator.html">Steps to Calories Calculator</a>.</p>
 
         <h2 id="faq-title">Frequently Asked Questions</h2>
 
@@ -351,16 +353,21 @@
     var a=parseFloat(age.value)||0, h=parseFloat(height.value)||0, w=parseFloat(weight.value)||0;
     var male=(sex.value==="male");
     var mult=parseFloat(act.value)||1.375;
-    if(a>0&&h>0&&w>0){
+if(a>0&&h>0&&w>0){
       var b=10*w+6.25*h-5*a+(male?5:-161);
       var maint=b*mult;
+      var floor=1200;
+      var d500=maint-500, d750=maint-750;
+      var warn500=d500<floor, warn750=d750<floor;
+      d500=Math.max(d500,floor); d750=Math.max(d750,floor);
       out.innerHTML=
         '<div class="result-row hero-row"><span>Maintenance calories</span><b>'+fmt(maint)+' kcal/day</b></div>'+
         '<div class="result-row"><span>Basal metabolic rate (BMR)</span><b>'+fmt(b)+' kcal/day</b></div>'+
-        '<div class="result-row"><span>Weight loss (500 kcal deficit)</span><b>'+fmt(maint-500)+' kcal/day</b></div>'+
-        '<div class="result-row"><span>Weight loss (750 kcal deficit)</span><b>'+fmt(maint-750)+' kcal/day</b></div>'+
-        '<div class="result-row"><span>Weight gain (500 kcal surplus)</span><b>'+fmt(maint+500)+' kcal/day</b></div>';
-      lastText="Maintenance calories: "+fmt(maint)+" kcal/day\nBMR (Mifflin-St Jeor): "+fmt(b)+" kcal/day\nWeight loss (-500): "+fmt(maint-500)+" kcal/day\nWeight loss (-750): "+fmt(maint-750)+" kcal/day\nWeight gain (+500): "+fmt(maint+500)+" kcal/day";
+        '<div class="result-row"><span>Weight loss (500 kcal deficit)</span><b>'+fmt(d500)+' kcal/day'+(warn500?' *':'')+'</b></div>'+
+        '<div class="result-row"><span>Weight loss (750 kcal deficit)</span><b>'+fmt(d750)+' kcal/day'+(warn750?' *':'')+'</b></div>'+
+        '<div class="result-row"><span>Weight gain (500 kcal surplus)</span><b>'+fmt(maint+500)+' kcal/day</b></div>'+
+        ((warn500||warn750)?'<p class="cal-note">* Capped at 1,200 kcal/day - intakes below this need medical supervision and should not be attempted on your own.</p>':'');
+      lastText="Maintenance calories: "+fmt(maint)+" kcal/day\nBMR (Mifflin-St Jeor): "+fmt(b)+" kcal/day\nWeight loss (-500): "+fmt(d500)+" kcal/day"+ (warn500?" (capped at "+floor+")":"")+"\nWeight loss (-750): "+fmt(d750)+" kcal/day"+ (warn750?" (capped at "+floor+")":"")+"\nWeight gain (+500): "+fmt(maint+500)+" kcal/day";
     }else{
       out.innerHTML='<p style="margin:0;color:var(--faint);font-size:13.5px">Enter your age, height and weight to see results.</p>';
       lastText="";

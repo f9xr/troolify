@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSV to JSON Converter | Free Online Tool</title>
+<meta name="description" content="Free online CSV to JSON converter - paste CSV with any delimiter, get clean JSON with headers as keys. 100% client-side, no uploads, zero data retention.">
+<meta name="author" content="F9XR Development Team">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#212529">
+<link rel="canonical" href="https://f9xr.github.io/troolify/tools/coding/csv-to-json-converter.html">
+<meta property="og:site_name" content="Troolify">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="CSV to JSON Converter | Free Online Tool">
+<meta property="og:description" content="Convert CSV to JSON instantly with flexible delimiters and header detection. Free, private and 100% client-side.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://f9xr.github.io/troolify/tools/coding/csv-to-json-converter.html">
+<meta property="og:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-09-05">
+<meta property="article:modified_time" content="2026-09-05">
+<meta property="article:section" content="Developer Tools">
+<meta property="article:tag" content="CSV to JSON">
+<meta property="article:tag" content="Developer Tools">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CSV to JSON Converter | Free Online Tool">
+<meta name="twitter:description" content="Convert CSV to JSON instantly - 100% browser based, zero data retention.">
+<meta name="twitter:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://f9xr.github.io/troolify/index.html" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://f9xr.github.io/troolify/tools/index.html" },
+    { "@type": "ListItem", "position": 3, "name": "Developer Tools", "item": "https://f9xr.github.io/troolify/tools/coding/" },
+    { "@type": "ListItem", "position": 4, "name": "CSV to JSON Converter", "item": "https://f9xr.github.io/troolify/tools/coding/csv-to-json-converter.html" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "CSV to JSON Converter",
+  "url": "https://f9xr.github.io/troolify/tools/coding/csv-to-json-converter.html",
+  "applicationCategory": "DeveloperApplication",
+  "applicationSubCategory": "Data Format Converter",
+  "operatingSystem": "Any (web browser)",
+  "featureList": ["Custom delimiters (comma, semicolon, tab, pipe)", "Header-row detection with object keys", "Pretty or minified JSON output", "Handles quoted fields with embedded commas", "100% client-side processing"],
+  "description": "Paste CSV and get clean JSON instantly. Supports custom delimiters and header rows, converts entirely in your browser with zero uploads.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "datePublished": "2026-09-05",
+  "dateModified": "2026-09-05",
+  "author": { "@type": "Organization", "name": "F9XR Development Team", "url": "https://f9xr.github.io/" },
+  "publisher": { "@type": "Organization", "name": "Troolify", "url": "https://f9xr.github.io/troolify/", "logo": { "@type": "ImageObject", "url": "https://f9xr.github.io/troolify/assets/images/logo_nobg.webp", "width": 1407, "height": 768 } }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does CSV to JSON conversion work?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The tool splits your CSV into rows and columns, then maps them into JSON. With header detection on, the first row becomes object keys; with it off, you get an array of arrays. Quoted fields that contain the delimiter or line breaks are handled correctly." }
+    },
+    {
+      "@type": "Question",
+      "name": "Which delimiters are supported?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Comma (standard CSV), semicolon (common in European Excel exports), tab (TSV) and pipe. Choose the matching delimiter from the drop-down before converting." }
+    },
+    {
+      "@type": "Question",
+      "name": "Will my data be uploaded to a server?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Never. The conversion runs entirely inside your browser tab. Your data is not uploaded, stored or transmitted anywhere." }
+    },
+    {
+      "@type": "Question",
+      "name": "What if my CSV has duplicate or empty column headers?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Duplicate header names are made unique by appending _2, _3 and so on, and empty headers fall back to column_1, column_2. No data is lost during conversion." }
+    }
+  ]
+}
+</script>
+
+<link rel="icon" type="image/webp" href="../../assets/images/favicon.webp"><link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+<link rel="stylesheet" href="../../assets/css/tailwind.css">
+<link rel="stylesheet" href="../../assets/css/tool.css">
+<link rel="stylesheet" href="../../assets/css/site-shell.css">
+<link rel="stylesheet" href="../../assets/css/tool-page.css">
+<link rel="stylesheet" href="../../assets/css/seo-article.css">
+<style>
+.calc-grid{display:grid;grid-template-columns:1fr;gap:18px}
+@media(min-width:720px){.calc-grid.three{grid-template-columns:1fr 1fr 1fr}}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:12.5px;font-weight:700;color:var(--muted)}
+.field select{background:#1B2028;border:1px solid var(--border);color:var(--ink);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:15px;font-weight:600;outline:none;width:100%;box-sizing:border-box}
+.field select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+.field .check{display:flex;align-items:center;gap:8px}
+.field .check input{width:auto}
+.json-output{font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace;word-break:break-word;white-space:pre-wrap}
+</style>
+</head>
+<body data-layout="tool">
+<noscript>
+    <nav aria-label="Primary" style="position:static;display:block;padding:1rem 1.5rem;background:#212529;border-bottom:1px solid #343A40;text-align:center;font-size:0.9rem;">
+        <a href="../../index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Home</a>
+        <a href="../../tools/index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Tools</a>
+        <a href="../../pages/about.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">About</a>
+        <a href="../../pages/contact.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Contact</a>
+    </nav>
+</noscript>
+
+<main class="tool-main">
+  <div class="container">
+
+    <div class="tool-head hero">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="../../tools/index.html">Tools</a></li>
+          <li><a href="../index.html">Developer Tools</a></li>
+          <li class="current" aria-current="page">CSV to JSON Converter</li>
+        </ol>
+      </nav>
+      <div class="hero-main">
+        <span class="tool-badge"><span class="dot"></span>100% client-side &middot; zero data retention</span>
+        <h1>CSV to JSON Converter</h1>
+        <p>Turn any CSV into clean, structured JSON in one click. Choose your delimiter, decide whether the first row holds column names, and copy the result - all processed locally in your browser.</p>
+      </div>
+      <div class="hero-box hero-cat">
+        <h3 class="hero-box-title"><i class="fa-solid fa-folder-open"></i>Category</h3>
+        <div class="tool-meta">
+          <span class="tool-tag"><i class="fa-solid fa-tag"></i>Converter</span>
+          <a class="tool-cat" href="../index.html" aria-label="Browse Developer Tools category"><i class="fa-solid fa-folder"></i>Developer Tools</a>
+        </div>
+      </div>
+      <div class="hero-box hero-qa">
+        <h3 class="hero-box-title"><i class="fa-solid fa-bolt"></i>Quick Actions</h3>
+        <div class="tool-actions">
+          <button class="rt-btn" type="button" id="btnShare"><i class="fa-solid fa-share-nodes"></i>Share</button>
+          <button class="rt-btn" type="button" id="btnEmbed"><i class="fa-solid fa-code"></i>Embed Tool</button>
+          <a class="rt-btn" href="../../pages/feedback.html"><i class="fa-solid fa-comment"></i>Feedback</a>
+        </div>
+      </div>
+      <div class="hero-box hero-details">
+        <h3 class="hero-box-title"><i class="fa-solid fa-circle-info"></i>Tool Details</h3>
+        <div class="tool-details">
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.github.io/" target="_blank" rel="noopener">F9XR Development Team</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-check-double"></i>Reviewed by</span><a class="detail-value" href="../../press/editorial-policies.html">Review Board</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-clock-rotate-left"></i>Last updated</span><span class="detail-value">5 September 2026</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel clean">
+      <div class="panel-inner">
+        <div class="toolbar-row">
+          <span class="tool-label"><i class="fa-solid fa-table"></i>CSV Input</span>
+          <div class="toolbar-actions">
+            <button class="chip-btn" type="button" id="c2jSample" title="Load a sample value"><i class="fa-solid fa-wand-magic-sparkles"></i><span class="hide-sm">Sample</span></button>
+            <button class="chip-btn" type="button" id="c2jClear" title="Clear the input"><i class="fa-solid fa-eraser"></i><span class="hide-sm">Clear</span></button>
+          </div>
+        </div>
+
+        <textarea id="c2jInput" spellcheck="false" aria-label="CSV input" placeholder="Paste CSV here, e.g.&#10;name,department,salary&#10;Alex,Engineering,72000&#10;Rhea,Design,64000"></textarea>
+
+        <div class="calc-grid three" style="margin-top:14px">
+          <div class="field"><label for="c2jDelim">Delimiter</label>
+            <select id="c2jDelim">
+              <option value="," selected>Comma (,)</option>
+              <option value=";">Semicolon (;)</option>
+              <option value="&#9;">Tab</option>
+              <option value="|">Pipe (|)</option>
+            </select>
+          </div>
+          <div class="field"><label for="c2jHeader">First row is header</label>
+            <input id="c2jHeader" type="checkbox" checked>
+          </div>
+          <div class="field"><label for="c2jFormat">JSON format</label>
+            <select id="c2jFormat">
+              <option value="pretty" selected>Pretty (indented)</option>
+              <option value="min">Minified</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn-primary" type="button" id="c2jConvert"><i class="fa-solid fa-arrow-right-arrow-left"></i>Convert to JSON</button>
+          <button class="btn btn-secondary" type="button" id="c2jCopy"><i class="fa-solid fa-copy"></i>Copy result</button>
+        </div>
+
+        <div class="output json-output" id="c2jOut" aria-live="polite"></div>
+        <div class="status" id="c2jStatus"></div>
+        <p class="proc-line"><i class="fa-solid fa-bolt"></i><span id="c2jProc">Ready - conversion happens in this tab.</span></p>
+      </div>
+    </div>
+
+    <aside class="disclaimer" aria-label="Disclaimer">
+      <i class="fa-solid fa-circle-info"></i>
+      <p>Disclaimer: Whilst every effort has been made in building our tools, we are not to be held liable for any damages or monetary losses arising out of or in connection with their use. <a href="../../press/disclaimer.html">Full disclaimer</a>.</p>
+    </aside>
+
+    <div class="article-layout">
+      <article class="seo-article">
+        <h2 id="article-title">CSV to JSON Converter: Move From Tables to Objects</h2>
+        <p>Spreadsheets export CSV, but APIs and JavaScript consume JSON. This free converter bridges the two formats in a single step, handling quoted fields, embedded commas and a choice of delimiters - so a messy export becomes clean, structured data without any programming.</p>
+
+        <h2 id="how-it-works">How the Conversion Works</h2>
+        <p>The tool reads your CSV row by row and splits each line on the delimiter you choose, respecting double-quoted fields that may themselves contain the delimiter or line breaks. With header detection enabled, the first row becomes the object keys and every following row becomes one JSON object. With it disabled, the output is a plain array of arrays.</p>
+
+        <h2 id="how-to-use">How to Use</h2>
+        <ol>
+          <li><strong>Paste your CSV</strong> into the input box.</li>
+          <li><strong>Pick the delimiter</strong> - comma for standard CSV, semicolon for European Excel exports, tab for TSV, or pipe.</li>
+          <li><strong>Decide on the header row</strong> and choose pretty or minified output.</li>
+          <li><strong>Click Convert</strong> and copy the JSON into your project.</li>
+        </ol>
+
+        <h2 id="clean-keys">Clean, Predictable Keys</h2>
+        <p>Real-world CSV files have messy headers. Empty column names fall back to <code>column_1</code>, <code>column_2</code> and so on, and duplicates are made unique with a trailing <code>_2</code>, <code>_3</code>. Every cell is preserved as text, so leading zeros and full IDs survive untouched.</p>
+        <p>Next stop for your data? Pretty-print or re-shape it with the <a href="json-formatter.html">JSON Formatter</a>, or generate fresh identifiers for imported records with the <a href="uuid-generator.html">UUID Generator</a>.</p>
+
+        <h2 id="privacy">Private by Design</h2>
+        <p>A CSV often contains customer names, salaries or inventory - exactly the data you do not want travelling to a server. Because conversion runs entirely in your browser, your file is processed locally and never uploaded. Close the tab and it is gone.</p>
+
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+
+        <details class="faq-item">
+          <summary>How does CSV to JSON conversion work?</summary>
+          <div class="faq-a">
+            <p>The tool splits your CSV into rows and columns and maps them into JSON. With header detection on, the first row becomes object keys; with it off you get an array of arrays. Quoted fields that contain the delimiter or line breaks are handled correctly.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Which delimiters are supported?</summary>
+          <div class="faq-a">
+            <p>Comma (standard CSV), semicolon (common in European Excel exports), tab (TSV) and pipe. Select the matching delimiter before converting.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Will my data be uploaded to a server?</summary>
+          <div class="faq-a">
+            <p>Never. The conversion runs entirely inside your browser tab - your data is not uploaded, stored or transmitted anywhere.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>What if my CSV has duplicate or empty column headers?</summary>
+          <div class="faq-a">
+            <p>Duplicate headers are made unique by appending _2, _3 and so on, and empty headers fall back to column_1, column_2. No data is lost.</p>
+          </div>
+        </details>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>Whether you are seeding a database, building a config file, or handing a spreadsheet to an API, this converter turns copy-paste into production-ready JSON in seconds - privately, and without leaving your browser.</p>
+      </article>
+    </div>
+
+    <section class="keyword-box" aria-label="Keywords and tags">
+      <h2>Keyword &amp; Tags</h2>
+      <h3>Keywords</h3>
+      <div class="keywords">
+        <span class="keyword">csv to json</span>
+        <span class="keyword">csv converter</span>
+        <span class="keyword">json converter</span>
+        <span class="keyword">csv to json online</span>
+        <span class="keyword">excel to json</span>
+        <span class="keyword">tsv to json</span>
+        <span class="keyword">data conversion</span>
+        <span class="keyword">csv parser</span>
+        <span class="keyword">developer tool</span>
+        <span class="keyword">spreadsheet to json</span>
+      </div>
+      <h3>Tags</h3>
+      <div class="tags">
+        <a class="tag" href="../index.html"><i class="fa-solid fa-tag"></i>Converter</a>
+        <a class="tag" href="../index.html"><i class="fa-solid fa-folder"></i>Developer Tools</a>
+        <a class="tag" href="../../tools/index.html"><i class="fa-solid fa-cube"></i>Coding</a>
+      </div>
+    </section>
+
+    <section class="author-box" aria-label="About the publisher">
+      <div class="author-avatar" aria-hidden="true"><img src="../../assets/images/logo_nobg.webp" alt="F9XR logo" loading="lazy" decoding="async" width="1407" height="768"></div>
+      <div>
+        <span class="author-role">Published by</span>
+        <h2>F9XR Development Team</h2>
+        <p>Every Troolify tool is built and reviewed by the F9XR Development Team, then checked by our Review Board for correctness, accessibility, and clarity. Tools run 100% client-side with zero data retention.</p>
+        <div class="author-links">
+          <a href="https://f9xr.github.io/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i>F9XR Team</a>
+          <a href="../../press/editorial-policies.html"><i class="fa-solid fa-scale-balanced"></i>Editorial Policies</a>
+          <a href="https://github.com/f9xr" target="_blank" rel="noopener" aria-label="F9XR on GitHub"><i class="fa-brands fa-github"></i>GitHub</a>
+          <a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on LinkedIn"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+          <a href="https://instagram.com/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on Instagram"><i class="fa-brands fa-instagram"></i>Instagram</a>
+          <a href="https://youtube.com/@QuarterlyLIV" target="_blank" rel="noopener" aria-label="F9XR on YouTube"><i class="fa-brands fa-youtube"></i>YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-tools" aria-label="Related tools">
+      <h2>Related Tools</h2>
+      <div class="related-search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" id="relatedSearch" placeholder="Search all Troolify tools&hellip;" autocomplete="off" aria-label="Search related tools">
+      </div>
+      <div class="related-grid" id="relatedGrid" aria-busy="true">
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+      </div>
+    </section>
+
+    <section class="comments" aria-label="Comments">
+      <h2>Comments</h2>
+      <div id="comments">
+        <script src="https://utteranc.es/client.js" repo="f9xr/troolify" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async></script>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"><span></span><i class="fa-solid fa-layer-group"></i><span></span></div>
+
+  </div>
+</main>
+
+<script src="../../assets/js/layout.js" defer></script>
+<script src="../../assets/js/tools-data.js" defer></script>
+<script src="../../assets/js/tool-page.js" defer></script>
+<script>
+(function(){
+  "use strict";
+  var input = document.getElementById("c2jInput");
+  var delim = document.getElementById("c2jDelim");
+  var header = document.getElementById("c2jHeader");
+  var format = document.getElementById("c2jFormat");
+  var out = document.getElementById("c2jOut");
+  var statusEl = document.getElementById("c2jStatus");
+  var proc = document.getElementById("c2jProc");
+  var btnConvert = document.getElementById("c2jConvert");
+  var btnCopy = document.getElementById("c2jCopy");
+  var last = "";
+
+  function parseCSV(text, d){
+    var rows = [], row = [], field = "", inQ = false;
+    var chr;
+    for (var i = 0; i < text.length; i++) {
+      chr = text[i];
+      if (inQ) {
+        if (chr === '"') {
+          if (text[i + 1] === '"') { field += '"'; i++; }
+          else inQ = false;
+        } else field += chr;
+      } else {
+        if (chr === '"') inQ = true;
+        else if (chr === d) { row.push(field); field = ""; }
+        else if (chr === "\n" || chr === "\r") {
+          if (chr === "\r" && text[i + 1] === "\n") i++;
+          row.push(field); field = "";
+          rows.push(row); row = [];
+        } else field += chr;
+      }
+    }
+    if (field.length || row.length) { row.push(field); rows.push(row); }
+    return rows;
+  }
+
+  function buildKeys(headers){
+    var keys = [], seen = {};
+    for (var i = 0; i < headers.length; i++) {
+      var base = (headers[i] || "").trim() || ("column_" + (i + 1));
+      var key = base, n = 2;
+      while (seen[key]) key = base + "_" + (n++);
+      seen[key] = 1;
+      keys.push(key);
+    }
+    return keys;
+  }
+
+  function convert(){
+    var text = input.value;
+    statusEl.textContent = "";
+    statusEl.className = "status";
+    out.classList.remove("visible");
+    out.textContent = "";
+    if (!text.trim()) {
+      proc.textContent = "Paste some CSV to convert.";
+      return;
+    }
+    var rows = parseCSV(text, delim.options[delim.selectedIndex].value);
+    if (rows.length === 0) {
+      statusEl.textContent = "No rows detected - check the delimiter.";
+      statusEl.className = "status error";
+      proc.textContent = "Nothing was uploaded - the parse happened locally.";
+      return;
+    }
+    var json;
+    if (header.checked) {
+      var keys = buildKeys(rows[0]);
+      json = rows.slice(1).map(function (r) {
+        var obj = {};
+        for (var i = 0; i < keys.length; i++) obj[keys[i]] = (r[i] === undefined ? "" : r[i].trim());
+        return obj;
+      });
+      if (json.length === 0) json = [];
+    } else {
+      json = rows.map(function (r) { return r.map(function (c) { return c.trim(); }); });
+    }
+    try {
+      last = format.value === "pretty" ? JSON.stringify(json, null, 2) : JSON.stringify(json);
+    } catch (e) {
+      statusEl.textContent = "Could not build JSON from this input.";
+      statusEl.className = "status error";
+      return;
+    }
+    out.textContent = last;
+    out.classList.add("visible");
+    var nRows = header.checked ? (rows.length - 1) : rows.length;
+    proc.textContent = "Built " + nRows + " row" + (nRows === 1 ? "" : "s") + " (" + keys.length + " columns) into JSON \u00b7 0 bytes uploaded.";
+  }
+
+  input.addEventListener("input", convert);
+  delim.addEventListener("change", convert);
+  header.addEventListener("change", convert);
+  format.addEventListener("change", convert);
+  btnConvert.addEventListener("click", convert);
+  btnCopy.addEventListener("click", function(){
+    if (!last) return;
+    window.Troolify.copyToClipboard(last, function(){
+      proc.textContent = "Copied JSON to clipboard - it never left your device.";
+    });
+  });
+  document.getElementById("c2jSample").addEventListener("click", function(){
+    input.value = "name,department,salary\nAlex,Engineering,72000\nRhea,Design,64000\n\"O'Neal, Sam\",Marketing,58000";
+    delim.value = ",";
+    header.checked = true;
+    format.value = "pretty";
+    convert();
+  });
+  document.getElementById("c2jClear").addEventListener("click", function(){
+    input.value = "";
+    out.textContent = "";
+    out.classList.remove("visible");
+    proc.textContent = "Ready - conversion happens in this tab.";
+    input.focus();
+  });
+  convert();
+})();
+</script>
+</body>
+</html>

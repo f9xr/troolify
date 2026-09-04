@@ -1,0 +1,395 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Word Generator | Free Online Word Picker</title>
+<meta name="description" content="Generate random words instantly - choose from common words, nouns, verbs, adjectives, animals and food. Free online word picker, 100% client-side and private.">
+<meta name="author" content="F9XR Development Team">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#212529">
+<link rel="canonical" href="https://f9xr.github.io/troolify/tools/text/random-word-generator.html">
+<meta property="og:site_name" content="Troolify">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Random Word Generator | Free Online Word Picker">
+<meta property="og:description" content="Generate one or hundreds of random words - common words, nouns, verbs, adjectives, animals and more. Free, private, 100% client-side.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://f9xr.github.io/troolify/tools/text/random-word-generator.html">
+<meta property="og:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-09-05">
+<meta property="article:modified_time" content="2026-09-05">
+<meta property="article:section" content="Text Tools">
+<meta property="article:tag" content="Random Word Generator">
+<meta property="article:tag" content="Text Tools">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Random Word Generator | Free Online Word Picker">
+<meta name="twitter:description" content="Generate random words - common, nouns, verbs, adjectives, animals or food. Runs 100% in your browser.">
+<meta name="twitter:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://f9xr.github.io/troolify/index.html" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://f9xr.github.io/troolify/tools/index.html" },
+    { "@type": "ListItem", "position": 3, "name": "Text Tools", "item": "https://f9xr.github.io/troolify/tools/text/" },
+    { "@type": "ListItem", "position": 4, "name": "Random Word Generator", "item": "https://f9xr.github.io/troolify/tools/text/random-word-generator.html" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Random Word Generator",
+  "url": "https://f9xr.github.io/troolify/tools/text/random-word-generator.html",
+  "applicationCategory": "UtilitiesApplication",
+  "applicationSubCategory": "Writing Tool",
+  "operatingSystem": "Any (web browser)",
+  "featureList": ["Random words from six curated lists", "Generate 1 to 50 words at once", "Common, nouns, verbs, adjectives, animals or food", "Copy-ready output", "100% client-side processing"],
+  "description": "Generate random words instantly for writing prompts, usernames, passphrases and exercises. Runs entirely in your browser with zero data retention.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "datePublished": "2026-09-05",
+  "dateModified": "2026-09-05",
+  "author": { "@type": "Organization", "name": "F9XR Development Team", "url": "https://f9xr.github.io/" },
+  "publisher": { "@type": "Organization", "name": "Troolify", "url": "https://f9xr.github.io/troolify/", "logo": { "@type": "ImageObject", "url": "https://f9xr.github.io/troolify/assets/images/logo_nobg.webp", "width": 1407, "height": 768 } }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Where do the random words come from?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The generator draws from six small curated lists embedded in the page - common words, nouns, verbs, adjectives, animals and food. Every pick is truly random and computed locally in your browser." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use random words to make a strong password?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes - combining several random words from a large word pool produces a strong passphrase, but for maximum security we recommend the Password Generator for passphrases, which uses cryptographic randomness." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the same word ever picked twice?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, a word can repeat across the generated list - each word is chosen independently. If you need unique words, generate a small count from the 'Common' list." }
+    },
+    {
+      "@type": "Question",
+      "name": "Will my generated words be saved or shared?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Generation runs entirely in your browser tab and nothing you generate is uploaded, saved or shared. That is also why you are told to copy your results before leaving the page." }
+    }
+  ]
+}
+</script>
+
+<link rel="icon" type="image/webp" href="../../assets/images/favicon.webp"><link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+<link rel="stylesheet" href="../../assets/css/tailwind.css">
+<link rel="stylesheet" href="../../assets/css/tool.css">
+<link rel="stylesheet" href="../../assets/css/site-shell.css">
+<link rel="stylesheet" href="../../assets/css/tool-page.css">
+<link rel="stylesheet" href="../../assets/css/seo-article.css">
+<style>
+.controls{display:grid;grid-template-columns:1fr;gap:16px;margin-bottom:16px}
+@media(min-width:620px){.controls{grid-template-columns:1fr 2fr}}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:12.5px;font-weight:700;color:var(--muted)}
+.field select,.field input{background:#1B2028;border:1px solid var(--border);color:var(--ink);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:15px;font-weight:600;outline:none;width:100%;box-sizing:border-box}
+.field select:focus,.field input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+.wordcloud{display:flex;flex-wrap:wrap;gap:8px;min-height:52px}
+.word-pill{background:#12161C;border:1px solid var(--border);border-radius:999px;padding:7px 14px;font-size:14px;font-weight:600;color:var(--ink);animation:pop .18s ease}
+@keyframes pop{from{transform:scale(.92);opacity:0}to{transform:scale(1);opacity:1}}
+</style>
+</head>
+<body data-layout="tool">
+<noscript>
+    <nav aria-label="Primary" style="position:static;display:block;padding:1rem 1.5rem;background:#212529;border-bottom:1px solid #343A40;text-align:center;font-size:0.9rem;">
+        <a href="../../index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Home</a>
+        <a href="../../tools/index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Tools</a>
+        <a href="../../pages/about.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">About</a>
+        <a href="../../pages/contact.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Contact</a>
+    </nav>
+</noscript>
+
+<main class="tool-main">
+  <div class="container">
+
+    <div class="tool-head hero">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="../../tools/index.html">Tools</a></li>
+          <li><a href="../index.html">Text Tools</a></li>
+          <li class="current" aria-current="page">Random Word Generator</li>
+        </ol>
+      </nav>
+      <div class="hero-main">
+        <span class="tool-badge"><span class="dot"></span>100% client-side &middot; zero data retention</span>
+        <h1>Random Word Generator</h1>
+        <p>Generate simple words for writing prompts, creative exercises or a quick brain-storming spark. Pick a list - common words, nouns, verbs, adjectives, animals or food - and how many you need.</p>
+      </div>
+      <div class="hero-box hero-cat">
+        <h3 class="hero-box-title"><i class="fa-solid fa-folder-open"></i>Category</h3>
+        <div class="tool-meta">
+          <span class="tool-tag"><i class="fa-solid fa-tag"></i>Writing</span>
+          <a class="tool-cat" href="../index.html" aria-label="Browse Text Tools category"><i class="fa-solid fa-folder"></i>Text Tools</a>
+        </div>
+      </div>
+      <div class="hero-box hero-qa">
+        <h3 class="hero-box-title"><i class="fa-solid fa-bolt"></i>Quick Actions</h3>
+        <div class="tool-actions">
+          <button class="rt-btn" type="button" id="btnShare"><i class="fa-solid fa-share-nodes"></i>Share</button>
+          <button class="rt-btn" type="button" id="btnEmbed"><i class="fa-solid fa-code"></i>Embed Tool</button>
+          <a class="rt-btn" href="../../pages/feedback.html"><i class="fa-solid fa-comment"></i>Feedback</a>
+        </div>
+      </div>
+      <div class="hero-box hero-details">
+        <h3 class="hero-box-title"><i class="fa-solid fa-circle-info"></i>Tool Details</h3>
+        <div class="tool-details">
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.github.io/" target="_blank" rel="noopener">F9XR Development Team</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-check-double"></i>Reviewed by</span><a class="detail-value" href="../../press/editorial-policies.html">Review Board</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-clock-rotate-left"></i>Last updated</span><span class="detail-value">5 September 2026</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel clean">
+      <div class="panel-inner">
+        <div class="toolbar-row">
+          <span class="tool-label"><i class="fa-solid fa-shuffle"></i>RandomWords</span>
+          <div class="toolbar-actions">
+            <button class="chip-btn" type="button" id="rwGenerate" title="Generate new words"><i class="fa-solid fa-shuffle"></i><span class="hide-sm">Shuffle</span></button>
+            <button class="chip-btn" type="button" id="rwCopy" title="Copy the current words"><i class="fa-solid fa-copy"></i><span class="hide-sm">Copy</span></button>
+          </div>
+        </div>
+
+        <div class="controls">
+          <div class="field"><label for="rwCount">Number of words</label>
+            <input id="rwCount" type="number" min="1" max="50" step="1" value="5" aria-label="How many words to generate">
+          </div>
+          <div class="field"><label for="rwType">Word list</label>
+            <select id="rwType">
+              <option value="common" selected>Common words</option>
+              <option value="nouns">Nouns</option>
+              <option value="verbs">Verbs</option>
+              <option value="adjectives">Adjectives</option>
+              <option value="animals">Animals</option>
+              <option value="food">Food</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="output visible wordcloud" id="rwOut" aria-live="polite"></div>
+        <div class="status" id="rwStatus"></div>
+        <p class="proc-line"><i class="fa-solid fa-bolt"></i><span id="rwProc">Ready - words are generated in this tab.</span></p>
+      </div>
+    </div>
+
+    <aside class="disclaimer" aria-label="Disclaimer">
+      <i class="fa-solid fa-circle-info"></i>
+      <p>Disclaimer: Whilst every effort has been made in building our tools, we are not to be held liable for any damages or monetary losses arising out of or in connection with their use. <a href="../../press/disclaimer.html">Full disclaimer</a>.</p>
+    </aside>
+
+    <div class="article-layout">
+      <article class="seo-article">
+        <h2 id="article-title">Random Word Generator for Creative Sparks</h2>
+        <p>A blank page resists every attempt to start writing. Pull a word - or five - from a shuffled hat and suddenly there is a starting point, a constraint, a prompt. This generator works offline in your browser and never registers a single keystroke.</p>
+
+        <h2 id="what-you-get">Six Curated Word Lists</h2>
+        <p>Depending on the mood you are chasing, pick:<p>
+        <ul>
+          <li><strong>Common words</strong> - everyday vocabulary for quick prompts.</li>
+          <li><strong>Nouns</strong> - objects and ideas to build a scene around.</li>
+          <li><strong>Verbs</strong> - actions to drive a plot or a game description.</li>
+          <li><strong>Adjectives</strong> - texture and atmosphere for your writing.</li>
+          <li><strong>Animals</strong> - fun for kids' stories, names and games.</li>
+          <li><strong>Food</strong> - for menus, descriptions and offbeat wordplay.</li>
+        </ul>
+
+        <h2 id="how-to-use">How to Generate Words</h2>
+        <ol>
+          <li><strong>Choose a list</strong> from the dropdown depending on what you need.</li>
+          <li><strong>Pick a count</strong> between 1 and 50.</li>
+          <li><strong>Hit Shuffle</strong> (or adjust the settings) and copy the results.</li>
+        </ol>
+        <p>Every pick is independent, so the same word can appear twice - that is expected and harmless for prompts. If writing is not your goal, the list also works as a brainstorming starting point or a naming jukebox.</p>
+
+        <h2 id="passwords">Word Lists &amp; Passphrases</h2>
+        <p>Several random common words joined together form a memorable passphrase. However, true security requires cryptographic randomness and a much larger word pool. For anything account-related, use our <a href="../misc/password-generator.html">Password Generator</a> instead - this tool is for words, not secrets.</p>
+
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+
+        <details class="faq-item">
+          <summary>Where do the random words come from?</summary>
+          <div class="faq-a">
+            <p>Six small curated lists are embedded directly in the page - common words, nouns, verbs, adjectives, animals and food. Each pick is random and computed locally in your browser.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Can I use random words to make a strong password?</summary>
+          <div class="faq-a">
+            <p>Random word passphrases are far better than short passwords, but for maximum security use our Password Generator, which combines cryptographic randomness with a larger word pool.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Is the same word ever picked twice?</summary>
+          <div class="faq-a">
+            <p>Yes - each word is chosen independently, so repeats can happen. If you need distinct words, keep the count small relative to the list.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Will my generated words be saved or shared?</summary>
+          <div class="faq-a">
+            <p>No. Everything runs in your browser tab - nothing is uploaded, saved or shared, so copy your results before leaving the page.</p>
+          </div>
+        </details>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>Prompts, name ideas and word-play are the point of this little tool. It is intentionally simple, fast and private - the words appear locally and the blank page is not blank anymore.</p>
+      </article>
+    </div>
+
+    <section class="keyword-box" aria-label="Keywords and tags">
+      <h2>Keyword &amp; Tags</h2>
+      <h3>Keywords</h3>
+      <div class="keywords">
+        <span class="keyword">random word generator</span>
+        <span class="keyword">random words</span>
+        <span class="keyword">word picker</span>
+        <span class="keyword">writing prompts</span>
+        <span class="keyword">random noun</span>
+        <span class="keyword">random verb</span>
+        <span class="keyword">random adjective</span>
+        <span class="keyword">brainstorming</span>
+        <span class="keyword">name generator</span>
+        <span class="keyword">text tool</span>
+      </div>
+      <h3>Tags</h3>
+      <div class="tags">
+        <a class="tag" href="../index.html"><i class="fa-solid fa-tag"></i>Writing</a>
+        <a class="tag" href="../index.html"><i class="fa-solid fa-folder"></i>Text Tools</a>
+        <a class="tag" href="../../tools/index.html"><i class="fa-solid fa-cube"></i>Text</a>
+      </div>
+    </section>
+
+    <section class="author-box" aria-label="About the publisher">
+      <div class="author-avatar" aria-hidden="true"><img src="../../assets/images/logo_nobg.webp" alt="F9XR logo" loading="lazy" decoding="async" width="1407" height="768"></div>
+      <div>
+        <span class="author-role">Published by</span>
+        <h2>F9XR Development Team</h2>
+        <p>Every Troolify tool is built and reviewed by the F9XR Development Team, then checked by our Review Board for correctness, accessibility, and clarity. Tools run 100% client-side with zero data retention.</p>
+        <div class="author-links">
+          <a href="https://f9xr.github.io/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i>F9XR Team</a>
+          <a href="../../press/editorial-policies.html"><i class="fa-solid fa-scale-balanced"></i>Editorial Policies</a>
+          <a href="https://github.com/f9xr" target="_blank" rel="noopener" aria-label="F9XR on GitHub"><i class="fa-brands fa-github"></i>GitHub</a>
+          <a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on LinkedIn"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+          <a href="https://instagram.com/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on Instagram"><i class="fa-brands fa-instagram"></i>Instagram</a>
+          <a href="https://youtube.com/@QuarterlyLIV" target="_blank" rel="noopener" aria-label="F9XR on YouTube"><i class="fa-brands fa-youtube"></i>YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-tools" aria-label="Related tools">
+      <h2>Related Tools</h2>
+      <div class="related-search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" id="relatedSearch" placeholder="Search all Troolify tools&hellip;" autocomplete="off" aria-label="Search related tools">
+      </div>
+      <div class="related-grid" id="relatedGrid" aria-busy="true">
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+      </div>
+    </section>
+
+    <section class="comments" aria-label="Comments">
+      <h2>Comments</h2>
+      <div id="comments">
+        <script src="https://utteranc.es/client.js" repo="f9xr/troolify" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async></script>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"><span></span><i class="fa-solid fa-layer-group"></i><span></span></div>
+
+  </div>
+</main>
+
+<script src="../../assets/js/layout.js" defer></script>
+<script src="../../assets/js/tools-data.js" defer></script>
+<script src="../../assets/js/tool-page.js" defer></script>
+<script>
+(function(){
+  "use strict";
+  var WORDS = {
+    common: "the be to of and in that have it for not on with he as you do".split(" ").concat(
+      ["at this but his by from they we say her she or an my one all would there their what so up out if about who get which go me when make like time just know take people into year your good some could them see other than then now look only come its over think also back after use two how our work first well way even new want because any these give day most us is was are".split(" ")]).flat(),
+    nouns: ["moment","river","window","garden","letter","coffee","mirror","shadow","bridge","island","fire","snow","stone","feather","lantern","bridge","harbor","meadow","canyon","tunnel","canvas","marble","silver","embers"].concat(["story","journey","silence","storm","dawn","dusk","horizon","wilderness","treasure","compass","candle","pine","creek","cliff","cabin","trail","orchard","valley","thunder","arrow"]),
+    verbs: ["run","jump","swim","climb","sing","dance","write","read","build","break","carry","chase","discover","explore","gather","grow","glimpse","hunt","linger","meander","murmur","polish","push","shimmer","trace"].concat(["unfold","vanish","wander","whisper","yield","anchor","bloom","carve","dive","echo","forage","glide","harvest","ignite","kindle","melt","navigate","paddle","roam","sprint","stumble","surge","sway","tumble","weave"]),
+    adjectives: ["bright","quiet","ancient","cozy","fragile","gentle","golden","hazy","lonely","mellow","rugged","silent","soft","steady","warm","wild","wonderful","young","crimson","dusky"].concat(["earnest","faint","graceful","hidden","jagged","lively","luminous","mysterious","nimble","peaceful","radiant","ready","serene","shallow","slanting","tender","tranquil","vivid","wholly","zealous"]),
+    animals: ["fox","crane","otter","badger","heron","raven","finch","marten","lynx","newt","owl","pike","ram","seal","weasel","pronghorn","marmot","nighthawk","mule","sloth"].concat(["axolotl","buffalo","caiman","dolphin","eagle","ferret","gazelle","hedgehog","ibis","jaguar","koala","llama","moose","narwhal","ocelot","puma","quokka","rhino","stork","toucan"]),
+    food: ["apple","bread","cheese","dill","fennel","garlic","honey","kiwi","lemon","mango","noodle","olive","plum","quinoa","radish","saffron","tofu","umami","vanilla","walnut"].concat(["basil","cocoa","dates","edamame","fig","grape","hazelnut","jasmine","kale","lentil","mint","nori","orzo","papaya","raspberry","sesame","thyme","udon","vinegar","yogurt"])
+  };
+
+  var countEl = document.getElementById("rwCount");
+  var typeEl = document.getElementById("rwType");
+  var out = document.getElementById("rwOut");
+  var statusEl = document.getElementById("rwStatus");
+  var proc = document.getElementById("rwProc");
+  var lastWords = [];
+
+  function randInt(n){ return Math.floor(Math.random() * n); }
+
+  function generate(){
+    statusEl.textContent = "";
+    statusEl.className = "status";
+    var n = parseInt(countEl.value, 10);
+    if (isNaN(n)) n = 5;
+    n = Math.min(50, Math.max(1, n));
+    countEl.value = n;
+    var list = WORDS[typeEl.value] || WORDS.common;
+    lastWords = [];
+    out.innerHTML = "";
+    var frag = document.createDocumentFragment();
+    for (var i = 0; i < n; i++) {
+      var w = list[randInt(list.length)];
+      lastWords.push(w);
+      var pill = document.createElement("span");
+      pill.className = "word-pill";
+      pill.textContent = w;
+      frag.appendChild(pill);
+    }
+    out.appendChild(frag);
+    proc.textContent = "Generated " + n + " random " + (typeEl.options[typeEl.selectedIndex].text.toLowerCase()) + " \u00b7 0 words uploaded.";
+  }
+
+  document.getElementById("rwGenerate").addEventListener("click", generate);
+  document.getElementById("rwCopy").addEventListener("click", function(){
+    if (!lastWords.length) return;
+    var btn = this;
+    window.Troolify.copyToClipboard(lastWords.join(" "), function () {
+      var old = btn.innerHTML;
+      btn.innerHTML = '<i class="fa-solid fa-check"></i>';
+      setTimeout(function () { btn.innerHTML = old; }, 1200);
+    });
+  });
+  countEl.addEventListener("change", generate);
+  typeEl.addEventListener("change", generate);
+  generate();
+})();
+</script>
+</body>
+</html>
+
+
+
