@@ -86,7 +86,10 @@
         '</a>' +
         '<a class="badge-link" href="https://navifyai.com/" target="_blank" rel="noopener">' +
             '<img src="https://navifyai.com/static/img/badge-dark.svg" alt="Featured on NavifyAI.com - AI Tools Directory" width="200" height="50" loading="lazy" decoding="async" />' +
-        '</a>';
+        '</a>' +
+        '<span class="badge-link">' +
+            '<a href="https://www.stork.ai/" rel="nofollow" title="Stork Verified — stork.ai AI tools directory"><img src="https://www.stork.ai/badge/verified-dark.svg" alt="Stork Verified — stork.ai AI tools directory" width="216" height="44" /></a>' +
+        '</span>';
 
     /* ------------------------------------------------------------------------
        Dashboard right-sidebar builder
@@ -496,7 +499,7 @@
 
                         /* --- Compact brand wordmark --- */
                         '<div class="relative mt-6 select-none lg:mt-8">' +
-                            '<div class="text-center text-3xl font-black tracking-tight text-[#3B82F6] sm:text-4xl">troolify</div>' +
+                            '<div class="fw-wordmark text-center font-black tracking-tight text-[#3B82F6]">troolify</div>' +
                         '</div>' +
 
                         /* --- Bottom baseline metadata --- */
@@ -613,14 +616,17 @@
                 '.cta-3d{position:relative;z-index:0;max-width:1280px;width:calc(100% - 2rem);margin:2.5rem auto 0;border-radius:30px;transition:transform .45s cubic-bezier(.16,1,.3,1),box-shadow .45s ease;box-shadow:0 26px 55px -10px rgba(0,0,0,.6),0 14px 28px -12px rgba(0,0,0,.55)}' +
                 '.tx-cta:hover .cta-3d{transform:rotateX(3deg) translateY(-5px) scale(1.005);box-shadow:0 40px 80px -16px rgba(0,0,0,.65),0 20px 40px -16px rgba(0,0,0,.6)}' +
 
-                '.tx-footer{position:fixed;bottom:0;left:0;right:0;z-index:0;background:var(--bg-dark,#0A0A0A);padding:0;border-top:1px solid rgba(255,255,255,.06);max-height:100dvh;overflow-y:auto;-webkit-overflow-scrolling:touch}' +
+                '.tx-footer{position:fixed;bottom:0;left:0;right:0;z-index:0;background:var(--bg-dark,#0A0A0A);padding:0;border-top:1px solid rgba(255,255,255,.06);max-height:100dvh;overflow-y:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;opacity:0;transform:translateY(24px);transition:opacity .45s ease .05s,transform .45s cubic-bezier(.16,1,.3,1)}' +
+                '.tx-footer::-webkit-scrollbar{width:0;height:0;display:none}' +
+                '.tx-footer.footer-revealed{opacity:1;transform:none}' +
                 /* Footer-reveal shell: the outer .page-reveal layer carries NO background so its bottom
                    padding strip stays transparent, letting the pinned footer show through when the user
                    scrolls to the bottom. The opaque page background lives on the inner .reveal-inner so
                    it starts above the footer and slides up to uncover it. (Its color is applied inline
                    from the page body so it matches the page theme.) */
-                '.page-reveal{position:relative;z-index:1;min-height:100vh}' +
-                '.reveal-inner{min-height:inherit}' +
+                '.page-reveal{position:relative;z-index:1;min-height:100vh;pointer-events:none}' +
+                '.reveal-inner{min-height:inherit;pointer-events:auto}' +
+                '.fw-wordmark{font-size:clamp(2.75rem,7vw,4.5rem);line-height:1;letter-spacing:-.03em}' +
                 '.tx-footer a{text-decoration:none}' +
                 '.tx-footer a:not(.grid){position:relative}' +
                 '.tx-footer a:not(.grid)::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:1px;background:linear-gradient(90deg,#60A5FA,#3B82F6);transform:scaleX(0);transform-origin:left;transition:transform .28s cubic-bezier(.16,1,.3,1)}' +
@@ -650,7 +656,7 @@
                 '.featured-marquee-track .badge-link:focus-visible{outline:2px solid #3B82F6;outline-offset:3px;border-radius:6px}' +
                 '@keyframes featured-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}' +
                 '@media(max-width:640px){.tx-featured{margin-top:2rem;padding:1.25rem 1rem 1.4rem}.featured-marquee-track .badge-link{padding-right:1.5rem}}' +
-                '@media(prefers-reduced-motion:reduce){.featured-marquee-track{animation:none}}' +
+                '@media(prefers-reduced-motion:reduce){.featured-marquee-track{animation:none}.tx-footer{opacity:1!important;transform:none!important;transition:none}}' +
 
                 /* CSS View Transitions API - smooth cross-document page transitions.
                    Enabled only when the browser supports it and the user has not opted
@@ -674,9 +680,12 @@
         body.insertAdjacentHTML("afterbegin", skipLink + headerMain);
 
         // "Featured On" band is always placed directly above the CTA:
-        // - pages with their own static CTA (index.html) -> insert before it
-        // - every other page                        -> insert before the injected CTA
-        if (document.querySelector(".final-cta, .tx-cta")) {
+        // - pages with a server-rendered band (index.html) -> keep it, skip injection
+        // - pages with their own static CTA (index.html)   -> insert before it
+        // - every other page                              -> insert before the injected CTA
+        if (document.querySelector(".tx-featured")) {
+            /* already present in served HTML - do not inject a duplicate */
+        } else if (document.querySelector(".final-cta, .tx-cta")) {
             document.querySelector(".final-cta, .tx-cta").insertAdjacentHTML("beforebegin", featuredSection);
         } else {
             body.insertAdjacentHTML("beforeend", featuredSection);
@@ -734,6 +743,14 @@
             };
             syncFooterSpace();
             window.addEventListener("resize", syncFooterSpace, { passive: true });
+            /* Keep the reveal strip in sync when the footer reflows (fonts, images,
+               landscape changes) so the pinned footer never overlaps content. */
+            if (window.ResizeObserver) {
+                new window.ResizeObserver(syncFooterSpace).observe(txFooter);
+            }
+            if (document.fonts && document.fonts.ready) {
+                document.fonts.ready.then(syncFooterSpace);
+            }
         }
 
         /* --------------------------------------------------------------------
@@ -793,6 +810,14 @@
                 var p = max > 0 ? Math.min(1, y / max) : 0;
                 if (backToTopRing) backToTopRing.style.strokeDashoffset = String(backToTopCirc * (1 - p));
                 backToTop.classList.toggle("hidden", y < 400);
+            }
+            if (txFooter) {
+                /* Fade the pinned footer in as its transparent reveal strip enters
+                   the bottom of the viewport. */
+                var maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+                var fh = txFooter.offsetHeight || 0;
+                var reached = fh > 0 && y >= maxScroll - fh + 1;
+                txFooter.classList.toggle("footer-revealed", reached);
             }
         }
         function scheduleScroll() {

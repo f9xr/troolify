@@ -47,7 +47,7 @@
    Boxy hero header (breadcrumbs + title + category/quick actions/details boxes)
    ============================================================================ */
 
-.tool-head.hero{text-align:left;display:grid;grid-template-areas:"crumbs crumbs crumbs" "main main main" "td cat qa";grid-template-columns:repeat(3,1fr);gap:18px 22px;align-items:stretch;background:linear-gradient(180deg,rgba(52,58,64,.4),rgba(33,37,41,.3));border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:26px 28px;box-shadow:0 6px 24px rgba(0,0,0,.18);position:relative;overflow:hidden}
+.tool-head.hero{text-align:left;display:grid;grid-template-areas:"crumbs crumbs crumbs" "main main main" "td cat qa";grid-template-columns:repeat(3,1fr);gap:20px 24px;align-items:stretch;background:linear-gradient(180deg,rgba(52,58,64,.4),rgba(33,37,41,.3));border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:38px 40px;box-shadow:0 6px 24px rgba(0,0,0,.18);position:relative;overflow:hidden}
 .tool-head.hero::before{content:"";position:absolute;top:-80px;right:-60px;width:200px;height:200px;background:radial-gradient(closest-side,rgba(59,130,246,.15),transparent);pointer-events:none}
 .tool-head.hero::after{content:"";position:absolute;bottom:-90px;left:-60px;width:180px;height:180px;background:radial-gradient(closest-side,rgba(16,185,129,.1),transparent);pointer-events:none}
 
@@ -86,7 +86,7 @@
 a.detail-value:hover{color:#fff}
 
 @media(max-width:900px){
-  .tool-head.hero{grid-template-areas:"crumbs" "main" "td" "cat" "qa";grid-template-columns:1fr;gap:16px;padding:24px}
+  .tool-head.hero{grid-template-areas:"crumbs" "main" "td" "cat" "qa";grid-template-columns:1fr;gap:16px;padding:30px 22px}
 }
 
 /* ============================================================================

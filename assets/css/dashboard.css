@@ -93,20 +93,20 @@ main.dashboard,
   z-index:-1;
 }
 
-/* Custom scrollbar for sidebars */
+/* Hide scrollbars on sidebars (scrollability is kept) */
+.dash-left,
+.dash-right,
+.dash-cat-nav{
+  scrollbar-width:none;
+  -ms-overflow-style:none;
+}
 .dash-left::-webkit-scrollbar,
-.dash-right::-webkit-scrollbar{width:6px}
-.dash-left::-webkit-scrollbar-thumb,
-.dash-right::-webkit-scrollbar-thumb{
-  background:rgba(255,255,255,.12);
-  border-radius:99px;
+.dash-right::-webkit-scrollbar,
+.dash-cat-nav::-webkit-scrollbar{
+  width:0;
+  height:0;
+  display:none;
 }
-.dash-left::-webkit-scrollbar-thumb:hover,
-.dash-right::-webkit-scrollbar-thumb:hover{
-  background:rgba(255,255,255,.22);
-}
-.dash-left::-webkit-scrollbar-track,
-.dash-right::-webkit-scrollbar-track{background:transparent}
 
 /* Sidebar header */
 .dash-sidebar-head{
