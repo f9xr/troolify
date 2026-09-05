@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Duct Size Calculator | Round Diameter from CFM and Velocity</title>
+<meta name="description" content="Estimate a theoretical round duct diameter from a documented CFM and target face velocity - with area, velocity cross-check and standard size notes.">
+<meta name="author" content="F9XR Development Team">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#212529">
+<link rel="canonical" href="https://f9xr.github.io/troolify/tools/hvac/duct-size-calculator.html">
+<meta property="og:site_name" content="Troolify">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Duct Size Calculator | Round Diameter from CFM and Velocity">
+<meta property="og:description" content="Estimate a theoretical round duct diameter from a documented CFM and target face velocity - with area, velocity cross-check and standard size notes.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://f9xr.github.io/troolify/tools/hvac/duct-size-calculator.html">
+<meta property="og:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-09-05">
+<meta property="article:modified_time" content="2026-09-05">
+<meta property="article:section" content="HVAC Tools">
+<meta property="article:tag" content="Duct Size Calculator">
+<meta property="article:tag" content="HVAC Tools">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Duct Size Calculator | Round Diameter from CFM and Velocity">
+<meta name="twitter:description" content="Estimate a theoretical round duct diameter from a documented CFM and target face velocity - with area, velocity cross-check and standard size notes.">
+<meta name="twitter:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://f9xr.github.io/troolify/index.html"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://f9xr.github.io/troolify/tools/index.html"},{"@type":"ListItem","position":3,"name":"HVAC Tools","item":"https://f9xr.github.io/troolify/tools/hvac/index.html"},{"@type":"ListItem","position":4,"name":"Duct Size Calculator","item":"https://f9xr.github.io/troolify/tools/hvac/duct-size-calculator.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Duct Size Calculator","url":"https://f9xr.github.io/troolify/tools/hvac/duct-size-calculator.html","applicationCategory":"UtilitiesApplication","applicationSubCategory":"Duct Design Estimator","operatingSystem":"Any (web browser)","featureList":["Round diameter from CFM and velocity","Duct cross-section area output","Velocity cross-check","Millimetre equivalent","Standard size guidance","100% client-side"],"description":"Estimate a theoretical round duct diameter from a documented CFM and target face velocity - with area, velocity cross-check and standard size notes.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"datePublished":"2026-09-05","dateModified":"2026-09-05","author":{"@type":"Organization","name":"F9XR Development Team","url":"https://f9xr.github.io/"},"publisher":{"@type":"Organization","name":"Troolify","url":"https://f9xr.github.io/troolify/","logo":{"@type":"ImageObject","url":"https://f9xr.github.io/troolify/assets/images/logo_nobg.webp","width":1407,"height":768}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[]}</script>
+<link rel="icon" type="image/webp" href="../../assets/images/favicon.webp"><link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+<link rel="stylesheet" href="../../assets/css/tailwind.css">
+<link rel="stylesheet" href="../../assets/css/tool.css">
+<link rel="stylesheet" href="../../assets/css/site-shell.css">
+<link rel="stylesheet" href="../../assets/css/tool-page.css">
+<link rel="stylesheet" href="../../assets/css/seo-article.css">
+<style>
+.calc-grid{display:grid;grid-template-columns:1fr;gap:18px}
+@media(min-width:720px){.calc-grid{grid-template-columns:1fr 1fr}}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.area{grid-column:1/-1}
+.field label{font-size:12.5px;font-weight:700;color:var(--muted)}
+.field .hint{font-size:11.5px;color:var(--faint);font-weight:500}
+.field input,.field select{background:#1B2028;border:1px solid var(--border);color:var(--ink);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:15px;font-weight:600;outline:none;width:100%;box-sizing:border-box}
+.field textarea{background:#1B2028;border:1px solid var(--border);color:var(--ink);border-radius:10px;padding:12px;font-family:inherit;font-size:14px;font-weight:500;outline:none;width:100%;box-sizing:border-box;min-height:96px;resize:vertical;line-height:1.5}
+.field textarea::placeholder{color:var(--faint)}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+.toolbar-row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+.tool-label{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.tool-label i{color:var(--accent);font-size:15px}
+.chip-btn{display:inline-flex;align-items:center;gap:7px;background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.3);color:#93C5FD;border-radius:999px;padding:7px 13px;font-size:12.5px;font-weight:700;cursor:pointer;transition:background .18s ease;font-family:inherit}
+.chip-btn:hover{background:rgba(59,130,246,.2)}
+.result-card{background:linear-gradient(180deg,rgba(59,130,246,.12),rgba(59,130,246,.03));border:1px solid rgba(96,165,250,.25);border-radius:14px;padding:18px;margin-top:18px}
+.result-row{display:flex;justify-content:space-between;gap:10px;padding:8px 2px;font-size:14px}
+.result-row+.result-row{border-top:1px dashed rgba(255,255,255,.08)}
+.result-row b{color:#93C5FD;font-weight:800;text-align:right;white-space:nowrap}
+.result-row.hero-row b{color:#6EE7B7;font-size:17px}
+.result-row .sub{color:var(--faint);font-size:12px;font-weight:500}
+.note-row{font-size:12.5px;color:var(--faint);line-height:1.6;margin-top:12px;padding-top:10px;border-top:1px dashed rgba(255,255,255,.1)}
+.mini-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:12.5px}
+.mini-table th{color:var(--faint);text-align:left;font-weight:700;padding:5px 6px;border-bottom:1px solid rgba(255,255,255,.12)}
+.mini-table td{padding:5px 6px;border-bottom:1px solid rgba(255,255,255,.06);color:var(--muted)}
+.mini-table td b{color:var(--ink)}
+</style>
+</head>
+<body data-layout="tool">
+<noscript>
+    <nav aria-label="Primary" style="position:static;display:block;padding:1rem 1.5rem;background:#212529;border-bottom:1px solid #343A40;text-align:center;font-size:0.9rem;">
+        <a href="../../index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Home</a>
+        <a href="../../tools/index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Tools</a>
+        <a href="../../pages/about.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">About</a>
+        <a href="../../pages/contact.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Contact</a>
+    </nav>
+</noscript>
+
+<main class="tool-main">
+  <div class="container">
+
+    <div class="tool-head hero">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="../../tools/index.html">Tools</a></li>
+          <li><a href="../index.html">HVAC Tools</a></li>
+          <li class="current" aria-current="page">Duct Size Calculator</li>
+        </ol>
+      </nav>
+      <div class="hero-main">
+        <span class="tool-badge"><span class="dot"></span>100% client-side &middot; zero data retention</span>
+        <h1>Duct Size Calculator</h1>
+        <p>Estimate a theoretical round duct diameter from a documented CFM and target face velocity - with area and velocity cross-checks.</p>
+      </div>
+      <div class="hero-box hero-cat">
+        <h3 class="hero-box-title"><i class="fa-solid fa-folder-open"></i>Category</h3>
+        <div class="tool-meta">
+          <span class="tool-tag"><i class="fa-solid fa-tag"></i>Duct Design</span>
+          <a class="tool-cat" href="../index.html" aria-label="Browse HVAC Tools category"><i class="fa-solid fa-folder"></i>HVAC Tools</a>
+        </div>
+      </div>
+      <div class="hero-box hero-qa">
+        <h3 class="hero-box-title"><i class="fa-solid fa-bolt"></i>Quick Actions</h3>
+        <div class="tool-actions">
+          <button class="rt-btn" type="button" id="btnShare"><i class="fa-solid fa-share-nodes"></i>Share</button>
+          <button class="rt-btn" type="button" id="btnEmbed"><i class="fa-solid fa-code"></i>Embed Tool</button>
+          <a class="rt-btn" href="../../pages/feedback.html"><i class="fa-solid fa-comment"></i>Feedback</a>
+        </div>
+      </div>
+      <div class="hero-box hero-details">
+        <h3 class="hero-box-title"><i class="fa-solid fa-circle-info"></i>Tool Details</h3>
+        <div class="tool-details">
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.github.io/" target="_blank" rel="noopener">F9XR Development Team</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-check-double"></i>Reviewed by</span><a class="detail-value" href="../../press/editorial-policies.html">Review Board</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-clock-rotate-left"></i>Last updated</span><span class="detail-value">5 September 2026</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel clean">
+      <div class="panel-inner">
+        <div class="toolbar-row">
+          <span class="tool-label"><i class="fa-solid fa-ruler-horizontal" aria-hidden="true"></i>Round Duct Diameter</span>
+          <button class="chip-btn" type="button" id="resetBtn" title="Clear inputs and start over"><i class="fa-solid fa-rotate-left"></i><span class="hide-sm">Reset</span></button>
+        </div>
+
+        <div class="calc-grid">
+          <div class="field"><label for="dsCfm">Airflow (CFM)</label><input id="dsCfm" type="number"min="0" step="any" value="600"></div><div class="field"><label for="dsVel">Target velocity (ft/min)</label><span class="hint">300-700 fpm supply mains, up to 1000+ for high-velocity</span><input id="dsVel" type="number"min="100" max="5000" step="10" value="800"></div>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn-primary" type="button" id="copyBtn"><i class="fa-solid fa-copy"></i>Copy result</button>
+        </div>
+
+        <div class="result-card" id="out" aria-live="polite"></div>
+        <p class="proc-line"><i class="fa-solid fa-bolt"></i><span id="proc">Ready - duct diameter estimate in this tab.</span></p>
+      </div>
+    </div>
+
+    <aside class="disclaimer" aria-label="Disclaimer">
+      <i class="fa-solid fa-circle-info"></i>
+      <p>This is a geometry-first estimate (area = CFM/velocity). Real duct systems must reconcile friction losses, branch balance and fan static capability. <a href="../../press/disclaimer.html">Full disclaimer</a>.</p>
+    </aside>
+
+    <div class="article-layout">
+      <article class="seo-article">
+
+        <h2 id="first">Start with geometry</h2>
+        <p>Duct sizing begins with the continuity equation: area equals airflow divided by velocity. Pick the CFM you must deliver and the face velocity you can tolerate (noisy rooms need low velocity), and the required round diameter follows directly.</p>
+        <h2 id="velocity">Choosing a velocity</h2>
+        <p>Low velocities (300-700 fpm) suit residential and quiet spaces; higher velocities (up to 1,000+ fpm) fit concealed utility areas and high-pressure systems. Each doubling of velocity roughly quadruples noise energy transmitted to occupied rooms.</p>
+        <h2 id="standard">Standard sizes</h2>
+        <p>Duct comes in fixed diameters (4 to 48 inches in 2-inch steps), so the theoretical value is rounded up to the nearest standard size. Rounding up changes the actual face velocity - the tool re-checks it for you.</p>
+        <h2 id="friction">The second half</h2>
+        <p>Geometry gives you size; friction gives you the pressure cost. Run the result through the <a href="duct-friction-loss.html">Duct Friction Loss</a> calculator so the selected diameter is reconciled with the fan's static capability.</p>
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+        <details class="faq-item"><summary>What size duct do I need for 600 CFM?</summary><div class="faq-a"><p>At a typical 800 fpm you need 0.75 sq ft, a theoretical 11.7-inch diameter - so a 12-inch round duct at roughly 765 fpm.</p></div></details>
+        <details class="faq-item"><summary>Why use velocity to size ducts?</summary><div class="faq-a"><p>Velocity couples airflow with noise and erosion. Design velocity caps are what make a system quiet and stable while the area equation handles the capacity.</p></div></details>
+        <details class="faq-item"><summary>Rectangular or round?</summary><div class="faq-a"><p>Round ducts carry more flow per square inch of material and are quieter. Rectangular fits tight wall and ceiling cavities. Convert between them with the Equivalent Diameter tool.</p></div></details>
+        <details class="faq-item"><summary>Does duct size affect airflow?</summary><div class="faq-a"><p>Yes - as a duct system's resistance grows the fan delivers less at the same static pressure. Sizing must keep friction within the fan's capability.</p></div></details>
+        <h2 id="conclusion">Conclusion</h2>
+        <p>Pick the CFM, pick the velocity, and the round diameter leaves almost no room for guesswork. Friction is the next fight - check it before committing to a run.</p>
+      </article>
+    </div>
+
+    <section class="keyword-box" aria-label="Keywords and tags">
+      <h2>Keyword &amp; Tags</h2>
+      <h3>Keywords</h3>
+      <div class="keywords">
+        <span class="keyword">duct size calculator</span><span class="keyword">round duct diameter</span><span class="keyword">cfm to duct size</span><span class="keyword">duct sizing</span><span class="keyword">duct velocity</span><span class="keyword">hvac duct</span><span class="keyword">flex duct size</span><span class="keyword">spiral duct size</span><span class="keyword">airflow in duct</span><span class="keyword">duct area</span>
+      </div>
+      <h3>Tags</h3>
+      <div class="tags">
+        <a class="tag" href="../index.html"><i class="fa-solid fa-tag"></i>Duct Design</a>
+        <a class="tag" href="../index.html"><i class="fa-solid fa-folder"></i>HVAC Tools</a>
+        <a class="tag" href="../../tools/index.html"><i class="fa-solid fa-cube"></i>HVAC</a>
+      </div>
+    </section>
+
+    <section class="author-box" aria-label="About the publisher">
+      <div class="author-avatar" aria-hidden="true"><img src="../../assets/images/logo_nobg.webp" alt="F9XR logo" loading="lazy" decoding="async" width="1407" height="768"></div>
+      <div>
+        <span class="author-role">Published by</span>
+        <h2>F9XR Development Team</h2>
+        <p>Every Troolify tool is built and reviewed by the F9XR Development Team, then checked by our Review Board for correctness, accessibility, and clarity. Tools run 100% client-side with zero data retention.</p>
+        <div class="author-links">
+          <a href="https://f9xr.github.io/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i>F9XR Team</a>
+          <a href="../../press/editorial-policies.html"><i class="fa-solid fa-scale-balanced"></i>Editorial Policies</a>
+          <a href="https://github.com/f9xr" target="_blank" rel="noopener" aria-label="F9XR on GitHub"><i class="fa-brands fa-github"></i>GitHub</a>
+          <a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on LinkedIn"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+          <a href="https://instagram.com/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on Instagram"><i class="fa-brands fa-instagram"></i>Instagram</a>
+          <a href="https://youtube.com/@QuarterlyLIV" target="_blank" rel="noopener" aria-label="F9XR on YouTube"><i class="fa-brands fa-youtube"></i>YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-tools" aria-label="Related tools">
+      <h2>Related Tools</h2>
+      <div class="related-search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" id="relatedSearch" placeholder="Search all Troolify tools&hellip;" autocomplete="off" aria-label="Search related tools">
+      </div>
+      <div class="related-grid" id="relatedGrid" aria-busy="true">
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+      </div>
+    </section>
+
+    <section class="comments" aria-label="Comments">
+      <h2>Comments</h2>
+      <div id="comments">
+        <script src="https://utteranc.es/client.js" repo="f9xr/troolify" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async></script>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"><span></span><i class="fa-solid fa-layer-group"></i><span></span></div>
+
+  </div>
+</main>
+
+<script src="../../assets/js/layout.js" defer></script>
+<script src="../../assets/js/tools-data.js" defer></script>
+<script src="../../assets/js/tool-page.js" defer></script>
+<script>
+(function(){
+  "use strict";
+  function $(id){ return document.getElementById(id); }
+  function fmt(n,d){
+    if(!isFinite(n)) return "&mdash;";
+    var dd = (d===undefined)?2:d;
+    return Number(n.toFixed(dd)).toLocaleString("en-US",{maximumFractionDigits:dd});
+  }
+  var out = $("out"), proc = $("proc"), lastText = "";
+  function calc(){
+
+        var cfm = parseFloat($("dsCfm").value);
+        var vel = parseFloat($("dsVel").value);
+        if (!isFinite(cfm) || cfm <= 0 || !isFinite(vel) || vel <= 0) {
+          out.innerHTML = '<p style="margin:0;color:var(--faint);font-size:13.5px">Enter a CFM greater than zero and a velocity greater than zero.</p>';
+          lastText = "";
+          return;
+        }
+        var area = cfm / vel;                       /* sq ft */
+        var dft = 2 * Math.sqrt(area / Math.PI);
+        var din = dft * 12;
+        var dmm = din * 25.4;
+        var std = [4,5,6,7,8,9,10,12,14,16,18,20,22,24,26,28,30,32,34,36,40,42,48];
+        var next = std.filter(function (s) { return s >= din; })[0] || "larger than 48\"";
+        out.innerHTML =
+          '<div class="result-row hero-row"><span>Theoretical diameter</span><b>' + fmt(din) + ' in</b></div>' +
+          '<div class="result-row"><span>Duct area</span><b>' + fmt(area, 3) + " sq ft</b></div>" +
+          '<div class="result-row"><span>In millimetres</span><b>' + fmt(dmm) + " mm</b></div>" +
+          '<div class="result-row"><span>Nearest standard size</span><b>' + next + ' in</b></div>' +
+          '<div class="result-row"><span>Velocity at standard size</span><b>' + fmt(cfm / (Math.PI * Math.pow((typeof next === "string" ? din : next) / 24, 2)), 0) + " fpm</b></div>" +
+          '<div class="note-row">Formula: area = CFM &divide; velocity; diameter = 2 &times; &radic;(area/&pi;) in feet, &times;12 for inches. Round up to a standard size and verify friction with the Duct Friction Loss tool.</div>';
+        lastText = "Duct size (round)\nCFM: " + fmt(cfm) + " | Velocity: " + fmt(vel) + " fpm\nTheoretical diameter: " + din.toFixed(1) + " in (" + dmm.toFixed(0) + " mm) -> standard " + next;
+        proc.textContent = "Calculated in this tab - geometry basis. 0 bytes uploaded.";
+      
+  }
+  var inputs = ["dsCfm", "dsVel"];
+  inputs.forEach(function(id){ var el=$(id); if(el){ el.addEventListener("input",calc); el.addEventListener("change",calc); } });
+  $("resetBtn").addEventListener("click", function(){
+    var defs = {"dsCfm":"600","dsVel":"800"};
+    Object.keys(defs).forEach(function(id){ var el=$(id); if(el) el.value = defs[id]; });
+    calc();
+  });
+  $("copyBtn").addEventListener("click", function(){
+    if(!lastText) return;
+    window.Troolify.copyToClipboard(lastText, function(){ proc.textContent = "Copied to clipboard - the bytes never left your device."; });
+  });
+  calc();
+})();
+</script>
+</body>
+</html>

@@ -68,6 +68,24 @@
         '</a>' +
         '<a class="badge-link" href="https://lift-off.sh/p/troolify" target="_blank" rel="noopener noreferrer" title="LiftOff launch badge">' +
             '<img src="https://lift-off.sh/images/badges/badgeLaunchedDarkBAR.webp" alt="LiftOff launch badge" width="200" height="56" loading="lazy" decoding="async" />' +
+        '</a>' +
+        '<a class="badge-link" href="https://auraplusplus.com/projects/troolify-online-tools-hub" target="_blank" rel="noopener" title="View this project on Aura++">' +
+            '<img src="https://auraplusplus.com/images/badges/featured-on-light.svg" alt="Featured on Aura++" width="265" height="58" loading="lazy" decoding="async" />' +
+        '</a>' +
+        '<a class="badge-link" href="https://launchpadly.co/startup/troolify?ref=badge" target="_blank" rel="noopener noreferrer" data-launchpadly-badge="troolify" data-launchpadly-badge-variant="minimal">' +
+            '<img src="https://launchpadly.co/embed/badges/startup/troolify.svg?variant=minimal" alt="Launchpadly Startup Directory" width="220" height="28" loading="lazy" decoding="async" />' +
+        '</a>' +
+        '<a class="badge-link" href="https://submitaitools.org" target="_blank" rel="noopener noreferrer">' +
+            '<img src="https://submitaitools.org/static_submitaitools/images/submitaitools.png" alt="Submit AI Tools" width="200" height="60" loading="lazy" decoding="async" />' +
+        '</a>' +
+        '<a class="badge-link" href="https://code.market?code.market=verified" target="_blank" rel="noopener noreferrer" title="ai tools code.market">' +
+            '<img src="https://code.market/assets/manage-product/featured-logo-dark.svg" alt="ai tools code.market" width="200" height="50" loading="lazy" decoding="async" />' +
+        '</a>' +
+        '<a class="badge-link" href="https://newtool.site/item/troolify" target="_blank" rel="noopener noreferrer">' +
+            '<img src="https://newtool.site/badges/newtool-dark.svg" alt="Featured on NewTool.site" height="54" width="auto" loading="lazy" decoding="async" />' +
+        '</a>' +
+        '<a class="badge-link" href="https://navifyai.com/" target="_blank" rel="noopener">' +
+            '<img src="https://navifyai.com/static/img/badge-dark.svg" alt="Featured on NavifyAI.com - AI Tools Directory" width="200" height="50" loading="lazy" decoding="async" />' +
         '</a>';
 
     /* ------------------------------------------------------------------------

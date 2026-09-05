@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Duct Cross-Sectional Area Calculator | Round & Rectangular</title>
+<meta name="description" content="Calculate the inside face area of a round or rectangular duct in square inches, square feet and square metres - free and client-side.">
+<meta name="author" content="F9XR Development Team">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#212529">
+<link rel="canonical" href="https://f9xr.github.io/troolify/tools/hvac/duct-cross-sectional-area.html">
+<meta property="og:site_name" content="Troolify">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Duct Cross-Sectional Area Calculator | Round & Rectangular">
+<meta property="og:description" content="Calculate the inside face area of a round or rectangular duct in square inches, square feet and square metres - free and client-side.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://f9xr.github.io/troolify/tools/hvac/duct-cross-sectional-area.html">
+<meta property="og:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-09-05">
+<meta property="article:modified_time" content="2026-09-05">
+<meta property="article:section" content="HVAC Tools">
+<meta property="article:tag" content="Duct Cross-Sectional Area">
+<meta property="article:tag" content="HVAC Tools">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Duct Cross-Sectional Area Calculator | Round & Rectangular">
+<meta name="twitter:description" content="Calculate the inside face area of a round or rectangular duct in square inches, square feet and square metres - free and client-side.">
+<meta name="twitter:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://f9xr.github.io/troolify/index.html"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://f9xr.github.io/troolify/tools/index.html"},{"@type":"ListItem","position":3,"name":"HVAC Tools","item":"https://f9xr.github.io/troolify/tools/hvac/index.html"},{"@type":"ListItem","position":4,"name":"Duct Cross-Sectional Area","item":"https://f9xr.github.io/troolify/tools/hvac/duct-cross-sectional-area.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Duct Cross-Sectional Area","url":"https://f9xr.github.io/troolify/tools/hvac/duct-cross-sectional-area.html","applicationCategory":"UtilitiesApplication","applicationSubCategory":"Duct Design Estimator","operatingSystem":"Any (web browser)","featureList":["Round and rectangular shapes","Three unit outputs (in², ft², m²)","Answers feeding velocity/CFM math","1,000 % accurate geometry","100% client-side"],"description":"Calculate the inside face area of a round or rectangular duct in square inches, square feet and square metres - free and client-side.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"datePublished":"2026-09-05","dateModified":"2026-09-05","author":{"@type":"Organization","name":"F9XR Development Team","url":"https://f9xr.github.io/"},"publisher":{"@type":"Organization","name":"Troolify","url":"https://f9xr.github.io/troolify/","logo":{"@type":"ImageObject","url":"https://f9xr.github.io/troolify/assets/images/logo_nobg.webp","width":1407,"height":768}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[]}</script>
+<link rel="icon" type="image/webp" href="../../assets/images/favicon.webp"><link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+<link rel="stylesheet" href="../../assets/css/tailwind.css">
+<link rel="stylesheet" href="../../assets/css/tool.css">
+<link rel="stylesheet" href="../../assets/css/site-shell.css">
+<link rel="stylesheet" href="../../assets/css/tool-page.css">
+<link rel="stylesheet" href="../../assets/css/seo-article.css">
+<style>
+.calc-grid{display:grid;grid-template-columns:1fr;gap:18px}
+@media(min-width:720px){.calc-grid{grid-template-columns:1fr 1fr}}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.area{grid-column:1/-1}
+.field label{font-size:12.5px;font-weight:700;color:var(--muted)}
+.field .hint{font-size:11.5px;color:var(--faint);font-weight:500}
+.field input,.field select{background:#1B2028;border:1px solid var(--border);color:var(--ink);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:15px;font-weight:600;outline:none;width:100%;box-sizing:border-box}
+.field textarea{background:#1B2028;border:1px solid var(--border);color:var(--ink);border-radius:10px;padding:12px;font-family:inherit;font-size:14px;font-weight:500;outline:none;width:100%;box-sizing:border-box;min-height:96px;resize:vertical;line-height:1.5}
+.field textarea::placeholder{color:var(--faint)}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+.toolbar-row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+.tool-label{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.tool-label i{color:var(--accent);font-size:15px}
+.chip-btn{display:inline-flex;align-items:center;gap:7px;background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.3);color:#93C5FD;border-radius:999px;padding:7px 13px;font-size:12.5px;font-weight:700;cursor:pointer;transition:background .18s ease;font-family:inherit}
+.chip-btn:hover{background:rgba(59,130,246,.2)}
+.result-card{background:linear-gradient(180deg,rgba(59,130,246,.12),rgba(59,130,246,.03));border:1px solid rgba(96,165,250,.25);border-radius:14px;padding:18px;margin-top:18px}
+.result-row{display:flex;justify-content:space-between;gap:10px;padding:8px 2px;font-size:14px}
+.result-row+.result-row{border-top:1px dashed rgba(255,255,255,.08)}
+.result-row b{color:#93C5FD;font-weight:800;text-align:right;white-space:nowrap}
+.result-row.hero-row b{color:#6EE7B7;font-size:17px}
+.result-row .sub{color:var(--faint);font-size:12px;font-weight:500}
+.note-row{font-size:12.5px;color:var(--faint);line-height:1.6;margin-top:12px;padding-top:10px;border-top:1px dashed rgba(255,255,255,.1)}
+.mini-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:12.5px}
+.mini-table th{color:var(--faint);text-align:left;font-weight:700;padding:5px 6px;border-bottom:1px solid rgba(255,255,255,.12)}
+.mini-table td{padding:5px 6px;border-bottom:1px solid rgba(255,255,255,.06);color:var(--muted)}
+.mini-table td b{color:var(--ink)}
+</style>
+</head>
+<body data-layout="tool">
+<noscript>
+    <nav aria-label="Primary" style="position:static;display:block;padding:1rem 1.5rem;background:#212529;border-bottom:1px solid #343A40;text-align:center;font-size:0.9rem;">
+        <a href="../../index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Home</a>
+        <a href="../../tools/index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Tools</a>
+        <a href="../../pages/about.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">About</a>
+        <a href="../../pages/contact.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Contact</a>
+    </nav>
+</noscript>
+
+<main class="tool-main">
+  <div class="container">
+
+    <div class="tool-head hero">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="../../tools/index.html">Tools</a></li>
+          <li><a href="../index.html">HVAC Tools</a></li>
+          <li class="current" aria-current="page">Duct Cross-Sectional Area</li>
+        </ol>
+      </nav>
+      <div class="hero-main">
+        <span class="tool-badge"><span class="dot"></span>100% client-side &middot; zero data retention</span>
+        <h1>Duct Cross-Sectional Area</h1>
+        <p>Calculate the inside face area of a round or rectangular duct in square inches, square feet and square metres.</p>
+      </div>
+      <div class="hero-box hero-cat">
+        <h3 class="hero-box-title"><i class="fa-solid fa-folder-open"></i>Category</h3>
+        <div class="tool-meta">
+          <span class="tool-tag"><i class="fa-solid fa-tag"></i>Duct Design</span>
+          <a class="tool-cat" href="../index.html" aria-label="Browse HVAC Tools category"><i class="fa-solid fa-folder"></i>HVAC Tools</a>
+        </div>
+      </div>
+      <div class="hero-box hero-qa">
+        <h3 class="hero-box-title"><i class="fa-solid fa-bolt"></i>Quick Actions</h3>
+        <div class="tool-actions">
+          <button class="rt-btn" type="button" id="btnShare"><i class="fa-solid fa-share-nodes"></i>Share</button>
+          <button class="rt-btn" type="button" id="btnEmbed"><i class="fa-solid fa-code"></i>Embed Tool</button>
+          <a class="rt-btn" href="../../pages/feedback.html"><i class="fa-solid fa-comment"></i>Feedback</a>
+        </div>
+      </div>
+      <div class="hero-box hero-details">
+        <h3 class="hero-box-title"><i class="fa-solid fa-circle-info"></i>Tool Details</h3>
+        <div class="tool-details">
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.github.io/" target="_blank" rel="noopener">F9XR Development Team</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-check-double"></i>Reviewed by</span><a class="detail-value" href="../../press/editorial-policies.html">Review Board</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-clock-rotate-left"></i>Last updated</span><span class="detail-value">5 September 2026</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel clean">
+      <div class="panel-inner">
+        <div class="toolbar-row">
+          <span class="tool-label"><i class="fa-solid fa-shapes" aria-hidden="true"></i>Duct Area</span>
+          <button class="chip-btn" type="button" id="resetBtn" title="Clear inputs and start over"><i class="fa-solid fa-rotate-left"></i><span class="hide-sm">Reset</span></button>
+        </div>
+
+        <div class="calc-grid">
+          <div class="field"><label for="daShape">Duct shape</label><select id="daShape"><option value="round" selected>Round</option><option value="rect">Rectangular</option></select></div><div class="field"><label for="daDia">Round inside diameter (in)</label><input id="daDia" type="number"min="0.5" step="any" value="12"></div><div class="field"><label for="daW">Rect width (in)</label><input id="daW" type="number"min="0.5" step="any" value="16"></div><div class="field"><label for="daH">Rect height (in)</label><input id="daH" type="number"min="0.5" step="any" value="8"></div>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn-primary" type="button" id="copyBtn"><i class="fa-solid fa-copy"></i>Copy result</button>
+        </div>
+
+        <div class="result-card" id="out" aria-live="polite"></div>
+        <p class="proc-line"><i class="fa-solid fa-bolt"></i><span id="proc">Ready - area calculation in this tab.</span></p>
+      </div>
+    </div>
+
+    <aside class="disclaimer" aria-label="Disclaimer">
+      <i class="fa-solid fa-circle-info"></i>
+      <p>Nominal inside-face area computed from the dimensions you enter; field measures (not nominal sizes) give the true flow area. <a href="../../press/disclaimer.html">Full disclaimer</a>.</p>
+    </aside>
+
+    <div class="article-layout">
+      <article class="seo-article">
+
+        <h2 id="what">The area is where velocity hides</h2>
+        <p>Every airflow statement in a duct is CFM divided by area. Knowing the true cross-section of a run - round or rectangular - unlocks velocity checks and sizing math that otherwise rely on a guessed number.</p>
+        <h2 id="round">Round area</h2>
+        <p>Round duct area is &pi;d&sup2;/4. In inches, a 12-inch duct is 113.1 in&sup2;, or 0.785 sq ft - enough for about 785 CFM at 1000 fpm.</p>
+        <h2 id="rect">Rectangular area</h2>
+        <p>Rectangular area is simply width times height. The same 113.1 in&sup2; can appear as a 14 by 8, a 16 by 7, or any other pair - which is why rectangular sizing pairs with the <a href="rectangular-duct-size.html">Rectangular Duct Size</a> and <a href="equivalent-diameter.html">Equivalent Diameter</a> tools.</p>
+        <h2 id="use">Turning area into decisions</h2>
+        <p>Feed the square-foot value into the <a href="duct-velocity.html">Duct Velocity</a> calculator to see what the run actually does at design CFM, or invert it with the placement in the <a href="duct-size-calculator.html">Duct Size Calculator</a>.</p>
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+        <details class="faq-item"><summary>How does duct area affect airflow?</summary><div class="faq-a"><p>Directly - airflow at a given velocity is area times velocity. Double the area and the same velocity carries twice the CFM.</p></div></details>
+        <details class="faq-item"><summary>How do I find the area of a round duct?</summary><div class="faq-a"><p>Square the inside diameter in inches, multiply by &pi; (3.1416), and divide by 4 to get square inches; divide by 144 for square feet.</p></div></details>
+        <details class="faq-item"><summary>Should I use inside or outside dimensions?</summary><div class="faq-a"><p>Use inside (free) dimensions - airflow sees the internal bore, not the sheet-listed nominal size.</p></div></details>
+        <details class="faq-item"><summary>Why does my duct area feel too small?</summary><div class="faq-a"><p>Rectangular ducts are specified by nominal dimensions and often line with restrictions like dampers or splitters. Measure the free opening, not the label.</p></div></details>
+        <h2 id="conclusion">Conclusion</h2>
+        <p>Cross-sectional area is the hinge between geometry and performance. Compute it, label the units, and every velocity check downstream is trustworthy.</p>
+      </article>
+    </div>
+
+    <section class="keyword-box" aria-label="Keywords and tags">
+      <h2>Keyword &amp; Tags</h2>
+      <h3>Keywords</h3>
+      <div class="keywords">
+        <span class="keyword">duct area</span><span class="keyword">cross sectional area</span><span class="keyword">duct cross section</span><span class="keyword">round duct area</span><span class="keyword">rectangular duct area</span><span class="keyword">duct sizing</span><span class="keyword">area calculator</span><span class="keyword">inside area duct</span><span class="keyword">sq ft duct</span><span class="keyword">ventilation area</span>
+      </div>
+      <h3>Tags</h3>
+      <div class="tags">
+        <a class="tag" href="../index.html"><i class="fa-solid fa-tag"></i>Duct Design</a>
+        <a class="tag" href="../index.html"><i class="fa-solid fa-folder"></i>HVAC Tools</a>
+        <a class="tag" href="../../tools/index.html"><i class="fa-solid fa-cube"></i>HVAC</a>
+      </div>
+    </section>
+
+    <section class="author-box" aria-label="About the publisher">
+      <div class="author-avatar" aria-hidden="true"><img src="../../assets/images/logo_nobg.webp" alt="F9XR logo" loading="lazy" decoding="async" width="1407" height="768"></div>
+      <div>
+        <span class="author-role">Published by</span>
+        <h2>F9XR Development Team</h2>
+        <p>Every Troolify tool is built and reviewed by the F9XR Development Team, then checked by our Review Board for correctness, accessibility, and clarity. Tools run 100% client-side with zero data retention.</p>
+        <div class="author-links">
+          <a href="https://f9xr.github.io/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i>F9XR Team</a>
+          <a href="../../press/editorial-policies.html"><i class="fa-solid fa-scale-balanced"></i>Editorial Policies</a>
+          <a href="https://github.com/f9xr" target="_blank" rel="noopener" aria-label="F9XR on GitHub"><i class="fa-brands fa-github"></i>GitHub</a>
+          <a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on LinkedIn"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+          <a href="https://instagram.com/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on Instagram"><i class="fa-brands fa-instagram"></i>Instagram</a>
+          <a href="https://youtube.com/@QuarterlyLIV" target="_blank" rel="noopener" aria-label="F9XR on YouTube"><i class="fa-brands fa-youtube"></i>YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-tools" aria-label="Related tools">
+      <h2>Related Tools</h2>
+      <div class="related-search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" id="relatedSearch" placeholder="Search all Troolify tools&hellip;" autocomplete="off" aria-label="Search related tools">
+      </div>
+      <div class="related-grid" id="relatedGrid" aria-busy="true">
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+      </div>
+    </section>
+
+    <section class="comments" aria-label="Comments">
+      <h2>Comments</h2>
+      <div id="comments">
+        <script src="https://utteranc.es/client.js" repo="f9xr/troolify" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async></script>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"><span></span><i class="fa-solid fa-layer-group"></i><span></span></div>
+
+  </div>
+</main>
+
+<script src="../../assets/js/layout.js" defer></script>
+<script src="../../assets/js/tools-data.js" defer></script>
+<script src="../../assets/js/tool-page.js" defer></script>
+<script>
+(function(){
+  "use strict";
+  function $(id){ return document.getElementById(id); }
+  function fmt(n,d){
+    if(!isFinite(n)) return "&mdash;";
+    var dd = (d===undefined)?2:d;
+    return Number(n.toFixed(dd)).toLocaleString("en-US",{maximumFractionDigits:dd});
+  }
+  var out = $("out"), proc = $("proc"), lastText = "";
+  function calc(){
+
+        var shape = $("daShape").value;
+        var areaIn2;
+        if (shape === "round") {
+          var d = parseFloat($("daDia").value);
+          if (d <= 0) { out.innerHTML = '<p style="margin:0;color:var(--faint);font-size:13.5px">Enter a round diameter.</p>'; lastText = ""; return; }
+          areaIn2 = Math.PI * Math.pow(d, 2) / 4;
+        } else {
+          var w = parseFloat($("daW").value), h = parseFloat($("daH").value);
+          if (w <= 0 || h <= 0) { out.innerHTML = '<p style="margin:0;color:var(--faint);font-size:13.5px">Enter a rectangular width and height.</p>'; lastText = ""; return; }
+          areaIn2 = w * h;
+        }
+        var areaFt2 = areaIn2 / 144;
+        var areaM2 = areaIn2 * 0.00064516;
+        out.innerHTML =
+          '<div class="result-row hero-row"><span>Face area</span><b>' + fmt(areaIn2, 2) + " in&sup2;</b></div>" +
+          '<div class="result-row"><span>In square feet</span><b>' + fmt(areaFt2, 4) + " sq ft</b></div>" +
+          '<div class="result-row"><span>In square metres</span><b>' + fmt(areaM2, 4) + " m&sup2;</b></div>" +
+          '<div class="note-row">Use the area with velocity: CFM = face velocity &times; area (sq ft). Area is the missing piece that links duct size to airflow performance.</div>';
+        lastText = "Duct cross-sectional area\nArea: " + areaIn2.toFixed(2) + " in² = " + areaFt2.toFixed(4) + " sq ft = " + areaM2.toFixed(4) + " m²";
+        proc.textContent = "Calculated in this tab - exact geometry. 0 bytes uploaded.";
+      
+  }
+  var inputs = ["daShape", "daDia", "daW", "daH"];
+  inputs.forEach(function(id){ var el=$(id); if(el){ el.addEventListener("input",calc); el.addEventListener("change",calc); } });
+  $("resetBtn").addEventListener("click", function(){
+    var defs = {"daShape":"round","daDia":"12","daW":"16","daH":"8"};
+    Object.keys(defs).forEach(function(id){ var el=$(id); if(el) el.value = defs[id]; });
+    calc();
+  });
+  $("copyBtn").addEventListener("click", function(){
+    if(!lastText) return;
+    window.Troolify.copyToClipboard(lastText, function(){ proc.textContent = "Copied to clipboard - the bytes never left your device."; });
+  });
+  calc();
+})();
+</script>
+</body>
+</html>

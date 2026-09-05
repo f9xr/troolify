@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multi-Hood Exhaust Planner | Connected Flow & Active Standby Scenario</title>
+<meta name="description" content="Compare total connected exhaust flow with an active/standby hood scenario - sorted hood list, active total and standby margin. Free and client-side.">
+<meta name="author" content="F9XR Development Team">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#212529">
+<link rel="canonical" href="https://f9xr.github.io/troolify/tools/hvac/multi-hood-exhaust-planner.html">
+<meta property="og:site_name" content="Troolify">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Multi-Hood Exhaust Planner | Connected Flow & Active Standby Scenario">
+<meta property="og:description" content="Compare total connected exhaust flow with an active/standby hood scenario - sorted hood list, active total and standby margin. Free and client-side.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://f9xr.github.io/troolify/tools/hvac/multi-hood-exhaust-planner.html">
+<meta property="og:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-09-05">
+<meta property="article:modified_time" content="2026-09-05">
+<meta property="article:section" content="HVAC Tools">
+<meta property="article:tag" content="Multi-Hood Exhaust Planner">
+<meta property="article:tag" content="HVAC Tools">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Multi-Hood Exhaust Planner | Connected Flow & Active Standby Scenario">
+<meta name="twitter:description" content="Compare total connected exhaust flow with an active/standby hood scenario - sorted hood list, active total and standby margin. Free and client-side.">
+<meta name="twitter:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://f9xr.github.io/troolify/index.html"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://f9xr.github.io/troolify/tools/index.html"},{"@type":"ListItem","position":3,"name":"HVAC Tools","item":"https://f9xr.github.io/troolify/tools/hvac/index.html"},{"@type":"ListItem","position":4,"name":"Multi-Hood Exhaust Planner","item":"https://f9xr.github.io/troolify/tools/hvac/multi-hood-exhaust-planner.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Multi-Hood Exhaust Planner","url":"https://f9xr.github.io/troolify/tools/hvac/multi-hood-exhaust-planner.html","applicationCategory":"UtilitiesApplication","applicationSubCategory":"Lab Exhaust Estimator","operatingSystem":"Any (web browser)","featureList":["One CFM per line input","Sorts hoods by size","Controlled active hood count","Connected vs active totals","Standby margin output","100% client-side"],"description":"Compare total connected exhaust flow with an active/standby hood scenario - sorted hood list, active total and standby margin. Free and client-side.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"datePublished":"2026-09-05","dateModified":"2026-09-05","author":{"@type":"Organization","name":"F9XR Development Team","url":"https://f9xr.github.io/"},"publisher":{"@type":"Organization","name":"Troolify","url":"https://f9xr.github.io/troolify/","logo":{"@type":"ImageObject","url":"https://f9xr.github.io/troolify/assets/images/logo_nobg.webp","width":1407,"height":768}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[]}</script>
+<link rel="icon" type="image/webp" href="../../assets/images/favicon.webp"><link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+<link rel="stylesheet" href="../../assets/css/tailwind.css">
+<link rel="stylesheet" href="../../assets/css/tool.css">
+<link rel="stylesheet" href="../../assets/css/site-shell.css">
+<link rel="stylesheet" href="../../assets/css/tool-page.css">
+<link rel="stylesheet" href="../../assets/css/seo-article.css">
+<style>
+.calc-grid{display:grid;grid-template-columns:1fr;gap:18px}
+@media(min-width:720px){.calc-grid{grid-template-columns:1fr 1fr}}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.area{grid-column:1/-1}
+.field label{font-size:12.5px;font-weight:700;color:var(--muted)}
+.field .hint{font-size:11.5px;color:var(--faint);font-weight:500}
+.field input,.field select{background:#1B2028;border:1px solid var(--border);color:var(--ink);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:15px;font-weight:600;outline:none;width:100%;box-sizing:border-box}
+.field textarea{background:#1B2028;border:1px solid var(--border);color:var(--ink);border-radius:10px;padding:12px;font-family:inherit;font-size:14px;font-weight:500;outline:none;width:100%;box-sizing:border-box;min-height:96px;resize:vertical;line-height:1.5}
+.field textarea::placeholder{color:var(--faint)}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+.toolbar-row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+.tool-label{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.tool-label i{color:var(--accent);font-size:15px}
+.chip-btn{display:inline-flex;align-items:center;gap:7px;background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.3);color:#93C5FD;border-radius:999px;padding:7px 13px;font-size:12.5px;font-weight:700;cursor:pointer;transition:background .18s ease;font-family:inherit}
+.chip-btn:hover{background:rgba(59,130,246,.2)}
+.result-card{background:linear-gradient(180deg,rgba(59,130,246,.12),rgba(59,130,246,.03));border:1px solid rgba(96,165,250,.25);border-radius:14px;padding:18px;margin-top:18px}
+.result-row{display:flex;justify-content:space-between;gap:10px;padding:8px 2px;font-size:14px}
+.result-row+.result-row{border-top:1px dashed rgba(255,255,255,.08)}
+.result-row b{color:#93C5FD;font-weight:800;text-align:right;white-space:nowrap}
+.result-row.hero-row b{color:#6EE7B7;font-size:17px}
+.result-row .sub{color:var(--faint);font-size:12px;font-weight:500}
+.note-row{font-size:12.5px;color:var(--faint);line-height:1.6;margin-top:12px;padding-top:10px;border-top:1px dashed rgba(255,255,255,.1)}
+.mini-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:12.5px}
+.mini-table th{color:var(--faint);text-align:left;font-weight:700;padding:5px 6px;border-bottom:1px solid rgba(255,255,255,.12)}
+.mini-table td{padding:5px 6px;border-bottom:1px solid rgba(255,255,255,.06);color:var(--muted)}
+.mini-table td b{color:var(--ink)}
+</style>
+</head>
+<body data-layout="tool">
+<noscript>
+    <nav aria-label="Primary" style="position:static;display:block;padding:1rem 1.5rem;background:#212529;border-bottom:1px solid #343A40;text-align:center;font-size:0.9rem;">
+        <a href="../../index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Home</a>
+        <a href="../../tools/index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Tools</a>
+        <a href="../../pages/about.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">About</a>
+        <a href="../../pages/contact.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Contact</a>
+    </nav>
+</noscript>
+
+<main class="tool-main">
+  <div class="container">
+
+    <div class="tool-head hero">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="../../tools/index.html">Tools</a></li>
+          <li><a href="../index.html">HVAC Tools</a></li>
+          <li class="current" aria-current="page">Multi-Hood Exhaust Planner</li>
+        </ol>
+      </nav>
+      <div class="hero-main">
+        <span class="tool-badge"><span class="dot"></span>100% client-side &middot; zero data retention</span>
+        <h1>Multi-Hood Exhaust Planner</h1>
+        <p>Compare the connected exhaust flow with a documented active and standby scenario - so exhaust sizing has an honest demand basis.</p>
+      </div>
+      <div class="hero-box hero-cat">
+        <h3 class="hero-box-title"><i class="fa-solid fa-folder-open"></i>Category</h3>
+        <div class="tool-meta">
+          <span class="tool-tag"><i class="fa-solid fa-tag"></i>Lab Exhaust</span>
+          <a class="tool-cat" href="../index.html" aria-label="Browse HVAC Tools category"><i class="fa-solid fa-folder"></i>HVAC Tools</a>
+        </div>
+      </div>
+      <div class="hero-box hero-qa">
+        <h3 class="hero-box-title"><i class="fa-solid fa-bolt"></i>Quick Actions</h3>
+        <div class="tool-actions">
+          <button class="rt-btn" type="button" id="btnShare"><i class="fa-solid fa-share-nodes"></i>Share</button>
+          <button class="rt-btn" type="button" id="btnEmbed"><i class="fa-solid fa-code"></i>Embed Tool</button>
+          <a class="rt-btn" href="../../pages/feedback.html"><i class="fa-solid fa-comment"></i>Feedback</a>
+        </div>
+      </div>
+      <div class="hero-box hero-details">
+        <h3 class="hero-box-title"><i class="fa-solid fa-circle-info"></i>Tool Details</h3>
+        <div class="tool-details">
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.github.io/" target="_blank" rel="noopener">F9XR Development Team</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-check-double"></i>Reviewed by</span><a class="detail-value" href="../../press/editorial-policies.html">Review Board</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-clock-rotate-left"></i>Last updated</span><span class="detail-value">5 September 2026</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel clean">
+      <div class="panel-inner">
+        <div class="toolbar-row">
+          <span class="tool-label"><i class="fa-solid fa-layer-group" aria-hidden="true"></i>Connected vs Active Exhaust</span>
+          <button class="chip-btn" type="button" id="resetBtn" title="Clear inputs and start over"><i class="fa-solid fa-rotate-left"></i><span class="hide-sm">Reset</span></button>
+        </div>
+
+        <div class="calc-grid">
+          <div class="field"><label for="mhList">Hood exhaust flow (CFM) - one per line</label><span class="hint">Typical 70-100 CFM per foot of hood width at operating sash, varying by hood class</span><textarea id="mhList"placeholder="e.g.  750
+650
+900
+500"></textarea></div><div class="field"><label for="mhActive">Hoods operating simultaneously</label><input id="mhActive" type="number"min="1" max="99" step="1" value="2"></div>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn-primary" type="button" id="copyBtn"><i class="fa-solid fa-copy"></i>Copy result</button>
+        </div>
+
+        <div class="result-card" id="out" aria-live="polite"></div>
+        <p class="proc-line"><i class="fa-solid fa-bolt"></i><span id="proc">Ready - list each hood's CFM to plan connected vs active flow.</span></p>
+      </div>
+    </div>
+
+    <aside class="disclaimer" aria-label="Disclaimer">
+      <i class="fa-solid fa-circle-info"></i>
+      <p>A scenario planner, not a code compliance tool. Active-count assumptions must be reconciled with the lab's ventilation standard and ability report before sizing fans. <a href="../../press/disclaimer.html">Full disclaimer</a>.</p>
+    </aside>
+
+    <div class="article-layout">
+      <article class="seo-article">
+
+        <h2 id="demand">Demand is a scenario, not a sum</h2>
+        <p>Exhaust systems sized for every hood running at full sash at once waste fan capacity and energy. The demand basis is a scenario: which hoods are realistically active together, and what stands by for the rest. Comparing connected to active flow makes that scenario explicit.</p>
+        <h2 id="method">How the planner works</h2>
+        <p>List each hood's exhaust CFM; the planner sums the total connection and the 'active N largest' scenario, then reports the standby margin the exhaust system must still be able to call on. Sorted largest-first means the active assumption tests the heaviest realistic combination.</p>
+        <h2 id="caveat">Scenario is not compliance</h2>
+        <p>Active-count assumptions must honour the lab's ventilation standard and chemical risk assessment - a hood that can be 'off' in a scenario can still be needed suddenly. The planner documents the choice; the EH&S review owns it.</p>
+        <h2 id="pair">Into the make-up air side</h2>
+        <p>Exhausted air must be replaced. Take the active-total airflow into the <a href="fume-hood-exhaust-load.html">Fume Hood Exhaust Load</a> calculator to price the conditioning load of the make-up air.</p>
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+        <details class="faq-item"><summary>How do I size a multi-hood exhaust system?</summary><div class="faq-a"><p>Document the connected CFM (all hoods) and a justified active scenario, then size the fan and make-up system to support the active case with standby headroom.</p></div></details>
+        <details class="faq-item"><summary>What is a standby margin?</summary><div class="faq-a"><p>The difference between total connected flow and the active scenario - capacity the exhaust plant retains for when more hoods come online.</p></div></details>
+        <details class="faq-item"><summary>How much CFM does a fume hood need?</summary><div class="faq-a"><p>At the design sash height, roughly 70-100 CFM per linear foot of hood width at the target face velocity - the hood's class and the standard decide the exact value.</p></div></details>
+        <details class="faq-item"><summary>Can I rely on 'box fan' makes-up air?</summary><div class="faq-a"><p>Only with real engineering - exhausted labs need balanced make-up air at the right temperature and humidity, which is exactly what the exhaust-load tool prices.</p></div></details>
+        <h2 id="conclusion">Conclusion</h2>
+        <p>Multi-hood demand is a documented scenario. Compute connected vs active, keep the margin visible, and let the ventilation standard own the verdict.</p>
+      </article>
+    </div>
+
+    <section class="keyword-box" aria-label="Keywords and tags">
+      <h2>Keyword &amp; Tags</h2>
+      <h3>Keywords</h3>
+      <div class="keywords">
+        <span class="keyword">multi hood exhaust</span><span class="keyword">fume hood exhaust sizing</span><span class="keyword">connected flow</span><span class="keyword">active standby</span><span class="keyword">lab exhaust planner</span><span class="keyword">simultaneous hood use</span><span class="keyword">ventilation demand</span><span class="keyword">hi hood</span><span class="keyword">exhaust capacity</span><span class="keyword">lab ventilation</span>
+      </div>
+      <h3>Tags</h3>
+      <div class="tags">
+        <a class="tag" href="../index.html"><i class="fa-solid fa-tag"></i>Lab Exhaust</a>
+        <a class="tag" href="../index.html"><i class="fa-solid fa-folder"></i>HVAC Tools</a>
+        <a class="tag" href="../../tools/index.html"><i class="fa-solid fa-cube"></i>HVAC</a>
+      </div>
+    </section>
+
+    <section class="author-box" aria-label="About the publisher">
+      <div class="author-avatar" aria-hidden="true"><img src="../../assets/images/logo_nobg.webp" alt="F9XR logo" loading="lazy" decoding="async" width="1407" height="768"></div>
+      <div>
+        <span class="author-role">Published by</span>
+        <h2>F9XR Development Team</h2>
+        <p>Every Troolify tool is built and reviewed by the F9XR Development Team, then checked by our Review Board for correctness, accessibility, and clarity. Tools run 100% client-side with zero data retention.</p>
+        <div class="author-links">
+          <a href="https://f9xr.github.io/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i>F9XR Team</a>
+          <a href="../../press/editorial-policies.html"><i class="fa-solid fa-scale-balanced"></i>Editorial Policies</a>
+          <a href="https://github.com/f9xr" target="_blank" rel="noopener" aria-label="F9XR on GitHub"><i class="fa-brands fa-github"></i>GitHub</a>
+          <a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on LinkedIn"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+          <a href="https://instagram.com/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on Instagram"><i class="fa-brands fa-instagram"></i>Instagram</a>
+          <a href="https://youtube.com/@QuarterlyLIV" target="_blank" rel="noopener" aria-label="F9XR on YouTube"><i class="fa-brands fa-youtube"></i>YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-tools" aria-label="Related tools">
+      <h2>Related Tools</h2>
+      <div class="related-search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" id="relatedSearch" placeholder="Search all Troolify tools&hellip;" autocomplete="off" aria-label="Search related tools">
+      </div>
+      <div class="related-grid" id="relatedGrid" aria-busy="true">
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+      </div>
+    </section>
+
+    <section class="comments" aria-label="Comments">
+      <h2>Comments</h2>
+      <div id="comments">
+        <script src="https://utteranc.es/client.js" repo="f9xr/troolify" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async></script>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"><span></span><i class="fa-solid fa-layer-group"></i><span></span></div>
+
+  </div>
+</main>
+
+<script src="../../assets/js/layout.js" defer></script>
+<script src="../../assets/js/tools-data.js" defer></script>
+<script src="../../assets/js/tool-page.js" defer></script>
+<script>
+(function(){
+  "use strict";
+  function $(id){ return document.getElementById(id); }
+  function fmt(n,d){
+    if(!isFinite(n)) return "&mdash;";
+    var dd = (d===undefined)?2:d;
+    return Number(n.toFixed(dd)).toLocaleString("en-US",{maximumFractionDigits:dd});
+  }
+  var out = $("out"), proc = $("proc"), lastText = "";
+  function calc(){
+
+        var raw = $("mhList").value;
+        var flows = raw.split(/[\s,;]+/).map(function (s) { return parseFloat(s); }).filter(function (n) { return isFinite(n) && n >= 0; });
+        if (!flows.length) {
+          out.innerHTML = '<p style="margin:0;color:var(--faint);font-size:13.5px">Enter at least one hood airflow value.</p>';
+          lastText = "";
+          return;
+        }
+        var sorted = flows.slice().sort(function (a, b) { return b - a; });
+        var total = sorted.reduce(function (a, b) { return a + b; }, 0);
+        var act = Math.min(sorted.length, Math.max(1, Math.round($("mhActive").value) || 1));
+        var activeTotal = sorted.slice(0, act).reduce(function (a, b) { return a + b; }, 0);
+        var margin = total - activeTotal;
+        var rows = "";
+        sorted.forEach(function (f, i) {
+          rows += '<tr><td>Hood ' + (i + 1) + "</td><td>" + fmt(f) + " CFM</td><td>" + (i < act ? "ACTIVE" : "standby") + "</td></tr>";
+        });
+        out.innerHTML =
+          '<div class="result-row hero-row"><span>Connected (all hoods) flow</span><b>' + fmt(total) + " CFM</b></div>" +
+          '<div class="result-row"><span>Active scenario (' + act + ' hoods)</span><b>' + fmt(activeTotal) + " CFM</b></div>" +
+          '<div class="result-row"><span>Standby margin</span><b>' + fmt(margin) + " CFM</b></div>" +
+          '<div class="result-row"><span>Hood count</span><b>' + sorted.length + "</b></div>" +
+          '<div class="note-row">Sized worst-case: connected flow (all hoods) vs an active+standby scenario. Sorted largest-first; validate the active count against the laboratory ventilation standard.</div>' +
+          '<table class="mini-table"><tr><th>Source</th><th>Flow</th><th>Role</th></tr>' + rows + "</table>";
+        lastText = "Multi-hood exhaust planner\nHoods: " + sorted.length + " | Connected " + fmt(total) + " CFM\nActive " + act + " = " + fmt(activeTotal) + " CFM | standby margin " + fmt(margin) + " CFM";
+        proc.textContent = "Planned in this tab - documented scenario. 0 bytes uploaded.";
+      
+  }
+  var inputs = ["mhList", "mhActive"];
+  inputs.forEach(function(id){ var el=$(id); if(el){ el.addEventListener("input",calc); el.addEventListener("change",calc); } });
+  $("resetBtn").addEventListener("click", function(){
+    var defs = {"mhList":"","mhActive":"2"};
+    Object.keys(defs).forEach(function(id){ var el=$(id); if(el) el.value = defs[id]; });
+    calc();
+  });
+  $("copyBtn").addEventListener("click", function(){
+    if(!lastText) return;
+    window.Troolify.copyToClipboard(lastText, function(){ proc.textContent = "Copied to clipboard - the bytes never left your device."; });
+  });
+  calc();
+})();
+</script>
+</body>
+</html>
