@@ -1,0 +1,43 @@
+# Troolify - AI Agent Information
+
+> Free, privacy-first online tools hub. All tools run 100% client-side in the browser - no data leaves your device.
+
+## Site Overview
+- **Name**: Troolify
+- **Type**: Static website with client-side tools
+- **URL**: https://f9xr.github.io/troolify/
+- **Repository**: https://github.com/f9xr/troolify
+- **Team**: F9XR Team
+- **Contact**: tontufytservices@gmail.com
+
+## Key Features
+- Free forever, no sign-up required
+- 100% client-side processing, zero data retention
+- Privacy-first architecture - no server uploads
+- 70+ tools across 20 categories
+- Responsive design, works on all devices
+
+## Tools by Category
+- **Text Tools**: Word counter, numeronym generator, random word generator
+- **Developer Tools**: JSON formatter, code beautifier, URL encoder/decoder, CSV to JSON, SHA hash generator
+- **SEO Tools**: Schema markup generator, multiline slug generator
+- **Audio Tools**: Song length calculator, BPM tools
+- **Health Tools**: Ovulation calculator, macro calculator, TDEE calculator, body fat percentage, pregnancy due date
+- **HVAC Tools**: Load calculators, duct sizing, refrigeration tools, psychrometric calculator
+- **Finance Tools**: VAT calculator
+- **Image Tools**: Color converter
+- **Converters**: Markdown to Word/PDF
+- **Password Tools**: Password generator, entropy calculator
+
+## Technical Details
+- Built with: HTML5, vanilla JavaScript, Tailwind CSS
+- Hosting: GitHub Pages
+- No backend required
+- No user accounts or tracking
+- All processing happens in the browser
+
+## For AI Agents
+- Read `llms.txt` for detailed tool descriptions
+- Visit `/pages/sitemap.html` for complete site map
+- All tool pages follow pattern: `/tools/{category}/{tool-name}.html`
+- Each tool is self-contained with no external dependencies

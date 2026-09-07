@@ -1,45 +1,38 @@
 Some suggest tools, we can add:
 
 
+add ai.txt file 
+
+update:
+https://nicklaunches.com/products/troolify/
 
 
+add these embeds under featured on section:
+<a href="https://makerhunt.io/project/troolify" target="_blank" rel="noopener" title="Featured on MakerHunt">
+  <img src="https://makerhunt.io/badges/makerhunt-badge-dark.svg" alt="Featured on MakerHunt" width="200" height="60" />
+</a>
 
-todo we will be working on SEO of this website 
+<a href="https://daniellaunches.com" target="_blank">
+  <img src="https://daniellaunches.com/badge-dark.svg" alt="Featured on DanielLaunches" width="220" height="48" />
+</a>
 
+<a href="https://sidehunt.io/project/troolify" target="_blank" rel="noopener" title="View project on Sidehunt">
+  <img src="https://sidehunt.io/badges/sidehunt-badge-dark.svg" alt="Featured on Sidehunt" width="200" height="60" />
+</a>
 
-objective:
-Rank 1st on Google on muliple keywords
-E-E-A-T 
-Featured on Google Discover
-Ready for Google Adsense (once ready for approval)
+<a href="https://www.launchit.site/launches/troolify" target="_blank" rel="noopener">
+  <img src="https://www.launchit.site/badges/launchit-dark.svg" alt="Troolify - Featured on Launchit" width="200" height="54" />
+</a>
 
+<a href="https://www.scrolllaunch.com/products/troolify?ref=badge" target="_blank" rel="noopener">
+  <img src="https://www.scrolllaunch.com/api/badge/troolify?variant=launched&theme=dark"
+       alt="Troolify - Featured on ScrollLaunch"
+       width="220" height="48" />
+</a>
 
-better:
-sitemap.xml
-feed.xml
-atom.xml
-Technical SEO
-Onpage SEO
-Meta tags
-Sechma Markup 
+<a href="https://similarlabs.com" target="_blank" rel="noopener"><img src="https://similarlabs.com/similarlabs-embed-badge-light.svg" alt="Featured on SimilarLabs" /></a>
 
-
-
-F9XR Social Links:
-https://linkedin.com/company/f9xrteam
-https://github.com/f9xr
-https://pinterest.com/f9xr
-https://facebook.com/profile.php?id=61586225441401
-https://youtube.com/@QuarterlyLIV
-https://instagram.com/f9xrteam
-https://www.tumblr.com/f9xr
-https://www.threads.com/@f9xrteam
+<a href="https://saaspa.ge/product/cmtrcv79b000lkz04oe9z27o9" target="_blank" rel="nofollow">
 
 
-We dont have any twiiter account 
-
-
-
-
-
-dont delete file plz
+make sure links present in the url, they verify the backlinks

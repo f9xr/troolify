@@ -89,7 +89,28 @@
         '</a>' +
         '<span class="badge-link">' +
             '<a href="https://www.stork.ai/" rel="nofollow" title="Stork Verified — stork.ai AI tools directory"><img src="https://www.stork.ai/badge/verified-dark.svg" alt="Stork Verified — stork.ai AI tools directory" width="216" height="44" /></a>' +
-        '</span>';
+        '</span>' +
+        '<a class="badge-link" href="https://makerhunt.io/project/troolify" target="_blank" rel="noopener noreferrer" title="Featured on MakerHunt">' +
+            '<img src="https://makerhunt.io/badges/makerhunt-badge-dark.svg" alt="Featured on MakerHunt" width="200" height="60" loading="lazy" decoding="async" />' +
+        '</a>' +
+        '<a class="badge-link" href="https://daniellaunches.com" target="_blank" rel="noopener noreferrer">' +
+            '<img src="https://daniellaunches.com/badge-dark.svg" alt="Featured on DanielLaunches" width="220" height="48" loading="lazy" decoding="async" />' +
+        '</a>' +
+        '<a class="badge-link" href="https://sidehunt.io/project/troolify" target="_blank" rel="noopener noreferrer" title="View project on Sidehunt">' +
+            '<img src="https://sidehunt.io/badges/sidehunt-badge-dark.svg" alt="Featured on Sidehunt" width="200" height="60" loading="lazy" decoding="async" />' +
+        '</a>' +
+        '<a class="badge-link" href="https://www.launchit.site/launches/troolify" target="_blank" rel="noopener noreferrer">' +
+            '<img src="https://www.launchit.site/badges/launchit-dark.svg" alt="Troolify - Featured on Launchit" width="200" height="54" loading="lazy" decoding="async" />' +
+        '</a>' +
+        '<a class="badge-link" href="https://www.scrolllaunch.com/products/troolify?ref=badge" target="_blank" rel="noopener noreferrer">' +
+            '<img src="https://www.scrolllaunch.com/api/badge/troolify?variant=launched&theme=dark" alt="Troolify - Featured on ScrollLaunch" width="220" height="48" loading="lazy" decoding="async" />' +
+        '</a>' +
+        '<a class="badge-link" href="https://similarlabs.com" target="_blank" rel="noopener noreferrer">' +
+            '<img src="https://similarlabs.com/similarlabs-embed-badge-light.svg" alt="Featured on SimilarLabs" loading="lazy" decoding="async" />' +
+        '</a>' +
+        '<a class="badge-link" href="https://saaspa.ge/product/cmtrcv79b000lkz04oe9z27o9" target="_blank" rel="nofollow">' +
+            '<img src="https://saaspa.ge/api/embed/product/cmtrcv79b000lkz04oe9z27o9/badge.png?theme=black" alt="Featured on Saaspa.ge" width="200" height="60" loading="lazy" decoding="async" />' +
+        '</a>';
 
     /* ------------------------------------------------------------------------
        Dashboard right-sidebar builder
