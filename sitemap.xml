@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://f9xr.github.io/troolify/index.html</loc>
@@ -115,14 +115,50 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://f9xr.github.io/troolify/tools/coding/compress-html.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://f9xr.github.io/troolify/tools/coding/csv-to-json-converter.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://f9xr.github.io/troolify/tools/coding/html-character-encoding.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://f9xr.github.io/troolify/tools/coding/html-entity-encoder.html</loc>
     <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/troolify/tools/coding/html-list-generator.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/troolify/tools/coding/html-table-generator.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/troolify/tools/coding/html-text-generator.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/troolify/tools/coding/html-to-text-converter.html</loc>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -145,8 +181,20 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://f9xr.github.io/troolify/tools/coding/remove-html-tags.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://f9xr.github.io/troolify/tools/coding/sha-hash-generator.html</loc>
     <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/troolify/tools/coding/uncompress-html.html</loc>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -159,6 +207,18 @@
   <url>
     <loc>https://f9xr.github.io/troolify/tools/coding/uuid-generator.html</loc>
     <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/troolify/tools/converters/csv-to-html-table.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/troolify/tools/converters/email-to-html.html</loc>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -177,6 +237,30 @@
   <url>
     <loc>https://f9xr.github.io/troolify/tools/converters/markdown-to-word-converter.html</loc>
     <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/troolify/tools/converters/plain-text-to-html.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/troolify/tools/converters/urls-to-html-links.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/troolify/tools/converters/word-to-clean-html.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/troolify/tools/converters/word-to-text.html</loc>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -409,13 +493,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-  <url>
-    <loc>https://f9xr.github.io/troolify/tools/hvac/index.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://f9xr.github.io/troolify/tools/hvac/ach-calculator.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
@@ -530,6 +607,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://f9xr.github.io/troolify/tools/hvac/index.html</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://f9xr.github.io/troolify/tools/hvac/m3h-to-cfm.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
@@ -595,8 +678,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+  <url>
     <loc>https://f9xr.github.io/troolify/tools/image/aspect-ratio-calculator.html</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -637,6 +721,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://f9xr.github.io/troolify/tools/misc/mailto-link-generator.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://f9xr.github.io/troolify/tools/misc/password-entropy-calculator.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
@@ -645,6 +735,18 @@
   <url>
     <loc>https://f9xr.github.io/troolify/tools/misc/password-generator.html</loc>
     <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/troolify/tools/misc/random-choice-generator.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/troolify/tools/misc/random-decision-maker.html</loc>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -667,14 +769,80 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://f9xr.github.io/troolify/tools/pdf/excel-to-pdf.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/troolify/tools/pdf/images-to-pdf.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://f9xr.github.io/troolify/tools/pdf/index.html</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://f9xr.github.io/troolify/tools/pdf/merge-pdfs.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://f9xr.github.io/troolify/tools/pdf/paper-size-converter.html</loc>
     <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/troolify/tools/pdf/pdf-metadata-viewer.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/troolify/tools/pdf/pdf-to-grayscale.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/troolify/tools/pdf/pdf-to-text.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/troolify/tools/pdf/remove-pdf-metadata.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/troolify/tools/pdf/remove-pdf-pages.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/troolify/tools/pdf/text-to-pdf.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/troolify/tools/pdf/unredact-pdf.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/troolify/tools/pdf/word-to-pdf.html</loc>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -733,8 +901,44 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://f9xr.github.io/troolify/tools/text/add-line-breaks.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/troolify/tools/text/backwards-text-generator.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/troolify/tools/text/bold-text-generator.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://f9xr.github.io/troolify/tools/text/character-case-converter.html</loc>
     <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/troolify/tools/text/cursive-text-generator.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/troolify/tools/text/empty-line-remover.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/troolify/tools/text/fake-word-generator.html</loc>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -743,6 +947,12 @@
     <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/troolify/tools/text/line-breaks-to-paragraphs.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://f9xr.github.io/troolify/tools/text/lorem-ipsum-generator.html</loc>
@@ -763,14 +973,110 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://f9xr.github.io/troolify/tools/text/paragraphs-to-single-line.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/troolify/tools/text/random-adjectives-generator.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/troolify/tools/text/random-noun-generator.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/troolify/tools/text/random-sentence-generator.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/troolify/tools/text/random-string-generator.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://f9xr.github.io/troolify/tools/text/random-word-generator.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://f9xr.github.io/troolify/tools/text/remove-duplicate-lines.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/troolify/tools/text/remove-line-breaks.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/troolify/tools/text/remove-numbers.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/troolify/tools/text/remove-spaces.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/troolify/tools/text/repeat-text-generator.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/troolify/tools/text/replace-text.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/troolify/tools/text/sentences-counter.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/troolify/tools/text/sort-list-alphabetically.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/troolify/tools/text/tabs-to-spaces.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://f9xr.github.io/troolify/tools/text/text-to-slug-converter.html</loc>
     <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/troolify/tools/text/tiny-text-generator.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://f9xr.github.io/troolify/tools/text/title-case-converter.html</loc>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -853,4 +1159,3 @@
     <priority>0.9</priority>
   </url>
 </urlset>
-

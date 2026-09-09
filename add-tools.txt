@@ -1,38 +1,143 @@
 Some suggest tools, we can add:
 
 
-add ai.txt file 
+PNG
+PNG to SVG converter
+Convert PNG to SVG online for free.
 
-update:
-https://nicklaunches.com/products/troolify/
+JPG
+JPG to SVG converter
+Convert JPG and JPEG images to SVG for free.
+
+JPG
+JPG to PNG converter
+Convert JPG and JPEG images to PNG for free.
+
+WebP
+WebP to PNG converter
+Convert WebP images to PNG online for free.
+
+SVG
+SVG compressor
+Compress SVG files online for free.
+
+PNG
+PNG compressor
+Compress PNG images online for free.
+
+JPG
+JPG compressor
+Compress JPG and JPEG photos online for free.
+
+Compress Image
+Compress JPG, PNG, SVG, and GIFs while saving space and maintaining quality.
+
+Resize Image
+Resize by pixel or percent with Fit or Fill & Crop — plus one-click Instagram, Facebook, X and LinkedIn presets.
+
+Crop Image
+Crop JPG, PNG, or GIFs with ease; Choose pixels to define your rectangle or use our visual editor.
+
+Convert Image
+Auto-detects your image format and converts to JPG, PNG, WEBP, BMP or PDF in bulk.
+
+Adjust Light & Color
+Adjust light and color — exposure, contrast, highlights, shadows, whites, blacks, temperature and tint.
+
+Remove Background
+Erase the background from any photo automatically with on-device AI — export a transparent PNG or drop in a solid color. Nothing is uploaded.
+
+Mockup Frame
+Wrap screenshots in browser, phone, tablet, laptop, or monitor frames with gradient, pattern or image backgrounds, headings, shadows, and 3D tilt.
+
+Watermark Image
+Professional text or logo watermarks — 9-point positioning, opacity, rotation, color, shadow, and diagonal tiling.
+
+Rotate Image
+Rotate many images JPG, PNG or GIF at same time. Choose to rotate only landscape or portrait images!
+
+Photo Album
+Turn your photos into a professional print-ready album with a cover, page layouts and PDF export.
+
+EXIF Data & Metadata
+View camera, lens, exposure and GPS metadata in a clean table — then export a clean copy that strips it all for privacy.
+
+Draw
+Paint freehand with 8 brush styles, flood-fill regions and pick colors on a full canvas — with a File menu to open, start new and export.
 
 
-add these embeds under featured on section:
-<a href="https://makerhunt.io/project/troolify" target="_blank" rel="noopener" title="Featured on MakerHunt">
-  <img src="https://makerhunt.io/badges/makerhunt-badge-dark.svg" alt="Featured on MakerHunt" width="200" height="60" />
-</a>
+Line Break Tools
+Remove Line Breaks
+Add Line Breaks
+Empty Line Remover
+Remove Duplicate Lines
+Convert Line Breaks to Paragraphs
+Paragraphs to Single Line
+HTML Code Generators
+HTML to Text Converter
+Remove HTML Tags
+HTML Table Generator
+HTML List Generator
+HTML Text Generator
+Content Conversion Tools
+Convert Word to Clean HTML
+Convert Word to Text
+Convert Plain Text to HTML
+Convert Email to HTML
+Convert URLs to HTML Links
+Convert CSV Text to HTML Table
+Random Words and Text
+Random Word Generator
+Random Sentence Generator
+Random Noun Generator
+Random Adjectives Generator
+Random String Generator
+HTML Compression & Encoding
+Compress HTML Code
+Uncompress HTML Code
+HTML Character Encoding Tool
+Encode URL
+PDF Conversion Tools
+Convert Word to PDF
+Convert Excel to PDF
+Convert Multiple Images to PDF
+Text File to PDF Converter
+PDF to Text
+Convert PDF to Text
+Convert PDF to Grayscale
+Merge Multiple PDFs into one PDF
+Remove Pages from a PDF
+PDF Metadata Viewer
+Remove PDF Metadata
+Unredact a PDF
+Text Changing Tools
+Sort List Alphabetically
+Replace Text Online
+Title Case Converter
+Uppercase or Lowercase Text
+Remove Spaces Online
+Convert Tabs to Spaces
+Capitalize Each Word Online
+Remove Numbers from Text
+Word Frequency Counter
+Sentences Counter
+Count Characters in Text
+Random Generators & Email
+Random Decision Maker
+Random Choice Generator
+Random Number Generator
+Random Password Generator
+Random Letter Generator
+Convert Email to HTML
+Convert a URL into a HTML Link
+Mailto Link Generator
+Fun Text Tools
+Backwards Text Generator
+Fake Word Generator
+Repeat Text Generator
+Tiny Text Generator
+Cursive Text Generator
+Bold Text Generator
 
-<a href="https://daniellaunches.com" target="_blank">
-  <img src="https://daniellaunches.com/badge-dark.svg" alt="Featured on DanielLaunches" width="220" height="48" />
-</a>
 
-<a href="https://sidehunt.io/project/troolify" target="_blank" rel="noopener" title="View project on Sidehunt">
-  <img src="https://sidehunt.io/badges/sidehunt-badge-dark.svg" alt="Featured on Sidehunt" width="200" height="60" />
-</a>
-
-<a href="https://www.launchit.site/launches/troolify" target="_blank" rel="noopener">
-  <img src="https://www.launchit.site/badges/launchit-dark.svg" alt="Troolify - Featured on Launchit" width="200" height="54" />
-</a>
-
-<a href="https://www.scrolllaunch.com/products/troolify?ref=badge" target="_blank" rel="noopener">
-  <img src="https://www.scrolllaunch.com/api/badge/troolify?variant=launched&theme=dark"
-       alt="Troolify - Featured on ScrollLaunch"
-       width="220" height="48" />
-</a>
-
-<a href="https://similarlabs.com" target="_blank" rel="noopener"><img src="https://similarlabs.com/similarlabs-embed-badge-light.svg" alt="Featured on SimilarLabs" /></a>
-
-<a href="https://saaspa.ge/product/cmtrcv79b000lkz04oe9z27o9" target="_blank" rel="nofollow">
-
-
-make sure links present in the url, they verify the backlinks
+want to add translator in my website also 

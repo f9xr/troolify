@@ -120,14 +120,14 @@
         '<a class="badge-link" href="https://www.techtrendin.com/products/troolify" target="_blank" rel="noopener noreferrer">' +
             '<img src="https://www.techtrendin.com/badges/featured-dark.png" alt="Featured on TechTrendin&#39;" height="52" width="auto" loading="lazy" decoding="async" />' +
         '</a>' +
-        '<a class="badge-link" href="https://buildlist.io" target="_blank" rel="noopener noreferrer">' +
+        '<a class="badge-link" href="https://buildlist.io/tool/troolify" target="_blank" rel="noopener noreferrer">' +
             '<img src="https://buildlist.io/badge.svg" alt="Featured on Buildlist" height="40" width="auto" loading="lazy" decoding="async" />' +
         '</a>' +
         '<a class="badge-link" href="https://web-review.com" target="_blank" rel="noopener noreferrer">' +
             '<img src="https://web-review.com/badge.png" alt="Featured on Web Review" width="200" height="54" loading="lazy" decoding="async" />' +
         '</a>' +
         '<a class="badge-link" href="https://devtool.io" target="_blank" rel="noopener noreferrer" style="display:inline-flex;height:54px;line-height:normal;background-color:#10b981;color:#fff;text-decoration:none;text-transform:uppercase;justify-content:center;align-items:center;padding-right:13px;padding-left:13px;border-radius:5px">Listed on DevTool.io</a>' +
-        '<a class="badge-link" href="https://aitoolzaar.com/" target="_blank" rel="noopener noreferrer">' +
+        '<a class="badge-link" href="https://aitoolzaar.com/tool/troolify" target="_blank" rel="noopener noreferrer">' +
             '<img src="https://aitoolzaar.com/badge.svg" alt="Featured on AI Tool Zaar" width="220" height="64" loading="lazy" decoding="async" />' +
         '</a>' +
         '<a class="badge-link" href="https://tooldisk.com" target="_blank" rel="noopener noreferrer">' +
@@ -139,7 +139,29 @@
         '<a class="badge-link" href="https://mydirs.com" target="_blank" rel="noopener noreferrer">' +
             '<img src="https://mydirs.com/badges/dark.svg" alt="Featured on Mydirs" width="200" height="54" loading="lazy" decoding="async" />' +
         '</a>' +
-        '<a class="badge-link" href="https://mossai.org" target="_blank" rel="noopener noreferrer" title="MossAI Tools">MossAI Tools</a>';
+        '<a class="badge-link" href="https://mossai.org" target="_blank" rel="noopener noreferrer" title="MossAI Tools">MossAI Tools</a>' +
+        '<a class="badge-link" href="https://aitop10.tools/" target="_blank" rel="noopener noreferrer">AiTop10 Tools</a>' +
+        '<a class="badge-link" href="https://deeplaunch.io" target="_blank" rel="noopener noreferrer">' +
+            '<img src="https://deeplaunch.io/badge/badge_dark.svg" alt="Featured on DeepLaunch.io" width="200" height="54" loading="lazy" decoding="async" />' +
+        '</a>' +
+        '<a class="badge-link" href="https://superlaunchlist.com?ref=https%3A%2F%2Ff9xr.github.io%2Ftroolify" target="_blank" rel="noopener noreferrer">' +
+            '<img src="https://superlaunchlist.com/badge.svg" alt="Featured on SuperLaunch List" width="174" height="42" loading="lazy" decoding="async" />' +
+        '</a>' +
+        '<a class="badge-link" href="https://www.tinyshelf.co/?ref=f9xr.github.io" target="_blank" rel="noopener noreferrer" title="Featured on tinyshelf">' +
+            '<img src="https://www.tinyshelf.co/badge/tinyshelf-badge-dark-f4d1216a.svg" alt="Featured on tinyshelf" width="216" height="64" loading="lazy" decoding="async" />' +
+        '</a>' +
+        '<a class="badge-link" href="https://lemonlaunch.dev/productivity/troolify" target="_blank" rel="noopener noreferrer">' +
+            '<img src="https://lemonlaunch.dev/badge/lemonlaunch-badge-dark.svg" alt="Featured on LemonLaunch" width="188" height="56" loading="lazy" decoding="async" />' +
+        '</a>' +
+        '<a class="badge-link" href="https://publishyoursaas.com" target="_blank" rel="noopener noreferrer" data-publishyoursaas-badge="manual-submission">' +
+            '<img src="https://publishyoursaas.com/publishyoursaas-badge.svg" alt="Listed on PublishYourSaaS" width="240" height="60" loading="lazy" decoding="async" />' +
+        '</a>' +
+        '<a class="badge-link" href="https://navfolders.com" target="_blank" rel="noopener noreferrer">' +
+            '<img src="https://navfolders.com/badge/nav_dark.svg" alt="NavFolders" width="200" height="54" loading="lazy" decoding="async" />' +
+        '</a>' +
+        '<a class="badge-link" href="https://launchstag.com" target="_blank" rel="noopener noreferrer">' +
+            '<img src="https://launchstag.com/badge-light.svg" alt="Featured on Launchstag" width="198" height="62" loading="lazy" decoding="async" />' +
+        '</a>';
 
     /* ------------------------------------------------------------------------
        Dashboard right-sidebar builder

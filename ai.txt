@@ -14,20 +14,21 @@
 - Free forever, no sign-up required
 - 100% client-side processing, zero data retention
 - Privacy-first architecture - no server uploads
-- 70+ tools across 20 categories
+- 160+ tools across 20 categories
 - Responsive design, works on all devices
 
 ## Tools by Category
-- **Text Tools**: Word counter, numeronym generator, random word generator
-- **Developer Tools**: JSON formatter, code beautifier, URL encoder/decoder, CSV to JSON, SHA hash generator
+- **Text Tools**: Word counter, random word generator, remove line breaks, title case converter, replace text, sort list alphabetically, text generators, sentences counter, remove duplicates/numbers/spaces
+- **Developer Tools**: JSON formatter, code beautifier, URL encoder/decoder, CSV to JSON, SHA hash generator, HTML generators (table/list/text), HTML cleanup (to-text, remove tags, compress/uncompress), HTML character encoding
+- **Converters**: Markdown to Word/PDF, Word to clean HTML/text, plain text/email to HTML, URLs to HTML links, CSV to HTML table
 - **SEO Tools**: Schema markup generator, multiline slug generator
 - **Audio Tools**: Song length calculator, BPM tools
 - **Health Tools**: Ovulation calculator, macro calculator, TDEE calculator, body fat percentage, pregnancy due date
 - **HVAC Tools**: Load calculators, duct sizing, refrigeration tools, psychrometric calculator
+- **PDF Tools**: Word/Excel/Images/Text to PDF, PDF to text/grayscale, merge PDFs, remove/add pages, metadata viewer/remover, unredact check, paper size converter
 - **Finance Tools**: VAT calculator
 - **Image Tools**: Color converter
-- **Converters**: Markdown to Word/PDF
-- **Password Tools**: Password generator, entropy calculator
+- **Misc Tools**: Password generator, entropy calculator, random decision maker, random choice generator, mailto link generator
 
 ## Technical Details
 - Built with: HTML5, vanilla JavaScript, Tailwind CSS
