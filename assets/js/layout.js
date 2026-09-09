@@ -140,7 +140,6 @@
             '<img src="https://mydirs.com/badges/dark.svg" alt="Featured on Mydirs" width="200" height="54" loading="lazy" decoding="async" />' +
         '</a>' +
         '<a class="badge-link" href="https://mossai.org" target="_blank" rel="noopener noreferrer" title="MossAI Tools">MossAI Tools</a>' +
-        '<a class="badge-link" href="https://aitop10.tools/" target="_blank" rel="noopener noreferrer">AiTop10 Tools</a>' +
         '<a class="badge-link" href="https://deeplaunch.io" target="_blank" rel="noopener noreferrer">' +
             '<img src="https://deeplaunch.io/badge/badge_dark.svg" alt="Featured on DeepLaunch.io" width="200" height="54" loading="lazy" decoding="async" />' +
         '</a>' +
@@ -173,6 +172,15 @@
         '</a>' +
         '<a class="badge-link" href="https://buildrship.xyz/products/troolify" target="_blank" rel="noopener noreferrer">' +
             '<img src="https://buildrship.xyz/assets/featured-on-buildrship.png" alt="Featured on Buildrship" width="130" height="46" loading="lazy" decoding="async" />' +
+        '</a>' +
+        '<a class="badge-link" href="https://findyoursaas.com/tool/troolify" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:none;display:inline-block;line-height:1;">' +
+            '<span style="display:flex;align-items:center;background-color:#374151;border:1px solid #4B5563;border-radius:6px;padding:6px 10px;font-family:-apple-system,BlinkMacSystemFont,\'Segoe UI\',Roboto,Helvetica,Arial,sans-serif;box-shadow:0 2px 4px -1px rgba(0,0,0,.2);transition:transform .2s ease,box-shadow .2s ease;line-height:1;white-space:nowrap;">' +
+                '<img src="https://findyoursaas.com/fys-logo.png" alt="FYS Logo" style="width:18px;height:18px;border-radius:50%;margin-right:6px;display:block;">' +
+                '<span style="font-size:12px;font-weight:500;color:#F3F4F6;white-space:nowrap;">Featured on FYS</span>' +
+            '</span>' +
+        '</a>' +
+        '<a class="badge-link" href="https://shipstry.com/" target="_blank" rel="noopener noreferrer">' +
+            '<img src="https://shipstry.com/badges/featured.svg" alt="Featured on Shipstry" width="220" height="52" loading="lazy" decoding="async" />' +
         '</a>';
 
     /* ------------------------------------------------------------------------
@@ -500,6 +508,23 @@
                 '<a href="' + toolsHref + '" class="btn btn-primary" style="margin-top: 1rem;">Explore Tools</a>' +
             '</div>';
 
+        /* Footer categories nav - kept in sync with window.CATEGORIES in
+           tools-data.js so the footer renders even before the lazy data bundle
+           arrives. Keywords are lowercase to match catalog.js hrefs. */
+        var footerCategories = [
+            ["Audio", "Audio Tools"], ["AI", "AI Tools"], ["Coding", "Developer Tools"],
+            ["Converters", "Converters"], ["Cooking", "Cooking Tools"], ["Crypto", "Crypto Tools"],
+            ["Finance", "Finance Tools"], ["Fun", "Fun & Games"], ["Health", "Health Tools"],
+            ["Image", "Image Tools"], ["Misc", "Misc Tools"], ["PDF", "PDF Tools"],
+            ["Prompts", "Prompt Tools"], ["SEO", "SEO & Marketing"], ["Statistics", "Statistics"],
+            ["Text", "Text Tools"], ["Time", "Time Tools"], ["Video", "Video Tools"],
+            ["YouTube", "YouTube Tools"], ["HVAC", "HVAC Tools"]
+        ];
+        var footerCatsHtml = "";
+        for (var fci = 0; fci < footerCategories.length; fci++) {
+            footerCatsHtml += '<a href="' + prefix + 'tools/' + footerCategories[fci][0].toLowerCase() + '/index.html" class="text-sm text-white/80 transition hover:text-[#3B82F6]">' + footerCategories[fci][1] + '</a>';
+        }
+
         var footerMain =
             '<footer class="tx-footer">' +
                 /* Full-width canvas - transparent bg so the footer merges with the page content bg */
@@ -513,7 +538,7 @@
                         '<div class="pointer-events-none absolute inset-0" style="background-image:linear-gradient(rgba(248,249,250,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(248,249,250,0.04) 1px,transparent 1px);background-size:48px 48px;-webkit-mask-image:radial-gradient(ellipse 90% 60% at 50% 0%,#000 30%,transparent 75%);mask-image:radial-gradient(ellipse 90% 60% at 50% 0%,#000 30%,transparent 75%)" aria-hidden="true"></div>' +
 
                         /* --- Top content grid --- */
-                        '<div class="relative grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr_1.4fr] lg:gap-10">' +
+                        '<div class="relative grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr_1fr_1.2fr] lg:gap-10">' +
 
                             /* Left column - brand mission */
                             '<div>' +
@@ -568,6 +593,12 @@
                                     '<a href="https://youtube.com/@QuarterlyLIV" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="grid h-10 w-10 place-items-center rounded-xl border border-[#343A40] bg-[#212529] text-[#9CA3AF] transition hover:border-[#3B82F6] hover:text-[#3B82F6]"><i class="fa-brands fa-youtube"></i></a>' +
                                     '<a href="https://www.threads.com/@f9xrteam" target="_blank" rel="noopener noreferrer" aria-label="Threads" class="grid h-10 w-10 place-items-center rounded-xl border border-[#343A40] bg-[#212529] text-[#9CA3AF] transition hover:border-[#3B82F6] hover:text-[#3B82F6]"><i class="fa-brands fa-threads"></i></a>' +
                                 '</div>' +
+                            '</nav>' +
+
+                            /* Middle column 3b - Categories nav */
+                            '<nav aria-label="Categories">' +
+                                '<h4 class="text-xs font-semibold uppercase tracking-[0.22em] text-[#E9ECEF]">Categories</h4>' +
+                                '<div class="mt-3.5 grid max-w-[17rem] grid-cols-2 gap-x-4 gap-y-2">' + footerCatsHtml + '</div>' +
                             '</nav>' +
 
                             /* Right column - contact + newsletter capture */

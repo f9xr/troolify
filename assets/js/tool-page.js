@@ -306,9 +306,38 @@
     }
 
     function relatedTools() {
-      return (window.TOOLS || []).filter(function (t) {
-        return (t.href || "").indexOf(current) === -1;
-      });
+      var all = window.TOOLS || [];
+      /* Find the current page's own record (match by filename) so we can rank
+         the rest by similarity: same category > same tag > shared keywords. */
+      var cur = null;
+      for (var i = 0; i < all.length; i++) {
+        if (((all[i].href || "").split("/").pop() || "") === current) { cur = all[i]; break; }
+      }
+      var curCat = cur ? cur.category : "";
+      var curTag = cur ? cur.tag : "";
+      var curKeys = (cur && cur.keywords) ? cur.keywords : [];
+
+
+      var scored = [];
+      for (var j = 0; j < all.length; j++) {
+        var t = all[j];
+        if ((t.href || "").indexOf(current) !== -1) continue;
+        var score = 0;
+        if (curCat && t.category === curCat) score += 10;
+        if (curTag && t.tag === curTag) score += 5;
+        if (curKeys.length) {
+          var tKeys = t.keywords || [];
+          var shared = 0;
+          for (var m = 0; m < tKeys.length; m++) {
+            if (curKeys.indexOf(tKeys[m]) !== -1) shared++;
+          }
+          score += Math.min(shared, 5);
+        }
+        scored.push({ t: t, s: score });
+      }
+
+      scored.sort(function (a, b) { return b.s - a.s; });
+      return scored.map(function (x) { return x.t; });
     }
 
     function initRelated() {
