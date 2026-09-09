@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Rotator | Rotate &amp; Download Images Online</title>
+<meta name="description" content="Rotate many images JPG, PNG or GIF at same time. Choose to rotate only landscape or portrait images! 100% client-side, nothing is uploaded.">
+<meta name="author" content="F9XR Development Team">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#212529">
+<link rel="canonical" href="https://f9xr.github.io/troolify/tools/image/rotate-image.html">
+<meta property="og:site_name" content="Troolify">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Image Rotator | Rotate &amp; Download Images Online">
+<meta property="og:description" content="Rotate many images JPG, PNG or GIF at same time. Choose to rotate only landscape or portrait images! 100% client-side, nothing is uploaded.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://f9xr.github.io/troolify/tools/image/rotate-image.html">
+<meta property="og:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-09-09">
+<meta property="article:modified_time" content="2026-09-09">
+<meta property="article:section" content="Image Tools">
+<meta property="article:tag" content="Rotate">
+<meta property="article:tag" content="Image Rotator">
+<meta property="article:tag" content="Rotate Images Online">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Image Rotator | Rotate &amp; Download Images Online">
+<meta name="twitter:description" content="Rotate many images JPG, PNG or GIF at same time. Choose to rotate only landscape or portrait images! 100% browser based.">
+<meta name="twitter:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://f9xr.github.io/troolify/index.html" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://f9xr.github.io/troolify/tools/index.html" },
+    { "@type": "ListItem", "position": 3, "name": "Image Tools", "item": "https://f9xr.github.io/troolify/tools/image/" },
+    { "@type": "ListItem", "position": 4, "name": "Image Rotator", "item": "https://f9xr.github.io/troolify/tools/image/rotate-image.html" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Image Rotator",
+  "url": "https://f9xr.github.io/troolify/tools/image/rotate-image.html",
+  "applicationCategory": "MultimediaApplication",
+  "applicationSubCategory": "Image Rotation Tool",
+  "operatingSystem": "Any (web browser)",
+  "featureList": ["Rotate images by any degree", "90, 180, 270 degree presets", "Filter by landscape or portrait orientation", "Batch rotate multiple images", "Preview and download results", "100% client-side processing"],
+  "description": "Rotate many images JPG, PNG or GIF at same time. Choose to rotate only landscape or portrait images! 100% client-side, nothing is uploaded.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "datePublished": "2026-09-09",
+  "dateModified": "2026-09-09",
+  "author": { "@type": "Organization", "name": "F9XR Development Team", "url": "https://f9xr.github.io/" },
+  "publisher": { "@type": "Organization", "name": "Troolify", "url": "https://f9xr.github.io/troolify/", "logo": { "@type": "ImageObject", "url": "https://f9xr.github.io/troolify/assets/images/logo_nobg.webp", "width": 1407, "height": 768 } }
+}
+</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Image Rotator | Rotate & Download Images Online","description":"Rotate many images JPG, PNG or GIF at same time. Choose to rotate only landscape or portrait images! 100% client-side, nothing is uploaded.","image":"https://f9xr.github.io/troolify/assets/images/og-image.jpg","datePublished":"2026-09-09","dateModified":"2026-09-09","mainEntityOfPage":"https://f9xr.github.io/troolify/tools/image/rotate-image.html","author":{"@type":"Organization","name":"F9XR Development Team","url":"https://f9xr.github.io/"},"publisher":{"@type":"Organization","name":"Troolify","url":"https://f9xr.github.io/troolify/","logo":{"@type":"ImageObject","url":"https://f9xr.github.io/troolify/assets/images/logo_nobg.webp","width":1407,"height":768}}}</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I rotate an image to a specific angle?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Upload your image, then type the exact angle in degrees (0-360) into the angle input field. You can also use the preset buttons for 90, 180, or 270 degrees. The preview updates instantly so you can verify the rotation before downloading." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I rotate only landscape or portrait images in a batch?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Upload multiple images and toggle the orientation filter. When set to Landscape, only images wider than they are tall will be rotated. When set to Portrait, only images taller than they are wide will be rotated. Images that do not match the filter are skipped." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the Troolify image rotator safe to use?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. All rotation is performed using the HTML canvas API inside your browser. No images are ever uploaded to a server, so your files remain completely private." }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens to image quality when I rotate?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Rotating by multiples of 90 degrees is lossless for PNG images. For arbitrary angles, the canvas uses bilinear interpolation which may introduce slight softening. For best results, rotate by 90-degree increments when possible." }
+    }
+  ]
+}
+</script>
+
+<link rel="icon" type="image/webp" href="../../assets/images/favicon.webp"><link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+<link rel="stylesheet" href="../../assets/css/tailwind.css">
+<link rel="stylesheet" href="../../assets/css/tool.css">
+<link rel="stylesheet" href="../../assets/css/site-shell.css">
+<link rel="stylesheet" href="../../assets/css/tool-page.css">
+<link rel="stylesheet" href="../../assets/css/seo-article.css">
+<style>
+.ir-grid{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:720px){.ir-grid{grid-template-columns:1fr 1fr}}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:12.5px;font-weight:700;color:var(--muted)}
+.field input,.field select{background:#1B2028;border:1px solid var(--border);color:var(--ink);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:15px;font-weight:600;outline:none;width:100%;box-sizing:border-box}
+.field input:focus,.field select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+.field input:disabled{opacity:.55;cursor:not-allowed}
+.ir-drop{border:2px dashed var(--border);border-radius:14px;padding:28px 18px;text-align:center;color:var(--faint);font-size:13.5px;cursor:pointer;transition:border-color .18s ease,background .18s ease;margin-bottom:16px}
+.ir-drop:hover{border-color:rgba(96,165,250,.6);background:rgba(59,130,246,.06)}
+.ir-drop b{color:var(--accent)}
+.ir-drop input{display:none}
+.ir-file-chip{display:inline-flex;align-items:center;gap:8px;margin-top:10px;padding:5px 12px;border-radius:999px;border:1px solid rgba(52,211,153,.3);background:var(--green-soft);color:#6EE7B7;font-size:12px;font-weight:700;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.radio-row{display:flex;flex-wrap:wrap;gap:8px}
+.radio-row label{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:700;color:var(--muted);cursor:pointer;user-select:none}
+.radio-row input{accent-color:var(--accent);width:15px;height:15px;cursor:pointer}
+.opt-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.opt-chk{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:600;color:var(--muted);cursor:pointer;user-select:none}
+.opt-chk input{display:none}
+.opt-ui{width:38px;height:21px;border-radius:999px;background:var(--border);position:relative;transition:background .2s ease;flex-shrink:0}
+.opt-ui::after{content:"";position:absolute;top:2.5px;left:3px;width:16px;height:16px;border-radius:50%;background:#fff;transition:transform .22s cubic-bezier(.16,1,.3,1);box-shadow:0 1px 3px rgba(0,0,0,.35)}
+.opt-chk input:checked + .opt-ui{background:var(--accent)}
+.opt-chk input:checked + .opt-ui::after{transform:translateX(16px)}
+.result-card{background:linear-gradient(180deg,rgba(59,130,246,.12),rgba(59,130,246,.03));border:1px solid rgba(96,165,250,.25);border-radius:14px;padding:18px;margin-top:18px}
+.result-row{display:flex;justify-content:space-between;gap:10px;padding:8px 2px;font-size:14px}
+.result-row+.result-row{border-top:1px dashed rgba(255,255,255,.08)}
+.result-row b{color:#93C5FD;font-weight:800;text-align:right}
+.result-row.hero-row b{color:#6EE7B7}
+.ir-preview-wrap{display:none;margin-top:18px;border:1px solid var(--border);border-radius:14px;padding:14px;background:#1B2028}
+.ir-preview-wrap.visible{display:block}
+.ir-preview{max-width:100%;max-height:360px;margin-inline:auto;border-radius:8px;object-fit:contain}
+.ir-preview-cap{text-align:center;font-size:12px;font-weight:600;color:var(--faint);margin-top:10px}
+.preset-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.preset-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:10px;border:1px solid var(--border);background:#1B2028;color:var(--muted);font-size:13px;font-weight:700;cursor:pointer;transition:all .18s ease;font-family:inherit}
+.preset-btn:hover{border-color:var(--accent);color:var(--accent);background:rgba(59,130,246,.08)}
+.preset-btn.active{border-color:var(--accent);color:#fff;background:rgba(59,130,246,.18)}
+.batch-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-top:18px}
+.batch-card{background:#1B2028;border:1px solid var(--border);border-radius:12px;padding:12px;position:relative}
+.batch-card img{width:100%;height:140px;object-fit:contain;border-radius:8px;background:#111318}
+.batch-card-name{font-size:11px;font-weight:700;color:var(--faint);margin-top:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.batch-card-status{font-size:11px;font-weight:700;color:#6EE7B7;margin-top:4px}
+.batch-card-skip{color:var(--accent)}
+.batch-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+</style>
+</head>
+<body data-layout="tool">
+<noscript>
+    <nav aria-label="Primary" style="position:static;display:block;padding:1rem 1.5rem;background:#212529;border-bottom:1px solid #343A40;text-align:center;font-size:0.9rem;">
+        <a href="../../index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Home</a>
+        <a href="../../tools/index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Tools</a>
+        <a href="../../pages/about.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">About</a>
+        <a href="../../pages/contact.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Contact</a>
+    </nav>
+</noscript>
+
+<main class="tool-main">
+  <div class="container">
+
+    <div class="tool-head hero">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="../../tools/index.html">Tools</a></li>
+          <li><a href="../index.html">Image Tools</a></li>
+          <li class="current" aria-current="page">Image Rotator</li>
+        </ol>
+      </nav>
+      <div class="hero-main">
+        <span class="tool-badge"><span class="dot"></span>100% client-side &middot; zero data retention</span>
+        <h1>Image Rotator</h1>
+        <p>Rotate many images JPG, PNG or GIF at same time. Choose to rotate only landscape or portrait images! 100% client-side.</p>
+      </div>
+      <div class="hero-box hero-cat">
+        <h3 class="hero-box-title"><i class="fa-solid fa-folder-open"></i>Category</h3>
+        <div class="tool-meta">
+          <span class="tool-tag"><i class="fa-solid fa-rotate"></i>Rotate</span>
+          <a class="tool-cat" href="../index.html" aria-label="Browse Image Tools category"><i class="fa-solid fa-folder"></i>Image Tools</a>
+        </div>
+      </div>
+      <div class="hero-box hero-qa">
+        <h3 class="hero-box-title"><i class="fa-solid fa-bolt"></i>Quick Actions</h3>
+        <div class="tool-actions">
+          <button class="rt-btn" type="button" id="btnShare"><i class="fa-solid fa-share-nodes"></i>Share</button>
+          <button class="rt-btn" type="button" id="btnEmbed"><i class="fa-solid fa-code"></i>Embed Tool</button>
+          <a class="rt-btn" href="../../pages/feedback.html"><i class="fa-solid fa-comment"></i>Feedback</a>
+        </div>
+      </div>
+      <div class="hero-box hero-details">
+        <h3 class="hero-box-title"><i class="fa-solid fa-circle-info"></i>Tool Details</h3>
+        <div class="tool-details">
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.github.io/" target="_blank" rel="noopener">F9XR Development Team</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-check-double"></i>Reviewed by</span><a class="detail-value" href="../../press/editorial-policies.html">Review Board</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-clock-rotate-left"></i>Last updated</span><span class="detail-value">9 September 2026</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel clean">
+      <div class="panel-inner">
+        <div class="toolbar-row">
+          <span class="tool-label"><i class="fa-solid fa-rotate"></i>Image Rotator</span>
+          <div class="toolbar-actions">
+            <button class="chip-btn" type="button" id="irClear" title="Clear the upload and reset the form"><i class="fa-solid fa-eraser"></i><span class="hide-sm">Clear</span></button>
+          </div>
+        </div>
+
+        <label class="ir-drop" id="irDrop" for="irFile">
+          <i class="fa-solid fa-cloud-arrow-up" style="font-size:22px;color:var(--accent);margin-bottom:8px;display:block"></i>
+          <b>Click to choose images</b> or drag &amp; drop them here (JPG, PNG, GIF)
+          <input type="file" id="irFile" accept="image/jpeg,image/png,image/gif" multiple>
+        </label>
+
+        <div class="ir-grid">
+          <div>
+            <div class="field"><label for="irAngle">Rotation angle (degrees)</label>
+              <input id="irAngle" type="number" inputmode="decimal" min="0" max="360" step="1" value="90">
+            </div>
+            <div class="preset-row">
+              <button class="preset-btn" type="button" data-angle="90"><i class="fa-solid fa-rotate-right"></i>90&deg;</button>
+              <button class="preset-btn" type="button" data-angle="180"><i class="fa-solid fa-arrows-rotate"></i>180&deg;</button>
+              <button class="preset-btn" type="button" data-angle="270"><i class="fa-solid fa-rotate-left"></i>270&deg;</button>
+              <button class="preset-btn" type="button" data-angle="0"><i class="fa-solid fa-undo"></i>Reset</button>
+            </div>
+            <div class="field" style="margin-top:16px"><label for="irFmt">Export format</label>
+              <select id="irFmt">
+                <option value="image/png">PNG (lossless)</option>
+                <option value="image/jpeg">JPEG (smaller file)</option>
+              </select>
+            </div>
+            <div class="field" id="irQualRow" style="display:none;margin-top:10px"><label for="irQual">JPEG quality: <span id="irQualVal" style="color:#93C5FD">90</span></label><input id="irQual" type="range" min="10" max="100" step="1" value="90"></div>
+            <div class="opt-row">
+              <label class="opt-chk" for="irFilterOn">
+                <input type="checkbox" id="irFilterOn">
+                <span class="opt-ui" aria-hidden="true"></span>
+                Filter by orientation
+              </label>
+            </div>
+            <div class="radio-row" id="irFilterRow" style="display:none;margin-top:10px">
+              <label><input type="radio" name="irFilter" id="irFilterLandscape" checked>Landscape only</label>
+              <label><input type="radio" name="irFilter" id="irFilterPortrait">Portrait only</label>
+            </div>
+          </div>
+          <div>
+            <div class="actions" style="margin-bottom:12px">
+              <button class="btn btn-primary" type="button" id="irDownload" disabled><i class="fa-solid fa-download"></i>Download</button>
+              <button class="btn btn-primary" type="button" id="irDownloadAll" disabled style="display:none"><i class="fa-solid fa-file-zipper"></i>Download All</button>
+            </div>
+            <p class="proc-line"><i class="fa-solid fa-bolt"></i><span id="irProc">Upload one or more images to get started - nothing leaves this tab.</span></p>
+
+            <div class="result-card" id="irResults" aria-live="polite"></div>
+
+            <div class="ir-preview-wrap" id="irPreviewWrap" aria-live="polite">
+              <img class="ir-preview" id="irPreview" alt="Rotated image preview">
+              <p class="ir-preview-cap">Live preview of the rotated image</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="batch-grid" id="irBatchGrid"></div>
+        <div class="batch-actions" id="irBatchActions" style="display:none">
+          <button class="btn btn-primary" type="button" id="irDownloadBatch"><i class="fa-solid fa-file-zipper"></i>Download All Rotated</button>
+        </div>
+
+      </div>
+    </div>
+
+    <aside class="disclaimer" aria-label="Disclaimer">
+      <i class="fa-solid fa-circle-info"></i>
+      <p>Disclaimer: Whilst every effort has been made in building our tool, we are not to be held liable for any damages or monetary losses arising out of or in connection with their use. <a href="../../press/disclaimer.html">Full disclaimer</a>.</p>
+    </aside>
+
+    <div class="article-layout">
+      <article class="seo-article">
+        <h2 id="article-title">Image Rotator: Fix Photo Orientation in Seconds, Privately</h2>
+        <p>Phones sometimes save photos in the wrong orientation. Scanners produce sideways documents. Screenshots captured from a rotated display come out on their side. The Troolify Image Rotator fixes any of these problems in a single click - rotate by 90, 180, or 270 degrees, or dial in any angle from 0 to 360. You can process one image or an entire batch, and every rotation happens locally in your browser.</p>
+
+        <h2 id="what-it-does">What the Image Rotator Does</h2>
+        <p>Upload one or more JPG, PNG, or GIF images. The tool decodes each file using the HTML canvas API and lets you set a rotation angle. Preset buttons handle the most common 90&deg; increments instantly, while the numeric input accepts any value for fine-tuned control.</p>
+        <p>For batch uploads, an optional orientation filter lets you target only landscape images (wider than tall) or only portrait images (taller than wide). Images that do not match the filter are skipped, so you can rotate a mixed batch without affecting every file. The preview updates in real time and each result can be downloaded individually.</p>
+
+        <h2 id="how-to-use">How to Use the Image Rotator</h2>
+        <ol>
+          <li><strong>Upload images</strong> - click the drop zone and pick one or more JPG, PNG, or GIF files, or drag and drop them.</li>
+          <li><strong>Set the angle</strong> - use the 90&deg;, 180&deg;, or 270&deg; preset buttons, or type any angle between 0 and 360.</li>
+          <li><strong>Filter by orientation (optional)</strong> - toggle the filter and choose Landscape or Portrait to rotate only matching images in a batch.</li>
+          <li><strong>Pick an export format</strong> - PNG for lossless quality, JPEG for smaller file sizes.</li>
+          <li><strong>Download</strong> - preview each result and save it to your device, or download the entire batch at once.</li>
+        </ol>
+
+        <h2 id="tips">Tips for Best Results</h2>
+        <ul>
+          <li><strong>Use 90&deg; presets when possible</strong> - rotating by multiples of 90 degrees avoids any interpolation artifacts, especially for PNG images.</li>
+          <li><strong>Batch with orientation filter</strong> - upload a folder of mixed photos and rotate only the ones that need it by selecting Landscape or Portrait.</li>
+          <li><strong>Check the preview</strong> - the live preview shows exactly what the output will look like before you commit to a download.</li>
+          <li><strong>Export PNG for graphics</strong>, JPEG for photographs. Adjust the quality slider to balance file size and detail.</li>
+        </ul>
+
+        <h2 id="use-cases">Common Use Cases</h2>
+        <p>Photographers correct images shot in portrait mode that display sideways on the web. Office workers rotate scanned documents to the proper reading orientation. Social media managers fix screenshots before posting. Web developers rotate product photos to match a store grid. If you also need to resize the rotated image, try the <a href="image-resizer.html">Image Resizer</a> next.</p>
+
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+
+        <details class="faq-item">
+          <summary>How do I rotate an image to a specific angle?</summary>
+          <div class="faq-a">
+            <p>Upload your image, then type the exact angle in degrees (0-360) into the angle input field. You can also use the preset buttons for 90, 180, or 270 degrees. The preview updates instantly so you can verify the rotation before downloading.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Can I rotate only landscape or portrait images in a batch?</summary>
+          <div class="faq-a">
+            <p>Yes. Upload multiple images and toggle the orientation filter. When set to Landscape, only images wider than they are tall will be rotated. When set to Portrait, only images taller than they are wide will be rotated. Images that do not match the filter are skipped.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Is the Troolify image rotator safe to use?</summary>
+          <div class="faq-a">
+            <p>Yes. All rotation is performed using the HTML canvas API inside your browser. No images are ever uploaded to a server, so your files remain completely private.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>What happens to image quality when I rotate?</summary>
+          <div class="faq-a">
+            <p>Rotating by multiples of 90 degrees is lossless for PNG images. For arbitrary angles, the canvas uses bilinear interpolation which may introduce slight softening. For best results, rotate by 90-degree increments when possible.</p>
+          </div>
+        </details>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>Fixing the orientation of your photos no longer requires a desktop app or an online service that uploads your files. The Troolify Image Rotator handles single images and entire batches in your browser, with full control over angle, orientation filtering and export format.</p>
+      </article>
+    </div>
+
+    <section class="keyword-box" aria-label="Keywords and tags">
+      <h2>Keyword &amp; Tags</h2>
+      <h3>Keywords</h3>
+      <div class="keywords">
+        <span class="keyword">rotate image online</span>
+        <span class="keyword">image rotator</span>
+        <span class="keyword">rotate photo 90 degrees</span>
+        <span class="keyword">rotate image by angle</span>
+        <span class="keyword">batch rotate images</span>
+        <span class="keyword">landscape portrait filter</span>
+        <span class="keyword">fix image orientation</span>
+        <span class="keyword">client-side image tool</span>
+      </div>
+      <h3>Tags</h3>
+      <div class="tags">
+        <a class="tag" href="../index.html"><i class="fa-solid fa-rotate"></i>Rotate</a>
+        <a class="tag" href="../index.html"><i class="fa-solid fa-folder"></i>Image Tools</a>
+        <a class="tag" href="../../tools/index.html"><i class="fa-solid fa-cube"></i>Image</a>
+      </div>
+    </section>
+
+    <section class="author-box" aria-label="About the publisher">
+      <div class="author-avatar" aria-hidden="true"><img src="../../assets/images/logo_nobg.webp" alt="F9XR logo" loading="lazy" decoding="async" width="1407" height="768"></div>
+      <div>
+        <span class="author-role">Published by</span>
+        <h2>F9XR Development Team</h2>
+        <p>Every Troolify tool is built and reviewed by the F9XR Development Team, then checked by our Review Board for correctness, accessibility, and clarity. Tools run 100% client-side with zero data retention.</p>
+        <div class="author-links">
+          <a href="https://f9xr.github.io/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i>F9XR Team</a>
+          <a href="../../press/editorial-policies.html"><i class="fa-solid fa-scale-balanced"></i>Editorial Policies</a>
+          <a href="https://github.com/f9xr" target="_blank" rel="noopener" aria-label="F9XR on GitHub"><i class="fa-brands fa-github"></i>GitHub</a>
+          <a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on LinkedIn"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+          <a href="https://instagram.com/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on Instagram"><i class="fa-brands fa-instagram"></i>Instagram</a>
+          <a href="https://youtube.com/@QuarterlyLIV" target="_blank" rel="noopener" aria-label="F9XR on YouTube"><i class="fa-brands fa-youtube"></i>YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-tools" aria-label="Related tools">
+      <h2>Related Tools</h2>
+      <div class="related-search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" id="relatedSearch" placeholder="Search all Troolify tools&hellip;" autocomplete="off" aria-label="Search related tools">
+      </div>
+      <div class="related-grid" id="relatedGrid" aria-busy="true">
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+      </div>
+    </section>
+
+    <section class="comments" aria-label="Comments">
+      <h2>Comments</h2>
+      <div id="comments">
+        <script src="https://utteranc.es/client.js" repo="f9xr/troolify" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async></script>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"><span></span><i class="fa-solid fa-layer-group"></i><span></span></div>
+
+  </div>
+</main>
+
+<script src="../../assets/js/layout.js" defer></script>
+<script src="../../assets/js/tools-data.js" defer></script>
+<script src="../../assets/js/tool-page.js" defer></script>
+<script>
+(function(){
+  "use strict";
+  var fileIn=document.getElementById("irFile");
+  var drop=document.getElementById("irDrop");
+  var angleIn=document.getElementById("irAngle");
+  var fmtEl=document.getElementById("irFmt");
+  var qualRow=document.getElementById("irQualRow");
+  var qualEl=document.getElementById("irQual");
+  var qualVal=document.getElementById("irQualVal");
+  var dlBtn=document.getElementById("irDownload");
+  var dlAllBtn=document.getElementById("irDownloadAll");
+  var previewWrap=document.getElementById("irPreviewWrap");
+  var preview=document.getElementById("irPreview");
+  var resBox=document.getElementById("irResults");
+  var proc=document.getElementById("irProc");
+  var batchGrid=document.getElementById("irBatchGrid");
+  var batchActions=document.getElementById("irBatchActions");
+  var filterOn=document.getElementById("irFilterOn");
+  var filterRow=document.getElementById("irFilterRow");
+  var filterLandscape=document.getElementById("irFilterLandscape");
+  var filterPortrait=document.getElementById("irFilterPortrait");
+  var clearBtn=document.getElementById("irClear");
+  var canvas=document.createElement("canvas");
+  var ctx=canvas.getContext("2d");
+
+  var files=[];
+  var fileData=[];
+
+  function fmtBytes(b){ if(b<1024) return b+" B"; if(b<1048576) return (b/1024).toFixed(1)+" KB"; return (b/1048576).toFixed(2)+" MB"; }
+
+  function degToRad(d){ return d*Math.PI/180; }
+
+  function isLandscape(w,h){ return w>h; }
+  function isPortrait(w,h){ return h>w; }
+  function isSquare(w,h){ return w===h; }
+
+  function rotateSingle(imgObj, angle){
+    var rad=degToRad(angle);
+    var cos=Math.abs(Math.cos(rad));
+    var sin=Math.abs(Math.sin(rad));
+    var w=imgObj.naturalWidth;
+    var h=imgObj.naturalHeight;
+    var newW=Math.ceil(w*cos+h*sin);
+    var newH=Math.ceil(w*sin+h*cos);
+    canvas.width=newW;
+    canvas.height=newH;
+    ctx.clearRect(0,0,newW,newH);
+    if(fmtEl.value==="image/jpeg"){ ctx.fillStyle="#FFFFFF"; ctx.fillRect(0,0,newW,newH); }
+    ctx.translate(newW/2,newH/2);
+    ctx.rotate(rad);
+    ctx.drawImage(imgObj,-w/2,-h/2);
+    ctx.setTransform(1,0,0,1,0,0);
+    return canvas.toDataURL(fmtEl.value,qualEl.value/100);
+  }
+
+  function render(){
+    if(!fileData.length){
+      resBox.innerHTML='<div class="result-row"><span>Status</span><b>Upload images to get started</b></div>';
+      previewWrap.classList.remove("visible");
+      preview.src="";
+      dlBtn.disabled=true;
+      dlAllBtn.style.display="none";
+      batchGrid.innerHTML="";
+      batchActions.style.display="none";
+      return;
+    }
+    var angle=parseFloat(angleIn.value)||0;
+    angle=((angle%360)+360)%360;
+    var filterActive=filterOn.checked;
+    var filterMode=filterLandscape.checked?"landscape":"portrait";
+    var t0=performance.now();
+    var processed=0;
+    var skipped=0;
+    var totalOut=0;
+
+    batchGrid.innerHTML="";
+
+    fileData.forEach(function(item,index){
+      var shouldRotate=true;
+      if(filterActive){
+        if(filterMode==="landscape" && !isLandscape(item.img.naturalWidth,item.img.naturalHeight)){
+          shouldRotate=false;
+        }
+        if(filterMode==="portrait" && !isPortrait(item.img.naturalWidth,item.img.naturalHeight)){
+          shouldRotate=false;
+        }
+      }
+
+      var dataUrl;
+      if(shouldRotate){
+        dataUrl=rotateSingle(item.img,angle);
+        processed++;
+      } else {
+        dataUrl=item.original;
+        skipped++;
+      }
+      item.result=dataUrl;
+      totalOut+=Math.round(dataUrl.length*3/4);
+
+      var card=document.createElement("div");
+      card.className="batch-card";
+      var cap=document.createElement("img");
+      cap.src=dataUrl;
+      cap.alt=item.name;
+      card.appendChild(cap);
+      var nameEl=document.createElement("div");
+      nameEl.className="batch-card-name";
+      nameEl.textContent=item.name;
+      card.appendChild(nameEl);
+      var statusEl=document.createElement("div");
+      if(shouldRotate){
+        statusEl.className="batch-card-status";
+        statusEl.textContent="Rotated "+angle+"\u00B0";
+      } else {
+        statusEl.className="batch-card-status batch-card-skip";
+        statusEl.textContent="Skipped ("+filterMode+")";
+      }
+      card.appendChild(statusEl);
+      batchGrid.appendChild(card);
+    });
+
+    if(fileData.length===1){
+      preview.src=fileData[0].result;
+      previewWrap.classList.add("visible");
+    } else {
+      previewWrap.classList.remove("visible");
+      preview.src="";
+    }
+
+    var elapsed=(performance.now()-t0).toFixed(1);
+    resBox.innerHTML=
+      '<div class="result-row hero-row"><span>Images processed</span><b>'+processed+' rotated, '+skipped+' skipped</b></div>'+
+      '<div class="result-row"><span>Rotation angle</span><b>'+angle+'&deg;</b></div>'+
+      '<div class="result-row"><span>Total output (estimate)</span><b>'+fmtBytes(totalOut)+'</b></div>'+
+      '<div class="result-row"><span>Time</span><b>'+elapsed+' ms</b></div>';
+
+    dlBtn.disabled=fileData.length!==1;
+    if(fileData.length>1){
+      dlAllBtn.style.display="";
+      dlAllBtn.disabled=false;
+      batchActions.style.display="";
+    } else {
+      dlAllBtn.style.display="none";
+      batchActions.style.display="none";
+    }
+    proc.textContent=processed+" image"+(processed!==1?"s":"")+" rotated in "+elapsed+" ms - nothing left your device.";
+  }
+
+  function updatePresetUI(){
+    var angle=parseFloat(angleIn.value)||0;
+    angle=((angle%360)+360)%360;
+    document.querySelectorAll(".preset-btn").forEach(function(b){
+      var a=parseFloat(b.getAttribute("data-angle"));
+      b.classList.toggle("active",a===angle);
+    });
+  }
+
+  function readFile(file){
+    if(!file) return;
+    var reader=new FileReader();
+    reader.onload=function(e){
+      var tmp=new Image();
+      tmp.onload=function(){
+        fileData.push({img:tmp,name:file.name,original:e.target.result,result:null,size:file.size});
+        render();
+      };
+      tmp.onerror=function(){ proc.textContent="Could not read "+file.name+" - try a JPG, PNG, or GIF."; };
+      tmp.src=e.target.result;
+    };
+    reader.readAsDataURL(file);
+  }
+
+  function readFiles(fileList){
+    if(!fileList||!fileList.length) return;
+    for(var i=0;i<fileList.length;i++){
+      readFile(fileList[i]);
+    }
+  }
+
+  function resetAll(){
+    fileData=[];
+    files=[];
+    fileIn.value="";
+    angleIn.value="90";
+    previewWrap.classList.remove("visible");
+    preview.src="";
+    resBox.innerHTML="";
+    batchGrid.innerHTML="";
+    batchActions.style.display="none";
+    dlBtn.disabled=true;
+    dlAllBtn.style.display="none";
+    dlAllBtn.disabled=true;
+    proc.textContent="Cleared - upload images to start.";
+    updatePresetUI();
+  }
+
+  function downloadResult(dataUrl,name){
+    var ext=fmtEl.value==="image/jpeg"?"jpg":"png";
+    var base=(name.split(".")[0]||"image").trim()||"image";
+    var angle=parseFloat(angleIn.value)||0;
+    angle=((angle%360)+360)%360;
+    var filename=base+"-rotated"+Math.round(angle)+"."+ext;
+    var a=document.createElement("a");
+    a.href=dataUrl;
+    a.download=filename;
+    document.body.appendChild(a); a.click(); a.remove();
+  }
+
+  fileIn.addEventListener("change",function(){ readFiles(fileIn.files); });
+  drop.addEventListener("click",function(){ fileIn.click(); });
+  drop.addEventListener("dragover",function(e){ e.preventDefault(); drop.style.borderColor="#60A5FA"; });
+  drop.addEventListener("dragleave",function(){ drop.style.borderColor=""; });
+  drop.addEventListener("drop",function(e){
+    e.preventDefault(); drop.style.borderColor="";
+    readFiles(e.dataTransfer&&e.dataTransfer.files);
+  });
+
+  angleIn.addEventListener("input",function(){ updatePresetUI(); render(); });
+  fmtEl.addEventListener("change",function(){ qualRow.style.display=fmtEl.value==="image/jpeg"?"flex":"none"; render(); });
+  qualEl.addEventListener("input",function(){ qualVal.textContent=qualEl.value; render(); });
+
+  document.querySelectorAll(".preset-btn").forEach(function(btn){
+    btn.addEventListener("click",function(){
+      angleIn.value=btn.getAttribute("data-angle");
+      updatePresetUI();
+      render();
+    });
+  });
+
+  filterOn.addEventListener("change",function(){
+    filterRow.style.display=filterOn.checked?"flex":"none";
+    render();
+  });
+  filterLandscape.addEventListener("change",render);
+  filterPortrait.addEventListener("change",render);
+
+  dlBtn.addEventListener("click",function(){
+    if(fileData.length!==1) return;
+    downloadResult(fileData[0].result,fileData[0].name);
+    proc.textContent="Downloaded - rendered entirely in this tab.";
+  });
+
+  dlAllBtn.addEventListener("click",function(){
+    fileData.forEach(function(item){
+      if(item.result) downloadResult(item.result,item.name);
+    });
+    proc.textContent="All files downloaded - rendered entirely in this tab.";
+  });
+
+  clearBtn.addEventListener("click",resetAll);
+
+  updatePresetUI();
+})();
+</script>
+</body>
+</html>

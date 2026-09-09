@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Cropper | Crop &amp; Download Images Online</title>
+<meta name="description" content="Crop JPG, PNG, or GIF images with ease. Choose pixels to define your rectangle or use our visual editor - 100% client-side, nothing uploaded.">
+<meta name="author" content="F9XR Development Team">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#212529">
+<link rel="canonical" href="https://f9xr.github.io/troolify/tools/image/crop-image.html">
+<meta property="og:site_name" content="Troolify">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Image Cropper | Crop &amp; Download Images Online">
+<meta property="og:description" content="Crop JPG, PNG, or GIF images with ease. Choose pixels to define your rectangle or use our visual editor - 100% client-side, nothing uploaded.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://f9xr.github.io/troolify/tools/image/crop-image.html">
+<meta property="og:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-09-09">
+<meta property="article:modified_time" content="2026-09-09">
+<meta property="article:section" content="Image Tools">
+<meta property="article:tag" content="Crop Image">
+<meta property="article:tag" content="Crop Images Online">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Image Cropper | Crop &amp; Download Images Online">
+<meta name="twitter:description" content="Crop JPG, PNG, or GIF images with ease. Choose pixels to define your rectangle or use our visual editor - 100% browser based.">
+<meta name="twitter:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://f9xr.github.io/troolify/index.html" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://f9xr.github.io/troolify/tools/index.html" },
+    { "@type": "ListItem", "position": 3, "name": "Image Tools", "item": "https://f9xr.github.io/troolify/tools/image/" },
+    { "@type": "ListItem", "position": 4, "name": "Image Cropper", "item": "https://f9xr.github.io/troolify/tools/image/crop-image.html" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Image Cropper",
+  "url": "https://f9xr.github.io/troolify/tools/image/crop-image.html",
+  "applicationCategory": "MultimediaApplication",
+  "applicationSubCategory": "Image Cropping Tool",
+  "operatingSystem": "Any (web browser)",
+  "featureList": ["Crop images to any rectangular region", "Draggable and resizable crop box overlay", "Set exact crop dimensions by pixels", "Live preview of cropped area", "Export as PNG or JPEG with quality control", "100% client-side processing"],
+  "description": "Crop JPG, PNG, or GIF images with ease. Choose pixels to define your rectangle or use our visual editor - 100% client-side, nothing uploaded.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "datePublished": "2026-09-09",
+  "dateModified": "2026-09-09",
+  "author": { "@type": "Organization", "name": "F9XR Development Team", "url": "https://f9xr.github.io/" },
+  "publisher": { "@type": "Organization", "name": "Troolify", "url": "https://f9xr.github.io/troolify/", "logo": { "@type": "ImageObject", "url": "https://f9xr.github.io/troolify/assets/images/logo_nobg.webp", "width": 1407, "height": 768 } }
+}
+</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Image Cropper | Crop & Download Images Online","description":"Crop JPG, PNG, or GIF images with ease. Choose pixels to define your rectangle or use our visual editor - 100% client-side, nothing uploaded.","image":"https://f9xr.github.io/troolify/assets/images/og-image.jpg","datePublished":"2026-09-09","dateModified":"2026-09-09","mainEntityOfPage":"https://f9xr.github.io/troolify/tools/image/crop-image.html","author":{"@type":"Organization","name":"F9XR Development Team","url":"https://f9xr.github.io/"},"publisher":{"@type":"Organization","name":"Troolify","url":"https://f9xr.github.io/troolify/","logo":{"@type":"ImageObject","url":"https://f9xr.github.io/troolify/assets/images/logo_nobg.webp","width":1407,"height":768}}}</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I crop an image to exact dimensions?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Upload your image, then enter the desired width and height in pixels in the crop fields. The visual crop box on the canvas will resize to match, and you can drag it to the exact area you want. The result is previewed live before you download." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the Troolify image cropper safe to use?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. The image is loaded and processed entirely inside your browser using the HTML canvas API. No file is ever uploaded to any server, so your photos stay completely private." }
+    },
+    {
+      "@type": "Question",
+      "name": "What image formats can I crop?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Any image format your browser can decode, including PNG, JPEG, WebP, GIF and BMP. You can then export the cropped result as a PNG or a JPEG." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I drag the crop area visually?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. The tool renders your image on a canvas and overlays a crop rectangle that you can drag to reposition and resize using the corner and edge handles. The numeric fields stay in sync as you move the box." }
+    }
+  ]
+}
+</script>
+
+<link rel="icon" type="image/webp" href="../../assets/images/favicon.webp"><link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+<link rel="stylesheet" href="../../assets/css/tailwind.css">
+<link rel="stylesheet" href="../../assets/css/tool.css">
+<link rel="stylesheet" href="../../assets/css/site-shell.css">
+<link rel="stylesheet" href="../../assets/css/tool-page.css">
+<link rel="stylesheet" href="../../assets/css/seo-article.css">
+<style>
+.ic-grid{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:720px){.ic-grid{grid-template-columns:1fr 1fr}}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:12.5px;font-weight:700;color:var(--muted)}
+.field input,.field select{background:#1B2028;border:1px solid var(--border);color:var(--ink);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:15px;font-weight:600;outline:none;width:100%;box-sizing:border-box}
+.field input:focus,.field select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+.field input:disabled{opacity:.55;cursor:not-allowed}
+.ic-drop{border:2px dashed var(--border);border-radius:14px;padding:28px 18px;text-align:center;color:var(--faint);font-size:13.5px;cursor:pointer;transition:border-color .18s ease,background .18s ease;margin-bottom:16px}
+.ic-drop:hover{border-color:rgba(96,165,250,.6);background:rgba(59,130,246,.06)}
+.ic-drop b{color:var(--accent)}
+.ic-drop input{display:none}
+.ic-file-chip{display:inline-flex;align-items:center;gap:8px;margin-top:10px;padding:5px 12px;border-radius:999px;border:1px solid rgba(52,211,153,.3);background:var(--green-soft);color:#6EE7B7;font-size:12px;font-weight:700;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.opt-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.opt-chk{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:600;color:var(--muted);cursor:pointer;user-select:none}
+.opt-chk input{display:none}
+.opt-ui{width:38px;height:21px;border-radius:999px;background:var(--border);position:relative;transition:background .2s ease;flex-shrink:0}
+.opt-ui::after{content:"";position:absolute;top:2.5px;left:3px;width:16px;height:16px;border-radius:50%;background:#fff;transition:transform .22s cubic-bezier(.16,1,.3,1);box-shadow:0 1px 3px rgba(0,0,0,.35)}
+.opt-chk input:checked + .opt-ui{background:var(--accent)}
+.opt-chk input:checked + .opt-ui::after{transform:translateX(16px)}
+.result-card{background:linear-gradient(180deg,rgba(59,130,246,.12),rgba(59,130,246,.03));border:1px solid rgba(96,165,250,.25);border-radius:14px;padding:18px;margin-top:18px}
+.result-row{display:flex;justify-content:space-between;gap:10px;padding:8px 2px;font-size:14px}
+.result-row+.result-row{border-top:1px dashed rgba(255,255,255,.08)}
+.result-row b{color:#93C5FD;font-weight:800;text-align:right}
+.result-row.hero-row b{color:#6EE7B7}
+.ic-preview-wrap{display:none;margin-top:18px;border:1px solid var(--border);border-radius:14px;padding:14px;background:#1B2028}
+.ic-preview-wrap.visible{display:block}
+.ic-preview{max-width:100%;max-height:360px;margin-inline:auto;border-radius:8px;object-fit:contain}
+.ic-preview-cap{text-align:center;font-size:12px;font-weight:600;color:var(--faint);margin-top:10px}
+.ic-canvas-wrap{position:relative;display:inline-block;margin-top:12px;max-width:100%}
+.ic-canvas-wrap img{display:block;max-width:100%;height:auto;border-radius:8px;pointer-events:none;user-select:none}
+.ic-crop-overlay{position:absolute;border:2px solid rgba(255,255,255,.85);box-shadow:0 0 0 9999px rgba(0,0,0,.45);pointer-events:all;cursor:move}
+.ic-crop-handle{position:absolute;width:12px;height:12px;background:#fff;border-radius:2px;border:1px solid rgba(0,0,0,.3);pointer-events:all;z-index:2}
+.ic-crop-handle.tl{top:-6px;left:-6px;cursor:nwse-resize}
+.ic-crop-handle.tr{top:-6px;right:-6px;cursor:nesw-resize}
+.ic-crop-handle.bl{bottom:-6px;left:-6px;cursor:nesw-resize}
+.ic-crop-handle.br{bottom:-6px;right:-6px;cursor:nwse-resize}
+.ic-crop-handle.tm{top:-6px;left:50%;transform:translateX(-50%);cursor:ns-resize}
+.ic-crop-handle.bm{bottom:-6px;left:50%;transform:translateX(-50%);cursor:ns-resize}
+.ic-crop-handle.ml{top:50%;left:-6px;transform:translateY(-50%);cursor:ew-resize}
+.ic-crop-handle.mr{top:50%;right:-6px;transform:translateY(-50%);cursor:ew-resize}
+.ic-no-img{display:flex;align-items:center;justify-content:center;min-height:200px;border:2px dashed var(--border);border-radius:14px;color:var(--faint);font-size:13.5px;text-align:center;padding:18px}
+</style>
+</head>
+<body data-layout="tool">
+<noscript>
+    <nav aria-label="Primary" style="position:static;display:block;padding:1rem 1.5rem;background:#212529;border-bottom:1px solid #343A40;text-align:center;font-size:0.9rem;">
+        <a href="../../index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Home</a>
+        <a href="../../tools/index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Tools</a>
+        <a href="../../pages/about.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">About</a>
+        <a href="../../pages/contact.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Contact</a>
+    </nav>
+</noscript>
+
+<main class="tool-main">
+  <div class="container">
+
+    <div class="tool-head hero">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="../../tools/index.html">Tools</a></li>
+          <li><a href="../index.html">Image Tools</a></li>
+          <li class="current" aria-current="page">Image Cropper</li>
+        </ol>
+      </nav>
+      <div class="hero-main">
+        <span class="tool-badge"><span class="dot"></span>100% client-side &middot; zero data retention</span>
+        <h1>Image Cropper</h1>
+        <p>Crop JPG, PNG, or GIF images with ease. Choose pixels to define your rectangle or use our visual editor - 100% client-side, nothing uploaded.</p>
+      </div>
+      <div class="hero-box hero-cat">
+        <h3 class="hero-box-title"><i class="fa-solid fa-folder-open"></i>Category</h3>
+        <div class="tool-meta">
+          <span class="tool-tag"><i class="fa-solid fa-crop"></i>Crop</span>
+          <a class="tool-cat" href="../index.html" aria-label="Browse Image Tools category"><i class="fa-solid fa-folder"></i>Image Tools</a>
+        </div>
+      </div>
+      <div class="hero-box hero-qa">
+        <h3 class="hero-box-title"><i class="fa-solid fa-bolt"></i>Quick Actions</h3>
+        <div class="tool-actions">
+          <button class="rt-btn" type="button" id="btnShare"><i class="fa-solid fa-share-nodes"></i>Share</button>
+          <button class="rt-btn" type="button" id="btnEmbed"><i class="fa-solid fa-code"></i>Embed Tool</button>
+          <a class="rt-btn" href="../../pages/feedback.html"><i class="fa-solid fa-comment"></i>Feedback</a>
+        </div>
+      </div>
+      <div class="hero-box hero-details">
+        <h3 class="hero-box-title"><i class="fa-solid fa-circle-info"></i>Tool Details</h3>
+        <div class="tool-details">
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.github.io/" target="_blank" rel="noopener">F9XR Development Team</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-check-double"></i>Reviewed by</span><a class="detail-value" href="../../press/editorial-policies.html">Review Board</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-clock-rotate-left"></i>Last updated</span><span class="detail-value">09 September 2026</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel clean">
+      <div class="panel-inner">
+        <div class="toolbar-row">
+          <span class="tool-label"><i class="fa-solid fa-crop"></i>Image Cropper</span>
+          <div class="toolbar-actions">
+            <button class="chip-btn" type="button" id="icResetCrop" title="Reset crop to full image" disabled><i class="fa-solid fa-expand"></i><span class="hide-sm">Reset Crop</span></button>
+            <button class="chip-btn" type="button" id="icClear" title="Clear the upload and reset the form"><i class="fa-solid fa-eraser"></i><span class="hide-sm">Clear</span></button>
+          </div>
+        </div>
+
+        <label class="ic-drop" id="icDrop" for="icFile">
+          <i class="fa-solid fa-cloud-arrow-up" style="font-size:22px;color:var(--accent);margin-bottom:8px;display:block"></i>
+          <b>Click to choose an image</b> or drag &amp; drop it here
+          <input type="file" id="icFile" accept="image/*">
+        </label>
+
+        <div class="ic-grid">
+          <div>
+            <div class="ic-grid">
+              <div class="field"><label for="icCropW">Crop width (px)</label><input id="icCropW" type="number" inputmode="numeric" min="1" step="1" value="0" disabled></div>
+              <div class="field"><label for="icCropH">Crop height (px)</label><input id="icCropH" type="number" inputmode="numeric" min="1" step="1" value="0" disabled></div>
+            </div>
+            <div class="ic-grid" style="margin-top:12px">
+              <div class="field"><label for="icCropX">Offset X (px)</label><input id="icCropX" type="number" inputmode="numeric" min="0" step="1" value="0" disabled></div>
+              <div class="field"><label for="icCropY">Offset Y (px)</label><input id="icCropY" type="number" inputmode="numeric" min="0" step="1" value="0" disabled></div>
+            </div>
+            <div class="opt-row">
+              <label class="opt-chk" for="icLockRatio">
+                <input type="checkbox" id="icLockRatio">
+                <span class="opt-ui" aria-hidden="true"></span>
+                Lock aspect ratio
+              </label>
+            </div>
+          </div>
+          <div>
+            <div class="ic-grid">
+              <div class="field"><label for="icFmt">Export format</label>
+                <select id="icFmt" disabled>
+                  <option value="image/png">PNG (lossless)</option>
+                  <option value="image/jpeg">JPEG (smaller file)</option>
+                </select>
+              </div>
+              <div class="field" id="icQualRow" style="display:none"><label for="icQual">JPEG quality: <span id="icQualVal" style="color:#93C5FD">90</span></label><input id="icQual" type="range" min="10" max="100" step="1" value="90"></div>
+            </div>
+            <div class="actions" style="margin-top:16px">
+              <button class="btn btn-primary" type="button" id="icDownload" disabled><i class="fa-solid fa-download"></i>Download cropped image</button>
+            </div>
+            <p class="proc-line"><i class="fa-solid fa-bolt"></i><span id="icProc">Upload an image to get started - nothing leaves this tab.</span></p>
+          </div>
+        </div>
+
+        <div class="ic-canvas-wrap" id="icCanvasWrap" style="display:none">
+          <img id="icCanvasImg" alt="Original image for cropping">
+          <div class="ic-crop-overlay" id="icCropOverlay" style="display:none">
+            <div class="ic-crop-handle tl" data-handle="tl"></div>
+            <div class="ic-crop-handle tr" data-handle="tr"></div>
+            <div class="ic-crop-handle bl" data-handle="bl"></div>
+            <div class="ic-crop-handle br" data-handle="br"></div>
+            <div class="ic-crop-handle tm" data-handle="tm"></div>
+            <div class="ic-crop-handle bm" data-handle="bm"></div>
+            <div class="ic-crop-handle ml" data-handle="ml"></div>
+            <div class="ic-crop-handle mr" data-handle="mr"></div>
+          </div>
+        </div>
+
+        <div class="result-card" id="icResults" aria-live="polite"></div>
+
+        <div class="ic-preview-wrap" id="icPreviewWrap" aria-live="polite">
+          <img class="ic-preview" id="icPreview" alt="Cropped image preview">
+          <p class="ic-preview-cap">Live preview of the cropped area</p>
+        </div>
+      </div>
+    </div>
+
+    <aside class="disclaimer" aria-label="Disclaimer">
+      <i class="fa-solid fa-circle-info"></i>
+      <p>Disclaimer: Whilst every effort has been made in building our tool, we are not to be held liable for any damages or monetary losses arising out of or in connection with their use. <a href="../../press/disclaimer.html">Full disclaimer</a>.</p>
+    </aside>
+
+    <div class="article-layout">
+      <article class="seo-article">
+        <h2 id="article-title">Image Cropper: Cut Down to the Exact Pixels You Need</h2>
+        <p>Not every photo is perfectly framed. A distracting edge, an unwanted watermark in the corner, or a social-media aspect ratio requirement can all be solved with a quick crop. The Troolify Image Cropper lets you draw a rectangle directly on your image - by dragging a visual overlay or by entering exact pixel coordinates - and export the cropped result as a high-quality PNG or JPEG, entirely in your browser.</p>
+
+        <h2 id="what-it-does">What the Image Cropper Does</h2>
+        <p>Upload any image and it is decoded locally on the canvas. A semi-transparent overlay dims the area outside your crop rectangle. Drag the box to reposition it, grab any of the eight handles to resize it, or type precise width, height, X and Y values into the input fields. Toggle <strong>Lock aspect ratio</strong> to constrain the crop box to a fixed proportion while you resize. The result updates live so you always see exactly what you will get.</p>
+        <p>Because every pixel stays in your browser tab, sensitive documents, ID scans and personal photos are never sent anywhere.</p>
+
+        <h2 id="how-to-use">How to Use the Image Cropper</h2>
+        <ol>
+          <li><strong>Upload an image</strong> - click the drop zone or drag a PNG, JPEG, WebP or GIF onto it.</li>
+          <li><strong>Position the crop box</strong> - drag the rectangle to the area you want to keep.</li>
+          <li><strong>Resize the crop box</strong> - pull any corner or edge handle, or type exact dimensions in the fields.</li>
+          <li><strong>Preview</strong> - the cropped result is shown live below the canvas.</li>
+          <li><strong>Download</strong> - pick PNG or JPEG, adjust quality, and save the cropped image.</li>
+        </ol>
+
+        <h2 id="tips">Tips for Clean Crops</h2>
+        <ul>
+          <li><strong>Use exact pixels for social media</strong> - Instagram square posts need 1080&times;1080, stories need 1080&times;1920.</li>
+          <li><strong>Lock the ratio for thumbnails</strong> - toggle aspect-ratio lock to keep a 16:9 or 4:3 frame while you reposition.</li>
+          <li><strong>Check the offset fields</strong> - if you need the crop to start at a precise pixel, enter X and Y directly.</li>
+          <li><strong>Export PNG for graphics</strong>, JPEG for photographs, and use the quality slider for smaller files.</li>
+        </ul>
+
+        <h2 id="use-cases">Common Use Cases</h2>
+        <p>Bloggers crop screenshots to remove browser chrome. Product sellers trim whitespace around items. Social media managers reformat landscape photos into portrait crops for stories. Job seekers trim passport scans to fit application forms. Need to resize after cropping? Use our <a href="image-resizer.html">Image Resizer</a> for the final dimensions.</p>
+
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+
+        <details class="faq-item">
+          <summary>How do I crop an image to exact dimensions?</summary>
+          <div class="faq-a">
+            <p>Upload your image, then enter the desired width and height in pixels in the crop fields. The visual crop box on the canvas will resize to match, and you can drag it to the exact area you want. The result is previewed live before you download.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Is the Troolify image cropper safe to use?</summary>
+          <div class="faq-a">
+            <p>Yes. The image is loaded and processed entirely inside your browser using the HTML canvas API. No file is ever uploaded to any server, so your photos stay completely private.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>What image formats can I crop?</summary>
+          <div class="faq-a">
+            <p>Any image format your browser can decode, including PNG, JPEG, WebP, GIF and BMP. The cropped result can be exported as a PNG or a JPEG.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Can I drag the crop area visually?</summary>
+          <div class="faq-a">
+            <p>Yes. The tool renders your image on a canvas and overlays a crop rectangle that you can drag to reposition and resize using the corner and edge handles. The numeric fields stay in sync as you move the box.</p>
+          </div>
+        </details>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>Cropping images used to require a desktop photo editor. The Troolify Image Cropper does it in seconds, right in your browser, with full visual control and exact pixel input - perfect for getting every image just right before you publish.</p>
+      </article>
+    </div>
+
+    <section class="keyword-box" aria-label="Keywords and tags">
+      <h2>Keyword &amp; Tags</h2>
+      <h3>Keywords</h3>
+      <div class="keywords">
+        <span class="keyword">crop image online</span>
+        <span class="keyword">image cropper</span>
+        <span class="keyword">crop photo to pixels</span>
+        <span class="keyword">visual crop editor</span>
+        <span class="keyword">client-side image crop</span>
+        <span class="keyword">crop jpg png gif</span>
+        <span class="keyword">trim image edges</span>
+        <span class="keyword">online crop tool</span>
+      </div>
+      <h3>Tags</h3>
+      <div class="tags">
+        <a class="tag" href="../index.html"><i class="fa-solid fa-crop"></i>Crop</a>
+        <a class="tag" href="../index.html"><i class="fa-solid fa-folder"></i>Image Tools</a>
+        <a class="tag" href="../../tools/index.html"><i class="fa-solid fa-cube"></i>Image</a>
+      </div>
+    </section>
+
+    <section class="author-box" aria-label="About the publisher">
+      <div class="author-avatar" aria-hidden="true"><img src="../../assets/images/logo_nobg.webp" alt="F9XR logo" loading="lazy" decoding="async" width="1407" height="768"></div>
+      <div>
+        <span class="author-role">Published by</span>
+        <h2>F9XR Development Team</h2>
+        <p>Every Troolify tool is built and reviewed by the F9XR Development Team, then checked by our Review Board for correctness, accessibility, and clarity. Tools run 100% client-side with zero data retention.</p>
+        <div class="author-links">
+          <a href="https://f9xr.github.io/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i>F9XR Team</a>
+          <a href="../../press/editorial-policies.html"><i class="fa-solid fa-scale-balanced"></i>Editorial Policies</a>
+          <a href="https://github.com/f9xr" target="_blank" rel="noopener" aria-label="F9XR on GitHub"><i class="fa-brands fa-github"></i>GitHub</a>
+          <a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on LinkedIn"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+          <a href="https://instagram.com/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on Instagram"><i class="fa-brands fa-instagram"></i>Instagram</a>
+          <a href="https://youtube.com/@QuarterlyLIV" target="_blank" rel="noopener" aria-label="F9XR on YouTube"><i class="fa-brands fa-youtube"></i>YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-tools" aria-label="Related tools">
+      <h2>Related Tools</h2>
+      <div class="related-search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" id="relatedSearch" placeholder="Search all Troolify tools&hellip;" autocomplete="off" aria-label="Search related tools">
+      </div>
+      <div class="related-grid" id="relatedGrid" aria-busy="true">
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+      </div>
+    </section>
+
+    <section class="comments" aria-label="Comments">
+      <h2>Comments</h2>
+      <div id="comments">
+        <script src="https://utteranc.es/client.js" repo="f9xr/troolify" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async></script>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"><span></span><i class="fa-solid fa-layer-group"></i><span></span></div>
+
+  </div>
+</main>
+
+<script src="../../assets/js/layout.js" defer></script>
+<script src="../../assets/js/tools-data.js" defer></script>
+<script src="../../assets/js/tool-page.js" defer></script>
+<script>
+(function(){
+  "use strict";
+  var fileIn=document.getElementById("icFile");
+  var drop=document.getElementById("icDrop");
+  var cropW=document.getElementById("icCropW");
+  var cropH=document.getElementById("icCropH");
+  var cropX=document.getElementById("icCropX");
+  var cropY=document.getElementById("icCropY");
+  var lockRatio=document.getElementById("icLockRatio");
+  var fmtEl=document.getElementById("icFmt");
+  var qualRow=document.getElementById("icQualRow");
+  var qualEl=document.getElementById("icQual");
+  var qualVal=document.getElementById("icQualVal");
+  var dlBtn=document.getElementById("icDownload");
+  var previewWrap=document.getElementById("icPreviewWrap");
+  var preview=document.getElementById("icPreview");
+  var resBox=document.getElementById("icResults");
+  var proc=document.getElementById("icProc");
+  var canvasWrap=document.getElementById("icCanvasWrap");
+  var canvasImg=document.getElementById("icCanvasImg");
+  var overlay=document.getElementById("icCropOverlay");
+  var resetBtn=document.getElementById("icResetCrop");
+
+  var img=null,fileName="",origW=0,origH=0,origSize=0;
+  var cX=0,cY=0,cW=0,cH=0;
+  var dragging=null,dragStartX=0,dragStartY=0,dragOrigX=0,dragOrigY=0,dragOrigW=0,dragOrigH=0;
+  var displayScale=1;
+
+  function fmtBytes(b){ if(b<1024) return b+" B"; if(b<1048576) return (b/1024).toFixed(1)+" KB"; return (b/1048576).toFixed(2)+" MB"; }
+
+  function clampCrop(){
+    if(cW<1) cW=1;
+    if(cH<1) cH=1;
+    if(cX<0) cX=0;
+    if(cY<0) cY=0;
+    if(cX+cW>origW) cW=origW-cX;
+    if(cY+cH>origH) cH=origH-cY;
+    if(cW<1) cW=1;
+    if(cH<1) cH=1;
+  }
+
+  function syncInputs(){
+    cropW.value=Math.round(cW);
+    cropH.value=Math.round(cH);
+    cropX.value=Math.round(cX);
+    cropY.value=Math.round(cY);
+  }
+
+  function positionOverlay(){
+    if(!img) return;
+    displayScale=canvasImg.clientWidth/origW;
+    overlay.style.left=Math.round(cX*displayScale)+"px";
+    overlay.style.top=Math.round(cY*displayScale)+"px";
+    overlay.style.width=Math.round(cW*displayScale)+"px";
+    overlay.style.height=Math.round(cH*displayScale)+"px";
+  }
+
+  function renderPreview(){
+    if(!img||cW<1||cH<1){
+      previewWrap.classList.remove("visible");
+      resBox.innerHTML='<div class="result-row"><span>Status</span><b>Adjust the crop area to preview</b></div>';
+      dlBtn.disabled=true;
+      return;
+    }
+    var t0=performance.now();
+    var expCanvas=document.createElement("canvas");
+    expCanvas.width=Math.round(cW);
+    expCanvas.height=Math.round(cH);
+    var ctx=expCanvas.getContext("2d");
+    ctx.drawImage(img,Math.round(cX),Math.round(cY),Math.round(cW),Math.round(cH),0,0,Math.round(cW),Math.round(cH));
+    var u=expCanvas.toDataURL(fmtEl.value,qualEl.value/100);
+    preview.src=u;
+    previewWrap.classList.add("visible");
+    var bytes=Math.round(u.length*3/4);
+    var origArea=origW*origH;
+    var cropArea=Math.round(cW)*Math.round(cH);
+    var pct=origArea?((cropArea/origArea)*100).toFixed(1):"0";
+    resBox.innerHTML=
+      '<div class="result-row hero-row"><span>Crop dimensions</span><b>'+Math.round(cW)+' &#215; '+Math.round(cH)+' px</b></div>'+
+      '<div class="result-row"><span>Original size</span><b>'+origW+' &#215; '+origH+' px ('+fmtBytes(origSize)+')</b></div>'+
+      '<div class="result-row"><span>Offset</span><b>X: '+Math.round(cX)+' &nbsp; Y: '+Math.round(cY)+'</b></div>'+
+      '<div class="result-row"><span>Crop area</span><b>'+pct+'% of original</b></div>'+
+      '<div class="result-row"><span>Output file (estimate)</span><b>'+fmtBytes(bytes)+' '+(fmtEl.value==="image/png"?"PNG":"JPEG q"+qualEl.value)+'</b></div>';
+    dlBtn.disabled=false;
+    proc.textContent="Cropped to "+Math.round(cW)+" &times; "+Math.round(cH)+" px in "+(performance.now()-t0).toFixed(1)+" ms - the image never left your device.";
+  }
+
+  function readFile(file){
+    if(!file) return;
+    fileName=file.name||"image.png";
+    origSize=file.size||0;
+    var reader=new FileReader();
+    reader.onload=function(e){
+      var tmp=new Image();
+      tmp.onload=function(){
+        img=tmp; origW=tmp.naturalWidth; origH=tmp.naturalHeight;
+        canvasImg.src=e.target.result;
+        canvasWrap.style.display="inline-block";
+        overlay.style.display="block";
+        cX=0; cY=0; cW=origW; cH=origH;
+        syncInputs();
+        cropW.disabled=false; cropH.disabled=false;
+        cropX.disabled=false; cropY.disabled=false;
+        fmtEl.disabled=false;
+        resetBtn.disabled=false;
+        requestAnimationFrame(function(){ positionOverlay(); renderPreview(); });
+        proc.textContent="Image loaded ("+origW+"&times;"+origH+") - drag the crop box or enter exact pixels.";
+      };
+      tmp.onerror=function(){ proc.textContent="Could not read that image - try a PNG, JPEG, WebP, or GIF."; };
+      tmp.src=e.target.result;
+    };
+    reader.readAsDataURL(file);
+  }
+
+  function clearAll(){
+    img=null; fileName=""; origW=0; origH=0; origSize=0;
+    cX=0; cY=0; cW=0; cH=0;
+    fileIn.value="";
+    canvasWrap.style.display="none";
+    overlay.style.display="none";
+    previewWrap.classList.remove("visible");
+    preview.src="";
+    resBox.innerHTML="";
+    dlBtn.disabled=true;
+    resetBtn.disabled=true;
+    cropW.value=0; cropH.value=0; cropX.value=0; cropY.value=0;
+    cropW.disabled=true; cropH.disabled=true; cropX.disabled=true; cropY.disabled=true;
+    fmtEl.disabled=true;
+    proc.textContent="Cleared - upload a new image to start.";
+  }
+
+  function resetCrop(){
+    if(!img) return;
+    cX=0; cY=0; cW=origW; cH=origH;
+    syncInputs();
+    positionOverlay();
+    renderPreview();
+  }
+
+  function startDrag(e,handle){
+    e.preventDefault();
+    e.stopPropagation();
+    var pt=e.touches?e.touches[0]:e;
+    dragging=handle;
+    dragStartX=pt.clientX;
+    dragStartY=pt.clientY;
+    dragOrigX=cX;
+    dragOrigY=cY;
+    dragOrigW=cW;
+    dragOrigH=cH;
+    document.addEventListener("mousemove",onDrag);
+    document.addEventListener("mouseup",endDrag);
+    document.addEventListener("touchmove",onDrag,{passive:false});
+    document.addEventListener("touchend",endDrag);
+  }
+
+  function onDrag(e){
+    if(!dragging) return;
+    if(e.cancelable) e.preventDefault();
+    var pt=e.touches?e.touches[0]:e;
+    var dx=(pt.clientX-dragStartX)/displayScale;
+    var dy=(pt.clientY-dragStartY)/displayScale;
+    var nx=dragOrigX,ny=dragOrigY,nw=dragOrigW,nh=dragOrigH;
+    var minSize=2;
+    var h=dragging;
+
+    if(h==="tl"){ nx=dragOrigX+dx; ny=dragOrigY+dy; nw=dragOrigW-dx; nh=dragOrigH-dy; }
+    else if(h==="tr"){ ny=dragOrigY+dy; nw=dragOrigW+dx; nh=dragOrigH-dy; }
+    else if(h==="bl"){ nx=dragOrigX+dx; nw=dragOrigW-dx; nh=dragOrigH+dy; }
+    else if(h==="br"){ nw=dragOrigW+dx; nh=dragOrigH+dy; }
+    else if(h==="tm"){ ny=dragOrigY+dy; nh=dragOrigH-dy; }
+    else if(h==="bm"){ nh=dragOrigH+dy; }
+    else if(h==="ml"){ nx=dragOrigX+dx; nw=dragOrigW-dx; }
+    else if(h==="mr"){ nw=dragOrigW+dx; }
+    else if(h==="move"){ nx=dragOrigX+dx; ny=dragOrigY+dy; }
+
+    if(lockRatio.checked&&h!=="move"){
+      var ratio=dragOrigW/dragOrigH;
+      if(["tl","tr","bl","br","tm","bm"].indexOf(h)!==-1){
+        if(["tl","tr","tm"].indexOf(h)!==-1&&nh>0){ nw=nh*ratio; } else if(nh>0){ nw=nh*ratio; }
+      } else {
+        if(nw>0){ nh=nw/ratio; }
+      }
+    }
+
+    if(nw<minSize){ nw=minSize; }
+    if(nh<minSize){ nh=minSize; }
+    if(nx<0){ nx=0; }
+    if(ny<0){ ny=0; }
+    if(nx+nw>origW){ nw=origW-nx; }
+    if(ny+nh>origH){ nh=origH-ny; }
+    if(nw<minSize) nw=minSize;
+    if(nh<minSize) nh=minSize;
+
+    cX=nx; cY=ny; cW=nw; cH=nh;
+    syncInputs();
+    positionOverlay();
+    renderPreview();
+  }
+
+  function endDrag(){
+    dragging=null;
+    document.removeEventListener("mousemove",onDrag);
+    document.removeEventListener("mouseup",endDrag);
+    document.removeEventListener("touchmove",onDrag);
+    document.removeEventListener("touchend",endDrag);
+  }
+
+  function syncFromInputs(){
+    var nw=parseInt(cropW.value)||0;
+    var nh=parseInt(cropH.value)||0;
+    var nx=parseInt(cropX.value)||0;
+    var ny=parseInt(cropY.value)||0;
+    if(nw<1) nw=1;
+    if(nh<1) nh=1;
+    if(lockRatio.checked&&cW>0&&cH>0){
+      var ratio=cW/cH;
+      nh=Math.round(nw/ratio);
+      if(nh<1) nh=1;
+    }
+    if(nx<0) nx=0;
+    if(ny<0) ny=0;
+    if(nx+nw>origW) nw=origW-nx;
+    if(ny+nh>origH) nh=origH-ny;
+    cX=nx; cY=ny; cW=nw; cH=nh;
+    syncInputs();
+    positionOverlay();
+    renderPreview();
+  }
+
+  overlay.addEventListener("mousedown",function(e){ startDrag(e,"move"); });
+  overlay.addEventListener("touchstart",function(e){ startDrag(e,"move"); },{passive:false});
+
+  var handles=overlay.querySelectorAll(".ic-crop-handle");
+  for(var i=0;i<handles.length;i++){
+    (function(h){
+      h.addEventListener("mousedown",function(e){ startDrag(e,h.getAttribute("data-handle")); });
+      h.addEventListener("touchstart",function(e){ startDrag(e,h.getAttribute("data-handle")); },{passive:false});
+    })(handles[i]);
+  }
+
+  window.addEventListener("resize",function(){ positionOverlay(); });
+
+  fileIn.addEventListener("change",function(){ readFile(fileIn.files&&fileIn.files[0]); });
+  drop.addEventListener("click",function(){ fileIn.click(); });
+  drop.addEventListener("dragover",function(e){ e.preventDefault(); drop.style.borderColor="#60A5FA"; });
+  drop.addEventListener("dragleave",function(){ drop.style.borderColor=""; });
+  drop.addEventListener("drop",function(e){
+    e.preventDefault(); drop.style.borderColor="";
+    if(e.dataTransfer&&e.dataTransfer.files&&e.dataTransfer.files[0]){ readFile(e.dataTransfer.files[0]); }
+  });
+
+  cropW.addEventListener("input",syncFromInputs);
+  cropH.addEventListener("input",syncFromInputs);
+  cropX.addEventListener("input",syncFromInputs);
+  cropY.addEventListener("input",syncFromInputs);
+  fmtEl.addEventListener("change",function(){ qualRow.style.display=fmtEl.value==="image/jpeg"?"flex":"none"; renderPreview(); });
+  qualEl.addEventListener("input",function(){ qualVal.textContent=qualEl.value; renderPreview(); });
+
+  dlBtn.addEventListener("click",function(){
+    if(!img) return;
+    var expCanvas=document.createElement("canvas");
+    var dw=Math.round(cW),dh=Math.round(cH);
+    expCanvas.width=dw; expCanvas.height=dh;
+    var ctx=expCanvas.getContext("2d");
+    ctx.imageSmoothingEnabled=true;
+    ctx.imageSmoothingQuality="high";
+    ctx.drawImage(img,Math.round(cX),Math.round(cY),dw,dh,0,0,dw,dh);
+    var ext=fmtEl.value==="image/jpeg"?"jpg":"png";
+    var base=(fileName.split(".")[0]||"image").trim()||"image";
+    var name=base+"-crop-"+dw+"x"+dh+"."+ext;
+    var a=document.createElement("a");
+    a.href=expCanvas.toDataURL(fmtEl.value,qualEl.value/100);
+    a.download=name;
+    document.body.appendChild(a); a.click(); a.remove();
+    proc.textContent="Downloaded "+name+" - rendered entirely in this tab.";
+  });
+
+  resetBtn.addEventListener("click",resetCrop);
+  document.getElementById("icClear").addEventListener("click",clearAll);
+})();
+</script>
+</body>
+</html>

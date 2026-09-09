@@ -161,6 +161,18 @@
         '</a>' +
         '<a class="badge-link" href="https://launchstag.com" target="_blank" rel="noopener noreferrer">' +
             '<img src="https://launchstag.com/badge-light.svg" alt="Featured on Launchstag" width="198" height="62" loading="lazy" decoding="async" />' +
+        '</a>' +
+        '<a class="badge-link" href="https://creatorstoolbox.com" target="_blank" rel="noopener noreferrer" title="Featured on Creators Toolbox">' +
+            '<img src="https://creatorstoolbox.com/badges/featured-on-creators-toolbox.svg" alt="Featured on Creators Toolbox" width="200" height="54" loading="lazy" decoding="async" />' +
+        '</a>' +
+        '<a class="badge-link" href="https://launch01.com/projects/troolify?utm_source=badge" target="_blank" rel="noopener noreferrer">' +
+            '<img src="https://r2.direasy-multi-tenant.focusapps.app/uploads/616d0b1a-3979-4b8c-94d1-b4f1fedd3ead/1782997259567/w4wbn1tx1uj/featured-on-dark.svg" alt="Featured on Launch01" width="198" height="44" loading="lazy" decoding="async" />' +
+        '</a>' +
+        '<a class="badge-link" href="https://smolstartup.com/projects/troolify?utm_source=badge" target="_blank" rel="noopener noreferrer">' +
+            '<img src="https://smolstartup.com/smolstartup/images/badges/featured-on-dark.svg" alt="Featured on Smol Startup" width="198" height="44" loading="lazy" decoding="async" />' +
+        '</a>' +
+        '<a class="badge-link" href="https://buildrship.xyz/products/troolify" target="_blank" rel="noopener noreferrer">' +
+            '<img src="https://buildrship.xyz/assets/featured-on-buildrship.png" alt="Featured on Buildrship" width="130" height="46" loading="lazy" decoding="async" />' +
         '</a>';
 
     /* ------------------------------------------------------------------------

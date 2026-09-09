@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Converter | Convert Images to JPG, PNG, WebP, BMP &amp; PDF</title>
+<meta name="description" content="Convert images between JPG, PNG, WebP, BMP and PDF. Auto-detects source format, supports batch conversion, and offers quality control - 100% client-side, nothing uploaded.">
+<meta name="author" content="F9XR Development Team">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#212529">
+<link rel="canonical" href="https://f9xr.github.io/troolify/tools/image/convert-image.html">
+<meta property="og:site_name" content="Troolify">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Image Converter | Convert Images to JPG, PNG, WebP, BMP &amp; PDF">
+<meta property="og:description" content="Auto-detect your image format and convert to JPG, PNG, WEBP, BMP or PDF in bulk - 100% client-side, nothing uploaded.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://f9xr.github.io/troolify/tools/image/convert-image.html">
+<meta property="og:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-09-09">
+<meta property="article:modified_time" content="2026-09-09">
+<meta property="article:section" content="Image Tools">
+<meta property="article:tag" content="Image Converter">
+<meta property="article:tag" content="Convert Images Online">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Image Converter | Convert Images to JPG, PNG, WebP, BMP &amp; PDF">
+<meta name="twitter:description" content="Auto-detect your image format and convert to JPG, PNG, WEBP, BMP or PDF - 100% browser based.">
+<meta name="twitter:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://f9xr.github.io/troolify/index.html" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://f9xr.github.io/troolify/tools/index.html" },
+    { "@type": "ListItem", "position": 3, "name": "Image Tools", "item": "https://f9xr.github.io/troolify/tools/image/" },
+    { "@type": "ListItem", "position": 4, "name": "Image Converter", "item": "https://f9xr.github.io/troolify/tools/image/convert-image.html" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Image Converter",
+  "url": "https://f9xr.github.io/troolify/tools/image/convert-image.html",
+  "applicationCategory": "MultimediaApplication",
+  "applicationSubCategory": "Image Format Conversion Tool",
+  "operatingSystem": "Any (web browser)",
+  "featureList": ["Auto-detect source image format", "Convert between JPG, PNG, WebP, BMP and PDF", "Batch convert multiple images at once", "Adjust quality for lossy formats", "100% client-side processing"],
+  "description": "Auto-detects your image format and converts to JPG, PNG, WEBP, BMP or PDF in bulk - 100% client-side, nothing uploaded.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "datePublished": "2026-09-09",
+  "dateModified": "2026-09-09",
+  "author": { "@type": "Organization", "name": "F9XR Development Team", "url": "https://f9xr.github.io/" },
+  "publisher": { "@type": "Organization", "name": "Troolify", "url": "https://f9xr.github.io/troolify/", "logo": { "@type": "ImageObject", "url": "https://f9xr.github.io/troolify/assets/images/logo_nobg.webp", "width": 1407, "height": 768 } }
+}
+</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Image Converter | Convert Images to JPG, PNG, WebP, BMP & PDF","description":"Auto-detects your image format and converts to JPG, PNG, WEBP, BMP or PDF in bulk - 100% client-side, nothing uploaded.","image":"https://f9xr.github.io/troolify/assets/images/og-image.jpg","datePublished":"2026-09-09","dateModified":"2026-09-09","mainEntityOfPage":"https://f9xr.github.io/troolify/tools/image/convert-image.html","author":{"@type":"Organization","name":"F9XR Development Team","url":"https://f9xr.github.io/"},"publisher":{"@type":"Organization","name":"Troolify","url":"https://f9xr.github.io/troolify/","logo":{"@type":"ImageObject","url":"https://f9xr.github.io/troolify/assets/images/logo_nobg.webp","width":1407,"height":768}}}</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I convert a PNG to JPG without losing quality?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Use this tool to upload your PNG, select JPEG as the output format, and slide the quality to 90 or above. JPEG is lossy, so very slight degradation is technically inevitable, but at quality 90+ the difference is imperceptible to the human eye. For truly lossless output, convert to PNG, WebP lossless, or BMP instead." }
+    },
+    {
+      "@type": "Question",
+      "name": "What image formats can the Troolify image converter handle?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Any image your browser can decode is supported as input - including PNG, JPEG, WebP, GIF, BMP, TIFF and SVG (rasterized). You can then export to JPEG, PNG, WebP, BMP or PDF. The source format is auto-detected from file headers and displayed on screen." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the image converter safe for private photos?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every conversion runs entirely inside your browser using the HTML canvas API. Your files are never uploaded to any server. Once you close the tab all data is gone - nothing is stored or logged." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I convert multiple images at once?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. The tool supports batch conversion. Select multiple files in the upload dialog and each image will be converted individually. You can download every converted file with a single click using the batch download button." }
+    }
+  ]
+}
+</script>
+
+<link rel="icon" type="image/webp" href="../../assets/images/favicon.webp"><link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+<link rel="stylesheet" href="../../assets/css/tailwind.css">
+<link rel="stylesheet" href="../../assets/css/tool.css">
+<link rel="stylesheet" href="../../assets/css/site-shell.css">
+<link rel="stylesheet" href="../../assets/css/tool-page.css">
+<link rel="stylesheet" href="../../assets/css/seo-article.css">
+<style>
+.ic-grid{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:720px){.ic-grid{grid-template-columns:1fr 1fr}}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:12.5px;font-weight:700;color:var(--muted)}
+.field input,.field select{background:#1B2028;border:1px solid var(--border);color:var(--ink);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:15px;font-weight:600;outline:none;width:100%;box-sizing:border-box}
+.field input:focus,.field select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+.field input:disabled{opacity:.55;cursor:not-allowed}
+.ic-drop{border:2px dashed var(--border);border-radius:14px;padding:28px 18px;text-align:center;color:var(--faint);font-size:13.5px;cursor:pointer;transition:border-color .18s ease,background .18s ease;margin-bottom:16px}
+.ic-drop:hover{border-color:rgba(96,165,250,.6);background:rgba(59,130,246,.06)}
+.ic-drop b{color:var(--accent)}
+.ic-drop input{display:none}
+.ic-file-chip{display:inline-flex;align-items:center;gap:8px;margin-top:10px;padding:5px 12px;border-radius:999px;border:1px solid rgba(52,211,153,.3);background:var(--green-soft);color:#6EE7B7;font-size:12px;font-weight:700;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.opt-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.opt-chk{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:600;color:var(--muted);cursor:pointer;user-select:none}
+.opt-chk input{display:none}
+.opt-ui{width:38px;height:21px;border-radius:999px;background:var(--border);position:relative;transition:background .2s ease;flex-shrink:0}
+.opt-ui::after{content:"";position:absolute;top:2.5px;left:3px;width:16px;height:16px;border-radius:50%;background:#fff;transition:transform .22s cubic-bezier(.16,1,.3,1);box-shadow:0 1px 3px rgba(0,0,0,.35)}
+.opt-chk input:checked + .opt-ui{background:var(--accent)}
+.opt-chk input:checked + .opt-ui::after{transform:translateX(16px)}
+.result-card{background:linear-gradient(180deg,rgba(59,130,246,.12),rgba(59,130,246,.03));border:1px solid rgba(96,165,250,.25);border-radius:14px;padding:18px;margin-top:18px}
+.result-row{display:flex;justify-content:space-between;gap:10px;padding:8px 2px;font-size:14px}
+.result-row+.result-row{border-top:1px dashed rgba(255,255,255,.08)}
+.result-row b{color:#93C5FD;font-weight:800;text-align:right}
+.result-row.hero-row b{color:#6EE7B7}
+.ic-preview-wrap{margin-top:18px;border:1px solid var(--border);border-radius:14px;padding:14px;background:#1B2028;display:none}
+.ic-preview-wrap.visible{display:block}
+.ic-preview{max-width:100%;max-height:360px;margin-inline:auto;border-radius:8px;object-fit:contain}
+.ic-preview-cap{text-align:center;font-size:12px;font-weight:600;color:var(--faint);margin-top:10px}
+.ic-file-list{display:flex;flex-direction:column;gap:8px;margin-top:14px;max-height:280px;overflow-y:auto}
+.ic-file-item{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:10px;border:1px solid var(--border);background:rgba(255,255,255,.03);font-size:13px}
+.ic-file-item .ic-fi-name{flex:1;color:var(--muted);font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ic-file-item .ic-fi-src{font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px;background:rgba(96,165,250,.15);color:#93C5FD;text-transform:uppercase}
+.ic-file-item .ic-fi-status{font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px;background:rgba(52,211,153,.15);color:#6EE7B7}
+.ic-file-item .ic-fi-status.pending{background:rgba(250,204,21,.12);color:#FBBF24}
+.ic-file-item .ic-fi-dl{background:none;border:none;color:var(--accent);cursor:pointer;font-size:14px;padding:4px}
+.ic-file-item .ic-fi-dl:hover{color:#93C5FD}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:10px;font-family:inherit;font-size:14px;font-weight:700;border:none;cursor:pointer;transition:background .18s ease,opacity .18s ease}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:#3B82F6}
+.btn-primary:disabled{opacity:.45;cursor:not-allowed}
+.actions{display:flex;flex-wrap:wrap;gap:10px}
+.proc-line{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--faint);margin-top:12px}
+.proc-line i{color:#FBBF24}
+</style>
+</head>
+<body data-layout="tool">
+<noscript>
+    <nav aria-label="Primary" style="position:static;display:block;padding:1rem 1.5rem;background:#212529;border-bottom:1px solid #343A40;text-align:center;font-size:0.9rem;">
+        <a href="../../index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Home</a>
+        <a href="../../tools/index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Tools</a>
+        <a href="../../pages/about.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">About</a>
+        <a href="../../pages/contact.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Contact</a>
+    </nav>
+</noscript>
+
+<main class="tool-main">
+  <div class="container">
+
+    <div class="tool-head hero">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="../../tools/index.html">Tools</a></li>
+          <li><a href="../index.html">Image Tools</a></li>
+          <li class="current" aria-current="page">Image Converter</li>
+        </ol>
+      </nav>
+      <div class="hero-main">
+        <span class="tool-badge"><span class="dot"></span>100% client-side &middot; zero data retention</span>
+        <h1>Image Converter</h1>
+        <p>Auto-detects your image format and converts to JPG, PNG, WEBP, BMP or PDF in bulk - 100% client-side, nothing uploaded.</p>
+      </div>
+      <div class="hero-box hero-cat">
+        <h3 class="hero-box-title"><i class="fa-solid fa-folder-open"></i>Category</h3>
+        <div class="tool-meta">
+          <span class="tool-tag"><i class="fa-solid fa-tag"></i>Converter</span>
+          <a class="tool-cat" href="../index.html" aria-label="Browse Image Tools category"><i class="fa-solid fa-folder"></i>Image Tools</a>
+        </div>
+      </div>
+      <div class="hero-box hero-qa">
+        <h3 class="hero-box-title"><i class="fa-solid fa-bolt"></i>Quick Actions</h3>
+        <div class="tool-actions">
+          <button class="rt-btn" type="button" id="btnShare"><i class="fa-solid fa-share-nodes"></i>Share</button>
+          <button class="rt-btn" type="button" id="btnEmbed"><i class="fa-solid fa-code"></i>Embed Tool</button>
+          <a class="rt-btn" href="../../pages/feedback.html"><i class="fa-solid fa-comment"></i>Feedback</a>
+        </div>
+      </div>
+      <div class="hero-box hero-details">
+        <h3 class="hero-box-title"><i class="fa-solid fa-circle-info"></i>Tool Details</h3>
+        <div class="tool-details">
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.github.io/" target="_blank" rel="noopener">F9XR Development Team</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-check-double"></i>Reviewed by</span><a class="detail-value" href="../../press/editorial-policies.html">Review Board</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-clock-rotate-left"></i>Last updated</span><span class="detail-value">09 September 2026</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel clean">
+      <div class="panel-inner">
+        <div class="toolbar-row">
+          <span class="tool-label"><i class="fa-solid fa-arrows-rotate"></i>Image Converter</span>
+          <div class="toolbar-actions">
+            <button class="chip-btn" type="button" id="icClear" title="Clear the upload and reset the form"><i class="fa-solid fa-eraser"></i><span class="hide-sm">Clear</span></button>
+          </div>
+        </div>
+
+        <label class="ic-drop" id="icDrop" for="icFile">
+          <i class="fa-solid fa-cloud-arrow-up" style="font-size:22px;color:var(--accent);margin-bottom:8px;display:block"></i>
+          <b>Click to choose image(s)</b> or drag &amp; drop here
+          <input type="file" id="icFile" accept="image/*" multiple>
+        </label>
+
+        <div class="ic-file-list" id="icFileList" style="display:none"></div>
+
+        <div class="ic-grid">
+          <div>
+            <div class="field"><label for="icFmt">Convert to</label>
+              <select id="icFmt">
+                <option value="image/jpeg">JPEG (lossy, smaller files)</option>
+                <option value="image/png">PNG (lossless)</option>
+                <option value="image/webp">WebP (modern, small)</option>
+                <option value="image/bmp">BMP (uncompressed)</option>
+                <option value="application/pdf">PDF (document)</option>
+              </select>
+            </div>
+            <div class="field" id="icQualRow" style="margin-top:12px"><label for="icQual">Quality: <span id="icQualVal" style="color:#93C5FD">90</span></label><input id="icQual" type="range" min="10" max="100" step="1" value="90"></div>
+            <p class="proc-line" id="icQualHint"><i class="fa-solid fa-circle-info" style="color:var(--accent)"></i><span>Adjusts compression for JPEG and WebP. Ignored for PNG, BMP and PDF.</span></p>
+            <div class="opt-row">
+              <label class="opt-chk" for="icAutoOpen">
+                <input type="checkbox" id="icAutoOpen" checked>
+                <span class="opt-ui" aria-hidden="true"></span>
+                Auto-preview after conversion
+              </label>
+            </div>
+          </div>
+          <div>
+            <div class="actions" style="margin-top:0">
+              <button class="btn btn-primary" type="button" id="icConvert" disabled><i class="fa-solid fa-arrows-rotate"></i>Convert</button>
+              <button class="btn btn-primary" type="button" id="icDownloadAll" disabled style="display:none"><i class="fa-solid fa-file-zipper"></i>Download all</button>
+            </div>
+            <p class="proc-line"><i class="fa-solid fa-bolt"></i><span id="icProc">Upload one or more images to get started - nothing leaves this tab.</span></p>
+          </div>
+        </div>
+
+        <div class="result-card" id="icResults" aria-live="polite"></div>
+
+        <div class="ic-preview-wrap" id="icPreviewWrap" aria-live="polite">
+          <img class="ic-preview" id="icPreview" alt="Converted image preview">
+          <p class="ic-preview-cap">Preview of the converted image</p>
+        </div>
+      </div>
+    </div>
+
+    <aside class="disclaimer" aria-label="Disclaimer">
+      <i class="fa-solid fa-circle-info"></i>
+      <p>Disclaimer: Whilst every effort has been made in building our tool, we are not to be held liable for any damages or monetary losses arising out of or in connection with their use. <a href="../../press/disclaimer.html">Full disclaimer</a>.</p>
+    </aside>
+
+    <div class="article-layout">
+      <article class="seo-article">
+        <h2 id="article-title">Image Converter: Switch Between Formats Instantly, Privately</h2>
+        <p>Different platforms expect different image formats. A photo library might store BMP files that are too heavy for the web; a website may require WebP for speed; an email signature demands JPEG. The Troolify Image Converter auto-detects the source format and converts it to JPG, PNG, WebP, BMP or PDF - entirely inside your browser.</p>
+
+        <h2 id="what-it-does">What the Image Converter Does</h2>
+        <p>Upload one or more images and the tool reads the file header to identify the format automatically. You then pick a target format from the dropdown, adjust the quality slider for lossy outputs (JPEG and WebP), and hit Convert. Each file is drawn onto an HTML canvas and exported to the chosen format. For PDF output the tool generates a single-page PDF containing the image at its original dimensions.</p>
+        <p>Because every operation happens locally, sensitive documents, ID scans and personal photographs never leave your device. There is no upload, no server processing and no data retention.</p>
+
+        <h2 id="how-to-use">How to Use the Image Converter</h2>
+        <ol>
+          <li><strong>Upload images</strong> - click the drop zone or drag files onto it. You can select multiple files for batch conversion.</li>
+          <li><strong>Pick a target format</strong> - choose JPEG, PNG, WebP, BMP or PDF from the dropdown.</li>
+          <li><strong>Adjust quality (optional)</strong> - slide the quality bar for JPEG and WebP to balance file size against visual fidelity.</li>
+          <li><strong>Convert</strong> - click the Convert button. Each file is processed in sequence and you can preview the result immediately.</li>
+          <li><strong>Download</strong> - click the download icon next to any file or use Download All to save everything at once.</li>
+        </ol>
+
+        <h2 id="tips">Tips for Best Conversion Results</h2>
+        <ul>
+          <li><strong>Use PNG for transparency</strong> - if your source image has a transparent background, export to PNG or WebP to preserve it. JPEG does not support transparency.</li>
+          <li><strong>JPEG for photos, PNG for graphics</strong> - photographs compress well in JPEG. Logos, screenshots and text-heavy images look sharper in PNG.</li>
+          <li><strong>WebP for web performance</strong> - WebP often achieves 25-30% smaller files than JPEG at the same quality, making it ideal for websites.</li>
+          <li><strong>BMP for legacy systems</strong> - some industrial or legacy software only reads BMP. The converter handles that instantly.</li>
+          <li><strong>PDF for sharing</strong> - convert a PNG screenshot into a PDF for easy embedding in documents or emailing as an attachment.</li>
+        </ul>
+
+        <h2 id="use-cases">Common Use Cases</h2>
+        <p>Web developers convert PNG screenshots to WebP for faster page loads. Designers export BMP wireframes to PNG for client presentations. Photographers batch-convert RAW-exported JPEGs to archival PNG. Office workers transform PNG diagrams into PDFs for reports. If you also need to resize before converting, pair this with the <a href="image-resizer.html">Image Resizer</a> first.</p>
+
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+
+        <details class="faq-item">
+          <summary>How do I convert a PNG to JPG without losing quality?</summary>
+          <div class="faq-a">
+            <p>Upload your PNG, select JPEG as the output, and set the quality slider to 90 or higher. At that level, the visual difference is imperceptible. If you need truly lossless output, stick with PNG, WebP (lossless) or BMP.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>What image formats can the converter handle?</summary>
+          <div class="faq-a">
+            <p>Any format your browser can decode works as input - PNG, JPEG, WebP, GIF, BMP, TIFF and rasterized SVG. Outputs include JPEG, PNG, WebP, BMP and PDF.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Is the converter safe for private photos?</summary>
+          <div class="faq-a">
+            <p>Yes. All processing runs locally in the browser via the canvas API. No files are uploaded. Close the tab and everything is gone.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Can I convert multiple images at once?</summary>
+          <div class="faq-a">
+            <p>Absolutely. Select multiple files when uploading and each one will be converted individually. Use Download All to grab every result in one action.</p>
+          </div>
+        </details>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>Converting between image formats no longer requires installing software or trusting an online service with your files. The Troolify Image Converter handles it entirely in your browser with auto-detection, batch support and quality control - fast, private and free.</p>
+      </article>
+    </div>
+
+    <section class="keyword-box" aria-label="Keywords and tags">
+      <h2>Keyword &amp; Tags</h2>
+      <h3>Keywords</h3>
+      <div class="keywords">
+        <span class="keyword">image converter online</span>
+        <span class="keyword">convert PNG to JPG</span>
+        <span class="keyword">convert image to WebP</span>
+        <span class="keyword">convert image to PDF</span>
+        <span class="keyword">convert image to BMP</span>
+        <span class="keyword">batch image converter</span>
+        <span class="keyword">client-side image conversion</span>
+        <span class="keyword">auto detect image format</span>
+      </div>
+      <h3>Tags</h3>
+      <div class="tags">
+        <a class="tag" href="../index.html"><i class="fa-solid fa-tag"></i>Converter</a>
+        <a class="tag" href="../index.html"><i class="fa-solid fa-folder"></i>Image Tools</a>
+        <a class="tag" href="../../tools/index.html"><i class="fa-solid fa-cube"></i>Image</a>
+      </div>
+    </section>
+
+    <section class="author-box" aria-label="About the publisher">
+      <div class="author-avatar" aria-hidden="true"><img src="../../assets/images/logo_nobg.webp" alt="F9XR logo" loading="lazy" decoding="async" width="1407" height="768"></div>
+      <div>
+        <span class="author-role">Published by</span>
+        <h2>F9XR Development Team</h2>
+        <p>Every Troolify tool is built and reviewed by the F9XR Development Team, then checked by our Review Board for correctness, accessibility, and clarity. Tools run 100% client-side with zero data retention.</p>
+        <div class="author-links">
+          <a href="https://f9xr.github.io/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i>F9XR Team</a>
+          <a href="../../press/editorial-policies.html"><i class="fa-solid fa-scale-balanced"></i>Editorial Policies</a>
+          <a href="https://github.com/f9xr" target="_blank" rel="noopener" aria-label="F9XR on GitHub"><i class="fa-brands fa-github"></i>GitHub</a>
+          <a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on LinkedIn"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+          <a href="https://instagram.com/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on Instagram"><i class="fa-brands fa-instagram"></i>Instagram</a>
+          <a href="https://youtube.com/@QuarterlyLIV" target="_blank" rel="noopener" aria-label="F9XR on YouTube"><i class="fa-brands fa-youtube"></i>YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-tools" aria-label="Related tools">
+      <h2>Related Tools</h2>
+      <div class="related-search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" id="relatedSearch" placeholder="Search all Troolify tools&hellip;" autocomplete="off" aria-label="Search related tools">
+      </div>
+      <div class="related-grid" id="relatedGrid" aria-busy="true">
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+      </div>
+    </section>
+
+    <section class="comments" aria-label="Comments">
+      <h2>Comments</h2>
+      <div id="comments">
+        <script src="https://utteranc.es/client.js" repo="f9xr/troolify" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async></script>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"><span></span><i class="fa-solid fa-layer-group"></i><span></span></div>
+
+  </div>
+</main>
+
+<script src="../../assets/js/layout.js" defer></script>
+<script src="../../assets/js/tools-data.js" defer></script>
+<script src="../../assets/js/tool-page.js" defer></script>
+<script>
+(function(){
+  "use strict";
+
+  var fileIn   = document.getElementById("icFile");
+  var drop     = document.getElementById("icDrop");
+  var fmtEl    = document.getElementById("icFmt");
+  var qualRow  = document.getElementById("icQualRow");
+  var qualEl   = document.getElementById("icQual");
+  var qualVal  = document.getElementById("icQualVal");
+  var qualHint = document.getElementById("icQualHint");
+  var cvtBtn   = document.getElementById("icConvert");
+  var dlAllBtn = document.getElementById("icDownloadAll");
+  var previewWrap = document.getElementById("icPreviewWrap");
+  var preview  = document.getElementById("icPreview");
+  var resBox   = document.getElementById("icResults");
+  var proc     = document.getElementById("icProc");
+  var fileList = document.getElementById("icFileList");
+
+  var FORMAT_MAP = {
+    "image/jpeg":"JPEG","image/png":"PNG","image/webp":"WebP",
+    "image/bmp":"BMP","image/gif":"GIF","image/tiff":"TIFF",
+    "image/svg+xml":"SVG","image/vnd.microsoft.icon":"ICO",
+    "application/pdf":"PDF"
+  };
+  var EXT_MAP = { "image/jpeg":"jpg","image/png":"png","image/webp":"webp","image/bmp":"bmp","application/pdf":"pdf" };
+
+  var files = [];
+  var converted = [];
+  var canvas = document.createElement("canvas");
+
+  function fmtBytes(b){ if(b<1024) return b+" B"; if(b<1048576) return (b/1024).toFixed(1)+" KB"; return (b/1048576).toFixed(2)+" MB"; }
+
+  function detectFormat(file){
+    if(file.type && file.type.indexOf("image")===0) return file.type.split(";")[0];
+    var ext=(file.name||"").split(".").pop().toLowerCase();
+    var map={png:"image/png",jpg:"image/jpeg",jpeg:"image/jpeg",webp:"image/webp",bmp:"image/bmp",gif:"image/gif",tiff:"image/tiff",tif:"image/tiff",svg:"image/svg+xml",ico:"image/vnd.microsoft.icon",pdf:"application/pdf"};
+    return map[ext]||"unknown";
+  }
+
+  function updateUI(){
+    var has=files.length>0;
+    cvtBtn.disabled=!has;
+    updateQualVisibility();
+    renderFileList();
+  }
+
+  function updateQualVisibility(){
+    var v=fmtEl.value;
+    var showLossy=(v==="image/jpeg"||v==="image/webp");
+    qualRow.style.display=showLossy?"flex":"none";
+    qualHint.style.display=showLossy?"flex":"none";
+  }
+
+  function renderFileList(){
+    if(!files.length){fileList.style.display="none";fileList.innerHTML="";return;}
+    fileList.style.display="flex";
+    var h="";
+    for(var i=0;i<files.length;i++){
+      var f=files[i];
+      var detected=detectFormat(f);
+      var label=FORMAT_MAP[detected]||detected.split("/").pop().toUpperCase();
+      var status=converted[i]?"Converted":"Pending";
+      var statusCls=converted[i]?"":"pending";
+      h+='<div class="ic-file-item">'+
+        '<span class="ic-fi-name">'+(f.name||"File "+(i+1))+'</span>'+
+        '<span class="ic-fi-src">'+label+'</span>'+
+        '<span class="ic-fi-status '+statusCls+'">'+status+'</span>'+
+        (converted[i]?'<button class="ic-fi-dl" data-idx="'+i+'" title="Download"><i class="fa-solid fa-download"></i></button>':'')+
+        '</div>';
+    }
+    fileList.innerHTML=h;
+    dlAllBtn.style.display=converted.indexOf(true)!==-1?"inline-flex":"none";
+    dlAllBtn.disabled=converted.indexOf(true)===-1;
+  }
+
+  function renderPreview(blob){
+    var url=URL.createObjectURL(blob);
+    preview.src=url;
+    previewWrap.classList.add("visible");
+  }
+
+  function convertSingle(idx,cb){
+    var f=files[idx];
+    var t0=performance.now();
+    var reader=new FileReader();
+    reader.onload=function(e){
+      var tmp=new Image();
+      tmp.onload=function(){
+        var w=tmp.naturalWidth, h=tmp.naturalHeight;
+        canvas.width=w; canvas.height=h;
+        var ctx=canvas.getContext("2d");
+        ctx.imageSmoothingEnabled=true;
+        ctx.imageSmoothingQuality="high";
+
+        var targetFmt=fmtEl.value;
+
+        if(targetFmt==="application/pdf"){
+          renderPdf(tmp,w,h,idx,t0,cb);
+          return;
+        }
+
+        if(targetFmt==="image/jpeg"){ ctx.fillStyle="#FFFFFF"; ctx.fillRect(0,0,w,h); }
+        ctx.drawImage(tmp,0,0,w,h);
+
+        var quality=targetFmt==="image/png"||targetFmt==="image/bmp"?undefined:qualEl.value/100;
+        var dataUrl=canvas.toDataURL(targetFmt,quality);
+        var bytes=Math.round(dataUrl.length*3/4);
+        var ext=EXT_MAP[targetFmt]||"bin";
+        var base=(f.name||"image").replace(/\.[^.]+$/,"");
+        var outName=base+"-converted."+ext;
+        var t1=performance.now();
+
+        resBox.innerHTML=
+          '<div class="result-row hero-row"><span>File</span><b>'+outName+'</b></div>'+
+          '<div class="result-row"><span>Detected source</span><b>'+(FORMAT_MAP[detectFormat(f)]||"Unknown")+'</b></div>'+
+          '<div class="result-row"><span>Output format</span><b>'+targetFmt.split("/").pop().toUpperCase()+'</b></div>'+
+          '<div class="result-row"><span>Dimensions</span><b>'+w+' &#215; '+h+' px</b></div>'+
+          '<div class="result-row"><span>Output size</span><b>'+fmtBytes(bytes)+'</b></div>'+
+          '<div class="result-row"><span>Time</span><b>'+(t1-t0).toFixed(1)+' ms</b></div>';
+
+        converted[idx]={blob:new Blob([dataUrlToUint8Array(dataUrl)],{type:targetFmt}),name:outName,dataUrl:dataUrl};
+        if(idx===0) renderPreview(converted[idx].blob);
+        renderFileList();
+        proc.textContent="Converted in "+(t1-t0).toFixed(1)+" ms - the image never left your device.";
+        cb();
+      };
+      tmp.onerror=function(){
+        converted[idx]=null;
+        renderFileList();
+        proc.textContent="Could not decode "+f.name+" - try another file.";
+        cb();
+      };
+      tmp.src=e.target.result;
+    };
+    reader.readAsDataURL(f);
+  }
+
+  function renderPdf(img,w,h,idx,t0,cb){
+    var targetFmt="application/pdf";
+    var f=files[idx];
+    var c=document.createElement("canvas");
+    c.width=w; c.height=h;
+    var ctx=c.getContext("2d");
+    ctx.imageSmoothingEnabled=true;
+    ctx.imageSmoothingQuality="high";
+    ctx.fillStyle="#FFFFFF";
+    ctx.fillRect(0,0,w,h);
+    ctx.drawImage(img,0,0,w,h);
+    var jpegDataUrl=c.toDataURL("image/jpeg",qualEl.value/100);
+    var jpegBase64=jpegDataUrl.split(",")[1];
+    var pxPerPt=72/96;
+    var pdfW=Math.round(w*pxPerPt);
+    var pdfH=Math.round(h*pxPerPt);
+    var stream=[
+      "stream",
+      jpegDataUrl,
+      "endstream"
+    ].join("\n");
+    var objects=[];
+    var objNums={};
+    var n=1;
+    function addObj(content){objects.push(content);objNums[n]=objects.length;return n++;}
+    var rootId=addObj("1 0 obj\n<< /Type /Catalog /Pages 2 0 R >>\nendobj");
+    var pagesId=addObj("2 0 obj\n<< /Type /Pages /Kids [3 0 R] /Count 1 >>\nendobj");
+    var imgId=addObj("4 0 obj\n<< /Type /XObject /Subtype /Image /Width "+w+" /Height "+h+" /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length "+jpegBase64.length+" >>\nstream\nendobj");
+    var pageId=addObj("3 0 obj\n<< /Type /Page /Parent 2 0 R /MediaBox [0 0 "+pdfW+" "+pdfH+"] /Contents 5 0 R /Resources << /XObject << /Img 4 0 R >> >> >>\nendobj");
+    var contentStream="q "+pdfW+" 0 0 "+pdfH+" 0 0 cm /Img Do Q";
+    addObj("5 0 obj\n<< /Length "+contentStream.length+" >>\nstream\n"+contentStream+"\nendstream\nendobj");
+
+    var pdf="%PDF-1.4\n";
+    var offsets=[];
+    for(var i=0;i<objects.length;i++){
+      offsets.push(pdf.length);
+      pdf+=objects[i]+"\n";
+    }
+    pdf+="xref\n0 "+(objects.length+1)+"\n0000000000 65535 f \n";
+    for(var j=0;j<objects.length;j++){
+      pdf+=String(offsets[j]).padStart(10,"0")+" 00000 n \n";
+    }
+    pdf+="trailer\n<< /Size "+(objects.length+1)+" /Root 1 0 R >>\nstartxref\n"+pdf.length+"\n%%EOF";
+
+    var t1=performance.now();
+    var base=(f.name||"image").replace(/\.[^.]+$/,"");
+    var outName=base+"-converted.pdf";
+    converted[idx]={blob:new Blob([pdf],{type:"application/pdf"}),name:outName,dataUrl:URL.createObjectURL(new Blob([pdf],{type:"application/pdf"}))};
+    resBox.innerHTML=
+      '<div class="result-row hero-row"><span>File</span><b>'+outName+'</b></div>'+
+      '<div class="result-row"><span>Detected source</span><b>'+(FORMAT_MAP[detectFormat(f)]||"Unknown")+'</b></div>'+
+      '<div class="result-row"><span>Output format</span><b>PDF</b></div>'+
+      '<div class="result-row"><span>Dimensions</span><b>'+w+' &#215; '+h+' px</b></div>'+
+      '<div class="result-row"><span>Time</span><b>'+(t1-t0).toFixed(1)+' ms</b></div>';
+    renderFileList();
+    proc.textContent="PDF generated in "+(t1-t0).toFixed(1)+" ms - nothing left your browser.";
+    cb();
+  }
+
+  function dataUrlToUint8Array(dataUrl){
+    var parts=dataUrl.split(",");
+    var mime=parts[0].match(/:(.*?);/)[1];
+    var binary=atob(parts[1]);
+    var len=binary.length;
+    var arr=new Uint8Array(len);
+    for(var i=0;i<len;i++) arr[i]=binary.charCodeAt(i);
+    return arr;
+  }
+
+  function downloadConverted(idx){
+    var c=converted[idx];
+    if(!c) return;
+    var a=document.createElement("a");
+    if(c.dataUrl.indexOf("blob:")===0){ a.href=c.dataUrl; }
+    else { a.href=c.dataUrl; }
+    a.download=c.name;
+    document.body.appendChild(a); a.click(); a.remove();
+  }
+
+  function convertAll(){
+    converted=new Array(files.length).fill(null);
+    var i=0;
+    function next(){
+      if(i>=files.length){
+        proc.textContent="All "+files.length+" file(s) converted - nothing left your browser.";
+        renderFileList();
+        return;
+      }
+      convertSingle(i,function(){ i++; next(); });
+    }
+    next();
+  }
+
+  fileIn.addEventListener("change",function(){
+    var newFiles=Array.prototype.slice.call(fileIn.files||[]);
+    if(!newFiles.length) return;
+    files=newFiles;
+    converted=new Array(files.length).fill(null);
+    updateUI();
+  });
+  drop.addEventListener("click",function(){ fileIn.click(); });
+  drop.addEventListener("dragover",function(e){ e.preventDefault(); drop.style.borderColor="#60A5FA"; });
+  drop.addEventListener("dragleave",function(){ drop.style.borderColor=""; });
+  drop.addEventListener("drop",function(e){
+    e.preventDefault(); drop.style.borderColor="";
+    if(e.dataTransfer&&e.dataTransfer.files&&e.dataTransfer.files.length){
+      files=Array.prototype.slice.call(e.dataTransfer.files);
+      converted=new Array(files.length).fill(null);
+      updateUI();
+    }
+  });
+  fmtEl.addEventListener("change",function(){ updateQualVisibility(); });
+  qualEl.addEventListener("input",function(){ qualVal.textContent=qualEl.value; });
+  cvtBtn.addEventListener("click",convertAll);
+  dlAllBtn.addEventListener("click",function(){
+    for(var i=0;i<converted.length;i++){ if(converted[i]) downloadConverted(i); }
+  });
+  fileList.addEventListener("click",function(e){
+    var btn=e.target.closest(".ic-fi-dl");
+    if(btn){ downloadConverted(parseInt(btn.getAttribute("data-idx"),10)); }
+  });
+  document.getElementById("icClear").addEventListener("click",function(){
+    files=[]; converted=[];
+    fileIn.value="";
+    previewWrap.classList.remove("visible");
+    preview.src="";
+    resBox.innerHTML="";
+    fileList.style.display="none";
+    fileList.innerHTML="";
+    dlAllBtn.style.display="none";
+    cvtBtn.disabled=true;
+    proc.textContent="Cleared - upload new images to start.";
+  });
+})();
+</script>
+</body>
+</html>

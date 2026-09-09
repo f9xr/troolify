@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Background Remover | Erase Background from Photos Online</title>
+<meta name="description" content="Erase the background from any photo automatically - export a transparent PNG or drop in a solid color. Nothing is uploaded. 100% client-side.">
+<meta name="author" content="F9XR Development Team">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#212529">
+<link rel="canonical" href="https://f9xr.github.io/troolify/tools/image/remove-background.html">
+<meta property="og:site_name" content="Troolify">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Background Remover | Erase Background from Photos Online">
+<meta property="og:description" content="Erase the background from any photo automatically - export a transparent PNG or drop in a solid color. Nothing is uploaded. 100% client-side.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://f9xr.github.io/troolify/tools/image/remove-background.html">
+<meta property="og:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-09-09">
+<meta property="article:modified_time" content="2026-09-09">
+<meta property="article:section" content="Image Tools">
+<meta property="article:tag" content="Edit">
+<meta property="article:tag" content="Background Remover">
+<meta property="article:tag" content="Remove Background Online">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Background Remover | Erase Background from Photos Online">
+<meta name="twitter:description" content="Erase the background from any photo automatically - transparent PNG export, 100% browser based.">
+<meta name="twitter:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://f9xr.github.io/troolify/index.html" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://f9xr.github.io/troolify/tools/index.html" },
+    { "@type": "ListItem", "position": 3, "name": "Image Tools", "item": "https://f9xr.github.io/troolify/tools/image/" },
+    { "@type": "ListItem", "position": 4, "name": "Background Remover", "item": "https://f9xr.github.io/troolify/tools/image/remove-background.html" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Background Remover",
+  "url": "https://f9xr.github.io/troolify/tools/image/remove-background.html",
+  "applicationCategory": "MultimediaApplication",
+  "applicationSubCategory": "Image Background Removal Tool",
+  "operatingSystem": "Any (web browser)",
+  "featureList": ["Remove background from any image", "Flood-fill detection from edges and corners", "Adjustable color tolerance", "Export as transparent PNG", "Solid color background option", "Before-and-after comparison", "100% client-side processing"],
+  "description": "Erase the background from any photo automatically - export a transparent PNG or drop in a solid color. Nothing is uploaded. 100% client-side.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "datePublished": "2026-09-09",
+  "dateModified": "2026-09-09",
+  "author": { "@type": "Organization", "name": "F9XR Development Team", "url": "https://f9xr.github.io/" },
+  "publisher": { "@type": "Organization", "name": "Troolify", "url": "https://f9xr.github.io/troolify/", "logo": { "@type": "ImageObject", "url": "https://f9xr.github.io/troolify/assets/images/logo_nobg.webp", "width": 1407, "height": 768 } }
+}
+</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Background Remover | Erase Background from Photos Online","description":"Erase the background from any photo automatically - export a transparent PNG or drop in a solid color. Nothing is uploaded. 100% client-side.","image":"https://f9xr.github.io/troolify/assets/images/og-image.jpg","datePublished":"2026-09-09","dateModified":"2026-09-09","mainEntityOfPage":"https://f9xr.github.io/troolify/tools/image/remove-background.html","author":{"@type":"Organization","name":"F9XR Development Team","url":"https://f9xr.github.io/"},"publisher":{"@type":"Organization","name":"Troolify","url":"https://f9xr.github.io/troolify/","logo":{"@type":"ImageObject","url":"https://f9xr.github.io/troolify/assets/images/logo_nobg.webp","width":1407,"height":768}}}</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does the background remover work?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The tool samples the color at the edges and corners of your image, then performs a flood fill inwards. Pixels whose color falls within a configurable tolerance of the sampled edge color are replaced with transparency. A solid-color background option is also available." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my image uploaded to a server?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Your image is loaded into the browser and processed entirely on your device using the HTML Canvas API. Nothing is ever sent to a server, so your photos stay completely private." }
+    },
+    {
+      "@type": "Question",
+      "name": "What file format do I get when downloading?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The result is always exported as a PNG file, which supports full alpha transparency. This ensures the removed background stays transparent wherever you paste or place the image." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I replace the background with a solid color instead?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. After removing the background you can toggle the solid-color mode and pick any color. The tool will fill the removed areas with that color before you download the result." }
+    }
+  ]
+}
+</script>
+
+<link rel="icon" type="image/webp" href="../../assets/images/favicon.webp"><link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+<link rel="stylesheet" href="../../assets/css/tailwind.css">
+<link rel="stylesheet" href="../../assets/css/tool.css">
+<link rel="stylesheet" href="../../assets/css/site-shell.css">
+<link rel="stylesheet" href="../../assets/css/tool-page.css">
+<link rel="stylesheet" href="../../assets/css/seo-article.css">
+<style>
+.rb-grid{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:720px){.rb-grid{grid-template-columns:1fr 1fr}}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:12.5px;font-weight:700;color:var(--muted)}
+.field input,.field select{background:#1B2028;border:1px solid var(--border);color:var(--ink);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:15px;font-weight:600;outline:none;width:100%;box-sizing:border-box}
+.field input:focus,.field select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+.field input:disabled{opacity:.55;cursor:not-allowed}
+.rb-drop{border:2px dashed var(--border);border-radius:14px;padding:28px 18px;text-align:center;color:var(--faint);font-size:13.5px;cursor:pointer;transition:border-color .18s ease,background .18s ease;margin-bottom:16px}
+.rb-drop:hover{border-color:rgba(96,165,250,.6);background:rgba(59,130,246,.06)}
+.rb-drop b{color:var(--accent)}
+.rb-drop input{display:none}
+.rb-file-chip{display:inline-flex;align-items:center;gap:8px;margin-top:10px;padding:5px 12px;border-radius:999px;border:1px solid rgba(52,211,153,.3);background:var(--green-soft);color:#6EE7B7;font-size:12px;font-weight:700;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.opt-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.opt-chk{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:600;color:var(--muted);cursor:pointer;user-select:none}
+.opt-chk input{display:none}
+.opt-ui{width:38px;height:21px;border-radius:999px;background:var(--border);position:relative;transition:background .2s ease;flex-shrink:0}
+.opt-ui::after{content:"";position:absolute;top:2.5px;left:3px;width:16px;height:16px;border-radius:50%;background:#fff;transition:transform .22s cubic-bezier(.16,1,.3,1);box-shadow:0 1px 3px rgba(0,0,0,.35)}
+.opt-chk input:checked + .opt-ui{background:var(--accent)}
+.opt-chk input:checked + .opt-ui::after{transform:translateX(16px)}
+.result-card{background:linear-gradient(180deg,rgba(59,130,246,.12),rgba(59,130,246,.03));border:1px solid rgba(96,165,250,.25);border-radius:14px;padding:18px;margin-top:18px}
+.result-row{display:flex;justify-content:space-between;gap:10px;padding:8px 2px;font-size:14px}
+.result-row+.result-row{border-top:1px dashed rgba(255,255,255,.08)}
+.result-row b{color:#93C5FD;font-weight:800;text-align:right}
+.result-row.hero-row b{color:#6EE7B7}
+.rb-preview-wrap{display:none;margin-top:18px;border:1px solid var(--border);border-radius:14px;padding:14px;background:#1B2028}
+.rb-preview-wrap.visible{display:block}
+.rb-compare{position:relative;width:100%;overflow:hidden;border-radius:10px;cursor:col-resize;user-select:none;aspect-ratio:16/10}
+.rb-compare canvas{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain}
+.rb-compare canvas.rb-after{clip-path:inset(0 0 0 0)}
+.rb-compare .rb-slider{position:absolute;top:0;bottom:0;width:3px;background:rgba(255,255,255,.85);z-index:10;pointer-events:none}
+.rb-compare .rb-slider::after{content:"";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.92);box-shadow:0 2px 8px rgba(0,0,0,.35);pointer-events:none}
+.rb-compare .rb-label{position:absolute;bottom:8px;padding:4px 10px;border-radius:6px;font-size:11px;font-weight:700;color:#fff;pointer-events:none;z-index:11;text-transform:uppercase;letter-spacing:.5px}
+.rb-compare .rb-label-before{left:8px;background:rgba(0,0,0,.55)}
+.rb-compare .rb-label-after{right:8px;background:rgba(0,0,0,.55)}
+.rb-preview-cap{text-align:center;font-size:12px;font-weight:600;color:var(--faint);margin-top:10px}
+.rb-color-row{display:flex;align-items:center;gap:10px;margin-top:10px}
+.rb-color-row input[type="color"]{width:36px;height:36px;border:2px solid var(--border);border-radius:8px;background:#1B2029;cursor:pointer;padding:2px}
+.rb-color-row span{font-size:12.5px;font-weight:600;color:var(--muted)}
+.rb-tolerance{display:flex;align-items:center;gap:10px;margin-top:10px}
+.rb-tolerance input[type="range"]{flex:1;accent-color:var(--accent)}
+.rb-tolerance span{font-size:12.5px;font-weight:700;color:#93C5FD;min-width:36px}
+.rb-btn-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+</style>
+</head>
+<body data-layout="tool">
+<noscript>
+    <nav aria-label="Primary" style="position:static;display:block;padding:1rem 1.5rem;background:#212529;border-bottom:1px solid #343A40;text-align:center;font-size:0.9rem;">
+        <a href="../../index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Home</a>
+        <a href="../../tools/index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Tools</a>
+        <a href="../../pages/about.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">About</a>
+        <a href="../../pages/contact.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Contact</a>
+    </nav>
+</noscript>
+
+<main class="tool-main">
+  <div class="container">
+
+    <div class="tool-head hero">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="../../tools/index.html">Tools</a></li>
+          <li><a href="../index.html">Image Tools</a></li>
+          <li class="current" aria-current="page">Background Remover</li>
+        </ol>
+      </nav>
+      <div class="hero-main">
+        <span class="tool-badge"><span class="dot"></span>100% client-side &middot; zero data retention</span>
+        <h1>Background Remover</h1>
+        <p>Erase the background from any photo automatically &mdash; export a transparent PNG or drop in a solid color. Nothing is uploaded. 100% client-side.</p>
+      </div>
+      <div class="hero-box hero-cat">
+        <h3 class="hero-box-title"><i class="fa-solid fa-folder-open"></i>Category</h3>
+        <div class="tool-meta">
+          <span class="tool-tag"><i class="fa-solid fa-tag"></i>Edit</span>
+          <a class="tool-cat" href="../index.html" aria-label="Browse Image Tools category"><i class="fa-solid fa-folder"></i>Image Tools</a>
+        </div>
+      </div>
+      <div class="hero-box hero-qa">
+        <h3 class="hero-box-title"><i class="fa-solid fa-bolt"></i>Quick Actions</h3>
+        <div class="tool-actions">
+          <button class="rt-btn" type="button" id="btnShare"><i class="fa-solid fa-share-nodes"></i>Share</button>
+          <button class="rt-btn" type="button" id="btnEmbed"><i class="fa-solid fa-code"></i>Embed Tool</button>
+          <a class="rt-btn" href="../../pages/feedback.html"><i class="fa-solid fa-comment"></i>Feedback</a>
+        </div>
+      </div>
+      <div class="hero-box hero-details">
+        <h3 class="hero-box-title"><i class="fa-solid fa-circle-info"></i>Tool Details</h3>
+        <div class="tool-details">
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.github.io/" target="_blank" rel="noopener">F9XR Development Team</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-check-double"></i>Reviewed by</span><a class="detail-value" href="../../press/editorial-policies.html">Review Board</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-clock-rotate-left"></i>Last updated</span><span class="detail-value">09 September 2026</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel clean">
+      <div class="panel-inner">
+        <div class="toolbar-row">
+          <span class="tool-label"><i class="fa-solid fa-wand-magic-sparkles"></i>Background Remover</span>
+          <div class="toolbar-actions">
+            <button class="chip-btn" type="button" id="rbClear" title="Clear the upload and reset the form"><i class="fa-solid fa-eraser"></i><span class="hide-sm">Clear</span></button>
+          </div>
+        </div>
+
+        <label class="rb-drop" id="rbDrop" for="rbFile">
+          <i class="fa-solid fa-cloud-arrow-up" style="font-size:22px;color:var(--accent);margin-bottom:8px;display:block"></i>
+          <b>Click to choose an image</b> or drag &amp; drop it here
+          <input type="file" id="rbFile" accept="image/*">
+        </label>
+
+        <div class="rb-grid">
+          <div>
+            <div class="field"><label for="rbTolerance">Color tolerance: <span id="rbTolVal" style="color:#93C5FD">30</span></label>
+              <div class="rb-tolerance"><input id="rbTolerance" type="range" min="1" max="100" step="1" value="30"><span id="rbTolPct">30%</span></div>
+            </div>
+            <div class="field" style="margin-top:14px"><label>Sample from</label>
+              <div class="radio-row">
+                <label><input type="radio" name="rbSrc" id="rbSrcCorners" checked>Corners</label>
+                <label><input type="radio" name="rbSrc" id="rbSrcEdges">All edges</label>
+                <label><input type="radio" name="rbSrc" id="rbSrcAll4">All 4 corners</label>
+              </div>
+            </div>
+            <div class="opt-row" style="margin-top:14px">
+              <label class="opt-chk" for="rbFeather">
+                <input type="checkbox" id="rbFeather">
+                <span class="opt-ui" aria-hidden="true"></span>
+                Feather edges (softens cutout boundary)
+              </label>
+            </div>
+          </div>
+          <div>
+            <div class="opt-row">
+              <label class="opt-chk" for="rbSolid">
+                <input type="checkbox" id="rbSolid">
+                <span class="opt-ui" aria-hidden="true"></span>
+                Replace with solid color background
+              </label>
+            </div>
+            <div class="rb-color-row" id="rbColorRow" style="display:none">
+              <input type="color" id="rbColor" value="#ffffff">
+              <span>Pick background color</span>
+            </div>
+            <div class="rb-btn-row">
+              <button class="btn btn-primary" type="button" id="rbProcess" disabled><i class="fa-solid fa-wand-magic-sparkles"></i>Remove background</button>
+              <button class="btn btn-primary" type="button" id="rbDownload" disabled><i class="fa-solid fa-download"></i>Download PNG</button>
+            </div>
+            <p class="proc-line"><i class="fa-solid fa-bolt"></i><span id="rbProc">Upload an image to get started - nothing leaves this tab.</span></p>
+          </div>
+        </div>
+
+        <div class="result-card" id="rbResults" aria-live="polite"></div>
+
+        <div class="rb-preview-wrap" id="rbPreviewWrap" aria-live="polite">
+          <div class="rb-compare" id="rbCompare">
+            <canvas id="rbCanvasBefore" aria-label="Original image"></canvas>
+            <canvas id="rbCanvasAfter" aria-label="Background removed"></canvas>
+            <div class="rb-slider" id="rbSlider"></div>
+            <span class="rb-label rb-label-before">Before</span>
+            <span class="rb-label rb-label-after">After</span>
+          </div>
+          <p class="rb-preview-cap">Drag the slider left &amp; right to compare before and after</p>
+        </div>
+      </div>
+    </div>
+
+    <aside class="disclaimer" aria-label="Disclaimer">
+      <i class="fa-solid fa-circle-info"></i>
+      <p>Disclaimer: Whilst every effort has been made in building our tool, we are not to be held liable for any damages or monetary losses arising out of or in connection with their use. <a href="../../press/disclaimer.html">Full disclaimer</a>.</p>
+    </aside>
+
+    <div class="article-layout">
+      <article class="seo-article">
+        <h2 id="article-title">Background Remover: Erase Photo Backgrounds Instantly, Privately</h2>
+        <p>Removing a background used to require expensive software and steady hands with a pen tool. The Troolify Background Remover does it in seconds, right inside your browser. Upload a photo, adjust the tolerance, and watch the tool detect the background by sampling the colors along the image edges, then flood-filling inward to replace every matching pixel with transparency.</p>
+
+        <h2 id="what-it-does">What the Background Remover Does</h2>
+        <p>When you load an image the tool draws it to an off-screen canvas and reads every pixel. It samples the dominant color from the image corners or edges, then walks inward pixel-by-pixel. Any pixel whose red, green and blue values fall within the tolerance you set is marked as background and turned transparent. You can also fill the removed area with a solid color instead, and toggle soft feathered edges for a smoother cutout.</p>
+        <p>Because everything runs on the Canvas API inside a single browser tab, your original photo is never uploaded, copied or stored anywhere.</p>
+
+        <h2 id="how-to-use">How to Use the Background Remover</h2>
+        <ol>
+          <li><strong>Upload a photo</strong> &mdash; click the drop zone or drag a PNG, JPEG, WebP or GIF onto it.</li>
+          <li><strong>Adjust tolerance</strong> &mdash; slide the control to widen or narrow how closely a pixel must match the sampled edge color.</li>
+          <li><strong>Pick sample source</strong> &mdash; choose corners, all edges, or all four corners depending on your image.</li>
+          <li><strong>Remove</strong> &mdash; click the Remove Background button and watch the result appear in the before/after slider.</li>
+          <li><strong>Optional: solid color</strong> &mdash; toggle the solid-color option and pick any hue to fill the removed background.</li>
+          <li><strong>Download</strong> &mdash; save the final result as a transparent PNG to your device.</li>
+        </ol>
+
+        <h2 id="tips">Tips for Clean Cutouts</h2>
+        <ul>
+          <li><strong>Start with low tolerance</strong> &mdash; a value of 20&ndash;35 works for images with a uniform background. Increase only if areas remain.</li>
+          <li><strong>Use feathered edges</strong> &mdash; the feather option softens the cutout boundary so the subject blends naturally onto a new background.</li>
+          <li><strong>Try all four corners</strong> &mdash; if the background has slight gradients, sampling all four corners averages out the variation for a more even fill.</li>
+          <li><strong>High-contrast subjects work best</strong> &mdash; photos where the subject is much darker or lighter than the background give the cleanest results.</li>
+        </ul>
+
+        <h2 id="use-cases">Common Use Cases</h2>
+        <p>E-commerce sellers isolate product shots for clean white listings. Content creators extract people from messy backgrounds for thumbnails. Students remove distractions from scanned documents. Designers prepare logos and illustrations for compositing. If you also need to resize the final cutout, head over to the <a href="image-resizer.html">Image Resizer</a> for pixel-perfect scaling.</p>
+
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+
+        <details class="faq-item">
+          <summary>How does the background remover work?</summary>
+          <div class="faq-a">
+            <p>The tool samples the color at the edges and corners of your image, then performs a flood fill inwards. Pixels whose color falls within a configurable tolerance of the sampled edge color are replaced with transparency. A solid-color background option is also available.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Is my image uploaded to a server?</summary>
+          <div class="faq-a">
+            <p>No. Your image is loaded into the browser and processed entirely on your device using the HTML Canvas API. Nothing is ever sent to a server, so your photos stay completely private.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>What file format do I get when downloading?</summary>
+          <div class="faq-a">
+            <p>The result is always exported as a PNG file, which supports full alpha transparency. This ensures the removed background stays transparent wherever you paste or place the image.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Can I replace the background with a solid color instead?</summary>
+          <div class="faq-a">
+            <p>Yes. After removing the background you can toggle the solid-color mode and pick any color. The tool will fill the removed areas with that color before you download the result.</p>
+          </div>
+        </details>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>Background removal used to mean installing heavy software or trusting an online service with your private photos. The Troolify Background Remover keeps it fast, free and fully local &mdash; just upload, adjust and download a clean transparent PNG in seconds.</p>
+      </article>
+    </div>
+
+    <section class="keyword-box" aria-label="Keywords and tags">
+      <h2>Keyword &amp; Tags</h2>
+      <h3>Keywords</h3>
+      <div class="keywords">
+        <span class="keyword">remove background online</span>
+        <span class="keyword">background remover free</span>
+        <span class="keyword">erase photo background</span>
+        <span class="keyword">transparent PNG creator</span>
+        <span class="keyword">client-side background removal</span>
+        <span class="keyword">flood fill background tool</span>
+        <span class="keyword">cut out image background</span>
+        <span class="keyword">no upload photo editor</span>
+      </div>
+      <h3>Tags</h3>
+      <div class="tags">
+        <a class="tag" href="../index.html"><i class="fa-solid fa-tag"></i>Edit</a>
+        <a class="tag" href="../index.html"><i class="fa-solid fa-folder"></i>Image Tools</a>
+        <a class="tag" href="../../tools/index.html"><i class="fa-solid fa-cube"></i>Image</a>
+      </div>
+    </section>
+
+    <section class="author-box" aria-label="About the publisher">
+      <div class="author-avatar" aria-hidden="true"><img src="../../assets/images/logo_nobg.webp" alt="F9XR logo" loading="lazy" decoding="async" width="1407" height="768"></div>
+      <div>
+        <span class="author-role">Published by</span>
+        <h2>F9XR Development Team</h2>
+        <p>Every Troolify tool is built and reviewed by the F9XR Development Team, then checked by our Review Board for correctness, accessibility, and clarity. Tools run 100% client-side with zero data retention.</p>
+        <div class="author-links">
+          <a href="https://f9xr.github.io/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i>F9XR Team</a>
+          <a href="../../press/editorial-policies.html"><i class="fa-solid fa-scale-balanced"></i>Editorial Policies</a>
+          <a href="https://github.com/f9xr" target="_blank" rel="noopener" aria-label="F9XR on GitHub"><i class="fa-brands fa-github"></i>GitHub</a>
+          <a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on LinkedIn"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+          <a href="https://instagram.com/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on Instagram"><i class="fa-brands fa-instagram"></i>Instagram</a>
+          <a href="https://youtube.com/@QuarterlyLIV" target="_blank" rel="noopener" aria-label="F9XR on YouTube"><i class="fa-brands fa-youtube"></i>YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-tools" aria-label="Related tools">
+      <h2>Related Tools</h2>
+      <div class="related-search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" id="relatedSearch" placeholder="Search all Troolify tools&hellip;" autocomplete="off" aria-label="Search related tools">
+      </div>
+      <div class="related-grid" id="relatedGrid" aria-busy="true">
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+      </div>
+    </section>
+
+    <section class="comments" aria-label="Comments">
+      <h2>Comments</h2>
+      <div id="comments">
+        <script src="https://utteranc.es/client.js" repo="f9xr/troolify" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async></script>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"><span></span><i class="fa-solid fa-layer-group"></i><span></span></div>
+
+  </div>
+</main>
+
+<script src="../../assets/js/layout.js" defer></script>
+<script src="../../assets/js/tools-data.js" defer></script>
+<script src="../../assets/js/tool-page.js" defer></script>
+<script>
+(function(){
+  "use strict";
+
+  var fileIn=document.getElementById("rbFile");
+  var drop=document.getElementById("rbDrop");
+  var tolEl=document.getElementById("rbTolerance");
+  var tolVal=document.getElementById("rbTolVal");
+  var tolPct=document.getElementById("rbTolPct");
+  var srcCorners=document.getElementById("rbSrcCorners");
+  var srcEdges=document.getElementById("rbSrcEdges");
+  var srcAll4=document.getElementById("rbSrcAll4");
+  var featherEl=document.getElementById("rbFeather");
+  var solidEl=document.getElementById("rbSolid");
+  var colorRow=document.getElementById("rbColorRow");
+  var colorEl=document.getElementById("rbColor");
+  var processBtn=document.getElementById("rbProcess");
+  var dlBtn=document.getElementById("rbDownload");
+  var previewWrap=document.getElementById("rbPreviewWrap");
+  var canvasBefore=document.getElementById("rbCanvasBefore");
+  var canvasAfter=document.getElementById("rbCanvasAfter");
+  var slider=document.getElementById("rbSlider");
+  var resBox=document.getElementById("rbResults");
+  var proc=document.getElementById("rbProc");
+
+  var origImg=null, fileName="", origW=0, origH=0, origSize=0;
+  var resultData=null;
+
+  function fmtBytes(b){ if(b<1024) return b+" B"; if(b<1048576) return (b/1024).toFixed(1)+" KB"; return (b/1048576).toFixed(2)+" MB"; }
+
+  function colorDist(r1,g1,b1,r2,g2,b2){
+    var dr=r1-r2, dg=g1-g2, db=b1-b2;
+    return Math.sqrt(dr*dr+dg*dg+db*db);
+  }
+
+  function sampleEdgeColors(imgData, w, h, mode){
+    var d=imgData.data;
+    var samples=[];
+    function px(i){ return [d[i],d[i+1],d[i+2]]; }
+    if(mode==="corners"||mode==="all4"){
+      samples.push(px(0));
+      samples.push(px((w-1)*4));
+      samples.push(px((h-1)*w*4));
+      samples.push(px(((h-1)*w+(w-1))*4));
+    }
+    if(mode==="edges"){
+      var step=Math.max(1,Math.floor(Math.min(w,h)/20));
+      for(var x=0;x<w;x+=step){
+        samples.push(px(x*4));
+        samples.push(px(((h-1)*w+x)*4));
+      }
+      for(var y=0;y<h;y+=step){
+        samples.push(px(y*w*4));
+        samples.push(px((y*w+w-1)*4));
+      }
+    }
+    var avg=[0,0,0];
+    for(var i=0;i<samples.length;i++){ avg[0]+=samples[i][0]; avg[1]+=samples[i][1]; avg[2]+=samples[i][2]; }
+    avg[0]=Math.round(avg[0]/samples.length);
+    avg[1]=Math.round(avg[1]/samples.length);
+    avg[2]=Math.round(avg[2]/samples.length);
+    return avg;
+  }
+
+  function floodFillRemove(imgData, w, h, bgR, bgG, bgB, tolerance, feather){
+    var d=imgData.data;
+    var visited=new Uint8Array(w*h);
+    var queue=[];
+    var maxDist=tolerance*Math.sqrt(3)*1.5;
+
+    function idx(x,y){ return y*w+x; }
+    function match(i){
+      var dist=colorDist(d[i*4],d[i*4+1],d[i*4+2],bgR,bgG,bgB);
+      return dist<=maxDist;
+    }
+
+    for(var x=0;x<w;x++){
+      var top=idx(x,0), bot=idx(x,h-1);
+      if(match(top)){ queue.push(top); visited[top]=1; }
+      if(match(bot)){ queue.push(bot); visited[bot]=1; }
+    }
+    for(var y=1;y<h-1;y++){
+      var left=idx(0,y), right=idx(w-1,y);
+      if(match(left)){ queue.push(left); visited[left]=1; }
+      if(match(right)){ queue.push(right); visited[right]=1; }
+    }
+
+    var dirs=[[-1,0],[1,0],[0,-1],[0,1]];
+    while(queue.length>0){
+      var cur=queue.pop();
+      var cx=cur%w, cy=Math.floor(cur/w);
+      var pi=cur*4;
+      var dist=colorDist(d[pi],d[pi+1],d[pi+2],bgR,bgG,bgB);
+      var alpha=Math.min(255,Math.max(0,Math.round((dist/maxDist)*255)));
+      if(!feather){ alpha=dist<=maxDist?0:255; }
+      d[pi+3]=alpha;
+      for(var di=0;di<4;di++){
+        var nx=cx+dirs[di][0], ny=cy+dirs[di][1];
+        if(nx<0||nx>=w||ny<0||ny>=h) continue;
+        var ni=idx(nx,ny);
+        if(visited[ni]) continue;
+        if(match(ni)){
+          visited[ni]=1;
+          queue.push(ni);
+        }
+      }
+    }
+
+    for(var pi2=0;pi2<d.length;pi2+=4){
+      if(d[pi2+3]>0 && d[pi2+3]<255){
+        if(!feather){ d[pi2+3]=255; }
+      }
+    }
+
+    return imgData;
+  }
+
+  function process(){
+    if(!origImg) return;
+    var t0=performance.now();
+    var srcCanvas=document.createElement("canvas");
+    srcCanvas.width=origW; srcCanvas.height=origH;
+    var srcCtx=srcCanvas.getContext("2d");
+    srcCtx.drawImage(origImg,0,0);
+    var imgData=srcCtx.getImageData(0,0,origW,origH);
+
+    var mode="corners";
+    if(srcEdges.checked) mode="edges";
+    if(srcAll4.checked) mode="all4";
+    var tolerance=parseInt(tolEl.value,10);
+    var feather=featherEl.checked;
+
+    var bg=sampleEdgeColors(imgData,origW,origH,mode);
+    floodFillRemove(imgData,origW,origH,bg[0],bg[1],bg[2],tolerance,feather);
+
+    if(solidEl.checked){
+      var hex=colorEl.value;
+      var sr=parseInt(hex.substr(1,2),16);
+      var sg=parseInt(hex.substr(3,2),16);
+      var sb=parseInt(hex.substr(5,2),16);
+      var sd=imgData.data;
+      for(var i=0;i<sd.length;i+=4){
+        if(sd[i+3]===0){
+          sd[i]=sr; sd[i+1]=sg; sd[i+2]=sb; sd[i+3]=255;
+        }
+      }
+    }
+
+    srcCtx.putImageData(imgData,0,0);
+
+    var outCanvas=document.createElement("canvas");
+    outCanvas.width=origW; outCanvas.height=origH;
+    var outCtx=outCanvas.getContext("2d");
+    if(solidEl.checked){
+      outCtx.fillStyle=colorEl.value;
+      outCtx.fillRect(0,0,origW,origH);
+    }
+    outCtx.drawImage(srcCanvas,0,0);
+
+    resultData=outCanvas.toDataURL("image/png");
+    var resultBytes=Math.round(resultData.length*3/4);
+
+    canvasBefore.width=origW; canvasBefore.height=origH;
+    canvasBefore.getContext("2d").drawImage(origImg,0,0);
+    canvasAfter.width=origW; canvasAfter.height=origH;
+    var afterCtx=canvasAfter.getContext("2d");
+    if(solidEl.checked){
+      afterCtx.fillStyle=colorEl.value;
+      afterCtx.fillRect(0,0,origW,origH);
+    }
+    afterCtx.drawImage(srcCanvas,0,0);
+
+    previewWrap.classList.add("visible");
+    updateSlider(0.5);
+
+    resBox.innerHTML=
+      '<div class="result-row hero-row"><span>Dimensions</span><b>'+origW+' &#215; '+origH+' px</b></div>'+
+      '<div class="result-row"><span>Original size</span><b>'+fmtBytes(origSize)+'</b></div>'+
+      '<div class="result-row"><span>Output PNG (estimate)</span><b>'+fmtBytes(resultBytes)+'</b></div>'+
+      '<div class="result-row"><span>Tolerance used</span><b>'+tolerance+'</b></div>'+
+      (solidEl.checked?'<div class="result-row"><span>Background</span><b>Solid '+colorEl.value+'</b></div>':'<div class="result-row"><span>Background</span><b>Transparent</b></div>');
+
+    dlBtn.disabled=false;
+    var elapsed=(performance.now()-t0).toFixed(1);
+    proc.textContent="Background removed in "+elapsed+" ms - the image never left your device.";
+  }
+
+  function updateSlider(pct){
+    var w=canvasAfter.parentElement.offsetWidth;
+    var h=canvasAfter.parentElement.offsetHeight;
+    var x=Math.round(pct*w);
+    canvasAfter.style.clipPath="inset(0 "+0+"px 0 "+x+"px)";
+    slider.style.left=x+"px";
+  }
+
+  var dragging=false;
+  var compare=document.getElementById("rbCompare");
+  function getSliderPct(e){
+    var rect=compare.getBoundingClientRect();
+    var clientX=e.touches?e.touches[0].clientX:e.clientX;
+    return Math.max(0,Math.min(1,(clientX-rect.left)/rect.width));
+  }
+  compare.addEventListener("mousedown",function(e){ dragging=true; updateSlider(getSliderPct(e)); });
+  compare.addEventListener("touchstart",function(e){ dragging=true; updateSlider(getSliderPct(e)); },{passive:true});
+  window.addEventListener("mousemove",function(e){ if(dragging) updateSlider(getSliderPct(e)); });
+  window.addEventListener("touchmove",function(e){ if(dragging) updateSlider(getSliderPct(e)); },{passive:true});
+  window.addEventListener("mouseup",function(){ dragging=false; });
+  window.addEventListener("touchend",function(){ dragging=false; });
+
+  function readFile(file){
+    if(!file) return;
+    fileName=file.name||"image.png";
+    origSize=file.size||0;
+    var reader=new FileReader();
+    reader.onload=function(e){
+      var tmp=new Image();
+      tmp.onload=function(){
+        origImg=tmp; origW=tmp.naturalWidth; origH=tmp.naturalHeight;
+        processBtn.disabled=false;
+        proc.textContent="Image loaded ("+origW+"&times;"+origH+") - click Remove Background to begin.";
+      };
+      tmp.onerror=function(){ proc.textContent="Could not read that image - try a PNG, JPEG, WebP, or GIF."; };
+      tmp.src=e.target.result;
+    };
+    reader.readAsDataURL(file);
+  }
+
+  fileIn.addEventListener("change",function(){ readFile(fileIn.files&&fileIn.files[0]); });
+  drop.addEventListener("click",function(){ fileIn.click(); });
+  drop.addEventListener("dragover",function(e){ e.preventDefault(); drop.style.borderColor="#60A5FA"; });
+  drop.addEventListener("dragleave",function(){ drop.style.borderColor=""; });
+  drop.addEventListener("drop",function(e){
+    e.preventDefault(); drop.style.borderColor="";
+    if(e.dataTransfer&&e.dataTransfer.files&&e.dataTransfer.files[0]){ readFile(e.dataTransfer.files[0]); }
+  });
+
+  tolEl.addEventListener("input",function(){
+    tolVal.textContent=tolEl.value;
+    tolPct.textContent=tolEl.value+"%";
+    if(origImg) process();
+  });
+  solidEl.addEventListener("change",function(){
+    colorRow.style.display=solidEl.checked?"flex":"none";
+    if(origImg) process();
+  });
+  colorEl.addEventListener("input",function(){ if(origImg) process(); });
+  featherEl.addEventListener("change",function(){ if(origImg) process(); });
+  [srcCorners,srcEdges,srcAll4].forEach(function(r){ r.addEventListener("change",function(){ if(origImg) process(); }); });
+
+  processBtn.addEventListener("click",function(){ process(); });
+
+  dlBtn.addEventListener("click",function(){
+    if(!resultData) return;
+    var base=(fileName.split(".")[0]||"image").trim()||"image";
+    var name=base+"-no-bg.png";
+    var a=document.createElement("a");
+    a.href=resultData;
+    a.download=name;
+    document.body.appendChild(a); a.click(); a.remove();
+    proc.textContent="Downloaded "+name+" - rendered entirely in this tab.";
+  });
+
+  document.getElementById("rbClear").addEventListener("click",function(){
+    origImg=null; fileName=""; origW=0; origH=0; origSize=0; resultData=null;
+    fileIn.value="";
+    previewWrap.classList.remove("visible");
+    canvasBefore.getContext("2d").clearRect(0,0,canvasBefore.width,canvasBefore.height);
+    canvasAfter.getContext("2d").clearRect(0,0,canvasAfter.width,canvasAfter.height);
+    resBox.innerHTML="";
+    processBtn.disabled=true;
+    dlBtn.disabled=true;
+    proc.textContent="Cleared - upload a new image to start.";
+  });
+})();
+</script>
+</body>
+</html>
