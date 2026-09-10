@@ -391,4 +391,114 @@
       '</div>';
     promoAnchor.parentNode.insertBefore(promo, promoAnchor.nextSibling);
   }
+
+  /* ---------------------- Workflow suggestions + Recent tools tracking ------- */
+
+  var canonical2 = document.querySelector('link[rel="canonical"]');
+  var pageHref2 = canonical2 && canonical2.href ? canonical2.href : location.href;
+
+  function loadToolsDataForToolPage(cb) {
+    if (window.TOOLS) { if (cb) cb(); return; }
+    if (window.__TOOLS_PENDING) { if (cb) window.__TOOLS_PENDING.push(cb); return; }
+    window.__TOOLS_PENDING = [cb];
+    var segs = location.pathname.split("/").filter(Boolean);
+    var pfx = "";
+    if (location.pathname.replace(/\/+$/, "").toLowerCase().indexOf("/troolify/") === 0) {
+      pfx = "/troolify/";
+    } else {
+      var depth = Math.max(0, segs.length - 1);
+      while (depth--) pfx += "../";
+    }
+    var s = document.createElement("script");
+    s.src = pfx + "assets/js/tools-data.js";
+    s.onload = s.onerror = function () {
+      var list = window.__TOOLS_PENDING || [];
+      window.__TOOLS_PENDING = null;
+      list.forEach(function (fn) { if (fn) fn(); });
+    };
+    document.head.appendChild(s);
+  }
+
+  function loadRecentToolsForToolPage(cb) {
+    if (window.TroolifyRecent) { if (cb) cb(); return; }
+    if (window.__RECENT_TOOLS_LOADED) {
+      /* Wait a tick for the script to initialize */
+      setTimeout(function () { if (cb) cb(); }, 50);
+      return;
+    }
+    window.__RECENT_TOOLS_LOADED = true;
+    var segs = location.pathname.split("/").filter(Boolean);
+    var pfx = "";
+    if (location.pathname.replace(/\/+$/, "").toLowerCase().indexOf("/troolify/") === 0) {
+      pfx = "/troolify/";
+    } else {
+      var depth = Math.max(0, segs.length - 1);
+      while (depth--) pfx += "../";
+    }
+    var s = document.createElement("script");
+    s.src = pfx + "assets/js/recent-tools.js";
+    s.onload = s.onerror = function () { if (cb) cb(); };
+    document.head.appendChild(s);
+  }
+
+  loadToolsDataForToolPage(function () {
+    var allTools = window.TOOLS || [];
+    var curFileName = location.pathname.split("/").filter(Boolean).pop() || "";
+
+    /* Find current tool record */
+    var curTool = null;
+    for (var i = 0; i < allTools.length; i++) {
+      if (((allTools[i].href || "").split("/").pop() || "") === curFileName) {
+        curTool = allTools[i];
+        break;
+      }
+    }
+
+    /* Record this tool as recently used */
+    if (curTool) {
+      loadRecentToolsForToolPage(function () {
+        if (window.TroolifyRecent) {
+          window.TroolifyRecent.record(curTool.href, curTool.name, curTool.icon);
+        }
+      });
+    }
+
+    /* Inject workflow suggestions if available */
+    if (curTool && curTool.workflow && curTool.workflow.length) {
+      var panel = document.querySelector(".panel.clean");
+      if (panel) {
+        var suggested = [];
+        for (var w = 0; w < curTool.workflow.length && suggested.length < 3; w++) {
+          for (var t = 0; t < allTools.length; t++) {
+            if (allTools[t].href === curTool.workflow[w]) {
+              suggested.push(allTools[t]);
+              break;
+            }
+          }
+        }
+        if (suggested.length) {
+          var cardsHtml = "";
+          suggested.forEach(function (st) {
+            var href = (st.href || "").indexOf("tools/") === 0 ? prefix + st.href : st.href;
+            cardsHtml +=
+              '<a class="workflow-card" href="' + href + '">' +
+                '<span class="wf-icon"><i class="' + (st.icon || "fa-solid fa-wrench") + '"></i></span>' +
+                '<span class="wf-meta">' +
+                  '<span class="wf-name">' + st.name + '</span>' +
+                  '<span class="wf-desc">' + (st.desc || "") + '</span>' +
+                '</span>' +
+                '<span class="wf-arrow"><i class="fa-solid fa-arrow-right"></i></span>' +
+              '</a>';
+          });
+          var wfSection = document.createElement("section");
+          wfSection.className = "workflow-suggest";
+          wfSection.setAttribute("aria-label", "Suggested next tools");
+          wfSection.innerHTML =
+            '<h3><i class="fa-solid fa-arrow-right-arrow-left" aria-hidden="true"></i>Next step in your workflow</h3>' +
+            '<div class="workflow-cards">' + cardsHtml + '</div>';
+          panel.parentNode.insertBefore(wfSection, panel.nextSibling);
+        }
+      }
+    }
+  });
 })();

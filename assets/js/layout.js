@@ -222,6 +222,9 @@
     function buildRightSidebar(sidebar, prefix) {
         var isToolPage = !!document.querySelector(".tool-head.hero");
 
+        /* Load recent-tools.js for the Recently Used panel. */
+        loadRecentToolsScript();
+
         /* Load tool data before building related lists. */
         loadToolsDataForSidebar(function () {
             var tools = window.TOOLS || [];
@@ -242,6 +245,24 @@
                 // Current tool filename (e.g. "word-counter.html").
                 var cname = currentToolName();
 
+                // --- Recently Used tools ------------------------------------
+                var recentTools = (window.TroolifyRecent ? window.TroolifyRecent.get() : [])
+                    .filter(function (r) { return r.href && r.href.split("/").pop() !== cname; });
+                if (recentTools.length) {
+                    var rr = '<div class="dash-rs-panel">' +
+                                '<div class="panel-title"><i class="fa-solid fa-clock-rotate-left"></i>Recently Used</div>' +
+                                '<div class="dash-related-mini">';
+                    recentTools.forEach(function (r) {
+                        rr += '<a class="dash-related-mini-card" href="' + resultHrefForSidebar(r.href) + '">' +
+                                    '<span class="rmm-icon"><i class="' + (r.icon || "fa-solid fa-wrench") + '"></i></span>' +
+                                    '<span class="rmm-name">' + r.name + '</span>' +
+                                    '<span class="rmm-arrow"><i class="fa-solid fa-arrow-right"></i></span>' +
+                                '</a>';
+                    });
+                    rr += '</div></div>';
+                    html += rr;
+                }
+
                 // --- Quick actions -----------------------------------------
                 html += '<div class="dash-rs-panel">' +
                             '<div class="panel-title"><i class="fa-solid fa-bolt"></i>Quick Actions</div>' +
@@ -250,6 +271,12 @@
                                 '<button type="button" class="rt-btn" id="rsEmbed"><i class="fa-solid fa-code"></i>Embed Tool</button>' +
                                 '<a class="rt-btn" href="' + prefix + 'pages/feedback.html"><i class="fa-solid fa-comment"></i>Feedback</a>' +
                             '</div>' +
+                        '</div>';
+
+                // --- Google Translate widget ---------------------------------
+                html += '<div class="dash-rs-panel dash-rs-translate">' +
+                            '<div class="panel-title"><i class="fa-solid fa-language"></i>Translate This Page</div>' +
+                            '<div id="google_translate_element"></div>' +
                         '</div>';
 
                 // --- Category badge -----------------------------------------
@@ -324,6 +351,19 @@
 
             sidebar.innerHTML = html;
 
+            // --- Google Translate widget init ---
+            if (isToolPage && !(window.google && window.google.translate && window.google.translate.TranslateElement)) {
+                window.googleTranslateElementInit = function () {
+                    new window.google.translate.TranslateElement({
+                        pageLanguage: "en",
+                        layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE
+                    }, "google_translate_element");
+                };
+                var gtScript = document.createElement("script");
+                gtScript.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+                document.head.appendChild(gtScript);
+            }
+
             var shareBtn = document.getElementById("rsShare");
             var embedBtn = document.getElementById("rsEmbed");
             var originalShare = document.getElementById("btnShare");
@@ -354,6 +394,15 @@
             window.__DASH_TOOLS_PENDING = null;
             list.forEach(function (fn) { if (fn) fn(); });
         };
+        document.head.appendChild(s);
+    }
+
+    function loadRecentToolsScript() {
+        if (window.TroolifyRecent) return;
+        if (window.__RECENT_TOOLS_LOADED) return;
+        window.__RECENT_TOOLS_LOADED = true;
+        var s = document.createElement("script");
+        s.src = rootPrefix() + "assets/js/recent-tools.js";
         document.head.appendChild(s);
     }
 

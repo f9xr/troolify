@@ -470,6 +470,62 @@ a.dash-rs-detail-value:hover{color:#fff}
 }
 
 /* ---------------------------------------------------------------------------
+   Google Translate widget — dark-theme overrides
+   --------------------------------------------------------------------------- */
+
+/* Hide the default Google Translate top banner on all pages */
+body .goog-te-banner-frame,
+.goog-te-banner-frame{display:none!important}
+body{top:0!important}
+
+/* Widget container inside the right sidebar panel */
+.dash-rs-translate #google_translate_element{
+  font-size:12px;
+}
+
+/* Simple layout wrapper */
+.dash-rs-translate .goog-te-gadget-simple{
+  border:1px solid rgba(255,255,255,.08)!important;
+  background:rgba(255,255,255,.04)!important;
+  border-radius:10px!important;
+  padding:6px 10px!important;
+}
+
+/* Dropdown combo box */
+.dash-rs-translate .goog-te-combo,
+.dash-rs-translate .goog-te-gadget-simple .goog-te-combo{
+  background:#1B2028!important;
+  border:1px solid rgba(255,255,255,.1)!important;
+  color:#F8F9FA!important;
+  border-radius:8px!important;
+  padding:5px 8px!important;
+  font-size:12px!important;
+  font-family:inherit!important;
+  outline:none!important;
+  width:100%!important;
+  box-sizing:border-box!important;
+}
+
+/* Gadget text/label */
+.dash-rs-translate .goog-te-gadget,
+.dash-rs-translate .goog-te-gadget *{
+  color:#93C5FD!important;
+  font-size:12px!important;
+}
+
+/* Menu value text */
+.dash-rs-translate .goog-te-gadget-simple .goog-te-menu-value{
+  color:#93C5FD!important;
+  font-size:12px!important;
+}
+
+/* Hide the "powered by" link if it appears */
+.dash-rs-translate .goog-te-gadget .goog-te-banner-frame,
+.dash-rs-translate .goog-te-gadget iframe[style*="visibility: hidden"]{
+  display:none!important;
+}
+
+/* ---------------------------------------------------------------------------
    Mobile sidebar toggle button
    --------------------------------------------------------------------------- */
 
