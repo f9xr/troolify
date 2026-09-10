@@ -181,6 +181,9 @@
         '</a>' +
         '<a class="badge-link" href="https://shipstry.com/" target="_blank" rel="noopener noreferrer">' +
             '<img src="https://shipstry.com/badges/featured.svg" alt="Featured on Shipstry" width="220" height="52" loading="lazy" decoding="async" />' +
+        '</a>' +
+        '<a class="badge-link" href="https://curlship.com" target="_blank" rel="noopener noreferrer">' +
+            '<img src="https://curlship.com/badge.svg" alt="Listed on CurlShip" width="120" height="20" loading="lazy" decoding="async" />' +
         '</a>';
 
     /* ------------------------------------------------------------------------
@@ -564,7 +567,7 @@
             ["Audio", "Audio Tools"], ["AI", "AI Tools"], ["Coding", "Developer Tools"],
             ["Converters", "Converters"], ["Cooking", "Cooking Tools"], ["Crypto", "Crypto Tools"],
             ["Finance", "Finance Tools"], ["Fun", "Fun & Games"], ["Health", "Health Tools"],
-            ["Image", "Image Tools"], ["Misc", "Misc Tools"], ["PDF", "PDF Tools"],
+            ["Image", "Image Tools"], ["Math", "Math Tools"], ["Misc", "Misc Tools"], ["PDF", "PDF Tools"],
             ["Prompts", "Prompt Tools"], ["SEO", "SEO & Marketing"], ["Statistics", "Statistics"],
             ["Text", "Text Tools"], ["Time", "Time Tools"], ["Video", "Video Tools"],
             ["YouTube", "YouTube Tools"], ["HVAC", "HVAC Tools"]

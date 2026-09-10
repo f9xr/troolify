@@ -1,143 +1,83 @@
-Some suggest tools, we can add:
+add this embed in featured on section:
+<a href="https://curlship.com">
+  <img src="https://curlship.com/badge.svg"
+       alt="Listed on CurlShip" width="120" height="20">
+</a>
 
 
-PNG
-PNG to SVG converter
-Convert PNG to SVG online for free.
 
-JPG
-JPG to SVG converter
-Convert JPG and JPEG images to SVG for free.
+few new tools to include:
+Generate list of numbers
+Generates a list of numbers, select range and step
 
-JPG
-JPG to PNG converter
-Convert JPG and JPEG images to PNG for free.
+Filter numbers
+Filter numbers from a list
 
-WebP
-WebP to PNG converter
-Convert WebP images to PNG online for free.
+Sort numbers
+Sort numbers from a list
 
-SVG
-SVG compressor
-Compress SVG files online for free.
+Minimum and maximum of a list
+Find highest and lowest number
 
-PNG
-PNG compressor
-Compress PNG images online for free.
+Average of a list
+Find the arithmetic mean of a list of numbers
 
-JPG
-JPG compressor
-Compress JPG and JPEG photos online for free.
+Number base converter
+Change a number between arbitrary bases
 
-Compress Image
-Compress JPG, PNG, SVG, and GIFs while saving space and maintaining quality.
+Binary converter
+Binary to decimal conversion and vice versa
 
-Resize Image
-Resize by pixel or percent with Fit or Fill & Crop — plus one-click Instagram, Facebook, X and LinkedIn presets.
+Hexadecimal converter
+Hexadecimal to decimal conversion and vice versa
 
-Crop Image
-Crop JPG, PNG, or GIFs with ease; Choose pixels to define your rectangle or use our visual editor.
+Roman numerals converter
+Convert from and to roman numerals
 
-Convert Image
-Auto-detects your image format and converts to JPG, PNG, WEBP, BMP or PDF in bulk.
-
-Adjust Light & Color
-Adjust light and color — exposure, contrast, highlights, shadows, whites, blacks, temperature and tint.
-
-Remove Background
-Erase the background from any photo automatically with on-device AI — export a transparent PNG or drop in a solid color. Nothing is uploaded.
-
-Mockup Frame
-Wrap screenshots in browser, phone, tablet, laptop, or monitor frames with gradient, pattern or image backgrounds, headings, shadows, and 3D tilt.
-
-Watermark Image
-Professional text or logo watermarks — 9-point positioning, opacity, rotation, color, shadow, and diagonal tiling.
-
-Rotate Image
-Rotate many images JPG, PNG or GIF at same time. Choose to rotate only landscape or portrait images!
-
-Photo Album
-Turn your photos into a professional print-ready album with a cover, page layouts and PDF export.
-
-EXIF Data & Metadata
-View camera, lens, exposure and GPS metadata in a clean table — then export a clean copy that strips it all for privacy.
-
-Draw
-Paint freehand with 8 brush styles, flood-fill regions and pick colors on a full canvas — with a File menu to open, start new and export.
+Chronometers, countdowns, time difference, add or substract from a date, days, hours or seconds between two dates
 
 
-Line Break Tools
-Remove Line Breaks
-Add Line Breaks
-Empty Line Remover
-Remove Duplicate Lines
-Convert Line Breaks to Paragraphs
-Paragraphs to Single Line
-HTML Code Generators
-HTML to Text Converter
-Remove HTML Tags
-HTML Table Generator
-HTML List Generator
-HTML Text Generator
-Content Conversion Tools
-Convert Word to Clean HTML
-Convert Word to Text
-Convert Plain Text to HTML
-Convert Email to HTML
-Convert URLs to HTML Links
-Convert CSV Text to HTML Table
-Random Words and Text
-Random Word Generator
-Random Sentence Generator
-Random Noun Generator
-Random Adjectives Generator
-Random String Generator
-HTML Compression & Encoding
-Compress HTML Code
-Uncompress HTML Code
-HTML Character Encoding Tool
-Encode URL
-PDF Conversion Tools
-Convert Word to PDF
-Convert Excel to PDF
-Convert Multiple Images to PDF
-Text File to PDF Converter
-PDF to Text
-Convert PDF to Text
-Convert PDF to Grayscale
-Merge Multiple PDFs into one PDF
-Remove Pages from a PDF
-PDF Metadata Viewer
-Remove PDF Metadata
-Unredact a PDF
-Text Changing Tools
-Sort List Alphabetically
-Replace Text Online
-Title Case Converter
-Uppercase or Lowercase Text
-Remove Spaces Online
-Convert Tabs to Spaces
-Capitalize Each Word Online
-Remove Numbers from Text
-Word Frequency Counter
-Sentences Counter
-Count Characters in Text
-Random Generators & Email
-Random Decision Maker
-Random Choice Generator
-Random Number Generator
-Random Password Generator
-Random Letter Generator
-Convert Email to HTML
-Convert a URL into a HTML Link
-Mailto Link Generator
-Fun Text Tools
-Backwards Text Generator
-Fake Word Generator
-Repeat Text Generator
-Tiny Text Generator
-Cursive Text Generator
-Bold Text Generator
+Date/time difference
+Difference between dates/times
+
+Add to a date
+Add years, days, hours and more to a date
+
+Subtract from a date
+Subtract years, days, hours and more to a date
+
+Timer
+Countdown timer
+
+Stopwatch
+Stopwatch, chronometer
+
+Unix timestamp to date and time
+Unix timestamp to human readable date and time
+
+Date and time to unix timestamp
+Human readable date and time to timestamp
+
+Common mathematical tasks, such as calculate percentages, simple operations, trigonometrical functions and more
 
 
-want to add translator in my website also 
+Calculator
+Simple calculator
+
+Area calculator
+Simple area calculator
+
+Percentage calculator
+Calculate percentages of numbers
+
+Single rule of three direct
+Direct proportion
+
+Single rule of three inverse
+Inverse proportion
+
+Trigonometric functions
+Trigonometric functions: sine, cosine, tangent, and more
+
+Radians and degrees converter
+Radians to degrees conversion and vice versa    

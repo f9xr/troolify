@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Number Base Converter | Binary Octal Decimal Hex</title>
+<meta name="description" content="Convert any number between binary, octal, decimal and hexadecimal bases instantly. Choose the source and destination base and get the answer with the digit breakdown - 100% client-side.">
+<meta name="author" content="F9XR Development Team">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#212529">
+<link rel="canonical" href="https://f9xr.github.io/troolify/tools/math/number-base-converter.html">
+<meta property="og:site_name" content="Troolify">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Number Base Converter | Binary Octal Decimal Hex">
+<meta property="og:description" content="Convert any number between binary, octal, decimal and hexadecimal bases instantly. Choose the source and destination base and get the answer with the digit breakdown - 100% client-side.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://f9xr.github.io/troolify/tools/math/number-base-converter.html">
+<meta property="og:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-09-11">
+<meta property="article:modified_time" content="2026-09-11">
+<meta property="article:section" content="Math Tools">
+<meta property="article:tag" content="Number Base Converter">
+<meta property="article:tag" content="Math Tools">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Number Base Converter | Binary Octal Decimal Hex">
+<meta name="twitter:description" content="Convert any number between binary, octal, decimal and hexadecimal bases instantly - 100% browser based.">
+<meta name="twitter:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://f9xr.github.io/troolify/index.html" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://f9xr.github.io/troolify/tools/index.html" },
+    { "@type": "ListItem", "position": 3, "name": "Math Tools", "item": "https://f9xr.github.io/troolify/tools/math/" },
+    { "@type": "ListItem", "position": 4, "name": "Number Base Converter", "item": "https://f9xr.github.io/troolify/tools/math/number-base-converter.html" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Number Base Converter",
+  "url": "https://f9xr.github.io/troolify/tools/math/number-base-converter.html",
+  "applicationCategory": "UtilitiesApplication",
+  "applicationSubCategory": "Binary, Octal, Decimal and Hexadecimal Conversion",
+  "operatingSystem": "Any (web browser)",
+  "featureList": ["All four bases at once", "Two-way selectable source and destination", "Live digit breakdown", "Invalid-digit detection", "One-click copy", "100% client-side processing"],
+  "description": "Convert any number between binary, octal, decimal and hexadecimal bases instantly. Choose the source and destination base and get the answer with the digit breakdown - 100% client-side.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "datePublished": "2026-09-11",
+  "dateModified": "2026-09-11",
+  "author": { "@type": "Organization", "name": "F9XR Development Team", "url": "https://f9xr.github.io/" },
+  "publisher": { "@type": "Organization", "name": "Troolify", "url": "https://f9xr.github.io/troolify/", "logo": { "@type": "ImageObject", "url": "https://f9xr.github.io/troolify/assets/images/logo_nobg.webp", "width": 1407, "height": 768 } }
+}
+</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Number Base Converter | Binary Octal Decimal Hex","description":"Convert any number between binary, octal, decimal and hexadecimal bases instantly. Choose the source and destination base and get the answer with the digit breakdown - 100% client-side.","image":"https://f9xr.github.io/troolify/assets/images/og-image.jpg","datePublished":"2026-09-11","dateModified":"2026-09-11","mainEntityOfPage":"https://f9xr.github.io/troolify/tools/math/number-base-converter.html","author":{"@type":"Organization","name":"F9XR Development Team","url":"https://f9xr.github.io/"},"publisher":{"@type":"Organization","name":"Troolify","url":"https://f9xr.github.io/troolify/","logo":{"@type":"ImageObject","url":"https://f9xr.github.io/troolify/assets/images/logo_nobg.webp","width":1407,"height":768}}}</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a radix (or base) in number systems?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The radix, or base, is the number of unique digits a counting system uses. Base 10 uses ten digits (0-9), base 2 uses two (0 and 1), base 8 uses eight (0-7) and base 16 uses sixteen (0-9 plus A-F). Each digit position represents that digit multiplied by a power of the radix, so the same symbols can describe very different values in different bases." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can the converter work with bases beyond 16 such as base 32?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Not yet. This tool covers the four bases that matter most for everyday life and computing: 2, 8, 10 and 16. Bases beyond 16 need extra notational conventions for symbols after F, which is why they are left out of this converter for now." }
+    },
+    {
+      "@type": "Question",
+      "name": "Why are binary, octal, decimal and hexadecimal the most useful bases?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Binary is the only base computer hardware actually runs on, while octal and hexadecimal are compact shorthand for writing binary (one octal digit maps to three binary bits and one hex digit to four). Decimal is the base people use for everyday counting, so going between these two worlds covers almost every real conversion need." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the converter handle negative numbers?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Prefix the source value with a minus sign (for example -101 in binary) and the converter returns the negative value in the destination base as a minus sign followed by the positive magnitude. It does not interpret two's-complement notation, so a binary literal like -11 represents negative three, not an encoded bit pattern." }
+    }
+  ]
+}
+</script>
+
+<link rel="icon" type="image/webp" href="../../assets/images/favicon.webp"><link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+<link rel="stylesheet" href="../../assets/css/tailwind.css">
+<link rel="stylesheet" href="../../assets/css/tool.css">
+<link rel="stylesheet" href="../../assets/css/site-shell.css">
+<link rel="stylesheet" href="../../assets/css/tool-page.css">
+<link rel="stylesheet" href="../../assets/css/seo-article.css">
+<style>
+.calc-grid{display:grid;grid-template-columns:1fr;gap:18px}
+@media(min-width:720px){.calc-grid{grid-template-columns:1fr 1fr}}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:12.5px;font-weight:700;color:var(--muted)}
+.field input{background:#1B2028;border:1px solid var(--border);color:var(--ink);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:15px;font-weight:600;outline:none;width:100%;box-sizing:border-box}
+.field input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+.field select{background:#1B2028;border:1px solid var(--border);color:var(--ink);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:15px;font-weight:600;outline:none;width:100%;box-sizing:border-box;appearance:none;-webkit-appearance:none;cursor:pointer}
+.field select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+.field-full{grid-column:1/-1}
+.result-card{background:linear-gradient(180deg,rgba(59,130,246,.12),rgba(59,130,246,.03));border:1px solid rgba(96,165,250,.25);border-radius:14px;padding:18px;margin-top:18px}
+.result-row{display:flex;justify-content:space-between;gap:10px;padding:8px 2px;font-size:14px}
+.result-row+.result-row{border-top:1px dashed rgba(255,255,255,.08)}
+.result-row b{color:#93C5FD;font-weight:800;text-align:right}
+.result-row.hero-row b{color:#6EE7B7;font-size:18px}
+.base-err{display:none;padding:.7rem 1rem;border-radius:10px;background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.4);color:#FCA5A5;font-size:.85rem;margin-top:14px}
+.base-err.show{display:block}
+.base-note{font-size:12.5px;color:var(--faint);margin-top:12px;line-height:1.5}
+</style>
+</head>
+<body data-layout="tool">
+<noscript>
+    <nav aria-label="Primary" style="position:static;display:block;padding:1rem 1.5rem;background:#212529;border-bottom:1px solid #343A40;text-align:center;font-size:0.9rem;">
+        <a href="../../index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Home</a>
+        <a href="../../tools/index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Tools</a>
+        <a href="../../pages/about.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">About</a>
+        <a href="../../pages/contact.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Contact</a>
+    </nav>
+</noscript>
+
+<main class="tool-main">
+  <div class="container">
+
+    <div class="tool-head hero">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="../../tools/index.html">Tools</a></li>
+          <li><a href="../index.html">Math Tools</a></li>
+          <li class="current" aria-current="page">Number Base Converter</li>
+        </ol>
+      </nav>
+      <div class="hero-main">
+        <span class="tool-badge"><span class="dot"></span>100% client-side &middot; zero data retention</span>
+        <h1>Number Base Converter</h1>
+        <p>Convert any number between binary, octal, decimal and hexadecimal instantly. Pick a source base, pick a destination base, and get the answer together with every other representation of the same value.</p>
+      </div>
+      <div class="hero-box hero-cat">
+        <h3 class="hero-box-title"><i class="fa-solid fa-folder-open"></i>Category</h3>
+        <div class="tool-meta">
+          <span class="tool-tag"><i class="fa-solid fa-tag"></i>Number Systems</span>
+          <a class="tool-cat" href="../index.html" aria-label="Browse Math Tools category"><i class="fa-solid fa-folder"></i>Math Tools</a>
+        </div>
+      </div>
+      <div class="hero-box hero-qa">
+        <h3 class="hero-box-title"><i class="fa-solid fa-bolt"></i>Quick Actions</h3>
+        <div class="tool-actions">
+          <button class="rt-btn" type="button" id="btnShare"><i class="fa-solid fa-share-nodes"></i>Share</button>
+          <button class="rt-btn" type="button" id="btnEmbed"><i class="fa-solid fa-code"></i>Embed Tool</button>
+          <a class="rt-btn" href="../../pages/feedback.html"><i class="fa-solid fa-comment"></i>Feedback</a>
+        </div>
+      </div>
+      <div class="hero-box hero-details">
+        <h3 class="hero-box-title"><i class="fa-solid fa-circle-info"></i>Tool Details</h3>
+        <div class="tool-details">
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.github.io/" target="_blank" rel="noopener">F9XR Development Team</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-check-double"></i>Reviewed by</span><a class="detail-value" href="../../press/editorial-policies.html">Review Board</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-clock-rotate-left"></i>Last updated</span><span class="detail-value">11 September 2026</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel clean">
+      <div class="panel-inner">
+        <div class="toolbar-row">
+          <span class="tool-label"><i class="fa-solid fa-arrow-right-arrow-left" aria-hidden="true"></i>Base Converter 2, 8, 10, 16</span>
+          <div class="toolbar-actions">
+            <button class="chip-btn" type="button" id="resetBase" title="Restore the default example"><i class="fa-solid fa-rotate-left"></i><span class="hide-sm">Reset</span></button>
+          </div>
+        </div>
+
+        <div class="calc-grid">
+          <div class="field field-full"><label for="baseValue">Number to convert</label><input id="baseValue" type="text" inputmode="text" value="255" autocomplete="off"></div>
+          <div class="field"><label for="baseFrom">From base</label><select id="baseFrom"><option value="2">Binary (2)</option><option value="8">Octal (8)</option><option value="10" selected>Decimal (10)</option><option value="16">Hexadecimal (16)</option></select></div>
+          <div class="field"><label for="baseTo">To base</label><select id="baseTo"><option value="2">Binary (2)</option><option value="8">Octal (8)</option><option value="10">Decimal (10)</option><option value="16" selected>Hexadecimal (16)</option></select></div>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn-primary" type="button" id="copyBase"><i class="fa-solid fa-copy"></i>Copy result</button>
+        </div>
+
+        <p class="base-err" id="baseErr" role="alert"></p>
+
+        <div class="result-card">
+          <div class="result-row hero-row"><span>Converted value</span><b id="baseOut">-</b></div>
+          <div id="baseBreak">
+            <div class="result-row"><span>Binary</span><b id="brBin">-</b></div>
+            <div class="result-row"><span>Octal</span><b id="brOct">-</b></div>
+            <div class="result-row"><span>Decimal</span><b id="brDec">-</b></div>
+            <div class="result-row"><span>Hexadecimal</span><b id="brHex">-</b></div>
+          </div>
+        </div>
+        <p class="base-note">Tip: hexadecimal input is case-insensitive (a-f or A-F). Use a leading minus sign, like -101, for negative values.</p>
+        <p class="proc-line"><i class="fa-solid fa-bolt"></i><span id="baseProc">Ready - calculations happen in this tab.</span></p>
+      </div>
+    </div>
+
+    <aside class="disclaimer" aria-label="Disclaimer">
+      <i class="fa-solid fa-circle-info"></i>
+      <p>Disclaimer: Whilst every effort has been made in building our tool, we are not to be held liable for any damages or losses arising out of or in connection with its use. Conversions follow standard radix rules and are provided as-is. <a href="../../press/disclaimer.html">Full disclaimer</a>.</p>
+    </aside>
+
+    <div class="article-layout">
+      <article class="seo-article">
+        <h2 id="article-title">Number Base Converter: Read and Write Any of the Four Key Bases</h2>
+        <p>Binary on a network config, hexadecimal in a colour picker, octal in a file-permission string and decimal on a receipt - numbers change their clothes depending on the situation. This converter translates between all four instantly and shows every representation of each value at the same time.</p>
+
+        <h2 id="what-is-a-base">What Is a Radix, or Base?</h2>
+        <p>The radix is simply how many distinct digits a number system has. In base 10 you count with ten symbols (0-9) and every digit position is a power of ten. In base 2 you count with two symbols (0 and 1) and every position is a power of two. The same written number means different things in different bases, which is why 10 in binary is only worth two.</p>
+        <p>A handy rule of thumb: 2, 8 and 16 are all powers of two. That makes octal and hexadecimal natural shorthand for binary - three binary bits fit exactly into one octal digit, and four fit into one hex digit. The relationship is why these bases keep turning up together in computing.</p>
+
+        <h2 id="the-four-bases">The Four Bases at a Glance</h2>
+        <ul>
+          <li><strong>Binary (base 2)</strong> - digits 0 and 1; the language of processor circuits.</li>
+          <li><strong>Octal (base 8)</strong> - digits 0 to 7; classic shorthand for Unix permissions.</li>
+          <li><strong>Decimal (base 10)</strong> - digits 0 to 9; everyday human counting.</li>
+          <li><strong>Hexadecimal (base 16)</strong> - digits 0-9 and A-F; memory addresses, colours, encodings.</li>
+        </ul>
+
+        <h2 id="how-the-digit-check-works">How the Invalid-Digit Check Works</h2>
+        <p>Not every string is a valid number in every base. The converter examines each character you type against the selected source base: in binary only 0 and 1 are allowed, in octal anything from 0 to 7, and in hexadecimal the digits 0-9 together with the letters A-F. Type an 8 in a base-8 field and you get a clear, friendly error instead of a silently wrong answer.</p>
+
+        <h2 id="how-to-use">How to Use the Base Converter</h2>
+        <ol>
+          <li><strong>Type or paste a number</strong> in the first field - the source base applies to what you entered.</li>
+          <li><strong>Pick the source and destination bases</strong> from the dropdowns; the conversion recalculates live.</li>
+          <li><strong>Read the breakdown card</strong> - the destination value sits on top, followed by the number expressed in all four bases at once.</li>
+          <li><strong>Copy or reset</strong> - copy the destination value to your clipboard, or restore the default example with Reset.</li>
+        </ol>
+
+        <h2 id="cross-check">Practise and Cross-Check</h2>
+        <p>New to binary and hex? Start with the dedicated <a href="../../tools/math/binary-converter.html">Binary Converter</a> for a bit-by-bit breakdown, or the <a href="../../tools/math/hexadecimal-converter.html">Hexadecimal Converter</a> for byte-by-byte output. To build long lists of test values, the <a href="../../tools/math/number-list-generator.html">Number List Generator</a> is handy, and the <a href="../../tools/misc/roman-numeral-converter.html">Roman Numeral Converter</a> shows an entirely different way of writing the same amounts. Web designers will enjoy the <a href="../../tools/image/color-converter.html">Color Converter</a>, which leans on hex day in and day out.</p>
+
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+
+        <details class="faq-item">
+          <summary>What is a radix (or base) in number systems?</summary>
+          <div class="faq-a">
+            <p>The radix, or base, is the number of unique digits a counting system uses. Base 10 uses ten digits (0-9), base 2 uses two (0 and 1), base 8 uses eight (0-7) and base 16 uses sixteen (0-9 plus A-F). Each digit position represents that digit multiplied by a power of the radix, so the same symbols can describe very different values in different bases.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Can the converter work with bases beyond 16 such as base 32?</summary>
+          <div class="faq-a">
+            <p>Not yet. This tool covers the four bases that matter most for everyday life and computing: 2, 8, 10 and 16. Bases beyond 16 need extra notational conventions for symbols after F, which is why they are left out of this converter for now.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Why are binary, octal, decimal and hexadecimal the most useful bases?</summary>
+          <div class="faq-a">
+            <p>Binary is the only base computer hardware actually runs on, while octal and hexadecimal are compact shorthand for writing binary (one octal digit maps to three binary bits and one hex digit to four). Decimal is the base people use for everyday counting, so going between these two worlds covers almost every real conversion need.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Does the converter handle negative numbers?</summary>
+          <div class="faq-a">
+            <p>Yes. Prefix the source value with a minus sign (for example -101 in binary) and the converter returns the negative value in the destination base as a minus sign followed by the positive magnitude. It does not interpret two's-complement notation, so a binary literal like -11 represents negative three, not an encoded bit pattern.</p>
+          </div>
+        </details>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>Base conversion is one of those quiet skills that unlocks everything from subnet math to colour codes. With an instant answer and the full four-base breakdown beside it, this converter both solves the problem in front of you and gently teaches how all these number systems connect - all without a single byte leaving your browser.</p>
+      </article>
+    </div>
+
+    <section class="keyword-box" aria-label="Keywords and tags">
+      <h2>Keyword &amp; Tags</h2>
+      <h3>Keywords</h3>
+      <div class="keywords">
+        <span class="keyword">number base converter</span>
+        <span class="keyword">binary to decimal</span>
+        <span class="keyword">octal to hex</span>
+        <span class="keyword">base 16 converter</span>
+        <span class="keyword">radix converter</span>
+        <span class="keyword">decimal to binary</span>
+        <span class="keyword">hexadecimal calculator</span>
+        <span class="keyword">number systems</span>
+      </div>
+      <h3>Tags</h3>
+      <div class="tags">
+        <a class="tag" href="../index.html"><i class="fa-solid fa-tag"></i>Number Systems</a>
+        <a class="tag" href="../index.html"><i class="fa-solid fa-folder"></i>Math Tools</a>
+        <a class="tag" href="../../tools/index.html"><i class="fa-solid fa-cube"></i>Utilities</a>
+      </div>
+    </section>
+
+    <section class="author-box" aria-label="About the publisher">
+      <div class="author-avatar" aria-hidden="true"><img src="../../assets/images/logo_nobg.webp" alt="F9XR logo" loading="lazy" decoding="async" width="1407" height="768"></div>
+      <div>
+        <span class="author-role">Published by</span>
+        <h2>F9XR Development Team</h2>
+        <p>Every Troolify tool is built and reviewed by the F9XR Development Team, then checked by our Review Board for correctness, accessibility, and clarity. Tools run 100% client-side with zero data retention.</p>
+        <div class="author-links">
+          <a href="https://f9xr.github.io/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i>F9XR Team</a>
+          <a href="../../press/editorial-policies.html"><i class="fa-solid fa-scale-balanced"></i>Editorial Policies</a>
+          <a href="https://github.com/f9xr" target="_blank" rel="noopener" aria-label="F9XR on GitHub"><i class="fa-brands fa-github"></i>GitHub</a>
+          <a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on LinkedIn"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+          <a href="https://instagram.com/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on Instagram"><i class="fa-brands fa-instagram"></i>Instagram</a>
+          <a href="https://youtube.com/@QuarterlyLIV" target="_blank" rel="noopener" aria-label="F9XR on YouTube"><i class="fa-brands fa-youtube"></i>YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-tools" aria-label="Related tools">
+      <h2>Related Tools</h2>
+      <div class="related-search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" id="relatedSearch" placeholder="Search all Troolify tools&hellip;" autocomplete="off" aria-label="Search related tools">
+      </div>
+      <div class="related-grid" id="relatedGrid" aria-busy="true">
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+      </div>
+    </section>
+
+    <section class="comments" aria-label="Comments">
+      <h2>Comments</h2>
+      <div id="comments">
+        <script src="https://utteranc.es/client.js" repo="f9xr/troolify" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async></script>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"><span></span><i class="fa-solid fa-layer-group"></i><span></span></div>
+
+  </div>
+</main>
+
+<script src="../../assets/js/layout.js" defer></script>
+<script src="../../assets/js/tools-data.js" defer></script>
+<script src="../../assets/js/tool-page.js" defer></script>
+<script>
+(function(){
+  "use strict";
+  var f=function(a){ return document.getElementById(a); };
+  var valEl=f("baseValue"), fromEl=f("baseFrom"), toEl=f("baseTo");
+  var outEl=f("baseOut");
+  var bBin=f("brBin"), bOct=f("brOct"), bDec=f("brDec"), bHex=f("brHex");
+  var errEl=f("baseErr"), procEl=f("baseProc");
+  var lastText="";
+  var busy=false;
+  var DIGITS="0123456789abcdef";
+
+  function validFor(digits, base){
+    if(digits.length===0) return true;
+    for(var i=0;i<digits.length;i++){
+      var idx=DIGITS.indexOf(digits.charAt(i));
+      if(idx<0 || idx>=base) return false;
+    }
+    return true;
+  }
+
+  function toText(n, base){
+    var s=n.toString(base);
+    return (base===16) ? s.toUpperCase() : s;
+  }
+
+  function setErr(msg){
+    if(msg){ errEl.textContent=msg; errEl.classList.add("show"); }
+    else{ errEl.textContent=""; errEl.classList.remove("show"); }
+  }
+
+  function calc(){
+    if(busy) return;
+    busy=true;
+    var t0=performance.now();
+    var raw=valEl.value.trim().toLowerCase();
+    var from=parseInt(fromEl.value,10), to=parseInt(toEl.value,10);
+    if(raw===""){
+      setErr(null);
+      outEl.textContent="-";
+      bBin.textContent="-"; bOct.textContent="-"; bDec.textContent="-"; bHex.textContent="-";
+      lastText="";
+    }
+    else{
+      var neg=false, body=raw;
+      if(body.charAt(0)==="-"){ neg=true; body=body.slice(1); }
+      if(!validFor(body, from)){
+        setErr("Invalid digit for base "+from+". Use only "+(from===16?"0-9 and A-F":"digits 0-"+(from-1))+" in the source base.");
+      }
+      else{
+        var v=parseInt(body, from);
+        if(isNaN(v)){
+          setErr("That value cannot be read in base "+from+".");
+        }
+        else if(neg && v===0){
+          setErr("Negative zero is not a number. Enter a plain 0.");
+        }
+        else{
+          setErr(null);
+          var outV=neg ? -v : v;
+          outEl.textContent=toText(outV, to);
+          bBin.textContent=toText(outV,2);
+          bOct.textContent=toText(outV,8);
+          bDec.textContent=toText(outV,10);
+          bHex.textContent=toText(outV,16);
+          lastText=outEl.textContent;
+        }
+      }
+    }
+    procEl.textContent="Calculated in "+(performance.now()-t0).toFixed(1)+" ms - inside your browser. 0 bytes uploaded.";
+    busy=false;
+  }
+
+  valEl.addEventListener("input", calc);
+  fromEl.addEventListener("change", calc);
+  toEl.addEventListener("change", calc);
+  f("resetBase").addEventListener("click",function(){
+    valEl.value="255"; fromEl.value="10"; toEl.value="16"; calc();
+  });
+  f("copyBase").addEventListener("click",function(){
+    window.Troolify.copyToClipboard(lastText,function(){ procEl.textContent="Copied to clipboard - the bytes never left your device."; });
+  });
+  calc();
+})();
+</script>
+</body>
+</html>

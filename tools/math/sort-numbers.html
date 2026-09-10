@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sort Numbers | Ascending &amp; Descending Number Sorter</title>
+<meta name="description" content="Sort any list of numbers ascending or descending in one click, with optional duplicate removal. Paste, sort and copy - free and 100% client-side.">
+<meta name="author" content="F9XR Development Team">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#212529">
+<link rel="canonical" href="https://f9xr.github.io/troolify/tools/math/sort-numbers.html">
+<meta property="og:site_name" content="Troolify">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Sort Numbers | Ascending &amp; Descending Number Sorter">
+<meta property="og:description" content="Sort any list of numbers ascending or descending in one click, with optional duplicate removal. Paste, sort and copy - free and 100% client-side.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://f9xr.github.io/troolify/tools/math/sort-numbers.html">
+<meta property="og:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-09-11">
+<meta property="article:modified_time" content="2026-09-11">
+<meta property="article:section" content="Math Tools">
+<meta property="article:tag" content="Sort Numbers">
+<meta property="article:tag" content="Math Tools">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sort Numbers | Ascending &amp; Descending Number Sorter">
+<meta name="twitter:description" content="Sort any list of numbers ascending or descending in one click. Free, client-side.">
+<meta name="twitter:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://f9xr.github.io/troolify/index.html" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://f9xr.github.io/troolify/tools/index.html" },
+    { "@type": "ListItem", "position": 3, "name": "Math Tools", "item": "https://f9xr.github.io/troolify/tools/math/" },
+    { "@type": "ListItem", "position": 4, "name": "Sort Numbers", "item": "https://f9xr.github.io/troolify/tools/math/sort-numbers.html" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Sort Numbers",
+  "url": "https://f9xr.github.io/troolify/tools/math/sort-numbers.html",
+  "applicationCategory": "UtilitiesApplication",
+  "applicationSubCategory": "Number Sorting",
+  "operatingSystem": "Any (web browser)",
+  "featureList": ["Ascending and descending sort", "Optional duplicate removal", "Flexible input parsing", "Kept-count display", "One-click copy", "100% client-side processing"],
+  "description": "Sort any list of numbers ascending or descending in one click, with optional duplicate removal. Paste, sort and copy - free and 100% client-side.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "datePublished": "2026-09-11",
+  "dateModified": "2026-09-11",
+  "author": { "@type": "Organization", "name": "F9XR Development Team", "url": "https://f9xr.github.io/" },
+  "publisher": { "@type": "Organization", "name": "Troolify", "url": "https://f9xr.github.io/troolify/", "logo": { "@type": "ImageObject", "url": "https://f9xr.github.io/troolify/assets/images/logo_nobg.webp", "width": 1407, "height": 768 } }
+}
+</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Sort Numbers | Ascending & Descending Number Sorter","description":"Sort any list of numbers ascending or descending in one click, with optional duplicate removal. Paste, sort and copy - free and 100% client-side.","image":"https://f9xr.github.io/troolify/assets/images/og-image.jpg","datePublished":"2026-09-11","dateModified":"2026-09-11","mainEntityOfPage":"https://f9xr.github.io/troolify/tools/math/sort-numbers.html","author":{"@type":"Organization","name":"F9XR Development Team","url":"https://f9xr.github.io/"},"publisher":{"@type":"Organization","name":"Troolify","url":"https://f9xr.github.io/troolify/","logo":{"@type":"ImageObject","url":"https://f9xr.github.io/troolify/assets/images/logo_nobg.webp","width":1407,"height":768}}}</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What sorts faster, ascending or descending?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Both directions take the same amount of time because the tool always sorts in ascending order internally, then reverses the result when descending is selected. The performance difference is negligible even for thousands of numbers." }
+    },
+    {
+      "@type": "Question",
+      "name": "Why would I remove duplicates?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Removing duplicates produces a clean set of unique values, which is useful for building distinct lists, reducing dataset noise, or preparing input for functions that expect no repeats. Toggle the checkbox on or off depending on your needs." }
+    },
+    {
+      "@type": "Question",
+      "name": "Which separators are supported in the input?",
+      "acceptedAnswer": { "@type": "Answer", "text": "You can separate numbers with commas, spaces, tabs or newlines - and mix any of them freely. The parser ignores empty entries so trailing commas or extra line breaks will not cause problems." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does sorting modify my original list?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Your input text remains completely untouched in the input box. Sorting produces a new list in the output box and the original data is never altered or stored." }
+    }
+  ]
+}
+</script>
+
+<link rel="icon" type="image/webp" href="../../assets/images/favicon.webp"><link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+<link rel="stylesheet" href="../../assets/css/tailwind.css">
+<link rel="stylesheet" href="../../assets/css/tool.css">
+<link rel="stylesheet" href="../../assets/css/site-shell.css">
+<link rel="stylesheet" href="../../assets/css/tool-page.css">
+<link rel="stylesheet" href="../../assets/css/seo-article.css">
+<style>
+.calc-grid{display:grid;grid-template-columns:1fr;gap:18px}
+@media(min-width:720px){.calc-grid{grid-template-columns:1fr 1fr}}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:12.5px;font-weight:700;color:var(--muted)}
+.field input,.field select,.field textarea{background:#1B2028;border:1px solid var(--border);color:var(--ink);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:15px;font-weight:600;outline:none;width:100%;box-sizing:border-box}
+.field textarea{min-height:110px;resize:vertical;font-weight:500;font-size:14px}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+.check-row{display:flex;align-items:center;gap:8px;margin-top:6px}
+.check-row input[type=checkbox]{width:18px;height:18px;accent-color:var(--accent)}
+.check-row label{font-size:13px;font-weight:600;color:var(--muted);cursor:pointer}
+.output-wrap{margin-top:14px}
+.output-wrap textarea{width:100%;min-height:110px;background:#1B2028;border:1px solid var(--border);color:var(--ink);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:14px;font-weight:500;resize:vertical;box-sizing:border-box}
+.sort-err{display:none;padding:.7rem 1rem;border-radius:10px;background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.4);color:#FCA5A5;font-size:.85rem;margin-top:14px}
+.sort-err.show{display:block}
+.sort-count{font-size:13px;color:var(--muted);margin-top:10px;font-weight:600}
+</style>
+</head>
+<body data-layout="tool">
+<noscript>
+    <nav aria-label="Primary" style="position:static;display:block;padding:1rem 1.5rem;background:#212529;border-bottom:1px solid #343A40;text-align:center;font-size:0.9rem;">
+        <a href="../../index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Home</a>
+        <a href="../../tools/index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Tools</a>
+        <a href="../../pages/about.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">About</a>
+        <a href="../../pages/contact.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Contact</a>
+    </nav>
+</noscript>
+
+<main class="tool-main">
+  <div class="container">
+
+    <div class="tool-head hero">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="../../tools/index.html">Tools</a></li>
+          <li><a href="../index.html">Math Tools</a></li>
+          <li class="current" aria-current="page">Sort Numbers</li>
+        </ol>
+      </nav>
+      <div class="hero-main">
+        <span class="tool-badge"><span class="dot"></span>100% client-side &middot; zero data retention</span>
+        <h1>Sort Numbers</h1>
+        <p>Paste an unsorted list of numbers and get them ordered ascending or descending in one click. Toggle duplicate removal for a clean unique set.</p>
+      </div>
+      <div class="hero-box hero-cat">
+        <h3 class="hero-box-title"><i class="fa-solid fa-folder-open"></i>Category</h3>
+        <div class="tool-meta">
+          <span class="tool-tag"><i class="fa-solid fa-tag"></i>Number Lists</span>
+          <a class="tool-cat" href="../index.html" aria-label="Browse Math Tools category"><i class="fa-solid fa-folder"></i>Math Tools</a>
+        </div>
+      </div>
+      <div class="hero-box hero-qa">
+        <h3 class="hero-box-title"><i class="fa-solid fa-bolt"></i>Quick Actions</h3>
+        <div class="tool-actions">
+          <button class="rt-btn" type="button" id="btnShare"><i class="fa-solid fa-share-nodes"></i>Share</button>
+          <button class="rt-btn" type="button" id="btnEmbed"><i class="fa-solid fa-code"></i>Embed Tool</button>
+          <a class="rt-btn" href="../../pages/feedback.html"><i class="fa-solid fa-comment"></i>Feedback</a>
+        </div>
+      </div>
+      <div class="hero-box hero-details">
+        <h3 class="hero-box-title"><i class="fa-solid fa-circle-info"></i>Tool Details</h3>
+        <div class="tool-details">
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.github.io/" target="_blank" rel="noopener">F9XR Development Team</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-check-double"></i>Reviewed by</span><a class="detail-value" href="../../press/editorial-policies.html">Review Board</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-clock-rotate-left"></i>Last updated</span><span class="detail-value">11 September 2026</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel clean">
+      <div class="panel-inner">
+        <div class="toolbar-row">
+          <span class="tool-label"><i class="fa-solid fa-arrow-down-short-wide" aria-hidden="true"></i>Number Sorter</span>
+          <div class="toolbar-actions">
+            <button class="chip-btn" type="button" id="resetSort" title="Clear all fields"><i class="fa-solid fa-rotate-left"></i><span class="hide-sm">Reset</span></button>
+          </div>
+        </div>
+
+        <div class="calc-grid">
+          <div class="field" style="grid-column:1/-1"><label for="inSort">Input list (comma, space or newline separated)</label><textarea id="inSort" placeholder="e.g. 42, 7, 99, 3, 55, 12"></textarea></div>
+        </div>
+
+        <div class="calc-grid" style="margin-top:14px">
+          <div class="field"><label for="orderSel">Order</label><select id="orderSel"><option value="asc">Ascending</option><option value="desc">Descending</option></select></div>
+        </div>
+        <div class="check-row">
+          <input type="checkbox" id="dedup">
+          <label for="dedup">Remove duplicates</label>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn-primary" type="button" id="btnSort"><i class="fa-solid fa-play"></i>Sort</button>
+          <button class="btn btn-primary" type="button" id="copySort"><i class="fa-solid fa-copy"></i>Copy result</button>
+        </div>
+
+        <p class="sort-err" id="sortErr" role="alert"></p>
+
+        <div class="output-wrap">
+          <textarea id="outSorted" readonly placeholder="Sorted numbers will appear here..."></textarea>
+        </div>
+        <p class="sort-count" id="sortCount"></p>
+        <p class="proc-line"><i class="fa-solid fa-bolt"></i><span id="sortProc">Ready - paste numbers and click Sort.</span></p>
+      </div>
+    </div>
+
+    <aside class="disclaimer" aria-label="Disclaimer">
+      <i class="fa-solid fa-circle-info"></i>
+      <p>Disclaimer: Whilst every effort has been made in building our tool, we are not to be held liable for any damages or losses arising out of or in connection with its use. Sorting uses a standard comparison algorithm and is provided as-is. <a href="../../press/disclaimer.html">Full disclaimer</a>.</p>
+    </aside>
+
+    <div class="article-layout">
+      <article class="seo-article">
+        <h2 id="article-title">Sort Numbers: Order Any List in One Click</h2>
+        <p>Scrambled numbers slow you down. Whether you received a jumbled export, a messy data set or just a handful of values typed at random, the Sort Numbers tool puts them in order instantly - ascending or descending, with an option to strip out duplicates.</p>
+
+        <h2 id="how-it-works">How It Works</h2>
+        <p>Paste your numbers into the input box. They can be separated by commas, spaces, tabs or newlines - the parser handles all of these and mixes without complaint. Choose your sort order from the dropdown and click Sort. The result appears in the output box, one number per line, ready to copy.</p>
+        <p>Toggle the Remove Duplicates checkbox before sorting if you want a clean list of unique values. This is especially handy when building sets, deduplicating data feeds or creating clean input for downstream calculations.</p>
+
+        <h2 id="sorting-internals">Under the Hood</h2>
+        <p>The tool always sorts numerically, not lexicographically. This means 9 is placed before 10, and -5 before -2, regardless of string length. The sort itself runs in O(n log n) time using the browser's built-in stable sort, so even lists with several thousand numbers finish in well under a millisecond.</p>
+
+        <h2 id="practical-examples">Practical Examples</h2>
+        <p>Teachers sorting test scores to find medians, analysts ordering survey responses before bucketing them, or developers preparing unique index arrays all benefit from a quick, reliable sort. After sorting, try the <a href="min-max-calculator.html">Minimum and Maximum Calculator</a> to extract the extremes, or the <a href="filter-numbers.html">Filter Numbers</a> tool to narrow down the range.</p>
+        <p>If your list contains values that need to be converted between formats, the <a href="number-base-converter.html">Number Base Converter</a> or the <a href="binary-converter.html">Binary Converter</a> can handle the transformation. For statistical work on the sorted output, the <a href="../statistics/advance-average-calculator.html">Advance Average Calculator</a> provides a deeper breakdown.</p>
+
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+
+        <details class="faq-item">
+          <summary>What sorts faster, ascending or descending?</summary>
+          <div class="faq-a">
+            <p>Both directions take the same amount of time because the tool always sorts in ascending order internally, then reverses the result when descending is selected. The performance difference is negligible even for thousands of numbers.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Why would I remove duplicates?</summary>
+          <div class="faq-a">
+            <p>Removing duplicates produces a clean set of unique values, which is useful for building distinct lists, reducing dataset noise, or preparing input for functions that expect no repeats. Toggle the checkbox on or off depending on your needs.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Which separators are supported in the input?</summary>
+          <div class="faq-a">
+            <p>You can separate numbers with commas, spaces, tabs or newlines - and mix any of them freely. The parser ignores empty entries so trailing commas or extra line breaks will not cause problems.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Does sorting modify my original list?</summary>
+          <div class="faq-a">
+            <p>No. Your input text remains completely untouched in the input box. Sorting produces a new list in the output box and the original data is never altered or stored.</p>
+          </div>
+        </details>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>Sorting numbers should be effortless. Paste, choose your order, click Sort - and you have a perfectly ordered list in seconds, with no data leaving your browser.</p>
+      </article>
+    </div>
+
+    <section class="keyword-box" aria-label="Keywords and tags">
+      <h2>Keyword &amp; Tags</h2>
+      <h3>Keywords</h3>
+      <div class="keywords">
+        <span class="keyword">sort numbers online</span>
+        <span class="keyword">number sorter tool</span>
+        <span class="keyword">ascending sort numbers</span>
+        <span class="keyword">descending sort numbers</span>
+        <span class="keyword">sort number list</span>
+        <span class="keyword">remove duplicates numbers</span>
+        <span class="keyword">number ordering tool</span>
+        <span class="keyword">math tools</span>
+      </div>
+      <h3>Tags</h3>
+      <div class="tags">
+        <a class="tag" href="../index.html"><i class="fa-solid fa-tag"></i>Number Lists</a>
+        <a class="tag" href="../index.html"><i class="fa-solid fa-folder"></i>Math Tools</a>
+        <a class="tag" href="../../tools/index.html"><i class="fa-solid fa-cube"></i>Utilities</a>
+      </div>
+    </section>
+
+    <section class="author-box" aria-label="About the publisher">
+      <div class="author-avatar" aria-hidden="true"><img src="../../assets/images/logo_nobg.webp" alt="F9XR logo" loading="lazy" decoding="async" width="1407" height="768"></div>
+      <div>
+        <span class="author-role">Published by</span>
+        <h2>F9XR Development Team</h2>
+        <p>Every Troolify tool is built and reviewed by the F9XR Development Team, then checked by our Review Board for correctness, accessibility, and clarity. Tools run 100% client-side with zero data retention.</p>
+        <div class="author-links">
+          <a href="https://f9xr.github.io/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i>F9XR Team</a>
+          <a href="../../press/editorial-policies.html"><i class="fa-solid fa-scale-balanced"></i>Editorial Policies</a>
+          <a href="https://github.com/f9xr" target="_blank" rel="noopener" aria-label="F9XR on GitHub"><i class="fa-brands fa-github"></i>GitHub</a>
+          <a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on LinkedIn"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+          <a href="https://instagram.com/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on Instagram"><i class="fa-brands fa-instagram"></i>Instagram</a>
+          <a href="https://youtube.com/@QuarterlyLIV" target="_blank" rel="noopener" aria-label="F9XR on YouTube"><i class="fa-brands fa-youtube"></i>YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-tools" aria-label="Related tools">
+      <h2>Related Tools</h2>
+      <div class="related-search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" id="relatedSearch" placeholder="Search all Troolify tools&hellip;" autocomplete="off" aria-label="Search related tools">
+      </div>
+      <div class="related-grid" id="relatedGrid" aria-busy="true">
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+      </div>
+    </section>
+
+    <section class="comments" aria-label="Comments">
+      <h2>Comments</h2>
+      <div id="comments">
+        <script src="https://utteranc.es/client.js" repo="f9xr/troolify" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async></script>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"><span></span><i class="fa-solid fa-layer-group"></i><span></span></div>
+
+  </div>
+</main>
+
+<script src="../../assets/js/layout.js" defer></script>
+<script src="../../assets/js/tools-data.js" defer></script>
+<script src="../../assets/js/tool-page.js" defer></script>
+<script>
+(function(){
+  "use strict";
+  var f=function(id){return document.getElementById(id);};
+  var inEl=f("inSort"),orderEl=f("orderSel"),dedupEl=f("dedup");
+  var outEl=f("outSorted"),errEl=f("sortErr"),procEl=f("sortProc"),countEl=f("sortCount");
+
+  function parseNums(s){
+    var parts=s.split(/[\s,;\n\r\t]+/);
+    var nums=[];
+    for(var i=0;i<parts.length;i++){
+      var v=parseFloat(parts[i]);
+      if(!isNaN(v))nums.push(v);
+    }
+    return nums;
+  }
+
+  function setErr(msg){
+    if(msg){errEl.textContent=msg;errEl.classList.add("show");}
+    else{errEl.textContent="";errEl.classList.remove("show");}
+  }
+
+  function doSort(){
+    var t0=performance.now();
+    var nums=parseNums(inEl.value);
+    if(nums.length===0){setErr("No valid numbers found. Enter numbers separated by commas, spaces or newlines.");outEl.value="";countEl.textContent="";return;}
+    if(dedupEl.checked){
+      var seen={};var unique=[];
+      for(var i=0;i<nums.length;i++){
+        if(!seen[nums[i]]){seen[nums[i]]=1;unique.push(nums[i]);}
+      }
+      nums=unique;
+    }
+    nums.sort(function(a,b){return a-b;});
+    if(orderEl.value==="desc")nums.reverse();
+    setErr(null);
+    outEl.value=nums.join("\n");
+    countEl.textContent=nums.length+" numbers sorted";
+    procEl.textContent="Calculated in "+(performance.now()-t0).toFixed(1)+" ms - inside your browser. 0 bytes uploaded.";
+  }
+
+  f("btnSort").addEventListener("click",doSort);
+  f("resetSort").addEventListener("click",function(){
+    inEl.value="";orderEl.value="asc";dedupEl.checked=false;
+    setErr(null);outEl.value="";countEl.textContent="";
+    procEl.textContent="Ready - paste numbers and click Sort.";
+  });
+  f("copySort").addEventListener("click",function(){
+    window.Troolify.copyToClipboard(outEl.value,function(){
+      procEl.textContent="Copied to clipboard - the bytes never left your device.";
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -135,6 +135,7 @@ Key facts about Troolify:
 - [Health Tools](https://f9xr.github.io/troolify/tools/health/index.html): Health, fitness and wellness tools.
 - [HVAC Tools](https://f9xr.github.io/troolify/tools/hvac/index.html): Heating, ventilation and air conditioning - load, airflow, duct design, refrigeration and lab exhaust utilities.
 - [Image Tools](https://f9xr.github.io/troolify/tools/image/index.html): Resize, compress, convert and edit images.
+- [Math Tools](https://f9xr.github.io/troolify/tools/math/index.html): Number, algebra, geometry, trigonometry and unit conversion utilities.
 - [Misc Tools](https://f9xr.github.io/troolify/tools/misc/index.html): Useful utilities that don't fit anywhere else.
 - [PDF Tools](https://f9xr.github.io/troolify/tools/pdf/index.html): PDF creation, merging and conversion tools.
 - [Prompt Tools](https://f9xr.github.io/troolify/tools/prompts/index.html): Ready-made prompts for AI workflows.

@@ -28,6 +28,7 @@
 - **PDF Tools**: Word/Excel/Images/Text to PDF, PDF to text/grayscale, merge PDFs, remove/add pages, metadata viewer/remover, unredact check, paper size converter
 - **Finance Tools**: VAT calculator
 - **Image Tools**: Color converter
+- **Math Tools**: Number list generator/filter/sort, min-max calculator, number base/binary/hex converter, calculator, area calculator, rule of three (direct/inverse), trig functions, radians-degrees converter
 - **Misc Tools**: Password generator, entropy calculator, random decision maker, random choice generator, mailto link generator
 
 ## Technical Details

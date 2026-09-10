@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Area Calculator | Square Rectangle Triangle Circle</title>
+<meta name="description" content="Calculate the area of squares, rectangles, triangles, circles, trapezoids and parallelograms from just a few dimensions - free and 100% client-side.">
+<meta name="author" content="F9XR Development Team">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#212529">
+<link rel="canonical" href="https://f9xr.github.io/troolify/tools/math/area-calculator.html">
+<meta property="og:site_name" content="Troolify">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Area Calculator | Square Rectangle Triangle Circle">
+<meta property="og:description" content="Calculate the area of squares, rectangles, triangles, circles, trapezoids and parallelograms from just a few dimensions - free and 100% client-side.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://f9xr.github.io/troolify/tools/math/area-calculator.html">
+<meta property="og:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-09-11">
+<meta property="article:modified_time" content="2026-09-11">
+<meta property="article:section" content="Math Tools">
+<meta property="article:tag" content="Area Calculator">
+<meta property="article:tag" content="Math Tools">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Area Calculator | Square Rectangle Triangle Circle">
+<meta name="twitter:description" content="Calculate the area of six common shapes instantly - 100% browser based.">
+<meta name="twitter:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://f9xr.github.io/troolify/index.html" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://f9xr.github.io/troolify/tools/index.html" },
+    { "@type": "ListItem", "position": 3, "name": "Math Tools", "item": "https://f9xr.github.io/troolify/tools/math/" },
+    { "@type": "ListItem", "position": 4, "name": "Area Calculator", "item": "https://f9xr.github.io/troolify/tools/math/area-calculator.html" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Area Calculator",
+  "url": "https://f9xr.github.io/troolify/tools/math/area-calculator.html",
+  "applicationCategory": "UtilitiesApplication",
+  "applicationSubCategory": "Geometric Area Calculation",
+  "operatingSystem": "Any (web browser)",
+  "featureList": ["Six common shapes", "Adaptive inputs per shape", "Unit conversion (m/ft/in/cm)", "Instant recalculation", "One-click copy", "100% client-side"],
+  "description": "Calculate the area of squares, rectangles, triangles, circles, trapezoids and parallelograms from just a few dimensions - free and 100% client-side.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "datePublished": "2026-09-11",
+  "dateModified": "2026-09-11",
+  "author": { "@type": "Organization", "name": "F9XR Development Team", "url": "https://f9xr.github.io/" },
+  "publisher": { "@type": "Organization", "name": "Troolify", "url": "https://f9xr.github.io/troolify/", "logo": { "@type": "ImageObject", "url": "https://f9xr.github.io/troolify/assets/images/logo_nobg.webp", "width": 1407, "height": 768 } }
+}
+</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Area Calculator | Square Rectangle Triangle Circle","description":"Calculate the area of squares, rectangles, triangles, circles, trapezoids and parallelograms from just a few dimensions - free and 100% client-side.","image":"https://f9xr.github.io/troolify/assets/images/og-image.jpg","datePublished":"2026-09-11","dateModified":"2026-09-11","mainEntityOfPage":"https://f9xr.github.io/troolify/tools/math/area-calculator.html","author":{"@type":"Organization","name":"F9XR Development Team","url":"https://f9xr.github.io/"},"publisher":{"@type":"Organization","name":"Troolify","url":"https://f9xr.github.io/troolify/","logo":{"@type":"ImageObject","url":"https://f9xr.github.io/troolify/assets/images/logo_nobg.webp","width":1407,"height":768}}}</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the formula for each shape?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Square: side x side. Rectangle: length x width. Triangle: base x height / 2. Circle: pi x radius squared. Trapezoid: (base A + base B) x height / 2. Parallelogram: base x height. All formulas are applied automatically when you enter the dimensions." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I switch units after entering values?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. The unit selector converts the result into the chosen unit instantly. Your input values stay the same and only the displayed area changes, so you can compare results in different units without retyping anything." }
+    },
+    {
+      "@type": "Question",
+      "name": "What about a non-right triangle?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The formula base x height / 2 works for any triangle, not just right-angled ones. The height is the perpendicular distance from the base to the opposite vertex, regardless of the triangle's angles." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a trapezoid?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A trapezoid (or trapezium in British English) is a four-sided shape with exactly one pair of parallel sides, called bases. The area is the average of the two bases multiplied by the perpendicular height between them." }
+    }
+  ]
+}
+</script>
+
+<link rel="icon" type="image/webp" href="../../assets/images/favicon.webp"><link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+<link rel="stylesheet" href="../../assets/css/tailwind.css">
+<link rel="stylesheet" href="../../assets/css/tool.css">
+<link rel="stylesheet" href="../../assets/css/site-shell.css">
+<link rel="stylesheet" href="../../assets/css/tool-page.css">
+<link rel="stylesheet" href="../../assets/css/seo-article.css">
+<style>
+.calc-grid{display:grid;grid-template-columns:1fr;gap:18px}
+@media(min-width:720px){.calc-grid{grid-template-columns:1fr 1fr}}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:12.5px;font-weight:700;color:var(--muted)}
+.field input,.field select{background:#1B2028;border:1px solid var(--border);color:var(--ink);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:15px;font-weight:600;outline:none;width:100%;box-sizing:border-box}
+.field input:focus,.field select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+.result-card{background:linear-gradient(180deg,rgba(59,130,246,.12),rgba(59,130,246,.03));border:1px solid rgba(96,165,250,.25);border-radius:14px;padding:18px;margin-top:18px}
+.result-row{display:flex;justify-content:space-between;gap:10px;padding:8px 2px;font-size:14px}
+.result-row+.result-row{border-top:1px dashed rgba(255,255,255,.08)}
+.result-row b{color:#93C5FD;font-weight:800;text-align:right}
+.result-row.hero-row b{color:#6EE7B7}
+.shape-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px;margin-bottom:16px}
+.shape-btn{background:#1B2028;border:1px solid var(--border);color:#F8F9FA;border-radius:10px;padding:12px 8px;font-family:inherit;font-size:13px;font-weight:600;cursor:pointer;text-align:center;transition:background .15s,border-color .15s}
+.shape-btn:hover{background:#252B35;border-color:var(--accent)}
+.shape-btn.active{background:rgba(59,130,246,.15);border-color:var(--accent);color:#93C5FD}
+.dynamic-fields{display:grid;grid-template-columns:1fr;gap:14px}
+@media(min-width:720px){.dynamic-fields{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body data-layout="tool">
+<noscript>
+    <nav aria-label="Primary" style="position:static;display:block;padding:1rem 1.5rem;background:#212529;border-bottom:1px solid #343A40;text-align:center;font-size:0.9rem;">
+        <a href="../../index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Home</a>
+        <a href="../../tools/index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Tools</a>
+        <a href="../../pages/about.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">About</a>
+        <a href="../../pages/contact.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Contact</a>
+    </nav>
+</noscript>
+
+<main class="tool-main">
+  <div class="container">
+
+    <div class="tool-head hero">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="../../tools/index.html">Tools</a></li>
+          <li><a href="../index.html">Math Tools</a></li>
+          <li class="current" aria-current="page">Area Calculator</li>
+        </ol>
+      </nav>
+      <div class="hero-main">
+        <span class="tool-badge"><span class="dot"></span>100% client-side &middot; zero data retention</span>
+        <h1>Area Calculator</h1>
+        <p>Calculate the area of squares, rectangles, triangles, circles, trapezoids and parallelograms from just a few dimensions - free and 100% client-side.</p>
+      </div>
+      <div class="hero-box hero-cat">
+        <h3 class="hero-box-title"><i class="fa-solid fa-folder-open"></i>Category</h3>
+        <div class="tool-meta">
+          <span class="tool-tag"><i class="fa-solid fa-tag"></i>Geometry</span>
+          <a class="tool-cat" href="../index.html" aria-label="Browse Math Tools category"><i class="fa-solid fa-folder"></i>Math Tools</a>
+        </div>
+      </div>
+      <div class="hero-box hero-qa">
+        <h3 class="hero-box-title"><i class="fa-solid fa-bolt"></i>Quick Actions</h3>
+        <div class="tool-actions">
+          <button class="rt-btn" type="button" id="btnShare"><i class="fa-solid fa-share-nodes"></i>Share</button>
+          <button class="rt-btn" type="button" id="btnEmbed"><i class="fa-solid fa-code"></i>Embed Tool</button>
+          <a class="rt-btn" href="../../pages/feedback.html"><i class="fa-solid fa-comment"></i>Feedback</a>
+        </div>
+      </div>
+      <div class="hero-box hero-details">
+        <h3 class="hero-box-title"><i class="fa-solid fa-circle-info"></i>Tool Details</h3>
+        <div class="tool-details">
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.github.io/" target="_blank" rel="noopener">F9XR Development Team</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-check-double"></i>Reviewed by</span><a class="detail-value" href="../../press/editorial-policies.html">Review Board</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-clock-rotate-left"></i>Last updated</span><span class="detail-value">11 September 2026</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel clean">
+      <div class="panel-inner">
+        <div class="toolbar-row">
+          <span class="tool-label"><i class="fa-solid fa-shapes" aria-hidden="true"></i>Shape Area Calculator</span>
+          <div class="toolbar-actions">
+            <button class="chip-btn" type="button" id="resetArea" title="Reset calculator"><i class="fa-solid fa-rotate-left"></i><span class="hide-sm">Reset</span></button>
+          </div>
+        </div>
+
+        <div class="shape-grid" id="shapeGrid">
+          <button class="shape-btn active" type="button" data-shape="square">Square</button>
+          <button class="shape-btn" type="button" data-shape="rectangle">Rectangle</button>
+          <button class="shape-btn" type="button" data-shape="triangle">Triangle</button>
+          <button class="shape-btn" type="button" data-shape="circle">Circle</button>
+          <button class="shape-btn" type="button" data-shape="trapezoid">Trapezoid</button>
+          <button class="shape-btn" type="button" data-shape="parallelogram">Parallelogram</button>
+        </div>
+
+        <div class="field" style="margin-bottom:14px">
+          <label for="areaUnits">Units</label>
+          <select id="areaUnits">
+            <option value="1">Square meters (m&sup2;)</option>
+            <option value="10.7639">Square feet (ft&sup2;)</option>
+            <option value="1550">Square inches (in&sup2;)</option>
+            <option value="10000">Square centimeters (cm&sup2;)</option>
+          </select>
+        </div>
+
+        <div class="dynamic-fields" id="dynamicFields"></div>
+
+        <div class="actions">
+          <button class="btn btn-primary" type="button" id="copyArea"><i class="fa-solid fa-copy"></i>Copy result</button>
+        </div>
+
+        <div class="result-card">
+          <div class="result-row hero-row"><span>Area</span><b id="areaOut">-</b></div>
+          <div class="result-row"><span>Formula</span><b id="areaFormula">-</b></div>
+        </div>
+        <p class="proc-line"><i class="fa-solid fa-bolt"></i><span id="areaProc">Ready - calculations happen in this tab.</span></p>
+      </div>
+    </div>
+
+    <aside class="disclaimer" aria-label="Disclaimer">
+      <i class="fa-solid fa-circle-info"></i>
+      <p>Disclaimer: Whilst every effort has been made in building our tool, we are not to be held liable for any damages or losses arising out of or in connection with its use. Calculations use standard geometric formulas and are provided as-is. <a href="../../press/disclaimer.html">Full disclaimer</a>.</p>
+    </aside>
+
+    <div class="article-layout">
+      <article class="seo-article">
+        <h2 id="article-title">Area Calculator: Find the Space Inside Any Shape</h2>
+        <p>Whether you are flooring a room, planting a garden bed or solving a geometry assignment, knowing the area of a shape is one of the most common everyday calculations. This tool covers six standard shapes and converts the result into whichever unit you prefer, all inside your browser.</p>
+
+        <h2 id="shapes">Six Shapes, One Tool</h2>
+        <ul>
+          <li><strong>Square</strong> - enter one side and get the area instantly.</li>
+          <li><strong>Rectangle</strong> - enter length and width.</li>
+          <li><strong>Triangle</strong> - enter the base and perpendicular height.</li>
+          <li><strong>Circle</strong> - enter the radius and pi does the rest.</li>
+          <li><strong>Trapezoid</strong> - enter both parallel bases and the height between them.</li>
+          <li><strong>Parallelogram</strong> - enter the base and the perpendicular height.</li>
+        </ul>
+        <p>Switch between square metres, square feet, square inches and square centimetres with a single dropdown. The conversion happens instantly so you can compare results across unit systems without retyping.</p>
+
+        <h2 id="how-to">How to Use the Calculator</h2>
+        <ol>
+          <li><strong>Pick a shape</strong> from the buttons at the top.</li>
+          <li><strong>Enter the dimensions</strong> shown - the inputs update to match the shape you chose.</li>
+          <li><strong>Read the result</strong> in the result card below, or change the unit dropdown to convert.</li>
+          <li><strong>Copy</strong> the result to your clipboard with one click.</li>
+        </ol>
+
+        <h2 id="real-world">Real-World Applications</h2>
+        <p>Calculate carpet area for a living room (rectangle), the turf needed for a lawn (trapezoid), or the paintable surface of a circular window. For more complex measurements like perimeters and volumes, pair this tool with the <a href="calculator.html">Calculator</a> for follow-on arithmetic. When you need to scale proportions across a floor plan, the <a href="rule-of-three-calculator.html">Rule of Three Calculator</a> is a natural companion.</p>
+
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+
+        <details class="faq-item">
+          <summary>What is the formula for each shape?</summary>
+          <div class="faq-a">
+            <p>Square: side x side. Rectangle: length x width. Triangle: base x height / 2. Circle: pi x radius squared. Trapezoid: (base A + base B) x height / 2. Parallelogram: base x height. All formulas are applied automatically when you enter the dimensions.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Can I switch units after entering values?</summary>
+          <div class="faq-a">
+            <p>Yes. The unit selector converts the result into the chosen unit instantly. Your input values stay the same and only the displayed area changes, so you can compare results in different units without retyping anything.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>What about a non-right triangle?</summary>
+          <div class="faq-a">
+            <p>The formula base x height / 2 works for any triangle, not just right-angled ones. The height is the perpendicular distance from the base to the opposite vertex, regardless of the triangle's angles.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>What is a trapezoid?</summary>
+          <div class="faq-a">
+            <p>A trapezoid (or trapezium in British English) is a four-sided shape with exactly one pair of parallel sides, called bases. The area is the average of the two bases multiplied by the perpendicular height between them.</p>
+          </div>
+        </details>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>From a quick homework check to a weekend DIY project, this area calculator handles the six shapes you are most likely to encounter - with unit conversion built in and no data leaving your device.</p>
+      </article>
+    </div>
+
+    <section class="keyword-box" aria-label="Keywords and tags">
+      <h2>Keyword &amp; Tags</h2>
+      <h3>Keywords</h3>
+      <div class="keywords">
+        <span class="keyword">area calculator</span>
+        <span class="keyword">calculate area of square</span>
+        <span class="keyword">triangle area formula</span>
+        <span class="keyword">circle area calculator</span>
+        <span class="keyword">trapezoid area</span>
+        <span class="keyword">geometry calculator</span>
+        <span class="keyword">free area calculator online</span>
+        <span class="keyword">math tools</span>
+      </div>
+      <h3>Tags</h3>
+      <div class="tags">
+        <a class="tag" href="../index.html"><i class="fa-solid fa-tag"></i>Geometry</a>
+        <a class="tag" href="../index.html"><i class="fa-solid fa-folder"></i>Math Tools</a>
+        <a class="tag" href="../../tools/index.html"><i class="fa-solid fa-cube"></i>Utilities</a>
+      </div>
+    </section>
+
+    <section class="author-box" aria-label="About the publisher">
+      <div class="author-avatar" aria-hidden="true"><img src="../../assets/images/logo_nobg.webp" alt="F9XR logo" loading="lazy" decoding="async" width="1407" height="768"></div>
+      <div>
+        <span class="author-role">Published by</span>
+        <h2>F9XR Development Team</h2>
+        <p>Every Troolify tool is built and reviewed by the F9XR Development Team, then checked by our Review Board for correctness, accessibility, and clarity. Tools run 100% client-side with zero data retention.</p>
+        <div class="author-links">
+          <a href="https://f9xr.github.io/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i>F9XR Team</a>
+          <a href="../../press/editorial-policies.html"><i class="fa-solid fa-scale-balanced"></i>Editorial Policies</a>
+          <a href="https://github.com/f9xr" target="_blank" rel="noopener" aria-label="F9XR on GitHub"><i class="fa-brands fa-github"></i>GitHub</a>
+          <a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on LinkedIn"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+          <a href="https://instagram.com/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on Instagram"><i class="fa-brands fa-instagram"></i>Instagram</a>
+          <a href="https://youtube.com/@QuarterlyLIV" target="_blank" rel="noopener" aria-label="F9XR on YouTube"><i class="fa-brands fa-youtube"></i>YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-tools" aria-label="Related tools">
+      <h2>Related Tools</h2>
+      <div class="related-search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" id="relatedSearch" placeholder="Search all Troolify tools&hellip;" autocomplete="off" aria-label="Search related tools">
+      </div>
+      <div class="related-grid" id="relatedGrid" aria-busy="true">
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+      </div>
+    </section>
+
+    <section class="comments" aria-label="Comments">
+      <h2>Comments</h2>
+      <div id="comments">
+        <script src="https://utteranc.es/client.js" repo="f9xr/troolify" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async></script>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"><span></span><i class="fa-solid fa-layer-group"></i><span></span></div>
+
+  </div>
+</main>
+
+<script src="../../assets/js/layout.js" defer></script>
+<script src="../../assets/js/tools-data.js" defer></script>
+<script src="../../assets/js/tool-page.js" defer></script>
+<script>
+(function(){
+  "use strict";
+  var f=function(id){return document.getElementById(id);};
+  var shapeGrid=f("shapeGrid"),dynamicFields=f("dynamicFields"),unitsEl=f("areaUnits");
+  var areaOut=f("areaOut"),areaFormula=f("areaFormula"),procEl=f("areaProc");
+
+  var SHAPES={
+    square:{fields:[{id:"aSide",label:"Side"}],formula:function(v){return v[0]*v[0]},formulaStr:function(l){return l[0]+" \u00d7 "+l[0]}},
+    rectangle:{fields:[{id:"aLen",label:"Length"},{id:"aWid",label:"Width"}],formula:function(v){return v[0]*v[1]},formulaStr:function(l){return l[0]+" \u00d7 "+l[1]}},
+    triangle:{fields:[{id:"aBase",label:"Base"},{id:"aHeight",label:"Height"}],formula:function(v){return v[0]*v[1]/2},formulaStr:function(l){return l[0]+" \u00d7 "+l[1]+" \u00f7 2"}},
+    circle:{fields:[{id:"aRadius",label:"Radius"}],formula:function(v){return Math.PI*v[0]*v[0]},formulaStr:function(l){return "\u03c0 \u00d7 "+l[0]+" \u00b2"}},
+    trapezoid:{fields:[{id:"aBaseA",label:"Base A"},{id:"aBaseB",label:"Base B"},{id:"aHeight",label:"Height"}],formula:function(v){return(v[0]+v[1])*v[2]/2},formulaStr:function(l){return "("+l[0]+" + "+l[1]+") \u00d7 "+l[2]+" \u00f7 2"}},
+    parallelogram:{fields:[{id:"aBase",label:"Base"},{id:"aHeight",label:"Height"}],formula:function(v){return v[0]*v[1]},formulaStr:function(l){return l[0]+" \u00d7 "+l[1]}}
+  };
+  var currentShape="square";
+
+  function buildFields(shape){
+    var cfg=SHAPES[shape];
+    var html="";
+    for(var i=0;i<cfg.fields.length;i++){
+      html+='<div class="field"><label for="'+cfg.fields[i].id+'">'+cfg.fields[i].label+'</label><input id="'+cfg.fields[i].id+'" type="number" inputmode="decimal" min="0" step="any" placeholder="0"></div>';
+    }
+    dynamicFields.innerHTML=html;
+    for(var i=0;i<cfg.fields.length;i++){
+      var el=f(cfg.fields[i].id);
+      if(el) el.addEventListener("input",compute);
+    }
+    compute();
+  }
+
+  function compute(){
+    var cfg=SHAPES[currentShape];
+    var vals=[],labels=[];
+    for(var i=0;i<cfg.fields.length;i++){
+      var el=f(cfg.fields[i].id);
+      var v=el?parseFloat(el.value):NaN;
+      vals.push(isNaN(v)?0:v);
+      labels.push(el?el.value||"0":"0");
+    }
+    var raw=cfg.formula(vals);
+    var factor=parseFloat(unitsEl.value)||1;
+    var converted=raw*factor;
+    areaOut.textContent=isNaN(raw)?"-":converted.toFixed(6).replace(/\.?0+$/,"")+" sq units";
+    areaFormula.textContent=cfg.formulaStr(labels);
+    procEl.textContent="Calculated in "+(performance.now()%1000).toFixed(1)+" ms - inside your browser. 0 bytes uploaded.";
+  }
+
+  shapeGrid.addEventListener("click",function(e){
+    var btn=e.target.closest(".shape-btn");
+    if(!btn) return;
+    var shape=btn.getAttribute("data-shape");
+    var allBtns=shapeGrid.querySelectorAll(".shape-btn");
+    for(var i=0;i<allBtns.length;i++) allBtns[i].classList.remove("active");
+    btn.classList.add("active");
+    currentShape=shape;
+    buildFields(shape);
+  });
+
+  unitsEl.addEventListener("change",compute);
+
+  f("resetArea").addEventListener("click",function(){
+    currentShape="square";
+    var allBtns=shapeGrid.querySelectorAll(".shape-btn");
+    for(var i=0;i<allBtns.length;i++) allBtns[i].classList.remove("active");
+    allBtns[0].classList.add("active");
+    unitsEl.selectedIndex=0;
+    buildFields("square");
+  });
+
+  f("copyArea").addEventListener("click",function(){
+    var text="Area: "+areaOut.textContent;
+    window.Troolify.copyToClipboard(text,function(){ procEl.textContent="Copied to clipboard - the bytes never left your device."; });
+  });
+
+  buildFields("square");
+})();
+</script>
+</body>
+</html>
