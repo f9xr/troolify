@@ -276,10 +276,19 @@
                             '</div>' +
                         '</div>';
 
-                // --- Google Translate widget ---------------------------------
-                html += '<div class="dash-rs-panel dash-rs-translate">' +
+                // --- Translate This Page widget ---------------------------------
+                // Self-hosted translator (translate-widget.js) - replaces the
+                // deprecated Google TranslateElement widget (shutdown 2026-10-01).
+                html += '<div class="dash-rs-panel dash-rs-translate" translate="no" aria-label="Translate this page">' +
                             '<div class="panel-title"><i class="fa-solid fa-language"></i>Translate This Page</div>' +
-                            '<div id="google_translate_element"></div>' +
+                            '<div class="ttl-hint">Choose a language to translate the page instantly.</div>' +
+                            '<div class="ttl-select-wrap">' +
+                                '<select id="ttlLang" class="ttl-select" aria-label="Choose language"></select>' +
+                            '</div>' +
+                            '<div class="ttl-actions">' +
+                                '<button type="button" class="ttl-btn ttl-btn-reset" id="ttlReset" hidden><i class="fa-solid fa-rotate-left"></i>Back to English</button>' +
+                            '</div>' +
+                            '<div class="ttl-status" id="ttlStatus" hidden></div>' +
                         '</div>';
 
                 // --- Category badge -----------------------------------------
@@ -354,17 +363,11 @@
 
             sidebar.innerHTML = html;
 
-            // --- Google Translate widget init ---
-            if (isToolPage && !(window.google && window.google.translate && window.google.translate.TranslateElement)) {
-                window.googleTranslateElementInit = function () {
-                    new window.google.translate.TranslateElement({
-                        pageLanguage: "en",
-                        layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE
-                    }, "google_translate_element");
-                };
-                var gtScript = document.createElement("script");
-                gtScript.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-                document.head.appendChild(gtScript);
+            // --- Translate widget init (tool pages only) --------------------
+            if (isToolPage) {
+                loadTranslateWidgetScript(function () {
+                    if (window.TroolifyTranslate) window.TroolifyTranslate.init();
+                });
             }
 
             var shareBtn = document.getElementById("rsShare");
@@ -406,6 +409,28 @@
         window.__RECENT_TOOLS_LOADED = true;
         var s = document.createElement("script");
         s.src = rootPrefix() + "assets/js/recent-tools.js";
+        document.head.appendChild(s);
+    }
+
+    function loadTranslateWidgetScript(cb) {
+        if (window.TroolifyTranslate) {
+            if (cb) cb();
+            return;
+        }
+        if (window.__TRANSLATE_WIDGET_LOADED) {
+            var t = window.setInterval(function () {
+                if (window.TroolifyTranslate) {
+                    window.clearInterval(t);
+                    if (cb) cb();
+                }
+            }, 50);
+            return;
+        }
+        window.__TRANSLATE_WIDGET_LOADED = true;
+        var s = document.createElement("script");
+        s.src = rootPrefix() + "assets/js/translate-widget.js";
+        s.async = true;
+        s.onload = s.onerror = function () { if (cb) cb(); };
         document.head.appendChild(s);
     }
 
