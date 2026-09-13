@@ -122,6 +122,32 @@ Key facts about Troolify:
 - [Random Decision Maker](https://f9xr.github.io/troolify/tools/misc/random-decision-maker.html): Get an instant random verdict for any dilemma, decided right in your browser.
 - [Random Choice Generator](https://f9xr.github.io/troolify/tools/misc/random-choice-generator.html): Enter any options and let this tool pick one at random - perfect for giveaways, quizzes and office bets.
 - [Mailto Link Generator](https://f9xr.github.io/troolify/tools/misc/mailto-link-generator.html): Build a ready-to-use mailto link with subject, body and carbon copy fields.
+- [Random Address Generator](https://f9xr.github.io/troolify/tools/testing/random-address-generator.html): Generate realistic fake addresses from 45+ countries with Playwright, Cypress, CSV, JSON and SQL export - 100% client-side.
+- [Credit Card Generator](https://f9xr.github.io/troolify/tools/testing/credit-card-generator.html): Generate Luhn-valid test card numbers for Visa, MasterCard, Amex, Discover and JCB with CSV, JSON and Playwright export.
+- [Routing Number Generator](https://f9xr.github.io/troolify/tools/testing/routing-number-generator.html): Generate ABA-valid US routing numbers in bulk - 9 digits, valid checksum, ready for payment form tests.
+- [IMEI Generator](https://f9xr.github.io/troolify/tools/testing/imei-generator.html): Generate Luhn-valid 15-digit IMEIs for QA, form validation, device registry seeding and fixtures.
+- [Fake Email Generator](https://f9xr.github.io/troolify/tools/testing/fake-email-generator.html): Generate synthetic emails across public (Gmail, Outlook, Yahoo) and dev-safe domains, bulk up to 100.
+- [Fake Detail Generator](https://f9xr.github.io/troolify/tools/testing/fake-detail-generator.html): Generate full synthetic person profiles - name, email, phone, address and DOB - with JSON, CSV, SQL and Playwright export.
+- [Random Unicode Generator](https://f9xr.github.io/troolify/tools/testing/random-unicode-generator.html): Generate bulk Unicode characters from curated ranges - Latin, Greek, Cyrillic, symbols and emoji.
+- [JWT Decoder](https://f9xr.github.io/troolify/tools/coding/jwt-decoder.html): Decode a JWT's header and payload with readable claim timestamps and expiry status - decode-only, nothing leaves the tab.
+- [Text Compare](https://f9xr.github.io/troolify/tools/coding/text-compare.html): Side-by-side diff with line, word and character granularity, exportable as unified diff or .patch.
+- [YAML Compare](https://f9xr.github.io/troolify/tools/coding/yaml-compare.html): Diff two YAML files with a normalize mode that sorts keys so only real changes show - Kubernetes and Helm friendly.
+- [XML Compare](https://f9xr.github.io/troolify/tools/coding/xml-compare.html): Diff two XML files with optional re-indentation for SOAP, RSS, sitemaps, Android layouts and POMs.
+- [CSV Compare](https://f9xr.github.io/troolify/tools/coding/csv-compare.html): Diff two CSV files with cell re-quoting so only real data changes show - ideal for ETL output and DB exports.
+- [JSON Escape](https://f9xr.github.io/troolify/tools/coding/json-escape.html): Escape any string for embedding in JSON - quotes, backslashes, newlines and control characters.
+- [JSON Unescape](https://f9xr.github.io/troolify/tools/coding/json-unescape.html): Decode JSON-escaped strings back to raw text, reversing quotes, newlines and Unicode escapes.
+- [Unstringify JSON](https://f9xr.github.io/troolify/tools/coding/unstringify-json.html): Decode a stringified JSON blob and pretty-print the inner document - webhooks, log lines and double-encoding.
+- [JSONPath Tester](https://f9xr.github.io/troolify/tools/coding/jsonpath-tester.html): Test JSONPath expressions against any JSON with live evaluation, filter syntax and preset queries.
+- [JSON to BSON](https://f9xr.github.io/troolify/tools/coding/json-to-bson.html): Serialize JSON to BSON - MongoDB's binary format - with hex, base64 and byte count outputs.
+- [POJO to JSON](https://f9xr.github.io/troolify/tools/coding/pojo-to-json.html): Turn a Java POJO class into a JSON template with typed defaults to seed API fixtures and Postman collections.
+- [YAML Viewer](https://f9xr.github.io/troolify/tools/coding/yaml-viewer.html): Parse, format and validate YAML with optional alphabetical key sorting and copy-as-JSON.
+- [CSV Validator](https://f9xr.github.io/troolify/tools/coding/csv-validator.html): Catch column drift, unterminated quoted cells and stray quotes - RFC 4180 compliant validation.
+- [PX to REM Converter](https://f9xr.github.io/troolify/tools/coding/px-to-rem-converter.html): Convert between PX, REM, EM, % and PT in real time with an adjustable base font size and code snippets.
+- [Hex to Binary Converter](https://f9xr.github.io/troolify/tools/coding/hex-to-binary-converter.html): Convert hexadecimal to binary and back instantly, with live decimal values in both directions.
+- [ASCII to Hex Converter](https://f9xr.github.io/troolify/tools/coding/ascii-to-hex-converter.html): Convert ASCII text to hex and back with character count and byte size.
+- [HTML Minifier](https://f9xr.github.io/troolify/tools/coding/html-minifier.html): Minify HTML with 10+ options - whitespace, comments, inline CSS/JS - and export to HTML, JS or JSX.
+- [Image Size Finder](https://f9xr.github.io/troolify/tools/coding/image-size-finder.html): Find pixel dimensions, aspect ratio and file size of any image - drop a file or paste a URL.
+- [Venmo Fee Calculator](https://f9xr.github.io/troolify/tools/finance/venmo-fee-calculator.html): Calculate exact Venmo fees for Goods & Services, credit card, instant transfer, Cash a Check, ATM and crypto.
 
 ## Categories
 - [AI Tools](https://f9xr.github.io/troolify/tools/ai/index.html): Prompt, text, image and code generation utilities.
@@ -141,6 +167,7 @@ Key facts about Troolify:
 - [Prompt Tools](https://f9xr.github.io/troolify/tools/prompts/index.html): Ready-made prompts for AI workflows.
 - [SEO & Marketing](https://f9xr.github.io/troolify/tools/seo/index.html): Search engine optimization and marketing tools.
 - [Statistics](https://f9xr.github.io/troolify/tools/statistics/index.html): Statistics, math and data analysis tools.
+- [Testing Tools](https://f9xr.github.io/troolify/tools/testing/index.html): QA test data generators and developer testing utilities.
 - [Text Tools](https://f9xr.github.io/troolify/tools/text/index.html): Format, convert, analyze and manipulate text.
 - [Time Tools](https://f9xr.github.io/troolify/tools/time/index.html): Time, date and scheduling tools.
 - [Video Tools](https://f9xr.github.io/troolify/tools/video/index.html): Video editing and conversion tools.

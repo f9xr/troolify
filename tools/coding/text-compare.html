@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text Compare | Side-by-Side Diff Tool with Unified Diff Export</title>
+<meta name="description" content="Compare two blocks of text side by side with line, word and character granularity - then export the result as a unified diff or .patch, all in your browser.">
+<meta name="author" content="F9XR Development Team">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#212529">
+<link rel="canonical" href="https://f9xr.github.io/troolify/tools/coding/text-compare.html">
+<meta property="og:site_name" content="Troolify">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Text Compare | Side-by-Side Diff Tool with Unified Diff Export">
+<meta property="og:description" content="Compare two blocks of text side by side with line, word and character granularity - then export the result as a unified diff or .patch, all in your browser.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://f9xr.github.io/troolify/tools/coding/text-compare.html">
+<meta property="og:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-09-14">
+<meta property="article:modified_time" content="2026-09-14">
+<meta property="article:section" content="Developer Tools">
+<meta property="article:tag" content="Text Compare">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Text Compare | Side-by-Side Diff Tool with Unified Diff Export">
+<meta name="twitter:description" content="Compare two blocks of text side by side with line, word and character granularity - then export the result as a unified diff or .patch, all in your browser.">
+<meta name="twitter:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://f9xr.github.io/troolify/index.html"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://f9xr.github.io/troolify/tools/index.html"},{"@type":"ListItem","position":3,"name":"Developer Tools","item":"https://f9xr.github.io/troolify/tools/coding/index.html"},{"@type":"ListItem","position":4,"name":"Text Compare","item":"https://f9xr.github.io/troolify/tools/coding/text-compare.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Text Compare","url":"https://f9xr.github.io/troolify/tools/coding/text-compare.html","applicationCategory":"DeveloperApplication","applicationSubCategory":"Diffing & Comparison","operatingSystem":"Any (web browser)","featureList":["Side-by-side text comparison","Line, word and character granularity","Color-coded added, removed and changed lines","Line numbers on both sides","Change statistics","Unified diff export and .patch download","100% client-side processing"],"description":"Compare two blocks of text side by side with line, word and character granularity - then export the result as a unified diff or .patch, all in your browser.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"datePublished":"2026-09-14","dateModified":"2026-09-14","author":{"@type":"Organization","name":"F9XR Development Team","url":"https://f9xr.github.io/"},"publisher":{"@type":"Organization","name":"Troolify","url":"https://f9xr.github.io/troolify/","logo":{"@type":"ImageObject","url":"https://f9xr.github.io/troolify/assets/images/logo_nobg.webp","width":1407,"height":768}}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Text Compare","description":"Compare two blocks of text side by side with line, word and character granularity - then export the result as a unified diff or .patch, all in your browser.","image":"https://f9xr.github.io/troolify/assets/images/og-image.jpg","datePublished":"2026-09-14","dateModified":"2026-09-14","mainEntityOfPage":"https://f9xr.github.io/troolify/tools/coding/text-compare.html","author":{"@type":"Organization","name":"F9XR Development Team","url":"https://f9xr.github.io/"},"publisher":{"@type":"Organization","name":"Troolify","url":"https://f9xr.github.io/troolify/","logo":{"@type":"ImageObject","url":"https://f9xr.github.io/troolify/assets/images/logo_nobg.webp","width":1407,"height":768}}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does comparison granularity work?","acceptedAnswer":{"@type":"Answer","text":"Line mode aligns and compares whole lines. Word mode still aligns lines but breaks changed lines into words so you see exactly which words differ. Character mode goes one step further and highlights single characters that changed. Higher granularity makes tiny edits easy to spot."}},{"@type":"Question","name":"What is a unified diff and how do I apply a .patch file?","acceptedAnswer":{"@type":"Answer","text":"A unified diff is the compact patch format used by git and patch tools, with a header per file followed by context and +/- lines. Download the .patch and apply it with git apply file.patch or patch -p1 < file.patch against the same original text saved as a file."}},{"@type":"Question","name":"Are the colors meaningful?","acceptedAnswer":{"@type":"Answer","text":"Green marks added text that exists only in the Modified block, red marks removed text that exists only in the Original block, and yellow marks the parts of a changed line that differ between the two."}},{"@type":"Question","name":"Is it safe to compare sensitive text?","acceptedAnswer":{"@type":"Answer","text":"Yes. The comparison runs entirely in your browser using JavaScript. Your text is never uploaded, stored, or sent to any server."}}]}
+</script>
+<link rel="icon" type="image/webp" href="../../assets/images/favicon.webp"><link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+<link rel="stylesheet" href="../../assets/css/tailwind.css">
+<link rel="stylesheet" href="../../assets/css/tool.css">
+<link rel="stylesheet" href="../../assets/css/site-shell.css">
+<link rel="stylesheet" href="../../assets/css/tool-page.css">
+<link rel="stylesheet" href="../../assets/css/seo-article.css">
+<style>
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:12.5px;font-weight:700;color:var(--muted)}
+.field textarea{min-height:200px;font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace;font-size:13px;line-height:1.55;tab-size:4;background:#1B2028;border:1px solid var(--border);color:var(--ink);border-radius:10px;padding:12px;outline:none;width:100%;box-sizing:border-box;resize:vertical}
+.field textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+.split-cols{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+@media(max-width:640px){.split-cols{grid-template-columns:1fr}}
+.opt-row{display:flex;flex-wrap:wrap;gap:16px;margin-top:14px;align-items:center}
+.rd{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:700;color:var(--muted);cursor:pointer;user-select:none}
+.rd input{accent-color:var(--accent)}
+.out-wrap{margin-top:16px;border:1px solid var(--border);border-radius:14px;padding:14px;background:#1B2028;display:none}
+.out-wrap.visible{display:block}
+.out-header{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+.out-header h3{font-size:14px;font-weight:700;color:var(--muted);margin:0}
+.out-actions{display:flex;gap:6px;flex-wrap:wrap}
+.diff-stats{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.diff-stats .st{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:800;padding:4px 11px;border-radius:999px;border:1px solid}
+.st.add{color:#A7F3D0;background:rgba(16,185,129,.1);border-color:rgba(52,211,153,.3)}
+.st.del{color:#FECACA;background:rgba(239,68,68,.1);border-color:rgba(248,113,113,.3)}
+.st.chg{color:#FDE68A;background:rgba(245,158,11,.1);border-color:rgba(250,204,21,.3)}
+.diff-grid{border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.drow{display:grid;grid-template-columns:1fr 1fr}
+.dcell{display:flex;align-items:stretch;font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace;font-size:12.5px;line-height:1.5}
+.dcell+.dcell{border-left:1px solid rgba(255,255,255,.07)}
+.drow+.drow .dcell{border-top:1px solid rgba(255,255,255,.04)}
+.lno{flex-shrink:0;width:38px;text-align:right;padding:6px 8px;color:var(--faint);background:rgba(255,255,255,.02);border-right:1px solid rgba(255,255,255,.05);font-size:11px;user-select:none}
+.dtext{padding:6px 10px;white-space:pre-wrap;word-break:break-word;flex:1;min-height:28px}
+.dcell.add .dtext{background:rgba(16,185,129,.1);color:#A7F3D0}
+.dcell.del .dtext{background:rgba(239,68,68,.1);color:#FECACA}
+.dcell.chg .dtext{background:rgba(245,158,11,.1);color:#FDE68A}
+.tChg{background:rgba(250,204,21,.22);color:#FEF08A;border-radius:3px;box-shadow:none}
+.placeholder{display:flex;align-items:center;justify-content:center;padding:28px;text-align:center;color:var(--faint);font-size:13.5px;min-height:80px}
+.out-cap{text-align:center;font-size:12px;font-weight:600;color:var(--faint);margin-top:12px}
+</style>
+</head>
+<body data-layout="tool">
+<noscript>
+    <nav aria-label="Primary" style="position:static;display:block;padding:1rem 1.5rem;background:#212529;border-bottom:1px solid #343A40;text-align:center;font-size:0.9rem;">
+        <a href="../../index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Home</a>
+        <a href="../../tools/index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Tools</a>
+        <a href="../../pages/about.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">About</a>
+        <a href="../../pages/contact.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Contact</a>
+    </nav>
+</noscript>
+<main class="tool-main">
+  <div class="container">
+    <div class="tool-head hero">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><ol>
+        <li><a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+        <li><a href="../../tools/index.html">Tools</a></li>
+        <li><a href="../index.html">Developer Tools</a></li>
+        <li class="current" aria-current="page">Text Compare</li>
+      </ol></nav>
+      <div class="hero-main">
+        <span class="tool-badge"><span class="dot"></span>100% client-side &middot; zero data retention</span>
+        <h1>Text Compare</h1>
+        <p>Compare two blocks of text side by side with line, word and character granularity - then export the result as a unified diff or .patch, all in your browser.</p>
+      </div>
+      <div class="hero-box hero-cat"><h3 class="hero-box-title"><i class="fa-solid fa-folder-open"></i>Category</h3>
+        <div class="tool-meta">
+          <span class="tool-tag"><i class="fa-solid fa-code-compare"></i>Diff</span>
+          <a class="tool-cat" href="../index.html" aria-label="Browse Developer Tools"><i class="fa-solid fa-folder"></i>Developer Tools</a>
+        </div>
+      </div>
+      <div class="hero-box hero-qa"><h3 class="hero-box-title"><i class="fa-solid fa-bolt"></i>Quick Actions</h3>
+        <div class="tool-actions">
+          <button class="rt-btn" type="button" id="btnShare"><i class="fa-solid fa-share-nodes"></i>Share</button>
+          <button class="rt-btn" type="button" id="btnEmbed"><i class="fa-solid fa-code"></i>Embed Tool</button>
+          <a class="rt-btn" href="../../pages/feedback.html"><i class="fa-solid fa-comment"></i>Feedback</a>
+        </div>
+      </div>
+      <div class="hero-box hero-details"><h3 class="hero-box-title"><i class="fa-solid fa-circle-info"></i>Tool Details</h3>
+        <div class="tool-details">
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.github.io/" target="_blank" rel="noopener">F9XR Development Team</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-check-double"></i>Reviewed by</span><a class="detail-value" href="../../press/editorial-policies.html">Review Board</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-clock-rotate-left"></i>Last updated</span><span class="detail-value">14 September 2026</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel clean">
+      <div class="panel-inner">
+        <div class="toolbar-row">
+          <span class="tool-label"><i class="fa-solid fa-code-compare"></i>Text Compare</span>
+          <div class="toolbar-actions">
+            <button class="chip-btn" type="button" id="tcSample" title="Load a demo comparison"><i class="fa-solid fa-wand-magic-sparkles"></i><span class="hide-sm">Sample</span></button>
+            <button class="chip-btn" type="button" id="clearBtn" title="Reset the form"><i class="fa-solid fa-eraser"></i><span class="hide-sm">Clear</span></button>
+          </div>
+        </div>
+        <div class="split-cols">
+          <div class="field"><label for="tcA">Original</label>
+            <textarea id="tcA" spellcheck="false" aria-label="Original text for comparison" placeholder="Paste the original text here&hellip;"></textarea>
+          </div>
+          <div class="field"><label for="tcB">Modified</label>
+            <textarea id="tcB" spellcheck="false" aria-label="Modified text for comparison" placeholder="Paste the modified text here&hellip;"></textarea>
+          </div>
+        </div>
+        <div class="opt-row" role="radiogroup" aria-label="Diff granularity">
+          <span style="font-size:12.5px;font-weight:700;color:var(--muted);margin-right:2px">Diff mode</span>
+          <label class="rd"><input type="radio" name="tcMode" value="line" checked>Line</label>
+          <label class="rd"><input type="radio" name="tcMode" value="word">Word</label>
+          <label class="rd"><input type="radio" name="tcMode" value="char">Character</label>
+        </div>
+        <div class="actions" style="margin-top:16px"><button class="btn btn-primary" type="button" id="tcCompare"><i class="fa-solid fa-code-compare"></i>Compare</button></div>
+        <p class="proc-line"><i class="fa-solid fa-bolt"></i><span id="tcProc">Paste both blocks of text, pick a granularity, then click Compare.</span></p>
+        <div class="out-wrap" id="tcOut" aria-live="polite">
+          <div class="out-header"><h3><i class="fa-solid fa-bars-staggered"></i>Diff result</h3>
+            <div class="out-actions">
+              <button class="chip-btn" type="button" id="tcCopyDiff"><i class="fa-solid fa-copy"></i>Copy unified diff</button>
+              <button class="chip-btn" type="button" id="tcDownload"><i class="fa-solid fa-download"></i>Download .patch</button>
+            </div>
+          </div>
+          <div class="diff-stats" id="tcStats"></div>
+          <div class="diff-grid" id="tcGrid"></div>
+          <p class="out-cap">Compared locally in this tab - nothing is sent anywhere</p>
+        </div>
+      </div>
+    </div>
+    <aside class="disclaimer" aria-label="Disclaimer"><i class="fa-solid fa-circle-info"></i><p>Disclaimer: Whilst every effort has been made in building our tool, we are not to be held liable for any damages or monetary losses arising out of or in connection with their use. <a href="../../press/disclaimer.html">Full disclaimer</a>.</p></aside>
+
+    <div class="article-layout"><article class="seo-article">
+      <h2>Compare Text Without Sending It Anywhere</h2>
+      <p>Diffing two blocks of text is one of the most common tasks in software work: checking what changed in a config, confirming a colleague's edit, or reviewing a copy change in a release note. Problems arise when you paste that text into a web diff service - your proprietary config or unreleased copy now lives on someone else's server.</p>
+      <p>The Troolify Text Compare tool runs a full line-by-line, word-by-word or character-by-character comparison entirely inside your browser. You see a color-coded side-by-side view, precise change statistics, and can even export the result as a unified diff or a ready-to-apply <code>.patch</code> file - with zero data leaving your tab.</p>
+      <h2>How to Use the Text Compare Tool</h2>
+      <ol>
+        <li><strong>Paste the two versions</strong> - Original on the left, Modified on the right.</li>
+        <li><strong>Pick a granularity</strong> - Line for whole-line edits, Word to see exactly which words changed, Character to spot single-character typos.</li>
+        <li><strong>Click Compare</strong> - the side-by-side view appears with line numbers and color coding.</li>
+        <li><strong>Read the stats</strong> - lines added, removed and changed are counted for you.</li>
+        <li><strong>Export if needed</strong> - copy the unified diff or download it as a <code>.patch</code> file for your git workflow.</li>
+      </ol>
+      <h2>Line, Word and Character Granularity</h2>
+      <p>The granularity you choose controls how precisely the tool shows a change. <strong>Line</strong> mode aligns the two texts by line and highlights any differing line in yellow, or shows completely added (green) and removed (red) lines. <strong>Word</strong> mode still aligns by line but splits changed lines into words so a single renamed variable stands out instantly. <strong>Character</strong> mode goes further and highlights individual characters, which is ideal for catching typos or subtle casing changes that word mode would merge.</p>
+      <h2>Exporting a Unified Diff or .patch</h2>
+      <p>When you need to hand the change to a machine, the tool builds a standard unified diff - the same format <code>git diff</code> produces - with an <code>@@</code> hunk header and <code>+</code>/<code>-</code> prefixed lines. Download the <code>.patch</code> file, keep the original text alongside it, and apply it with <code>git apply changes.patch</code> or <code>patch -p1 &lt; changes.patch</code>.</p>
+      <h2>Use Cases</h2>
+      <p>Developers diff configuration files before and after refactors, writers compare draft revisions line by line, DevOps engineers review generated manifests for unexpected changes, and QA teams verify that two exported reports differ only where expected. Because everything runs locally, it is safe to compare secrets, contracts and internal documents too.</p>
+      <h2 id="faq-title">Frequently Asked Questions</h2>
+      <details class="faq-item"><summary>How does comparison granularity work?</summary><div class="faq-a"><p>Line mode aligns and compares whole lines. Word mode still aligns lines but breaks changed lines into words so you see exactly which words differ. Character mode goes one step further and highlights single characters that changed. Higher granularity makes tiny edits easy to spot.</p></div></details>
+      <details class="faq-item"><summary>What is a unified diff and how do I apply a .patch file?</summary><div class="faq-a"><p>A unified diff is the compact patch format used by git and patch tools, with a header per file followed by context and +/- lines. Download the .patch and apply it with git apply file.patch or patch -p1 &lt; file.patch against the same original text saved as a file.</p></div></details>
+      <details class="faq-item"><summary>Are the colors meaningful?</summary><div class="faq-a"><p>Green marks added text that exists only in the Modified block, red marks removed text that exists only in the Original block, and yellow marks the parts of a changed line that differ between the two.</p></div></details>
+      <details class="faq-item"><summary>Is it safe to compare sensitive text?</summary><div class="faq-a"><p>Yes. The comparison runs entirely in your browser using JavaScript. Your text is never uploaded, stored, or sent to any server.</p></div></details>
+      <h2>Conclusion</h2>
+      <p>For quick visual diffs, precise granularity control, or producing a machine-readable patch, the Troolify Text Compare tool covers the whole workflow. Paste both versions, choose your granularity, and see exactly what changed - entirely in your browser.</p>
+    </article></div>
+
+    <section class="keyword-box" aria-label="Keywords"><h2>Keyword &amp; Tags</h2>
+      <h3>Keywords</h3>
+      <div class="keywords">
+        <span class="keyword">text compare</span><span class="keyword">diff tool</span><span class="keyword">compare text</span><span class="keyword">side by side diff</span><span class="keyword">unified diff</span><span class="keyword">diff checker</span><span class="keyword">text diff</span><span class="keyword">line diff</span><span class="keyword">word diff</span><span class="keyword">character diff</span><span class="keyword">patch file</span>
+      </div>
+      <h3>Tags</h3>
+      <div class="tags">
+        <a class="tag" href="../index.html"><i class="fa-solid fa-code-compare"></i>Diff</a>
+        <a class="tag" href="../index.html"><i class="fa-solid fa-folder"></i>Developer Tools</a>
+      </div>
+    </section>
+
+    <section class="author-box" aria-label="About the publisher">
+      <div class="author-avatar" aria-hidden="true"><img src="../../assets/images/logo_nobg.webp" alt="F9XR logo" loading="lazy" decoding="async" width="1407" height="768"></div>
+      <div>
+        <span class="author-role">Published by</span>
+        <h2>F9XR Development Team</h2>
+        <p>Every Troolify tool is built and reviewed by the F9XR Development Team, then checked by our Review Board for correctness, accessibility and clarity. Tools run 100% client-side with zero data retention.</p>
+        <div class="author-links">
+          <a href="https://f9xr.github.io/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i>F9XR Team</a>
+          <a href="../../press/editorial-policies.html"><i class="fa-solid fa-scale-balanced"></i>Editorial Policies</a>
+          <a href="https://github.com/f9xr" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i>GitHub</a>
+          <a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-tools" aria-label="Related tools">
+      <h2>Related Tools</h2>
+      <div class="related-search"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" id="relatedSearch" placeholder="Search all Troolify tools&hellip;" autocomplete="off" aria-label="Search related tools">
+      </div>
+      <div class="related-grid" id="relatedGrid" aria-busy="true">
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span></div>
+      </div>
+    </section>
+
+    <section class="comments" aria-label="Comments"><h2>Comments</h2>
+      <div id="comments"><script src="https://utteranc.es/client.js" repo="f9xr/troolify" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async></script></div>
+    </section>
+    <div class="section-divider" aria-hidden="true"><span></span><i class="fa-solid fa-layer-group"></i><span></span></div>
+  </div>
+</main>
+<script src="../../assets/js/layout.js" defer></script>
+<script src="../../assets/js/tools-data.js" defer></script>
+<script src="../../assets/js/tool-page.js" defer></script>
+<script>
+(function(){
+  "use strict";
+  var el={};
+  ["tcA","tcB","tcCompare","tcProc","tcSample","clearBtn","tcOut","tcStats","tcGrid","tcCopyDiff","tcDownload"].forEach(function(id){el[id]=document.getElementById(id);});
+  var lastDiff=null, lastMode="line";
+
+  function escapeHtml(s){
+    return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  }
+
+  function diffArrays(a,b){
+    var n=a.length,m=b.length;
+    if(n>3000||m>3000) throw new Error("Too many lines to compare - split the input into smaller chunks (limit 3000 lines per side).");
+    var dp=new Array(n+1),i,j;
+    for(i=0;i<=n;i++){ dp[i]=new Array(m+1); dp[i][m]=n-i; }
+    for(j=0;j<=m;j++) dp[n][j]=m-j;
+    for(i=n-1;i>=0;i--) for(j=m-1;j>=0;j--){
+      if(a[i]===b[j]) dp[i][j]=dp[i+1][j+1];
+      else {
+        var d=dp[i+1][j],di=dp[i][j+1],dd=dp[i+1][j+1];
+        dp[i][j]=1+Math.min(d,di,dd);
+      }
+    }
+    var ops=[];
+    i=0;j=0;
+    while(i<n&&j<m){
+      if(a[i]===b[j]){ ops.push({type:"eq",a:a[i],b:b[j]}); i++; j++; }
+      else {
+        var d=dp[i+1][j],di=dp[i][j+1],dd=dp[i+1][j+1];
+        var mn=Math.min(d,di,dd);
+        if(mn===dd){ ops.push({type:"ch",a:a[i],b:b[j]}); i++; j++; }
+        else if(mn===d){ ops.push({type:"del",a:a[i]}); i++; }
+        else { ops.push({type:"ins",b:b[j]}); j++; }
+      }
+    }
+    while(i<n){ ops.push({type:"del",a:a[i]}); i++; }
+    while(j<m){ ops.push({type:"ins",b:b[j]}); j++; }
+    return ops;
+  }
+
+  function tokenize(t, mode){
+    if(mode==="char") return t.split("");
+    return t.split(/(\s+)/).filter(function(x){return x!=="";});
+  }
+
+  function innerAligned(ta,tb){
+    var ops=diffArrays(ta,tb);
+    var left=[],right=[];
+    ops.forEach(function(op){
+      if(op.type==="eq"){ left.push({t:op.a,c:"same"}); right.push({t:op.b,c:"same"}); }
+      else if(op.type==="del"){ left.push({t:op.a,c:"chg"}); }
+      else if(op.type==="ins"){ right.push({t:op.b,c:"chg"}); }
+      else { left.push({t:op.a,c:"chg"}); right.push({t:op.b,c:"chg"}); }
+    });
+    return {left:left,right:right};
+  }
+
+  function renderCell(segs, side){
+    var html="";
+    segs.forEach(function(s){
+      html+='<span class="'+(s.c==="same"?"tSame":"tChg")+'">'+escapeHtml(s.t)+'</span>';
+    });
+    return html;
+  }
+
+  function esc(s){ return s===null?"":escapeHtml(s); }
+
+  function compare(){
+    var aText=el.tcA.value, bText=el.tcB.value;
+    lastMode=document.querySelector("input[name=tcMode]:checked").value;
+    if(!aText.trim()&&!bText.trim()){ el.tcOut.classList.remove("visible"); el.tcProc.textContent="Paste both blocks of text first."; return; }
+    var a=aText.split("\n"), b=bText.split("\n");
+    if(a[a.length-1]==="") a.pop();
+    if(b[b.length-1]==="") b.pop();
+    var ops;
+    var t0=performance.now();
+    try{ ops=diffArrays(a,b); }catch(err){
+      el.tcOut.classList.remove("visible");
+      el.tcProc.textContent=err.message;
+      return;
+    }
+    lastDiff=ops;
+    var leftNo=0,rightNo=0,html="",ins=0,del=0,chg=0;
+    wIns=0;wDel=0;cIns=0;cDel=0;
+    var wordMode=lastMode==="word", charMode=lastMode==="char";
+
+    ops.forEach(function(op){
+      var r="",l="";
+      if(op.type==="eq"){
+        leftNo++;rightNo++;
+        r+='<div class="drow"><div class="dcell"><span class="lno">'+leftNo+'</span><span class="dtext">'+esc(op.a)+'</span></div>';
+        r+='<div class="dcell"><span class="lno">'+rightNo+'</span><span class="dtext">'+esc(op.b)+'</span></div></div>';
+        html+=r;
+      } else if(op.type==="del"){
+        leftNo++;
+        del++;
+        wDel+=countWords(op.a); cDel+=op.a.length;
+        html+='<div class="drow"><div class="dcell del"><span class="lno">'+leftNo+'</span><span class="dtext">'+esc(op.a)+'</span></div>';
+        html+='<div class="dcell"><span class="lno"></span><span class="dtext"></span></div></div>';
+      } else if(op.type==="ins"){
+        rightNo++;
+        ins++;
+        wIns+=countWords(op.b); cIns+=op.b.length;
+        html+='<div class="drow"><div class="dcell"><span class="lno"></span><span class="dtext"></span></div>';
+        html+='<div class="dcell add"><span class="lno">'+rightNo+'</span><span class="dtext">'+esc(op.b)+'</span></div></div>';
+      } else {
+        leftNo++;rightNo++;
+        chg++;
+        var al=tokenize(op.a,lastMode), bl=tokenize(op.b,lastMode);
+        if(al.length>4000||bl.length>4000){ al=tokenize(op.a,"word"); bl=tokenize(op.b,"word"); }
+        var aln=innerAligned(al,bl);
+        var lChg=sumChg(aln.left), rChg=sumChg(aln.right);
+        wDel+=countWords(lChg); cDel+=lChg.length; wIns+=countWords(rChg); cIns+=rChg.length;
+        var lCell=renderCell(aln.left,"l"), rCell=renderCell(aln.right,"r");
+        html+='<div class="drow"><div class="dcell chg"><span class="lno">'+leftNo+'</span><span class="dtext">'+lCell+'</span></div>';
+        html+='<div class="dcell chg"><span class="lno">'+rightNo+'</span><span class="dtext">'+rCell+'</span></div></div>';
+      }
+    });
+    el.tcGrid.innerHTML=html||'<div class="placeholder">The two texts are identical.</div>';
+
+    var unit=wordMode?"words":(charMode?"characters":"lines");
+    el.tcStats.innerHTML=
+      '<span class="st add"><i class="fa-solid fa-plus"></i>'+ins+' added</span>'+
+      '<span class="st del"><i class="fa-solid fa-minus"></i>'+del+' removed</span>'+
+      '<span class="st chg"><i class="fa-solid fa-pen"></i>'+chg+' changed</span>'+
+      (unit!=="lines"?'<span class="st chg" style="color:#E2E8F0">'+wIns+' '+unit+' added &middot; '+wDel+' '+unit+' removed</span>':"");
+    el.tcOut.classList.add("visible");
+    var ms=(performance.now()-t0).toFixed(1);
+    el.tcProc.textContent="Compared "+a.length+" vs "+b.length+" lines in "+ms+" ms - "+(unit==="lines"?"line":"word/character")+" granularity, entirely in this tab.";
+  }
+
+  var wDel=0,wIns=0,cDel=0,cIns=0;
+  function countWords(s){ var m=s.match(/\S+/g); return m?m.length:0; }
+  function sumChg(segs){ var t=""; segs.forEach(function(s){ if(s.c==="chg") t+=s.t; }); return t; }
+
+  function buildUnifiedDiff(){
+    if(!lastDiff) return "";
+    var aColor=0,bCount=0;
+    lastDiff.forEach(function(op){ if(op.type!=="ins")aColor++; if(op.type!=="del")bCount++; });
+    var lines=["--- original.txt","+++ modified.txt"];
+    lines.push("@@ -1,"+aColor+" +1,"+bCount+" @@");
+    lastDiff.forEach(function(op){
+      if(op.type==="eq") lines.push(" "+op.a);
+      else if(op.type==="del") lines.push("-"+op.a);
+      else if(op.type==="ins") lines.push("+"+op.b);
+      else { lines.push("-"+op.a); lines.push("+"+op.b); }
+    });
+    return lines.join("\n")+"\n";
+  }
+
+  function copyText(txt,btn){
+    if(typeof window.Troolify!=="undefined"&&Troolify.copyToClipboard){
+      Troolify.copyToClipboard(txt,function(){
+        var old=btn.innerHTML;
+        btn.innerHTML='<i class="fa-solid fa-check"></i>Copied';
+        setTimeout(function(){btn.innerHTML=old;},1500);
+      });
+    } else if(navigator.clipboard){
+      navigator.clipboard.writeText(txt).then(function(){
+        var old=btn.innerHTML;
+        btn.innerHTML='<i class="fa-solid fa-check"></i>Copied';
+        setTimeout(function(){btn.innerHTML=old;},1500);
+      });
+    }
+  }
+
+  el.tcCompare.addEventListener("click",compare);
+  el.tcCopyDiff.addEventListener("click",function(){
+    var d=buildUnifiedDiff();
+    if(d) copyText(d,el.tcCopyDiff);
+  });
+  el.tcDownload.addEventListener("click",function(){
+    var d=buildUnifiedDiff();
+    if(!d) return;
+    var blob=new Blob([d],{type:"text/plain"});
+    var a=document.createElement("a");
+    a.href=URL.createObjectURL(blob);
+    a.download="text-compare.patch";
+    document.body.appendChild(a);a.click();a.remove();
+  });
+
+  el.tcSample.addEventListener("click",function(){
+    el.tcA.value="const greeting = \"Hello\"\nconst target = \"world\"\nservice.call(greeting, target)\nlogger.info(\"Done\")\n";
+    el.tcB.value="const greeting = \"Hello\"\nconst target = \"there\"\nconst excited = true\nservice.call(greeting, target)\nlogger.info(\"Done!\")\n";
+    document.querySelector("input[name=tcMode][value=word]").checked=true;
+    el.tcOut.classList.remove("visible");
+    el.tcProc.textContent="Sample loaded - click Compare to see the diff.";
+  });
+
+  el.clearBtn.addEventListener("click",function(){
+    el.tcA.value=""; el.tcB.value="";
+    document.querySelector("input[name=tcMode][value=line]").checked=true;
+    el.tcOut.classList.remove("visible");
+    el.tcGrid.innerHTML=""; el.tcStats.innerHTML="";
+    lastDiff=null;
+    el.tcProc.textContent="Cleared.";
+  });
+})();
+</script>
+</body>
+</html>

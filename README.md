@@ -19,6 +19,12 @@ Every tool runs entirely in your browser. Your text, files, and data never leave
 | [Word Counter](tools/text/word-counter.html) | Text | Live word, character, sentence and reading-time stats. |
 | [Numeronym Generator](tools/text/numeronym-generator.html) | Text | Turn any phrase into an i18n-style numeronym, or decode one. |
 | [JSON Formatter](tools/coding/json-formatter.html) | Coding | Format, validate, minify and copy JSON instantly. |
+| [JWT Decoder](tools/coding/jwt-decoder.html) | Coding | Decode a JWT's header and payload with readable claim timestamps and expiry status. |
+| [Text Compare](tools/coding/text-compare.html) | Coding | Side-by-side diff with line, word and character granularity, exportable as a .patch. |
+| [HTML Minifier](tools/coding/html-minifier.html) | Coding | Minify HTML with 10+ options and export to HTML, JS or JSX. |
+| [Random Address Generator](tools/testing/random-address-generator.html) | Testing | Realistic fake addresses from 45+ countries with Playwright/Cypress/CSV/JSON/SQL export. |
+| [Credit Card Generator](tools/testing/credit-card-generator.html) | Testing | Luhn-valid test card numbers for Visa, MasterCard, Amex, Discover and JCB. |
+| [Venmo Fee Calculator](tools/finance/venmo-fee-calculator.html) | Finance | Exact Venmo fees for Goods & Services, instant transfer, Cash a Check and more. |
 | [Code Beautifier](tools/coding/code-beautifier.html) | Coding | Turn source code into syntax-highlighted self-contained HTML. |
 | [Schema Markup Generator](tools/seo/schema-markup-generator.html) | SEO | Create JSON-LD schema for LocalBusiness, Product, Article, FAQPage, Event and Review. |
 | [YouTube Timestamp Link Generator](tools/youtube/timestamp-link-generator.html) | YouTube | Clickable timestamp links and video-description chapters. |

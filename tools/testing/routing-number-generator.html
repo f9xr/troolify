@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Routing Number Generator | ABA-Valid US Routing Numbers</title>
+<meta name="description" content="Generate ABA-valid US routing numbers in bulk - 9 digits with a valid checksum, ready for payment form tests, all computed locally in your browser.">
+<meta name="author" content="F9XR Development Team">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#212529">
+<link rel="canonical" href="https://f9xr.github.io/troolify/tools/testing/routing-number-generator.html">
+<meta property="og:site_name" content="Troolify">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Routing Number Generator | ABA-Valid US Routing Numbers">
+<meta property="og:description" content="Generate ABA-valid US routing numbers in bulk - 9 digits with a valid checksum, ready for payment form tests.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://f9xr.github.io/troolify/tools/testing/routing-number-generator.html">
+<meta property="og:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-09-14">
+<meta property="article:modified_time" content="2026-09-14">
+<meta property="article:section" content="Testing Tools">
+<meta property="article:tag" content="Routing Number Generator">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Routing Number Generator | ABA-Valid US Routing Numbers">
+<meta name="twitter:description" content="Generate ABA-valid US routing numbers in bulk - 9 digits with a valid checksum, ready for payment form tests.">
+<meta name="twitter:image" content="https://f9xr.github.io/troolify/assets/images/og-image.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://f9xr.github.io/troolify/index.html"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://f9xr.github.io/troolify/tools/index.html"},{"@type":"ListItem","position":3,"name":"Testing Tools","item":"https://f9xr.github.io/troolify/tools/testing/index.html"},{"@type":"ListItem","position":4,"name":"Routing Number Generator","item":"https://f9xr.github.io/troolify/tools/testing/routing-number-generator.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Routing Number Generator","url":"https://f9xr.github.io/troolify/tools/testing/routing-number-generator.html","applicationCategory":"DeveloperApplication","applicationSubCategory":"Test Data Generator","operatingSystem":"Any (web browser)","featureList":["Generate ABA-valid US routing numbers","Valid 9th digit checksum","Bulk generation up to 100","CSV and JSON export","Exclude known invalid ranges option","100% client-side processing"],"description":"Generate ABA-valid US routing numbers in bulk with valid checksums for payment form tests.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"datePublished":"2026-09-14","dateModified":"2026-09-14","author":{"@type":"Organization","name":"F9XR Development Team","url":"https://f9xr.github.io/"},"publisher":{"@type":"Organization","name":"Troolify","url":"https://f9xr.github.io/troolify/","logo":{"@type":"ImageObject","url":"https://f9xr.github.io/troolify/assets/images/logo_nobg.webp","width":1407,"height":768}}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Routing Number Generator","description":"Generate ABA-valid US routing numbers in bulk with valid checksums for payment form tests.","image":"https://f9xr.github.io/troolify/assets/images/og-image.jpg","datePublished":"2026-09-14","dateModified":"2026-09-14","mainEntityOfPage":"https://f9xr.github.io/troolify/tools/testing/routing-number-generator.html","author":{"@type":"Organization","name":"F9XR Development Team","url":"https://f9xr.github.io/"},"publisher":{"@type":"Organization","name":"Troolify","url":"https://f9xr.github.io/troolify/","logo":{"@type":"ImageObject","url":"https://f9xr.github.io/troolify/assets/images/logo_nobg.webp","width":1407,"height":768}}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is an ABA routing number?","acceptedAnswer":{"@type":"Answer","text":"An ABA routing transit number is a 9-digit code used in the United States to identify a financial institution. The first 8 digits identify the bank and the 9th digit is a checksum calculated using a specific algorithm (multiply groups of 3 by 3, 7, and 1)."}},{"@type":"Question","name":"Are the generated routing numbers valid?","acceptedAnswer":{"@type":"Answer","text":"All generated routing numbers have a valid 9th-digit checksum computed using the ABA algorithm. They will pass checksum validation but are not assigned to real banks unless by coincidence."}},{"@type":"Question","name":"What does 'exclude known invalid ranges' do?","acceptedAnswer":{"@type":"Answer","text":"Some routing number ranges are reserved or known to be invalid (e.g., 000000000, 999999999, and certain federal reserve ranges). Enabling this option avoids generating numbers in those reserved ranges."}},{"@type":"Question","name":"Is any data sent to a server?","acceptedAnswer":{"@type":"Answer","text":"No. All routing number generation happens entirely in your browser using JavaScript. Nothing is uploaded or stored on any server."}}]}
+</script>
+<link rel="icon" type="image/webp" href="../../assets/images/favicon.webp"><link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+<link rel="stylesheet" href="../../assets/css/tailwind.css">
+<link rel="stylesheet" href="../../assets/css/tool.css">
+<link rel="stylesheet" href="../../assets/css/site-shell.css">
+<link rel="stylesheet" href="../../assets/css/tool-page.css">
+<link rel="stylesheet" href="../../assets/css/seo-article.css">
+<style>
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:12.5px;font-weight:700;color:var(--muted)}
+.field input,.field select{background:#1B2028;border:1px solid var(--border);color:var(--ink);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:15px;font-weight:600;outline:none;width:100%;box-sizing:border-box}
+.field input:focus,.field select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+.result-card{background:linear-gradient(180deg,rgba(59,130,246,.12),rgba(59,130,246,.03));border:1px solid rgba(96,165,250,.25);border-radius:14px;padding:18px;margin-top:18px}
+.result-row{display:flex;justify-content:space-between;gap:10px;padding:8px 2px;font-size:14px}
+.result-row+.result-row{border-top:1px dashed rgba(255,255,255,.08)}
+.result-row b{color:#93C5FD;font-weight:800;text-align:right}
+.result-row.hero-row b{color:#6EE7B7}
+.out-wrap{margin-top:18px;border:1px solid var(--border);border-radius:14px;padding:14px;background:#1B2028}
+.out-wrap.hidden{display:none}
+.out-header{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+.out-header h3{font-size:14px;font-weight:700;color:var(--muted);margin:0}
+.out-actions{display:flex;gap:6px;flex-wrap:wrap}
+.out-cap{text-align:center;font-size:12px;font-weight:600;color:var(--faint);margin-top:10px}
+.addr-table{width:100%;border-collapse:collapse;font-size:13px}
+.addr-table th{text-align:left;padding:8px 10px;border-bottom:2px solid var(--border);color:var(--muted);font-size:12px;font-weight:700;white-space:nowrap}
+.addr-table td{padding:7px 10px;border-bottom:1px solid rgba(255,255,255,.05);color:var(--ink);font-size:13px}
+.addr-table tr:hover td{background:rgba(59,130,246,.06)}
+.opt-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.opt-chk{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:600;color:var(--muted);cursor:pointer;user-select:none}
+.opt-chk input{display:none}
+.opt-ui{width:38px;height:21px;border-radius:999px;background:var(--border);position:relative;transition:background .2s ease;flex-shrink:0}
+.opt-ui::after{content:"";position:absolute;top:2.5px;left:3px;width:16px;height:16px;border-radius:50%;background:#fff;transition:transform .22s cubic-bezier(.16,1,.3,1);box-shadow:0 1px 3px rgba(0,0,0,.35)}
+.opt-chk input:checked+.opt-ui{background:var(--accent)}
+.opt-chk input:checked+.opt-ui::after{transform:translateX(16px)}
+.placeholder{display:flex;align-items:center;justify-content:center;padding:28px;text-align:center;color:var(--faint);font-size:13.5px;min-height:80px}
+</style>
+</head>
+<body data-layout="tool">
+<noscript>
+    <nav aria-label="Primary" style="position:static;display:block;padding:1rem 1.5rem;background:#212529;border-bottom:1px solid #343A40;text-align:center;font-size:0.9rem;">
+        <a href="../../index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Home</a>
+        <a href="../../tools/index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Tools</a>
+        <a href="../../pages/about.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">About</a>
+        <a href="../../pages/contact.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Contact</a>
+    </nav>
+</noscript>
+<main class="tool-main">
+  <div class="container">
+    <div class="tool-head hero">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><ol>
+        <li><a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+        <li><a href="../../tools/index.html">Tools</a></li>
+        <li><a href="../index.html">Testing Tools</a></li>
+        <li class="current" aria-current="page">Routing Number Generator</li>
+      </ol></nav>
+      <div class="hero-main">
+        <span class="tool-badge"><span class="dot"></span>100% client-side &middot; zero data retention</span>
+        <h1>Routing Number Generator</h1>
+        <p>Generate ABA-valid US routing numbers in bulk - 9 digits with a valid checksum, ready for payment form tests, all computed locally in your browser.</p>
+      </div>
+      <div class="hero-box hero-cat"><h3 class="hero-box-title"><i class="fa-solid fa-folder-open"></i>Category</h3>
+        <div class="tool-meta">
+          <span class="tool-tag"><i class="fa-solid fa-vial"></i>Test Data</span>
+          <a class="tool-cat" href="../index.html" aria-label="Browse Testing Tools"><i class="fa-solid fa-folder"></i>Testing Tools</a>
+        </div>
+      </div>
+      <div class="hero-box hero-qa"><h3 class="hero-box-title"><i class="fa-solid fa-bolt"></i>Quick Actions</h3>
+        <div class="tool-actions">
+          <button class="rt-btn" type="button" id="btnShare"><i class="fa-solid fa-share-nodes"></i>Share</button>
+          <button class="rt-btn" type="button" id="btnEmbed"><i class="fa-solid fa-code"></i>Embed Tool</button>
+          <a class="rt-btn" href="../../pages/feedback.html"><i class="fa-solid fa-comment"></i>Feedback</a>
+        </div>
+      </div>
+      <div class="hero-box hero-details"><h3 class="hero-box-title"><i class="fa-solid fa-circle-info"></i>Tool Details</h3>
+        <div class="tool-details">
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.github.io/" target="_blank" rel="noopener">F9XR Development Team</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-check-double"></i>Reviewed by</span><a class="detail-value" href="../../press/editorial-policies.html">Review Board</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-clock-rotate-left"></i>Last updated</span><span class="detail-value">14 September 2026</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel clean">
+      <div class="panel-inner">
+        <div class="toolbar-row">
+          <span class="tool-label"><i class="fa-solid fa-building-columns"></i>Routing Number Generator</span>
+          <div class="toolbar-actions"><button class="chip-btn" type="button" id="clearBtn" title="Reset the form"><i class="fa-solid fa-eraser"></i><span class="hide-sm">Clear</span></button></div>
+        </div>
+        <div class="field"><label for="rngCount">Number of routing numbers</label>
+          <input id="rngCount" type="number" min="1" max="100" step="1" value="10">
+        </div>
+        <div class="opt-row">
+          <label class="opt-chk" for="rngExclude"><input type="checkbox" id="rngExclude"><span class="opt-ui" aria-hidden="true"></span>Exclude known invalid ranges</label>
+        </div>
+        <div class="actions" style="margin-top:16px"><button class="btn btn-primary" type="button" id="rngGenerate"><i class="fa-solid fa-building-columns"></i>Generate routing numbers</button></div>
+        <p class="proc-line"><i class="fa-solid fa-bolt"></i><span id="rngProc">Set count and click Generate.</span></p>
+        <div class="result-card" id="rngResults" aria-live="polite"></div>
+        <div class="out-wrap hidden" id="rngOutWrap" aria-live="polite">
+          <div class="out-header"><h3 id="rngOutTitle">Generated Routing Numbers</h3>
+            <div class="out-actions">
+              <select id="rngFormat" style="background:#1B2028;border:1px solid var(--border);color:var(--ink);border-radius:8px;padding:5px 10px;font-size:12px;font-weight:700">
+                <option value="table">Table</option>
+                <option value="csv">CSV</option>
+                <option value="json">JSON</option>
+              </select>
+              <button class="chip-btn" type="button" id="rngCopy"><i class="fa-solid fa-copy"></i>Copy</button>
+              <button class="chip-btn" type="button" id="rngDl"><i class="fa-solid fa-download"></i>Download</button>
+            </div>
+          </div>
+          <div id="rngOutput"></div>
+          <p class="out-cap">All routing numbers generated locally in your browser</p>
+        </div>
+      </div>
+    </div>
+    <aside class="disclaimer" aria-label="Disclaimer"><i class="fa-solid fa-circle-info"></i><p>Disclaimer: Whilst every effort has been made in building our tool, we are not to be held liable for any damages or monetary losses arising out of or in connection with their use. <a href="../../press/disclaimer.html">Full disclaimer</a>.</p></aside>
+
+    <div class="article-layout"><article class="seo-article">
+      <h2>Routing Number Generator: ABA-Valid Test Routing Numbers</h2>
+      <p>Financial software developers and QA engineers need valid US routing numbers to test ACH payments, direct deposits and wire transfer forms. The Troolify Routing Number Generator creates 9-digit ABA routing numbers with a correct checksum, all computed locally in your browser.</p>
+      <h2>What the Routing Number Generator Does</h2>
+      <p>The tool generates the first 8 digits randomly and computes the 9th digit using the official ABA checksum algorithm (multiply groups of 3 digits by 3, 7, and 1 respectively, sum the products, and the check digit makes the total divisible by 10). Optionally it excludes known invalid ranges such as 000000000 and federal reserve prefixes.</p>
+      <h2>How to Use the Routing Number Generator</h2>
+      <ol>
+        <li><strong>Set the count</strong> - enter how many routing numbers to generate (1-100).</li>
+        <li><strong>Toggle invalid range exclusion</strong> - optionally skip reserved ranges.</li>
+        <li><strong>Generate</strong> - click the Generate button.</li>
+        <li><strong>Choose export format</strong> - Table, CSV or JSON.</li>
+        <li><strong>Copy or download</strong> - grab the output instantly.</li>
+      </ol>
+      <h2>Use Cases</h2>
+      <p>Banking app developers validate ACH routing number fields. QA teams test payment form validation. FinTech startups test direct deposit onboarding flows. Payment processors validate routing number checksums in sandbox environments.</p>
+      <h2 id="faq-title">Frequently Asked Questions</h2>
+      <details class="faq-item"><summary>What is an ABA routing number?</summary><div class="faq-a"><p>An ABA routing transit number is a 9-digit code used in the United States to identify a financial institution. The first 8 digits identify the bank and the 9th digit is a checksum calculated using a specific algorithm (multiply groups of 3 by 3, 7, and 1).</p></div></details>
+      <details class="faq-item"><summary>Are the generated routing numbers valid?</summary><div class="faq-a"><p>All generated routing numbers have a valid 9th-digit checksum computed using the ABA algorithm. They will pass checksum validation but are not assigned to real banks unless by coincidence.</p></div></details>
+      <details class="faq-item"><summary>What does 'exclude known invalid ranges' do?</summary><div class="faq-a"><p>Some routing number ranges are reserved or known to be invalid (e.g., 000000000, 999999999, and certain federal reserve ranges). Enabling this option avoids generating numbers in those reserved ranges.</p></div></details>
+      <details class="faq-item"><summary>Is my data safe?</summary><div class="faq-a"><p>100% safe. All routing number generation happens entirely in your browser using JavaScript. Nothing is uploaded or stored on any server.</p></div></details>
+      <h2>Conclusion</h2>
+      <p>Whether you are testing ACH payment forms, validating direct deposit fields or running automated QA on financial applications, the Troolify Routing Number Generator gives you ABA-valid routing numbers in seconds, entirely in your browser.</p>
+    </article></div>
+
+    <section class="keyword-box" aria-label="Keywords"><h2>Keyword &amp; Tags</h2>
+      <h3>Keywords</h3>
+      <div class="keywords">
+        <span class="keyword">routing number generator</span><span class="keyword">aba routing number</span><span class="keyword">aba number</span><span class="keyword">routing number test</span><span class="keyword">bank routing</span><span class="keyword">9 digit checksum</span><span class="keyword">payment form test</span><span class="keyword">ach test</span><span class="keyword">bank account test</span><span class="keyword">financial testing</span>
+      </div>
+      <h3>Tags</h3>
+      <div class="tags">
+        <a class="tag" href="../index.html"><i class="fa-solid fa-vial"></i>Test Data</a>
+        <a class="tag" href="../index.html"><i class="fa-solid fa-folder"></i>Testing Tools</a>
+      </div>
+    </section>
+
+    <section class="author-box" aria-label="About the publisher">
+      <div class="author-avatar" aria-hidden="true"><img src="../../assets/images/logo_nobg.webp" alt="F9XR logo" loading="lazy" decoding="async" width="1407" height="768"></div>
+      <div>
+        <span class="author-role">Published by</span>
+        <h2>F9XR Development Team</h2>
+        <p>Every Troolify tool is built and reviewed by the F9XR Development Team, then checked by our Review Board for correctness, accessibility and clarity. Tools run 100% client-side with zero data retention.</p>
+        <div class="author-links">
+          <a href="https://f9xr.github.io/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i>F9XR Team</a>
+          <a href="../../press/editorial-policies.html"><i class="fa-solid fa-scale-balanced"></i>Editorial Policies</a>
+          <a href="https://github.com/f9xr" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i>GitHub</a>
+          <a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-tools" aria-label="Related tools">
+      <h2>Related Tools</h2>
+      <div class="related-search"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" id="relatedSearch" placeholder="Search all Troolify tools&hellip;" autocomplete="off" aria-label="Search related tools">
+      </div>
+      <div class="related-grid" id="relatedGrid" aria-busy="true">
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span></div>
+      </div>
+    </section>
+
+    <section class="comments" aria-label="Comments"><h2>Comments</h2>
+      <div id="comments"><script src="https://utteranc.es/client.js" repo="f9xr/troolify" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async></script></div>
+    </section>
+    <div class="section-divider" aria-hidden="true"><span></span><i class="fa-solid fa-layer-group"></i><span></span></div>
+  </div>
+</main>
+<script src="../../assets/js/layout.js" defer></script>
+<script src="../../assets/js/tools-data.js" defer></script>
+<script src="../../assets/js/tool-page.js" defer></script>
+<script>
+(function(){
+  "use strict";
+  var BANK_NAMES=["Chase Bank","Bank of America","Wells Fargo","Citibank","U.S. Bank","PNC Bank","Truist Bank","Capital One","TD Bank","BB&T","Regions Bank","Fifth Third Bank","KeyBank","Huntington Bank","M&amp;T Bank","Citizens Bank","Santander Bank","BMO Harris","Wintrust Bank","Cross River Bank"];
+  var INVALID_PREFIXES=["000","001","002","003","004","005","006","007","008","009","010","011"];
+  var el={};
+  ["rngCount","rngExclude","rngGenerate","rngProc","rngResults","rngOutWrap","rngOutTitle","rngOutput","rngFormat","rngCopy","rngDl","clearBtn"].forEach(function(id){el[id]=document.getElementById(id);});
+  var lastItems=[];
+
+  function pick(arr){return arr[Math.floor(Math.random()*arr.length)];}
+
+  function abaChecksum(digits){
+    var d=digits.split("").map(Number);
+    var sum=d[0]*3+d[1]*7+d[2]*1+d[3]*3+d[4]*7+d[5]*1+d[6]*3+d[7]*7;
+    return String((10-(sum%10))%10);
+  }
+
+  function generateRouting(excludeInvalid){
+    var attempts=0;
+    while(attempts<100){
+      attempts++;
+      var digits="";
+      for(var i=0;i<8;i++)digits+=Math.floor(Math.random()*10);
+      if(excludeInvalid){
+        var bad=false;
+        for(var p=0;p<INVALID_PREFIXES.length;p++){
+          if(digits.indexOf(INVALID_PREFIXES[p])===0){bad=true;break;}
+        }
+        if(bad)continue;
+        var first=parseInt(digits.substring(0,3),10);
+        if(first>=0 && first<=12)continue;
+        if(parseInt(digits.substring(0,4),10)===9999)continue;
+      }
+      var check=abaChecksum(digits);
+      return digits+check;
+    }
+    var fallback="";
+    for(var i=0;i<8;i++)fallback+=Math.floor(Math.random()*10);
+    return fallback+abaChecksum(fallback);
+  }
+
+  function validateRouting(rn){
+    var d=rn.split("").map(Number);
+    var sum=d[0]*3+d[1]*7+d[2]*1+d[3]*3+d[4]*7+d[5]*1+d[6]*3+d[7]*7+d[8]*1;
+    return sum%10===0;
+  }
+
+  function render(){
+    var count=Math.max(1,Math.min(100,parseInt(el.rngCount.value)||10));
+    var excludeInvalid=el.rngExclude.checked;
+    lastItems=[];
+    for(var i=0;i<count;i++){
+      var rn=generateRouting(excludeInvalid);
+      lastItems.push({routing_number:rn,bank:pick(BANK_NAMES),valid:validateRouting(rn)});
+    }
+    el.rngResults.innerHTML=
+      '<div class="result-row hero-row"><span>Routing numbers generated</span><b>'+lastItems.length+'</b></div>'+
+      '<div class="result-row"><span>Format</span><b>9 digits (ABA checksum)</b></div>'+
+      '<div class="result-row"><span>All valid</span><b>'+lastItems.filter(function(x){return x.valid;}).length+'/'+lastItems.length+'</b></div>';
+    el.rngProc.textContent="Generated "+lastItems.length+" ABA-valid routing numbers - entirely in this tab.";
+    el.rngOutTitle.textContent="Generated Routing Numbers ("+lastItems.length+")";
+    renderFormat();
+    el.rngOutWrap.classList.remove("hidden");
+  }
+
+  function renderFormat(){
+    var fmt=el.rngFormat.value;
+    var out=el.rngOutput;
+    if(fmt==="table"){
+      var h='<table class="addr-table"><thead><tr><th>#</th><th>Routing Number</th><th>Bank Name</th><th>Valid</th></tr></thead><tbody>';
+      lastItems.forEach(function(item,i){
+        h+='<tr><td>'+(i+1)+'</td><td>'+item.routing_number+'</td><td>'+item.bank+'</td><td>'+(item.valid?'<span style="color:#6EE7B7">&#10003;</span>':'<span style="color:#FCA5A5">&#10007;</span>')+'</td></tr>';
+      });
+      h+='</tbody></table>';
+      out.innerHTML=h;
+    } else if(fmt==="csv"){
+      var lines=["Routing Number,Bank Name,Valid"];
+      lastItems.forEach(function(item){
+        lines.push(item.routing_number+',"'+item.bank+'",'+item.valid);
+      });
+      out.innerHTML='<pre style="white-space:pre-wrap;font-size:12px;color:var(--ink);margin:0">'+lines.join("\n")+'</pre>';
+    } else if(fmt==="json"){
+      out.innerHTML='<pre style="white-space:pre-wrap;font-size:12px;color:var(--ink);margin:0">'+JSON.stringify(lastItems,null,2)+'</pre>';
+    }
+    el.rngProc.textContent="Showing "+lastItems.length+" routing numbers in "+fmt+" format.";
+  }
+
+  el.rngGenerate.addEventListener("click",render);
+  el.rngFormat.addEventListener("change",function(){if(lastItems.length)renderFormat();});
+  el.rngCopy.addEventListener("click",function(){
+    if(!lastItems.length)return;
+    navigator.clipboard.writeText(JSON.stringify(lastItems,null,2));
+    el.rngCopy.innerHTML='<i class="fa-solid fa-check"></i>Copied!';
+    setTimeout(function(){el.rngCopy.innerHTML='<i class="fa-solid fa-copy"></i>Copy';},1500);
+  });
+  el.rngDl.addEventListener("click",function(){
+    if(!lastItems.length)return;
+    var blob=new Blob([JSON.stringify(lastItems,null,2)],{type:"application/json"});
+    var a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="routing-numbers.json";
+    document.body.appendChild(a);a.click();a.remove();
+  });
+  el.clearBtn.addEventListener("click",function(){
+    el.rngCount.value="10";el.rngExclude.checked=false;
+    lastItems=[];el.rngResults.innerHTML="";el.rngOutWrap.classList.add("hidden");
+    el.rngOutput.innerHTML="";el.rngProc.textContent="Cleared.";
+  });
+})();
+</script>
+</body>
+</html>

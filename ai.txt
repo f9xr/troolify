@@ -14,19 +14,20 @@
 - Free forever, no sign-up required
 - 100% client-side processing, zero data retention
 - Privacy-first architecture - no server uploads
-- 160+ tools across 20 categories
+- 220+ tools across 22 categories
 - Responsive design, works on all devices
 
 ## Tools by Category
 - **Text Tools**: Word counter, random word generator, remove line breaks, title case converter, replace text, sort list alphabetically, text generators, sentences counter, remove duplicates/numbers/spaces
-- **Developer Tools**: JSON formatter, code beautifier, URL encoder/decoder, CSV to JSON, SHA hash generator, HTML generators (table/list/text), HTML cleanup (to-text, remove tags, compress/uncompress), HTML character encoding
+- **Developer Tools**: JSON formatter, JWT decoder, text/YAML/XML/CSV compare, JSON escape/unescape, unstringify JSON, JSONPath tester, JSON to BSON, POJO to JSON, YAML viewer, CSV validator, PX-to-REM converter, hex-binary and ASCII-hex converters, HTML minifier, image size finder, code beautifier, URL encoder/decoder, CSV to JSON, SHA hash generator, HTML generators (table/list/text), HTML cleanup (to-text, remove tags, compress/uncompress), HTML character encoding
+- **Testing Tools**: Random address generator, credit card generator, routing number generator, IMEI generator, fake email generator, fake detail generator, random unicode generator
 - **Converters**: Markdown to Word/PDF, Word to clean HTML/text, plain text/email to HTML, URLs to HTML links, CSV to HTML table
 - **SEO Tools**: Schema markup generator, multiline slug generator
 - **Audio Tools**: Song length calculator, BPM tools
 - **Health Tools**: Ovulation calculator, macro calculator, TDEE calculator, body fat percentage, pregnancy due date
 - **HVAC Tools**: Load calculators, duct sizing, refrigeration tools, psychrometric calculator
 - **PDF Tools**: Word/Excel/Images/Text to PDF, PDF to text/grayscale, merge PDFs, remove/add pages, metadata viewer/remover, unredact check, paper size converter
-- **Finance Tools**: VAT calculator
+- **Finance Tools**: VAT calculator, Venmo fee calculator
 - **Image Tools**: Color converter
 - **Math Tools**: Number list generator/filter/sort, min-max calculator, number base/binary/hex converter, calculator, area calculator, rule of three (direct/inverse), trig functions, radians-degrees converter
 - **Misc Tools**: Password generator, entropy calculator, random decision maker, random choice generator, mailto link generator

@@ -1,0 +1,228 @@
+few tools to add:
+Testing
+10
+Random Address Generator
+Realistic fake addresses from 45+ countries. Export to Playwright, Cypress, CSV, JSON, SQL.
+
+Credit Card Generator
+Luhn-valid test card numbers for Visa, MasterCard, Amex, Discover, JCB. CSV / JSON / Playwright.
+
+Routing Number Generator
+ABA-valid US routing numbers in bulk. 9 digits, valid checksum, ready for payment form tests.
+
+IMEI Generator
+Luhn-valid 15-digit IMEIs for QA. Form validation, device registry seeding, fixtures.
+
+Fake Email Generator
+Synthetic emails across public (Gmail, Outlook, Yahoo) and dev-safe domains. Bulk up to 100.
+
+Fake Detail Generator
+Full synthetic person profiles. Name, email, phone, address, DOB. JSON / CSV / SQL / Playwright export.
+
+Random Letter Generator
+Pick a letter A–Z or generate up to 100 at once. Export to CSV, JSON, JS array, Playwright.
+
+Random Unicode Generator
+Bulk Unicode characters from curated ranges. Latin, Greek, Cyrillic, symbols, emoji.
+
+Reverse Text Generator
+Transform text with 6 reversal modes. Reverse, words, upside-down, mirrored, and more.
+
+UUID Generator
+Bulk v4 (random) and v7 (time-ordered) UUIDs. RFC 9562, Web Crypto. Export to CSV, JSON, Playwright.
+
+Development
+19
+JSON Formatter
+Format, validate, and minify JSON. Clean indentation, key sorting, and exact line/column errors.
+
+JWT Decoder
+Decode a JSON Web Token's header and payload. Readable claim timestamps and expiry status. Decode-only.
+
+Text Compare
+Side-by-side diff with line, word, and character granularity. Export as unified diff or .patch.
+
+YAML Compare
+Diff two YAML files. Normalize mode sorts keys so you only see real changes. Kubernetes, Helm, CI.
+
+XML Compare
+Diff two XML files with optional re-indentation. SOAP, RSS, sitemaps, Android layouts, POMs.
+
+CSV Compare
+Diff two CSV files. Normalize re-quotes cells so only real data changes show. ETL output, DB exports.
+
+JSON Escape
+Escape any string for embedding in JSON. Quotes, backslashes, newlines, control chars.
+
+JSON Unescape
+Decode JSON-escaped strings back to raw text. Reverses quotes, newlines, Unicode escapes.
+
+Unstringify JSON
+Decode a stringified JSON blob and pretty-print the inner document. Webhooks, log lines, double-encoding.
+
+JSONPath Tester
+Test JSONPath expressions against any JSON. Live evaluation, filter syntax, preset queries.
+
+JSON to BSON
+Serialize JSON to BSON. MongoDB's binary format. Hex, base64, byte count.
+
+POJO to JSON
+Java POJO class → JSON template with typed defaults. Seed API fixtures and Postman collections.
+
+YAML Viewer
+Parse, format, validate YAML. Optional alphabetical key sorting. Copy as JSON.
+
+CSV Validator
+Catch column drift, unterminated quoted cells, and stray quotes. RFC 4180 compliant.
+
+PX to REM Converter
+Convert between PX, REM, EM, %, PT. Real-time with adjustable base font size and code snippets.
+
+Hex to Binary Converter
+Convert hexadecimal to binary and back instantly. Real-time bidirectional with decimal values.
+
+ASCII to Hex Converter
+Convert ASCII text to hex and back. Real-time bidirectional with character count and byte size.
+
+HTML Minifier
+Minify HTML with 10+ options. Remove whitespace, comments, minify inline CSS/JS. Export to HTML, JS, JSX.
+
+Image Size Finder
+Pixel dimensions, aspect ratio, and file size of any image. Drop a file or paste a URL.
+
+Finance
+1
+Venmo Fee Calculator
+Exact Venmo fees: Goods & Services, credit card, instant transfer, Cash a Check, ATM, crypto.
+
+
+
+new tools:
+
+Flip Text Generator
+Turn your text upside down, put it in reverse or make your text reversed and upside down at the same time!
+
+Volume Calculators
+Calculate exact concrete quantities needed for your project. Get cubic yards, bags, and weight estimates.
+
+Slab Calculator
+This calculator finds the concrete volume — cubic yards and cubic feet — for a rectangular slab, pad, or floor.
+
+Cinder Block / CMU Wall Calculator
+Estimate blocks, mortar, grout, and rebar for any CMU or cinder block wall.
+
+Column Calculator
+A 12-inch diameter, 8-foot tall concrete column takes 0.
+
+Curb Calculator
+Building concrete curbs? Calculate exactly how much concrete you need with our free tool.
+
+Deck Footing Calculator
+A standard 12-inch diameter deck footing at 48 inches deep needs about 6 bags of 80-lb concrete.
+
+Driveway Calculator
+A standard two-car driveway (20×50 ft at 5 inches thick) needs 15.
+
+Footing Calculator
+A standard 20-foot strip footing (2 feet wide, 12 inches deep) requires 1.
+
+Foundation Calculator
+A 30×20 ft slab foundation at 8 inches thick takes 14.
+
+Garage Floor Calculator
+A standard 24×24 ft 2-car garage slab at 6 inches thick takes 10.
+
+Patio Calculator
+A 16×12 ft patio at 4 inches thick needs about 2.
+
+Pier Footing Calculator
+Building pier footings? Calculate concrete needs with our free tool.
+
+Post Hole Calculator
+A standard fence post hole (10 in diameter, 36 in deep) needs about 3 bags of 80-lb concrete — 8 posts need roughly 22 bags total.
+
+Shed Foundation Calculator
+A 10×12 ft shed foundation at 4 inches thick requires 1.
+
+Sidewalk Calculator
+A 30-foot residential sidewalk (4 ft wide, 4 in thick) needs about 1.
+
+Steps Calculator
+Four standard concrete steps (48 in wide, 7-in rise, 12-in tread) take about 0.
+
+Walkway Calculator
+A 25-ft walkway 3 ft wide and 4 in thick takes 0.
+
+Wall Calculator
+Estimate concrete volume, formwork area, footing pour, and rebar for any poured concrete wall.
+
+Weight Calculator
+A cubic yard of standard concrete weighs about 4,050 pounds — roughly the weight of a small SUV.
+
+Fence Post Calculator
+A standard 4x4 fence post hole (10 in diameter, 36 in deep) needs about 3 bags of 80-lb concrete mix — a typical 10-post fence run needs roughly 30 bags total, about 0.
+
+Gravel Calculator
+One cubic yard of gravel covers about 100 sq ft at 3 inches deep and weighs roughly 1.
+
+ICF Block Calculator
+A 40 ft x 8 ft ICF wall with a 6-inch core needs 60 standard 48x16 in forms and 6.
+
+Rebar Calculator
+A 20×20 ft slab with #4 bars at 16 inches on center needs 30 bars — about 585 linear feet of grid, or 640 lf ordered with lap allowance, weighing roughly 430 lbs.
+
+Sonotube Calculator
+A 12-inch Sonotube at 48 inches deep holds 0.
+
+Cost Calculators
+Estimate project costs including materials, delivery, and labor. Get pricing breakdowns and budget ranges.
+
+Basement Floor Cost Calculator
+Concrete basement floor installation costs $6–11 per square foot.
+
+Pricing estimates included
+Slab Cost Calculator
+As of 2026, a typical concrete slab costs $6–12 per square foot installed (most projects land $8–10).
+
+Pricing estimates included
+Driveway Cost Calculator
+A standard concrete driveway runs $7–13 per square foot installed — a 20×50 ft driveway costs $7,000–$13,000.
+
+Pricing estimates included
+Garage Floor Cost Calculator
+Concrete garage floor installation costs $6–12 per square foot.
+
+Pricing estimates included
+Patio Cost Calculator
+Concrete patio installation costs $6–12 per square foot for a standard broom finish.
+
+Pricing estimates included
+Pool Deck Cost Calculator
+Concrete pool deck installation costs $6–15 per square foot.
+
+Pricing estimates included
+Shed Base Cost Calculator
+Estimate your concrete shed base costs with our free calculator.
+
+Pricing estimates included
+Steps Cost Calculator
+Poured-in-place concrete steps cost $300–500 per step installed, including forming, pouring, and broom-finished treads.
+
+Pricing estimates included
+Stamped Cost Calculator
+Stamped concrete costs $8–18 per square foot installed — roughly double plain concrete.
+
+Pricing estimates included
+Quote & Planning Tools
+Understand what a contractor quote should include, what drives each line item, and what red flags to watch for before you sign.
+
+Concrete Slab Quote Calculator
+In a typical concrete slab quote, pour and finish labor accounts for 40–50% of the total, concrete materials and delivery for 25–32%, and site preparation for 12–16%.
+
+Quote guidance tool
+
+
+also add 2 new pages:
+developers
+methodology 
+>>>>>>> 803f82f (Add 26 tools (7 testing, 18 coding, 1 finance) + Testing category, update sitemap/llms.txt/ai.txt)
