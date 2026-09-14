@@ -175,6 +175,7 @@ window.TOOLS = [
      PROMPTS
      =================================================================== */
   { name:"CSS View Transitions API Prompt Generator", desc:"Generate a detailed, ready-to-paste AI prompt for the CSS View Transitions API. Get accurate code from ChatGPT, Claude, or Gemini for your transition type, effect, and framework.", icon:"fa-solid fa-wand-magic-sparkles", tag:"Prompts", category:"Prompts", href:"tools/prompts/css-view-transitions-prompt-generator.html", keywords:["css view transitions","view transitions api","prompt generator","ai prompt","chatgpt","claude","gemini","page transition","fade","slide","cross document","same document","modern css","frontend","web animation","prompt engineering","ai coding"] },
+  { name:"Footer Animations Prompt", desc:"Generate a detailed, ready-to-paste AI prompt for stunning website footer animations - fade-ins, floating social icons, glowing hovers and more, tailored to your framework and accessibility needs.", icon:"fa-solid fa-wand-magic-sparkles", tag:"Prompts", category:"Prompts", href:"tools/prompts/footer-animations-prompt-guide.html", keywords:["footer animations prompt","footer animation","ai prompt generator","web design","troolify","ui ux","micro-interactions","micro interactions","frontend","conversion optimization","website footer","css animation","tailwind footer","startup website tips","local seo","website redesign","animation prompt"], popular:true },
 
   /* ===================================================================
      SEO

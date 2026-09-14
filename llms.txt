@@ -148,6 +148,7 @@ Key facts about Troolify:
 - [HTML Minifier](https://f9xr.github.io/troolify/tools/coding/html-minifier.html): Minify HTML with 10+ options - whitespace, comments, inline CSS/JS - and export to HTML, JS or JSX.
 - [Image Size Finder](https://f9xr.github.io/troolify/tools/coding/image-size-finder.html): Find pixel dimensions, aspect ratio and file size of any image - drop a file or paste a URL.
 - [Venmo Fee Calculator](https://f9xr.github.io/troolify/tools/finance/venmo-fee-calculator.html): Calculate exact Venmo fees for Goods & Services, credit card, instant transfer, Cash a Check, ATM and crypto.
+- [Footer Animations Prompt](https://f9xr.github.io/troolify/tools/prompts/footer-animations-prompt-guide.html): Generate a detailed, ready-to-paste AI prompt for stunning website footer animations - fade-ins, floating social icons, glowing hovers and more, tailored to your framework and accessibility needs.
 
 ## Categories
 - [AI Tools](https://f9xr.github.io/troolify/tools/ai/index.html): Prompt, text, image and code generation utilities.

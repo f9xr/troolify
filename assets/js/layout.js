@@ -235,6 +235,12 @@
 
             var html = "";
 
+            // Dynamic ad slot - native banner at the top of the right sidebar.
+            // The actual ad code is injected by assets/js/ads.js (config-driven).
+            html += '<div class="dash-rs-panel dash-rs-ad" data-ad-slot="native" aria-label="Advertisement">' +
+                        '<span class="ad-badge">Advertisement</span>' +
+                    '</div>';
+
             if (isToolPage) {
                 // Category context from the current folder path.
                 var path = window.location.pathname.replace(/\/+$/, "").toLowerCase();
@@ -492,6 +498,15 @@
                 mainEl.appendChild(rightAside);
                 buildRightSidebar(rightAside, rootPrefix());
 
+                // Dynamic ad slot - responsive leaderboard at the end of the
+                // center column (rendered by assets/js/ads.js).
+                var leaderEl = document.createElement("div");
+                leaderEl.className = "ad-slot ad-slot-leader";
+                leaderEl.setAttribute("data-ad-slot", "leaderboard");
+                leaderEl.setAttribute("aria-label", "Advertisement");
+                leaderEl.innerHTML = '<span class="ad-badge">Advertisement</span>';
+                dashMain.appendChild(leaderEl);
+
                 // --- Mobile toggle + overlay -------------------------------------
                 var toggle = document.createElement("button");
                 toggle.type = "button";
@@ -537,6 +552,17 @@
         var fileName = dirs[dirs.length - 1] || "";
         var pageDir = dirs.length > 1 ? dirs[dirs.length - 2] : "";
         var prefix = rootPrefix();
+
+        // Dynamic ad slot - responsive leaderboard below the main content on
+        // pages without the dashboard layout (home, about, contact, ...).
+        if (body.getAttribute("data-layout") !== "tool" && mainEl) {
+            var pageLeader = document.createElement("div");
+            pageLeader.className = "ad-slot ad-slot-leader";
+            pageLeader.setAttribute("data-ad-slot", "leaderboard");
+            pageLeader.setAttribute("aria-label", "Advertisement");
+            pageLeader.innerHTML = '<span class="ad-badge">Advertisement</span>';
+            mainEl.parentNode.insertBefore(pageLeader, mainEl.nextSibling);
+        }
 
         // Absolute (from this page) links to the two key destinations.
         var homeHref = prefix + "index.html";
@@ -1301,6 +1327,20 @@
             dd.className = "search-dropdown";
             discWrap.appendChild(dd);
             initLiveSearch(discInput, dd, false);
+        }
+
+        /* --------------------------------------------------------------------
+           Dynamic ad loader
+           Boot the config-driven ad system (assets/js/ads.js). It scans the
+           [data-ad-slot] placeholders this routine just injected and fills
+           them with the correct network code. Disable on a single page with
+           <body data-ads="off">.
+           -------------------------------------------------------------------- */
+        if (body.getAttribute("data-ads") !== "off" && !window.TroolifyAds) {
+            var adsScript = document.createElement("script");
+            adsScript.src = prefix + "assets/js/ads.js";
+            adsScript.async = true;
+            document.body.appendChild(adsScript);
         }
     });
 })();

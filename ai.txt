@@ -22,6 +22,7 @@
 - **Developer Tools**: JSON formatter, JWT decoder, text/YAML/XML/CSV compare, JSON escape/unescape, unstringify JSON, JSONPath tester, JSON to BSON, POJO to JSON, YAML viewer, CSV validator, PX-to-REM converter, hex-binary and ASCII-hex converters, HTML minifier, image size finder, code beautifier, URL encoder/decoder, CSV to JSON, SHA hash generator, HTML generators (table/list/text), HTML cleanup (to-text, remove tags, compress/uncompress), HTML character encoding
 - **Testing Tools**: Random address generator, credit card generator, routing number generator, IMEI generator, fake email generator, fake detail generator, random unicode generator
 - **Converters**: Markdown to Word/PDF, Word to clean HTML/text, plain text/email to HTML, URLs to HTML links, CSV to HTML table
+- **Prompt Tools**: CSS view transitions prompt generator, footer animations prompt generator
 - **SEO Tools**: Schema markup generator, multiline slug generator
 - **Audio Tools**: Song length calculator, BPM tools
 - **Health Tools**: Ovulation calculator, macro calculator, TDEE calculator, body fat percentage, pregnancy due date
