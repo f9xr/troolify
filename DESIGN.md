@@ -338,7 +338,7 @@ Organization, WebSite, ProfilePage, FAQPage, HowTo, Review, BreadcrumbList, Serv
 ## 12. File Structure
 
 ```
-f9xr.github.io/
+f9xr.org/
 ├── index.html                          # Homepage (3,461 lines)
 ├── 404.html                            # Custom 404
 ├── error.html                          # Redirects to 404

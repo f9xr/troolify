@@ -5,198 +5,198 @@
 Key facts about Troolify:
 - Free forever, no sign-up required
 - 100% client-side processing, zero data retention
-- Static site hosted on GitHub Pages at https://f9xr.github.io/troolify/
+- Static site hosted on GitHub Pages at https://f9xr.org/troolify/
 - Read the project README at https://github.com/f9xr/troolify
 
 ## Tools
-- [Word Counter](https://f9xr.github.io/troolify/tools/text/word-counter.html): Live word, character, sentence, paragraph and reading-time stats as you type. Text never leaves the browser.
-- [Numeronym Generator](https://f9xr.github.io/troolify/tools/text/numeronym-generator.html): Turn any phrase into an i18n-style numeronym (like i18n or k8s) or decode one back into its letter count.
-- [JSON Formatter](https://f9xr.github.io/troolify/tools/coding/json-formatter.html): Format, validate, minify and copy JSON instantly without sending it to a server.
-- [Code Beautifier](https://f9xr.github.io/troolify/tools/coding/code-beautifier.html): Turn source code into clean, colorful, self-contained HTML with syntax highlighting.
-- [Schema Markup Generator](https://f9xr.github.io/troolify/tools/seo/schema-markup-generator.html): Create clean JSON-LD schema markup for LocalBusiness, Product, Article, FAQPage, Event and Review.
-- [Multiline Slug Generator](https://f9xr.github.io/troolify/tools/seo/multiline-slug-generator.html): Convert multi-line text into SEO-friendly URL slugs with keyword optimization and stop-word removal.
-- [YouTube Timestamp Link Generator](https://f9xr.github.io/troolify/tools/youtube/timestamp-link-generator.html): Create clickable timestamp links and instant video-description chapters for any YouTube video.
-- [Song Length Calculator](https://f9xr.github.io/troolify/tools/audio/song-length-calculator.html): Calculate exact track runtime from BPM and bar repetitions.
-- [Password Generator](https://f9xr.github.io/troolify/tools/misc/password-generator.html): Generate strong random passwords or memorable passphrases with custom length, character sets and entropy strength.
-- [Password Entropy Calculator](https://f9xr.github.io/troolify/tools/misc/password-entropy-calculator.html): Measure password entropy in bits and estimate crack time across five real-world attack scenarios.
-- [Ovulation Calculator](https://f9xr.github.io/troolify/tools/health/ovulation-calculator.html): Predict ovulation day, fertile window, peak fertility and upcoming periods from your last cycle.
-- [Advance Average Calculator](https://f9xr.github.io/troolify/tools/statistics/advance-average-calculator.html): Find the mean, median, sum and count of any list of numbers instantly.
-- [Markdown to Word Converter](https://f9xr.github.io/troolify/tools/converters/markdown-to-word-converter.html): Convert Markdown to Word instantly. Turn .md files into polished .docx documents, no signup needed.
-- [Markdown to PDF Converter](https://f9xr.github.io/troolify/tools/converters/markdown-to-pdf-converter.html): Convert Markdown to PDF instantly. Turn .md files into clean, shareable PDF documents, no signup needed.
-- [VAT Calculator](https://f9xr.github.io/troolify/tools/finance/vat-calculator.html): Add, remove or split VAT on any amount with tax rates for 50+ countries. 100% client-side.
-- [URL Encoder & Decoder](https://f9xr.github.io/troolify/tools/coding/url-encoder-decoder.html): Encode or percent-decode URLs and text instantly for safe links and API work.
-- [CSV to JSON Converter](https://f9xr.github.io/troolify/tools/coding/csv-to-json-converter.html): Convert CSV into clean JSON with custom keys and separators, fully in the browser.
-- [SHA Hash Generator](https://f9xr.github.io/troolify/tools/coding/sha-hash-generator.html): Generate SHA-1, SHA-256, SHA-384 or SHA-512 hashes via the native Web Crypto API.
-- [Color Converter](https://f9xr.github.io/troolify/tools/image/color-converter.html): Convert any color between HEX, RGB and HSL with a live preview swatch.
-- [Random Word Generator](https://f9xr.github.io/troolify/tools/text/random-word-generator.html): Generate random words from six curated lists - common, nouns, verbs, adjectives, animals or food.
-- [Bra Size Calculator](https://f9xr.github.io/troolify/tools/health/bra-size-calculator.html): Find your bra size and sister sizes from underbust and bust measurements with a band and cup fit guide.
-- [Body Fat Percentage Calculator](https://f9xr.github.io/troolify/tools/health/body-fat-percentage-calculator.html): Estimate body fat percentage with the US Navy method from a few tape measurements.
-- [Lean Body Mass Calculator](https://f9xr.github.io/troolify/tools/health/lean-body-mass-calculator.html): Estimate lean body mass with the Boer formula, or sharpen it with a body fat reading.
-- [Waist to Hip Ratio Calculator](https://f9xr.github.io/troolify/tools/health/waist-to-hip-ratio-calculator.html): Calculate your waist-to-hip ratio and WHO risk category from two tape measurements.
-- [Macro Calculator](https://f9xr.github.io/troolify/tools/health/macro-calculator.html): Set protein, fat and carbohydrate targets from your TDEE and goal - cut, maintain or bulk.
-- [Protein Intake Calculator](https://f9xr.github.io/troolify/tools/health/protein-intake-calculator.html): Find your daily protein target in grams by weight, activity and goal, with a per-meal split.
-- [TDEE Calculator](https://f9xr.github.io/troolify/tools/health/tdee-calculator.html): Estimate total daily energy expenditure and maintenance calories with Mifflin-St Jeor and activity levels.
-- [Heart Rate Zones Calculator](https://f9xr.github.io/troolify/tools/health/heart-rate-zones-calculator.html): Find your max heart rate and five training zones by age and resting heart rate using Karvonen.
-- [Steps to Calories Calculator](https://f9xr.github.io/troolify/tools/health/steps-to-calories-calculator.html): Turn your step count into calories burned based on weight and pace, with a distance estimate.
-- [Pregnancy Due Date Calculator](https://f9xr.github.io/troolify/tools/health/pregnancy-due-date-calculator.html): Estimate your due date from LMP or conception using Naegele's rule, with gestational age and trimester.
+- [Word Counter](https://f9xr.org/troolify/tools/text/word-counter.html): Live word, character, sentence, paragraph and reading-time stats as you type. Text never leaves the browser.
+- [Numeronym Generator](https://f9xr.org/troolify/tools/text/numeronym-generator.html): Turn any phrase into an i18n-style numeronym (like i18n or k8s) or decode one back into its letter count.
+- [JSON Formatter](https://f9xr.org/troolify/tools/coding/json-formatter.html): Format, validate, minify and copy JSON instantly without sending it to a server.
+- [Code Beautifier](https://f9xr.org/troolify/tools/coding/code-beautifier.html): Turn source code into clean, colorful, self-contained HTML with syntax highlighting.
+- [Schema Markup Generator](https://f9xr.org/troolify/tools/seo/schema-markup-generator.html): Create clean JSON-LD schema markup for LocalBusiness, Product, Article, FAQPage, Event and Review.
+- [Multiline Slug Generator](https://f9xr.org/troolify/tools/seo/multiline-slug-generator.html): Convert multi-line text into SEO-friendly URL slugs with keyword optimization and stop-word removal.
+- [YouTube Timestamp Link Generator](https://f9xr.org/troolify/tools/youtube/timestamp-link-generator.html): Create clickable timestamp links and instant video-description chapters for any YouTube video.
+- [Song Length Calculator](https://f9xr.org/troolify/tools/audio/song-length-calculator.html): Calculate exact track runtime from BPM and bar repetitions.
+- [Password Generator](https://f9xr.org/troolify/tools/misc/password-generator.html): Generate strong random passwords or memorable passphrases with custom length, character sets and entropy strength.
+- [Password Entropy Calculator](https://f9xr.org/troolify/tools/misc/password-entropy-calculator.html): Measure password entropy in bits and estimate crack time across five real-world attack scenarios.
+- [Ovulation Calculator](https://f9xr.org/troolify/tools/health/ovulation-calculator.html): Predict ovulation day, fertile window, peak fertility and upcoming periods from your last cycle.
+- [Advance Average Calculator](https://f9xr.org/troolify/tools/statistics/advance-average-calculator.html): Find the mean, median, sum and count of any list of numbers instantly.
+- [Markdown to Word Converter](https://f9xr.org/troolify/tools/converters/markdown-to-word-converter.html): Convert Markdown to Word instantly. Turn .md files into polished .docx documents, no signup needed.
+- [Markdown to PDF Converter](https://f9xr.org/troolify/tools/converters/markdown-to-pdf-converter.html): Convert Markdown to PDF instantly. Turn .md files into clean, shareable PDF documents, no signup needed.
+- [VAT Calculator](https://f9xr.org/troolify/tools/finance/vat-calculator.html): Add, remove or split VAT on any amount with tax rates for 50+ countries. 100% client-side.
+- [URL Encoder & Decoder](https://f9xr.org/troolify/tools/coding/url-encoder-decoder.html): Encode or percent-decode URLs and text instantly for safe links and API work.
+- [CSV to JSON Converter](https://f9xr.org/troolify/tools/coding/csv-to-json-converter.html): Convert CSV into clean JSON with custom keys and separators, fully in the browser.
+- [SHA Hash Generator](https://f9xr.org/troolify/tools/coding/sha-hash-generator.html): Generate SHA-1, SHA-256, SHA-384 or SHA-512 hashes via the native Web Crypto API.
+- [Color Converter](https://f9xr.org/troolify/tools/image/color-converter.html): Convert any color between HEX, RGB and HSL with a live preview swatch.
+- [Random Word Generator](https://f9xr.org/troolify/tools/text/random-word-generator.html): Generate random words from six curated lists - common, nouns, verbs, adjectives, animals or food.
+- [Bra Size Calculator](https://f9xr.org/troolify/tools/health/bra-size-calculator.html): Find your bra size and sister sizes from underbust and bust measurements with a band and cup fit guide.
+- [Body Fat Percentage Calculator](https://f9xr.org/troolify/tools/health/body-fat-percentage-calculator.html): Estimate body fat percentage with the US Navy method from a few tape measurements.
+- [Lean Body Mass Calculator](https://f9xr.org/troolify/tools/health/lean-body-mass-calculator.html): Estimate lean body mass with the Boer formula, or sharpen it with a body fat reading.
+- [Waist to Hip Ratio Calculator](https://f9xr.org/troolify/tools/health/waist-to-hip-ratio-calculator.html): Calculate your waist-to-hip ratio and WHO risk category from two tape measurements.
+- [Macro Calculator](https://f9xr.org/troolify/tools/health/macro-calculator.html): Set protein, fat and carbohydrate targets from your TDEE and goal - cut, maintain or bulk.
+- [Protein Intake Calculator](https://f9xr.org/troolify/tools/health/protein-intake-calculator.html): Find your daily protein target in grams by weight, activity and goal, with a per-meal split.
+- [TDEE Calculator](https://f9xr.org/troolify/tools/health/tdee-calculator.html): Estimate total daily energy expenditure and maintenance calories with Mifflin-St Jeor and activity levels.
+- [Heart Rate Zones Calculator](https://f9xr.org/troolify/tools/health/heart-rate-zones-calculator.html): Find your max heart rate and five training zones by age and resting heart rate using Karvonen.
+- [Steps to Calories Calculator](https://f9xr.org/troolify/tools/health/steps-to-calories-calculator.html): Turn your step count into calories burned based on weight and pace, with a distance estimate.
+- [Pregnancy Due Date Calculator](https://f9xr.org/troolify/tools/health/pregnancy-due-date-calculator.html): Estimate your due date from LMP or conception using Naegele's rule, with gestational age and trimester.
 
-- [HVAC Load Calculator](https://f9xr.github.io/troolify/tools/hvac/hvac-load-calculator.html): Aggregate preliminary cooling and heating components - glass, people, equipment, lighting and infiltration - into a transparent sensible/latent breakdown with tons and thermal kW.
-- [BTU Calculator](https://f9xr.github.io/troolify/tools/hvac/btu-calculator.html): Convert any thermal capacity figure between BTU/h, kBtu/h, MBH, watts, kW, horsepower, refrigeration tons, kcal/h and kJ/h - all computed privately in your browser.
-- [BTU to Tons](https://f9xr.github.io/troolify/tools/hvac/btu-to-tons.html): Convert any BTU/h figure to nominal refrigeration tons (12,000 BTU/h per ton) and see the equivalent thermal kilowatts - done locally in your browser.
-- [Room BTU Calculator](https://f9xr.github.io/troolify/tools/hvac/room-btu-calculator.html): Create a documented, area-based preliminary BTU/h estimate from floor area, ceiling height, sun exposure, occupants and insulation.
-- [BTU per Square Foot](https://f9xr.github.io/troolify/tools/hvac/btu-per-square-foot.html): Compare a stated thermal capacity against a documented floor area - output as BTU/h per square foot with typical comfort ranges.
-- [Tons to BTU](https://f9xr.github.io/troolify/tools/hvac/tons-to-btu.html): Convert nominal refrigeration tons to BTU/h and thermal kilowatts - 1 ton equals 12,000 BTU/h - calculated instantly in your browser.
-- [CFM Calculator](https://f9xr.github.io/troolify/tools/hvac/cfm-calculator.html): Convert room volume and target air changes per hour (ACH) into the required CFM airflow, with a metric m3/h cross-check.
-- [ACH Calculator](https://f9xr.github.io/troolify/tools/hvac/ach-calculator.html): Calculate the air changes per hour (ACH) implied by a stated CFM airflow - the reverse-check on any ventilation target.
-- [CFM per Square Foot](https://f9xr.github.io/troolify/tools/hvac/cfm-per-square-foot.html): Normalize a known airflow by the served floor area - output as CFM per square foot against typical ranges.
-- [CFM to m3/h](https://f9xr.github.io/troolify/tools/hvac/cfm-to-m3h.html): Convert airflow from cubic feet per minute to cubic metres per hour (and L/s) without changing the design basis.
-- [m3/h to CFM](https://f9xr.github.io/troolify/tools/hvac/m3h-to-cfm.html): Convert airflow from cubic metres per hour back to CFM and L/s - without changing the flow basis.
-- [Duct Size Calculator](https://f9xr.github.io/troolify/tools/hvac/duct-size-calculator.html): Estimate a theoretical round duct diameter from a documented CFM and target face velocity - with area and velocity cross-checks.
-- [Rectangular Duct Size](https://f9xr.github.io/troolify/tools/hvac/rectangular-duct-size.html): Calculate a preliminary rectangular duct width and height from CFM, target velocity and aspect ratio.
-- [Duct Velocity](https://f9xr.github.io/troolify/tools/hvac/duct-velocity.html): Check the actual face velocity in fpm (and m/s) the way a real duct run behaves - from CFM and duct dimensions.
-- [Duct Cross-Sectional Area](https://f9xr.github.io/troolify/tools/hvac/duct-cross-sectional-area.html): Calculate the inside face area of a round or rectangular duct in square inches, square feet and square metres.
-- [Equivalent Diameter](https://f9xr.github.io/troolify/tools/hvac/equivalent-diameter.html): Compare rectangular and round equal-friction duct geometry with the ASHRAE formula - so a rectangular size can move into round duct math.
-- [Duct Friction Loss](https://f9xr.github.io/troolify/tools/hvac/duct-friction-loss.html): Estimate straight round duct loss transparently - Darcy-Weisbach with the Swamee-Jain friction factor - in inches w.g..
-- [Refrigeration Capacity](https://f9xr.github.io/troolify/tools/hvac/refrigeration-capacity.html): Calculate refrigerant-side capacity from refrigerant mass flow and enthalpy difference - output in BTU/h, tons and kW.
-- [Refrigerant Superheat](https://f9xr.github.io/troolify/tools/hvac/refrigerant-superheat.html): Find the suction-line temperature difference above saturation - measured line temperature minus saturation temperature.
-- [Refrigerant Subcooling](https://f9xr.github.io/troolify/tools/hvac/refrigerant-subcooling.html): Find the liquid-line temperature difference below saturation - saturation temperature minus the measured liquid line temperature.
-- [Psychrometric Calculator](https://f9xr.github.io/troolify/tools/hvac/psychrometric-calculator.html): Calculate dew point, humidity ratio, moist-air enthalpy and approximate wet-bulb temperature from one documented air state.
-- [Heat Pump Operating Cost](https://f9xr.github.io/troolify/tools/hvac/heat-pump-operating-cost.html): Translate a documented thermal load and matched COP into electricity use, cost, and a comparison against resistance heating.
-- [Fan Pulley RPM](https://f9xr.github.io/troolify/tools/hvac/fan-pulley-rpm.html): Calculate driven fan RPM from motor speed and the pitch diameters of both sheaves - with belt speed on the side.
-- [Motor Sheave Size](https://f9xr.github.io/troolify/tools/hvac/motor-sheave-size.html): Screen a motor sheave pitch diameter for a supported target fan speed - the reverse of the pulley RPM calculation.
-- [V-Belt Length](https://f9xr.github.io/troolify/tools/hvac/v-belt-length.html): Estimate open-drive V-belt pitch length and both wrap angles from sheave pitch diameters and centre distance.
-- [Fan Law Calculator](https://f9xr.github.io/troolify/tools/hvac/fan-law-calculator.html): Estimate same-system airflow, static pressure and brake-power changes from a speed or flow change - the fan laws, applied honestly.
-- [Fume Hood Face Velocity](https://f9xr.github.io/troolify/tools/hvac/fume-hood-face-velocity.html): Calculate the opening-average face velocity from exhaust airflow and the clear sash area - a documented, measured value.
-- [Fume Hood Traverse](https://f9xr.github.io/troolify/tools/hvac/fume-hood-traverse.html): Summarize equal-area fume-hood velocity readings into average, spread and uniformity - without inventing pass/fail criteria.
-- [Multi-Hood Exhaust Planner](https://f9xr.github.io/troolify/tools/hvac/multi-hood-exhaust-planner.html): Compare the connected exhaust flow with a documented active and standby scenario - so exhaust sizing has an honest demand basis.
-- [Fume Hood Exhaust Load](https://f9xr.github.io/troolify/tools/hvac/fume-hood-exhaust-load.html): Estimate the thermal conditioning load of fume-hood exhaust/make-up air from airflow and a moist-air enthalpy difference.
+- [HVAC Load Calculator](https://f9xr.org/troolify/tools/hvac/hvac-load-calculator.html): Aggregate preliminary cooling and heating components - glass, people, equipment, lighting and infiltration - into a transparent sensible/latent breakdown with tons and thermal kW.
+- [BTU Calculator](https://f9xr.org/troolify/tools/hvac/btu-calculator.html): Convert any thermal capacity figure between BTU/h, kBtu/h, MBH, watts, kW, horsepower, refrigeration tons, kcal/h and kJ/h - all computed privately in your browser.
+- [BTU to Tons](https://f9xr.org/troolify/tools/hvac/btu-to-tons.html): Convert any BTU/h figure to nominal refrigeration tons (12,000 BTU/h per ton) and see the equivalent thermal kilowatts - done locally in your browser.
+- [Room BTU Calculator](https://f9xr.org/troolify/tools/hvac/room-btu-calculator.html): Create a documented, area-based preliminary BTU/h estimate from floor area, ceiling height, sun exposure, occupants and insulation.
+- [BTU per Square Foot](https://f9xr.org/troolify/tools/hvac/btu-per-square-foot.html): Compare a stated thermal capacity against a documented floor area - output as BTU/h per square foot with typical comfort ranges.
+- [Tons to BTU](https://f9xr.org/troolify/tools/hvac/tons-to-btu.html): Convert nominal refrigeration tons to BTU/h and thermal kilowatts - 1 ton equals 12,000 BTU/h - calculated instantly in your browser.
+- [CFM Calculator](https://f9xr.org/troolify/tools/hvac/cfm-calculator.html): Convert room volume and target air changes per hour (ACH) into the required CFM airflow, with a metric m3/h cross-check.
+- [ACH Calculator](https://f9xr.org/troolify/tools/hvac/ach-calculator.html): Calculate the air changes per hour (ACH) implied by a stated CFM airflow - the reverse-check on any ventilation target.
+- [CFM per Square Foot](https://f9xr.org/troolify/tools/hvac/cfm-per-square-foot.html): Normalize a known airflow by the served floor area - output as CFM per square foot against typical ranges.
+- [CFM to m3/h](https://f9xr.org/troolify/tools/hvac/cfm-to-m3h.html): Convert airflow from cubic feet per minute to cubic metres per hour (and L/s) without changing the design basis.
+- [m3/h to CFM](https://f9xr.org/troolify/tools/hvac/m3h-to-cfm.html): Convert airflow from cubic metres per hour back to CFM and L/s - without changing the flow basis.
+- [Duct Size Calculator](https://f9xr.org/troolify/tools/hvac/duct-size-calculator.html): Estimate a theoretical round duct diameter from a documented CFM and target face velocity - with area and velocity cross-checks.
+- [Rectangular Duct Size](https://f9xr.org/troolify/tools/hvac/rectangular-duct-size.html): Calculate a preliminary rectangular duct width and height from CFM, target velocity and aspect ratio.
+- [Duct Velocity](https://f9xr.org/troolify/tools/hvac/duct-velocity.html): Check the actual face velocity in fpm (and m/s) the way a real duct run behaves - from CFM and duct dimensions.
+- [Duct Cross-Sectional Area](https://f9xr.org/troolify/tools/hvac/duct-cross-sectional-area.html): Calculate the inside face area of a round or rectangular duct in square inches, square feet and square metres.
+- [Equivalent Diameter](https://f9xr.org/troolify/tools/hvac/equivalent-diameter.html): Compare rectangular and round equal-friction duct geometry with the ASHRAE formula - so a rectangular size can move into round duct math.
+- [Duct Friction Loss](https://f9xr.org/troolify/tools/hvac/duct-friction-loss.html): Estimate straight round duct loss transparently - Darcy-Weisbach with the Swamee-Jain friction factor - in inches w.g..
+- [Refrigeration Capacity](https://f9xr.org/troolify/tools/hvac/refrigeration-capacity.html): Calculate refrigerant-side capacity from refrigerant mass flow and enthalpy difference - output in BTU/h, tons and kW.
+- [Refrigerant Superheat](https://f9xr.org/troolify/tools/hvac/refrigerant-superheat.html): Find the suction-line temperature difference above saturation - measured line temperature minus saturation temperature.
+- [Refrigerant Subcooling](https://f9xr.org/troolify/tools/hvac/refrigerant-subcooling.html): Find the liquid-line temperature difference below saturation - saturation temperature minus the measured liquid line temperature.
+- [Psychrometric Calculator](https://f9xr.org/troolify/tools/hvac/psychrometric-calculator.html): Calculate dew point, humidity ratio, moist-air enthalpy and approximate wet-bulb temperature from one documented air state.
+- [Heat Pump Operating Cost](https://f9xr.org/troolify/tools/hvac/heat-pump-operating-cost.html): Translate a documented thermal load and matched COP into electricity use, cost, and a comparison against resistance heating.
+- [Fan Pulley RPM](https://f9xr.org/troolify/tools/hvac/fan-pulley-rpm.html): Calculate driven fan RPM from motor speed and the pitch diameters of both sheaves - with belt speed on the side.
+- [Motor Sheave Size](https://f9xr.org/troolify/tools/hvac/motor-sheave-size.html): Screen a motor sheave pitch diameter for a supported target fan speed - the reverse of the pulley RPM calculation.
+- [V-Belt Length](https://f9xr.org/troolify/tools/hvac/v-belt-length.html): Estimate open-drive V-belt pitch length and both wrap angles from sheave pitch diameters and centre distance.
+- [Fan Law Calculator](https://f9xr.org/troolify/tools/hvac/fan-law-calculator.html): Estimate same-system airflow, static pressure and brake-power changes from a speed or flow change - the fan laws, applied honestly.
+- [Fume Hood Face Velocity](https://f9xr.org/troolify/tools/hvac/fume-hood-face-velocity.html): Calculate the opening-average face velocity from exhaust airflow and the clear sash area - a documented, measured value.
+- [Fume Hood Traverse](https://f9xr.org/troolify/tools/hvac/fume-hood-traverse.html): Summarize equal-area fume-hood velocity readings into average, spread and uniformity - without inventing pass/fail criteria.
+- [Multi-Hood Exhaust Planner](https://f9xr.org/troolify/tools/hvac/multi-hood-exhaust-planner.html): Compare the connected exhaust flow with a documented active and standby scenario - so exhaust sizing has an honest demand basis.
+- [Fume Hood Exhaust Load](https://f9xr.org/troolify/tools/hvac/fume-hood-exhaust-load.html): Estimate the thermal conditioning load of fume-hood exhaust/make-up air from airflow and a moist-air enthalpy difference.
 
-- [Remove Line Breaks](https://f9xr.github.io/troolify/tools/text/remove-line-breaks.html): Remove line breaks, carriage returns and extra blank lines from any text in one click. 100% client-side.
-- [Add Line Breaks](https://f9xr.github.io/troolify/tools/text/add-line-breaks.html): Insert line breaks after a set number of characters or words to reformat any text block.
-- [Empty Line Remover](https://f9xr.github.io/troolify/tools/text/empty-line-remover.html): Remove empty lines and trim stray whitespace from pasted text.
-- [Remove Duplicate Lines](https://f9xr.github.io/troolify/tools/text/remove-duplicate-lines.html): Delete duplicate lines and keep only unique entries in any list or pasted text. No uploads.
-- [Line Breaks to Paragraphs](https://f9xr.github.io/troolify/tools/text/line-breaks-to-paragraphs.html): Convert each line or double line break of pasted text into separate HTML paragraphs.
-- [Paragraphs to Single Line](https://f9xr.github.io/troolify/tools/text/paragraphs-to-single-line.html): Merge an entire multi-paragraph document into one single smooth line of text.
-- [Sort List Alphabetically](https://f9xr.github.io/troolify/tools/text/sort-list-alphabetically.html): Sort any list A to Z or Z to A with case and number options.
-- [Replace Text](https://f9xr.github.io/troolify/tools/text/replace-text.html): Find and replace words, phrases or regular expressions across any text, with optional case sensitivity.
-- [Title Case Converter](https://f9xr.github.io/troolify/tools/text/title-case-converter.html): Convert any sentence to Title Case with smart handling of accents, apostrophes and small words.
-- [Remove Spaces](https://f9xr.github.io/troolify/tools/text/remove-spaces.html): Delete all spaces, tabs and non-breaking characters from text, with an option to keep single spaces.
-- [Tabs to Spaces](https://f9xr.github.io/troolify/tools/text/tabs-to-spaces.html): Convert tab characters to spaces with a configurable indent width - and spaces back to tabs.
-- [Remove Numbers](https://f9xr.github.io/troolify/tools/text/remove-numbers.html): Strip digits from any text, optionally keeping decimals and negatives.
-- [Sentences Counter](https://f9xr.github.io/troolify/tools/text/sentences-counter.html): Count the exact number of sentences in your text with smart period, exclamation and question detection.
-- [Random Sentence Generator](https://f9xr.github.io/troolify/tools/text/random-sentence-generator.html): Generate endless random English sentences for writing prompts, captions or inspiration.
-- [Random Noun Generator](https://f9xr.github.io/troolify/tools/text/random-noun-generator.html): Generate random common nouns by category for games, place names or creativity.
-- [Random Adjectives Generator](https://f9xr.github.io/troolify/tools/text/random-adjectives-generator.html): Get random descriptive adjectives with optional categories like taste, size, sound or emotion.
-- [Random String Generator](https://f9xr.github.io/troolify/tools/text/random-string-generator.html): Generate random strings, UUIDs and tokens with length, character set and case options.
-- [Backwards Text Generator](https://f9xr.github.io/troolify/tools/text/backwards-text-generator.html): Reverse any text to spell it backwards, with mirror and upside-down formats.
-- [Fake Word Generator](https://f9xr.github.io/troolify/tools/text/fake-word-generator.html): Generate realistic-sounding fake words for games, usernames, brand names or inspiration.
-- [Repeat Text Generator](https://f9xr.github.io/troolify/tools/text/repeat-text-generator.html): Repeat any text 2, 10 or 10,000 times with an optional separator between copies.
-- [Tiny Text Generator](https://f9xr.github.io/troolify/tools/text/tiny-text-generator.html): Convert normal letters into tiny subscript-style text for emails, bios and comments.
-- [Cursive Text Generator](https://f9xr.github.io/troolify/tools/text/cursive-text-generator.html): Turn plain text into elegant Unicode cursive and script fonts for profiles, bios and posts.
-- [Bold Text Generator](https://f9xr.github.io/troolify/tools/text/bold-text-generator.html): Convert plain text into bold Unicode characters for bold comments, bios and social posts.
-- [HTML to Text Converter](https://f9xr.github.io/troolify/tools/coding/html-to-text-converter.html): Strip markup and extract clean, readable text from any HTML.
-- [Remove HTML Tags](https://f9xr.github.io/troolify/tools/coding/remove-html-tags.html): Remove every HTML tag from pasted markup, keeping only the plain text content.
-- [HTML Table Generator](https://f9xr.github.io/troolify/tools/coding/html-table-generator.html): Generate a clean HTML table from rows and cells with headers, borders and class options.
-- [HTML List Generator](https://f9xr.github.io/troolify/tools/coding/html-list-generator.html): Generate ul or ol list markup from lines of plain text, with nesting options.
-- [HTML Text Generator](https://f9xr.github.io/troolify/tools/coding/html-text-generator.html): Get ready-to-copy HTML snippets for emphasis, headings, links and formatting.
-- [Compress HTML](https://f9xr.github.io/troolify/tools/coding/compress-html.html): Minify HTML by removing comments, whitespace, and optional quotes and attributes.
-- [Uncompress HTML](https://f9xr.github.io/troolify/tools/coding/uncompress-html.html): Expand minified HTML into readable, indented markup.
-- [HTML Character Encoding](https://f9xr.github.io/troolify/tools/coding/html-character-encoding.html): Find or convert the HTML entity code for any character for safe embedding.
-- [Convert Word to Clean HTML](https://f9xr.github.io/troolify/tools/converters/word-to-clean-html.html): Paste copied Word content and get clean, semantic HTML with Word styles stripped.
-- [Convert Word to Text](https://f9xr.github.io/troolify/tools/converters/word-to-text.html): Turn messy Word formatting into clean plain text with paragraph breaks preserved.
-- [Convert Plain Text to HTML](https://f9xr.github.io/troolify/tools/converters/plain-text-to-html.html): Auto-convert plain text into formatted HTML with paragraphs, lists and clickable links.
-- [Convert Email to HTML](https://f9xr.github.io/troolify/tools/converters/email-to-html.html): Turn a plain-text email draft into a styled HTML email with a call-to-action button.
-- [Convert URLs to HTML Links](https://f9xr.github.io/troolify/tools/converters/urls-to-html-links.html): Auto-detect URLs in any text and convert them into clickable anchor tags with target and rel options.
-- [Convert CSV Text to HTML Table](https://f9xr.github.io/troolify/tools/converters/csv-to-html-table.html): Paste CSV data and generate a clean HTML table with header detection and delimiter choice.
-- [Convert Word to PDF](https://f9xr.github.io/troolify/tools/pdf/word-to-pdf.html): Turn a .docx file into a PDF right in your browser - no uploads, nothing stored.
-- [Convert Excel to PDF](https://f9xr.github.io/troolify/tools/pdf/excel-to-pdf.html): Turn an .xlsx spreadsheet into a readable PDF with adjustable orientation, scaling and columns.
-- [Convert Images to PDF](https://f9xr.github.io/troolify/tools/pdf/images-to-pdf.html): Combine JPG, PNG or WebP images into a single PDF with order, page size and orientation options.
-- [Convert Text to PDF](https://f9xr.github.io/troolify/tools/pdf/text-to-pdf.html): Turn plain text into a clean, downloadable PDF with adjustable page size, margins and font size.
-- [Extract Text from PDF](https://f9xr.github.io/troolify/tools/pdf/pdf-to-text.html): Extract all readable text from a PDF while keeping the file local - no uploads.
-- [PDF to Grayscale](https://f9xr.github.io/troolify/tools/pdf/pdf-to-grayscale.html): Convert a color PDF to grayscale so it prints cleanly and uses less ink.
-- [Merge PDFs](https://f9xr.github.io/troolify/tools/pdf/merge-pdfs.html): Combine multiple PDF files into one in any order and download the merged result.
-- [Remove PDF Pages](https://f9xr.github.io/troolify/tools/pdf/remove-pdf-pages.html): Delete specific pages from any PDF with a checkbox list and live preview.
-- [PDF Metadata Viewer](https://f9xr.github.io/troolify/tools/pdf/pdf-metadata-viewer.html): View title, author, creation date and all hidden metadata stored inside any PDF.
-- [Remove PDF Metadata](https://f9xr.github.io/troolify/tools/pdf/remove-pdf-metadata.html): Strip title, author and all hidden metadata from a PDF to protect your privacy.
-- [Unredact PDF (Check Exposure)](https://f9xr.github.io/troolify/tools/pdf/unredact-pdf.html): Reveal what text may still be hidden under black redaction boxes in any PDF you own.
-- [Random Decision Maker](https://f9xr.github.io/troolify/tools/misc/random-decision-maker.html): Get an instant random verdict for any dilemma, decided right in your browser.
-- [Random Choice Generator](https://f9xr.github.io/troolify/tools/misc/random-choice-generator.html): Enter any options and let this tool pick one at random - perfect for giveaways, quizzes and office bets.
-- [Mailto Link Generator](https://f9xr.github.io/troolify/tools/misc/mailto-link-generator.html): Build a ready-to-use mailto link with subject, body and carbon copy fields.
-- [Random Address Generator](https://f9xr.github.io/troolify/tools/testing/random-address-generator.html): Generate realistic fake addresses from 45+ countries with Playwright, Cypress, CSV, JSON and SQL export - 100% client-side.
-- [Credit Card Generator](https://f9xr.github.io/troolify/tools/testing/credit-card-generator.html): Generate Luhn-valid test card numbers for Visa, MasterCard, Amex, Discover and JCB with CSV, JSON and Playwright export.
-- [Routing Number Generator](https://f9xr.github.io/troolify/tools/testing/routing-number-generator.html): Generate ABA-valid US routing numbers in bulk - 9 digits, valid checksum, ready for payment form tests.
-- [IMEI Generator](https://f9xr.github.io/troolify/tools/testing/imei-generator.html): Generate Luhn-valid 15-digit IMEIs for QA, form validation, device registry seeding and fixtures.
-- [Fake Email Generator](https://f9xr.github.io/troolify/tools/testing/fake-email-generator.html): Generate synthetic emails across public (Gmail, Outlook, Yahoo) and dev-safe domains, bulk up to 100.
-- [Fake Detail Generator](https://f9xr.github.io/troolify/tools/testing/fake-detail-generator.html): Generate full synthetic person profiles - name, email, phone, address and DOB - with JSON, CSV, SQL and Playwright export.
-- [Random Unicode Generator](https://f9xr.github.io/troolify/tools/testing/random-unicode-generator.html): Generate bulk Unicode characters from curated ranges - Latin, Greek, Cyrillic, symbols and emoji.
-- [JWT Decoder](https://f9xr.github.io/troolify/tools/coding/jwt-decoder.html): Decode a JWT's header and payload with readable claim timestamps and expiry status - decode-only, nothing leaves the tab.
-- [Text Compare](https://f9xr.github.io/troolify/tools/coding/text-compare.html): Side-by-side diff with line, word and character granularity, exportable as unified diff or .patch.
-- [YAML Compare](https://f9xr.github.io/troolify/tools/coding/yaml-compare.html): Diff two YAML files with a normalize mode that sorts keys so only real changes show - Kubernetes and Helm friendly.
-- [XML Compare](https://f9xr.github.io/troolify/tools/coding/xml-compare.html): Diff two XML files with optional re-indentation for SOAP, RSS, sitemaps, Android layouts and POMs.
-- [CSV Compare](https://f9xr.github.io/troolify/tools/coding/csv-compare.html): Diff two CSV files with cell re-quoting so only real data changes show - ideal for ETL output and DB exports.
-- [JSON Escape](https://f9xr.github.io/troolify/tools/coding/json-escape.html): Escape any string for embedding in JSON - quotes, backslashes, newlines and control characters.
-- [JSON Unescape](https://f9xr.github.io/troolify/tools/coding/json-unescape.html): Decode JSON-escaped strings back to raw text, reversing quotes, newlines and Unicode escapes.
-- [Unstringify JSON](https://f9xr.github.io/troolify/tools/coding/unstringify-json.html): Decode a stringified JSON blob and pretty-print the inner document - webhooks, log lines and double-encoding.
-- [JSONPath Tester](https://f9xr.github.io/troolify/tools/coding/jsonpath-tester.html): Test JSONPath expressions against any JSON with live evaluation, filter syntax and preset queries.
-- [JSON to BSON](https://f9xr.github.io/troolify/tools/coding/json-to-bson.html): Serialize JSON to BSON - MongoDB's binary format - with hex, base64 and byte count outputs.
-- [POJO to JSON](https://f9xr.github.io/troolify/tools/coding/pojo-to-json.html): Turn a Java POJO class into a JSON template with typed defaults to seed API fixtures and Postman collections.
-- [YAML Viewer](https://f9xr.github.io/troolify/tools/coding/yaml-viewer.html): Parse, format and validate YAML with optional alphabetical key sorting and copy-as-JSON.
-- [CSV Validator](https://f9xr.github.io/troolify/tools/coding/csv-validator.html): Catch column drift, unterminated quoted cells and stray quotes - RFC 4180 compliant validation.
-- [PX to REM Converter](https://f9xr.github.io/troolify/tools/coding/px-to-rem-converter.html): Convert between PX, REM, EM, % and PT in real time with an adjustable base font size and code snippets.
-- [Hex to Binary Converter](https://f9xr.github.io/troolify/tools/coding/hex-to-binary-converter.html): Convert hexadecimal to binary and back instantly, with live decimal values in both directions.
-- [ASCII to Hex Converter](https://f9xr.github.io/troolify/tools/coding/ascii-to-hex-converter.html): Convert ASCII text to hex and back with character count and byte size.
-- [HTML Minifier](https://f9xr.github.io/troolify/tools/coding/html-minifier.html): Minify HTML with 10+ options - whitespace, comments, inline CSS/JS - and export to HTML, JS or JSX.
-- [Image Size Finder](https://f9xr.github.io/troolify/tools/coding/image-size-finder.html): Find pixel dimensions, aspect ratio and file size of any image - drop a file or paste a URL.
-- [Venmo Fee Calculator](https://f9xr.github.io/troolify/tools/finance/venmo-fee-calculator.html): Calculate exact Venmo fees for Goods & Services, credit card, instant transfer, Cash a Check, ATM and crypto.
-- [Footer Animations Prompt](https://f9xr.github.io/troolify/tools/prompts/footer-animations-prompt-guide.html): Generate a detailed, ready-to-paste AI prompt for stunning website footer animations - fade-ins, floating social icons, glowing hovers and more, tailored to your framework and accessibility needs.
+- [Remove Line Breaks](https://f9xr.org/troolify/tools/text/remove-line-breaks.html): Remove line breaks, carriage returns and extra blank lines from any text in one click. 100% client-side.
+- [Add Line Breaks](https://f9xr.org/troolify/tools/text/add-line-breaks.html): Insert line breaks after a set number of characters or words to reformat any text block.
+- [Empty Line Remover](https://f9xr.org/troolify/tools/text/empty-line-remover.html): Remove empty lines and trim stray whitespace from pasted text.
+- [Remove Duplicate Lines](https://f9xr.org/troolify/tools/text/remove-duplicate-lines.html): Delete duplicate lines and keep only unique entries in any list or pasted text. No uploads.
+- [Line Breaks to Paragraphs](https://f9xr.org/troolify/tools/text/line-breaks-to-paragraphs.html): Convert each line or double line break of pasted text into separate HTML paragraphs.
+- [Paragraphs to Single Line](https://f9xr.org/troolify/tools/text/paragraphs-to-single-line.html): Merge an entire multi-paragraph document into one single smooth line of text.
+- [Sort List Alphabetically](https://f9xr.org/troolify/tools/text/sort-list-alphabetically.html): Sort any list A to Z or Z to A with case and number options.
+- [Replace Text](https://f9xr.org/troolify/tools/text/replace-text.html): Find and replace words, phrases or regular expressions across any text, with optional case sensitivity.
+- [Title Case Converter](https://f9xr.org/troolify/tools/text/title-case-converter.html): Convert any sentence to Title Case with smart handling of accents, apostrophes and small words.
+- [Remove Spaces](https://f9xr.org/troolify/tools/text/remove-spaces.html): Delete all spaces, tabs and non-breaking characters from text, with an option to keep single spaces.
+- [Tabs to Spaces](https://f9xr.org/troolify/tools/text/tabs-to-spaces.html): Convert tab characters to spaces with a configurable indent width - and spaces back to tabs.
+- [Remove Numbers](https://f9xr.org/troolify/tools/text/remove-numbers.html): Strip digits from any text, optionally keeping decimals and negatives.
+- [Sentences Counter](https://f9xr.org/troolify/tools/text/sentences-counter.html): Count the exact number of sentences in your text with smart period, exclamation and question detection.
+- [Random Sentence Generator](https://f9xr.org/troolify/tools/text/random-sentence-generator.html): Generate endless random English sentences for writing prompts, captions or inspiration.
+- [Random Noun Generator](https://f9xr.org/troolify/tools/text/random-noun-generator.html): Generate random common nouns by category for games, place names or creativity.
+- [Random Adjectives Generator](https://f9xr.org/troolify/tools/text/random-adjectives-generator.html): Get random descriptive adjectives with optional categories like taste, size, sound or emotion.
+- [Random String Generator](https://f9xr.org/troolify/tools/text/random-string-generator.html): Generate random strings, UUIDs and tokens with length, character set and case options.
+- [Backwards Text Generator](https://f9xr.org/troolify/tools/text/backwards-text-generator.html): Reverse any text to spell it backwards, with mirror and upside-down formats.
+- [Fake Word Generator](https://f9xr.org/troolify/tools/text/fake-word-generator.html): Generate realistic-sounding fake words for games, usernames, brand names or inspiration.
+- [Repeat Text Generator](https://f9xr.org/troolify/tools/text/repeat-text-generator.html): Repeat any text 2, 10 or 10,000 times with an optional separator between copies.
+- [Tiny Text Generator](https://f9xr.org/troolify/tools/text/tiny-text-generator.html): Convert normal letters into tiny subscript-style text for emails, bios and comments.
+- [Cursive Text Generator](https://f9xr.org/troolify/tools/text/cursive-text-generator.html): Turn plain text into elegant Unicode cursive and script fonts for profiles, bios and posts.
+- [Bold Text Generator](https://f9xr.org/troolify/tools/text/bold-text-generator.html): Convert plain text into bold Unicode characters for bold comments, bios and social posts.
+- [HTML to Text Converter](https://f9xr.org/troolify/tools/coding/html-to-text-converter.html): Strip markup and extract clean, readable text from any HTML.
+- [Remove HTML Tags](https://f9xr.org/troolify/tools/coding/remove-html-tags.html): Remove every HTML tag from pasted markup, keeping only the plain text content.
+- [HTML Table Generator](https://f9xr.org/troolify/tools/coding/html-table-generator.html): Generate a clean HTML table from rows and cells with headers, borders and class options.
+- [HTML List Generator](https://f9xr.org/troolify/tools/coding/html-list-generator.html): Generate ul or ol list markup from lines of plain text, with nesting options.
+- [HTML Text Generator](https://f9xr.org/troolify/tools/coding/html-text-generator.html): Get ready-to-copy HTML snippets for emphasis, headings, links and formatting.
+- [Compress HTML](https://f9xr.org/troolify/tools/coding/compress-html.html): Minify HTML by removing comments, whitespace, and optional quotes and attributes.
+- [Uncompress HTML](https://f9xr.org/troolify/tools/coding/uncompress-html.html): Expand minified HTML into readable, indented markup.
+- [HTML Character Encoding](https://f9xr.org/troolify/tools/coding/html-character-encoding.html): Find or convert the HTML entity code for any character for safe embedding.
+- [Convert Word to Clean HTML](https://f9xr.org/troolify/tools/converters/word-to-clean-html.html): Paste copied Word content and get clean, semantic HTML with Word styles stripped.
+- [Convert Word to Text](https://f9xr.org/troolify/tools/converters/word-to-text.html): Turn messy Word formatting into clean plain text with paragraph breaks preserved.
+- [Convert Plain Text to HTML](https://f9xr.org/troolify/tools/converters/plain-text-to-html.html): Auto-convert plain text into formatted HTML with paragraphs, lists and clickable links.
+- [Convert Email to HTML](https://f9xr.org/troolify/tools/converters/email-to-html.html): Turn a plain-text email draft into a styled HTML email with a call-to-action button.
+- [Convert URLs to HTML Links](https://f9xr.org/troolify/tools/converters/urls-to-html-links.html): Auto-detect URLs in any text and convert them into clickable anchor tags with target and rel options.
+- [Convert CSV Text to HTML Table](https://f9xr.org/troolify/tools/converters/csv-to-html-table.html): Paste CSV data and generate a clean HTML table with header detection and delimiter choice.
+- [Convert Word to PDF](https://f9xr.org/troolify/tools/pdf/word-to-pdf.html): Turn a .docx file into a PDF right in your browser - no uploads, nothing stored.
+- [Convert Excel to PDF](https://f9xr.org/troolify/tools/pdf/excel-to-pdf.html): Turn an .xlsx spreadsheet into a readable PDF with adjustable orientation, scaling and columns.
+- [Convert Images to PDF](https://f9xr.org/troolify/tools/pdf/images-to-pdf.html): Combine JPG, PNG or WebP images into a single PDF with order, page size and orientation options.
+- [Convert Text to PDF](https://f9xr.org/troolify/tools/pdf/text-to-pdf.html): Turn plain text into a clean, downloadable PDF with adjustable page size, margins and font size.
+- [Extract Text from PDF](https://f9xr.org/troolify/tools/pdf/pdf-to-text.html): Extract all readable text from a PDF while keeping the file local - no uploads.
+- [PDF to Grayscale](https://f9xr.org/troolify/tools/pdf/pdf-to-grayscale.html): Convert a color PDF to grayscale so it prints cleanly and uses less ink.
+- [Merge PDFs](https://f9xr.org/troolify/tools/pdf/merge-pdfs.html): Combine multiple PDF files into one in any order and download the merged result.
+- [Remove PDF Pages](https://f9xr.org/troolify/tools/pdf/remove-pdf-pages.html): Delete specific pages from any PDF with a checkbox list and live preview.
+- [PDF Metadata Viewer](https://f9xr.org/troolify/tools/pdf/pdf-metadata-viewer.html): View title, author, creation date and all hidden metadata stored inside any PDF.
+- [Remove PDF Metadata](https://f9xr.org/troolify/tools/pdf/remove-pdf-metadata.html): Strip title, author and all hidden metadata from a PDF to protect your privacy.
+- [Unredact PDF (Check Exposure)](https://f9xr.org/troolify/tools/pdf/unredact-pdf.html): Reveal what text may still be hidden under black redaction boxes in any PDF you own.
+- [Random Decision Maker](https://f9xr.org/troolify/tools/misc/random-decision-maker.html): Get an instant random verdict for any dilemma, decided right in your browser.
+- [Random Choice Generator](https://f9xr.org/troolify/tools/misc/random-choice-generator.html): Enter any options and let this tool pick one at random - perfect for giveaways, quizzes and office bets.
+- [Mailto Link Generator](https://f9xr.org/troolify/tools/misc/mailto-link-generator.html): Build a ready-to-use mailto link with subject, body and carbon copy fields.
+- [Random Address Generator](https://f9xr.org/troolify/tools/testing/random-address-generator.html): Generate realistic fake addresses from 45+ countries with Playwright, Cypress, CSV, JSON and SQL export - 100% client-side.
+- [Credit Card Generator](https://f9xr.org/troolify/tools/testing/credit-card-generator.html): Generate Luhn-valid test card numbers for Visa, MasterCard, Amex, Discover and JCB with CSV, JSON and Playwright export.
+- [Routing Number Generator](https://f9xr.org/troolify/tools/testing/routing-number-generator.html): Generate ABA-valid US routing numbers in bulk - 9 digits, valid checksum, ready for payment form tests.
+- [IMEI Generator](https://f9xr.org/troolify/tools/testing/imei-generator.html): Generate Luhn-valid 15-digit IMEIs for QA, form validation, device registry seeding and fixtures.
+- [Fake Email Generator](https://f9xr.org/troolify/tools/testing/fake-email-generator.html): Generate synthetic emails across public (Gmail, Outlook, Yahoo) and dev-safe domains, bulk up to 100.
+- [Fake Detail Generator](https://f9xr.org/troolify/tools/testing/fake-detail-generator.html): Generate full synthetic person profiles - name, email, phone, address and DOB - with JSON, CSV, SQL and Playwright export.
+- [Random Unicode Generator](https://f9xr.org/troolify/tools/testing/random-unicode-generator.html): Generate bulk Unicode characters from curated ranges - Latin, Greek, Cyrillic, symbols and emoji.
+- [JWT Decoder](https://f9xr.org/troolify/tools/coding/jwt-decoder.html): Decode a JWT's header and payload with readable claim timestamps and expiry status - decode-only, nothing leaves the tab.
+- [Text Compare](https://f9xr.org/troolify/tools/coding/text-compare.html): Side-by-side diff with line, word and character granularity, exportable as unified diff or .patch.
+- [YAML Compare](https://f9xr.org/troolify/tools/coding/yaml-compare.html): Diff two YAML files with a normalize mode that sorts keys so only real changes show - Kubernetes and Helm friendly.
+- [XML Compare](https://f9xr.org/troolify/tools/coding/xml-compare.html): Diff two XML files with optional re-indentation for SOAP, RSS, sitemaps, Android layouts and POMs.
+- [CSV Compare](https://f9xr.org/troolify/tools/coding/csv-compare.html): Diff two CSV files with cell re-quoting so only real data changes show - ideal for ETL output and DB exports.
+- [JSON Escape](https://f9xr.org/troolify/tools/coding/json-escape.html): Escape any string for embedding in JSON - quotes, backslashes, newlines and control characters.
+- [JSON Unescape](https://f9xr.org/troolify/tools/coding/json-unescape.html): Decode JSON-escaped strings back to raw text, reversing quotes, newlines and Unicode escapes.
+- [Unstringify JSON](https://f9xr.org/troolify/tools/coding/unstringify-json.html): Decode a stringified JSON blob and pretty-print the inner document - webhooks, log lines and double-encoding.
+- [JSONPath Tester](https://f9xr.org/troolify/tools/coding/jsonpath-tester.html): Test JSONPath expressions against any JSON with live evaluation, filter syntax and preset queries.
+- [JSON to BSON](https://f9xr.org/troolify/tools/coding/json-to-bson.html): Serialize JSON to BSON - MongoDB's binary format - with hex, base64 and byte count outputs.
+- [POJO to JSON](https://f9xr.org/troolify/tools/coding/pojo-to-json.html): Turn a Java POJO class into a JSON template with typed defaults to seed API fixtures and Postman collections.
+- [YAML Viewer](https://f9xr.org/troolify/tools/coding/yaml-viewer.html): Parse, format and validate YAML with optional alphabetical key sorting and copy-as-JSON.
+- [CSV Validator](https://f9xr.org/troolify/tools/coding/csv-validator.html): Catch column drift, unterminated quoted cells and stray quotes - RFC 4180 compliant validation.
+- [PX to REM Converter](https://f9xr.org/troolify/tools/coding/px-to-rem-converter.html): Convert between PX, REM, EM, % and PT in real time with an adjustable base font size and code snippets.
+- [Hex to Binary Converter](https://f9xr.org/troolify/tools/coding/hex-to-binary-converter.html): Convert hexadecimal to binary and back instantly, with live decimal values in both directions.
+- [ASCII to Hex Converter](https://f9xr.org/troolify/tools/coding/ascii-to-hex-converter.html): Convert ASCII text to hex and back with character count and byte size.
+- [HTML Minifier](https://f9xr.org/troolify/tools/coding/html-minifier.html): Minify HTML with 10+ options - whitespace, comments, inline CSS/JS - and export to HTML, JS or JSX.
+- [Image Size Finder](https://f9xr.org/troolify/tools/coding/image-size-finder.html): Find pixel dimensions, aspect ratio and file size of any image - drop a file or paste a URL.
+- [Venmo Fee Calculator](https://f9xr.org/troolify/tools/finance/venmo-fee-calculator.html): Calculate exact Venmo fees for Goods & Services, credit card, instant transfer, Cash a Check, ATM and crypto.
+- [Footer Animations Prompt](https://f9xr.org/troolify/tools/prompts/footer-animations-prompt-guide.html): Generate a detailed, ready-to-paste AI prompt for stunning website footer animations - fade-ins, floating social icons, glowing hovers and more, tailored to your framework and accessibility needs.
 
 ## Categories
-- [AI Tools](https://f9xr.github.io/troolify/tools/ai/index.html): Prompt, text, image and code generation utilities.
-- [Audio Tools](https://f9xr.github.io/troolify/tools/audio/index.html): BPM, song length and audio production utilities.
-- [Developer Tools](https://f9xr.github.io/troolify/tools/coding/index.html): Coding, debugging and web development utilities.
-- [Converters](https://f9xr.github.io/troolify/tools/converters/index.html): Convert data between formats instantly.
-- [Cooking Tools](https://f9xr.github.io/troolify/tools/cooking/index.html): Cooking, recipe and kitchen helpers.
-- [Crypto Tools](https://f9xr.github.io/troolify/tools/crypto/index.html): Cryptocurrency and blockchain calculators.
-- [Finance Tools](https://f9xr.github.io/troolify/tools/finance/index.html): Money, savings and finance calculators.
-- [Fun & Games](https://f9xr.github.io/troolify/tools/fun/index.html): Fun, games and entertainment utilities.
-- [Health Tools](https://f9xr.github.io/troolify/tools/health/index.html): Health, fitness and wellness tools.
-- [HVAC Tools](https://f9xr.github.io/troolify/tools/hvac/index.html): Heating, ventilation and air conditioning - load, airflow, duct design, refrigeration and lab exhaust utilities.
-- [Image Tools](https://f9xr.github.io/troolify/tools/image/index.html): Resize, compress, convert and edit images.
-- [Math Tools](https://f9xr.github.io/troolify/tools/math/index.html): Number, algebra, geometry, trigonometry and unit conversion utilities.
-- [Misc Tools](https://f9xr.github.io/troolify/tools/misc/index.html): Useful utilities that don't fit anywhere else.
-- [PDF Tools](https://f9xr.github.io/troolify/tools/pdf/index.html): PDF creation, merging and conversion tools.
-- [Prompt Tools](https://f9xr.github.io/troolify/tools/prompts/index.html): Ready-made prompts for AI workflows.
-- [SEO & Marketing](https://f9xr.github.io/troolify/tools/seo/index.html): Search engine optimization and marketing tools.
-- [Statistics](https://f9xr.github.io/troolify/tools/statistics/index.html): Statistics, math and data analysis tools.
-- [Testing Tools](https://f9xr.github.io/troolify/tools/testing/index.html): QA test data generators and developer testing utilities.
-- [Text Tools](https://f9xr.github.io/troolify/tools/text/index.html): Format, convert, analyze and manipulate text.
-- [Time Tools](https://f9xr.github.io/troolify/tools/time/index.html): Time, date and scheduling tools.
-- [Video Tools](https://f9xr.github.io/troolify/tools/video/index.html): Video editing and conversion tools.
-- [YouTube Tools](https://f9xr.github.io/troolify/tools/youtube/index.html): YouTube utilities for creators, marketers and support teams.
+- [AI Tools](https://f9xr.org/troolify/tools/ai/index.html): Prompt, text, image and code generation utilities.
+- [Audio Tools](https://f9xr.org/troolify/tools/audio/index.html): BPM, song length and audio production utilities.
+- [Developer Tools](https://f9xr.org/troolify/tools/coding/index.html): Coding, debugging and web development utilities.
+- [Converters](https://f9xr.org/troolify/tools/converters/index.html): Convert data between formats instantly.
+- [Cooking Tools](https://f9xr.org/troolify/tools/cooking/index.html): Cooking, recipe and kitchen helpers.
+- [Crypto Tools](https://f9xr.org/troolify/tools/crypto/index.html): Cryptocurrency and blockchain calculators.
+- [Finance Tools](https://f9xr.org/troolify/tools/finance/index.html): Money, savings and finance calculators.
+- [Fun & Games](https://f9xr.org/troolify/tools/fun/index.html): Fun, games and entertainment utilities.
+- [Health Tools](https://f9xr.org/troolify/tools/health/index.html): Health, fitness and wellness tools.
+- [HVAC Tools](https://f9xr.org/troolify/tools/hvac/index.html): Heating, ventilation and air conditioning - load, airflow, duct design, refrigeration and lab exhaust utilities.
+- [Image Tools](https://f9xr.org/troolify/tools/image/index.html): Resize, compress, convert and edit images.
+- [Math Tools](https://f9xr.org/troolify/tools/math/index.html): Number, algebra, geometry, trigonometry and unit conversion utilities.
+- [Misc Tools](https://f9xr.org/troolify/tools/misc/index.html): Useful utilities that don't fit anywhere else.
+- [PDF Tools](https://f9xr.org/troolify/tools/pdf/index.html): PDF creation, merging and conversion tools.
+- [Prompt Tools](https://f9xr.org/troolify/tools/prompts/index.html): Ready-made prompts for AI workflows.
+- [SEO & Marketing](https://f9xr.org/troolify/tools/seo/index.html): Search engine optimization and marketing tools.
+- [Statistics](https://f9xr.org/troolify/tools/statistics/index.html): Statistics, math and data analysis tools.
+- [Testing Tools](https://f9xr.org/troolify/tools/testing/index.html): QA test data generators and developer testing utilities.
+- [Text Tools](https://f9xr.org/troolify/tools/text/index.html): Format, convert, analyze and manipulate text.
+- [Time Tools](https://f9xr.org/troolify/tools/time/index.html): Time, date and scheduling tools.
+- [Video Tools](https://f9xr.org/troolify/tools/video/index.html): Video editing and conversion tools.
+- [YouTube Tools](https://f9xr.org/troolify/tools/youtube/index.html): YouTube utilities for creators, marketers and support teams.
 
 ## Catalog
-- [Utility Catalog](https://f9xr.github.io/troolify/tools/index.html): Browse every category and tool.
+- [Utility Catalog](https://f9xr.org/troolify/tools/index.html): Browse every category and tool.
 
 # LLMs
-- [Home](https://f9xr.github.io/troolify/index.html): Site homepage.
-- [About Us](https://f9xr.github.io/troolify/pages/about.html): The Troolify mission and the F9XR Team.
-- [Editorial Policies](https://f9xr.github.io/troolify/press/editorial-policies.html): Content and review policies.
-- [Accessibility Statement](https://f9xr.github.io/troolify/pages/accessibility-statement.html)
-- [Disclaimer](https://f9xr.github.io/troolify/press/disclaimer.html)
-- [Contact](https://f9xr.github.io/troolify/pages/contact.html)
-- [Feedback](https://f9xr.github.io/troolify/pages/feedback.html)
-- [Privacy Policy](https://f9xr.github.io/troolify/pages/privacy-policy.html)
-- [Terms of Service](https://f9xr.github.io/troolify/pages/terms.html)
-- [HTML Sitemap](https://f9xr.github.io/troolify/pages/sitemap.html)
+- [Home](https://f9xr.org/troolify/index.html): Site homepage.
+- [About Us](https://f9xr.org/troolify/pages/about.html): The Troolify mission and the F9XR Team.
+- [Editorial Policies](https://f9xr.org/troolify/press/editorial-policies.html): Content and review policies.
+- [Accessibility Statement](https://f9xr.org/troolify/pages/accessibility-statement.html)
+- [Disclaimer](https://f9xr.org/troolify/press/disclaimer.html)
+- [Contact](https://f9xr.org/troolify/pages/contact.html)
+- [Feedback](https://f9xr.org/troolify/pages/feedback.html)
+- [Privacy Policy](https://f9xr.org/troolify/pages/privacy-policy.html)
+- [Terms of Service](https://f9xr.org/troolify/pages/terms.html)
+- [HTML Sitemap](https://f9xr.org/troolify/pages/sitemap.html)
 
 ## Company
-- [F9XR Team](https://f9xr.github.io): The development team behind Troolify.
+- [F9XR Team](https://f9xr.org): The development team behind Troolify.
 - [GitHub Repository](https://github.com/f9xr/troolify): Source code and issue tracking.
 
 ## Contact
-- Email: tontufytservices@gmail.com
+- Email: hello@f9xr.org
 
 ## License
 - Code: open source under the repository license (see GitHub).
 - Website content: copyright (c) 2026 Troolify / F9XR Team. All rights reserved.
-- Citation: reference the site as "Troolify by F9XR Team" and link to https://f9xr.github.io/troolify/index.html
+- Citation: reference the site as "Troolify by F9XR Team" and link to https://f9xr.org/troolify/index.html

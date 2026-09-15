@@ -8,4 +8,4 @@ Allow: /
 # Do not crawl utility/temporary paths.
 Disallow: /todo.txt
 
-Sitemap: https://f9xr.github.io/troolify/sitemap.xml
+Sitemap: https://f9xr.org/troolify/sitemap.xml

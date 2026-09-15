@@ -60,7 +60,7 @@
         '<a class="badge-link" href="https://prolaunch.net" target="_blank" rel="noopener noreferrer" title="Pro Launch Featured Badge">' +
             '<img src="https://prolaunch.net/images/badges/featured-dark.svg" alt="Pro Launch Featured Badge" width="240" height="52" loading="lazy" decoding="async" />' +
         '</a>' +
-        '<a class="badge-link" href="https://nicklaunches.com/products/troolify/?utm_source=f9xr.github.io&utm_medium=badge&utm_campaign=featured" target="_blank" rel="noopener noreferrer">' +
+        '<a class="badge-link" href="https://nicklaunches.com/products/troolify/?utm_source=f9xr.org&utm_medium=badge&utm_campaign=featured" target="_blank" rel="noopener noreferrer">' +
             '<img src="https://nicklaunches.com/badges/featured-dark.png" alt="Troolify on Nick Launches" width="244" height="56" />' +
         '</a>' +
         '<a class="badge-link" href="https://peerpush.com/p/troolify-ulpu" target="_blank" rel="noopener noreferrer">' +
@@ -143,10 +143,10 @@
         '<a class="badge-link" href="https://deeplaunch.io" target="_blank" rel="noopener noreferrer">' +
             '<img src="https://deeplaunch.io/badge/badge_dark.svg" alt="Featured on DeepLaunch.io" width="200" height="54" loading="lazy" decoding="async" />' +
         '</a>' +
-        '<a class="badge-link" href="https://superlaunchlist.com?ref=https%3A%2F%2Ff9xr.github.io%2Ftroolify" target="_blank" rel="noopener noreferrer">' +
+        '<a class="badge-link" href="https://superlaunchlist.com?ref=https%3A%2F%2Ff9xr.org%2Ftroolify" target="_blank" rel="noopener noreferrer">' +
             '<img src="https://superlaunchlist.com/badge.svg" alt="Featured on SuperLaunch List" width="174" height="42" loading="lazy" decoding="async" />' +
         '</a>' +
-        '<a class="badge-link" href="https://www.tinyshelf.co/?ref=f9xr.github.io" target="_blank" rel="noopener noreferrer" title="Featured on tinyshelf">' +
+        '<a class="badge-link" href="https://www.tinyshelf.co/?ref=f9xr.org" target="_blank" rel="noopener noreferrer" title="Featured on tinyshelf">' +
             '<img src="https://www.tinyshelf.co/badge/tinyshelf-badge-dark-f4d1216a.svg" alt="Featured on tinyshelf" width="216" height="64" loading="lazy" decoding="async" />' +
         '</a>' +
         '<a class="badge-link" href="https://lemonlaunch.dev/productivity/troolify" target="_blank" rel="noopener noreferrer">' +
@@ -651,7 +651,7 @@
                                 '</a>' +
                                 '<p class="mt-4 max-w-md text-sm leading-[1.7] text-[#F8F9FA]/90 sm:text-[15px]">Troolify is a privacy-first workspace on the internet where your digital workflows run instantly, securely, and entirely inside your browser.</p>' +
                                 '<div class="mt-5 flex flex-col gap-1.5 text-sm text-[#9CA3AF]">' +
-                                    '<span>Made by <a href="https://f9xr.github.io" target="_blank" rel="noopener noreferrer" class="font-medium text-white/80 transition hover:text-[#3B82F6]">F9XR Team</a></span>' +
+                                    '<span>Made by <a href="https://f9xr.org" target="_blank" rel="noopener noreferrer" class="font-medium text-white/80 transition hover:text-[#3B82F6]">F9XR Team</a></span>' +
                                     '<a href="https://github.com/f9xr/troolify" target="_blank" rel="noopener noreferrer" class="font-medium text-white/80 transition hover:text-[#3B82F6]">This website is Open Source</a>' +
                                 '</div>' +
                             '</div>' +
@@ -676,13 +676,13 @@
                             '<nav aria-label="F9XR Network">' +
                                 '<h4 class="text-xs font-semibold uppercase tracking-[0.22em] text-[#E9ECEF]">F9XR Network</h4>' +
                                 '<ul class="mt-3.5 space-y-2">' +
-                                    '<li><a href="https://f9xr.github.io/" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-[#3B82F6]">F9XR Team</a></li>' +
-                                    '<li><a href="https://f9xr.github.io/services/index.html" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-[#3B82F6]">Services</a></li>' +
-                                    '<li><a href="https://f9xr.github.io/case-studies/index.html" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-[#3B82F6]">Case Studies</a></li>' +
-                                    '<li><a href="https://f9xr.github.io/announcements/index.html" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-[#3B82F6]">Announcements</a></li>' +
-                                    '<li><a href="https://f9xr.github.io/directories/index.html" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-[#3B82F6]">Directories</a></li>' +
-                                    '<li><a href="https://f9xr.github.io/BharatByDay/" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-[#3B82F6]">भारतByDay</a></li>' +
-                                    '<li><a href="https://f9xr.github.io/articles/" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-[#3B82F6]">Articles</a></li>' +
+                                    '<li><a href="https://f9xr.org/" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-[#3B82F6]">F9XR Team</a></li>' +
+                                    '<li><a href="https://f9xr.org/services/index.html" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-[#3B82F6]">Services</a></li>' +
+                                    '<li><a href="https://f9xr.org/case-studies/index.html" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-[#3B82F6]">Case Studies</a></li>' +
+                                    '<li><a href="https://f9xr.org/announcements/index.html" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-[#3B82F6]">Announcements</a></li>' +
+                                    '<li><a href="https://f9xr.org/directories/index.html" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-[#3B82F6]">Directories</a></li>' +
+                                    '<li><a href="https://f9xr.org/BharatByDay/" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-[#3B82F6]">भारतByDay</a></li>' +
+                                    '<li><a href="https://f9xr.org/articles/" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-[#3B82F6]">Articles</a></li>' +
                                 '</ul>' +
                             '</nav>' +
 
@@ -707,11 +707,11 @@
                             /* Right column - contact + newsletter capture */
                             '<div>' +
                                 '<h4 class="text-xs font-semibold uppercase tracking-[0.22em] text-[#E9ECEF]">Stay up to date</h4>' +
-                                '<form class="mt-4 flex flex-col gap-3 sm:flex-row" action="mailto:tontufytservices@gmail.com" method="post" enctype="text/plain">' +
+                                '<form class="mt-4 flex flex-col gap-3 sm:flex-row" action="mailto:hello@f9xr.org" method="post" enctype="text/plain">' +
                                     '<input type="email" name="email" placeholder="Enter your email" aria-label="Enter your email" class="w-full flex-1 rounded-xl border border-[#343A40] bg-[#212529] px-4 py-3 text-sm text-white outline-none transition placeholder:text-[#9CA3AF] focus:border-[#3B82F6] focus:shadow-[0_0_0_4px_rgba(59,130,246,0.15)]">' +
                                     '<button type="submit" class="rounded-xl bg-[#3B82F6] px-5 py-3 text-sm font-bold text-white shadow-[0_4px_20px_rgba(59,130,246,0.35)] transition hover:bg-[#2563EB]">Sign Up</button>' +
                                 '</form>' +
-                                '<p class="mt-4 max-w-xs text-xs leading-relaxed text-[#9CA3AF]">Get product updates in your inbox. Questions? <a href="mailto:tontufytservices@gmail.com" class="font-medium text-white/80 transition hover:text-[#3B82F6]">tontufytservices@gmail.com</a></p>' +
+                                '<p class="mt-4 max-w-xs text-xs leading-relaxed text-[#9CA3AF]">Get product updates in your inbox. Questions? <a href="mailto:hello@f9xr.org" class="font-medium text-white/80 transition hover:text-[#3B82F6]">hello@f9xr.org</a></p>' +
                             '</div>' +
                         '</div>' +
 
@@ -984,13 +984,13 @@
                 "@context": "https://schema.org",
                 "@type": "Organization",
                 "name": "Troolify",
-                "url": "https://f9xr.github.io/troolify/index.html",
-                "logo": "https://f9xr.github.io/troolify/assets/images/logo_nobg.webp",
-                "email": "tontufytservices@gmail.com",
+                "url": "https://f9xr.org/troolify/index.html",
+                "logo": "https://f9xr.org/troolify/assets/images/logo_nobg.webp",
+                "email": "hello@f9xr.org",
                 "contactPoint": {
                     "@type": "ContactPoint",
                     "contactType": "customer support",
-                    "email": "tontufytservices@gmail.com",
+                    "email": "hello@f9xr.org",
                     "availableLanguage": "English"
                 },
                 "sameAs": [

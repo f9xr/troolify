@@ -1,10 +1,10 @@
 # Troolify
 
-Free, fast, 100% client-side online tools hub by the [F9XR Team](https://f9xr.github.io/).
+Free, fast, 100% client-side online tools hub by the [F9XR Team](https://f9xr.org/).
 
 Every tool runs entirely in your browser. Your text, files, and data never leave your device. No accounts, no uploads, no tracking.
 
-**Live site:** https://f9xr.github.io/troolify/
+**Live site:** https://f9xr.org/troolify/
 
 ## Features
 
@@ -84,7 +84,7 @@ npx tailwindcss -i ./src/input.css -o ./assets/css/tailwind.css --minify
 ## Deployment
 
 Push to the `main` branch. GitHub Pages builds and deploys automatically at
-`https://f9xr.github.io/troolify/`.
+`https://f9xr.org/troolify/`.
 
 ## License
 

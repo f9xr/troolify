@@ -385,8 +385,8 @@
         '<h2>Want to develop your own tools site like this?</h2>' +
         '<p>Meet the <strong>F9XR Development Team</strong> - we develop custom, high-quality websites designed just as per your needs.</p>' +
         '<div class="fp-actions">' +
-          '<a class="rt-btn fp-btn" href="https://f9xr.github.io/" target="_blank" rel="noopener noreferrer">Meet F9XR Team <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>' +
-          '<span class="fp-url"><i class="fa-solid fa-globe" aria-hidden="true"></i>f9xr.github.io</span>' +
+          '<a class="rt-btn fp-btn" href="https://f9xr.org/" target="_blank" rel="noopener noreferrer">Meet F9XR Team <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>' +
+          '<span class="fp-url"><i class="fa-solid fa-globe" aria-hidden="true"></i>f9xr.org</span>' +
         '</div>' +
       '</div>';
     promoAnchor.parentNode.insertBefore(promo, promoAnchor.nextSibling);
