@@ -144,6 +144,9 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 800;
     text-transform: uppercase;
     font-style: italic;
+    line-height: 1.02;
+    text-wrap: balance;
+    filter: drop-shadow(0 12px 34px rgba(2, 6, 23, 0.5));
 }
 
 .section-title {
@@ -419,12 +422,27 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     z-index: 0;
 }
 
 .hero-bg {
-    transform: scale(1.05); /* slightly scaled for parallax start */
+    transform: scale(1.05); /* slightly scaled for ken-burns start */
+    animation: hero-kenburns 26s ease-in-out infinite alternate;
+    will-change: transform;
+}
+
+@keyframes hero-kenburns {
+    from { transform: scale(1.05) translate3d(0, 0, 0); }
+    to   { transform: scale(1.15) translate3d(-14px, 10px, 0); }
+}
+
+/* Smooth bottom fade so the hero blends into the discovery section */
+.hero-fade {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(to bottom, transparent 55%, var(--bg-dark) 100%);
 }
 
 .hero-overlay, .cinematic-overlay, .final-cta-overlay {
@@ -508,6 +526,10 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px solid rgba(59, 130, 246, 0.3);
 }
 
+.hero .eyebrow {
+    box-shadow: 0 6px 24px rgba(59, 130, 246, 0.2), inset 0 1px 0 rgba(147, 197, 253, 0.25);
+}
+
 .hero-subtitle {
     font-size: clamp(1.1rem, 2vw, 1.25rem);
     color: var(--text-muted);
@@ -519,7 +541,26 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     gap: 1rem;
     justify-content: center;
+    align-items: center;
     margin-bottom: 2.5rem;
+}
+
+.hero-ctas .btn {
+    padding: 0.95rem 2rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.hero-ctas .btn i {
+    transition: transform 0.22s ease;
+}
+
+.hero-ctas .btn:hover i {
+    transform: translateX(4px);
+}
+
+.hero-ctas .btn-primary {
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.18);
 }
 
 .hero-search-tip {
@@ -1491,6 +1532,40 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 auto;
 }
 
+.timeline-step::before {
+    content: attr(data-step);
+    position: absolute;
+    top: 0.55rem;
+    right: 1.05rem;
+    font-size: 2.7rem;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    color: rgba(96, 165, 250, 0.14);
+    pointer-events: none;
+    user-select: none;
+}
+
+.how-cta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 3rem;
+    padding-top: 2.25rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.how-cta .btn i {
+    transition: transform 0.22s ease;
+}
+
+.how-cta .btn:hover i {
+    transform: translateX(4px);
+}
+
 .timeline-connector {
     flex: 1;
     height: 1px;
@@ -1647,7 +1722,7 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .hero-bg {
-        background-attachment: scroll;
+        animation: none; /* keep motion low + GPU usage down on small screens */
     }
     
     .timeline {

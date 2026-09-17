@@ -3,7 +3,7 @@
    ----------------------------------------------------------------------------
    Reusable styles for the long-form content that sits below every tool:
    table of contents, SEO article, keyword/tag box, author box, related tools,
-   comments, and the article + ad-sidebar layout.
+   comments, and the article layout.
 
    Depends on tool-shared.css design tokens (loaded via tool.css).
    ============================================================================ */
@@ -128,8 +128,7 @@
 .comments .utterances{max-width:100%}
 
 /* ============================================================================
-   SEO article layout — single wide column (sidebar removed until AdSense is
-   approved; ad slots can be re-introduced later as a right rail)
+   SEO article layout — single wide column
    ============================================================================ */
 
 .article-layout{margin-top:48px}

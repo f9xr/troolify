@@ -96,6 +96,7 @@
         <!-- Hero Background using Image 1 -->
         <div class="hero-bg" style="background-image: url('assets/images/hero-image-1.webp');"></div>
         <div class="hero-overlay"></div>
+        <div class="hero-fade" aria-hidden="true"></div>
         <div class="hero-ambient" aria-hidden="true">
             <div class="hero-blob hero-blob-1"></div>
             <div class="hero-blob hero-blob-2"></div>
@@ -117,8 +118,8 @@
             <p class="hero-search-tip"><kbd>/</kbd> opens quick search from anywhere</p>
             
             <div class="hero-ctas">
-                <a href="#tools" class="btn btn-primary">Explore Tools <i class="fa-solid fa-arrow-right"></i></a>
-                <a href="#about" class="btn btn-secondary">Discover Troolify <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="tools/index.html" class="btn btn-primary">Explore Tools <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="pages/about.html" class="btn btn-secondary">Discover Troolify <i class="fa-solid fa-arrow-right"></i></a>
             </div>
             
             <div class="hero-trust">
@@ -131,7 +132,7 @@
             </div>
         </div>
 
-        <a href="#tools" class="hero-scroll" aria-label="Scroll to tools"><i class="fa-solid fa-chevron-down" aria-hidden="true"></i></a>
+        <a href="tools/index.html" class="hero-scroll" aria-label="Explore the tools catalog"><i class="fa-solid fa-chevron-down" aria-hidden="true"></i></a>
     </section>
 
     <!-- Tool Discovery Section -->
@@ -178,7 +179,7 @@
             </div>
             <div class="random-tool-actions">
                 <button type="button" class="btn btn-primary" id="randomToolBtn"><i class="fa-solid fa-shuffle"></i> Shuffle Again</button>
-                <a href="#tools" class="btn btn-secondary">Browse All Tools</a>
+                <a href="tools/index.html" class="btn btn-secondary">Browse All Tools</a>
             </div>
         </div>
     </section>
@@ -236,7 +237,7 @@
         <div class="container cinematic-content reveal">
             <h2 class="cinematic-title">One Hub. <br><span class="gradient-text">Endless Possibilities.</span></h2>
             <p class="cinematic-desc">From quick utilities to powerful productivity tools, Troolify is designed to become your everyday online toolkit.</p>
-            <a href="#tools" class="btn btn-primary btn-large">Explore the Hub <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="tools/index.html" class="btn btn-primary btn-large">Explore the Hub <i class="fa-solid fa-arrow-right"></i></a>
         </div>
     </section>
 
@@ -250,26 +251,31 @@
             </div>
             
             <div class="timeline">
-                <div class="timeline-step">
+                <div class="timeline-step" data-step="01">
                     <div class="step-badge"><i class="fa-solid fa-compass" aria-hidden="true"></i></div>
                     <span class="step-index">Step 01</span>
                     <h3 class="step-title">Find Your Tool</h3>
                     <p class="step-desc">Browse categories or search the catalog to locate exactly what you need in seconds.</p>
                 </div>
                 <div class="timeline-connector" aria-hidden="true"></div>
-                <div class="timeline-step">
+                <div class="timeline-step" data-step="02">
                     <div class="step-badge"><i class="fa-solid fa-bolt" aria-hidden="true"></i></div>
                     <span class="step-index">Step 02</span>
                     <h3 class="step-title">Run It in Your Browser</h3>
                     <p class="step-desc">Everything executes right here - no downloads, no installs, no account required.</p>
                 </div>
                 <div class="timeline-connector" aria-hidden="true"></div>
-                <div class="timeline-step">
+                <div class="timeline-step" data-step="03">
                     <div class="step-badge"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div>
                     <span class="step-index">Step 03</span>
                     <h3 class="step-title">Done, Instantly</h3>
                     <p class="step-desc">Get your result immediately, copy it, and get back to what matters.</p>
                 </div>
+            </div>
+
+            <div class="how-cta">
+                <a href="tools/index.html" class="btn btn-primary btn-large">Browse the Catalog <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="pages/about.html" class="btn btn-secondary btn-large">Why Troolify? <i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
@@ -406,8 +412,8 @@
             <h2 class="final-title">Your Next Useful Tool Is Already Here.</h2>
             <p class="final-desc">Explore Troolify and discover a growing collection of tools built to make everyday digital tasks simpler.</p>
             <div class="final-buttons">
-                <a href="#tools" class="btn btn-primary btn-large">Explore All Tools <i class="fa-solid fa-arrow-right"></i></a>
-                <a href="#about" class="btn btn-secondary btn-large">Learn More</a>
+                <a href="tools/index.html" class="btn btn-primary btn-large">Explore All Tools <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="pages/about.html" class="btn btn-secondary btn-large">Learn More</a>
 </div>
         </div>
     </section>

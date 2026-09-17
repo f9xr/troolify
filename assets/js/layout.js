@@ -235,12 +235,6 @@
 
             var html = "";
 
-            // Dynamic ad slot - native banner at the top of the right sidebar.
-            // The actual ad code is injected by assets/js/ads.js (config-driven).
-            html += '<div class="dash-rs-panel dash-rs-ad" data-ad-slot="native" aria-label="Advertisement">' +
-                        '<span class="ad-badge">Advertisement</span>' +
-                    '</div>';
-
             if (isToolPage) {
                 // Category context from the current folder path.
                 var path = window.location.pathname.replace(/\/+$/, "").toLowerCase();
@@ -498,15 +492,6 @@
                 mainEl.appendChild(rightAside);
                 buildRightSidebar(rightAside, rootPrefix());
 
-                // Dynamic ad slot - responsive leaderboard at the end of the
-                // center column (rendered by assets/js/ads.js).
-                var leaderEl = document.createElement("div");
-                leaderEl.className = "ad-slot ad-slot-leader";
-                leaderEl.setAttribute("data-ad-slot", "leaderboard");
-                leaderEl.setAttribute("aria-label", "Advertisement");
-                leaderEl.innerHTML = '<span class="ad-badge">Advertisement</span>';
-                dashMain.appendChild(leaderEl);
-
                 // --- Mobile toggle + overlay -------------------------------------
                 var toggle = document.createElement("button");
                 toggle.type = "button";
@@ -552,17 +537,6 @@
         var fileName = dirs[dirs.length - 1] || "";
         var pageDir = dirs.length > 1 ? dirs[dirs.length - 2] : "";
         var prefix = rootPrefix();
-
-        // Dynamic ad slot - responsive leaderboard below the main content on
-        // pages without the dashboard layout (home, about, contact, ...).
-        if (body.getAttribute("data-layout") !== "tool" && mainEl) {
-            var pageLeader = document.createElement("div");
-            pageLeader.className = "ad-slot ad-slot-leader";
-            pageLeader.setAttribute("data-ad-slot", "leaderboard");
-            pageLeader.setAttribute("aria-label", "Advertisement");
-            pageLeader.innerHTML = '<span class="ad-badge">Advertisement</span>';
-            mainEl.parentNode.insertBefore(pageLeader, mainEl.nextSibling);
-        }
 
         // Absolute (from this page) links to the two key destinations.
         var homeHref = prefix + "index.html";
@@ -667,8 +641,8 @@
                                     '<li><a href="' + prefix + 'pages/sitemap.html" class="text-white/80 transition hover:text-[#3B82F6]">Sitemap</a></li>' +
                                     '<li><a href="' + prefix + 'pages/accessibility-statement.html" class="text-white/80 transition hover:text-[#3B82F6]">Accessibility</a></li>' +
                                     '<li><a href="' + prefix + 'press/editorial-policies.html" class="text-white/80 transition hover:text-[#3B82F6]">Editorial Policies</a></li>' +
-'                                    <li><a href="' + prefix + 'pages/privacy-policy.html" class="text-white/80 transition hover:text-[#3B82F6]">Privacy Policy</a></li>' +
-'                                    <li><a href="' + prefix + 'pages/terms.html" class="text-white/80 transition hover:text-[#3B82F6]">Terms of Service</a></li>' +
+'<li><a href="' + prefix + 'pages/privacy-policy.html" class="text-white/80 transition hover:text-[#3B82F6]">Privacy Policy</a></li>' +
+                                    '<li><a href="' + prefix + 'pages/terms.html" class="text-white/80 transition hover:text-[#3B82F6]">Terms of Service</a></li>' +
                                 '</ul>' +
                             '</nav>' +
 
@@ -834,7 +808,7 @@
                 '.cta-3d{position:relative;z-index:0;max-width:1280px;width:calc(100% - 2rem);margin:2.5rem auto 0;border-radius:30px;transition:transform .45s cubic-bezier(.16,1,.3,1),box-shadow .45s ease;box-shadow:0 26px 55px -10px rgba(0,0,0,.6),0 14px 28px -12px rgba(0,0,0,.55)}' +
                 '.tx-cta:hover .cta-3d{transform:rotateX(3deg) translateY(-5px) scale(1.005);box-shadow:0 40px 80px -16px rgba(0,0,0,.65),0 20px 40px -16px rgba(0,0,0,.6)}' +
 
-                '.tx-footer{position:fixed;bottom:0;left:0;right:0;z-index:0;background:var(--bg-dark,#0A0A0A);padding:0;border-top:1px solid rgba(255,255,255,.06);max-height:100dvh;overflow-y:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;opacity:0;transform:translateY(24px);transition:opacity .45s ease .05s,transform .45s cubic-bezier(.16,1,.3,1)}' +
+                '.tx-footer{position:fixed;bottom:0;left:0;right:0;z-index:0;background:var(--bg-dark,#0A0A0A);padding:0;border-top:1px solid rgba(255,255,255,.06);max-height:100dvh;overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;opacity:0;transform:translateY(24px);transition:opacity .45s ease .05s,transform .45s cubic-bezier(.16,1,.3,1)}' +
                 '.tx-footer::-webkit-scrollbar{width:0;height:0;display:none}' +
                 '.tx-footer.footer-revealed{opacity:1;transform:none}' +
                 /* Footer-reveal shell: the outer .page-reveal layer carries NO background so its bottom
@@ -1327,20 +1301,6 @@
             dd.className = "search-dropdown";
             discWrap.appendChild(dd);
             initLiveSearch(discInput, dd, false);
-        }
-
-        /* --------------------------------------------------------------------
-           Dynamic ad loader
-           Boot the config-driven ad system (assets/js/ads.js). It scans the
-           [data-ad-slot] placeholders this routine just injected and fills
-           them with the correct network code. Disable on a single page with
-           <body data-ads="off">.
-           -------------------------------------------------------------------- */
-        if (body.getAttribute("data-ads") !== "off" && !window.TroolifyAds) {
-            var adsScript = document.createElement("script");
-            adsScript.src = prefix + "assets/js/ads.js";
-            adsScript.async = true;
-            document.body.appendChild(adsScript);
         }
     });
 })();

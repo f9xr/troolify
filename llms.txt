@@ -27,7 +27,41 @@ Key facts about Troolify:
 - [URL Encoder & Decoder](https://f9xr.org/troolify/tools/coding/url-encoder-decoder.html): Encode or percent-decode URLs and text instantly for safe links and API work.
 - [CSV to JSON Converter](https://f9xr.org/troolify/tools/coding/csv-to-json-converter.html): Convert CSV into clean JSON with custom keys and separators, fully in the browser.
 - [SHA Hash Generator](https://f9xr.org/troolify/tools/coding/sha-hash-generator.html): Generate SHA-1, SHA-256, SHA-384 or SHA-512 hashes via the native Web Crypto API.
+- [Image Resizer](https://f9xr.org/troolify/tools/image/image-resizer.html): Resize an image to exact pixels or a percentage and download it instantly.
+- [EXIF Data Viewer](https://f9xr.org/troolify/tools/image/exif-data-viewer.html): View camera, lens, exposure and GPS metadata, or export a cleaned copy that strips it all for privacy.
+- [Image to Base64 Converter](https://f9xr.org/troolify/tools/image/image-to-base64.html): Convert an image to a Base64 data URL for HTML or CSS.
+- [Aspect Ratio Calculator](https://f9xr.org/troolify/tools/image/aspect-ratio-calculator.html): Find missing dimensions and simplify ratios to 16:9, 4:3 or 1:1.
 - [Color Converter](https://f9xr.org/troolify/tools/image/color-converter.html): Convert any color between HEX, RGB and HSL with a live preview swatch.
+- [PNG to SVG Converter](https://f9xr.org/troolify/tools/image/png-to-svg-converter.html): Trace PNG bitmaps into clean, scalable SVG vector graphics.
+- [JPG to SVG Converter](https://f9xr.org/troolify/tools/image/jpg-to-svg-converter.html): Trace JPG and JPEG photos into clean SVG vector graphics.
+- [JPG to PNG Converter](https://f9xr.org/troolify/tools/image/jpg-to-png-converter.html): Convert JPG and JPEG images to lossless PNG with transparency support.
+- [WebP to PNG Converter](https://f9xr.org/troolify/tools/image/webp-to-png-converter.html): Convert WebP images to PNG with transparency support, fully in the browser.
+- [SVG Compressor](https://f9xr.org/troolify/tools/image/svg-compressor.html): Remove unnecessary elements, simplify paths and reduce SVG file size.
+- [PNG Compressor](https://f9xr.org/troolify/tools/image/png-compressor.html): Compress PNG images with quality controls, 100% client-side.
+- [JPG Compressor](https://f9xr.org/troolify/tools/image/jpg-compressor.html): Compress JPG and JPEG photos with quality control, 100% client-side.
+- [Image Compressor](https://f9xr.org/troolify/tools/image/compress-image.html): Compress JPG, PNG, SVG and GIF images while maintaining quality.
+- [Image Cropper](https://f9xr.org/troolify/tools/image/crop-image.html): Crop images by pixel or with a visual editor, fully in the browser.
+- [Image Converter](https://f9xr.org/troolify/tools/image/convert-image.html): Convert images to JPG, PNG, WebP, BMP or PDF, with batch support.
+- [Light & Color Adjuster](https://f9xr.org/troolify/tools/image/adjust-light-color.html): Fine-tune exposure, contrast, highlights, shadows, whites, blacks, temperature and tint.
+- [Background Remover](https://f9xr.org/troolify/tools/image/remove-background.html): Erase photo backgrounds and export a transparent PNG or solid color fill.
+- [Mockup Frame](https://f9xr.org/troolify/tools/image/mockup-frame.html): Wrap screenshots in browser, phone, tablet, laptop or monitor frames.
+- [Watermark Image](https://f9xr.org/troolify/tools/image/watermark-image.html): Add text or logo watermarks with 9-point positioning, opacity, rotation and tiling.
+- [Image Rotator](https://f9xr.org/troolify/tools/image/rotate-image.html): Rotate or flip many images at once or filter by landscape/portrait orientation.
+- [Photo Album Maker](https://f9xr.org/troolify/tools/image/photo-album.html): Turn photos into a print-ready album with cover, layouts and PDF export.
+- [Drawing Canvas](https://f9xr.org/troolify/tools/image/draw.html): Paint freehand with 8 brush styles, flood-fill regions and color picking.
+- [Number List Generator](https://f9xr.org/troolify/tools/math/number-list-generator.html): Generate number sequences and ranges with a custom start, step and count.
+- [Filter Numbers](https://f9xr.org/troolify/tools/math/filter-numbers.html): Keep only the numbers that match greater-than, less-than or between rules.
+- [Sort Numbers](https://f9xr.org/troolify/tools/math/sort-numbers.html): Sort any list of numbers ascending or descending and remove duplicates.
+- [Min & Max Calculator](https://f9xr.org/troolify/tools/math/min-max-calculator.html): Find the smallest and largest values in a list plus the span between them.
+- [Number Base Converter](https://f9xr.org/troolify/tools/math/number-base-converter.html): Convert numbers between binary, octal, decimal and hexadecimal.
+- [Binary Converter](https://f9xr.org/troolify/tools/math/binary-converter.html): Convert numbers to and from binary with a bit-by-bit breakdown.
+- [Hexadecimal Converter](https://f9xr.org/troolify/tools/math/hexadecimal-converter.html): Convert decimal to hex and hex to decimal, byte by byte.
+- [Calculator](https://f9xr.org/troolify/tools/math/calculator.html): A fast, keyboard-friendly calculator with percent support, running in your browser.
+- [Area Calculator](https://f9xr.org/troolify/tools/math/area-calculator.html): Find the area of rectangles, circles, triangles, trapezoids and more.
+- [Rule of Three Calculator](https://f9xr.org/troolify/tools/math/rule-of-three-calculator.html): Solve direct proportion problems and cross-multiplication with the working shown.
+- [Inverse Rule of Three Calculator](https://f9xr.org/troolify/tools/math/inverse-rule-of-three-calculator.html): Solve inverse proportion problems when one value rises as another falls.
+- [Trigonometric Functions Calculator](https://f9xr.org/troolify/tools/math/trigonometric-functions-calculator.html): Compute sine, cosine, tangent and their reciprocals from any angle.
+- [Radians to Degrees Converter](https://f9xr.org/troolify/tools/math/radians-degrees-converter.html): Convert angles between radians and degrees with a common-angle reference.
 - [Random Word Generator](https://f9xr.org/troolify/tools/text/random-word-generator.html): Generate random words from six curated lists - common, nouns, verbs, adjectives, animals or food.
 - [Bra Size Calculator](https://f9xr.org/troolify/tools/health/bra-size-calculator.html): Find your bra size and sister sizes from underbust and bust measurements with a band and cup fit guide.
 - [Body Fat Percentage Calculator](https://f9xr.org/troolify/tools/health/body-fat-percentage-calculator.html): Estimate body fat percentage with the US Navy method from a few tape measurements.

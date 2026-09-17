@@ -29,7 +29,7 @@
 - **HVAC Tools**: Load calculators, duct sizing, refrigeration tools, psychrometric calculator
 - **PDF Tools**: Word/Excel/Images/Text to PDF, PDF to text/grayscale, merge PDFs, remove/add pages, metadata viewer/remover, unredact check, paper size converter
 - **Finance Tools**: VAT calculator, Venmo fee calculator
-- **Image Tools**: Color converter
+- **Image Tools**: Image resizer, image compressor, EXIF data viewer, image to base64, aspect ratio calculator, color converter, PNG/JPG to SVG, JPG to PNG, WebP to PNG, SVG/PNG/JPG compressors, image cropper, image converter, light and color adjuster, background remover, mockup frame, watermark image, image rotator, photo album maker, drawing canvas
 - **Math Tools**: Number list generator/filter/sort, min-max calculator, number base/binary/hex converter, calculator, area calculator, rule of three (direct/inverse), trig functions, radians-degrees converter
 - **Misc Tools**: Password generator, entropy calculator, random decision maker, random choice generator, mailto link generator
 
