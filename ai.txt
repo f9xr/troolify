@@ -1,6 +1,6 @@
 # Troolify - AI Agent Information
 
-> Free, privacy-first online tools hub. All tools run 100% client-side in the browser - no data leaves your device.
+> Free, privacy-first online tools hub. Most tools run 100% client-side in the browser - a few are clearly labelled API-powered tools.
 
 ## Site Overview
 - **Name**: Troolify
@@ -12,9 +12,10 @@
 
 ## Key Features
 - Free forever, no sign-up required
-- 100% client-side processing, zero data retention
+- Processing is client-side with zero data retention (a few labelled tools call a public API)
 - Privacy-first architecture - no server uploads
-- 220+ tools across 22 categories
+- 300+ tools across 25 categories
+- A few optional tools are powered by a public web API (abhi-api.vercel.app) and always labelled on-page - the rest stay 100% client-side
 - Responsive design, works on all devices
 
 ## Tools by Category
@@ -26,11 +27,14 @@
 - **SEO Tools**: Schema markup generator, multiline slug generator
 - **Audio Tools**: Song length calculator, BPM tools
 - **Health Tools**: Ovulation calculator, macro calculator, TDEE calculator, body fat percentage, pregnancy due date
+- **Construction Tools**: Concrete volume, slab/driveway/patio cost estimators, gravel and rebar calculators, CMU block, quote breakdowns.
 - **HVAC Tools**: Load calculators, duct sizing, refrigeration tools, psychrometric calculator
 - **PDF Tools**: Word/Excel/Images/Text to PDF, PDF to text/grayscale, merge PDFs, remove/add pages, metadata viewer/remover, unredact check, paper size converter
 - **Finance Tools**: VAT calculator, Venmo fee calculator
+- **Color Tools**: Lighten/darken/invert, color mixer, gradient generator, complementary and analogous color schemes.
 - **Image Tools**: Image resizer, image compressor, EXIF data viewer, image to base64, aspect ratio calculator, color converter, PNG/JPG to SVG, JPG to PNG, WebP to PNG, SVG/PNG/JPG compressors, image cropper, image converter, light and color adjuster, background remover, mockup frame, watermark image, image rotator, photo album maker, drawing canvas
 - **Math Tools**: Number list generator/filter/sort, min-max calculator, number base/binary/hex converter, calculator, area calculator, rule of three (direct/inverse), trig functions, radians-degrees converter
+- **Files Tools**: Split/join text files, random file generator, corrupt a file.
 - **Misc Tools**: Password generator, entropy calculator, random decision maker, random choice generator, mailto link generator
 
 ## Technical Details
@@ -38,10 +42,11 @@
 - Hosting: GitHub Pages
 - No backend required
 - No user accounts or tracking
-- All processing happens in the browser
+- Nearly all processing happens in the browser (a few labelled tools call a public API)
 
 ## For AI Agents
 - Read `llms.txt` for detailed tool descriptions
 - Visit `/pages/sitemap.html` for complete site map
+- Read `/pages/developers.html` for site architecture and `/pages/methodology.html` for editorial methodology
 - All tool pages follow pattern: `/tools/{category}/{tool-name}.html`
-- Each tool is self-contained with no external dependencies
+- Most tools are self-contained with no external dependencies; the labelled API-powered tools call abhi-api.vercel.app

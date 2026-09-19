@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Browser Storage &amp; Cookie Inspector Tool | Check Local Storage Usage</title>
+<meta name="description" content="Check local storage, session storage &amp; cookies online free. Inspect browser storage usage instantly with Troolify's no-signup tool. Perfect for developers and business sites.">
+<meta name="author" content="F9XR Development Team">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#212529">
+<link rel="canonical" href="https://f9xr.org/troolify/tools/coding/online-browser-storage-cookie-inspector.html">
+<meta property="og:site_name" content="Troolify">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Free Browser Storage &amp; Cookie Inspector Tool | Check Local Storage Usage">
+<meta property="og:description" content="Check local storage, session storage &amp; cookies online free. Inspect browser storage usage instantly with Troolify's no-signup tool - 100% client-side, nothing uploaded.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://f9xr.org/troolify/tools/coding/online-browser-storage-cookie-inspector.html">
+<meta property="og:image" content="https://f9xr.org/troolify/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-09-19">
+<meta property="article:modified_time" content="2026-09-19">
+<meta property="article:section" content="Developer Tools">
+<meta property="article:tag" content="Browser Storage Inspector">
+<meta property="article:tag" content="Cookie Inspector">
+<meta property="article:tag" content="Local Storage Checker">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Browser Storage &amp; Cookie Inspector Tool | Check Local Storage Usage">
+<meta name="twitter:description" content="Check local storage, session storage &amp; cookies online free. Inspect browser storage usage instantly - 100% browser based.">
+<meta name="twitter:image" content="https://f9xr.org/troolify/assets/images/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://f9xr.org/troolify/index.html" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://f9xr.org/troolify/tools/index.html" },
+    { "@type": "ListItem", "position": 3, "name": "Developer Tools", "item": "https://f9xr.org/troolify/tools/coding/index.html" },
+    { "@type": "ListItem", "position": 4, "name": "Browser Storage & Cookie Inspector", "item": "https://f9xr.org/troolify/tools/coding/online-browser-storage-cookie-inspector.html" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Browser Storage & Cookie Inspector",
+  "url": "https://f9xr.org/troolify/tools/coding/online-browser-storage-cookie-inspector.html",
+  "applicationCategory": "DeveloperApplication",
+  "applicationSubCategory": "Browser Storage & Cookie Inspector",
+  "operatingSystem": "Any (web browser)",
+  "featureList": ["View all local storage keys and values", "Check session storage contents", "List cookies with names, values and attributes", "Approximate storage usage with quota meter", "Search and filter entries", "Copy or clear individual entries", "100% client-side processing"],
+  "description": "Check local storage, session storage & cookies online free. Inspect browser storage usage instantly with Troolify's no-signup tool. Perfect for developers and business sites.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "datePublished": "2026-09-19",
+  "dateModified": "2026-09-19",
+  "author": { "@type": "Organization", "name": "F9XR Development Team", "url": "https://f9xr.github.io/" },
+  "publisher": { "@type": "Organization", "name": "Troolify", "url": "https://f9xr.org/troolify/", "logo": { "@type": "ImageObject", "url": "https://f9xr.org/troolify/assets/images/logo_nobg.webp", "width": 1407, "height": 768 } }
+}
+</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Free Browser Storage & Cookie Inspector Tool | Check Local Storage Usage","description":"Check local storage, session storage & cookies online free. Inspect browser storage usage instantly with Troolify's no-signup tool. Perfect for developers and business sites.","image":"https://f9xr.org/troolify/assets/images/og-image.jpg","datePublished":"2026-09-19","dateModified":"2026-09-19","mainEntityOfPage":"https://f9xr.org/troolify/tools/coding/online-browser-storage-cookie-inspector.html","author":{"@type":"Organization","name":"F9XR Development Team","url":"https://f9xr.github.io/"},"publisher":{"@type":"Organization","name":"Troolify","url":"https://f9xr.org/troolify/","logo":{"@type":"ImageObject","url":"https://f9xr.org/troolify/assets/images/logo_nobg.webp","width":1407,"height":768}}}</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between cookies and local storage?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Cookies are small and sent to the server with every request. Local storage holds larger amounts of data that stay only in the browser and are not automatically sent to the server. Local storage is better for preferences or offline data; cookies are better for session management that the server needs to see." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it safe to use an online browser storage inspector?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, when the tool runs entirely in your browser and does not send data to any server. Troolify tools follow this model: everything stays local on your device." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I inspect storage on any website?",
+      "acceptedAnswer": { "@type": "Answer", "text": "You can inspect storage for the origin of the page you are currently viewing. Most tools read the data available to JavaScript on that page. Some advanced extensions can do more, but a pure online tool stays limited to the current context for security reasons." }
+    },
+    {
+      "@type": "Question",
+      "name": "How much data can local storage hold?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Most browsers allow around 5\u201310 MB per origin. The exact limit varies. A good inspector will often show approximate usage so you can stay under the quota." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does clearing browser storage log me out of websites?",
+      "acceptedAnswer": { "@type": "Answer", "text": "It can. Clearing cookies or local storage often removes login tokens and preferences. That is why you should clear deliberately during testing rather than casually on your everyday browsing profile." }
+    },
+    {
+      "@type": "Question",
+      "name": "Why should a local business owner care about browser storage?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Because it affects how smoothly customers book appointments, complete purchases, or stay logged in. It also relates to privacy compliance and page speed, both of which influence Google rankings and customer trust." }
+    }
+  ]
+}
+</script>
+
+<link rel="icon" type="image/webp" href="../../assets/images/favicon.webp"><link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+<link rel="stylesheet" href="../../assets/css/tailwind.css">
+<link rel="stylesheet" href="../../assets/css/tool.css">
+<link rel="stylesheet" href="../../assets/css/site-shell.css">
+<link rel="stylesheet" href="../../assets/css/tool-page.css">
+<link rel="stylesheet" href="../../assets/css/seo-article.css">
+<style>
+.bs-summary{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(min-width:720px){.bs-summary{grid-template-columns:repeat(4,1fr)}}
+.bs-stat{border:1px solid var(--border);border-radius:14px;padding:14px 16px;background:#1B2028}
+.bs-stat .bs-stat-label{display:flex;align-items:center;gap:8px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--faint)}
+.bs-stat .bs-stat-label i{color:#60A5FA;width:14px;text-align:center}
+.bs-stat .bs-stat-value{font-size:20px;font-weight:800;color:var(--ink);margin-top:8px;line-height:1.2;word-break:break-word}
+.bs-stat .bs-stat-sub{font-size:11.5px;color:var(--faint);margin-top:4px}
+.bs-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 14px}
+.bs-tab{border:1px solid var(--border);background:#1B2028;color:var(--muted);font-family:inherit;font-size:13px;font-weight:700;padding:9px 16px;border-radius:999px;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:border-color .15s,color .15s,background .15s}
+.bs-tab:hover{border-color:rgba(59,130,246,.5);color:var(--ink)}
+.bs-tab.active{background:rgba(59,130,246,.14);border-color:rgba(59,130,246,.6);color:#93C5FD}
+.bs-tab .bs-count{font-size:10.5px;font-weight:800;background:rgba(59,130,246,.18);color:#93C5FD;border-radius:99px;padding:2px 8px}
+.bs-panel{display:none}
+.bs-panel.active{display:block}
+.bs-toolbar{display:flex;align-items:center;gap:10px;justify-content:space-between;flex-wrap:wrap;margin-bottom:12px}
+.bs-search{position:relative;flex:1;min-width:200px}
+.bs-search i{position:absolute;left:13px;top:50%;transform:translateY(-50%);font-size:12px;color:var(--faint);pointer-events:none}
+.bs-search input{width:100%;background:#1B2028;border:1px solid var(--border);border-radius:10px;padding:9px 13px 9px 34px;font-family:inherit;font-size:13.5px;font-weight:600;color:var(--ink);outline:none}
+.bs-search input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+.bs-meta{font-size:12px;color:var(--faint);font-weight:700}
+.bs-danger{background:rgba(248,113,113,.1);border:1px solid rgba(248,113,113,.3);color:#FCA5A5}
+.bs-danger:hover{background:rgba(248,113,113,.2)}
+.bs-wrap{border:1px solid var(--border);border-radius:14px;overflow:hidden;background:#1B2028}
+.bs-head{display:grid;grid-template-columns:minmax(150px,30%) 1fr 86px 120px;gap:10px;padding:10px 14px;background:#171C23;border-bottom:1px solid var(--border);font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.09em;color:var(--faint)}
+.bs-row{display:grid;grid-template-columns:minmax(150px,30%) 1fr 86px 120px;gap:10px;padding:12px 14px;border-bottom:1px solid rgba(255,255,255,.05);align-items:flex-start}
+.bs-row:last-child{border-bottom:none}
+.bs-row:hover{background:rgba(59,130,246,.04)}
+.bs-row.bs-hidden{display:none}
+.bs-key{font-size:13px;font-weight:800;color:#93C5FD;word-break:break-word;line-height:1.4}
+.bs-size{font-size:11.5px;color:var(--faint);font-weight:700;white-space:nowrap}
+.bs-val{font-family:inherit;font-size:13px;color:var(--muted);word-break:break-word;line-height:1.5}
+.bs-val.bs-is-json{font-family:"Cascadia Code",Consolas,Menlo,monospace;font-size:12.5px;color:#A5B4FC}
+.bs-val pre{margin:0;white-space:pre-wrap;word-break:break-word;max-height:220px;overflow:auto;line-height:1.5}
+.bs-actions{display:flex;gap:6px;justify-content:flex-end;flex-wrap:wrap}
+.bs-btn{border:1px solid var(--border);background:#1B2028;color:var(--muted);font-family:inherit;font-size:11.5px;font-weight:700;padding:6px 10px;border-radius:9px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;transition:all .15s}
+.bs-btn:hover{border-color:rgba(59,130,246,.55);color:#93C5FD}
+.bs-btn.bs-copied{border-color:var(--green);color:#6EE7B7}
+.bs-toggle{font-size:11.5px;font-weight:800;color:#60A5FA;background:none;border:none;padding:0;cursor:pointer;margin-top:4px}
+.bs-toggle:hover{text-decoration:underline}
+.bs-empty{text-align:center;padding:34px 20px;color:var(--faint)}
+.bs-empty i{font-size:26px;display:block;margin-bottom:10px;opacity:.6}
+.bs-quota{margin-top:16px;border:1px solid var(--border);border-radius:14px;padding:15px 18px;background:#1B2028}
+.bs-quota-row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:9px}
+.bs-quota-row b{font-size:13.5px;color:var(--ink);display:inline-flex;align-items:center;gap:8px}
+.bs-quota-row b i{color:#60A5FA}
+.bs-quota-row span{font-size:12.5px;color:var(--faint);font-weight:700}
+.bs-meter{height:8px;border-radius:99px;background:#2A2F36;overflow:hidden}
+.bs-meter span{display:block;height:100%;width:0;border-radius:99px;background:var(--green);transition:width .3s ease}
+.bs-meter span.mid{background:#FBBF24}
+.bs-meter span.high{background:#F87171}
+.bs-note{display:flex;gap:10px;align-items:flex-start;background:rgba(59,130,246,.07);border:1px solid rgba(59,130,246,.22);border-radius:12px;padding:11px 14px;margin-top:14px}
+.bs-note i{color:#60A5FA;margin-top:2px}
+.bs-note p{font-size:12.5px;color:var(--muted);line-height:1.6;margin:0}
+@media(max-width:820px){
+  .bs-head,.bs-row{grid-template-columns:1fr}
+  .bs-actions{justify-content:flex-start}
+}
+.issue-table{width:100%;border-collapse:collapse;margin:14px 0}
+.issue-table th,.issue-table td{border:1px solid var(--border);padding:10px 12px;text-align:left;font-size:13.5px;vertical-align:top}
+.issue-table th{background:#171C23;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--faint)}
+.issue-table td{color:var(--muted);line-height:1.55}
+</style>
+</head>
+<body data-layout="tool">
+<noscript>
+    <nav aria-label="Primary" style="position:static;display:block;padding:1rem 1.5rem;background:#212529;border-bottom:1px solid #343A40;text-align:center;font-size:0.9rem;">
+        <a href="../../index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Home</a>
+        <a href="../../tools/index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Tools</a>
+        <a href="../../pages/about.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">About</a>
+        <a href="../../pages/contact.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Contact</a>
+    </nav>
+</noscript>
+
+<main class="tool-main">
+  <div class="container">
+
+    <div class="tool-head hero">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="../../tools/index.html">Tools</a></li>
+          <li><a href="../index.html">Developer Tools</a></li>
+          <li class="current" aria-current="page">Browser Storage &amp; Cookie Inspector</li>
+        </ol>
+      </nav>
+      <div class="hero-main">
+        <span class="tool-badge"><span class="dot"></span>100% client-side &middot; zero data retention</span>
+        <h1>Browser Storage &amp; Cookie Inspector</h1>
+        <p>Inspect local storage, session storage and cookies for the current origin, see approximate storage usage against the browser quota, and copy or clear entries - instantly, with nothing uploaded.</p>
+      </div>
+      <div class="hero-box hero-cat">
+        <h3 class="hero-box-title"><i class="fa-solid fa-folder-open"></i>Category</h3>
+        <div class="tool-meta">
+          <span class="tool-tag"><i class="fa-solid fa-tag"></i>Browser</span>
+          <a class="tool-cat" href="../index.html" aria-label="Browse Developer Tools category"><i class="fa-solid fa-folder"></i>Developer Tools</a>
+        </div>
+      </div>
+      <div class="hero-box hero-qa">
+        <h3 class="hero-box-title"><i class="fa-solid fa-bolt"></i>Quick Actions</h3>
+        <div class="tool-actions">
+          <button class="rt-btn" type="button" id="btnRefresh"><i class="fa-solid fa-rotate"></i>Refresh</button>
+          <button class="rt-btn" type="button" id="btnShare"><i class="fa-solid fa-share-nodes"></i>Share</button>
+          <button class="rt-btn" type="button" id="btnEmbed"><i class="fa-solid fa-code"></i>Embed Tool</button>
+          <a class="rt-btn" href="../../pages/feedback.html"><i class="fa-solid fa-comment"></i>Feedback</a>
+        </div>
+      </div>
+      <div class="hero-box hero-details">
+        <h3 class="hero-box-title"><i class="fa-solid fa-circle-info"></i>Tool Details</h3>
+        <div class="tool-details">
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.github.io/" target="_blank" rel="noopener">F9XR Development Team</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-check-double"></i>Reviewed by</span><a class="detail-value" href="../../press/editorial-policies.html">Review Board</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-clock-rotate-left"></i>Last updated</span><span class="detail-value">19 September 2026</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel clean">
+      <div class="panel-inner">
+
+        <div class="bs-summary">
+          <div class="bs-stat">
+            <div class="bs-stat-label"><i class="fa-solid fa-location-dot"></i>Origin</div>
+            <div class="bs-stat-value" id="bsOrigin">&mdash;</div>
+            <div class="bs-stat-sub" id="bsOriginSub">Inspectable origin</div>
+          </div>
+          <div class="bs-stat">
+            <div class="bs-stat-label"><i class="fa-solid fa-database"></i>Storage entries</div>
+            <div class="bs-stat-value" id="bsTotal">0</div>
+            <div class="bs-stat-sub">local + session + cookies</div>
+          </div>
+          <div class="bs-stat">
+            <div class="bs-stat-label"><i class="fa-solid fa-weight-hanging"></i>Est. usage</div>
+            <div class="bs-stat-value" id="bsUsage">0 B</div>
+            <div class="bs-stat-sub">key + value bytes</div>
+          </div>
+          <div class="bs-stat">
+            <div class="bs-stat-label"><i class="fa-solid fa-shield-halved"></i>Quota</div>
+            <div class="bs-stat-value" id="bsQuota">&mdash;</div>
+            <div class="bs-stat-sub">browser-reported limit</div>
+          </div>
+        </div>
+
+        <div class="bs-tabs" role="tablist" aria-label="Storage types">
+          <button class="bs-tab active" type="button" role="tab" data-tab="local" id="tabLocal"><i class="fa-solid fa-database"></i>Local Storage <span class="bs-count" id="cntLocal">0</span></button>
+          <button class="bs-tab" type="button" role="tab" data-tab="session" id="tabSession"><i class="fa-solid fa-clock"></i>Session Storage <span class="bs-count" id="cntSession">0</span></button>
+          <button class="bs-tab" type="button" role="tab" data-tab="cookies" id="tabCookies"><i class="fa-solid fa-cookie-bite"></i>Cookies <span class="bs-count" id="cntCookies">0</span></button>
+          <button class="bs-tab" type="button" role="tab" data-tab="indexeddb" id="tabIndexed"><i class="fa-solid fa-layer-group"></i>IndexedDB <span class="bs-count" id="cntIndexed">0</span></button>
+          <button class="bs-tab" type="button" role="tab" data-tab="quota" id="tabQuota"><i class="fa-solid fa-gauge-high"></i>Quota</button>
+        </div>
+
+        <div class="bs-panel active" id="panelLocal" role="tabpanel">
+          <div class="bs-toolbar">
+            <div class="bs-search"><i class="fa-solid fa-magnifying-glass"></i><input type="search" id="searchLocal" placeholder="Filter local storage keys or values&hellip;" autocomplete="off" aria-label="Filter local storage"></div>
+            <button class="chip-btn bs-danger" type="button" id="clearLocal" title="Clear all local storage for this origin"><i class="fa-solid fa-trash-can"></i><span class="hide-sm">Clear all</span></button>
+          </div>
+          <div class="bs-wrap" id="wrapLocal" aria-live="polite"></div>
+        </div>
+
+        <div class="bs-panel" id="panelSession" role="tabpanel">
+          <div class="bs-toolbar">
+            <div class="bs-search"><i class="fa-solid fa-magnifying-glass"></i><input type="search" id="searchSession" placeholder="Filter session storage keys or values&hellip;" autocomplete="off" aria-label="Filter session storage"></div>
+            <button class="chip-btn bs-danger" type="button" id="clearSession" title="Clear all session storage for this origin"><i class="fa-solid fa-trash-can"></i><span class="hide-sm">Clear all</span></button>
+          </div>
+          <div class="bs-wrap" id="wrapSession" aria-live="polite"></div>
+        </div>
+
+        <div class="bs-panel" id="panelCookies" role="tabpanel">
+          <div class="bs-toolbar">
+            <div class="bs-search"><i class="fa-solid fa-magnifying-glass"></i><input type="search" id="searchCookies" placeholder="Filter cookies by name or value&hellip;" autocomplete="off" aria-label="Filter cookies"></div>
+            <button class="chip-btn bs-danger" type="button" id="clearCookies" title="Delete all cookies visible to JavaScript for this origin"><i class="fa-solid fa-trash-can"></i><span class="hide-sm">Delete all</span></button>
+          </div>
+          <div class="bs-wrap" id="wrapCookies" aria-live="polite"></div>
+        </div>
+
+        <div class="bs-panel" id="panelIndexed" role="tabpanel">
+          <div class="bs-toolbar">
+            <div class="bs-meta"><i class="fa-solid fa-circle-info"></i> IndexedDB databases for this origin</div>
+          </div>
+          <div class="bs-wrap" id="wrapIndexed" aria-live="polite"></div>
+        </div>
+
+        <div class="bs-panel" id="panelQuota" role="tabpanel">
+          <div class="bs-quota">
+            <div class="bs-quota-row"><b><i class="fa-solid fa-gauge-high"></i>Storage quota meter</b><span id="quotaText">Calculating&hellip;</span></div>
+            <div class="bs-meter"><span id="quotaBar"></span></div>
+            <p class="proc-line" style="margin-top:10px"><i class="fa-solid fa-bolt"></i><span id="quotaDetail">Reading quota with the Storage API...</span></p>
+          </div>
+          <p class="proc-line" style="margin-top:12px"><i class="fa-solid fa-circle-info"></i><span>Browsers typically allow around 5&ndash;10&nbsp;MB per origin for storage. The Storage API quota reflects the browser's own bookkeeping, which includes more than just local and session storage.</span></p>
+        </div>
+
+        <div class="bs-note">
+          <i class="fa-solid fa-shield-halved"></i>
+          <p>For security, a web page can only read storage for its own origin. This inspector reads the data that JavaScript can currently see on this page. To inspect another website, open this tool directly from that website (or run it under that origin) and refresh. Nothing is uploaded or stored &mdash; everything stays in this tab.</p>
+        </div>
+
+        <p class="proc-line"><i class="fa-solid fa-bolt"></i><span id="bsProc">Storage read entirely in this tab - 0 bytes uploaded.</span></p>
+      </div>
+    </div>
+
+    <aside class="disclaimer" aria-label="Disclaimer">
+      <i class="fa-solid fa-circle-info"></i>
+      <p>Disclaimer: Whilst every effort has been made in building our tools, we are not to be held liable for any damages or monetary losses arising out of or in connection with their use. Clearing storage can log you out or reset preferences on the inspected origin - always clear deliberately and only when you intend to. <a href="../../press/disclaimer.html">Full disclaimer</a>.</p>
+    </aside>
+
+    <div class="article-layout">
+      <article class="seo-article">
+        <h2 id="article-title">Browser Storage &amp; Cookies: What Your Website Quietly Saves</h2>
+        <p>Ever opened a website and wondered what data it quietly saves in your browser? Cookies, local storage, session storage. These tiny data stores power logins, preferences, shopping carts, and tracking. But they can also slow things down, raise privacy flags, or break your site&rsquo;s functionality if they get messy.</p>
+        <p>For business owners, startup founders, and local business marketers, understanding browser storage is no longer just a developer concern. It affects page speed, user trust, GDPR compliance, and even how smoothly your customers move through checkout. That is exactly why a free <strong>online browser storage and cookie inspector</strong> matters: you can check local storage usage, view cookies, and inspect session data without installing extensions or digging through complex developer tools. Everything runs in your browser &mdash; no sign-up, no downloads, no data leaving your device.</p>
+
+        <h2 id="what-is-storage">What Is Browser Storage and Why Should Business Owners Care?</h2>
+        <p>Browser storage is the collection of data that websites save on a visitor&rsquo;s device. There are a few main types:</p>
+        <ul>
+          <li><strong>Cookies</strong> &mdash; small text files that remember logins, preferences, or tracking IDs. They travel with every request to the server.</li>
+          <li><strong>Local Storage</strong> &mdash; larger key-value pairs that stay until the user (or the site) clears them. Great for saving settings or cart data across sessions.</li>
+          <li><strong>Session Storage</strong> &mdash; similar to local storage but cleared when the browser tab closes. Useful for temporary form data or one-time flows.</li>
+          <li><strong>IndexedDB</strong> and Cache Storage &mdash; more advanced options for larger structured data and offline capabilities.</li>
+        </ul>
+        <p>Most modern sites use a mix of these. A local business booking system might store appointment preferences in local storage. An e-commerce startup might keep cart items there so they survive a page refresh. Marketing tools often drop cookies for analytics and ads.</p>
+        <p>The problem? Over time these stores can fill up, contain outdated data, or hold sensitive information longer than needed. That affects page load speed, privacy compliance (especially under GDPR and similar rules), debugging when features stop working, and user trust when people notice tracking. Business owners do not need to become developers &mdash; but having a quick way to inspect what a site is storing helps you make smarter decisions about privacy policies, performance, and customer experience.</p>
+
+        <h2 id="how-it-works">How an Online Browser Storage &amp; Cookie Inspector Works</h2>
+        <p>A good browser storage inspector shows you everything a page has saved for the current origin (domain). You open the tool, and it reads the data available to JavaScript on that page.</p>
+        <p>Typical things you can do:</p>
+        <ul>
+          <li>View all local storage keys and values.</li>
+          <li>Check session storage contents.</li>
+          <li>List cookies with their names, values, and attributes.</li>
+          <li>See approximate storage usage and quota.</li>
+          <li>Search or filter entries.</li>
+          <li>Copy or clear specific keys when needed.</li>
+        </ul>
+        <p>Because the tool runs entirely in your browser, nothing is uploaded. This matches Troolify&rsquo;s core promise: <strong>100% local, free, and private</strong>.</p>
+
+        <h2 id="vs-devtools">Why This Beats Digging Through DevTools Alone</h2>
+        <p>Browser developer tools (Chrome DevTools, Firefox Storage Inspector, etc.) are powerful, but they can feel heavy for quick checks. An online inspector gives a cleaner, focused view without opening the full developer panel. It is especially handy on shared computers, mobile browsers, or when you simply want a fast snapshot.</p>
+
+        <h2 id="use-cases">Practical Use Cases for Startups and Local Businesses</h2>
+        <ol>
+          <li><strong>Debugging a broken login or cart</strong> &mdash; a customer keeps getting logged out or their cart empties. Inspect cookies and local storage to see if the session token or cart data is missing or corrupted.</li>
+          <li><strong>Privacy and compliance reviews</strong> &mdash; before updating your privacy policy, open your own site and inspect the cookies and storage. You will know exactly what is being set so you can describe it accurately.</li>
+          <li><strong>Performance checks</strong> &mdash; large local storage values can slow down pages. A quick usage check helps you decide whether to clean up old data or move heavy items elsewhere.</li>
+          <li><strong>Competitor or partner site analysis</strong> &mdash; curious what a competitor&rsquo;s booking tool stores, or what a third-party widget drops on your site? An inspector gives visibility without technical setup.</li>
+          <li><strong>Testing after website updates</strong> &mdash; after a redesign or new feature launch, verify that storage keys still behave as expected.</li>
+        </ol>
+
+        <h2 id="how-to-use">Step-by-Step: How to Check Local Storage Usage and Cookies Online</h2>
+        <ol>
+          <li>Open the <strong>Browser Storage &amp; Cookie Inspector</strong> while you are on the website you want to inspect.</li>
+          <li>Check the <strong>Origin</strong> card to confirm you are inspecting the right site &mdash; storage is scoped per origin.</li>
+          <li>Browse the <strong>Local Storage</strong>, <strong>Session Storage</strong> and <strong>Cookies</strong> tabs to review keys, values and attributes.</li>
+          <li>Use the <strong>search box</strong> to filter entries and call out anything oversized or unexpected.</li>
+          <li>Check <strong>Est. usage</strong> and the <strong>Quota</strong> tab to see how close the origin is to the browser limit.</li>
+          <li>Copy important values for documentation, or clear test data with the delete / clear actions as needed.</li>
+        </ol>
+        <p>Because everything happens client-side, you stay in control of your data.</p>
+
+        <h2 id="common-issues">Common Storage Issues and How to Fix Them</h2>
+        <table class="issue-table">
+          <thead><tr><th>Issue</th><th>What You Might See</th><th>Practical Fix</th></tr></thead>
+          <tbody>
+            <tr><td>Bloated local storage</td><td>High usage or many old keys</td><td>Clear outdated entries; set expiration logic in your code</td></tr>
+            <tr><td>Missing session data</td><td>Features break after tab close</td><td>Confirm whether you need session or local storage</td></tr>
+            <tr><td>Too many tracking cookies</td><td>Long cookie list with third-party domains</td><td>Review marketing tools; update consent banners</td></tr>
+            <tr><td>Login loops</td><td>Session cookies missing or expired</td><td>Check cookie attributes (Secure, SameSite, path)</td></tr>
+            <tr><td>Slow page loads</td><td>Large JSON objects in storage</td><td>Compress data or move heavy items to IndexedDB / server</td></tr>
+          </tbody>
+        </table>
+
+        <h2 id="best-practices">Best Practices for Managing Browser Storage on Business Websites</h2>
+        <ul>
+          <li>Store only what you truly need. Prefer short-lived session storage for temporary data.</li>
+          <li>Set sensible expiration for cookies, and clean up local storage periodically.</li>
+          <li>Avoid putting sensitive personal data in local storage. Prefer secure, HttpOnly cookies for authentication tokens where appropriate.</li>
+          <li>Document the storage keys your site uses. This helps future developers and makes privacy disclosures easier.</li>
+          <li>Test storage behavior after major site changes or third-party script updates.</li>
+          <li>Educate your team: even non-technical staff can use a free online inspector for quick checks.</li>
+        </ul>
+        <p>For local businesses running booking systems, membership sites, or online stores, these habits reduce support tickets and improve the customer experience.</p>
+
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+
+        <details class="faq-item">
+          <summary>What is the difference between cookies and local storage?</summary>
+          <div class="faq-a">
+            <p>Cookies are small and sent to the server with every request. Local storage holds larger amounts of data that stay only in the browser and are not automatically sent to the server. Local storage is better for preferences or offline data; cookies are better for session management that the server needs to see.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Is it safe to use an online browser storage inspector?</summary>
+          <div class="faq-a">
+            <p>Yes, when the tool runs entirely in your browser and does not send data to any server. Troolify tools follow this model: everything stays local on your device.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Can I inspect storage on any website?</summary>
+          <div class="faq-a">
+            <p>You can inspect storage for the origin of the page you are currently viewing. Most tools read the data available to JavaScript on that page. Some advanced extensions can do more, but a pure online tool stays limited to the current context for security reasons.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>How much data can local storage hold?</summary>
+          <div class="faq-a">
+            <p>Most browsers allow around 5&ndash;10 MB per origin. The exact limit varies. A good inspector will often show approximate usage so you can stay under the quota.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Does clearing browser storage log me out of websites?</summary>
+          <div class="faq-a">
+            <p>It can. Clearing cookies or local storage often removes login tokens and preferences. That is why you should clear deliberately during testing rather than casually on your everyday browsing profile.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Why should a local business owner care about browser storage?</summary>
+          <div class="faq-a">
+            <p>Because it affects how smoothly customers book appointments, complete purchases, or stay logged in. It also relates to privacy compliance and page speed, both of which influence Google rankings and customer trust.</p>
+          </div>
+        </details>
+
+        <h2 id="key-takeaways">Key Takeaways</h2>
+        <ul>
+          <li>Browser storage (cookies, local storage, session storage) is essential for modern websites but easy to overlook.</li>
+          <li>An online browser storage and cookie inspector lets you check local storage usage and cookie data quickly, without extensions or accounts.</li>
+          <li>Business owners, startups, and local businesses benefit from regular checks for privacy, performance, and debugging.</li>
+          <li>Troolify provides a free, 100% client-side tool that keeps everything private and fast.</li>
+          <li>Clean storage practices improve speed, compliance, and user trust.</li>
+        </ul>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>Understanding and managing browser storage is a practical skill that pays off for any business with a website. Whether you are debugging a checkout flow, reviewing privacy practices, or simply keeping your site lean, a free online browser storage and cookie inspector makes the process fast and approachable.</p>
+        <p>Pair this inspector with the <a href="../seo/meta-description-checker.html">Meta Description Checker</a> to polish how your site appears in search, use the <a href="json-formatter.html">JSON Formatter</a> to read the structured values you find in storage, and review the <a href="../seo/schema-markup-generator.html">Schema Markup Generator</a> when you want your content marked up correctly for search engines.</p>
+      </article>
+    </div>
+
+    <section class="keyword-box" aria-label="Keywords and tags">
+      <h2>Keyword &amp; Tags</h2>
+      <h3>Keywords</h3>
+      <div class="keywords">
+        <span class="keyword">browser storage inspector</span>
+        <span class="keyword">local storage checker</span>
+        <span class="keyword">cookie inspector online</span>
+        <span class="keyword">check local storage usage</span>
+        <span class="keyword">free cookie viewer</span>
+        <span class="keyword">session storage tool</span>
+        <span class="keyword">browser data inspector</span>
+        <span class="keyword">web storage manager</span>
+        <span class="keyword">privacy cookie check</span>
+        <span class="keyword">Troolify tools</span>
+      </div>
+      <h3>Tags</h3>
+      <div class="tags">
+        <a class="tag" href="../index.html"><i class="fa-solid fa-tag"></i>Browser</a>
+        <a class="tag" href="../index.html"><i class="fa-solid fa-folder"></i>Developer Tools</a>
+        <a class="tag" href="../../tools/index.html"><i class="fa-solid fa-cube"></i>Developer Tools</a>
+      </div>
+    </section>
+
+    <section class="author-box" aria-label="About the publisher">
+      <div class="author-avatar" aria-hidden="true"><img src="../../assets/images/logo_nobg.webp" alt="F9XR logo" loading="lazy" decoding="async" width="1407" height="768"></div>
+      <div>
+        <span class="author-role">Published by</span>
+        <h2>F9XR Development Team</h2>
+        <p>Every Troolify tool is built and reviewed by the F9XR Development Team, then checked by our Review Board for correctness, accessibility, and clarity. Tools run 100% client-side with zero data retention.</p>
+        <div class="author-links">
+          <a href="https://f9xr.github.io/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i>F9XR Team</a>
+          <a href="../../press/editorial-policies.html"><i class="fa-solid fa-scale-balanced"></i>Editorial Policies</a>
+          <a href="https://github.com/f9xr" target="_blank" rel="noopener" aria-label="F9XR on GitHub"><i class="fa-brands fa-github"></i>GitHub</a>
+          <a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on LinkedIn"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+          <a href="https://instagram.com/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on Instagram"><i class="fa-brands fa-instagram"></i>Instagram</a>
+          <a href="https://youtube.com/@QuarterlyLIV" target="_blank" rel="noopener" aria-label="F9XR on YouTube"><i class="fa-brands fa-youtube"></i>YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-tools" aria-label="Related tools">
+      <h2>Related Tools</h2>
+      <div class="related-search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" id="relatedSearch" placeholder="Search all Troolify tools&hellip;" autocomplete="off" aria-label="Search related tools">
+      </div>
+      <div class="related-grid" id="relatedGrid" aria-busy="true">
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+      </div>
+    </section>
+
+    <section class="comments" aria-label="Comments">
+      <h2>Comments</h2>
+      <div id="comments">
+        <script src="https://utteranc.es/client.js" repo="f9xr/troolify" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async></script>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"><span></span><i class="fa-solid fa-layer-group"></i><span></span></div>
+
+  </div>
+</main>
+
+<script src="../../assets/js/layout.js" defer></script>
+<script src="../../assets/js/tools-data.js" defer></script>
+<script src="../../assets/js/tool-page.js" defer></script>
+<script>
+(function(){
+  "use strict";
+
+  var $=function(id){return document.getElementById(id);};
+  var bsOrigin=$("bsOrigin"), bsOriginSub=$("bsOriginSub"), bsTotal=$("bsTotal"),
+      bsUsage=$("bsUsage"), bsQuota=$("bsQuota"), bsProc=$("bsProc");
+  var wrapLocal=$("wrapLocal"), wrapSession=$("wrapSession"), wrapCookies=$("wrapCookies"), wrapIndexed=$("wrapIndexed");
+  var searchLocal=$("searchLocal"), searchSession=$("searchSession"), searchCookies=$("searchCookies");
+  var cntLocal=$("cntLocal"), cntSession=$("cntSession"), cntCookies=$("cntCookies"), cntIndexed=$("cntIndexed");
+
+  function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+
+  function fmtBytes(n){
+    if(!n && n!==0) return "N/A";
+    if(n<1024) return n+" B";
+    if(n<1048576) return (n/1024).toFixed(1)+" KB";
+    return (n/1048576).toFixed(2)+" MB";
+  }
+  function bytesOf(s){ try{ return new TextEncoder().encode(String(s==null?"":s)).length; }catch(e){ return String(s==null?"":s).length; } }
+  function pretty(v){
+    if(typeof v==="string"){ try{ return JSON.stringify(JSON.parse(v),null,2); }catch(e){ return v; } }
+    try{ return JSON.stringify(v,null,2); }catch(e){ return String(v); }
+  }
+  function isJSONstr(v){
+    if(typeof v!=="string") return false;
+    try{ JSON.parse(v); return true; }catch(e){ return false; }
+  }
+  function trunc(v, n){ return v.length>n ? v.slice(0,n) : v; }
+
+  function collectStore(storeName){
+    var out=[], total=0, n=0;
+    try{
+      n=storeName.length;
+      for(var i=0;i<n;i++){
+        var k=storeName.key(i);
+        if(k===null) continue;
+        var v=storeName.getItem(k);
+        var size=bytesOf(k)+bytesOf(v);
+        total+=size;
+        out.push({key:k,value:v,size:size,json:isJSONstr(v)});
+      }
+    }catch(e){ /* storage disabled */ }
+    return {items:out,total:total,count:out.length};
+  }
+
+  function parseCookies(){
+    var out=[], total=0;
+    var doc=document.cookie;
+    if(doc){
+      doc.split(";").forEach(function(pair){
+        var idx=pair.indexOf("=");
+        var name=(idx===-1?pair:pair.slice(0,idx)).trim();
+        var value=idx===-1?"":pair.slice(idx+1).trim();
+        if(name==="") return;
+        var size=bytesOf(name)+bytesOf(value);
+        total+=size;
+        out.push({name:name,value:value,size:size});
+      });
+    }
+    return {items:out,total:total,count:out.length};
+  }
+
+  /* ---------------- rendering ---------------- */
+
+  function valueHtml(item, storeKind){
+    var prettyVal=pretty(item.value);
+    var cls=item.json||item.value&&item.value[0]==="{";
+    var long=prettyVal.length>500;
+    var shown=long?trunc(prettyVal,500):prettyVal;
+    var copyBtn='<button class="bs-btn bs-copy" type="button" data-copy="'+esc(storeKind)+'|'+esc(item.key)+'" title="Copy value"><i class="fa-solid fa-copy"></i>Copy</button>';
+    var delBtn='<button class="bs-btn" type="button" data-del="'+esc(storeKind)+'|'+esc(item.key)+'" title="Delete this entry"><i class="fa-solid fa-trash-can"></i>Delete</button>';
+    var toggle=long?'<button class="bs-toggle" type="button" data-toggle="'+esc(storeKind)+'|'+esc(item.key)+'">Show full value</button>':'';
+    return '<div class="bs-row" data-row="'+esc(item.key.toLowerCase())+'">'+
+      '<div class="bs-key">'+esc(item.key)+'</div>'+
+      '<div class="bs-val'+(cls?' bs-is-json':'')+'" data-pretty="'+esc(item.key)+'"><pre data-full="'+esc(item.key)+'">'+esc(shown)+'</pre>'+toggle+'</div>'+
+      '<div class="bs-size">'+fmtBytes(item.size)+'</div>'+
+      '<div class="bs-actions">'+copyBtn+delBtn+'</div>'+
+    '</div>';
+  }
+
+  function cookieHtml(item){
+    var prettyVal=pretty(item.value);
+    var long=prettyVal.length>500;
+    var shown=long?trunc(prettyVal,500):prettyVal;
+    var copyBtn='<button class="bs-btn bs-copy" type="button" data-copy="cookies|'+esc(item.name)+'" title="Copy value"><i class="fa-solid fa-copy"></i>Copy</button>';
+    var delBtn='<button class="bs-btn" type="button" data-del="cookies|'+esc(item.name)+'" title="Delete this cookie"><i class="fa-solid fa-trash-can"></i>Delete</button>';
+    var toggle=long?'<button class="bs-toggle" type="button" data-toggle="cookies|'+esc(item.name)+'">Show full value</button>':'';
+    return '<div class="bs-row" data-row="'+esc(item.name.toLowerCase())+'">'+
+      '<div class="bs-key">'+esc(item.name)+'</div>'+
+      '<div class="bs-val'+(isJSONstr(item.value)?' bs-is-json':'')+'"><pre data-full="'+esc(item.name)+'">'+esc(shown)+'</pre>'+toggle+'</div>'+
+      '<div class="bs-size">'+fmtBytes(item.size)+'</div>'+
+      '<div class="bs-actions">'+copyBtn+delBtn+'</div>'+
+    '</div>';
+  }
+
+  function renderStore(target, data, storeKind){
+    var html="";
+    if(!data.count){
+      html='<div class="bs-empty"><i class="fa-solid fa-database"></i>Nothing stored in '+storeKind+' for this origin yet.<br><span style="font-size:12px">Sites you visit write here as you browse.</span></div>';
+    }else{
+      html='<div class="bs-head"><span>Key</span><span>Value (pretty-printed if JSON)</span><span>Size</span><span>Actions</span></div>';
+      data.items.forEach(function(it){
+        html+=(storeKind==="cookies"?cookieHtml(it):valueHtml(it,storeKind));
+      });
+    }
+    target.innerHTML=html;
+  }
+
+  function renderIndexed(){
+    if(!window.indexedDB || !indexedDB.databases){
+      wrapIndexed.innerHTML='<div class="bs-empty"><i class="fa-solid fa-layer-group"></i>IndexedDB enumeration is not supported in this browser.</div>';
+      cntIndexed.textContent="0";
+      return;
+    }
+    indexedDB.databases().then(function(dbs){
+      cntIndexed.textContent=dbs.length;
+      if(!dbs.length){
+        wrapIndexed.innerHTML='<div class="bs-empty"><i class="fa-solid fa-layer-group"></i>No IndexedDB databases for this origin.</div>';
+        return;
+      }
+      var html='<div class="bs-head"><span>Database name</span><span>Version</span><span></span><span></span></div>';
+      dbs.forEach(function(db){
+        html+='<div class="bs-row"><div class="bs-key">'+esc(db.name)+'</div><div class="bs-val">version '+esc(db.version)+'</div><div class="bs-size"></div><div class="bs-actions"></div></div>';
+      });
+      wrapIndexed.innerHTML=html;
+    }).catch(function(){
+      wrapIndexed.innerHTML='<div class="bs-empty"><i class="fa-solid fa-layer-group"></i>Could not list IndexedDB databases.</div>';
+      cntIndexed.textContent="0";
+    });
+  }
+
+  function loadQuota(){
+    if(!navigator.storage || !navigator.storage.estimate){
+      bsQuota.textContent="N/A";
+      $("quotaText").textContent="Storage API not available in this browser";
+      return;
+    }
+    navigator.storage.estimate().then(function(est){
+      var usage=est.usage||0, quota=est.quota||0;
+      bsQuota.textContent=fmtBytes(quota);
+      $("quotaText").textContent=fmtBytes(usage)+" used of "+fmtBytes(quota);
+      var pct=quota?Math.min(100, usage/quota*100):0;
+      var bar=$("quotaBar");
+      bar.style.width=pct+"%";
+      bar.className=pct>=80?"high":(pct>=50?"mid":"");
+      $("quotaDetail").textContent="The browser reports approximately "+fmtBytes(usage)+" in use across all storage for this origin (local, session, IndexedDB, Cache Storage & more).";
+    }).catch(function(){
+      $("quotaText").textContent="Quota read blocked by this browser";
+    });
+  }
+
+  function refresh(){
+    var local=collectStore(window.localStorage);
+    var session=collectStore(window.sessionStorage);
+    var cookies=parseCookies();
+
+    cntLocal.textContent=local.count;
+    cntSession.textContent=session.count;
+    cntCookies.textContent=cookies.count;
+
+    renderStore(wrapLocal,local,"local");
+    renderStore(wrapSession,session,"session");
+    renderStore(wrapCookies,cookies,"cookies");
+    renderIndexed();
+    loadQuota();
+
+    var totalEntries=local.count+session.count+cookies.count;
+    var totalBytes=local.total+session.total+cookies.total;
+    bsTotal.textContent=totalEntries;
+    bsUsage.textContent=fmtBytes(totalBytes);
+
+    var pieces=[];
+    if(local.count) pieces.push(local.count+" local");
+    if(session.count) pieces.push(session.count+" session");
+    if(cookies.count) pieces.push(cookies.count+" cookie"+(cookies.count===1?"":"s"));
+    bsProc.textContent="Scanned "+fmtBytes(totalBytes)+" across "+(pieces.length?pieces.join(", "):"no storage entries")+" entirely in this tab - 0 bytes uploaded.";
+  }
+
+  /* ---------------- actions ---------------- */
+
+  function deleteEntry(ref){
+    var parts=ref.split("|");
+    var kind=parts[0], key=parts.slice(1).join("|");
+    if(kind==="local"){ try{ window.localStorage.removeItem(key); }catch(e){} }
+    else if(kind==="session"){ try{ window.sessionStorage.removeItem(key); }catch(e){} }
+    else if(kind==="cookies"){
+      document.cookie=key+"=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/";
+      document.cookie=key+"=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+    }
+    refresh();
+  }
+
+  function clearAll(kind){
+    var label=kind==="local"?"Local Storage":(kind==="session"?"Session Storage":"all cookies visible to JavaScript");
+    if(!window.confirm("This will clear "+label+" for "+window.location.origin+". Continue?")) return;
+    if(kind==="local"){ try{ window.localStorage.clear(); }catch(e){} }
+    else if(kind==="session"){ try{ window.sessionStorage.clear(); }catch(e){} }
+    else if(kind==="cookies"){
+      document.cookie.split(";").forEach(function(pair){
+        var name=pair.split("=")[0].trim();
+        if(name) document.cookie=name+"=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/";
+      });
+    }
+    refresh();
+  }
+
+  function copyToClipboard(text, btn){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(function(){
+        flash(btn);
+      }).catch(function(){ fallbackCopy(text, btn); });
+    }else{
+      fallbackCopy(text, btn);
+    }
+  }
+  function fallbackCopy(text, btn){
+    var ta=document.createElement("textarea");
+    ta.value=text;
+    ta.style.position="fixed"; ta.style.opacity="0";
+    document.body.appendChild(ta);
+    ta.select();
+    try{ document.execCommand("copy"); flash(btn); }catch(e){}
+    document.body.removeChild(ta);
+  }
+  function flash(btn){
+    btn.classList.add("bs-copied");
+    var old=btn.innerHTML;
+    btn.innerHTML='<i class="fa-solid fa-check"></i>Copied';
+    setTimeout(function(){ btn.classList.remove("bs-copied"); btn.innerHTML=old; },1200);
+  }
+
+  function getValueFor(kind,key){
+    if(kind==="local") return window.localStorage.getItem(key);
+    if(kind==="session") return window.sessionStorage.getItem(key);
+    if(kind==="cookies"){
+      var re=new RegExp("(?:^|; )"+key.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+"=([^;]*)");
+      var m=document.cookie.match(re);
+      return m?decodeURIComponent(m[1]):"";
+    }
+    return "";
+  }
+
+  /* ---------------- event wiring ---------------- */
+
+  document.querySelectorAll(".bs-tab").forEach(function(tab){
+    tab.addEventListener("click",function(){
+      document.querySelectorAll(".bs-tab").forEach(function(t){ t.classList.remove("active"); t.setAttribute("aria-selected","false"); });
+      document.querySelectorAll(".bs-panel").forEach(function(p){ p.classList.remove("active"); });
+      tab.classList.add("active"); tab.setAttribute("aria-selected","true");
+      var map={local:"Local",session:"Session",cookies:"Cookies",indexeddb:"Indexed",quota:"Quota"};
+      $("panel"+map[tab.dataset.tab]).classList.add("active");
+    });
+  });
+
+  function filterRows(input, rows){
+    var q=input.value.trim().toLowerCase();
+    rows.forEach(function(row){
+      var hay=(row.dataset.row||"")+" "+row.textContent.toLowerCase();
+      row.classList.toggle("bs-hidden", q!=="" && hay.indexOf(q)===-1);
+    });
+  }
+  searchLocal.addEventListener("input",function(){ filterRows(searchLocal, wrapLocal.querySelectorAll(".bs-row")); });
+  searchSession.addEventListener("input",function(){ filterRows(searchSession, wrapSession.querySelectorAll(".bs-row")); });
+  searchCookies.addEventListener("input",function(){ filterRows(searchCookies, wrapCookies.querySelectorAll(".bs-row")); });
+
+  document.body.addEventListener("click",function(e){
+    var copyBtn=e.target.closest(".bs-copy");
+    if(copyBtn){
+      var parts=copyBtn.getAttribute("data-copy").split("|");
+      var key=parts.slice(1).join("|");
+      copyToClipboard(pretty(getValueFor(parts[0],key)), copyBtn);
+      return;
+    }
+    var delBtn=e.target.closest("[data-del]");
+    if(delBtn){
+      deleteEntry(delBtn.getAttribute("data-del"));
+      return;
+    }
+    var tog=e.target.closest("[data-toggle]");
+    if(tog){
+      var tp=tog.getAttribute("data-toggle").split("|");
+      var tkey=tp.slice(1).join("|");
+      var full=esc(pretty(getValueFor(tp[0],tkey)));
+      var pre=tog.parentNode.querySelector("pre");
+      if(pre.getAttribute("data-full")==="ok"){
+        pre.textContent=tog.getAttribute("data-orig")||pre.textContent;
+        pre.setAttribute("data-full","");
+        tog.textContent="Show full value";
+      }else{
+        tog.setAttribute("data-orig",pre.textContent);
+        pre.textContent=full;
+        pre.setAttribute("data-full","ok");
+        tog.textContent="Show less";
+      }
+      return;
+    }
+  });
+
+  $("clearLocal").addEventListener("click",function(){ clearAll("local"); });
+  $("clearSession").addEventListener("click",function(){ clearAll("session"); });
+  $("clearCookies").addEventListener("click",function(){ clearAll("cookies"); });
+  $("btnRefresh").addEventListener("click",refresh);
+
+  bsOrigin.textContent=window.location.origin;
+  bsOriginSub.textContent=(window.location.protocol||"")+" | "+(window.location.hostname||"");
+
+  refresh();
+})();
+</script>
+</body>
+</html>

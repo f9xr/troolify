@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/webp" href="../assets/images/favicon.webp"><link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methodology - Troolify | How Our Calculators Work</title>
+    <meta name="description" content="How Troolify calculators and estimators work - the formulas, references and assumptions behind construction, finance, health and everyday math tools.">
+    <link rel="canonical" href="https://f9xr.org/troolify/pages/methodology.html">
+    <meta property="og:site_name" content="Troolify">
+    <meta property="og:title" content="Methodology - Troolify | How Our Calculators Work">
+    <meta property="og:description" content="How Troolify calculators and estimators work - the formulas, references and assumptions behind our tools.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://f9xr.org/troolify/pages/methodology.html">
+    <meta property="og:image" content="https://f9xr.org/troolify/assets/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Methodology - Troolify | How Our Calculators Work">
+    <meta name="twitter:description" content="How Troolify calculators and estimators work - the formulas, references and assumptions behind our tools.">
+    <meta name="twitter:image" content="https://f9xr.org/troolify/assets/images/og-image.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+    <link rel="stylesheet" href="../assets/css/tailwind.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<noscript>
+    <nav aria-label="Primary" style="position:static;display:block;padding:1rem 1.5rem;background:#212529;border-bottom:1px solid #343A40;text-align:center;font-size:0.9rem;">
+        <a href="../index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Home</a>
+        <a href="../tools/index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Tools</a>
+        <a href="../pages/about.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">About</a>
+        <a href="../pages/contact.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Contact</a>
+    </nav>
+</noscript>
+    <!-- Header (navbar + mobile menu) and footer are auto-injected by assets/js/layout.js -->
+
+    <main class="container" style="max-width: 760px; padding-top: 10rem; padding-bottom: 6rem;">
+        <div class="eyebrow">METHODOLOGY &middot; TROOLIFY</div>
+        <h1 class="heading-1">How Our Calculators Work</h1>
+        <p class="section-description" style="margin-bottom: 2rem;">Formulas, references and assumptions behind the numbers - kept honest, documented and conservative.</p>
+
+        <h2 class="heading-2" style="margin-top: 2rem;">Construction materials</h2>
+        <p>Concrete and gravel tools report volume in cubic feet and cubic yards. Bag counts use standard nominal yields from published data: a 40 lb bag approximates 0.30 ft&sup3;, 50 lb is 0.375 ft&sup3;, 60 lb is 0.45 ft&sup3; and 80 lb is 0.60 ft&sup3; of mixed concrete. Weight is estimated at a typical concrete density of ~145 lb/ft&sup3; (about 3,915 lb per cubic yard). Rebar, CMU and footing estimates use standard ACI-style layout rules.</p>
+
+        <h2 class="heading-2" style="margin-top: 2rem;">Construction cost and quotes</h2>
+        <p>Cost calculators return ranges derived from typical 2025-2026 contractor rates per square foot: slabs and garage floors roughly $6-12, driveways $7-13, patios and pool decks $6-15, basement floors $6-11, shed pads $6-10, steps $300-500 per step and stamped finishes $8-18. These are planning benchmarks, not bids - local labor, reinforcement, site access and finishing details move any real number. Quote estimators split labor, materials and prep using common industry weightings and always show the range, never a false precision.</p>
+
+        <h2 class="heading-2" style="margin-top: 2rem;">Finance</h2>
+        <p>Loan and amortization tools use the standard monthly payment formula with rates divided by 12 and terms in months. Compound interest accounts for principal, contributions and compounding frequency. VAT tools apply current published rates per country and clearly separate net, tax and gross. No tool stores or returns any user data.</p>
+
+        <h2 class="heading-2" style="margin-top: 2rem;">Health</h2>
+        <p>BMR, TDEE and calorie estimates use the Mifflin-St Jeor equation, which is the widely accepted modern baseline for resting and activity-adjusted expenditure. BMI follows the WHO categorization bands. Body composition tools use the US Navy measurement formulas. All outputs are educational estimates - they are not medical advice and should not replace a health professional's guidance.</p>
+
+        <h2 class="heading-2" style="margin-top: 2rem;">Data and randomness</h2>
+        <p>Converters, formatters and code tools apply the corresponding public standard definitions (RFC 4180 for CSV, ECMA-404 for JSON, RFC 4648 for Base64 and so on). Random-number and shuffling tools use the browser's <code>crypto.getRandomValues</code> where available, and the Gaussian generator implements the Box-Muller transform. Hashes use the native Web Crypto API so the same text always yields the same checksum, locally.</p>
+
+        <h2 class="heading-2" style="margin-top: 2rem;">Disclaimers</h2>
+        <p>Estimates are provided for planning only and are rounded to realistic precision. Material yields vary slightly by mix, slump, temperature and manufacturer; costs vary by region, season and contractor. Every calculator is transparent about its assumptions and lets you adjust the inputs that matter before you rely on an answer.</p>
+    </main>
+
+    <script src="../assets/js/layout.js" defer></script>
+</body>
+</html>

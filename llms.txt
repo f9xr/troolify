@@ -105,6 +105,41 @@ Key facts about Troolify:
 - [Multi-Hood Exhaust Planner](https://f9xr.org/troolify/tools/hvac/multi-hood-exhaust-planner.html): Compare the connected exhaust flow with a documented active and standby scenario - so exhaust sizing has an honest demand basis.
 - [Fume Hood Exhaust Load](https://f9xr.org/troolify/tools/hvac/fume-hood-exhaust-load.html): Estimate the thermal conditioning load of fume-hood exhaust/make-up air from airflow and a moist-air enthalpy difference.
 
+- [Concrete Volume Calculator](https://f9xr.org/troolify/tools/construction/concrete-volume-calculator.html): Estimate concrete volume in cubic feet and cubic yards from length, width and thickness - calculate bag counts and weight instantly, right in your browser.
+- [Concrete Slab Calculator](https://f9xr.org/troolify/tools/construction/concrete-slab-calculator.html): Find the concrete volume - cubic yards and cubic feet - for a rectangular slab, pad or floor, with bag counts and weight, all computed locally in your browser.
+- [Cinder Block / CMU Wall Calculator](https://f9xr.org/troolify/tools/construction/cinder-block-cmu-wall-calculator.html): Estimate blocks, mortar and grout for any CMU or cinder block wall from its length and height - all computed locally in your browser.
+- [Concrete Column Calculator](https://f9xr.org/troolify/tools/construction/concrete-column-calculator.html): Calculate concrete for round columns by diameter, height and quantity - get cubic yards, bags and weight instantly for footings, posts and support piers.
+- [Concrete Curb Calculator](https://f9xr.org/troolify/tools/construction/concrete-curb-calculator.html): Calculate exactly how much concrete you need for curbs, barriers and edging with this free tool - volume, bags and weight for any curb length and cross-section.
+- [Deck Footing Calculator](https://f9xr.org/troolify/tools/construction/deck-footing-calculator.html): Find the concrete needed for round deck footings by diameter and depth - cubic yards, bags and weight for every footing on your deck project.
+- [Concrete Driveway Calculator](https://f9xr.org/troolify/tools/construction/concrete-driveway-calculator.html): Estimate concrete for a driveway from length, width and thickness - get cubic yards, 80 lb bags and weight, and plan a two-car pour with confidence.
+- [Concrete Footing Calculator](https://f9xr.org/troolify/tools/construction/strip-footing-calculator.html): Calculate concrete for a strip or continuous footing from run length, width and depth - cubic yards, bags and weight for foundation footings.
+- [Concrete Foundation Calculator](https://f9xr.org/troolify/tools/construction/concrete-foundation-calculator.html): Estimate concrete for a slab foundation by length, width and thickness - cubic yards, bags and weight for a 30x20 foundation and similar pours.
+- [Garage Floor Calculator](https://f9xr.org/troolify/tools/construction/garage-floor-calculator.html): Estimate concrete volume for a garage floor slab - cubic yards, bags and weight for a 2-car garage floor and other workshop pads.
+- [Concrete Patio Calculator](https://f9xr.org/troolify/tools/construction/concrete-patio-calculator.html): Estimate concrete for a patio slab by length, width and thickness - get cubic yards, bags and weight for a 16x12 patio and any other outdoor pad.
+- [Pier Footing Calculator](https://f9xr.org/troolify/tools/construction/pier-footing-calculator.html): Building pier footings? Calculate concrete for round piers by diameter, depth and quantity - get volume, bags and weight in your browser.
+- [Post Hole Calculator](https://f9xr.org/troolify/tools/construction/post-hole-calculator.html): Calculate concrete for round or square post holes - hole volume minus post volume for fences, signs and structures, with bags and total weight.
+- [Shed Foundation Calculator](https://f9xr.org/troolify/tools/construction/shed-foundation-calculator.html): Estimate concrete for a shed foundation slab by length, width and thickness - cubic yards, bags and weight for a 10x12 shed base.
+- [Concrete Sidewalk Calculator](https://f9xr.org/troolify/tools/construction/concrete-sidewalk-calculator.html): Estimate concrete for a sidewalk by length, width and thickness - cubic yards, bags and weight for residential and commercial paths.
+- [Concrete Steps Calculator](https://f9xr.org/troolify/tools/construction/concrete-steps-calculator.html): Calculate concrete for a set of steps from number of steps, rise, tread and width - get cubic yards, bags and weight for porches and entry stairs.
+- [Concrete Walkway Calculator](https://f9xr.org/troolify/tools/construction/concrete-walkway-calculator.html): Estimate concrete for a garden or entry walkway by length, width and thickness - cubic yards, bags and weight in seconds, all in your browser.
+- [Concrete Wall Calculator](https://f9xr.org/troolify/tools/construction/concrete-wall-calculator.html): Estimate concrete volume, formwork area, footing pour and rebar for any poured concrete wall - length, height and thickness in, results out.
+- [Concrete Weight Calculator](https://f9xr.org/troolify/tools/construction/concrete-weight-calculator.html): Find the weight of concrete from volume - cubic feet or cubic yards to pounds and tons, with bag-equivalent estimates for any concrete quantity.
+- [Fence Post Calculator](https://f9xr.org/troolify/tools/construction/fence-post-calculator.html): Estimate concrete bags and volume for square fence posts in round holes - 10-post runs, corner posts and total yardage, all computed locally.
+- [Gravel Calculator](https://f9xr.org/troolify/tools/construction/gravel-calculator.html): Estimate gravel cubic yards, tons and bags for any area - driveways, base layers and drainage, by length, width and depth.
+- [ICF Block Calculator](https://f9xr.org/troolify/tools/construction/icf-block-calculator.html): Estimate ICF forms and concrete for insulated concrete form walls - standard 48x16 blocks and cubic yards from wall length, height and core thickness.
+- [Rebar Calculator](https://f9xr.org/troolify/tools/construction/rebar-calculator.html): Estimate rebar bars, linear feet and total weight for any slab grid - bar size, spacing and lap allowance included, all computed in your browser.
+- [Sonotube Calculator](https://f9xr.org/troolify/tools/construction/sonotube-calculator.html): Find the concrete needed to fill Sonotube form tubes by diameter and height - bags of 80 lb mix, cubic volume and weight for piers and columns.
+- [Basement Floor Cost Calculator](https://f9xr.org/troolify/tools/construction/basement-floor-cost-calculator.html): Estimate the cost of pouring a concrete basement floor by area and price per square foot - get an instant low, high and typical cost range right in your browser.
+- [Concrete Slab Cost Calculator](https://f9xr.org/troolify/tools/construction/concrete-slab-cost-calculator.html): Work out the cost of pouring a concrete slab by length, width and price per square foot - get the estimated total, yardage and cost range instantly.
+- [Driveway Cost Calculator](https://f9xr.org/troolify/tools/construction/driveway-cost-calculator.html): Estimate the cost of a concrete driveway by length and width - get price ranges, yardage and a total estimate based on your local price per square foot.
+- [Garage Floor Cost Calculator](https://f9xr.org/troolify/tools/construction/garage-floor-cost-calculator.html): Estimate garage floor concrete cost by length and width - get the price range, cubic yards and total based on your local price per square foot.
+- [Concrete Patio Cost Calculator](https://f9xr.org/troolify/tools/construction/concrete-patio-cost-calculator.html): Estimate the cost of pouring a concrete patio by area - get the price range, yardage and a total from your local price per square foot.
+- [Pool Deck Cost Calculator](https://f9xr.org/troolify/tools/construction/pool-deck-cost-calculator.html): Estimate the cost of a concrete pool deck by length and width - get the price range, yardage and total from your local price per square foot.
+- [Shed Base Cost Calculator](https://f9xr.org/troolify/tools/construction/shed-base-cost-calculator.html): Estimate the cost of a concrete shed pad by length and width - get the price range, yardage and total for a solid under-shed foundation.
+- [Steps Cost Calculator](https://f9xr.org/troolify/tools/construction/steps-cost-calculator.html): Estimate the cost of concrete steps by number of steps - get a total, per-step cost and range based on your local price per step.
+- [Stamped Concrete Cost Calculator](https://f9xr.org/troolify/tools/construction/stamped-concrete-cost-calculator.html): Estimate the cost of stamped concrete by area - get the price range, yardage and total from your local price per square foot.
+- [Concrete Slab Quote Calculator](https://f9xr.org/troolify/tools/construction/concrete-slab-quote-calculator.html): Break down a concrete slab quote by area - see labor, materials and site prep as separate lines plus the yardage behind the total.
+
 - [Remove Line Breaks](https://f9xr.org/troolify/tools/text/remove-line-breaks.html): Remove line breaks, carriage returns and extra blank lines from any text in one click. 100% client-side.
 - [Add Line Breaks](https://f9xr.org/troolify/tools/text/add-line-breaks.html): Insert line breaks after a set number of characters or words to reformat any text block.
 - [Empty Line Remover](https://f9xr.org/troolify/tools/text/empty-line-remover.html): Remove empty lines and trim stray whitespace from pasted text.
@@ -184,14 +219,65 @@ Key facts about Troolify:
 - [Venmo Fee Calculator](https://f9xr.org/troolify/tools/finance/venmo-fee-calculator.html): Calculate exact Venmo fees for Goods & Services, credit card, instant transfer, Cash a Check, ATM and crypto.
 - [Footer Animations Prompt](https://f9xr.org/troolify/tools/prompts/footer-animations-prompt-guide.html): Generate a detailed, ready-to-paste AI prompt for stunning website footer animations - fade-ins, floating social icons, glowing hovers and more, tailored to your framework and accessibility needs.
 
+
+- [Flip Text Generator](https://f9xr.org/troolify/tools/text/flip-text-generator.html): Flip text upside down and backwards with a single click - generate rotated, mirrored Unicode text for social posts, usernames and fun.
+- [Add Text to Each Line](https://f9xr.org/troolify/tools/text/add-text-to-each-line.html): Add a prefix or suffix to every line of text at once - prepend or append text to all lines of a list in a click.
+- [Reverse List](https://f9xr.org/troolify/tools/text/reverse-list.html): Reverse the order of any list - flip a vertical list top to bottom instantly, one item per line.
+- [List Randomizer](https://f9xr.org/troolify/tools/text/list-randomizer.html): Randomly shuffle any list - rows, names, tasks or numbers get a fair random order every time.
+- [Remove Extra Spaces](https://f9xr.org/troolify/tools/text/remove-extra-spaces.html): Collapse double spaces and trim every line - clean up messy copied text by removing extra whitespace in one click.
+- [Spaces to Tabs](https://f9xr.org/troolify/tools/text/spaces-to-tabs.html): Convert leading spaces to tabs in any text - turn space-indented code or lists into tab-indented output in one click.
+- [Filter Lines](https://f9xr.org/troolify/tools/text/filter-lines.html): Filter a list by removing empty lines and duplicates - clean up a messy list in one click with toggleable rules.
+- [Count Lines](https://f9xr.org/troolify/tools/text/count-lines.html): Count the lines in any text instantly - get total, non-empty, blank and average length statistics for pasted text.
+- [Letter Counter](https://f9xr.org/troolify/tools/text/letter-counter.html): Count letters, vowels, consonants, digits and words in any text - instant character-level statistics right in your browser.
+- [Text to Array Converter](https://f9xr.org/troolify/tools/coding/text-to-array-converter.html): Turn a newline-separated list into a JavaScript array literal in one click - with double-quote or single-quote output.
+- [CSS Inliner](https://f9xr.org/troolify/tools/coding/css-inliner.html): Inline any CSS rules into matching HTML elements - turn a separate stylesheet into style attributes for emails and templates.
+- [CSS Beautifier](https://f9xr.org/troolify/tools/coding/css-beautifier.html): Format minified or messy CSS into clean, indented and readable stylesheets in one click.
+- [JavaScript Beautifier](https://f9xr.org/troolify/tools/coding/javascript-beautifier.html): Format minified or compressed JavaScript into clean, indented, readable code in one click.
+- [Flip Image](https://f9xr.org/troolify/tools/image/flip-image.html): Flip any image horizontally or vertically - mirror a photo in one click and download the flipped PNG.
+- [QR Code Generator](https://f9xr.org/troolify/tools/image/qr-code-generator.html): Generate a scannable QR code from any text or URL - download it as a high-resolution PNG instantly.
+- [Random Bitmap Generator](https://f9xr.org/troolify/tools/image/random-bitmap-generator.html): Generate a random noise bitmap image at any size - download static-style random PNGs for testing and placeholders.
+- [Screen Recorder](https://f9xr.org/troolify/tools/video/screen-recorder.html): Record your screen, window or browser tab as a video right from this page - then download the WebM recording.
+- [Gaussian Random Number Generator](https://f9xr.org/troolify/tools/math/gaussian-random-number-generator.html): Generate random numbers from a normal (Gaussian) distribution with your mean and standard deviation - instantly, in your browser.
+- [Lighten Color](https://f9xr.org/troolify/tools/color/lighten-color.html): Lighten any hex color by a percentage - brighten a brand or palette color instantly and copy the new hex.
+- [Darken Color](https://f9xr.org/troolify/tools/color/darken-color.html): Darken any hex color by a percentage - deepen a palette color for shadows, text and borders and copy the new hex.
+- [Invert Color](https://f9xr.org/troolify/tools/color/invert-color.html): Invert any hex color to its exact opposite - get the complementary RGB inversion for dark-mode swaps and design flips.
+- [Random Color Generator](https://f9xr.org/troolify/tools/color/random-color-generator.html): Generate random hex colors - create one or a whole palette of random colors with instant copy-friendly output.
+- [Blend Colors](https://f9xr.org/troolify/tools/color/blend-colors.html): Blend two hex colors together at any ratio - mix brand colors to find the perfect in-between shade.
+- [Gradient Generator](https://f9xr.org/troolify/tools/color/gradient-generator.html): Build a CSS linear gradient from two hex colors - preview the result and copy ready-to-use gradient code instantly.
+- [Complementary Color](https://f9xr.org/troolify/tools/color/complementary-color.html): Find the complementary color of any hex value - get the exact opposite hue on the color wheel in one click.
+- [Analogous Color Scheme Generator](https://f9xr.org/troolify/tools/color/analogous-color-scheme.html): Build an analogous color scheme from any hex color - generate harmonious neighboring hues for a ready palette.
+- [Split File](https://f9xr.org/troolify/tools/files/split-files.html): Split any file into smaller parts by byte count - cut a large file into configurable pieces right in your browser.
+- [Join Files](https://f9xr.org/troolify/tools/files/join-files.html): Join multiple files into one - concatenate parts back into the original in selection order, right in your browser.
+- [Random File Generator](https://f9xr.org/troolify/tools/files/random-file-generator.html): Generate a random text or binary file with the exact size you need - dummy files for testing and uploads.
+- [Corrupt a File](https://f9xr.org/troolify/tools/files/corrupt-a-file.html): Corrupt a file by flipping random bytes - create intentionally broken test copies to probe error handling.
+- [Corrupt File Generator](https://f9xr.org/troolify/tools/files/corrupt-file-generator.html): Generate a brand-new corrupted file of random garbage bytes - a broken placeholder file for testing in seconds.
+
+
+- [Quote Generator](https://f9xr.org/troolify/tools/fun/random-quote-generator.html): Get an inspirational quote from a public web API - refresh for a new one, copy it, and share it anywhere.
+- [Random Fact Generator](https://f9xr.org/troolify/tools/fun/random-facts-generator.html): Discover a random fun fact from a public web API - learn something new, copy it and surprise your friends.
+- [Joke Generator](https://f9xr.org/troolify/tools/fun/joke-generator.html): Generate developer, general or dark one-liner jokes from a public web API - reveal the punchline and copy it.
+- [Roast Generator](https://f9xr.org/troolify/tools/fun/roast-generator.html): Get a playful roast from a public web API - perfect for playful banter. Refresh to fire back with a new burn.
+- [Random Meme Finder](https://f9xr.org/troolify/tools/fun/random-meme-generator.html): Find a random meme from Reddit's most popular meme subreddits via a public web API - preview the image and open the original post.
+- [Riddle Generator](https://f9xr.org/troolify/tools/fun/riddle-generator.html): Get a riddle from a public web API - guess the answer, then reveal it. A brain teaser for games, study breaks and family fun.
+- [Truth or Dare Generator](https://f9xr.org/troolify/tools/fun/truth-or-dare-generator.html): Generate truth questions or dares from a public web API - pick Truth, Dare or a random mix for game night.
+- [Anime Image Finder](https://f9xr.org/troolify/tools/fun/anime-image-generator.html): Find a random anime image from a public web API - pick a character, get a fresh picture and open the full version.
+- [Text Logo Generator](https://f9xr.org/troolify/tools/image/text-logo-generator.html): Turn words into a bold PNG logo in 9 pre-set styles, rendered by a public web API - download it and use it straight away.
+- [Text to Photo / GIF Maker](https://f9xr.org/troolify/tools/image/text-photo-gif-maker.html): Turn your message into a photo (TTP) or an animated GIF (Monte style) via a public web API - export it as a shareable image.
+- [URL Shortener](https://f9xr.org/troolify/tools/coding/url-shortener.html): Shorten any link with TinyURL or Bitly through a public web API - copy the short URL in one click.
+- [GitHub Profile Viewer](https://f9xr.org/troolify/tools/coding/github-profile-viewer.html): Look up any GitHub username through a public web API - see avatar, bio, followers, repos and join date at a glance.
+- [Text to Speech](https://f9xr.org/troolify/tools/text/text-to-speech.html): Listen to any text read aloud with natural Google voices via a public web API - play online or download as an audio file.
+
 ## Categories
 - [AI Tools](https://f9xr.org/troolify/tools/ai/index.html): Prompt, text, image and code generation utilities.
 - [Audio Tools](https://f9xr.org/troolify/tools/audio/index.html): BPM, song length and audio production utilities.
+- [Color Tools](https://f9xr.org/troolify/tools/color/index.html): Color mixing, blending, gradients, complementary and analogous scheme utilities.
+- [Construction Tools](https://f9xr.org/troolify/tools/construction/index.html): Concrete, gravel, rebar, CMU and construction cost calculators - all client-side.
 - [Developer Tools](https://f9xr.org/troolify/tools/coding/index.html): Coding, debugging and web development utilities.
 - [Converters](https://f9xr.org/troolify/tools/converters/index.html): Convert data between formats instantly.
 - [Cooking Tools](https://f9xr.org/troolify/tools/cooking/index.html): Cooking, recipe and kitchen helpers.
 - [Crypto Tools](https://f9xr.org/troolify/tools/crypto/index.html): Cryptocurrency and blockchain calculators.
 - [Finance Tools](https://f9xr.org/troolify/tools/finance/index.html): Money, savings and finance calculators.
+- [File Tools](https://f9xr.org/troolify/tools/files/index.html): Split, join, generate and corrupt test files - entirely in your browser.
 - [Fun & Games](https://f9xr.org/troolify/tools/fun/index.html): Fun, games and entertainment utilities.
 - [Health Tools](https://f9xr.org/troolify/tools/health/index.html): Health, fitness and wellness tools.
 - [HVAC Tools](https://f9xr.org/troolify/tools/hvac/index.html): Heating, ventilation and air conditioning - load, airflow, duct design, refrigeration and lab exhaust utilities.
@@ -214,6 +300,8 @@ Key facts about Troolify:
 # LLMs
 - [Home](https://f9xr.org/troolify/index.html): Site homepage.
 - [About Us](https://f9xr.org/troolify/pages/about.html): The Troolify mission and the F9XR Team.
+- [Developers](https://f9xr.org/troolify/pages/developers.html): Site architecture, data and integration notes for developers.
+- [Methodology](https://f9xr.org/troolify/pages/methodology.html): How tools are researched, built and reviewed.
 - [Editorial Policies](https://f9xr.org/troolify/press/editorial-policies.html): Content and review policies.
 - [Accessibility Statement](https://f9xr.org/troolify/pages/accessibility-statement.html)
 - [Disclaimer](https://f9xr.org/troolify/press/disclaimer.html)

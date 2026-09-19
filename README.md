@@ -31,6 +31,7 @@ Every tool runs entirely in your browser. Your text, files, and data never leave
 | [Song Length Calculator](tools/audio/song-length-calculator.html) | Audio | Calculate exact track runtime from BPM and bar repetitions. |
 | [Password Generator](tools/misc/password-generator.html) | Misc | Strong random passwords or memorable passphrases with custom rules. |
 | [Password Entropy Calculator](tools/misc/password-entropy-calculator.html) | Misc | Measure entropy in bits and estimate crack time across attack scenarios. |
+| [Browser Storage & Cookie Inspector](tools/coding/online-browser-storage-cookie-inspector.html) | Coding | Inspect local storage, session storage and cookies, and check usage against the browser quota. |
 
 Browse every tool and category in the [utility catalog](tools/index.html).
 
