@@ -11,7 +11,7 @@ runBtn.addEventListener("click",function(){
   if(this.disabled)return;
   var w=$("word").value.trim();
   if(!w){$("results").innerHTML='<div class="res-err"><i class="fa-solid fa-triangle-exclamation"></i> Enter a word or brand name first.</div>';proc("Ready.");return;}
-  lastUrl=API_BASE+"/logo/"+style+"?text="+encodeURIComponent(w)+"&_="+Date.now();
+  lastUrl=API_BASE+"/api/logo/"+style+"?text="+encodeURIComponent(w)+"&_="+Date.now();
   proc("Rendering your logo...");
   $("results").innerHTML=
     '<div class="quote-author" style="color:var(--faint);text-transform:capitalize">Style: '+esc(style)+"</div>"+

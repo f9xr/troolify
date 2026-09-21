@@ -12,7 +12,7 @@ runBtn.addEventListener("click",function(){
   var w=$("txt").value.trim();
   if(!w){$("results").innerHTML='<div class="res-err"><i class="fa-solid fa-triangle-exclamation"></i> Enter some text first.</div>';proc("Ready.");return;}
   lastMode=mode;
-  lastUrl=API_BASE+"/maker/"+mode+"?text="+encodeURIComponent(w)+"&_="+Date.now();
+  lastUrl=API_BASE+"/api/maker/"+mode+"?text="+encodeURIComponent(w)+"&_="+Date.now();
   var isGif=(lastMode==="attp");
   proc(isGif?"Rendering your animated GIF...":"Rendering your photo...");
   $("results").innerHTML=

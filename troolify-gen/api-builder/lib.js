@@ -9,8 +9,8 @@
      copyText(txt,btn) -> copy + "Copied!" feedback
      downloadFromUrl(url,name) -> fetch->blob download, opens in a new tab on CORS failure
      busify(btn) -> disable while working, returns a restore function
-     apiGet('../api/path', cb) -> GET JSON from API_BASE, 15s timeout, renders errors into #results
-     API_BASE  -> "https://abhi-api.vercel.app/api"
+apiGet('/api/path', cb) -> GET JSON from API_BASE, 15s timeout, renders errors into #results
+      API_BASE  -> "https://abhi-api.vercel.app"
    }                                     */
 const fs = require("fs");
 const path = require("path");
@@ -86,7 +86,7 @@ const CSS = `<style>
 const HELPERS = `
 "use strict";
 var $=function(id){return document.getElementById(id);};
-var API_BASE="https://abhi-api.vercel.app/api";
+var API_BASE="https://abhi-api.vercel.app";
 function proc(m){var p=$("procLine");if(p)p.textContent=m;}
 function esc(s){return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}
 function copyText(txt,btn){
@@ -151,7 +151,7 @@ function jsonLd(blocks) {
 }
 
 function page(cfg, scriptSrc) {
-  var canonical = BASE + "/" + cfg.folder + "/" + cfg.slug + ".html";
+  var canonical = BASE + "/tools/" + cfg.folder + "/" + cfg.slug + ".html";
   var catIndex = BASE + "/tools/" + cfg.folder + "/index.html";
   var cleanDesc = cfg.desc.replace(/\.+$/, "");
   var faqJ = cfg.faq.map(function (f) {
@@ -295,7 +295,7 @@ function page(cfg, scriptSrc) {
     '        <input type="search" id="relatedSearch" placeholder="Search all Troolify tools&hellip;" autocomplete="off" aria-label="Search related tools">\n      </div>\n' +
     '      <div class="related-grid" id="relatedGrid" aria-busy="true">\n' +
     '        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span></div>\n      </div>\n    </section>\n\n' +
-    '    <section class="comments" aria-label="Comments"><h2>Comments</h2>\n      <div id="comments"><script src="https://utteranc.es/client.js" repo="f9xr/troolify" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async></div>\n    </section>\n' +
+    '    <section class="comments" aria-label="Comments"><h2>Comments</h2>\n      <div id="comments"><script src="https://utteranc.es/client.js" repo="f9xr/troolify" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async></script></div>\n    </section>\n' +
     '    <div class="section-divider" aria-hidden="true"><span></span><i class="fa-solid fa-layer-group"></i><span></span></div>\n  </div>\n</main>\n' +
     '<script src="../../assets/js/layout.js" defer></script>\n' +
     '<script src="../../assets/js/tools-data.js" defer></script>\n' +
