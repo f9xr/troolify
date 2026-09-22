@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Note: navbar scroll effect + mobile menu are handled by assets/js/layout.js.
+    // Note: navbar scroll effect + mobile menu are handled by assets/js/layout.min.js.
 
     // 1. Scroll Reveal Animation using Intersection Observer
     const revealElements = document.querySelectorAll('.reveal');

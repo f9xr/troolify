@@ -1,0 +1,66 @@
+TROOLIFY - BATCH 2 WORK TODOS
+==============================
+Repo: C:\Users\SKYLIMIT OFFICE\Documents\GitHub\troolify
+Generated: 2026-09-22
+Build:           node troolify-gen/minify.js   (idempotent, safe to re-run)
+Env notes:       PowerShell mangles \" and \w inline; put node scripts in temp .js files.
+                 html-minifier-terser must be required from repo root.
+
+DONE
+----
+[X] Font Awesome self-hosted + subset
+      assets/fonts/fa-solid.min.woff2 (318 glyphs)
+      assets/fonts/fa-brands.min.woff2 (10 glyphs, includes fa-markdown fix)
+      assets/css/icons.min.css (326 solid + 10 brands rules)
+      Verifier: ALL 336 rules present, NONE missing (verify_icons.py)
+[X] Google Fonts self-hosted
+      assets/fonts/jakarta-{400,500,600,700,800}.woff2
+      assets/css/jakarta.min.css
+      All 343 pages swapped to local fonts
+[X] HTML minify pass (html-minifier-terser, conservative opts)
+      All 344 pages marked <!-- data-minimized --> (re-run = 0)
+      304 utteranc placeholders intact
+      Fixed invalid HTML: tools/coding/jsonpath-tester.html,
+                          tools/pdf/pdf-metadata-viewer.html
+
+IN PROGRESS / TODO
+------------------
+[ ] ASSETS/JS/TOOLS-DATA SLIM SPLIT  (most important next step)
+    Design (decided):
+      - NEW assets/js/tools-data-slim.js sets window.TOOLS_SLIM = [render fields]
+        (name, desc, icon, tag, category, href) + window.CATEGORIES.
+      - window.TOOLS stays FULL source of truth, lazy-loaded as today
+        (layout.js loadToolsData / loadToolsDataForSidebar, tool-page.js,
+        dashboard-nav.js all read window.TOOLS - no change needed there).
+    Steps:
+      1. Write generator (temp .js) to emit assets/js/tools-data-slim.js
+         from assets/js/tools-data.js (strip keywords + workflow).
+      2. Edit assets/js/home-catalog.js:17  -> var tools = window.TOOLS_SLIM || window.TOOLS || [];
+      3. Edit assets/js/catalog.js:4 render read (+ keep keyword search working:
+         if window.TOOLS missing on search, inject full tools-data.min.js then re-run).
+         catalog.js already edited once to window.TOOLS_FULL || window.TOOLS || [] -
+         decide final form.
+      4. Wire minify.js: auto-generate slim file + swap the eager
+         tools-data include -> tools-data-slim.min.js on NON-tool-leaf pages
+         (homepage, tools/index, category indexes = 27 pages).
+      5. Run build; verify idempotency, node --check on edited JS, and that
+         search modal + related-grid still get FULL data with keywords.
+
+[ ] LAZY HOMEPAGE BADGES + CDNJS PRECONNECT
+      - Add loading="lazy" to the 6 homepage badges
+        (nicklaunches.com, stork.ai, findyoursaas.com - duplicated 2x).
+      - Add cdnjs preconnect to tool pages that load cdnjs libs
+        (js-beautify, html2pdf, qrious, pdf.js/pdf.worker, jszip = 27 leftover cdnjs refs).
+
+[ ] HERO IMAGE RECOMPRESS + FINAL VERIFY
+      - hero-image-3.webp 102KB, hero-image-2.webp 79.1KB,
+        hero-image-1.webp 50.7KB, og-image.jpg 38.4KB.
+      - Check logo.png / logo_nobg.png references before any deletion.
+      - Final end-to-end: re-run minify.js, code split verify,
+        spot-check pages (no googleapis / cdnjs font-awesome), mark done.
+
+VERIFY SCRIPTS (known good)
+---------------------------
+- Icons verifier:     %TEMP%\opencode\verify_icons.py   (checks pc in (sk | bk))
+- Structural check:   walk .html, count data-minimized markers + data-utteranc
+- node --check assets\js\<file>.js after every edit

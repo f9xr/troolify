@@ -15,7 +15,7 @@
 
    Include this script on every page with (adjust the path for subfolders):
 
-       <script src="assets/js/layout.js" defer></script>
+       <script src="assets/js/layout.min.js" defer></script>
 
    Relative links (home / tools catalog / anchors) are resolved automatically
    from the current page's directory depth.
@@ -388,16 +388,18 @@
             if (cb) cb();
             return;
         }
-        if (window.__DASH_TOOLS_PENDING) {
-            if (cb) window.__DASH_TOOLS_PENDING.push(cb);
+        /* Shared pending list (also used by tool-page.js and the search modal)
+           prevents duplicate <script> injections while the catalog loads. */
+        if (window.__TOOLS_PENDING) {
+            if (cb) window.__TOOLS_PENDING.push(cb);
             return;
         }
-        window.__DASH_TOOLS_PENDING = [cb];
+        window.__TOOLS_PENDING = [cb];
         var s = document.createElement("script");
-        s.src = rootPrefix() + "assets/js/tools-data.js";
+        s.src = rootPrefix() + "assets/js/tools-data.min.js";
         s.onload = s.onerror = function () {
-            var list = window.__DASH_TOOLS_PENDING || [];
-            window.__DASH_TOOLS_PENDING = null;
+            var list = window.__TOOLS_PENDING || [];
+            window.__TOOLS_PENDING = null;
             list.forEach(function (fn) { if (fn) fn(); });
         };
         document.head.appendChild(s);
@@ -408,7 +410,7 @@
         if (window.__RECENT_TOOLS_LOADED) return;
         window.__RECENT_TOOLS_LOADED = true;
         var s = document.createElement("script");
-        s.src = rootPrefix() + "assets/js/recent-tools.js";
+        s.src = rootPrefix() + "assets/js/recent-tools.min.js";
         document.head.appendChild(s);
     }
 
@@ -428,7 +430,7 @@
         }
         window.__TRANSLATE_WIDGET_LOADED = true;
         var s = document.createElement("script");
-        s.src = rootPrefix() + "assets/js/translate-widget.js";
+        s.src = rootPrefix() + "assets/js/translate-widget.min.js";
         s.async = true;
         s.onload = s.onerror = function () { if (cb) cb(); };
         document.head.appendChild(s);
@@ -462,7 +464,7 @@
                 if (!document.querySelector('link[href*="dashboard.css"]')) {
                     var dlink = document.createElement("link");
                     dlink.rel = "stylesheet";
-                    dlink.href = rootPrefix() + "assets/css/dashboard.css";
+                    dlink.href = rootPrefix() + "assets/css/dashboard.min.css";
                     document.head.appendChild(dlink);
                 }
 
@@ -526,7 +528,7 @@
                 if (!window.dashboardNavLoaded) {
                     window.dashboardNavLoaded = true;
                     var dnav = document.createElement("script");
-                    dnav.src = rootPrefix() + "assets/js/dashboard-nav.js";
+                    dnav.src = rootPrefix() + "assets/js/dashboard-nav.min.js";
                     dnav.defer = true;
                     document.body.appendChild(dnav);
                 }
@@ -871,11 +873,20 @@
         var skipLink = '<a class="skip-link" href="#main">Skip to main content</a>';
         body.insertAdjacentHTML("afterbegin", skipLink + headerMain);
 
-        // "Featured On" band is always placed directly above the CTA:
-        // - pages with a server-rendered band (index.html) -> keep it, skip injection
-        // - pages with their own static CTA (index.html)   -> insert before it
-        // - every other page                              -> insert before the injected CTA
-        if (document.querySelector(".tx-featured")) {
+        // "Featured On" band lives on the homepage, the catalog and category
+        // index pages. Tool *leaf* pages skip it to save ~88 external image
+        // requests and focus the page on the tool itself.
+        var pageLeaf =
+            body.getAttribute("data-layout") === "tool" &&
+            !/index\.html$/i.test(window.location.pathname);
+
+        if (pageLeaf) {
+            /* Tool leaf page: CTA + nav + footer, but no "Featured On" marquee
+               (~88 external badge images avoided on every tool page). */
+            if (!document.querySelector(".final-cta, .tx-cta")) {
+                body.insertAdjacentHTML("beforeend", ctaMain);
+            }
+        } else if (document.querySelector(".tx-featured")) {
             /* already present in served HTML - do not inject a duplicate */
         } else if (document.querySelector(".final-cta, .tx-cta")) {
             document.querySelector(".final-cta, .tx-cta").insertAdjacentHTML("beforebegin", featuredSection);
@@ -1131,7 +1142,7 @@
             }
             window.__TOOLS_PENDING = [cb];
             var s = document.createElement("script");
-            s.src = prefix + "assets/js/tools-data.js";
+            s.src = prefix + "assets/js/tools-data.min.js";
             s.onload = s.onerror = function () {
                 var list = window.__TOOLS_PENDING || [];
                 window.__TOOLS_PENDING = null;

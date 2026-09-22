@@ -1,7 +1,7 @@
 (function () {
     "use strict";
 
-    var TOOLS = window.TOOLS || [];
+    var TOOLS = window.TOOLS_FULL || window.TOOLS || [];
     var CATEGORIES = window.CATEGORIES || [];
     var category = (document.body && document.body.getAttribute("data-category")) || "";
     var isCategoryPage = !!category;
