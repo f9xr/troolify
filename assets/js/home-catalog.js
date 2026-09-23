@@ -1,7 +1,8 @@
 /* Homepage catalog - renders the category grid, the featured tools grid with
-   functional filters, and the live stats from the shared TOOLS / CATEGORIES
-   data in tools-data.js. Runs deferred after tools-data.js and replaces the
-   in-page skeleton placeholders. */
+   functional filters, and the live stats from the shared TOOLS_SLIM /
+   CATEGORIES data (tools-data-slim.js), falling back to the full window.TOOLS
+   registry when it is already present (e.g. the same data file). Runs deferred
+   after the data script and replaces the in-page skeleton placeholders. */
 (function () {
     "use strict";
 
@@ -14,7 +15,7 @@
             .replace(/'/g, "&#39;");
     }
 
-    var tools = window.TOOLS || [];
+    var tools = window.TOOLS_SLIM || window.TOOLS || [];
     var cats = window.CATEGORIES || [];
 
     /* ---------------------- Shared tool card markup ---------------------- */

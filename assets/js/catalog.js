@@ -1,7 +1,9 @@
 (function () {
     "use strict";
 
-    var TOOLS = window.TOOLS_FULL || window.TOOLS || [];
+    /* Hub pages ship the slim registry (render fields only). Search needs the
+       full registry (with keywords), which we lazy-load on first keystroke. */
+    var TOOLS = window.TOOLS_FULL || window.TOOLS_SLIM || window.TOOLS || [];
     var CATEGORIES = window.CATEGORIES || [];
     var category = (document.body && document.body.getAttribute("data-category")) || "";
     var isCategoryPage = !!category;
@@ -36,9 +38,31 @@
         return folder;
     }
 
-    var scoped = category
-        ? TOOLS.filter(function (t) { return t.category === category; })
-        : TOOLS.slice();
+    var scoped = [];
+    function computeScoped() {
+        return category
+            ? TOOLS.filter(function (t) { return t.category === category; })
+            : TOOLS.slice();
+    }
+    scoped = computeScoped();
+
+    /* Upgrade to the full registry (keywords) on demand via the shared pending
+       guard (same one used by layout.js / tool-page.js, so no double loads). */
+    function ensureFullData(cb) {
+        if (TOOLS.length && TOOLS[0].keywords) { if (cb) cb(); return; }
+        if (window.__TOOLS_PENDING) { if (cb) window.__TOOLS_PENDING.push(cb); return; }
+        window.__TOOLS_PENDING = [cb];
+        var s = document.createElement("script");
+        s.src = prefix + "assets/js/tools-data.min.js";
+        s.onload = s.onerror = function () {
+            var list = window.__TOOLS_PENDING || [];
+            window.__TOOLS_PENDING = null;
+            if (window.TOOLS) TOOLS = window.TOOLS;
+            scoped = computeScoped();
+            list.forEach(function (fn) { if (fn) fn(); });
+        };
+        document.head.appendChild(s);
+    }
 
     /* ItemList structured data for category pages - keeps the schema in sync
        automatically as tools are added to the registry. */
@@ -136,7 +160,14 @@
         }
     }
 
-    searchInput.addEventListener("input", render);
+    searchInput.addEventListener("input", function () {
+        if (searchInput.value.trim()) {
+            ensureFullData(function () { render(); });
+        } else {
+            render();
+        }
+    });
+    if (qParam) ensureFullData(function () { render(); });
     var clear = empty.querySelector("a,button");
     clear.addEventListener("click", function (e) {
         if (clear.hasAttribute("href")) return; /* browse-all link navigates */

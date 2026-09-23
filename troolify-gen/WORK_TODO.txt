@@ -24,8 +24,8 @@ DONE
                           tools/pdf/pdf-metadata-viewer.html
 
 IN PROGRESS / TODO
-------------------
-[ ] ASSETS/JS/TOOLS-DATA SLIM SPLIT  (most important next step)
+-----------------
+[X] ASSETS/JS/TOOLS-DATA SLIM SPLIT  (done 2026-09-23)
     Design (decided):
       - NEW assets/js/tools-data-slim.js sets window.TOOLS_SLIM = [render fields]
         (name, desc, icon, tag, category, href) + window.CATEGORIES.
@@ -33,31 +33,40 @@ IN PROGRESS / TODO
         (layout.js loadToolsData / loadToolsDataForSidebar, tool-page.js,
         dashboard-nav.js all read window.TOOLS - no change needed there).
     Steps:
-      1. Write generator (temp .js) to emit assets/js/tools-data-slim.js
-         from assets/js/tools-data.js (strip keywords + workflow).
-      2. Edit assets/js/home-catalog.js:17  -> var tools = window.TOOLS_SLIM || window.TOOLS || [];
-      3. Edit assets/js/catalog.js:4 render read (+ keep keyword search working:
-         if window.TOOLS missing on search, inject full tools-data.min.js then re-run).
-         catalog.js already edited once to window.TOOLS_FULL || window.TOOLS || [] -
-         decide final form.
-      4. Wire minify.js: auto-generate slim file + swap the eager
-         tools-data include -> tools-data-slim.min.js on NON-tool-leaf pages
-         (homepage, tools/index, category indexes = 27 pages).
-      5. Run build; verify idempotency, node --check on edited JS, and that
-         search modal + related-grid still get FULL data with keywords.
+      1. troolify-gen/gen-slim.js generates tools-data-slim.js from tools-data.js
+         (strips keywords + workflow). minify.js regenerates it each build.
+      2. home-catalog.js:17 -> var tools = window.TOOLS_SLIM || window.TOOLS || [];
+      3. catalog.js reads window.TOOLS_FULL || window.TOOLS_SLIM || window.TOOLS;
+         keyword search lazy-injects tools-data.min.js on first keystroke (shared
+         window.__TOOLS_PENDING guard), then re-renders with keywords.
+      4. minify.js swaps the eager tools-data include -> tools-data-slim.min.js
+         on the 27 hub pages (index.html, tools/index.html, 25 category indexes).
+      5. Verified: 2-run idempotent, hub pages slim / leaf lazy-loaders full,
+         slim lacks keywords+workflow (304 tools / 25 cats, 87KB min vs 150KB).
 
-[ ] LAZY HOMEPAGE BADGES + CDNJS PRECONNECT
-      - Add loading="lazy" to the 6 homepage badges
-        (nicklaunches.com, stork.ai, findyoursaas.com - duplicated 2x).
-      - Add cdnjs preconnect to tool pages that load cdnjs libs
-        (js-beautify, html2pdf, qrious, pdf.js/pdf.worker, jszip = 27 leftover cdnjs refs).
+[X] LAZY HOMEPAGE BADGES + CDNJS PRECONNECT  (done 2026-09-23)
+      - loading="lazy" added to nicklaunches (2x), stork.ai (2x), findyoursaas (2x).
+      - minify.js adds cdnjs preconnect to the 15 leaf pages that load cdnjs libs
+        (css/js-beautifier, qr, pdf tools). Collision with legacy FA-preconnect
+        remover fixed (it only strips now when the FA stylesheet is swapped).
 
-[ ] HERO IMAGE RECOMPRESS + FINAL VERIFY
-      - hero-image-3.webp 102KB, hero-image-2.webp 79.1KB,
-        hero-image-1.webp 50.7KB, og-image.jpg 38.4KB.
-      - Check logo.png / logo_nobg.png references before any deletion.
-      - Final end-to-end: re-run minify.js, code split verify,
-        spot-check pages (no googleapis / cdnjs font-awesome), mark done.
+[~] HERO IMAGE RECOMPRESS - SKIPPED (no cwebp/magick/ffmpeg or sharp installed;
+      images already WebP: hero1 51KB, hero2 81KB, hero3 104KB, og 39KB).
+      FINAL VERIFY done: run minify.js twice (0 changes), spot-check
+      hub/leaf script tags, 0 remaining googleapis / cdnjs font-awesome refs.
+
+[X] ROUND-2 PERF PASS  (done 2026-09-23)   <-501KB sitewide vs HEAD (uncommitted)
+      - Homepage: removed dead seo-article.min.css (no .seo-article markup) -14.4KB
+        render-blocking, and dropped code.market/widget.min.js external script.
+      - Inline JSON-LD blocks compacted (JSON-safe) -73KB sitewide.
+      - Inline tool-logic <script> blocks terser-minified to fixed-point
+        (idempotent; JSON-LD excluded). ~2.6KB/page avg transfer+parse saved.
+      - seo-article.min.css now preload + media="print" onload (noscript twin) -
+        out of the render-blocking chain on all 304 tool pages. Lookbehind guard
+        prevents re-wrapping the noscript link (idempotent).
+      - NOTE: f06715282b6043069eef9926d2c8e12b.txt is the IndexNow API key --
+        DO NOT DELETE.
+      - Verify: minify.js twice -> run 2 = 0 changes; node --check clean.
 
 VERIFY SCRIPTS (known good)
 ---------------------------
