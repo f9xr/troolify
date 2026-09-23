@@ -173,13 +173,13 @@ function page(cfg, scriptSrc) {
       description: cfg.desc,
       offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
       datePublished: DATE, dateModified: DATE,
-      author: { "@type": "Organization", name: "F9XR Development Team", url: "https://f9xr.github.io/" },
+      author: { "@type": "Organization", name: "F9XR Development Team", url: "https://f9xr.org/" },
       publisher: { "@type": "Organization", name: "Troolify", url: BASE + "/", logo: { "@type": "ImageObject", url: BASE + "/assets/images/logo_nobg.webp", width: 1407, height: 768 } } } },
     { data: {
       "@context": "https://schema.org", "@type": "Article", headline: cfg.name, description: cfg.desc,
       image: BASE + "/assets/images/og-image.jpg", datePublished: DATE, dateModified: DATE,
       mainEntityOfPage: canonical,
-      author: { "@type": "Organization", name: "F9XR Development Team", url: "https://f9xr.github.io/" },
+      author: { "@type": "Organization", name: "F9XR Development Team", url: "https://f9xr.org/" },
       publisher: { "@type": "Organization", name: "Troolify", url: BASE + "/", logo: { "@type": "ImageObject", url: BASE + "/assets/images/logo_nobg.webp", width: 1407, height: 768 } } } },
     { data: { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqJ } }
   ]);
@@ -218,6 +218,7 @@ function page(cfg, scriptSrc) {
     '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media=\'all\'">\n' +
     '<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>\n' +
     '<link rel="stylesheet" href="../../assets/css/tailwind.css">\n' +
+    '<link rel="stylesheet" href="../../assets/css/tool-shared.css">\n' +
     '<link rel="stylesheet" href="../../assets/css/tool.css">\n' +
     '<link rel="stylesheet" href="../../assets/css/site-shell.css">\n' +
     '<link rel="stylesheet" href="../../assets/css/tool-page.css">\n' +
@@ -235,7 +236,7 @@ function page(cfg, scriptSrc) {
     '      <nav class="breadcrumbs" aria-label="Breadcrumb"><ol>\n' +
     '        <li><a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a></li>\n' +
     '        <li><a href="../../tools/index.html">Tools</a></li>\n' +
-    '        <li><a href="../index.html">' + esc(cfg.catLabel) + "</a></li>\n" +
+    '        <li><a href="./index.html">' + esc(cfg.catLabel) + "</a></li>\n" +
     '        <li class="current" aria-current="page">' + esc(cfg.name) + "</li>\n</ol></nav>\n" +
     '      <div class="hero-main">\n' +
     '        <span class="tool-badge"><span class="dot"></span>Powered by a public web API &middot; see privacy note</span>\n' +
@@ -244,7 +245,7 @@ function page(cfg, scriptSrc) {
     '      <div class="hero-box hero-cat"><h3 class="hero-box-title"><i class="fa-solid fa-folder-open"></i>Category</h3>\n' +
     '        <div class="tool-meta">\n' +
     '          <span class="tool-tag"><i class="fa-solid fa-tags"></i>' + esc(cfg.catFolder) + "</span>\n" +
-    '          <a class="tool-cat" href="../index.html" aria-label="Browse ' + esc(cfg.catLabel) + '"><i class="fa-solid fa-folder"></i>' + esc(cfg.catLabel) + "</a>\n        </div>\n      </div>\n" +
+    '          <a class="tool-cat" href="./index.html" aria-label="Browse ' + esc(cfg.catLabel) + '"><i class="fa-solid fa-folder"></i>' + esc(cfg.catLabel) + "</a>\n        </div>\n      </div>\n" +
     '      <div class="hero-box hero-qa"><h3 class="hero-box-title"><i class="fa-solid fa-bolt"></i>Quick Actions</h3>\n' +
     '        <div class="tool-actions">\n' +
     '          <button class="rt-btn" type="button" id="btnShare"><i class="fa-solid fa-share-nodes"></i>Share</button>\n' +
@@ -253,7 +254,7 @@ function page(cfg, scriptSrc) {
     "        </div>\n      </div>\n" +
     '      <div class="hero-box hero-details"><h3 class="hero-box-title"><i class="fa-solid fa-circle-info"></i>Tool Details</h3>\n' +
     '        <div class="tool-details">\n' +
-    '          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.github.io/" target="_blank" rel="noopener">F9XR Development Team</a></div>\n' +
+    '          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.org/" target="_blank" rel="noopener">F9XR Development Team</a></div>\n' +
     '          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-check-double"></i>Reviewed by</span><a class="detail-value" href="../../press/editorial-policies.html">Review Board</a></div>\n' +
     '          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-clock-rotate-left"></i>Last updated</span><span class="detail-value">19 September 2026</span></div>\n' +
     "        </div>\n      </div>\n    </div>\n\n" +
@@ -278,14 +279,14 @@ function page(cfg, scriptSrc) {
     "      <h3>Keywords</h3>\n      <div class=\"keywords\">\n" +
     cfg.keywords.map(function (k) { return '<span class="keyword">' + esc(k) + "</span>"; }).join("") + "\n      </div>\n" +
     "      <h3>Tags</h3>\n      <div class=\"tags\">\n" +
-    '<a class="tag" href="../index.html"><i class="fa-solid fa-tags"></i>' + esc(cfg.catFolder) + "</a>\n" +
-    '<a class="tag" href="../index.html"><i class="fa-solid fa-folder"></i>' + esc(cfg.catLabel) + "</a>\n      </div>\n    </section>\n\n" +
+    '<a class="tag" href="./index.html"><i class="fa-solid fa-tags"></i>' + esc(cfg.catFolder) + "</a>\n" +
+    '<a class="tag" href="./index.html"><i class="fa-solid fa-folder"></i>' + esc(cfg.catLabel) + "</a>\n      </div>\n    </section>\n\n" +
     '    <section class="author-box" aria-label="About the publisher">\n' +
     '      <div class="author-avatar" aria-hidden="true"><img src="../../assets/images/logo_nobg.webp" alt="F9XR logo" loading="lazy" decoding="async" width="1407" height="768"></div>\n' +
     "      <div>\n        <span class=\"author-role\">Published by</span>\n        <h2>F9XR Development Team</h2>\n" +
     "        <p>" + (cfg.authorNote || "") + "</p>\n" +
     '        <div class="author-links">\n' +
-    '          <a href="https://f9xr.github.io/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i>F9XR Team</a>\n' +
+    '          <a href="https://f9xr.org/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i>F9XR Team</a>\n' +
     '          <a href="../../press/editorial-policies.html"><i class="fa-solid fa-scale-balanced"></i>Editorial Policies</a>\n' +
     '          <a href="https://github.com/f9xr" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i>GitHub</a>\n' +
     '          <a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>\n' +

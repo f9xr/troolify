@@ -61,7 +61,7 @@
             '<img src="https://prolaunch.net/images/badges/featured-dark.svg" alt="Pro Launch Featured Badge" width="240" height="52" loading="lazy" decoding="async" />' +
         '</a>' +
         '<a class="badge-link" href="https://nicklaunches.com/products/troolify/?utm_source=f9xr.org&utm_medium=badge&utm_campaign=featured" target="_blank" rel="noopener noreferrer">' +
-            '<img src="https://nicklaunches.com/badges/featured-dark.png" alt="Troolify on Nick Launches" width="244" height="56" />' +
+            '<img src="https://nicklaunches.com/badges/featured-dark.png" alt="Troolify on Nick Launches" width="244" height="56" loading="lazy" decoding="async" />' +
         '</a>' +
         '<a class="badge-link" href="https://peerpush.com/p/troolify-ulpu" target="_blank" rel="noopener noreferrer">' +
             '<img src="https://peerpush.com/p/troolify-ulpu/badge.png" alt="Troolify on PeerPush" width="230" height="56" loading="lazy" decoding="async" />' +
@@ -82,13 +82,13 @@
             '<img src="https://code.market/assets/manage-product/featured-logo-dark.svg" alt="ai tools code.market" width="200" height="50" loading="lazy" decoding="async" />' +
         '</a>' +
         '<a class="badge-link" href="https://newtool.site/item/troolify" target="_blank" rel="noopener noreferrer">' +
-            '<img src="https://newtool.site/badges/newtool-dark.svg" alt="Featured on NewTool.site" height="54" width="auto" loading="lazy" decoding="async" />' +
+            '<img src="https://newtool.site/badges/newtool-dark.svg" alt="Featured on NewTool.site" width="210" height="54" loading="lazy" decoding="async" />' +
         '</a>' +
         '<a class="badge-link" href="https://navifyai.com/" target="_blank" rel="noopener">' +
             '<img src="https://navifyai.com/static/img/badge-dark.svg" alt="Featured on NavifyAI.com - AI Tools Directory" width="200" height="50" loading="lazy" decoding="async" />' +
         '</a>' +
         '<span class="badge-link">' +
-            '<a href="https://www.stork.ai/" rel="nofollow" title="Stork Verified — stork.ai AI tools directory"><img src="https://www.stork.ai/badge/verified-dark.svg" alt="Stork Verified — stork.ai AI tools directory" width="216" height="44" /></a>' +
+            '<a href="https://www.stork.ai/" rel="nofollow" title="Stork Verified — stork.ai AI tools directory"><img src="https://www.stork.ai/badge/verified-dark.svg" alt="Stork Verified — stork.ai AI tools directory" width="216" height="44" loading="lazy" decoding="async" /></a>' +
         '</span>' +
         '<a class="badge-link" href="https://makerhunt.io/project/troolify" target="_blank" rel="noopener noreferrer" title="Featured on MakerHunt">' +
             '<img src="https://makerhunt.io/badges/makerhunt-badge-dark.svg" alt="Featured on MakerHunt" width="200" height="60" loading="lazy" decoding="async" />' +
@@ -106,7 +106,7 @@
             '<img src="https://www.scrolllaunch.com/api/badge/troolify?variant=featured&theme=light" alt="Troolify - Featured on ScrollLaunch" width="220" height="48" loading="lazy" decoding="async" />' +
         '</a>' +
         '<a class="badge-link" href="https://similarlabs.com" target="_blank" rel="noopener noreferrer">' +
-            '<img src="https://similarlabs.com/similarlabs-embed-badge-light.svg" alt="Featured on SimilarLabs" loading="lazy" decoding="async" />' +
+            '<img src="https://similarlabs.com/similarlabs-embed-badge-light.svg" alt="Featured on SimilarLabs" width="127" height="43" loading="lazy" decoding="async" />' +
         '</a>' +
         '<a class="badge-link" href="https://saaspa.ge/product/cmtrcv79b000lkz04oe9z27o9" target="_blank" rel="nofollow">' +
             '<img src="https://saaspa.ge/api/embed/product/cmtrcv79b000lkz04oe9z27o9/badge.png?theme=black" alt="Featured on Saaspa.ge" width="200" height="60" loading="lazy" decoding="async" />' +
@@ -118,10 +118,10 @@
             '<img src="https://launchzone.co/badge.svg?theme=dark" alt="Featured on LaunchZone" width="154" height="54" loading="lazy" decoding="async" />' +
         '</a>' +
         '<a class="badge-link" href="https://www.techtrendin.com/products/troolify" target="_blank" rel="noopener noreferrer">' +
-            '<img src="https://www.techtrendin.com/badges/featured-dark.png" alt="Featured on TechTrendin&#39;" height="52" width="auto" loading="lazy" decoding="async" />' +
+            '<img src="https://www.techtrendin.com/badges/featured-dark.png" alt="Featured on TechTrendin" width="173" height="52" loading="lazy" decoding="async" />' +
         '</a>' +
         '<a class="badge-link" href="https://buildlist.io/tool/troolify" target="_blank" rel="noopener noreferrer">' +
-            '<img src="https://buildlist.io/badge.svg" alt="Featured on Buildlist" height="40" width="auto" loading="lazy" decoding="async" />' +
+            '<img src="https://buildlist.io/badge.svg" alt="Featured on Buildlist" width="80" height="40" loading="lazy" decoding="async" />' +
         '</a>' +
         '<a class="badge-link" href="https://web-review.com" target="_blank" rel="noopener noreferrer">' +
             '<img src="https://web-review.com/badge.png" alt="Featured on Web Review" width="200" height="54" loading="lazy" decoding="async" />' +
@@ -134,7 +134,7 @@
             '<img src="https://tooldisk.com/badge/badge_dark.svg" alt="Featured on ToolDisk.com" width="200" height="54" loading="lazy" decoding="async" />' +
         '</a>' +
         '<a class="badge-link" href="https://aitoolhunt.co/item/troolify" target="_blank" rel="noopener noreferrer">' +
-            '<img src="https://aitoolhunt.co/badge-listed-dark.svg" alt="Listed on AIToolHunt" height="58" width="auto" loading="lazy" decoding="async" />' +
+            '<img src="https://aitoolhunt.co/badge-listed-dark.svg" alt="Listed on AIToolHunt" width="234" height="58" loading="lazy" decoding="async" />' +
         '</a>' +
         '<a class="badge-link" href="https://mydirs.com" target="_blank" rel="noopener noreferrer">' +
             '<img src="https://mydirs.com/badges/dark.svg" alt="Featured on Mydirs" width="200" height="54" loading="lazy" decoding="async" />' +
@@ -175,7 +175,7 @@
         '</a>' +
         '<a class="badge-link" href="https://findyoursaas.com/tool/troolify" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:none;display:inline-block;line-height:1;">' +
             '<span style="display:flex;align-items:center;background-color:#374151;border:1px solid #4B5563;border-radius:6px;padding:6px 10px;font-family:-apple-system,BlinkMacSystemFont,\'Segoe UI\',Roboto,Helvetica,Arial,sans-serif;box-shadow:0 2px 4px -1px rgba(0,0,0,.2);transition:transform .2s ease,box-shadow .2s ease;line-height:1;white-space:nowrap;">' +
-                '<img src="https://findyoursaas.com/fys-logo.png" alt="FYS Logo" style="width:18px;height:18px;border-radius:50%;margin-right:6px;display:block;">' +
+                '<img src="https://findyoursaas.com/fys-logo.png" alt="FYS Logo" width="18" height="18" style="width:18px;height:18px;border-radius:50%;margin-right:6px;display:block;">' +
                 '<span style="font-size:12px;font-weight:500;color:#F3F4F6;white-space:nowrap;">Featured on FYS</span>' +
             '</span>' +
         '</a>' +
