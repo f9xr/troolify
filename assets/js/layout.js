@@ -184,7 +184,8 @@
         '</a>' +
         '<a class="badge-link" href="https://curlship.com" target="_blank" rel="noopener noreferrer">' +
             '<img src="https://curlship.com/badge.svg" alt="Listed on CurlShip" width="120" height="20" loading="lazy" decoding="async" />' +
-        '</a>';
+        '</a>' +
+        '<a class="badge-link" href="https://nav-ai.net/" target="_blank" rel="noopener noreferrer" title="Nav - AI" style="display:inline-flex;height:44px;line-height:normal;align-items:center;background-color:#374151;border:1px solid #4B5563;border-radius:6px;padding:0 12px;font-family:-apple-system,BlinkMacSystemFont,\'Segoe UI\',Roboto,Helvetica,Arial,sans-serif;text-decoration:none;color:#F3F4F6;font-size:12px;font-weight:500;white-space:nowrap;">Nav - AI</a>';
 
     /* ------------------------------------------------------------------------
        Dashboard right-sidebar builder

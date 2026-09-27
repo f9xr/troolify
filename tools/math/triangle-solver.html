@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Triangle Solver | Sides, Angles, Area &amp; Perimeter Calculator</title>
+<meta name="description" content="Solve a triangle from sides, two sides and an angle, or two angles and a side. Get missing sides, angles, area, perimeter and type. Free - 100% client-side.">
+<meta name="author" content="F9XR Development Team">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#212529">
+<link rel="canonical" href="https://f9xr.org/troolify/tools/math/triangle-solver.html">
+<meta property="og:site_name" content="Troolify">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Triangle Solver | Sides, Angles, Area &amp; Perimeter Calculator">
+<meta property="og:description" content="Find missing sides, angles, area and perimeter from SSS, SAS or SAA data. Free and 100% client-side.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://f9xr.org/troolify/tools/math/triangle-solver.html">
+<meta property="og:image" content="https://f9xr.org/troolify/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-09-27">
+<meta property="article:modified_time" content="2026-09-27">
+<meta property="article:section" content="Math Tools">
+<meta property="article:tag" content="Geometry">
+<meta property="article:tag" content="Math Tools">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Triangle Solver | Sides, Angles, Area &amp; Perimeter Calculator">
+<meta name="twitter:description" content="Solve triangles from SSS, SAS or SAA - sides, angles, area and perimeter - 100% browser based.">
+<meta name="twitter:image" content="https://f9xr.org/troolify/assets/images/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://f9xr.org/troolify/index.html" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://f9xr.org/troolify/tools/index.html" },
+    { "@type": "ListItem", "position": 3, "name": "Math Tools", "item": "https://f9xr.org/troolify/tools/math/" },
+    { "@type": "ListItem", "position": 4, "name": "Triangle Solver", "item": "https://f9xr.org/troolify/tools/math/triangle-solver.html" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Triangle Solver",
+  "url": "https://f9xr.org/troolify/tools/math/triangle-solver.html",
+  "applicationCategory": "EducationalApplication",
+  "applicationSubCategory": "Triangle Geometry Solver",
+  "operatingSystem": "Any (web browser)",
+  "featureList": ["Solve from three sides (SSS)","Solve from two sides and an angle (SAS)","Solve from two angles and a side (SAA)","Area, perimeter and semi-perimeter","Triangle inequality validation","Classifies the triangle","100% client-side processing"],
+  "description": "Solve a triangle from sides, two sides and an angle, or two angles and a side. Get missing sides, angles, area, perimeter and type. Free - 100% client-side.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "datePublished": "2026-09-27",
+  "dateModified": "2026-09-27",
+  "author": { "@type": "Organization", "name": "F9XR Development Team", "url": "https://f9xr.org/" },
+  "publisher": { "@type": "Organization", "name": "Troolify", "url": "https://f9xr.org/troolify/", "logo": { "@type": "ImageObject", "url": "https://f9xr.org/troolify/assets/images/logo_nobg.webp", "width": 1407, "height": 768 } }
+}
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Triangle Solver | Sides, Angles, Area and Perimeter Calculator","description":"Solve a triangle from sides, two sides and an angle, or two angles and a side. Get missing sides, angles, area, perimeter and type. Free - 100% client-side.","image":"https://f9xr.org/troolify/assets/images/og-image.jpg","datePublished":"2026-09-27","dateModified":"2026-09-27","mainEntityOfPage":"https://f9xr.org/troolify/tools/math/triangle-solver.html","author":{"@type":"Organization","name":"F9XR Development Team","url":"https://f9xr.org/"},"publisher":{"@type":"Organization","name":"Troolify","url":"https://f9xr.org/troolify/","logo":{"@type":"ImageObject","url":"https://f9xr.org/troolify/assets/images/logo_nobg.webp","width":1407,"height":768}}}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do you find a missing side of a triangle?", "acceptedAnswer": { "@type": "Answer", "text": "With two sides and the included angle use the law of cosines, c² = a² + b² - 2ab·cos(C). With one side and two angles use the law of sines, a/sin(A) = b/sin(B) = c/sin(C), and solve for the unknown side." }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the law of cosines do?", "acceptedAnswer": { "@type": "Answer", "text": "It relates the sides of any triangle to one of its angles, and it works on right triangles too where it reproduces the Pythagorean theorem. It is the tool for finding a side when you know the other two sides and the angle between them." }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the area of a triangle calculated?", "acceptedAnswer": { "@type": "Answer", "text": "If you know the base and height, the area is half of base times height. If you only know the three sides, use Heron's formula: area = √(s(s-a)(s-b)(s-c)) where s is the semi-perimeter, half the total perimeter." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my triangle data uploaded?", "acceptedAnswer": { "@type": "Answer", "text": "No. All calculations run inside your browser tab. Your measurements are never transmitted, stored or logged." }
+    }
+  ]
+}
+</script>
+
+<link rel="icon" type="image/webp" href="../../assets/images/favicon.webp"><link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+<link rel="stylesheet" href="../../assets/css/tailwind.css">
+<link rel="stylesheet" href="../../assets/css/tool.css">
+<link rel="stylesheet" href="../../assets/css/site-shell.css">
+<link rel="stylesheet" href="../../assets/css/tool-page.css">
+<link rel="stylesheet" href="../../assets/css/seo-article.css">
+<style>
+  .calc-grid{display:grid;grid-template-columns:1fr;gap:18px}
+  @media(min-width:720px){.calc-grid{grid-template-columns:1fr 1fr}}
+  .field{display:flex;flex-direction:column;gap:6px}
+  .field label,.field-label{font-size:12.5px;font-weight:700;color:var(--muted)}
+  .field input,.field select,.field textarea{background:#1B2028;border:1px solid var(--border);color:var(--ink);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:15px;font-weight:600;outline:none;width:100%;box-sizing:border-box}
+  .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+  .field textarea{min-height:150px;resize:vertical;line-height:1.55}
+  .seg{display:flex;background:#161B22;border:1px solid var(--border);border-radius:10px;padding:4px;gap:4px;flex-wrap:wrap}
+  .seg-btn{flex:1;min-width:120px;border:0;background:transparent;color:var(--muted);font-family:inherit;font-size:13px;font-weight:700;padding:9px 10px;border-radius:7px;cursor:pointer;transition:background .15s,color .15s}
+  .seg-btn.active{background:rgba(59,130,246,.16);color:#93C5FD}
+  .seg-btn:hover:not(.active){background:rgba(255,255,255,.04)}
+  .hidden{display:none}
+  .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+  .btn{border:1px solid var(--border);background:#1B2028;color:var(--ink);font-family:inherit;font-size:13.5px;font-weight:700;padding:10px 15px;border-radius:10px;cursor:pointer;display:inline-flex;align-items:center;gap:7px}
+  .btn:hover{background:#232A34}
+  .btn-primary{background:rgba(59,130,246,.16);border-color:rgba(96,165,250,.35);color:#93C5FD}
+  .result-card{background:linear-gradient(180deg,rgba(59,130,246,.12),rgba(59,130,246,.03));border:1px solid rgba(96,165,250,.25);border-radius:14px;padding:18px;margin-top:18px}
+  .result-row{display:flex;justify-content:space-between;gap:10px;padding:8px 2px;font-size:14px}
+  .result-row+.result-row{border-top:1px dashed rgba(255,255,255,.08)}
+  .result-row b{color:#93C5FD;font-weight:800;text-align:right}
+  .result-row.hero-row b{color:#6EE7B7}
+  .plain{font-size:14px;color:#F8F9FA;margin-top:10px;padding-top:10px;border-top:1px dashed rgba(255,255,255,.08)}
+  .note{font-size:13px;color:#FCD34D;margin-top:10px}
+  .note.warn{color:#FCA5A5}
+  .subhead{font-size:12.5px;font-weight:700;color:var(--muted);margin:16px 0 8px}
+  table.data-table{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:10px}
+  table.data-table th,table.data-table td{text-align:left;padding:8px 10px;border-bottom:1px solid rgba(255,255,255,.08)}
+  table.data-table th{color:#93C5FD;font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+  table.data-table td{color:#F8F9FA}
+  .cite-out{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13.5px;line-height:1.6;color:#F8F9FA;background:#161B22;border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-top:10px;word-break:break-word}
+  .row-list{display:flex;flex-direction:column;gap:10px;margin-top:10px}
+  .row-item{display:grid;grid-template-columns:1fr;gap:10px;background:#161B22;border:1px solid var(--border);border-radius:12px;padding:12px}
+  @media(min-width:640px){.row-item{grid-template-columns:2fr 1fr 1fr auto;align-items:end}}
+  .code-btn{background:transparent;border:1px solid var(--border);color:var(--muted);border-radius:8px;padding:9px 12px;cursor:pointer;font-family:inherit;font-size:13px;font-weight:700}
+  .code-btn:hover{border-color:#60A5FA;color:#93C5FD}
+  .badge{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;padding:3px 8px;border-radius:999px;border:1px solid currentColor}
+  .badge.s1{color:#93C5FD}.badge.s2{color:#6EE7B7}.badge.s3{color:#FCD34D}.badge.s4{color:#FDA4AF}.badge.s5{color:#C4B5FD}
+  .stat-chip{background:#161B22;border:1px solid var(--border);border-radius:10px;padding:9px 12px;font-size:13px;font-weight:700;color:#F8F9FA}
+</style>
+</head>
+<body data-layout="tool">
+<noscript>
+    <nav aria-label="Primary" style="position:static;display:block;padding:1rem 1.5rem;background:#212529;border-bottom:1px solid #343A40;text-align:center;font-size:0.9rem;">
+        <a href="../../index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Home</a>
+        <a href="../../tools/index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Tools</a>
+        <a href="../../pages/about.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">About</a>
+        <a href="../../pages/contact.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Contact</a>
+    </nav>
+</noscript>
+
+<main class="tool-main">
+  <div class="container">
+
+    <div class="tool-head hero">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="../../tools/index.html">Tools</a></li>
+          <li><a href="../index.html">Math Tools</a></li>
+          <li class="current" aria-current="page">Triangle Solver</li>
+        </ol>
+      </nav>
+      <div class="hero-main">
+        <span class="tool-badge"><span class="dot"></span>100% client-side &middot; zero data retention</span>
+        <h1>Triangle Solver</h1>
+        <p>Give it the three measurements you know and get the rest: missing sides, all three angles, area, perimeter and what type of triangle it is.</p>
+      </div>
+      <div class="hero-box hero-cat">
+        <h3 class="hero-box-title"><i class="fa-solid fa-folder-open"></i>Category</h3>
+        <div class="tool-meta">
+          <span class="tool-tag"><i class="fa-solid fa-shapes"></i>Geometry</span>
+          <a class="tool-cat" href="../index.html" aria-label="Browse Math Tools category"><i class="fa-solid fa-folder"></i>Math Tools</a>
+        </div>
+      </div>
+      <div class="hero-box hero-qa">
+        <h3 class="hero-box-title"><i class="fa-solid fa-bolt"></i>Quick Actions</h3>
+        <div class="tool-actions">
+          <button class="rt-btn" type="button" id="btnShare"><i class="fa-solid fa-share-nodes"></i>Share</button>
+          <button class="rt-btn" type="button" id="btnEmbed"><i class="fa-solid fa-code"></i>Embed Tool</button>
+          <a class="rt-btn" href="../../pages/feedback.html"><i class="fa-solid fa-comment"></i>Feedback</a>
+        </div>
+      </div>
+      <div class="hero-box hero-details">
+        <h3 class="hero-box-title"><i class="fa-solid fa-circle-info"></i>Tool Details</h3>
+        <div class="tool-details">
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.org/" target="_blank" rel="noopener">F9XR Development Team</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-check-double"></i>Reviewed by</span><a class="detail-value" href="../../press/editorial-policies.html">Review Board</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-clock-rotate-left"></i>Last updated</span><span class="detail-value">27 September 2026</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel clean">
+      <div class="panel-inner">
+        <div class="field"><span class="field-label" id="trModeLabel">What you know</span>
+          <div class="seg" role="tablist" aria-label="Known values">
+            <button class="seg-btn active" type="button" data-mode="sss" role="tab" aria-selected="true">3 sides (SSS)</button>
+            <button class="seg-btn" type="button" data-mode="sas" role="tab" aria-selected="false">2 sides + angle</button>
+            <button class="seg-btn" type="button" data-mode="saa" role="tab" aria-selected="false">1 side + 2 angles</button>
+          </div>
+        </div>
+
+        <div class="calc-grid" style="margin-top:16px">
+          <div class="field" id="trF1"><label for="trA" id="trALabel">Side a</label><input id="trA" type="number" inputmode="decimal" step="any" value="3"></div>
+          <div class="field" id="trF2"><label for="trB" id="trBLabel">Side b</label><input id="trB" type="number" inputmode="decimal" step="any" value="4"></div>
+          <div class="field" id="trF3"><label for="trC" id="trCLabel">Side c</label><input id="trC" type="number" inputmode="decimal" step="any" value="5"></div>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn-primary" type="button" id="btnCopy"><i class="fa-solid fa-copy"></i>Copy result</button>
+        </div>
+
+        <div class="result-card" id="trResults" aria-live="polite"></div>
+        <p class="proc-line"><i class="fa-solid fa-bolt"></i><span id="trProc">Ready - calculations happen in this tab.</span></p>
+      </div>
+    </div>
+
+    <aside class="disclaimer" aria-label="Disclaimer">
+      <i class="fa-solid fa-circle-info"></i>
+      <p>Whilst every effort has been made in building our tool, we are not to be held liable for any damages arising out of or in connection with its use. Verify results against your own working, especially in high-stakes engineering or surveying contexts <a href="../../press/disclaimer.html">Full disclaimer</a>.</p>
+    </aside>
+
+    <div class="article-layout">
+      <article class="seo-article">
+        <h2 id="article-title">Triangle Solver: Find Any Missing Side, Angle or Area</h2>
+        <p>A triangle is fully described by three independent measurements - three sides, two sides and an included angle, or one side and two angles. Give this solver whichever three you have and it returns the complete picture: all three sides, all three angles, the area, the perimeter and how the shape is classified.</p>
+
+        <h2 id="how-to-use">How to Use the Triangle Solver</h2>
+        <ol>
+          <li><strong>Choose what you know</strong> - three sides, two sides plus the included angle, or one side plus two angles.</li>
+          <li><strong>Enter the values.</strong> Angles are in degrees.</li>
+          <li><strong>Read the full result</strong> - missing lengths, all angles, area, perimeter and the triangle type.</li>
+        </ol>
+
+        <h2 id="laws">The Two Laws That Do The Work</h2>
+        <ul>
+          <li><strong>Law of cosines:</strong> c² = a² + b² - 2ab&middot;cos(C). Use it to find a side from the other two sides and the included angle, or to find an angle from all three sides.</li>
+          <li><strong>Law of sines:</strong> a / sin(A) = b / sin(B) = c / sin(C). Use it when you know one side and want another side, or to find a missing angle.</li>
+        </ul>
+
+        <h2 id="area">Area and Perimeter</h2>
+        <p>With a base and its perpendicular height the area is simply half of base times height. With only the three sides, Heron's formula does the job: work out the semi-perimeter s, then take the square root of s(s-a)(s-b)(s-c). Perimeter is just a + b + c, and the semi-perimeter is half of that.</p>
+
+        <h2 id="types">Types of Triangle</h2>
+        <ul>
+          <li><strong>By sides:</strong> scalene (all different), isosceles (two equal), equilateral (all three equal).</li>
+          <li><strong>By angles:</strong> acute (all under 90&deg;), right (one 90&deg;), obtuse (one over 90&deg;).</li>
+          <li><strong>Valid triangles only exist when</strong> the longest side is strictly less than the sum of the other two. This calculator checks that inequality, which is the most common reason a set of measurements cannot be a triangle at all.</li>
+        </ul>
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+
+        <details class="faq-item">
+          <summary>How do you find a missing side of a triangle?</summary>
+          <div class="faq-a">
+            <p>With two sides and the included angle use the law of cosines, c² = a² + b² - 2ab·cos(C). With one side and two angles use the law of sines, a/sin(A) = b/sin(B) = c/sin(C), and solve for the unknown side.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>What does the law of cosines do?</summary>
+          <div class="faq-a">
+            <p>It relates the sides of any triangle to one of its angles, and it works on right triangles too where it reproduces the Pythagorean theorem. It is the tool for finding a side when you know the other two sides and the angle between them.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>How is the area of a triangle calculated?</summary>
+          <div class="faq-a">
+            <p>If you know the base and height, the area is half of base times height. If you only know the three sides, use Heron's formula: area = √(s(s-a)(s-b)(s-c)) where s is the semi-perimeter, half the total perimeter.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Is my triangle data uploaded?</summary>
+          <div class="faq-a">
+            <p>No. All calculations run inside your browser tab. Your measurements are never transmitted, stored or logged.</p>
+          </div>
+        </details>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>Triangles are the base of trigonometry, surveying and graphics, and the two laws involved are worth memorising. Sides alone means cosine rule, an angle plus two sides means cosine rule then sine rule. Recognising which situation you are in is the real skill, and this tool lets you check that instinct instantly.</p>
+      </article>
+    </div>
+
+    <section class="keyword-box" aria-label="Keywords and tags">
+      <h2>Keyword &amp; Tags</h2>
+      <h3>Keywords</h3>
+      <div class="keywords">
+        <span class="keyword">triangle solver</span>
+        <span class="keyword">triangle calculator</span>
+        <span class="keyword">find area of triangle</span>
+        <span class="keyword">triangle angles</span>
+        <span class="keyword">law of cosines</span>
+        <span class="keyword">law of sines</span>
+        <span class="keyword">herons formula</span>
+        <span class="keyword">perimeter calculator</span>
+        <span class="keyword">right triangle</span>
+        <span class="keyword">math tools</span>
+      </div>
+      <h3>Tags</h3>
+      <div class="tags">
+        <a class="tag" href="../index.html"><i class="fa-solid fa-shapes"></i>Geometry</a>
+        <a class="tag" href="../index.html"><i class="fa-solid fa-folder"></i>Math Tools</a>
+        <a class="tag" href="../index.html"><i class="fa-solid fa-ruler-combined"></i>Measurement</a>
+        <a class="tag" href="../../tools/index.html"><i class="fa-solid fa-cube"></i>All Tools</a>
+      </div>
+    </section>
+
+    <section class="author-box" aria-label="About the publisher">
+      <div class="author-avatar" aria-hidden="true"><img src="../../assets/images/logo_nobg.webp" alt="F9XR logo" loading="lazy" decoding="async" width="1407" height="768"></div>
+      <div>
+        <span class="author-role">Published by</span>
+        <h2>F9XR Development Team</h2>
+        <p>Every Troolify tool is built and reviewed by the F9XR Development Team, then checked by our Review Board for correctness, accessibility, and clarity. Tools run 100% client-side with zero data retention.</p>
+        <div class="author-links">
+          <a href="https://f9xr.org/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i>F9XR Team</a>
+          <a href="../../press/editorial-policies.html"><i class="fa-solid fa-scale-balanced"></i>Editorial Policies</a>
+          <a href="https://github.com/f9xr" target="_blank" rel="noopener" aria-label="F9XR on GitHub"><i class="fa-brands fa-github"></i>GitHub</a>
+          <a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on LinkedIn"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+          <a href="https://instagram.com/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on Instagram"><i class="fa-brands fa-instagram"></i>Instagram</a>
+          <a href="https://youtube.com/@QuarterlyLIV" target="_blank" rel="noopener" aria-label="F9XR on YouTube"><i class="fa-brands fa-youtube"></i>YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-tools" aria-label="Related tools">
+      <h2>Related Tools</h2>
+      <div class="related-search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" id="relatedSearch" placeholder="Search all Troolify tools&hellip;" autocomplete="off" aria-label="Search related tools">
+      </div>
+      <div class="related-grid" id="relatedGrid" aria-busy="true">
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+      </div>
+    </section>
+
+    <section class="comments" aria-label="Comments">
+      <h2>Comments</h2>
+      <div id="comments">
+        <script src="https://utteranc.es/client.js" repo="f9xr/troolify" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async></script>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"><span></span><i class="fa-solid fa-layer-group"></i><span></span></div>
+
+  </div>
+</main>
+
+<script src="../../assets/js/layout.js" defer></script>
+<script src="../../assets/js/tools-data.js" defer></script>
+<script src="../../assets/js/tool-page.js" defer></script>
+<script>
+(function(){
+  "use strict";
+  var mode="sss", lastText="";
+  var a=document.getElementById("trA"),b=document.getElementById("trB"),c=document.getElementById("trC");
+  var aL=document.getElementById("trALabel"),bL=document.getElementById("trBLabel"),cL=document.getElementById("trCLabel");
+  var out=document.getElementById("trResults"),proc=document.getElementById("trProc");
+  var DEG=180/Math.PI;
+  function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+  function f(n){ return n.toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:4}); }
+  function near(x,t){ return Math.abs(x-t)<1e-9; }
+  function bad(msg){ return '<div class="result-row hero-row"><span>Cannot solve</span><b>Invalid data</b></div><p class="note warn">'+esc(msg)+'</p>'; }
+  function render(sa,sb,sc,note){
+    var per=sa+sb+sc, s=per/2;
+    var area=Math.sqrt(Math.max(0,s*(s-sa)*(s-sb)*(s-sc)));
+    var A=Math.acos(Math.min(1,Math.max(-1,(sb*sb+sc*sc-sa*sa)/(2*sb*sc))))*DEG;
+    var B=Math.acos(Math.min(1,Math.max(-1,(sa*sa+sc*sc-sb*sb)/(2*sa*sc))))*DEG;
+    var C=180-A-B;
+    var sidesType=(near(sa,sb)&&near(sb,sc))?"Equilateral":((near(sa,sb)||near(sb,sc)||near(sa,sc))?"Isosceles":"Scalene");
+    var angType=(near(C,90)||near(A,90)||near(B,90))?"Right":((A>90||B>90||C>90)?"Obtuse":"Acute");
+    var html=
+      '<div class="result-row hero-row"><span>Area</span><b>'+f(area)+' sq units</b></div>'+
+      '<div class="result-row"><span>Perimeter</span><b>'+f(per)+'</b></div>'+
+      '<div class="result-row"><span>Side a</span><b>'+f(sa)+'</b></div>'+
+      '<div class="result-row"><span>Side b</span><b>'+f(sb)+'</b></div>'+
+      '<div class="result-row"><span>Side c</span><b>'+f(sc)+'</b></div>'+
+      '<div class="result-row"><span>Angle A (opposite a)</span><b>'+f(A)+'&deg;</b></div>'+
+      '<div class="result-row"><span>Angle B (opposite b)</span><b>'+f(B)+'&deg;</b></div>'+
+      '<div class="result-row"><span>Angle C (opposite c)</span><b>'+f(C)+'&deg;</b></div>'+
+      '<div class="result-row"><span>Type by sides</span><b>'+sidesType+'</b></div>'+
+      '<div class="result-row"><span>Type by angles</span><b>'+angType+'</b></div>';
+    if(note){ html+='<div class="plain">'+esc(note)+'</div>'; }
+    lastText="Sides "+f(sa)+", "+f(sb)+", "+f(sc)+". Angles "+f(A)+"°, "+f(B)+"°, "+f(C)+"°. Area "+f(area)+" sq units. Perimeter "+f(per)+".";
+    return html;
+  }
+  function calc(){
+    var t0=performance.now();
+    var A=parseFloat(a.value),B=parseFloat(b.value),C=parseFloat(c.value);
+    var html="";
+    if([A,B,C].some(function(x){return isNaN(x);})){
+      html='<div class="result-row hero-row"><span>Result</span><b>&mdash;</b></div>';
+    }else if([A,B,C].some(function(x){return x<=0;})){
+      html=bad("Every side and angle must be greater than zero.");
+    }else if(mode==="sss"){
+      var mx=Math.max(A,B,C), sum=A+B+C-mx;
+      if(mx>=sum){ html=bad("These sides cannot form a triangle: the longest side ("+f(mx)+") is not shorter than the other two added together ("+f(sum)+")."); }
+      else{ html=render(A,B,C,"Three sides given, so Heron&#8217;s formula gives the area."); }
+    }else if(mode==="sas"){
+      if(C>180||C<0){ html=bad("An angle cannot be negative or greater than 180 degrees."); }
+      else if(C===0||C===180){ html=bad("An angle of 0&deg; or 180&deg; gives a straight line, not a triangle."); }
+      else{
+        var rad=C/DEG;
+        var cc=Math.sqrt(A*A+B*B-2*A*B*Math.cos(rad));
+        html=render(A,B,cc,"Two sides and the included angle, so the law of cosines gives side c.");
+      }
+    }else{
+      if(B+C>=180){ html=bad("Two angles already add up to "+f(B+C)+"&deg;. Angles in a triangle must total 180&deg;, so there is no third angle left."); }
+      else{
+        var Aang=180-B-C;
+        var k=A/Math.sin(Aang/DEG);
+        var bb=k*Math.sin(B/DEG), cc=k*Math.sin(C/DEG);
+        html=render(A,bb,cc,"One side and two angles, so the law of sines gives the missing sides.");
+      }
+    }
+    out.innerHTML=html;
+    proc.textContent="Calculated in "+(performance.now()-t0).toFixed(1)+" ms - inside your browser. 0 bytes uploaded.";
+  }
+  function labels(){
+    if(mode==="sss"){ aL.textContent="Side a"; bL.textContent="Side b"; cL.textContent="Side c"; }
+    else if(mode==="sas"){ aL.textContent="Side a"; bL.textContent="Side b"; cL.textContent="Included angle C (degrees)"; }
+    else { aL.textContent="Side a"; bL.textContent="Angle B (degrees)"; cL.textContent="Angle C (degrees)"; }
+  }
+  document.querySelectorAll(".seg-btn").forEach(function(btn){
+    btn.addEventListener("click",function(){
+      document.querySelectorAll(".seg-btn").forEach(function(x){ x.classList.remove("active"); x.setAttribute("aria-selected","false"); });
+      btn.classList.add("active"); btn.setAttribute("aria-selected","true");
+      mode=btn.getAttribute("data-mode");
+      if(mode==="saa"){ a.value=3; b.value=53.13; c.value=36.87; }
+      labels(); calc();
+    });
+  });
+  [a,b,c].forEach(function(el){ el.addEventListener("input",calc); });
+  document.getElementById("btnCopy").addEventListener("click",function(){
+    window.Troolify.copyToClipboard(lastText,function(){ proc.textContent="Copied to clipboard - the bytes never left your device."; });
+  });
+  calc();
+})();
+</script>
+</body>
+</html>

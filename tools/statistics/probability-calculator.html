@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Probability Calculator | Dice, Coins, Combinations &amp; More</title>
+<meta name="description" content="Calculate probability for events, dice sums, coin flips, combinations and permutations. Six probability modes with percentages and odds - free, 100% client-side.">
+<meta name="author" content="F9XR Development Team">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#212529">
+<link rel="canonical" href="https://f9xr.org/troolify/tools/statistics/probability-calculator.html">
+<meta property="og:site_name" content="Troolify">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Probability Calculator | Dice, Coins, Combinations &amp; More">
+<meta property="og:description" content="Six probability calculators: simple events, dice, coin tosses, combinations, permutations and at-least-one. Free and client-side.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://f9xr.org/troolify/tools/statistics/probability-calculator.html">
+<meta property="og:image" content="https://f9xr.org/troolify/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="article:published_time" content="2026-09-27">
+<meta property="article:modified_time" content="2026-09-27">
+<meta property="article:section" content="Statistics Tools">
+<meta property="article:tag" content="Probability">
+<meta property="article:tag" content="Statistics Tools">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Probability Calculator | Dice, Coins, Combinations &amp; More">
+<meta name="twitter:description" content="Probability, dice, coins, combinations and permutations in one tool - 100% browser based.">
+<meta name="twitter:image" content="https://f9xr.org/troolify/assets/images/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://f9xr.org/troolify/index.html" },
+    { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://f9xr.org/troolify/tools/index.html" },
+    { "@type": "ListItem", "position": 3, "name": "Statistics Tools", "item": "https://f9xr.org/troolify/tools/statistics/" },
+    { "@type": "ListItem", "position": 4, "name": "Probability Calculator", "item": "https://f9xr.org/troolify/tools/statistics/probability-calculator.html" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Probability Calculator",
+  "url": "https://f9xr.org/troolify/tools/statistics/probability-calculator.html",
+  "applicationCategory": "EducationalApplication",
+  "applicationSubCategory": "Probability And Combinatorics Calculator",
+  "operatingSystem": "Any (web browser)",
+  "featureList": ["Simple event probability","Two-dice sum distribution","Coin toss probability (binomial)","Combinations and permutations","At least one success","Odds and complement","100% client-side processing"],
+  "description": "Calculate probability for events, dice sums, coin flips, combinations and permutations. Six probability modes with percentages and odds - free, 100% client-side.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "datePublished": "2026-09-27",
+  "dateModified": "2026-09-27",
+  "author": { "@type": "Organization", "name": "F9XR Development Team", "url": "https://f9xr.org/" },
+  "publisher": { "@type": "Organization", "name": "Troolify", "url": "https://f9xr.org/troolify/", "logo": { "@type": "ImageObject", "url": "https://f9xr.org/troolify/assets/images/logo_nobg.webp", "width": 1407, "height": 768 } }
+}
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Probability Calculator | Dice Coins Combinations and Permutations","description":"Calculate probability for events, dice sums, coin flips, combinations and permutations. Six probability modes with percentages and odds - free, 100% client-side.","image":"https://f9xr.org/troolify/assets/images/og-image.jpg","datePublished":"2026-09-27","dateModified":"2026-09-27","mainEntityOfPage":"https://f9xr.org/troolify/tools/statistics/probability-calculator.html","author":{"@type":"Organization","name":"F9XR Development Team","url":"https://f9xr.org/"},"publisher":{"@type":"Organization","name":"Troolify","url":"https://f9xr.org/troolify/","logo":{"@type":"ImageObject","url":"https://f9xr.org/troolify/assets/images/logo_nobg.webp","width":1407,"height":768}}}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate basic probability?", "acceptedAnswer": { "@type": "Answer", "text": "Divide the number of favourable outcomes by the total number of equally likely outcomes. Rolling a 3 on a six-sided die is 1 in 6, which is about 16.67%." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the probability of rolling a certain sum with two dice?", "acceptedAnswer": { "@type": "Answer", "text": "Two dice have 36 equally likely combinations. Sums of 7 and 2 are the most likely with 6 combinations each, while 2 and 12 are the least likely with 1 each. The probability of any sum is its combination count divided by 36." }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the coin toss calculator work?", "acceptedAnswer": { "@type": "Answer", "text": "It uses the binomial distribution. The chance of getting exactly k heads in n fair coin flips is the number of ways to choose which k flips land heads, written as n choose k, multiplied by 0.5 to the power n. It also gives the chance of at least one head, which is the complement of all tails." }
+    },
+    {
+      "@type": "Question",
+      "name": "Are my calculations private?", "acceptedAnswer": { "@type": "Answer", "text": "Completely. Every figure is worked out in your browser tab with no server involved, so nothing you enter is transmitted or kept." }
+    }
+  ]
+}
+</script>
+
+<link rel="icon" type="image/webp" href="../../assets/images/favicon.webp"><link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+<link rel="stylesheet" href="../../assets/css/tailwind.css">
+<link rel="stylesheet" href="../../assets/css/tool.css">
+<link rel="stylesheet" href="../../assets/css/site-shell.css">
+<link rel="stylesheet" href="../../assets/css/tool-page.css">
+<link rel="stylesheet" href="../../assets/css/seo-article.css">
+<style>
+  .calc-grid{display:grid;grid-template-columns:1fr;gap:18px}
+  @media(min-width:720px){.calc-grid{grid-template-columns:1fr 1fr}}
+  .field{display:flex;flex-direction:column;gap:6px}
+  .field label,.field-label{font-size:12.5px;font-weight:700;color:var(--muted)}
+  .field input,.field select,.field textarea{background:#1B2028;border:1px solid var(--border);color:var(--ink);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:15px;font-weight:600;outline:none;width:100%;box-sizing:border-box}
+  .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.15)}
+  .field textarea{min-height:150px;resize:vertical;line-height:1.55}
+  .seg{display:flex;background:#161B22;border:1px solid var(--border);border-radius:10px;padding:4px;gap:4px;flex-wrap:wrap}
+  .seg-btn{flex:1;min-width:120px;border:0;background:transparent;color:var(--muted);font-family:inherit;font-size:13px;font-weight:700;padding:9px 10px;border-radius:7px;cursor:pointer;transition:background .15s,color .15s}
+  .seg-btn.active{background:rgba(59,130,246,.16);color:#93C5FD}
+  .seg-btn:hover:not(.active){background:rgba(255,255,255,.04)}
+  .hidden{display:none}
+  .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+  .btn{border:1px solid var(--border);background:#1B2028;color:var(--ink);font-family:inherit;font-size:13.5px;font-weight:700;padding:10px 15px;border-radius:10px;cursor:pointer;display:inline-flex;align-items:center;gap:7px}
+  .btn:hover{background:#232A34}
+  .btn-primary{background:rgba(59,130,246,.16);border-color:rgba(96,165,250,.35);color:#93C5FD}
+  .result-card{background:linear-gradient(180deg,rgba(59,130,246,.12),rgba(59,130,246,.03));border:1px solid rgba(96,165,250,.25);border-radius:14px;padding:18px;margin-top:18px}
+  .result-row{display:flex;justify-content:space-between;gap:10px;padding:8px 2px;font-size:14px}
+  .result-row+.result-row{border-top:1px dashed rgba(255,255,255,.08)}
+  .result-row b{color:#93C5FD;font-weight:800;text-align:right}
+  .result-row.hero-row b{color:#6EE7B7}
+  .plain{font-size:14px;color:#F8F9FA;margin-top:10px;padding-top:10px;border-top:1px dashed rgba(255,255,255,.08)}
+  .note{font-size:13px;color:#FCD34D;margin-top:10px}
+  .note.warn{color:#FCA5A5}
+  .subhead{font-size:12.5px;font-weight:700;color:var(--muted);margin:16px 0 8px}
+  table.data-table{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:10px}
+  table.data-table th,table.data-table td{text-align:left;padding:8px 10px;border-bottom:1px solid rgba(255,255,255,.08)}
+  table.data-table th{color:#93C5FD;font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+  table.data-table td{color:#F8F9FA}
+  .cite-out{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13.5px;line-height:1.6;color:#F8F9FA;background:#161B22;border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-top:10px;word-break:break-word}
+  .row-list{display:flex;flex-direction:column;gap:10px;margin-top:10px}
+  .row-item{display:grid;grid-template-columns:1fr;gap:10px;background:#161B22;border:1px solid var(--border);border-radius:12px;padding:12px}
+  @media(min-width:640px){.row-item{grid-template-columns:2fr 1fr 1fr auto;align-items:end}}
+  .code-btn{background:transparent;border:1px solid var(--border);color:var(--muted);border-radius:8px;padding:9px 12px;cursor:pointer;font-family:inherit;font-size:13px;font-weight:700}
+  .code-btn:hover{border-color:#60A5FA;color:#93C5FD}
+  .badge{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;padding:3px 8px;border-radius:999px;border:1px solid currentColor}
+  .badge.s1{color:#93C5FD}.badge.s2{color:#6EE7B7}.badge.s3{color:#FCD34D}.badge.s4{color:#FDA4AF}.badge.s5{color:#C4B5FD}
+  .stat-chip{background:#161B22;border:1px solid var(--border);border-radius:10px;padding:9px 12px;font-size:13px;font-weight:700;color:#F8F9FA}
+</style>
+</head>
+<body data-layout="tool">
+<noscript>
+    <nav aria-label="Primary" style="position:static;display:block;padding:1rem 1.5rem;background:#212529;border-bottom:1px solid #343A40;text-align:center;font-size:0.9rem;">
+        <a href="../../index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Home</a>
+        <a href="../../tools/index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Tools</a>
+        <a href="../../pages/about.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">About</a>
+        <a href="../../pages/contact.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Contact</a>
+    </nav>
+</noscript>
+
+<main class="tool-main">
+  <div class="container">
+
+    <div class="tool-head hero">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="../../tools/index.html">Tools</a></li>
+          <li><a href="../index.html">Statistics Tools</a></li>
+          <li class="current" aria-current="page">Probability Calculator</li>
+        </ol>
+      </nav>
+      <div class="hero-main">
+        <span class="tool-badge"><span class="dot"></span>100% client-side &middot; zero data retention</span>
+        <h1>Probability Calculator</h1>
+        <p>Six common probability questions answered exactly: simple events, two-dice sums, coin tosses, combinations, permutations and "at least one" odds.</p>
+      </div>
+      <div class="hero-box hero-cat">
+        <h3 class="hero-box-title"><i class="fa-solid fa-folder-open"></i>Category</h3>
+        <div class="tool-meta">
+          <span class="tool-tag"><i class="fa-solid fa-dice"></i>Probability</span>
+          <a class="tool-cat" href="../index.html" aria-label="Browse Statistics Tools category"><i class="fa-solid fa-folder"></i>Statistics Tools</a>
+        </div>
+      </div>
+      <div class="hero-box hero-qa">
+        <h3 class="hero-box-title"><i class="fa-solid fa-bolt"></i>Quick Actions</h3>
+        <div class="tool-actions">
+          <button class="rt-btn" type="button" id="btnShare"><i class="fa-solid fa-share-nodes"></i>Share</button>
+          <button class="rt-btn" type="button" id="btnEmbed"><i class="fa-solid fa-code"></i>Embed Tool</button>
+          <a class="rt-btn" href="../../pages/feedback.html"><i class="fa-solid fa-comment"></i>Feedback</a>
+        </div>
+      </div>
+      <div class="hero-box hero-details">
+        <h3 class="hero-box-title"><i class="fa-solid fa-circle-info"></i>Tool Details</h3>
+        <div class="tool-details">
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.org/" target="_blank" rel="noopener">F9XR Development Team</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-check-double"></i>Reviewed by</span><a class="detail-value" href="../../press/editorial-policies.html">Review Board</a></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-clock-rotate-left"></i>Last updated</span><span class="detail-value">27 September 2026</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel clean">
+      <div class="panel-inner">
+        <div class="field"><span class="field-label" id="pbModeLabel">Question type</span>
+          <div class="seg" role="tablist" aria-label="Probability question type">
+            <button class="seg-btn active" type="button" data-mode="simple" role="tab" aria-selected="true">Simple event</button>
+            <button class="seg-btn" type="button" data-mode="dice" role="tab" aria-selected="false">Two dice</button>
+            <button class="seg-btn" type="button" data-mode="coin" role="tab" aria-selected="false">Coin tosses</button>
+            <button class="seg-btn" type="button" data-mode="comb" role="tab" aria-selected="false">Combinations</button>
+            <button class="seg-btn" type="button" data-mode="perm" role="tab" aria-selected="false">Permutations</button>
+            <button class="seg-btn" type="button" data-mode="atleast" role="tab" aria-selected="false">At least one</button>
+          </div>
+        </div>
+
+        <div class="calc-grid" style="margin-top:16px">
+          <div class="field" id="pbF1"><label for="pbA" id="pbALabel">Favourable outcomes</label><input id="pbA" type="number" inputmode="numeric" step="1" value="1"></div>
+          <div class="field" id="pbF2"><label for="pbB" id="pbBLabel">Total outcomes</label><input id="pbB" type="number" inputmode="numeric" step="1" value="6"></div>
+          <div class="field" id="pbF3"><label for="pbC" id="pbCLabel">Extra value</label><input id="pbC" type="number" inputmode="numeric" step="1" value="3"></div>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn-primary" type="button" id="btnCopy"><i class="fa-solid fa-copy"></i>Copy result</button>
+        </div>
+
+        <div class="result-card" id="pbResults" aria-live="polite"></div>
+        <p class="proc-line"><i class="fa-solid fa-bolt"></i><span id="pbProc">Ready - calculations happen in this tab.</span></p>
+      </div>
+    </div>
+
+    <aside class="disclaimer" aria-label="Disclaimer">
+      <i class="fa-solid fa-circle-info"></i>
+      <p>Whilst every effort has been made in building our tool, we are not to be held liable for any damages arising out of or in connection with its use. Probability results assume fair, independent trials - real-world events are often not <a href="../../press/disclaimer.html">Full disclaimer</a>.</p>
+    </aside>
+
+    <div class="article-layout">
+      <article class="seo-article">
+        <h2 id="article-title">Probability Calculator: Six Questions, Counted Properly</h2>
+        <p>Probability questions look varied but almost all of them reduce to one habit: count the outcomes you want, count all the outcomes, and divide. The tricky part is always getting the second count right. This calculator handles the six most common versions so you can check both counts and see where the answers come from.</p>
+
+        <h2 id="how-to-use">How to Use This Calculator</h2>
+        <ol>
+          <li><strong>Choose the question type</strong> - simple event, two dice, coin tosses, combinations, permutations or at least one.</li>
+          <li><strong>Enter the numbers.</strong> The labels change to match the type.</li>
+          <li><strong>Read the probability</strong> as a fraction, a percentage and a one-in-N chance.</li>
+        </ol>
+
+        <h2 id="simple-event">Simple Events and the Sample Space</h2>
+        <p>For equally likely outcomes the probability is favourable divided by total. A fair die has six faces, so a 3 is one in six. The assumption matters: biased coins and weighted dice break the simple ratio, which is why real experiments rarely match the textbook answer.</p>
+
+        <h2 id="dice">Two Dice and Sums</h2>
+        <p>Two standard dice give 36 equally likely combinations, and each total has a fixed number of ways to make it. Sums of 7 and 2 are the extremes of the distribution - 7 has six combinations, 2 and 12 have just one. The bell-shaped pattern is the same shape as any sum of many random steps, which is why averages cluster in the middle.</p>
+
+        <h2 id="combinations">Combinations and Permutations</h2>
+        <p>These answer "how many ways" rather than "what is the chance". A combination is a selection where order does not matter, so picking 2 people from 5 is the same group however you counted them - written as n choose r. A permutation is an ordered arrangement, so first place and second place are different, giving n! over (n-r)!. The classic mistake is using one when you need the other: passwords and race finishing orders are permutations, lottery draws and picking teammates are combinations.</p>
+
+        <h2 id="at-least-one">The "At Least One" Trick</h2>
+        <p>Calculating the chance of at least one success directly means adding up lots of overlapping cases, so almost nobody does it that way. Instead, take the complement: the chance of at least one head is 1 minus the chance of no heads at all. For five fair flips that is 1 - 0.5&#8309; = 96.875%, and the complement method turns a hard sum into one multiplication.</p>
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+
+        <details class="faq-item">
+          <summary>How do I calculate basic probability?</summary>
+          <div class="faq-a">
+            <p>Divide the number of favourable outcomes by the total number of equally likely outcomes. Rolling a 3 on a six-sided die is 1 in 6, which is about 16.67%.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>What is the probability of rolling a certain sum with two dice?</summary>
+          <div class="faq-a">
+            <p>Two dice have 36 equally likely combinations. Sums of 7 and 2 are the most likely with 6 combinations each, while 2 and 12 are the least likely with 1 each. The probability of any sum is its combination count divided by 36.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>How does the coin toss calculator work?</summary>
+          <div class="faq-a">
+            <p>It uses the binomial distribution. The chance of getting exactly k heads in n fair coin flips is the number of ways to choose which k flips land heads, written as n choose k, multiplied by 0.5 to the power n. It also gives the chance of at least one head, which is the complement of all tails.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Are my calculations private?</summary>
+          <div class="faq-a">
+            <p>Completely. Every figure is worked out in your browser tab with no server involved, so nothing you enter is transmitted or kept.</p>
+          </div>
+        </details>
+
+        <h2 id="conclusion">Conclusion</h2>
+        <p>Probability gets intuitive once you see the same fraction appearing in a dice roll and a coin toss. Count the outcomes, count the wins, divide. That single habit answers most exam questions, and this calculator is there to confirm your count every time.</p>
+      </article>
+    </div>
+
+    <section class="keyword-box" aria-label="Keywords and tags">
+      <h2>Keyword &amp; Tags</h2>
+      <h3>Keywords</h3>
+      <div class="keywords">
+        <span class="keyword">probability calculator</span>
+        <span class="keyword">dice probability</span>
+        <span class="keyword">coin toss probability</span>
+        <span class="keyword">combinations</span>
+        <span class="keyword">permutations</span>
+        <span class="keyword">binomial distribution</span>
+        <span class="keyword">odds calculator</span>
+        <span class="keyword">chance calculator</span>
+        <span class="keyword">statistics tools</span>
+        <span class="keyword">math tools</span>
+      </div>
+      <h3>Tags</h3>
+      <div class="tags">
+        <a class="tag" href="../index.html"><i class="fa-solid fa-dice"></i>Probability</a>
+        <a class="tag" href="../index.html"><i class="fa-solid fa-folder"></i>Statistics Tools</a>
+        <a class="tag" href="../index.html"><i class="fa-solid fa-percent"></i>Percent</a>
+        <a class="tag" href="../../tools/index.html"><i class="fa-solid fa-cube"></i>All Tools</a>
+      </div>
+    </section>
+
+    <section class="author-box" aria-label="About the publisher">
+      <div class="author-avatar" aria-hidden="true"><img src="../../assets/images/logo_nobg.webp" alt="F9XR logo" loading="lazy" decoding="async" width="1407" height="768"></div>
+      <div>
+        <span class="author-role">Published by</span>
+        <h2>F9XR Development Team</h2>
+        <p>Every Troolify tool is built and reviewed by the F9XR Development Team, then checked by our Review Board for correctness, accessibility, and clarity. Tools run 100% client-side with zero data retention.</p>
+        <div class="author-links">
+          <a href="https://f9xr.org/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i>F9XR Team</a>
+          <a href="../../press/editorial-policies.html"><i class="fa-solid fa-scale-balanced"></i>Editorial Policies</a>
+          <a href="https://github.com/f9xr" target="_blank" rel="noopener" aria-label="F9XR on GitHub"><i class="fa-brands fa-github"></i>GitHub</a>
+          <a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on LinkedIn"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+          <a href="https://instagram.com/f9xrteam" target="_blank" rel="noopener" aria-label="F9XR on Instagram"><i class="fa-brands fa-instagram"></i>Instagram</a>
+          <a href="https://youtube.com/@QuarterlyLIV" target="_blank" rel="noopener" aria-label="F9XR on YouTube"><i class="fa-brands fa-youtube"></i>YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-tools" aria-label="Related tools">
+      <h2>Related Tools</h2>
+      <div class="related-search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input type="search" id="relatedSearch" placeholder="Search all Troolify tools&hellip;" autocomplete="off" aria-label="Search related tools">
+      </div>
+      <div class="related-grid" id="relatedGrid" aria-busy="true">
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+        <div class="skel skel-related-card" aria-hidden="true"><span class="skel skel-icon"></span><span class="skel skel-line skel-w-70"></span><span class="skel skel-line skel-w-90"></span><span class="skel skel-line skel-w-60"></span><span class="skel skel-line skel-more"></span></div>
+      </div>
+    </section>
+
+    <section class="comments" aria-label="Comments">
+      <h2>Comments</h2>
+      <div id="comments">
+        <script src="https://utteranc.es/client.js" repo="f9xr/troolify" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async></script>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"><span></span><i class="fa-solid fa-layer-group"></i><span></span></div>
+
+  </div>
+</main>
+
+<script src="../../assets/js/layout.js" defer></script>
+<script src="../../assets/js/tools-data.js" defer></script>
+<script src="../../assets/js/tool-page.js" defer></script>
+<script>
+(function(){
+  "use strict";
+  var mode="simple", lastText="";
+  var a=document.getElementById("pbA"),b=document.getElementById("pbB"),c=document.getElementById("pbC");
+  var aL=document.getElementById("pbALabel"),bL=document.getElementById("pbBLabel"),cL=document.getElementById("pbCLabel");
+  var out=document.getElementById("pbResults"),proc=document.getElementById("pbProc");
+  function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+  function fac(n){ if(n<0||n%1!==0)return NaN; var r=1; for(var i=2;i<=n;i++){ r*=i; } return r; }
+  function nCr(n,r){ if(r<0||r>n)return 0; return fac(n)/(fac(r)*fac(n-r)); }
+  function nPr(n,r){ if(r<0||r>n)return 0; return fac(n)/fac(n-r); }
+  function pct(p){ return (p*100).toLocaleString("en-US",{maximumFractionDigits:6})+"%"; }
+  function inN(p){ if(p<=0){ return "never"; } if(p>=1){ return "always"; } return "1 in "+Math.round(1/p).toLocaleString("en-US"); }
+  function probRow(label,p,extra){
+    return '<div class="result-row hero-row"><span>'+esc(label)+'</span><b>'+pct(p)+'</b></div>'+
+           '<div class="result-row"><span>As a fraction</span><b>'+esc(extra.f)+'</b></div>'+
+           '<div class="result-row"><span>Chance</span><b>'+esc(inN(p))+'</b></div>'+
+           '<div class="result-row"><span>Complement (not happening)</span><b>'+pct(1-p)+'</b></div>';
+  }
+  function gcd2(x,y){ x=Math.abs(x);y=Math.abs(y);while(y){var t=y;y=x%y;x=t;}return x; }
+  function fracStr(n,d){ var g=gcd2(n,d)||1; return (n/g)+"/"+(d/g); }
+  function calc(){
+    var t0=performance.now();
+    var A=parseFloat(a.value),B=parseFloat(b.value),C=parseFloat(c.value);
+    var html="", plain="";
+    if([A,B,C].some(function(x){return isNaN(x);})){
+      html='<div class="result-row hero-row"><span>Result</span><b>&mdash;</b></div>';
+    }else{
+      if(mode==="simple"){
+        if(B<=0||A<0||A>B||A!==Math.round(A)||B!==Math.round(B)){
+          html='<div class="result-row hero-row"><span>Result</span><b>Check the numbers</b></div>'+
+               '<p class="note warn">Favourable outcomes must be between 0 and the total, and the total must be above zero.</p>';
+        }else{
+          var p=A/B;
+          html=probRow("Probability",p,{f:fracStr(A,B)});
+          plain="Probability = "+A+" / "+B+" = "+pct(p);
+        }
+      }else if(mode==="dice"){
+        if(A<2||A>12||A!==Math.round(A)){
+          html='<div class="result-row hero-row"><span>Result</span><b>Sum out of range</b></div>'+
+               '<p class="note warn">Two standard dice can only total a whole number between 2 and 12.</p>';
+        }else{
+          var ways={2:1,3:2,4:3,5:4,6:5,7:6,8:5,9:4,10:3,11:2,12:1};
+          var w=ways[A], tot=36, pd=w/tot;
+          html=probRow("Chance of a total of "+A,pd,{f:w+"/36"})+
+            '<div class="result-row"><span>Ways to make it</span><b>'+w+' of 36</b></div>';
+          var dist="";
+          for(var s=2;s<=12;s++){ dist+=(s>2?" | ":"")+s+": "+ways[s]; }
+          html+='<div class="plain">All sums (ways out of 36): '+esc(dist)+'</div>';
+          plain="Two dice totalling "+A+": "+w+"/36 = "+pct(pd);
+        }
+      }else if(mode==="coin"){
+        if(A<1||A>200||A!==Math.round(A)||C!==Math.round(C)){
+          html='<div class="result-row hero-row"><span>Result</span><b>Too many flips</b></div>'+
+               '<p class="note warn">Enter between 1 and 200 flips.</p>';
+        }else if(C<0||C>A){
+          html='<div class="result-row hero-row"><span>Result</span><b>Impossible</b></div>'+
+               '<p class="note warn">You cannot get '+C+' heads in '+A+' flips.</p>';
+        }else{
+          var pheads=nCr(A,C)*Math.pow(0.5,A);
+          html=probRow("Exactly "+C+" head"+(C===1?"":"s")+" in "+A+" flips",pheads,{f:nCr(A,C)+"/"+Math.pow(2,A)})+
+            '<div class="result-row"><span>Ways to arrange them</span><b>'+nCr(A,C).toLocaleString("en-US")+'</b></div>'+
+            '<div class="result-row"><span>At least one head</span><b>'+pct(1-Math.pow(0.5,A))+'</b></div>';
+          plain="Exactly "+C+" heads in "+A+" fair flips: "+pct(pheads);
+        }
+      }else if(mode==="comb"){
+        if(A<0||A>170||A!==Math.round(A)){ html='<div class="result-row hero-row"><span>Result</span><b>Out of range</b></div><p class="note warn">Enter a whole number of items from 0 to 170.</p>'; }
+        else if(B<0||B>A||B!==Math.round(B)){
+          html='<div class="result-row hero-row"><span>Result</span><b>Nothing to choose</b></div>'+
+               '<p class="note warn">You cannot choose '+B+' from a set of '+A+'. Enter a whole number between 0 and '+A+'.</p>';
+        }
+        else{
+          var v=nCr(A,B);
+          html='<div class="result-row hero-row"><span>Choose '+B+' from '+A+'</span><b>'+v.toLocaleString("en-US")+'</b></div>'+
+            '<div class="result-row"><span>Formula</span><b>'+A+'! / ('+B+'! &times; '+(A-B)+'!)</b></div>'+
+            '<div class="result-row"><span>Order matters?</span><b>No - this is a combination</b></div>';
+          plain=A+" choose "+B+" = "+v.toLocaleString("en-US");
+        }
+      }else if(mode==="perm"){
+        if(A<0||A>170||A!==Math.round(A)){ html='<div class="result-row hero-row"><span>Result</span><b>Out of range</b></div><p class="note warn">Enter a whole number of items from 0 to 170.</p>'; }
+        else if(B<0||B>A||B!==Math.round(B)){
+          html='<div class="result-row hero-row"><span>Result</span><b>Nothing to arrange</b></div>'+
+               '<p class="note warn">You cannot fill '+B+' slots from a set of '+A+'. Enter a whole number between 0 and '+A+'.</p>';
+        }
+        else{
+          var pv=nPr(A,B);
+          html='<div class="result-row hero-row"><span>Arrange '+B+' from '+A+'</span><b>'+pv.toLocaleString("en-US")+'</b></div>'+
+            '<div class="result-row"><span>Formula</span><b>'+A+'! / '+(A-B)+'!</b></div>'+
+            '<div class="result-row"><span>Order matters?</span><b>Yes - this is a permutation</b></div>';
+          plain=A+" P "+B+" = "+pv.toLocaleString("en-US");
+        }
+      }else{
+        if(A<1||A>200||A!==Math.round(A)){ html='<div class="result-row hero-row"><span>Result</span><b>Too many trials</b></div><p class="note warn">Enter a whole number of trials between 1 and 200.</p>'; }
+        else if(isNaN(B)||B<0||B>1){
+          html='<div class="result-row hero-row"><span>Result</span><b>Chance per trial out of range</b></div>'+
+               '<p class="note warn">Enter the chance of a success in a single trial as a decimal between 0 and 1, so 0.25 for 25%.</p>';
+        }
+        else{
+          var pch=B;
+          var pat=1-Math.pow(1-pch,A);
+          html=probRow("At least one success in "+A+" trial"+(A===1?"":"s"),pat,{f:"1 - (1-p)^"+A})+
+            '<div class="result-row"><span>Chance per trial</span><b>'+pct(pch)+'</b></div>'+
+            '<div class="result-row"><span>None at all</span><b>'+pct(Math.pow(1-pch,A))+'</b></div>';
+          plain="At least one success in "+A+" trials at "+pct(pch)+" each: "+pct(pat);
+        }
+      }
+    }
+    if(!plain){ lastText=""; }
+    out.innerHTML=html;
+    proc.textContent="Calculated in "+(performance.now()-t0).toFixed(1)+" ms - inside your browser. 0 bytes uploaded.";
+  }
+  function labels(){
+    var f1=document.getElementById("pbF1"),f2=document.getElementById("pbF2"),f3=document.getElementById("pbF3");
+    var map={
+      simple:["Favourable outcomes","Total equally likely outcomes","Not used in this mode"],
+      dice:["Sum you want (2-12)","Not used in this mode","Not used in this mode"],
+      coin:["Number of flips","Not used in this mode","Heads you want exactly"],
+      comb:["Total items (n)","Chosen at once (r)","Not used in this mode"],
+      perm:["Total items (n)","Slots to fill (r)","Not used in this mode"],
+      atleast:["Number of trials","Chance per trial (0-1)","Not used in this mode"]
+    };
+    var m=map[mode];
+    aL.textContent=m[0]; bL.textContent=m[1]; cL.textContent=m[2];
+    f2.classList.toggle("hidden",mode==="dice"||mode==="coin");
+    f3.classList.toggle("hidden",mode==="simple"||mode==="dice"||mode==="comb"||mode==="perm"||mode==="atleast");
+  }
+  document.querySelectorAll(".seg-btn").forEach(function(btn){
+    btn.addEventListener("click",function(){
+      document.querySelectorAll(".seg-btn").forEach(function(x){ x.classList.remove("active"); x.setAttribute("aria-selected","false"); });
+      btn.classList.add("active"); btn.setAttribute("aria-selected","true");
+      mode=btn.getAttribute("data-mode");
+      if(mode==="dice"){ a.value=7; }
+      else if(mode==="coin"){ a.value=10; c.value=5; }
+      else if(mode==="comb"||mode==="perm"){ a.value=5; b.value=2; }
+      else if(mode==="atleast"){ a.value=10; b.value=0.1; }
+      else { a.value=1; b.value=6; }
+      labels(); calc();
+    });
+  });
+  [a,b,c].forEach(function(el){ el.addEventListener("input",calc); });
+  document.getElementById("btnCopy").addEventListener("click",function(){
+    window.Troolify.copyToClipboard(lastText,function(){ proc.textContent="Copied to clipboard - the bytes never left your device."; });
+  });
+  labels();
+  calc();
+})();
+</script>
+</body>
+</html>

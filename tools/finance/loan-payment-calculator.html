@@ -18,8 +18,8 @@
 <meta property="og:image" content="https://f9xr.org/troolify/assets/images/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="article:published_time" content="2026-08-28">
-<meta property="article:modified_time" content="2026-08-28">
+<meta property="article:published_time" content="2026-09-27">
+<meta property="article:modified_time" content="2026-09-27">
 <meta property="article:section" content="Finance Tools">
 <meta property="article:tag" content="Loan Payment">
 <meta property="article:tag" content="Finance Tools">
@@ -53,12 +53,12 @@
   "featureList": ["Calculate monthly payments", "Show total interest", "Show total cost", "Fixed-payment payoff mode", "100% client-side processing"],
   "description": "Calculate monthly loan payments, total interest and total cost of your loan. Free online loan payment calculator - 100% client-side.",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-  "datePublished": "2026-08-28",
-  "dateModified": "2026-08-28",
+  "datePublished": "2026-09-27",
+  "dateModified": "2026-09-27",
   "author": { "@type": "Organization", "name": "F9XR Development Team", "url": "https://f9xr.org/" },
   "publisher": { "@type": "Organization", "name": "Troolify", "url": "https://f9xr.org/troolify/", "logo": { "@type": "ImageObject", "url": "https://f9xr.org/troolify/assets/images/logo_nobg.webp", "width": 1407, "height": 768 } }
 }
-</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Loan Payment Calculator | Monthly Payments, Interest & Total Cost","description":"Calculate monthly loan payments, total interest and total cost of your loan. Free online loan payment calculator - 100% client-side.","image":"https://f9xr.org/troolify/assets/images/og-image.jpg","datePublished":"2026-08-28","dateModified":"2026-08-28","mainEntityOfPage":"https://f9xr.org/troolify/tools/finance/loan-payment-calculator.html","author":{"@type":"Organization","name":"F9XR Development Team","url":"https://f9xr.org/"},"publisher":{"@type":"Organization","name":"Troolify","url":"https://f9xr.org/troolify/","logo":{"@type":"ImageObject","url":"https://f9xr.org/troolify/assets/images/logo_nobg.webp","width":1407,"height":768}}}</script>
+</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Loan Payment Calculator | Monthly Payments, Interest & Total Cost","description":"Calculate monthly loan payments, total interest and total cost of your loan. Free online loan payment calculator - 100% client-side.","image":"https://f9xr.org/troolify/assets/images/og-image.jpg","datePublished":"2026-09-27","dateModified":"2026-09-27","mainEntityOfPage":"https://f9xr.org/troolify/tools/finance/loan-payment-calculator.html","author":{"@type":"Organization","name":"F9XR Development Team","url":"https://f9xr.org/"},"publisher":{"@type":"Organization","name":"Troolify","url":"https://f9xr.org/troolify/","logo":{"@type":"ImageObject","url":"https://f9xr.org/troolify/assets/images/logo_nobg.webp","width":1407,"height":768}}}</script>
 
 <script type="application/ld+json">
 {
@@ -67,23 +67,19 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "How is my monthly loan payment calculated?",
-      "acceptedAnswer": { "@type": "Answer", "text": "The standard amortization formula is M = P * (r/12) / (1 - (1 + r/12)^(-n)), where P is the loan amount, r is the annual interest rate as a decimal, and n is the number of monthly payments. Each month a portion covers interest and the rest reduces the principal." }
+      "name": "How is my monthly loan payment calculated?", "acceptedAnswer": { "@type": "Answer", "text": "The standard amortization formula is M = P × (r/12) / (1 - (1 + r/12)^(-n)), where P is the loan amount, r is the annual rate as a decimal, and n is the number of monthly payments. Each payment covers accrued interest first, with the remainder reducing the principal." }
     },
     {
       "@type": "Question",
-      "name": "What is an amortizing loan?",
-      "acceptedAnswer": { "@type": "Answer", "text": "An amortizing loan is repaid in equal installments over a fixed term. Early payments are mostly interest, but as the principal shrinks a larger share of each payment goes toward the balance, so the loan is fully paid off at the end of the term." }
+      "name": "What is an amortizing loan?", "acceptedAnswer": { "@type": "Answer", "text": "An amortizing loan is repaid in equal installments over a fixed term. Early payments are mostly interest; as the principal shrinks, a larger share of each payment goes to the balance until the loan is fully paid off." }
     },
     {
       "@type": "Question",
-      "name": "Is the Troolify loan payment calculator safe to use?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every calculation runs locally inside your browser tab. Your numbers are never uploaded, stored, or transmitted to a server, so your financial figures stay completely private." }
+      "name": "Is the Troolify loan payment calculator safe to use?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every calculation runs locally inside your browser tab. Your numbers are never uploaded, stored, or transmitted to a server, so your financial figures stay completely private." }
     },
     {
       "@type": "Question",
-      "name": "How can I pay off my loan faster?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Paying any amount above the required monthly payment goes directly to the principal, which cuts the remaining interest. Our fixed-payment mode shows exactly how a higher monthly amount shortens the term and lowers the total cost." }
+      "name": "How can I pay off my loan faster?", "acceptedAnswer": { "@type": "Answer", "text": "Paying above your required monthly amount goes straight to the principal, cutting the remaining interest. The fixed-payment mode shows exactly how a higher monthly payment shortens your term and lowers the total cost." }
     }
   ]
 }
@@ -104,7 +100,7 @@
 .calc-grid{display:grid;grid-template-columns:1fr;gap:18px}
 @media(min-width:720px){.calc-grid{grid-template-columns:1fr 1fr}}
 .field{display:flex;flex-direction:column;gap:6px}
-.field label{font-size:12.5px;font-weight:700;color:var(--muted)}
+.field label,.field-label{font-size:12.5px;font-weight:700;color:var(--muted)}
 .field input,.field select{background:#1B2028;border:1px solid var(--border);color:var(--ink);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:15px;font-weight:600;outline:none;width:100%;box-sizing:border-box}
 .field input:focus,.field select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,130,246,.15)}
 .seg{display:flex;background:#161B22;border:1px solid var(--border);border-radius:10px;padding:4px;gap:4px}
@@ -151,7 +147,7 @@
       <div class="hero-box hero-cat">
         <h3 class="hero-box-title"><i class="fa-solid fa-folder-open"></i>Category</h3>
         <div class="tool-meta">
-          <span class="tool-tag"><i class="fa-solid fa-tag"></i>Borrowing</span>
+          <span class="tool-tag"><i class="fa-solid fa-tag"></i>Loan</span>
           <a class="tool-cat" href="../index.html" aria-label="Browse Finance Tools category"><i class="fa-solid fa-folder"></i>Finance Tools</a>
         </div>
       </div>
@@ -168,7 +164,7 @@
         <div class="tool-details">
           <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.org/" target="_blank" rel="noopener">F9XR Development Team</a></div>
           <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-check-double"></i>Reviewed by</span><a class="detail-value" href="../../press/editorial-policies.html">Review Board</a></div>
-          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-clock-rotate-left"></i>Last updated</span><span class="detail-value">28 August 2026</span></div>
+          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-clock-rotate-left"></i>Last updated</span><span class="detail-value">27 September 2026</span></div>
         </div>
       </div>
     </div>
@@ -176,7 +172,7 @@
     <div class="panel clean">
       <div class="panel-inner">
         <div class="calc-grid">
-          <div class="field"><label for="lpMode">Calculate</label>
+          <div class="field"><span class="field-label" id="lpModeLabel">Calculate</span>
             <div class="seg" role="tablist" aria-label="Calculation mode">
               <button class="seg-btn active" type="button" data-mode="payment" role="tab" aria-selected="true">Monthly payment</button>
               <button class="seg-btn" type="button" data-mode="payoff" role="tab" aria-selected="false">Fixed payment</button>
@@ -273,7 +269,7 @@
       </div>
       <h3>Tags</h3>
       <div class="tags">
-        <a class="tag" href="../index.html"><i class="fa-solid fa-tag"></i>Borrowing</a>
+        <a class="tag" href="../index.html"><i class="fa-solid fa-tag"></i>Loan</a>
         <a class="tag" href="../index.html"><i class="fa-solid fa-folder"></i>Finance Tools</a>
         <a class="tag" href="../../tools/index.html"><i class="fa-solid fa-cube"></i>Finance</a>
       </div>
@@ -339,17 +335,24 @@
   var mode="payment";
   var lastText="";
   var fmt=function(n){ return n.toLocaleString("en-US",{style:"currency",currency:"USD",maximumFractionDigits:n>=1e5?0:2}); };
+  function span(months){
+    var y=Math.floor(months/12), m=months%12;
+    return y+" yr"+(y===1?"":"s")+(m?(" "+m+" mo"):"");
+  }
   function calc(){
     var t0=performance.now();
     var P=parseFloat(amt.value)||0;
     var r=(parseFloat(rate.value)||0)/100;
     var note="";
     var html="";
-    if(mode==="payment"){
+    if(P<0||r<0){ note="Amount and interest rate cannot be negative."; html='<div class="result-row hero-row"><span>'+(mode==="payment"?"Monthly payment":"Payoff time")+'</span><b>&mdash;</b></div>'; }
+    else if(mode==="payment"){
+      /* Amortization needs whole monthly payments, so round the term to months. */
       var y=Math.max(parseFloat(term.value)||0,0);
-      var n=y*12;
+      var n=Math.round(y*12);
       var payment, interest, total;
       if(n<=0){ note="Enter a loan term greater than zero."; html='<div class="result-row hero-row"><span>Monthly payment</span><b>&mdash;</b></div>'; }
+      else if(P===0){ note="Enter a loan amount greater than zero."; html='<div class="result-row hero-row"><span>Monthly payment</span><b>&mdash;</b></div>'; }
       else if(r<=0){ payment=P/n; interest=0; total=P; }
       else{
         var i=r/12;
@@ -358,13 +361,13 @@
         interest=total-P;
       }
       if(!note){
-        var yrs=Math.floor(n/12), rem=Math.round(n%12);
         html=
           '<div class="result-row hero-row"><span>Monthly payment</span><b>'+fmt(payment)+'</b></div>'+
           '<div class="result-row"><span>Total interest</span><b>'+fmt(interest)+'</b></div>'+
           '<div class="result-row"><span>Total cost</span><b>'+fmt(total)+'</b></div>'+
-          '<div class="result-row"><span>Payoff time</span><b>'+yrs+' yr'+(yrs===1?"":"s")+(rem?(" "+rem+" mo"):"")+'</b></div>';
-        lastText="Monthly payment: $"+payment.toFixed(2)+"\nTotal interest: $"+interest.toFixed(2)+"\nTotal cost: $"+total.toFixed(2);
+          '<div class="result-row"><span>Number of payments</span><b>'+n+'</b></div>'+
+          '<div class="result-row"><span>Payoff time</span><b>'+span(n)+'</b></div>';
+        lastText="Monthly payment: $"+payment.toFixed(2)+"\nTotal interest: $"+interest.toFixed(2)+"\nTotal cost: $"+total.toFixed(2)+"\nNumber of payments: "+n+"\nPayoff time: "+span(n);
       }else{
         lastText="";
       }
@@ -373,7 +376,7 @@
       var M=parseFloat(pay.value)||0;
       var n2;
       if(P<=0 || M<=0){ note="Enter both a loan amount and a fixed monthly payment."; html='<div class="result-row hero-row"><span>Payoff time</span><b>&mdash;</b></div>'; }
-      else if(r>0 && M<=P*(r/12)){ note="This payment only covers the monthly interest, so the loan would never be paid off. Increase the payment above $"+((P*(r/12)).toFixed(2))+". "; html='<div class="result-row hero-row"><span>Payoff time</span><b>Never</b></div>'; }
+      else if(r>0 && M<=P*(r/12)){ note="This payment only covers the monthly interest of $"+(P*(r/12)).toFixed(2)+", so the balance would never reach zero. Increase the payment above that amount."; html='<div class="result-row hero-row"><span>Payoff time</span><b>Never</b></div>'; }
       else{
         if(r>0){
           var i2=r/12;
@@ -381,13 +384,13 @@
         }else{ n2=Math.ceil(P/M); }
         var total2=M*n2;
         var interest2=total2-P;
-        var yrs2=Math.floor(n2/12), rem2=Math.round(n2%12);
         html=
-          '<div class="result-row hero-row"><span>Payoff time</span><b>'+n2+' payments ('+yrs2+' yr'+(yrs2===1?"":"s")+(rem2?(" "+rem2+" mo"):"")+')</b></div>'+
+          '<div class="result-row hero-row"><span>Payoff time</span><b>'+n2+' payments ('+span(n2)+')</b></div>'+
           '<div class="result-row"><span>Monthly payment</span><b>'+fmt(M)+'</b></div>'+
           '<div class="result-row"><span>Total interest</span><b>'+fmt(interest2)+'</b></div>'+
-          '<div class="result-row"><span>Total cost</span><b>'+fmt(total2)+'</b></div>';
-        lastText="Payoff time: "+n2+" payments\nTotal interest: $"+interest2.toFixed(2)+"\nTotal cost: $"+total2.toFixed(2);
+          '<div class="result-row"><span>Total cost</span><b>'+fmt(total2)+'</b></div>'+
+          '<div class="result-row"><span>Interest as share of total</span><b>'+(P>0?(interest2/total2*100).toFixed(1):"0.0")+'%</b></div>';
+        lastText="Payoff time: "+n2+" payments ("+span(n2)+")\nMonthly payment: $"+M.toFixed(2)+"\nTotal interest: $"+interest2.toFixed(2)+"\nTotal cost: $"+total2.toFixed(2);
       }
       if(note){ html+='<p class="note warn">'+note+'</p>'; }
     }

@@ -5,7 +5,7 @@ const path = require('path');
 
 const REPO = path.resolve(__dirname, '..');
 const BASE = 'https://f9xr.org/troolify';
-const NEW = '2026-09-19';
+const NEW = '2026-09-27';
 
 /* ---------- load registry ---------- */
 const src = fs.readFileSync(path.join(REPO, 'assets', 'js', 'tools-data.js'), 'utf8');
