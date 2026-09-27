@@ -237,7 +237,7 @@
       }
       window.__TOOLS_PENDING = [cb];
       var s = document.createElement("script");
-      s.src = prefix + "assets/js/tools-data.js";
+      s.src = prefix + "assets/js/tools-data.min.js";
       s.onload = s.onerror = function () {
         var list = window.__TOOLS_PENDING || [];
         window.__TOOLS_PENDING = null;
@@ -410,7 +410,7 @@
       while (depth--) pfx += "../";
     }
     var s = document.createElement("script");
-    s.src = pfx + "assets/js/tools-data.js";
+    s.src = pfx + "assets/js/tools-data.min.js";
     s.onload = s.onerror = function () {
       var list = window.__TOOLS_PENDING || [];
       window.__TOOLS_PENDING = null;
@@ -436,7 +436,7 @@
       while (depth--) pfx += "../";
     }
     var s = document.createElement("script");
-    s.src = pfx + "assets/js/recent-tools.js";
+    s.src = pfx + "assets/js/recent-tools.min.js";
     s.onload = s.onerror = function () { if (cb) cb(); };
     document.head.appendChild(s);
   }
@@ -501,4 +501,33 @@
       }
     }
   });
+
+  /* ---------------------- Lazy comment loader (utteranc.es) ---------------
+     The static HTML ships an inert placeholder (.comments-host[data-utteranc])
+     instead of the third-party script. When it scrolls near the viewport the
+     real client script is injected once, so no comment iframe JS is fetched on
+     page load. */
+
+  var commentHosts = document.querySelectorAll(".comments-host[data-utteranc]");
+  if (commentHosts.length && "IntersectionObserver" in window) {
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          var host = entry.target;
+          observer.unobserve(host);
+          var s = document.createElement("script");
+          s.src = "https://utteranc.es/client.js";
+          s.setAttribute("repo", host.getAttribute("data-repo") || "f9xr/troolify");
+          s.setAttribute("issue-term", host.getAttribute("data-issue-term") || "pathname");
+          s.setAttribute("theme", host.getAttribute("data-theme") || "github-dark");
+          s.setAttribute("crossorigin", "anonymous");
+          s.async = true;
+          host.appendChild(s);
+        });
+      },
+      { rootMargin: "600px 0px" }
+    );
+    commentHosts.forEach(function (h) { observer.observe(h); });
+  }
 })();

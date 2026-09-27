@@ -6,7 +6,7 @@
    searchable list of categories with tool counts.
 
    Include once on every page that uses the dashboard layout:
-       <script src="assets/js/dashboard-nav.js" defer></script>
+       <script src="assets/js/dashboard-nav.min.js" defer></script>
    ============================================================================ */
 
 (function () {
@@ -40,7 +40,7 @@
         window.__DASH_TOOLS_PENDING = [cb];
         var prefix = rootPrefix();
         var s = document.createElement("script");
-        s.src = prefix + "assets/js/tools-data.js";
+        s.src = prefix + "assets/js/tools-data.min.js";
         s.onload = s.onerror = function () {
             var list = window.__DASH_TOOLS_PENDING || [];
             window.__DASH_TOOLS_PENDING = null;

@@ -15,3 +15,6 @@ Desktop.ini
 # Logs & temp
 *.log
 tmp/
+
+# Build tooling (deps installed locally, minified assets are committed)
+node_modules/
