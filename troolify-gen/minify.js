@@ -29,7 +29,8 @@
       preload + media="print" onload swap with a noscript twin, keeping it out
       of the render-blocking chain. Idempotent (never re-wraps the noscript link).
    8. Minifies each managed JS (terser) and CSS (clean-css) file in place,
-      writing the sibling .min version.
+       writing the sibling .min version. Local CSS @imports are kept and
+       repointed at their .min sibling (clean-css would otherwise drop them).
    ============================================================================ */
 
 "use strict";
@@ -219,7 +220,12 @@ function deferArticleCss(html) {
 /* Every tool page ships an <script type="application/ld+json"> FAQ/HowTo block.
    The HTML minifier never touches <script> contents, so these ship with
    whitespace/newlines. Compact JSON is safe (JSON parsers ignore whitespace)
-   and idempotent. */
+   and idempotent.
+
+   Careful: re-stringifying decodes the \u003C escapes the page generator uses to
+   keep "</script>" inside string values from closing the script element early.
+   Re-escape every "</" as "<\/" (a valid JSON escape) so the block stays
+   parseable. */
 
 const JSONLD_SCRIPT = /<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi;
 
@@ -238,7 +244,7 @@ function minifyInlineJsonLd(html) {
     try {
       const compact = escapeJsonLdForHtml(JSON.stringify(JSON.parse(body)));
       if (!compact) return whole;
-      return whole.slice(0, whole.indexOf(">") + 1) + compact + "</script>";
+      return whole.slice(0, whole.indexOf(">") + 1) + compact.replace(/<\//g, "<\\/") + "</script>";
     } catch (e) {
       return whole; // leave invalid/malformed blocks untouched
     }
@@ -264,6 +270,27 @@ function isToolLeafPage(file) {
   if (path.basename(file) === "index.html") return false;
   const raw = fs.readFileSync(file, "utf8");
   return /assets\/js\/tool-page\.js/.test(raw);
+}
+
+/* --------------------------- CSS @import passthrough ----------------------- */
+/* clean-css resolves a local @import against the string it is handed, has no
+   file context, and *silently drops* the rule when it cannot read the target
+   ("Ignoring local @import ... as resource is missing"). That stripped the
+   shared base (design tokens, body colors) out of every minified page bundle:
+   tool + category pages shipped no `color: var(--ink)` and rendered black text
+   on the dark shell. Hoist local imports out of the source, point them at their
+   minified sibling and prepend them again after minification. */
+
+const LOCAL_IMPORT_RE = /@import\s+(?:url\(\s*)?["']([^"')]+)["']\s*\)?\s*;?/gi;
+
+function splitLocalImports(src) {
+  const imports = [];
+  const body = src.replace(LOCAL_IMPORT_RE, (m, ref) => {
+    if (/^(?:[a-z]+:)?\/\//i.test(ref)) return m; // remote import: leave as-is
+    imports.push(ref.replace(/\.css$/, ".min.css"));
+    return "";
+  });
+  return { imports, body };
 }
 
 /* --------------------------- main ----------------------------------------- */
@@ -391,10 +418,18 @@ async function run() {
   }
   for (const a of css) {
     const src = fs.readFileSync(a.src, "utf8");
-    const res = clean.minify(src);
+    const { imports, body } = splitLocalImports(src);
+    const res = clean.minify(body);
+    if (res.errors.length) {
+      // never fail silently again: a dropped rule here means a page ships
+      // unstyled content, which is invisible in the diff but obvious on screen
+      console.warn("clean-css " + rel(a.src) + ": " + res.errors.join(" | "));
+    }
+    const styles =
+      imports.map((href) => '@import url("' + href + '");').join("") + res.styles;
     const minFile = a.src.replace(/\.css$/, ".min.css");
-    fs.writeFileSync(minFile, res.styles, "utf8");
-    cssBytes += src.length - res.styles.length;
+    fs.writeFileSync(minFile, styles, "utf8");
+    cssBytes += src.length - styles.length;
   }
 
   console.log("HTML rewritten:        " + href);

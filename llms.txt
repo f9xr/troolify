@@ -191,13 +191,13 @@ Key facts about Troolify:
 - [Random Decision Maker](https://f9xr.org/troolify/tools/misc/random-decision-maker.html): Get an instant random verdict for any dilemma, decided right in your browser.
 - [Random Choice Generator](https://f9xr.org/troolify/tools/misc/random-choice-generator.html): Enter any options and let this tool pick one at random - perfect for giveaways, quizzes and office bets.
 - [Mailto Link Generator](https://f9xr.org/troolify/tools/misc/mailto-link-generator.html): Build a ready-to-use mailto link with subject, body and carbon copy fields.
-- [Random Address Generator](https://f9xr.org/troolify/tools/testing/random-address-generator.html): Generate realistic fake addresses from 45+ countries with Playwright, Cypress, CSV, JSON and SQL export - 100% client-side.
+- [Random Address Generator](https://f9xr.org/troolify/tools/testing/random-address-generator.html): Generate realistic fake addresses from 15 countries with country-correct postcodes, plus Playwright, Cypress, CSV, JSON and SQL export - 100% client-side.
 - [Credit Card Generator](https://f9xr.org/troolify/tools/testing/credit-card-generator.html): Generate Luhn-valid test card numbers for Visa, MasterCard, Amex, Discover and JCB with CSV, JSON and Playwright export.
 - [Routing Number Generator](https://f9xr.org/troolify/tools/testing/routing-number-generator.html): Generate ABA-valid US routing numbers in bulk - 9 digits, valid checksum, ready for payment form tests.
 - [IMEI Generator](https://f9xr.org/troolify/tools/testing/imei-generator.html): Generate Luhn-valid 15-digit IMEIs for QA, form validation, device registry seeding and fixtures.
-- [Fake Email Generator](https://f9xr.org/troolify/tools/testing/fake-email-generator.html): Generate synthetic emails across public (Gmail, Outlook, Yahoo) and dev-safe domains, bulk up to 100.
-- [Fake Detail Generator](https://f9xr.org/troolify/tools/testing/fake-detail-generator.html): Generate full synthetic person profiles - name, email, phone, address and DOB - with JSON, CSV, SQL and Playwright export.
-- [Random Unicode Generator](https://f9xr.org/troolify/tools/testing/random-unicode-generator.html): Generate bulk Unicode characters from curated ranges - Latin, Greek, Cyrillic, symbols and emoji.
+- [Fake Email Generator](https://f9xr.org/troolify/tools/testing/fake-email-generator.html): Generate synthetic emails across public, RFC 2606 reserved and disposable domains, bulk up to 100 - 100% client-side.
+- [Fake Detail Generator](https://f9xr.org/troolify/tools/testing/fake-detail-generator.html): Generate full synthetic person profiles - name, email, phone, address and DOB - with JSON, CSV, SQL, Playwright and Cypress export.
+- [Random Unicode Generator](https://f9xr.org/troolify/tools/testing/random-unicode-generator.html): Generate bulk Unicode characters from 6 curated ranges - Latin, Greek, Cyrillic, symbols, emoji and Braille.
 - [JWT Decoder](https://f9xr.org/troolify/tools/coding/jwt-decoder.html): Decode a JWT's header and payload with readable claim timestamps and expiry status - decode-only, nothing leaves the tab.
 - [Text Compare](https://f9xr.org/troolify/tools/coding/text-compare.html): Side-by-side diff with line, word and character granularity, exportable as unified diff or .patch.
 - [YAML Compare](https://f9xr.org/troolify/tools/coding/yaml-compare.html): Diff two YAML files with a normalize mode that sorts keys so only real changes show - Kubernetes and Helm friendly.
