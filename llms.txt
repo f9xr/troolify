@@ -218,6 +218,7 @@ Key facts about Troolify:
 - [Image Size Finder](https://f9xr.org/troolify/tools/coding/image-size-finder.html): Find pixel dimensions, aspect ratio and file size of any image - drop a file or paste a URL.
 - [Venmo Fee Calculator](https://f9xr.org/troolify/tools/finance/venmo-fee-calculator.html): Calculate exact Venmo fees for Goods & Services, credit card, instant transfer, Cash a Check, ATM and crypto.
 - [Footer Animations Prompt](https://f9xr.org/troolify/tools/prompts/footer-animations-prompt-guide.html): Generate a detailed, ready-to-paste AI prompt for stunning website footer animations - fade-ins, floating social icons, glowing hovers and more, tailored to your framework and accessibility needs.
+- [Monthly Website Audit Prompt](https://f9xr.org/troolify/tools/prompts/advanced-monthly-website-audit-prompt-generator.html): Generate a ready-to-paste prompt that runs the 15 recurring monthly website audits and returns severity-ranked findings with the exact fix attached to each one.
 
 
 - [Flip Text Generator](https://f9xr.org/troolify/tools/text/flip-text-generator.html): Flip text upside down and backwards with a single click - generate rotated, mirrored Unicode text for social posts, usernames and fun.
