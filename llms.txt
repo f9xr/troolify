@@ -266,13 +266,15 @@ Key facts about Troolify:
 - [URL Shortener](https://f9xr.org/troolify/tools/coding/url-shortener.html): Shorten any link with TinyURL or Bitly through a public web API - copy the short URL in one click.
 - [GitHub Profile Viewer](https://f9xr.org/troolify/tools/coding/github-profile-viewer.html): Look up any GitHub username through a public web API - see avatar, bio, followers, repos and join date at a glance.
 - [Text to Speech](https://f9xr.org/troolify/tools/text/text-to-speech.html): Listen to any text read aloud with natural Google voices via a public web API - play online or download as an audio file.
+- [Discord Timestamp Generator](https://f9xr.org/troolify/tools/discord/discord-timestamp-generator.html): Turn any date and time into Discord timestamp syntax like <t:1700000000:F>, with a live preview, all seven formats and one-click copy. Runs entirely in your browser.
 
 ## Categories
 - [AI Tools](https://f9xr.org/troolify/tools/ai/index.html): Prompt, text, image and code generation utilities.
 - [Audio Tools](https://f9xr.org/troolify/tools/audio/index.html): BPM, song length and audio production utilities.
 - [Color Tools](https://f9xr.org/troolify/tools/color/index.html): Color mixing, blending, gradients, complementary and analogous scheme utilities.
 - [Construction Tools](https://f9xr.org/troolify/tools/construction/index.html): Concrete, gravel, rebar, CMU and construction cost calculators - all client-side.
-- [Developer Tools](https://f9xr.org/troolify/tools/coding/index.html): Coding, debugging and web development utilities.
+  - [Developer Tools](https://f9xr.org/troolify/tools/coding/index.html): Coding, debugging and web development utilities.
+  - [Discord Tools](https://f9xr.org/troolify/tools/discord/index.html): Discord timestamp generator and server utilities - client-side.
 - [Converters](https://f9xr.org/troolify/tools/converters/index.html): Convert data between formats instantly.
 - [Cooking Tools](https://f9xr.org/troolify/tools/cooking/index.html): Cooking, recipe and kitchen helpers.
 - [Crypto Tools](https://f9xr.org/troolify/tools/crypto/index.html): Cryptocurrency and blockchain calculators.

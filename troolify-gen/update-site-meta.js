@@ -125,7 +125,8 @@ if (!llms.includes(apiUrl) && llms.includes('## Categories')) {
 // category links
 const catLine = { 'Color': '- [Color Tools](' + BASE + '/tools/color/index.html): Color mixing, blending, gradients, complementary and analogous scheme utilities.',
   'Construction': '- [Construction Tools](' + BASE + '/tools/construction/index.html): Concrete, gravel, rebar, CMU and construction cost calculators - all client-side.',
-  'Files': '- [File Tools](' + BASE + '/tools/files/index.html): Split, join, generate and corrupt test files - entirely in your browser.' };
+  'Files': '- [File Tools](' + BASE + '/tools/files/index.html): Split, join, generate and corrupt test files - entirely in your browser.',
+  'Discord': '- [Discord Tools](' + BASE + '/tools/discord/index.html): Discord timestamp generator and server utilities - client-side.' };
 const audioCatAnchor = '- [Audio Tools](https://f9xr.org/troolify/tools/audio/index.html)';
 if (!llms.includes('/tools/color/index.html')) {
   llms = llms.replace(catLine['Construction'].split(':')[0] + '](', 'X'); // no-op guard
@@ -141,6 +142,14 @@ if (!llms.includes('/tools/files/index.html')) {
     const end = llms.indexOf('\n', fin) + 1;
     llms = llms.slice(0, end) + catLine['Files'] + '\n' + llms.slice(end);
   } else console.log('WARN: Finance category anchor not found');
+}
+if (!llms.includes('/tools/discord/index.html')) {
+  const devCatAnchor = '- [Developer Tools](' + BASE + '/tools/coding/index.html)';
+  const di = llms.indexOf(devCatAnchor);
+  if (di !== -1) {
+    const end = llms.indexOf('\n', di) + 1;
+    llms = llms.slice(0, end) + catLine['Discord'] + '\n' + llms.slice(end);
+  } else console.log('WARN: Developer Tools category anchor not found');
 }
 
 // new pages in # LLMs section
@@ -179,6 +188,10 @@ if (!ai.includes('**Color Tools**')) {
 if (!ai.includes('**Files Tools**')) {
   ai = ai.replace('- **Misc Tools**:', '- **Files Tools**: Split/join text files, random file generator, corrupt a file.\n- **Misc Tools**:');
 }
+if (!ai.includes('**Discord Tools**')) {
+  ai = ai.replace('- **Misc Tools**:', '- **Discord Tools**: Discord timestamp generator (all seven <t:UNIX:FORMAT> formats, timezone-aware, live preview).\n- **Misc Tools**:');
+}
+ai = ai.replace(/- \d+\+ tools across \d+ categories/g, '- ' + TOOLS.length + '+ tools across ' + CATS.length + ' categories');
 if (!ai.includes('/pages/developers.html')) {
   ai = ai.replace('- Visit `/pages/sitemap.html` for complete site map',
     '- Visit `/pages/sitemap.html` for complete site map\n- Read `/pages/developers.html` for site architecture and `/pages/methodology.html` for editorial methodology');

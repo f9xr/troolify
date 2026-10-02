@@ -418,6 +418,11 @@ window.TOOLS = [
   { name:"Study Hours Planner", desc:"Plan your revision from a deadline backwards. Enter your exam date, study days and session length to get a daily schedule that fits. Free and 100% client-side.", icon:"fa-solid fa-calendar-check", tag:"Productivity", category:"Time", href:"tools/time/study-hours-planner.html", keywords:["study hours planner","revision planner","study schedule","revision timetable","exam countdown","study plan","how many hours to study","pomodoro planner","time tools","student planner"] },
   { name:"Celsius to Fahrenheit Converter", desc:"Convert Celsius to Fahrenheit and Fahrenheit to Celsius, with common reference temperatures and the formulas shown. Free temperature converter - 100% client-side.", icon:"fa-solid fa-temperature-half", tag:"Temperature", category:"Converters", href:"tools/converters/celsius-fahrenheit-converter.html", keywords:["celsius to fahrenheit","fahrenheit to celsius","temperature converter","celsius fahrenheit formula","body temperature","boiling point celsius","freezing point","weather converter","converters","unit conversion"] },
   { name:"HTTP Status Code Lookup", desc:"Search the HTTP status codes that actually come up, from 100 to 511, and read exactly what each one means, why it happens and how to fix it. Free developer reference - 100% client-side.", icon:"fa-solid fa-globe", tag:"Web Dev", category:"Coding", href:"tools/coding/http-status-code-lookup.html", keywords:["http status code lookup","http status codes","404 not found","status code list","http error codes","500 internal server error","301 moved permanently","api status codes","developer tools","http reference"] },
+
+  /* ===================================================================
+     DISCORD
+     =================================================================== */
+  { name:"Discord Timestamp Generator", desc:"Turn any date and time into Discord's <t:UNIX:F> timestamp syntax - every format from a plain date to a live '5 minutes ago' counter, with a preview and one-click copy. Free and 100% client-side.", icon:"fa-brands fa-discord", tag:"Timestamps", category:"Discord", href:"tools/discord/discord-timestamp-generator.html", keywords:["discord timestamp","discord timestamp generator","discord time tag","discord date format","discord dynamic timestamp","t timestamp syntax","discord unix timestamp","discord embed timestamp","discord event time","discord countdown"], recent:true },
 ];
 
 window.CATEGORIES = [
@@ -445,5 +450,6 @@ window.CATEGORIES = [
 { folder:"Construction", name:"Construction Tools", icon:"fa-solid fa-trowel", desc:"Concrete, gravel and construction material calculators that run entirely in your browser." },
   { folder:"Color", name:"Color Tools", icon:"fa-solid fa-palette", desc:"Color mixing, gradients, complementary schemes and palette utilities." },
   { folder:"Files", name:"File Tools", icon:"fa-solid fa-file", desc:"Split, join, corrupt and generate files - entirely in your browser." },
-  { folder:"HVAC", name:"HVAC Tools", icon:"fa-solid fa-fan", desc:"Heating, ventilation and air conditioning - load, airflow, duct design, refrigeration and lab exhaust utilities." }
+  { folder:"HVAC", name:"HVAC Tools", icon:"fa-solid fa-fan", desc:"Heating, ventilation and air conditioning - load, airflow, duct design, refrigeration and lab exhaust utilities." },
+  { folder:"Discord", name:"Discord Tools", icon:"fa-brands fa-discord", desc:"Discord utilities and timestamp generators for servers and communities." }
 ];

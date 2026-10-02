@@ -316,6 +316,7 @@ window.TOOLS_SLIM = [
   {"name":"Study Hours Planner","desc":"Plan your revision from a deadline backwards. Enter your exam date, study days and session length to get a daily schedule that fits. Free and 100% client-side.","icon":"fa-solid fa-calendar-check","tag":"Productivity","category":"Time","href":"tools/time/study-hours-planner.html"},
   {"name":"Celsius to Fahrenheit Converter","desc":"Convert Celsius to Fahrenheit and Fahrenheit to Celsius, with common reference temperatures and the formulas shown. Free temperature converter - 100% client-side.","icon":"fa-solid fa-temperature-half","tag":"Temperature","category":"Converters","href":"tools/converters/celsius-fahrenheit-converter.html"},
   {"name":"HTTP Status Code Lookup","desc":"Search the HTTP status codes that actually come up, from 100 to 511, and read exactly what each one means, why it happens and how to fix it. Free developer reference - 100% client-side.","icon":"fa-solid fa-globe","tag":"Web Dev","category":"Coding","href":"tools/coding/http-status-code-lookup.html"},
+  {"name":"Discord Timestamp Generator","desc":"Turn any date and time into Discord's <t:UNIX:F> timestamp syntax - every format from a plain date to a live '5 minutes ago' counter, with a preview and one-click copy. Free and 100% client-side.","icon":"fa-brands fa-discord","tag":"Timestamps","category":"Discord","href":"tools/discord/discord-timestamp-generator.html","recent":true},
 ];
 
 window.CATEGORIES = [
@@ -344,4 +345,5 @@ window.CATEGORIES = [
   {"folder":"Color","name":"Color Tools","icon":"fa-solid fa-palette","desc":"Color mixing, gradients, complementary schemes and palette utilities."},
   {"folder":"Files","name":"File Tools","icon":"fa-solid fa-file","desc":"Split, join, corrupt and generate files - entirely in your browser."},
   {"folder":"HVAC","name":"HVAC Tools","icon":"fa-solid fa-fan","desc":"Heating, ventilation and air conditioning - load, airflow, duct design, refrigeration and lab exhaust utilities."},
+  {"folder":"Discord","name":"Discord Tools","icon":"fa-brands fa-discord","desc":"Discord utilities and timestamp generators for servers and communities."},
 ];

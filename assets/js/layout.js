@@ -437,6 +437,31 @@
         document.head.appendChild(s);
     }
 
+    /* Grow.me "faves" widget - the floating bookmark button users can add
+       Troolify to. Loaded async so it never blocks first paint, and skipped
+       entirely if it has already run (layout.js is deferred, not duplicated).
+       The site id is the one issued for this domain; the bootstrap mirrors
+       vendor snippet <script data-grow-initializer> by queueing window.growMe
+       before the remote main.js arrives. */
+    var GROW_FAVES_SITE_ID = "U2l0ZTo1N2RjMWMzMi01N2NiLTRmNzUtYjkzOC0yOTM1NjdkOWU1MWQ=";
+
+    function loadGrowFaves() {
+        if (window.__GROW_FAVES_LOADED) return;
+        window.__GROW_FAVES_LOADED = true;
+
+        if (!window.growMe) {
+            window.growMe = function (e) { window.growMe._.push(e); };
+            window.growMe._ = [];
+        }
+
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.src = "https://faves.grow.me/main.js";
+        s.defer = true;
+        s.setAttribute("data-grow-faves-site-id", GROW_FAVES_SITE_ID);
+        document.head.appendChild(s);
+    }
+
     /* ------------------------------------------------------------------------
        Main injection routine
        ------------------------------------------------------------------------ */
@@ -597,8 +622,8 @@
             ["Finance", "Finance Tools"], ["Fun", "Fun & Games"], ["Health", "Health Tools"],
             ["Image", "Image Tools"], ["Math", "Math Tools"], ["Misc", "Misc Tools"], ["PDF", "PDF Tools"],
             ["Prompts", "Prompt Tools"], ["SEO", "SEO & Marketing"], ["Statistics", "Statistics"],
-            ["Text", "Text Tools"], ["Time", "Time Tools"], ["Video", "Video Tools"],
-            ["YouTube", "YouTube Tools"], ["HVAC", "HVAC Tools"]
+            ["Testing", "Testing Tools"], ["Text", "Text Tools"], ["Time", "Time Tools"], ["Video", "Video Tools"],
+            ["YouTube", "YouTube Tools"], ["Construction", "Construction Tools"], ["Color", "Color Tools"], ["Files", "File Tools"], ["HVAC", "HVAC Tools"], ["Discord", "Discord Tools"]
         ];
         var footerCatsHtml = "";
         for (var fci = 0; fci < footerCategories.length; fci++) {
@@ -899,6 +924,9 @@
         body.insertAdjacentHTML("beforeend", footerMain);
         body.insertAdjacentHTML("beforeend", searchModalMarkup);
         body.insertAdjacentHTML("beforeend", backToTopMarkup);
+
+        /* Grow.me "faves" bookmark button - deferred, third-party, opt-out. */
+        loadGrowFaves();
 
         /* --------------------------------------------------------------------
            Footer-reveal shell

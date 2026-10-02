@@ -14,7 +14,7 @@
 - Free forever, no sign-up required
 - Processing is client-side with zero data retention (a few labelled tools call a public API)
 - Privacy-first architecture - no server uploads
-- 300+ tools across 25 categories
+- 317+ tools across 26 categories
 - A few optional tools are powered by a public web API (abhi-api.vercel.app) and always labelled on-page - the rest stay 100% client-side
 - Responsive design, works on all devices
 
@@ -35,6 +35,7 @@
 - **Image Tools**: Image resizer, image compressor, EXIF data viewer, image to base64, aspect ratio calculator, color converter, PNG/JPG to SVG, JPG to PNG, WebP to PNG, SVG/PNG/JPG compressors, image cropper, image converter, light and color adjuster, background remover, mockup frame, watermark image, image rotator, photo album maker, drawing canvas
 - **Math Tools**: Number list generator/filter/sort, min-max calculator, number base/binary/hex converter, calculator, area calculator, rule of three (direct/inverse), trig functions, radians-degrees converter
 - **Files Tools**: Split/join text files, random file generator, corrupt a file.
+- **Discord Tools**: Discord timestamp generator (all seven <t:UNIX:FORMAT> formats, timezone-aware, live preview).
 - **Misc Tools**: Password generator, entropy calculator, random decision maker, random choice generator, mailto link generator
 
 ## Technical Details

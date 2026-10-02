@@ -57,6 +57,7 @@
 .fa-calendar-minus:before{content:"\f272"}
 .fa-calendar-plus:before{content:"\f271"}
 .fa-camera:before{content:"\f030"}
+.fa-camera-retro:before{content:"\f083"}
 .fa-car:before{content:"\f1b9"}
 .fa-chart-area:before{content:"\f1fe"}
 .fa-chart-bar:before{content:"\f080"}
@@ -94,12 +95,14 @@
 .fa-comment:before{content:"\f075"}
 .fa-comment-dots:before{content:"\f4ad"}
 .fa-comments:before{content:"\f086"}
+.fa-compact-disc:before{content:"\f51f"}
 .fa-compass:before{content:"\f14e"}
 .fa-compress:before{content:"\f066"}
 .fa-cookie-bite:before{content:"\f564"}
 .fa-copy:before{content:"\f0c5"}
 .fa-credit-card:before{content:"\f09d"}
 .fa-crop:before{content:"\f125"}
+.fa-crop-simple:before{content:"\f565"}
 .fa-crosshairs:before{content:"\f05b"}
 .fa-cube:before{content:"\f1b2"}
 .fa-cubes:before{content:"\f1b3"}
@@ -130,6 +133,7 @@
 .fa-face-laugh-squint:before{content:"\f59b"}
 .fa-face-smile:before{content:"\f118"}
 .fa-fan:before{content:"\f863"}
+.fa-feather:before{content:"\f52d"}
 .fa-file:before{content:"\f15b"}
 .fa-file-arrow-down:before{content:"\f56d"}
 .fa-file-circle-minus:before{content:"\e4ed"}
@@ -162,9 +166,11 @@
 .fa-forward:before{content:"\f04e"}
 .fa-gauge:before{content:"\f624"}
 .fa-gauge-high:before{content:"\f625"}
+.fa-gauge-med:before{content:"\f624"}
 .fa-gears:before{content:"\f085"}
 .fa-glass-water:before{content:"\e4f4"}
 .fa-globe:before{content:"\f0ac"}
+.fa-graduation-cap:before{content:"\f19d"}
 .fa-grip:before{content:"\f58d"}
 .fa-grip-lines:before{content:"\f7a4"}
 .fa-hand-holding-dollar:before{content:"\f4c0"}
@@ -263,6 +269,7 @@
 .fa-shoe-prints:before{content:"\f54b"}
 .fa-shuffle:before{content:"\f074"}
 .fa-signature:before{content:"\f5b7"}
+.fa-sitemap:before{content:"\f0e8"}
 .fa-skull-crossbones:before{content:"\f714"}
 .fa-sliders:before{content:"\f1de"}
 .fa-snowflake:before{content:"\f2dc"}
@@ -280,6 +287,7 @@
 .fa-stopwatch:before{content:"\f2f2"}
 .fa-store:before{content:"\f54e"}
 .fa-sun:before{content:"\f185"}
+.fa-superscript:before{content:"\f12b"}
 .fa-table:before{content:"\f0ce"}
 .fa-table-cells:before{content:"\f00a"}
 .fa-table-cells-large:before{content:"\f009"}
@@ -321,6 +329,7 @@
 .fa-vial:before{content:"\f492"}
 .fa-video:before{content:"\f03d"}
 .fa-volume-high:before{content:"\f028"}
+.fa-wallet:before{content:"\f555"}
 .fa-wand-magic-sparkles:before{content:"\e2ca"}
 .fa-warehouse:before{content:"\f494"}
 .fa-water-ladder:before{content:"\f5c5"}
@@ -330,6 +339,7 @@
 .fa-wind:before{content:"\f72e"}
 .fa-xmark:before{content:"\f00d"}
 .fa-bitcoin:before{content:"\f379"}
+.fa-discord:before{content:"\f392"}
 .fa-github:before{content:"\f09b"}
 .fa-instagram:before{content:"\f16d"}
 .fa-linkedin:before{content:"\f08c"}
