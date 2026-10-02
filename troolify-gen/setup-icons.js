@@ -54,6 +54,9 @@ function collectGlyphs(files) {
   const reIcon = /(?:icon|ico)\s*[:=]\s*["'`]([^"'`]*)["'`]/g;
   // c) direct class tokens in JS template like `fa-solid fa-x-twitter`
   const reBare = /["'`]([-a-z0-9]+\s+)?fa-(?:solid|brands|regular)\s+fa-[a-z0-9-]+["'`]/g;
+  // d) bare icon-pair literals used as concatenation fallbacks, e.g.
+  //    (t.icon || "fa-solid fa-wrench") - no class attribute to scan
+  const rePair = /["'`](fa-(?:solid|brands|regular|light|thin)\s+fa-[a-z0-9-]+)["'`]/g;
   for (const f of files) {
     const text = fs.readFileSync(f, "utf8");
     let m;
@@ -90,8 +93,72 @@ function collectGlyphs(files) {
         glyphs.get(hit[0]).add(fam);
       }
     }
+    while ((m = rePair.exec(text))) {
+      const fam = m[1].split(/\s+/)[0];
+      for (const t of m[1].split(/\s+/)) {
+        const hit = classifyIcon(t, fam);
+        if (hit) {
+          if (!glyphs.has(hit[0])) glyphs.set(hit[0], new Set());
+          glyphs.get(hit[0]).add(fam);
+        }
+      }
+    }
   }
   return glyphs;
+}
+
+const FAMILIES = new Set([
+  "fa-solid", "fa-regular", "fa-brands", "fa-light", "fa-thin",
+  "fa-duotone", "fa-classic", "fa-sharp",
+]);
+
+/* MODIFIERS tokens are classified out of the glyph set (no :before content of
+   their own), so their rules are never emitted above and a used utility like
+   .fa-spin would silently do nothing. Collect the ones the site relies on and
+   re-emit the matching rules (plus any @keyframes they reference). */
+function collectModifiers(files) {
+  const used = new Set();
+  const reClass = /class=["'`]([^"'`]*)["'`]/g;
+  for (const f of files) {
+    const text = fs.readFileSync(f, "utf8");
+    let m;
+    while ((m = reClass.exec(text))) {
+      for (const t of m[1].split(/\s+/)) {
+        if (FAMILIES.has(t)) continue;
+        if (/^fa-[a-z0-9-]+$/.test(t) && MODIFIERS.has(t.slice(3))) used.add(t);
+      }
+    }
+  }
+  return used;
+}
+
+function modifierRules(css, mods) {
+  const rules = [];
+  const keyframes = new Set();
+  for (const t of mods) {
+    const name = t.slice(3);
+    const re = new RegExp("[^{}]*\\.fa-" + name + "(?![a-z0-9-])[^{}]*\\{[^{}]*\\}", "g");
+    let b;
+    while ((b = re.exec(css))) {
+      if (/content\s*:/.test(b[0])) continue;
+      const decl = b[0].slice(b[0].indexOf("{"));
+      for (const a of decl.matchAll(/animation(?:-name)?\s*:\s*([^;}]+)/g)) {
+        for (const n of a[1].split(/[\s,]+/)) {
+          if (n && !/^(inherit|initial|unset|none|linear|ease|ease-in|ease-out|ease-in-out|reverse|alternate|forwards|backwards|both|infinite|paused|running|normal)$/.test(n)) {
+            keyframes.add(n);
+          }
+        }
+      }
+      const rule = b[0].trim().replace(/^[,;]+/, "");
+      if (!rules.includes(rule)) rules.push(rule);
+    }
+  }
+  for (const n of keyframes) {
+    const re = new RegExp("@(?:-\\w+-)?keyframes\\s+" + n + "\\s*\\{[^{}]*(?:\\{[^{}]*\\}[^{}]*)*\\}", "g");
+    let b;
+    while ((b = re.exec(css))) if (!rules.includes(b[0])) rules.push(b[0]);
+  }
+  return rules;
 }
 
 async function main() {
@@ -192,8 +259,10 @@ async function main() {
   cssOut += ".fa-brands{font-family:\"Font Awesome 6 Brands\";font-weight:400}\n";
   cssOut += solidData.map(([n, c]) => decl(n, c)).join("\n") + "\n";
   cssOut += brandsData.map(([n, c]) => decl(n, c)).join("\n") + "\n";
+  const mods = modifierRules(css, collectModifiers(files));
+  if (mods.length) cssOut += mods.join("\n") + "\n";
   fs.writeFileSync(ASSETS("css/icons.min.css"), cssOut, "utf8");
-  console.log(`icons.min.css written (${solidData.length} solid + ${brandsData.length} brands rules)`);
+  console.log(`icons.min.css written (${solidData.length} solid + ${brandsData.length} brands + ${mods.length} utility rules)`);
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });

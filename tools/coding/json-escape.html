@@ -70,5 +70,5 @@
   el.jsEscape.addEventListener("click",render);
   el.jsCopy.addEventListener("click",function(){ if(el.jsOut.value) copyText(el.jsOut.value,el.jsCopy); });
   el.jsSample.addEventListener("click",function(){
-    el.jsIn.value='He said "hello", the path is C:\\dev\\app and the file is\nline one\tthen "quoted"\n<script>alert(1)</script>'; render(); }); el.clearBtn.addEventListener("click",function(){ el.jsIn.value=""; el.jsOut.value=""; el.jsSingle.checked=false; el.jsSlash.checked=false; el.jsHtml.checked=false; el.jsCtrl.checked=false; el.jsOutWrap.classList.remove("visible"); el.jsCount.textContent=""; el.jsProc.textContent="Cleared."; }); })();</body></html>
+    el.jsIn.value='He said "hello", the path is C:\\dev\\app and the file is\nline one\tthen "quoted"\n<script>alert(1)<\/script>'; render(); }); el.clearBtn.addEventListener("click",function(){ el.jsIn.value=""; el.jsOut.value=""; el.jsSingle.checked=false; el.jsSlash.checked=false; el.jsHtml.checked=false; el.jsCtrl.checked=false; el.jsOutWrap.classList.remove("visible"); el.jsCount.textContent=""; el.jsProc.textContent="Cleared."; }); })();</body></html>
 <!-- data-minimized -->
