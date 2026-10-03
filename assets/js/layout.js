@@ -836,7 +836,7 @@
                 '.cta-3d{position:relative;z-index:0;max-width:1280px;width:calc(100% - 2rem);margin:2.5rem auto 0;border-radius:30px;transition:transform .45s cubic-bezier(.16,1,.3,1),box-shadow .45s ease;box-shadow:0 26px 55px -10px rgba(0,0,0,.6),0 14px 28px -12px rgba(0,0,0,.55)}' +
                 '.tx-cta:hover .cta-3d{transform:rotateX(3deg) translateY(-5px) scale(1.005);box-shadow:0 40px 80px -16px rgba(0,0,0,.65),0 20px 40px -16px rgba(0,0,0,.6)}' +
 
-                '.tx-footer{position:fixed;bottom:0;left:0;right:0;z-index:0;background:var(--bg-dark,#0A0A0A);padding:0;border-top:1px solid rgba(255,255,255,.06);max-height:100dvh;overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;opacity:0;transform:translateY(24px);transition:opacity .45s ease .05s,transform .45s cubic-bezier(.16,1,.3,1)}' +
+                '.tx-footer{position:relative;z-index:1;background:var(--bg-dark,#0A0A0A);padding:0;border-top:1px solid rgba(255,255,255,.06);overflow-x:hidden;opacity:1;transform:none}' +
                 '.tx-footer::-webkit-scrollbar{width:0;height:0;display:none}' +
                 '.tx-footer.footer-revealed{opacity:1;transform:none}' +
                 /* Footer-reveal shell: the outer .page-reveal layer carries NO background so its bottom
@@ -846,7 +846,7 @@
                    from the page body so it matches the page theme.) */
                 '.page-reveal{position:relative;z-index:1;min-height:100vh;pointer-events:none}' +
                 '.reveal-inner{min-height:inherit;pointer-events:auto}' +
-                '.fw-wordmark{font-size:clamp(2.75rem,7vw,4.5rem);line-height:1;letter-spacing:-.03em}' +
+                '.fw-wordmark{font-size:clamp(3.75rem,13vw,10.5rem);line-height:1;letter-spacing:-.04em;white-space:nowrap}' +
                 '.tx-footer a{text-decoration:none}' +
                 '.tx-footer a:not(.grid){position:relative}' +
                 '.tx-footer a:not(.grid)::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:1px;background:linear-gradient(90deg,#60A5FA,#3B82F6);transform:scaleX(0);transform-origin:left;transition:transform .28s cubic-bezier(.16,1,.3,1)}' +
@@ -971,7 +971,10 @@
                     ? bodyBg
                     : "var(--bg-dark,#0A0A0A)";
                 var fh = txFooter.offsetHeight || 0;
-                revealWrap.style.paddingBottom = fh + "px";
+                /* Footer is now rendered in normal document flow (always visible).
+                   No reserved padding strip is needed, so the page ends exactly
+                   where the footer ends - no empty dead space. */
+                revealWrap.style.paddingBottom = "0px";
             };
             syncFooterSpace();
             window.addEventListener("resize", syncFooterSpace, { passive: true });
