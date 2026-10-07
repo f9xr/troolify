@@ -318,6 +318,14 @@ window.TOOLS_SLIM = [
   {"name":"Celsius to Fahrenheit Converter","desc":"Convert Celsius to Fahrenheit and Fahrenheit to Celsius, with common reference temperatures and the formulas shown. Free temperature converter - 100% client-side.","icon":"fa-solid fa-temperature-half","tag":"Temperature","category":"Converters","href":"tools/converters/celsius-fahrenheit-converter.html"},
   {"name":"HTTP Status Code Lookup","desc":"Search the HTTP status codes that actually come up, from 100 to 511, and read exactly what each one means, why it happens and how to fix it. Free developer reference - 100% client-side.","icon":"fa-solid fa-globe","tag":"Web Dev","category":"Coding","href":"tools/coding/http-status-code-lookup.html"},
   {"name":"Discord Timestamp Generator","desc":"Turn any date and time into Discord's <t:UNIX:F> timestamp syntax - every format from a plain date to a live '5 minutes ago' counter, with a preview and one-click copy. Free and 100% client-side.","icon":"fa-brands fa-discord","tag":"Timestamps","category":"Discord","href":"tools/discord/discord-timestamp-generator.html","recent":true},
+  {"name":"Length Converter","desc":"Convert meters, feet, inches, yards, miles and more in one place with the exact formulas shown.","icon":"fa-solid fa-ruler","tag":"Length","category":"Units","href":"tools/units/length-converter.html"},
+  {"name":"Weight & Mass Converter","desc":"Convert kilograms, pounds, grams, ounces, stone and tonnes with the underlying formulas.","icon":"fa-solid fa-weight-hanging","tag":"Weight","category":"Units","href":"tools/units/weight-mass-converter.html"},
+  {"name":"Area Converter","desc":"Convert square meters, sq ft, acres, hectares and more with clear conversion-factor math.","icon":"fa-solid fa-vector-square","tag":"Area","category":"Units","href":"tools/units/area-converter.html"},
+  {"name":"Volume Converter","desc":"Convert liters, gallons, milliliters, cups and cubic meters - exact factors and formulas included.","icon":"fa-solid fa-cube","tag":"Volume","category":"Units","href":"tools/units/volume-converter.html"},
+  {"name":"Temperature Converter","desc":"Convert Celsius, Fahrenheit and Kelvin - with the exact conversion formulas shown below.","icon":"fa-solid fa-temperature-half","tag":"Temperature","category":"Units","href":"tools/units/temperature-converter.html"},
+  {"name":"Speed Converter","desc":"Convert km/h, mph, m/s, knots and ft/s using standard exact conversion factors.","icon":"fa-solid fa-gauge-high","tag":"Speed","category":"Units","href":"tools/units/speed-converter.html"},
+  {"name":"Data Size Converter","desc":"Convert bytes, kilobytes, megabytes, gigabytes and terabytes with 1024-based binary factors.","icon":"fa-solid fa-hard-drive","tag":"Data","category":"Units","href":"tools/units/data-size-converter.html"},
+  {"name":"Time Converter","desc":"Convert seconds, minutes, hours, days, weeks, months and years using common time constants.","icon":"fa-solid fa-clock","tag":"Time","category":"Units","href":"tools/units/time-converter.html"},
 ];
 
 window.CATEGORIES = [
@@ -347,4 +355,5 @@ window.CATEGORIES = [
   {"folder":"Files","name":"File Tools","icon":"fa-solid fa-file","desc":"Split, join, corrupt and generate files - entirely in your browser."},
   {"folder":"HVAC","name":"HVAC Tools","icon":"fa-solid fa-fan","desc":"Heating, ventilation and air conditioning - load, airflow, duct design, refrigeration and lab exhaust utilities."},
   {"folder":"Discord","name":"Discord Tools","icon":"fa-brands fa-discord","desc":"Discord utilities and timestamp generators for servers and communities."},
+  {"folder":"Units","name":"Unit Converters","icon":"fa-solid fa-ruler-combined","desc":"Convert between units of length, weight, area, volume, temperature, speed, data and time - with the formulas shown."},
 ];

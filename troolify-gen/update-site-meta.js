@@ -62,6 +62,7 @@ function toolLine(t) {
 const constructionTools = TOOLS.filter(t => t.category === 'Construction').map(toolLine);
 const colorTools = TOOLS.filter(t => t.category === 'Color').map(toolLine);
 const filesTools = TOOLS.filter(t => t.category === 'Files').map(toolLine);
+const unitsTools = TOOLS.filter(t => t.category === 'Units').map(toolLine);
 
 const curatedHrefs = [
   'tools/text/flip-text-generator.html', 'tools/text/add-text-to-each-line.html',
@@ -122,8 +123,17 @@ if (!llms.includes(apiUrl) && llms.includes('## Categories')) {
   console.log('llms.txt: inserted ' + apiTools.length + ' api-powered tool lines');
 }
 
+// unit converters block before ## Categories
+const unitsBlock = '\n' + unitsTools.join('\n') + '\n';
+const unitsUrl = unitsTools[0] ? unitsTools[0].match(/\]\(([^)]+)\)/)[1] : '';
+if (!llms.includes(unitsUrl) && llms.includes('## Categories')) {
+  llms = llms.replace('## Categories', unitsBlock + '\n## Categories');
+  console.log('llms.txt: inserted ' + unitsTools.length + ' unit converter lines');
+}
+
 // category links
 const catLine = { 'Color': '- [Color Tools](' + BASE + '/tools/color/index.html): Color mixing, blending, gradients, complementary and analogous scheme utilities.',
+  'Units': '- [Unit Converters](' + BASE + '/tools/units/index.html): Convert between length, weight, area, volume, temperature, speed, data and time - with the formulas shown.',
   'Construction': '- [Construction Tools](' + BASE + '/tools/construction/index.html): Concrete, gravel, rebar, CMU and construction cost calculators - all client-side.',
   'Files': '- [File Tools](' + BASE + '/tools/files/index.html): Split, join, generate and corrupt test files - entirely in your browser.',
   'Discord': '- [Discord Tools](' + BASE + '/tools/discord/index.html): Discord timestamp generator and server utilities - client-side.' };
@@ -153,6 +163,16 @@ if (!llms.includes('/tools/discord/index.html')) {
 }
 
 // new pages in # LLMs section
+if (!llms.includes('/tools/units/index.html')) {
+  try {
+    const toolsCatAnchor = '- [YouTube Tools](';
+    const ui = llms.indexOf(toolsCatAnchor);
+    if (ui !== -1) {
+      const end = llms.indexOf('\n', ui) + 1;
+      llms = llms.slice(0, end) + catLine['Units'] + '\n' + llms.slice(end);
+    } else console.log('WARN: units category anchor not found');
+  } catch (e) { console.log('units cats insert error', e.message); }
+}
 if (!llms.includes('/pages/developers.html')) {
   const about = llms.indexOf('- [About Us](');
   if (about !== -1) {
@@ -187,6 +207,9 @@ if (!ai.includes('**Color Tools**')) {
 }
 if (!ai.includes('**Files Tools**')) {
   ai = ai.replace('- **Misc Tools**:', '- **Files Tools**: Split/join text files, random file generator, corrupt a file.\n- **Misc Tools**:');
+}
+if (!ai.includes('**Unit Converters**')) {
+  ai = ai.replace('- **HVAC Tools**:', '- **Unit Converters**: Length, weight, area, volume, temperature, speed, data size and time unit conversions - with the exact formulas shown.\n- **HVAC Tools**:');
 }
 if (!ai.includes('**Discord Tools**')) {
   ai = ai.replace('- **Misc Tools**:', '- **Discord Tools**: Discord timestamp generator (all seven <t:UNIX:FORMAT> formats, timezone-aware, live preview).\n- **Misc Tools**:');

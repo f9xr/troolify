@@ -623,7 +623,7 @@
             ["Image", "Image Tools"], ["Math", "Math Tools"], ["Misc", "Misc Tools"], ["PDF", "PDF Tools"],
             ["Prompts", "Prompt Tools"], ["SEO", "SEO & Marketing"], ["Statistics", "Statistics"],
             ["Testing", "Testing Tools"], ["Text", "Text Tools"], ["Time", "Time Tools"], ["Video", "Video Tools"],
-            ["YouTube", "YouTube Tools"], ["Construction", "Construction Tools"], ["Color", "Color Tools"], ["Files", "File Tools"], ["HVAC", "HVAC Tools"], ["Discord", "Discord Tools"]
+            ["YouTube", "YouTube Tools"], ["Construction", "Construction Tools"], ["Color", "Color Tools"], ["Files", "File Tools"], ["HVAC", "HVAC Tools"], ["Units", "Unit Converters"], ["Discord", "Discord Tools"]
         ];
         var footerCatsHtml = "";
         for (var fci = 0; fci < footerCategories.length; fci++) {
@@ -643,7 +643,7 @@
                         '<div class="pointer-events-none absolute inset-0" style="background-image:linear-gradient(rgba(248,249,250,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(248,249,250,0.04) 1px,transparent 1px);background-size:48px 48px;-webkit-mask-image:radial-gradient(ellipse 90% 60% at 50% 0%,#000 30%,transparent 75%);mask-image:radial-gradient(ellipse 90% 60% at 50% 0%,#000 30%,transparent 75%)" aria-hidden="true"></div>' +
 
                         /* --- Top content grid --- */
-                        '<div class="relative grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr_1fr_1.2fr] lg:gap-10">' +
+                        '<div class="relative grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr_1.15fr] lg:gap-10">' +
 
                             /* Left column - brand mission */
                             '<div>' +
@@ -678,13 +678,13 @@
                             '<nav aria-label="F9XR Network">' +
                                 '<h4 class="text-xs font-semibold uppercase tracking-[0.22em] text-[#E9ECEF]">F9XR Network</h4>' +
                                 '<ul class="mt-3.5 space-y-2">' +
-                                    '<li><a href="https://f9xr.org/" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-[#3B82F6]">F9XR Team</a></li>' +
-                                    '<li><a href="https://f9xr.org/services/index.html" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-[#3B82F6]">Services</a></li>' +
-                                    '<li><a href="https://f9xr.org/case-studies/index.html" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-[#3B82F6]">Case Studies</a></li>' +
-                                    '<li><a href="https://f9xr.org/announcements/index.html" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-[#3B82F6]">Announcements</a></li>' +
-                                    '<li><a href="https://f9xr.org/directories/index.html" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-[#3B82F6]">Directories</a></li>' +
-                                    '<li><a href="https://f9xr.org/BharatByDay/" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-[#3B82F6]">भारतByDay</a></li>' +
                                     '<li><a href="https://f9xr.org/articles/" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-[#3B82F6]">Articles</a></li>' +
+                                    '<li><a href="https://f9xr.org/directories" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-[#3B82F6]">Directories</a></li>' +
+                                    '<li><a href="https://f9xr.org/seo-audit-report-skill" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-[#3B82F6]">SEO Auditor SKILL</a></li>' +
+                                    '<li><a href="https://f9xr.org/yoprompts" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-[#3B82F6]">YoPrompts</a></li>' +
+                                    '<li><a href="https://f9xr.org/boredpup" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-[#3B82F6]">BoredPuP</a></li>' +
+                                    '<li><a href="https://f9xr.org/dev9b" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-[#3B82F6]">Dev9b</a></li>' +
+                                    '<li><a href="https://f9xr.org/resumio" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-[#3B82F6]">Resumio</a></li>' +
                                 '</ul>' +
                             '</nav>' +
 
@@ -700,21 +700,11 @@
                                 '</div>' +
                             '</nav>' +
 
-                            /* Middle column 3b - Categories nav */
+                            /* Categories nav */
                             '<nav aria-label="Categories">' +
                                 '<h4 class="text-xs font-semibold uppercase tracking-[0.22em] text-[#E9ECEF]">Categories</h4>' +
                                 '<div class="mt-3.5 grid max-w-[17rem] grid-cols-2 gap-x-4 gap-y-2">' + footerCatsHtml + '</div>' +
                             '</nav>' +
-
-                            /* Right column - contact + newsletter capture */
-                            '<div>' +
-                                '<h4 class="text-xs font-semibold uppercase tracking-[0.22em] text-[#E9ECEF]">Stay up to date</h4>' +
-                                '<form class="mt-4 flex flex-col gap-3 sm:flex-row" action="mailto:hello@f9xr.org" method="post" enctype="text/plain">' +
-                                    '<input type="email" name="email" placeholder="Enter your email" aria-label="Enter your email" class="w-full flex-1 rounded-xl border border-[#343A40] bg-[#212529] px-4 py-3 text-sm text-white outline-none transition placeholder:text-[#9CA3AF] focus:border-[#3B82F6] focus:shadow-[0_0_0_4px_rgba(59,130,246,0.15)]">' +
-                                    '<button type="submit" class="rounded-xl bg-[#3B82F6] px-5 py-3 text-sm font-bold text-white shadow-[0_4px_20px_rgba(59,130,246,0.35)] transition hover:bg-[#2563EB]">Sign Up</button>' +
-                                '</form>' +
-                                '<p class="mt-4 max-w-xs text-xs leading-relaxed text-[#9CA3AF]">Get product updates in your inbox. Questions? <a href="mailto:hello@f9xr.org" class="font-medium text-white/80 transition hover:text-[#3B82F6]">hello@f9xr.org</a></p>' +
-                            '</div>' +
                         '</div>' +
 
                         /* --- Compact brand wordmark --- */

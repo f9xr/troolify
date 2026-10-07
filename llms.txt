@@ -269,6 +269,16 @@ Key facts about Troolify:
 - [Text to Speech](https://f9xr.org/troolify/tools/text/text-to-speech.html): Listen to any text read aloud with natural Google voices via a public web API - play online or download as an audio file.
 - [Discord Timestamp Generator](https://f9xr.org/troolify/tools/discord/discord-timestamp-generator.html): Turn any date and time into Discord timestamp syntax like <t:1700000000:F>, with a live preview, all seven formats and one-click copy. Runs entirely in your browser.
 
+
+- [Length Converter](https://f9xr.org/troolify/tools/units/length-converter.html): Convert meters, feet, inches, yards, miles and more in one place with the exact formulas shown.
+- [Weight & Mass Converter](https://f9xr.org/troolify/tools/units/weight-mass-converter.html): Convert kilograms, pounds, grams, ounces, stone and tonnes with the underlying formulas.
+- [Area Converter](https://f9xr.org/troolify/tools/units/area-converter.html): Convert square meters, sq ft, acres, hectares and more with clear conversion-factor math.
+- [Volume Converter](https://f9xr.org/troolify/tools/units/volume-converter.html): Convert liters, gallons, milliliters, cups and cubic meters - exact factors and formulas included.
+- [Temperature Converter](https://f9xr.org/troolify/tools/units/temperature-converter.html): Convert Celsius, Fahrenheit and Kelvin - with the exact conversion formulas shown below.
+- [Speed Converter](https://f9xr.org/troolify/tools/units/speed-converter.html): Convert km/h, mph, m/s, knots and ft/s using standard exact conversion factors.
+- [Data Size Converter](https://f9xr.org/troolify/tools/units/data-size-converter.html): Convert bytes, kilobytes, megabytes, gigabytes and terabytes with 1024-based binary factors.
+- [Time Converter](https://f9xr.org/troolify/tools/units/time-converter.html): Convert seconds, minutes, hours, days, weeks, months and years using common time constants.
+
 ## Categories
 - [AI Tools](https://f9xr.org/troolify/tools/ai/index.html): Prompt, text, image and code generation utilities.
 - [Audio Tools](https://f9xr.org/troolify/tools/audio/index.html): BPM, song length and audio production utilities.
@@ -296,6 +306,7 @@ Key facts about Troolify:
 - [Time Tools](https://f9xr.org/troolify/tools/time/index.html): Time, date and scheduling tools.
 - [Video Tools](https://f9xr.org/troolify/tools/video/index.html): Video editing and conversion tools.
 - [YouTube Tools](https://f9xr.org/troolify/tools/youtube/index.html): YouTube utilities for creators, marketers and support teams.
+- [Unit Converters](https://f9xr.org/troolify/tools/units/index.html): Convert between length, weight, area, volume, temperature, speed, data and time - with the formulas shown.
 
 ## Catalog
 - [Utility Catalog](https://f9xr.org/troolify/tools/index.html): Browse every category and tool.
