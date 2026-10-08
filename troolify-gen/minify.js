@@ -387,9 +387,14 @@ async function run() {
     // Already-minified pages drop the "data-minimized" marker, so re-runs are no-ops.
     if (out.indexOf("data-minimized") === -1) {
       const beforeMin = out;
-      const minOut = await minifyHtml(out, HTML_MINIFY_OPTS);
-      // html-minifier removes the marker tag only when actually minified
-      out = minOut + '\n<!-- data-minimized -->';
+      let minOut = null;
+      try {
+        minOut = await minifyHtml(out, HTML_MINIFY_OPTS);
+      } catch (err) {
+        // Some legacy inline scripts trip the parser; ship the file raw instead of dropping it.
+        minOut = out;
+        console.error("  html-minify skipped for", file, "-", String(err && err.message).slice(0, 60));
+      }
       if (out.trim() !== beforeMin.trim()) {
         fs.writeFileSync(file, out, "utf8");
         htmlMin++;
