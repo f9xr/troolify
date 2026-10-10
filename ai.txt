@@ -14,7 +14,7 @@
 - Free forever, no sign-up required
 - Processing is client-side with zero data retention (a few labelled tools call a public API)
 - Privacy-first architecture - no server uploads
-- 368+ tools across 27 categories
+- 373+ tools across 27 categories
 - A few optional tools are powered by a public web API (abhi-api.vercel.app) and always labelled on-page - the rest stay 100% client-side
 - Responsive design, works on all devices
 
