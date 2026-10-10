@@ -354,6 +354,11 @@ window.TOOLS_SLIM = [
   {"name":"XML Formatter","desc":"Re-indent minified XML so you can actually read it. Comments, CDATA, and processing instructions are preserved.","icon":"fa-solid fa-indent","tag":"Formatter","category":"Coding","href":"tools/coding/xml-formatter.html"},
   {"name":"JSON Diff","desc":"Diff any two JSON documents: see exactly which paths were added, removed, or changed, displayed as a clear list.","icon":"fa-solid fa-code-compare","tag":"Diff","category":"Coding","href":"tools/coding/json-diff.html"},
   {"name":"SQL Prettifier","desc":"Format crammed SQL into readable statements: clauses on their own lines, keywords aligned, strings and comments preserved.","icon":"fa-solid fa-database","tag":"Formatter","category":"Coding","href":"tools/coding/sql-prettify.html"},
+  {"name":"JSON to TOML","desc":"Reshape any JSON document into clean TOML. Objects become [tables], arrays of objects become [[array of tables]], and scalars keep their types.","icon":"fa-solid fa-arrows-turn-to-dots","tag":"Converter","category":"Coding","href":"tools/coding/json-to-toml.html"},
+  {"name":"TOML to JSON","desc":"Parse any TOML file into clean, indented JSON. Table headers, inline tables, arrays and comments are all handled automatically.","icon":"fa-solid fa-braces","tag":"Converter","category":"Coding","href":"tools/coding/toml-to-json.html"},
+  {"name":"TOML to YAML","desc":"Translate any TOML file into clean YAML with proper indentation. Tables become mappings and array-of-tables blocks become YAML sequences.","icon":"fa-solid fa-bars-staggered","tag":"Converter","category":"Coding","href":"tools/coding/toml-to-yaml.html"},
+  {"name":"YAML to TOML","desc":"Turn YAML documents into typed TOML. Mappings become [tables], sequences of mappings become [[array of tables]], and block scalars stay intact.","icon":"fa-solid fa-arrows-rotate","tag":"Converter","category":"Coding","href":"tools/coding/yaml-to-toml.html"},
+  {"name":"IPv4 Range Expander","desc":"Turn a start-end range or a CIDR block into a full list of IPv4 addresses. Instant, offline, and capped so enormous blocks never freeze your tab.","icon":"fa-solid fa-arrows-left-right","tag":"Network","category":"Coding","href":"tools/coding/ipv4-range-expander.html"},
 ];
 
 window.CATEGORIES = [
