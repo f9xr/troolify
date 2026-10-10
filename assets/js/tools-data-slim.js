@@ -327,6 +327,12 @@ window.TOOLS_SLIM = [
   {"name":"Speed Converter","desc":"Convert km/h, mph, m/s, knots and ft/s using standard exact conversion factors.","icon":"fa-solid fa-gauge-high","tag":"Speed","category":"Units","href":"tools/units/speed-converter.html"},
   {"name":"Data Size Converter","desc":"Convert bytes, kilobytes, megabytes, gigabytes and terabytes with 1024-based binary factors.","icon":"fa-solid fa-hard-drive","tag":"Data","category":"Units","href":"tools/units/data-size-converter.html"},
   {"name":"Time Converter","desc":"Convert seconds, minutes, hours, days, weeks, months and years using common time constants.","icon":"fa-solid fa-clock","tag":"Time","category":"Units","href":"tools/units/time-converter.html"},
+  {"name":"Text to Binary Converter","desc":"Turn any text into 8-bit binary and decode binary back into readable text - UTF-8 aware and processed entirely in this tab.","icon":"fa-solid fa-1","tag":"Encoder","category":"Text","href":"tools/text/text-to-binary.html"},
+  {"name":"Text to Unicode Converter","desc":"Escape any text into \\uXXXX Unicode code points and decode escapes back to characters, with correct surrogate pairs for emoji.","icon":"fa-solid fa-code","tag":"Encoder","category":"Text","href":"tools/text/text-to-unicode.html"},
+  {"name":"NATO Alphabet Translator","desc":"Spell any text letter by letter using the NATO phonetic alphabet and turn phonetic words back into plain text.","icon":"fa-solid fa-tower-broadcast","tag":"Encoder","category":"Text","href":"tools/text/text-to-nato-alphabet.html"},
+  {"name":"String Obfuscator","desc":"Insert invisible Unicode characters between the letters of a string, then strip them back out, all in your browser.","icon":"fa-solid fa-user-secret","tag":"Encoder","category":"Text","href":"tools/text/string-obfuscator.html"},
+  {"name":"JSON to YAML Converter","desc":"Turn JSON into readable YAML with correct indentation for nested objects, arrays, booleans and nulls, right in your browser.","icon":"fa-solid fa-file-code","tag":"Converter","category":"Coding","href":"tools/coding/json-to-yaml.html"},
+  {"name":"JSON to CSV Converter","desc":"Turn a JSON array of objects into properly quoted CSV or tab-separated values you can open in a spreadsheet.","icon":"fa-solid fa-table","tag":"Converter","category":"Coding","href":"tools/coding/json-to-csv.html"},
 ];
 
 window.CATEGORIES = [
