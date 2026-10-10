@@ -1,0 +1,102 @@
+Troolify - it-tools.tech migration: remaining tasks
+============================================================
+Generated from a live audit of https://github.com/CorentinTh/it-tools (src/tools/)
+versus the Troolify registry (assets/js/tools-data.js).
+
+STATUS
+------------------------------------------------------------
+  - Batches 1-6 COMPLETE and pushed to main:
+      4b5d079  batch 1   (JSON/XML/string/random helpers)
+      f15293f  batch 2   (text + basic utilities)
+      feca0df  batch 3   (auth, crypto and network tools)
+      4a03140  batch 4   (JSON/XML converters, json-diff, sql-prettify)
+      06186fd  batch 5   (TOML converters, ipv4-range-expander)
+      711611b  batch 6   (regex, memo, keycode, docker, OTP, base64-file)
+  - Registry on main: 368 tools / 27 categories. sitemap.xml, llms.txt,
+    ai.txt and all minified assets regenerated on each batch.
+
+REMAINING BATCHES
+------------------------------------------------------------
+Batch 7 (9 tools) - generator file troolify-gen/gen-tools-batch7.js NOT YET WRITTEN
+  folder coding:
+    phone-parser-and-formatter
+    user-agent-parser
+    device-information
+    url-parser
+    safelink-decoder
+    mime-types
+  folder text:
+    ascii-text-drawer
+  folder image:
+    svg-placeholder-generator
+  folder fun:
+    emoji-picker
+
+Batch 8 (2 tools) - troolify-gen/gen-tools-batch8.js NOT YET WRITTEN
+  folder coding:
+    camera-recorder        (getUserMedia + MediaRecorder, download WebM)
+    html-wysiwyg-editor    (contenteditable + execCommand toolbar)
+
+Batch 9+ (candidate list from the live it-tools audit; not yet scheduled)
+  folder coding:
+    case-converter
+    integer-base-converter
+    json-minify          (verify vs existing JSON formatter to avoid a duplicate)
+    json-to-yaml-converter
+    json-viewer
+    jwt-parser
+    hash-text            (verify vs existing sha-hash-generator)
+    url-encoder
+    http-status-codes
+    text-diff
+    text-statistics
+    token-generator
+    crontab-generator
+    date-time-converter
+    chronometer
+    html-entities
+    slugify-string
+    password-strength-analyser
+    encryption
+    base64-string-converter (verify vs existing base64-encoder-decoder)
+    yaml-to-json-converter
+    docker-run-to-docker-compose-converter (already shipped as docker-run-to-compose)
+
+SKIPPED (with reasons - accepted decision)
+------------------------------------------------------------
+  bcrypt                 - WebCrypto has no bcrypt; full impl is a big CPU loop.
+  bip39-generator        - needs the full 2048-word BIP-39 wordlist.
+  mac-address-lookup     - needs a MAC vendor database (would be large static blob).
+  pdf-signature-checker  - PDF parsing/signature validation is impractical client-side.
+  wifi-qr-code-generator - QR code generation already covered by qr-code-generator.
+
+PER-BATCH STANDARD PROCESS (follow for every batch)
+------------------------------------------------------------
+  1. Generate:        node troolify-gen/gen-tools-batchN.js
+  2. Static verify:   node "C:\Users\SKYLIMIT OFFICE\AppData\Local\Temp\opencode\verify-pages.js" <page...>
+                      PLUS check-scripts.js on every page (validates ALL inline
+                      scripts, not just the first) - base64 bug proved the first
+                      script passes while a later one has a syntax error.
+  3. Browser test on http://127.0.0.1:8123 for interactivity (each tool's
+     Go/Sample path, async via poll() for crypto.subtle / FileReader / MediaRecorder).
+  4. HTML-escape check: desc / metaDesc / hero <p> must NOT contain literal
+     <script>, <style>, etc. (unescaped <script> in an element context mangles
+     the whole page DOM - batch 6 base64-file-converter hit this).
+  5. Conclusion links: use same-folder pages or ../folder/page.html (cross-
+     folder bare links 404 - batch 6 hit this on benchmark-builder).
+  6. Pipeline:  npm run minify   -->   node troolify-gen/update-site-meta.js
+  7. Commit + push to main.
+
+KNOWN NITS / FOLLOW-UPS
+------------------------------------------------------------
+  - tools/coding/html-minifier.html FAQ JSON-LD text contains a literal
+    "<script>" inside application/ld+json. It is BENIGN for the parser (it is
+    inside a script element body) but should ideally be escaped for tidiness.
+  - benchmark-builder default sample (100000 iters x 3 warmups) takes ~29s in
+    the throttled test browser; in normal desktop browsers it is milliseconds.
+    Consider lowering the sample to 10000 if real users report slow runs.
+  - regex-memo saves to localStorage key "troolify.regexMemo" - fine, just noted.
+  - meta-tag-generator unshifts the OG/Twitter input fields via DOM insertion
+    and its Clear handler contains a dead forEach(function(){}) - harmless.
+  - otp-code-generator-and-validator needs a secure context (https or
+    localhost) for crypto.subtle; secure-context fallback message is in place.
