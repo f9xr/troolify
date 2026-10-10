@@ -349,6 +349,11 @@ window.TOOLS_SLIM = [
   {"name":"IPv4 Subnet Calculator","desc":"Given an IPv4 address and CIDR prefix, see the network, broadcast, usable hosts, mask and more, instantly in your browser.","icon":"fa-solid fa-network-wired","tag":"Network","category":"Coding","href":"tools/coding/ipv4-subnet-calculator.html"},
   {"name":"IPv4 Address Converter","desc":"Convert IPv4 addresses between dotted decimal, 32-bit integer, hexadecimal and binary representations, instantly in your browser.","icon":"fa-solid fa-arrow-right-arrow-left","tag":"Converter","category":"Coding","href":"tools/coding/ipv4-address-converter.html"},
   {"name":"IPv6 ULA Generator","desc":"Create RFC 4193 IPv6 Unique Local Addresses (ULA) with a random 40-bit global ID, perfect for private networks.","icon":"fa-solid fa-route","tag":"Generator","category":"Coding","href":"tools/coding/ipv6-ula-generator.html"},
+  {"name":"JSON to XML","desc":"Turn any JSON structure into formatted XML with one click. Nested objects, arrays and mixed types are converted automatically.","icon":"fa-solid fa-file-code","tag":"Converter","category":"Coding","href":"tools/coding/json-to-xml.html"},
+  {"name":"XML to JSON","desc":"Parse any XML document into JSON in your browser, grouping repeated elements into arrays and keeping attributes readable.","icon":"fa-solid fa-code-branch","tag":"Converter","category":"Coding","href":"tools/coding/xml-to-json.html"},
+  {"name":"XML Formatter","desc":"Re-indent minified XML so you can actually read it. Comments, CDATA, and processing instructions are preserved.","icon":"fa-solid fa-indent","tag":"Formatter","category":"Coding","href":"tools/coding/xml-formatter.html"},
+  {"name":"JSON Diff","desc":"Diff any two JSON documents: see exactly which paths were added, removed, or changed, displayed as a clear list.","icon":"fa-solid fa-code-compare","tag":"Diff","category":"Coding","href":"tools/coding/json-diff.html"},
+  {"name":"SQL Prettifier","desc":"Format crammed SQL into readable statements: clauses on their own lines, keywords aligned, strings and comments preserved.","icon":"fa-solid fa-database","tag":"Formatter","category":"Coding","href":"tools/coding/sql-prettify.html"},
 ];
 
 window.CATEGORIES = [
