@@ -128,6 +128,12 @@
     <priority>0.9</priority>
   </url>
 <url>
+    <loc>https://f9xr.org/troolify/tools/coding/basic-auth-generator.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
     <loc>https://f9xr.org/troolify/tools/coding/chmod-calculator.html</loc>
     <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -176,6 +182,12 @@
     <priority>0.9</priority>
   </url>
 <url>
+    <loc>https://f9xr.org/troolify/tools/coding/encryption-tool.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
     <loc>https://f9xr.org/troolify/tools/coding/github-profile-viewer.html</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>monthly</changefreq>
@@ -184,6 +196,12 @@
 <url>
     <loc>https://f9xr.org/troolify/tools/coding/hex-to-binary-converter.html</loc>
     <lastmod>2026-09-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/coding/hmac-generator.html</loc>
+    <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -246,6 +264,24 @@
     <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/coding/ipv4-address-converter.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/coding/ipv4-subnet-calculator.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/coding/ipv6-ula-generator.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 <url>
     <loc>https://f9xr.org/troolify/tools/coding/javascript-beautifier.html</loc>
@@ -782,6 +818,12 @@
     <priority>0.8</priority>
   </url>
 <url>
+    <loc>https://f9xr.org/troolify/tools/crypto/rsa-key-pair-generator.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
     <loc>https://f9xr.org/troolify/tools/crypto/satoshi-to-bitcoin-converter.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
@@ -844,6 +886,12 @@
 <url>
     <loc>https://f9xr.org/troolify/tools/finance/discount-calculator.html</loc>
     <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/finance/iban-validator-and-parser.html</loc>
+    <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
