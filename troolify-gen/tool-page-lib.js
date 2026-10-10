@@ -239,14 +239,39 @@ function buildPage(spec) {
   const scripts = '<script src="../../assets/js/layout.min.js"defer></script><script src="../../assets/js/tool-page.min.js"defer></script>' +
     (spec.js ? '<script>!function(){"use strict";' + spec.js + '}();</script>' : '');
 
-  const panel = spec.panel;
+  const toolPanel = spec.panel;
 
-  return head + noscript + hero + panel + disclaimer + tocHtml(article.toc) + articleBlock + keywordBox + authorBox + relatedTools + comments + scripts + '</body></html>';
+  return head + noscript + hero + toolPanel + disclaimer + tocHtml(article.toc) + articleBlock + keywordBox + authorBox + relatedTools + comments + scripts + '</body></html>';
 }
 
-module.exports = { buildPage, BASE, DATE, DATE_LABEL, esc, registerTools, CATMAP };
-
 function q(s) { return '"' + String(s).replace(/\\/g, '\\\\').replace(/"/g, '\\"') + '"'; }
+
+/* Reusable panel building blocks shared by the batch generators. */
+const panel = {
+  wrap: function (prefix, icon, label, inner) {
+    return '<div class="panel clean ' + prefix + '-panel"><div class="panel-inner">' +
+      '<div class="toolbar-row"><span class="tool-label"><i class="' + icon + '"></i>' + label + '</span>' +
+      '<div class="toolbar-actions">' +
+      '<button class="chip-btn"type="button"id="' + prefix + 'Sample"><i class="fa-solid fa-wand-magic-sparkles"></i><span class="hide-sm">Sample</span></button> ' +
+      '<button class="chip-btn"type="button"id="' + prefix + 'Clear"><i class="fa-solid fa-eraser"></i><span class="hide-sm">Clear</span></button>' +
+      '</div></div>' + inner +
+      '<p class="proc-line"><i class="fa-solid fa-bolt"></i><span id="' + prefix + 'Proc">Ready - processing happens in this tab.</span></p></div></div>';
+  },
+  ioTwo: function (prefix, inLab, outLab, inPh, outPh) {
+    return '<div class="io-grid two">' +
+      '<div class="io-field"><label for="' + prefix + 'In">' + inLab + '</label><textarea id="' + prefix + 'In"spellcheck="false"placeholder="' + inPh + '"></textarea></div>' +
+      '<div class="io-field"><label for="' + prefix + 'Out">' + outLab + '</label><textarea id="' + prefix + 'Out"spellcheck="false"readonly placeholder="' + outPh + '"></textarea></div>' +
+      '</div>';
+  },
+  dirSelect: function (prefix, opts) {
+    return '<div class="field"style="max-width:300px;margin-bottom:14px"><label for="' + prefix + 'Dir">Direction</label><select id="' + prefix + 'Dir">' +
+      opts.map(function (o) { return '<option value="' + o[0] + '">' + o[1] + '</option>'; }).join('') + '</select></div>';
+  },
+  actions: function (prefix, label, extra) {
+    return '<div class="actions"><button class="btn btn-primary"type="button"id="' + prefix + 'Go"><i class="fa-solid fa-arrow-right-arrow-left"></i>' + label + '</button> ' +
+      '<button class="rt-btn"type="button"id="' + prefix + 'Copy"><i class="fa-solid fa-copy"></i>Copy output</button>' + (extra || '') + '</div>';
+  }
+};
 
 function entryLine(e) {
   return '  { name:' + q(e.name) + ', desc:' + q(e.desc) + ', icon:' + q(e.icon) + ', tag:' + q(e.tag) +
@@ -268,3 +293,5 @@ function registerTools(entries) {
   fs.writeFileSync(file, src);
   return { added: fresh.length, skipped: entries.length - fresh.length };
 }
+
+module.exports = { buildPage, BASE, DATE, DATE_LABEL, esc, registerTools, CATMAP, panel };
