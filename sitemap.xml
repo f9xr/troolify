@@ -842,6 +842,12 @@
     <priority>0.9</priority>
   </url>
 <url>
+    <loc>https://f9xr.org/troolify/tools/converters/markdown-to-slack-converter.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
     <loc>https://f9xr.org/troolify/tools/converters/markdown-to-word-converter.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
@@ -988,6 +994,12 @@
 <url>
     <loc>https://f9xr.org/troolify/tools/finance/compound-interest-calculator.html</loc>
     <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/finance/conversion-rate-calculator.html</loc>
+    <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -1946,6 +1958,18 @@
     <priority>0.9</priority>
   </url>
 <url>
+    <loc>https://f9xr.org/troolify/tools/seo/utm-builder.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/statistics/ab-test-calculator.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
     <loc>https://f9xr.org/troolify/tools/statistics/advance-average-calculator.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
@@ -2072,6 +2096,12 @@
     <priority>0.9</priority>
   </url>
 <url>
+    <loc>https://f9xr.org/troolify/tools/text/duplicate-word-remover.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
     <loc>https://f9xr.org/troolify/tools/text/email-normalizer.html</loc>
     <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -2138,6 +2168,12 @@
     <priority>0.9</priority>
   </url>
 <url>
+    <loc>https://f9xr.org/troolify/tools/text/markdown-editor.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
     <loc>https://f9xr.org/troolify/tools/text/numeronym-generator.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
@@ -2146,6 +2182,12 @@
 <url>
     <loc>https://f9xr.org/troolify/tools/text/palindrome-checker.html</loc>
     <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/text/paragraph-counter.html</loc>
+    <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -2170,6 +2212,12 @@
 <url>
     <loc>https://f9xr.org/troolify/tools/text/random-noun-generator.html</loc>
     <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/text/random-paragraph-generator.html</loc>
+    <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -2270,8 +2318,20 @@
     <priority>0.9</priority>
   </url>
 <url>
+    <loc>https://f9xr.org/troolify/tools/text/syllable-counter.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
     <loc>https://f9xr.org/troolify/tools/text/tabs-to-spaces.html</loc>
     <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/text/text-splitter.html</loc>
+    <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
