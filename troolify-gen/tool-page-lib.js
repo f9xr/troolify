@@ -188,7 +188,7 @@ function buildPage(spec) {
     '<li><a href="../../tools/index.html">Tools</a></li>' +
     '<li><a href="./index.html">' + cat.name + '</a></li>' +
     '<li class="current"aria-current="page">' + spec.name + '</li></ol></nav>' +
-    '<div class="hero-main"><span class="tool-badge"><span class="dot"></span>100% client-side &middot; zero data retention</span>' +
+    '<div class="hero-main"><span class="tool-badge"><span class="dot"></span>' + (spec.badge || '100% client-side &middot; zero data retention') + '</span>' +
     '<h1>' + spec.name + '</h1><p>' + spec.desc + '</p></div>' +
     '<div class="hero-box hero-cat"><h3 class="hero-box-title"><i class="fa-solid fa-folder-open"></i>Category</h3>' +
     '<div class="tool-meta"><span class="tool-tag"><i class="fa-solid fa-tag"></i>' + spec.tag + '</span> ' +
@@ -274,8 +274,12 @@ const panel = {
 };
 
 function entryLine(e) {
+  var flags = [];
+  ['recent', 'popular', 'featured'].forEach(function (f) { if (e[f]) flags.push(f + ':true'); });
+  var extra = flags.length ? ', ' + flags.join(', ') : '';
+  var workflow = (e.workflow && e.workflow.length) ? ', workflow:[' + e.workflow.map(q).join(',') + ']' : '';
   return '  { name:' + q(e.name) + ', desc:' + q(e.desc) + ', icon:' + q(e.icon) + ', tag:' + q(e.tag) +
-    ', category:' + q(e.category) + ', href:' + q(e.href) + ', keywords:[' + (e.keywords || []).map(q).join(',') + '] },';
+    ', category:' + q(e.category) + ', href:' + q(e.href) + ', keywords:[' + (e.keywords || []).map(q).join(',') + ']' + extra + workflow + ' },';
 }
 
 /* Append entries to window.TOOLS in assets/js/tools-data.js (idempotent by href). */

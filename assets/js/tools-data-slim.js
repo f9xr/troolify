@@ -373,6 +373,7 @@ window.TOOLS_SLIM = [
   {"name":"Section Grade Calculator","desc":"Add each weighted section of a course - homework, quizzes, exams - with its weight and average to compute the overall course grade.","icon":"fa-solid fa-layer-group","tag":"Grades","category":"Math","href":"tools/math/section-grade-calculator.html"},
   {"name":"Weighted Grade Calculator","desc":"Add assignments with a grade and a weight or points value to get the weighted average, total weight and letter grade instantly.","icon":"fa-solid fa-calculator","tag":"Grades","category":"Math","href":"tools/math/weighted-grade-calculator.html"},
   {"name":"Semester Grade Calculator","desc":"Enter your two marking-period grades and the final exam, set the weights, and get the semester grade plus the exam score needed to hit a target.","icon":"fa-solid fa-calendar-days","tag":"Grades","category":"Math","href":"tools/math/semester-grade-calculator.html"},
+  {"name":"Recipe Finder","desc":"Search recipes by name or ingredient, grab a random dish for inspiration, and open the full ingredient list, method and video in one click.","icon":"fa-solid fa-bowl-food","tag":"Recipes","category":"Cooking","href":"tools/cooking/recipe-finder.html","recent":true},
 ];
 
 window.CATEGORIES = [
