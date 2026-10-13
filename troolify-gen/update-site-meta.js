@@ -32,6 +32,9 @@ function add(loc, lastmod, changefreq, priority) {
   if (!existing[loc]) existing[loc] = { lastmod, changefreq, priority };
 }
 
+/* Drop noindex/redirect stubs that must never be advertised in the sitemap. */
+['tools.html'].forEach(p => { delete existing[BASE + '/' + p]; });
+
 TOOLS.forEach(t => {
   add(BASE + '/' + t.href, NEW, 'monthly', '0.9');
 });

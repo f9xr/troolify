@@ -84,3 +84,26 @@ footer{padding:48px 0}
 .crumbs a{color:#ADB5BD;text-decoration:none;transition:color .18s ease}
 .crumbs a:hover{color:#60A5FA}
 .crumbs .current{color:var(--muted)}
+
+/* ============================================================================
+   Static internal-link index - crawlable hub -> category and category -> tool
+   sections injected by troolify-gen/gen-index-links.js. Sits below the
+   client-rendered grid so the link graph exists in the served HTML.
+   ============================================================================ */
+
+.index-links{margin-top:64px;padding-bottom:8px}
+.index-links h2{font-size:clamp(1.3rem,2.6vw,1.8rem);font-weight:800;letter-spacing:-.01em}
+.index-links .index-note{margin-top:8px;margin-bottom:22px;max-width:680px;color:var(--muted);font-size:14.5px;line-height:1.6}
+.index-links .index-note a{color:#60A5FA;text-decoration:none}
+.index-links .index-note a:hover{text-decoration:underline}
+.index-cats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.index-cat{display:flex;align-items:center;gap:12px;padding:16px 18px;border:1px solid rgba(255,255,255,.08);border-radius:14px;background:linear-gradient(180deg,rgba(52,58,64,.5),rgba(33,37,41,.38));color:var(--ink);font-size:15px;font-weight:700;text-decoration:none;transition:border-color .18s ease,transform .18s ease}
+.index-cat:hover{border-color:rgba(96,165,250,.5);transform:translateY(-2px)}
+.index-cat i{color:#93C5FD;font-size:18px;width:20px;text-align:center;flex-shrink:0}
+.index-cat .index-cat-count{margin-left:auto;font-size:12px;font-weight:700;color:var(--faint);white-space:nowrap}
+.index-tools{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:0}
+.index-tools a{display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border:1px solid var(--border);border-radius:999px;font-size:13.5px;font-weight:600;color:#ADB5BD;text-decoration:none;transition:color .18s ease,border-color .18s ease,background .18s ease}
+.index-tools a:hover{color:#fff;border-color:rgba(59,130,246,.55);background:rgba(59,130,246,.08)}
+.index-tools a i{font-size:12px;color:#93C5FD}
+@media(max-width:980px){.index-cats{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.index-cats{grid-template-columns:1fr}}

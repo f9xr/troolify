@@ -1,0 +1,86 @@
+
+
+
+Native Banner:
+<script async="async" data-cfasync="false" src="https://pl31337382.profitableratecpmnetwork.com/a1428e0145a751d1afeef46551bd8659/invoke.js"></script>
+<div id="container-a1428e0145a751d1afeef46551bd8659"></div>
+
+
+Banner 300x250
+<script>
+  atOptions = {
+    'key' : 'e58fca3a70b7f6440770fea6a6a69f63',
+    'format' : 'iframe',
+    'height' : 250,
+    'width' : 300,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/e58fca3a70b7f6440770fea6a6a69f63/invoke.js"></script>
+
+
+Banner 468x60
+<script>
+  atOptions = {
+    'key' : '9ce62f49850e881a324389bebe164f21',
+    'format' : 'iframe',
+    'height' : 60,
+    'width' : 468,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/9ce62f49850e881a324389bebe164f21/invoke.js"></script>
+
+
+Banner 160x300
+<script>
+  atOptions = {
+    'key' : 'ac3309be794e1178ae237439dc60bc92',
+    'format' : 'iframe',
+    'height' : 300,
+    'width' : 160,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/ac3309be794e1178ae237439dc60bc92/invoke.js"></script>
+
+
+Banner 160x600
+<script>
+  atOptions = {
+    'key' : '1c569984e7a0764bbf8b9723c425c0a2',
+    'format' : 'iframe',
+    'height' : 600,
+    'width' : 160,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/1c569984e7a0764bbf8b9723c425c0a2/invoke.js"></script>
+
+
+Banner 320x50
+<script>
+  atOptions = {
+    'key' : '0f0b8e84550094fe90b04478fd4e4bd2',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/0f0b8e84550094fe90b04478fd4e4bd2/invoke.js"></script>
+
+
+Banner 728x90
+<script>
+  atOptions = {
+    'key' : '691095927c5cc31c826edaffd3f5a717',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/691095927c5cc31c826edaffd3f5a717/invoke.js"></script>
+
+

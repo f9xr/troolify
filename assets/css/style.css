@@ -278,6 +278,11 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+/* Smart header: hidden while scrolling down, revealed on scroll up */
+.navbar.nav-hidden {
+    transform: translateY(-100%);
+}
+
 .nav-container {
     max-width: var(--container-max);
     margin: 0 auto;

@@ -1,0 +1,41 @@
+/* ============================================================================
+   Troolify - CSS View Transitions API (cross-document / MPA navigations)
+   ----------------------------------------------------------------------------
+   Loaded in <head> on every page so the @view-transition opt-in is active
+   before the user navigates. A JS-injected <style> is too late for the initial
+   snapshot and adds a flash, so this lives as a real stylesheet.
+
+   Fully progressive: browsers without View Transitions support ignore every
+   rule here and navigate normally. Strictly additive - no baseline layout
+   depends on it. Reference:
+   https://developer.mozilla.org/docs/Web/API/View_Transitions_API
+   ============================================================================ */
+
+/* 1 - Opt every same-origin navigation into a cross-document transition. */
+@view-transition { navigation: auto; }
+
+/* 2 - Root cross-fade: the outgoing page fades down while the incoming page
+       rises into place over the existing header hide/show motion. */
+::view-transition-old(root) {
+  animation: troolify-vt-fade-out .28s ease both;
+}
+::view-transition-new(root) {
+  animation: troolify-vt-rise-in .45s cubic-bezier(.16, 1, .3, 1) both;
+}
+
+@keyframes troolify-vt-fade-out { to { opacity: 0; } }
+@keyframes troolify-vt-rise-in { from { opacity: 0; transform: translateY(16px); } }
+
+/* 3 - Persistent chrome: the top nav is injected identically on every page, so
+       a stable view-transition-name morphs it in place instead of re-animating
+       it with the root snapshot. #navbar is unique per document. */
+#navbar { view-transition-name: troolify-header; }
+
+/* 4 - Accessibility: honour the reduced-motion preference. */
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}

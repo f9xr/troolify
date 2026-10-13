@@ -169,12 +169,15 @@ function buildPage(spec) {
     '<link rel="stylesheet"href="../../assets/css/tool.min.css">' +
     '<link rel="stylesheet"href="../../assets/css/site-shell.min.css">' +
     '<link rel="stylesheet"href="../../assets/css/tool-page.min.css">' +
+    '<link rel="stylesheet"href="../../assets/css/view-transitions.min.css">' +
     '<link rel="preload"as="style"href="../../assets/css/seo-article.min.css">' +
     '<link rel="stylesheet"href="../../assets/css/seo-article.min.css"media="print"onload="this.media=&#39;all&#39;">' +
     '<noscript><link rel="stylesheet"href="../../assets/css/seo-article.min.css"></noscript>' +
     '<style>' + BASE_CSS + (spec.css || '') + '</style>' +
     '<script async src="https://www.googletagmanager.com/gtag/js?id=G-1D3C2DDCHV"></script>' +
-    '<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-1D3C2DDCHV");</script></head>';
+    '<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-1D3C2DDCHV");</script>' +
+    '<meta name="google-adsense-account"content="ca-pub-9769892721842144">' +
+    '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9769892721842144"crossorigin="anonymous"></script></head>';
 
   const noscript = '<body data-layout="tool"><noscript><nav aria-label="Primary"style="position:static;display:block;padding:1rem 1.5rem;background:#212529;border-bottom:1px solid #343A40;text-align:center;font-size:0.9rem;">' +
     '<a href="../../index.html"style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Home</a> ' +

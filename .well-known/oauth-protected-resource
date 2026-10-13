@@ -1,0 +1,10 @@
+{
+  "resource": "https://f9xr.org/troolify/",
+  "authorization_servers": [],
+  "bearer_methods_supported": [],
+  "scopes_supported": [],
+  "resource_documentation": "https://f9xr.org/troolify/auth.md",
+  "resource_policy_uri": "https://f9xr.org/troolify/pages/privacy-policy.html",
+  "troolify_access": "anonymous",
+  "troolify_note": "Troolify is a public, privacy-first tools hub. Every tool runs client-side and all published resources are readable without credentials, so no OAuth authorization server is operated and no access tokens are required. See auth.md for details."
+}

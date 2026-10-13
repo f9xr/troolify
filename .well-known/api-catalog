@@ -1,0 +1,51 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://f9xr.org/troolify/",
+      "links": [
+        {
+          "href": "https://f9xr.org/troolify/llms.txt",
+          "rel": "service-desc",
+          "type": "text/plain",
+          "title": "Troolify LLMs Description"
+        },
+        {
+          "href": "https://f9xr.org/troolify/ai.txt",
+          "rel": "service-desc",
+          "type": "text/plain",
+          "title": "Troolify AI Agent Information"
+        },
+        {
+          "href": "https://f9xr.org/troolify/tools/index.html",
+          "rel": "service-doc",
+          "type": "text/html",
+          "title": "Troolify Tool Catalog"
+        },
+        {
+          "href": "https://f9xr.org/troolify/pages/developers.html",
+          "rel": "service-doc",
+          "type": "text/html",
+          "title": "Troolify Developer Documentation"
+        },
+        {
+          "href": "https://f9xr.org/troolify/pages/methodology.html",
+          "rel": "service-doc",
+          "type": "text/html",
+          "title": "Troolify Editorial Methodology"
+        },
+        {
+          "href": "https://f9xr.org/troolify/.well-known/oauth-protected-resource",
+          "rel": "describedby",
+          "type": "application/json",
+          "title": "OAuth Protected Resource Metadata"
+        },
+        {
+          "href": "https://f9xr.org/troolify/auth.md",
+          "rel": "describedby",
+          "type": "text/markdown",
+          "title": "Agent Authentication Guide"
+        }
+      ]
+    }
+  ]
+}

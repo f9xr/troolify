@@ -867,19 +867,6 @@
                 '@keyframes featured-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}' +
                 '@media(max-width:640px){.tx-featured{margin-top:2rem;padding:1.25rem 1rem 1.4rem}.featured-marquee-track .badge-link{padding-right:1.5rem}}' +
                 '@media(prefers-reduced-motion:reduce){.featured-marquee-track{animation:none}.tx-footer{opacity:1!important;transform:none!important;transition:none}}' +
-
-                /* CSS View Transitions API - smooth cross-document page transitions.
-                   Enabled only when the browser supports it and the user has not opted
-                   out of reduced motion. Named pseudos allow a subtle rise/fade on the
-                   new page and keep the footer pinned during the swap. */
-                '@supports (view-transition-name: root){' +
-                    '@view-transition{ navigation:auto }' +
-                    '::view-transition-old(root){animation:opencode-vt-fade .28s ease both}' +
-                    '::view-transition-new(root){animation:opencode-vt-rise .45s cubic-bezier(.16,1,.3,1) both}' +
-                    '@keyframes opencode-vt-fade{to{opacity:0}}' +
-                    '@keyframes opencode-vt-rise{from{opacity:0;transform:translateY(16px)}}' +
-                    '@media(prefers-reduced-motion:reduce){::view-transition-old(root),::view-transition-new(root){animation-duration:.01ms}}' +
-                '}' +
             '</style>';
 
         /* --------------------------------------------------------------------
@@ -1026,10 +1013,25 @@
 
         /* Single rAF-batched scroll frame: reads first, then writes (no layout thrash) */
         var scrollScheduled = false;
+        var lastNavScrollY = window.scrollY || 0;
+        var NAV_HIDE_AFTER = 120; /* keep the header visible near the top of the page */
+        var NAV_DIR_DELTA = 6;    /* ignore tiny scroll jitter */
         function onScrollFrame() {
             scrollScheduled = false;
             var y = window.scrollY;
-            if (header) header.classList.toggle("scrolled", y > 8);
+            if (header) {
+                header.classList.toggle("scrolled", y > 8);
+                /* Smart header: hide while scrolling down, reveal on scroll up.
+                   Never hide near the top or while the mobile menu is open. */
+                var navDelta = y - lastNavScrollY;
+                var navMenuOpen = !!document.querySelector(".mobile-menu.open");
+                if (y <= NAV_HIDE_AFTER || navDelta < 0 || navMenuOpen) {
+                    header.classList.remove("nav-hidden");
+                } else if (navDelta > NAV_DIR_DELTA) {
+                    header.classList.add("nav-hidden");
+                }
+                lastNavScrollY = y;
+            }
             if (backToTop) {
                 var max = document.documentElement.scrollHeight - window.innerHeight;
                 var p = max > 0 ? Math.min(1, y / max) : 0;
@@ -1067,6 +1069,7 @@
 
         function toggleMenu(force) {
             isMenuOpen = typeof force === "boolean" ? force : !isMenuOpen;
+            if (isMenuOpen && header) header.classList.remove("nav-hidden");
             if (mobileMenu) {
                 mobileMenu.classList.toggle("open", isMenuOpen);
                 mobileMenu.style.visibility = isMenuOpen ? "visible" : "hidden";
