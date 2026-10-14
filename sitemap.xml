@@ -1184,6 +1184,12 @@
     <priority>0.9</priority>
   </url>
 <url>
+    <loc>https://f9xr.org/troolify/tools/fun/band-name-generator.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
     <loc>https://f9xr.org/troolify/tools/fun/coin-flip-simulator.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
@@ -1196,14 +1202,92 @@
     <priority>0.9</priority>
   </url>
 <url>
+    <loc>https://f9xr.org/troolify/tools/fun/dragon-name-generator.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/fun/dragonborn-name-generator.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/fun/greek-name-generator.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/fun/horse-name-generator.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
     <loc>https://f9xr.org/troolify/tools/fun/index.html</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 <url>
+    <loc>https://f9xr.org/troolify/tools/fun/island-name-generator.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
     <loc>https://f9xr.org/troolify/tools/fun/joke-generator.html</loc>
     <lastmod>2026-09-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/fun/nickname-generator.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/fun/random-animal-generator.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/fun/random-birthday-generator.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/fun/random-celebrity-generator.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/fun/random-city-generator.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/fun/random-country-generator.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/fun/random-drawing-generator.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/fun/random-emoji-generator.html</loc>
+    <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -1214,14 +1298,62 @@
     <priority>0.9</priority>
   </url>
 <url>
+    <loc>https://f9xr.org/troolify/tools/fun/random-hobby-generator.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/fun/random-job-generator.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/fun/random-lottery-number-generator.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
     <loc>https://f9xr.org/troolify/tools/fun/random-meme-generator.html</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 <url>
+    <loc>https://f9xr.org/troolify/tools/fun/random-object-generator.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/fun/random-playing-card-generator.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/fun/random-pokemon-generator.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
     <loc>https://f9xr.org/troolify/tools/fun/random-quote-generator.html</loc>
     <lastmod>2026-09-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/fun/random-state-generator.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/fun/random-theme-generator.html</loc>
+    <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -1238,8 +1370,38 @@
     <priority>0.9</priority>
   </url>
 <url>
+    <loc>https://f9xr.org/troolify/tools/fun/story-prompt-generator.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/fun/superhero-name-generator.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
     <loc>https://f9xr.org/troolify/tools/fun/truth-or-dare-generator.html</loc>
     <lastmod>2026-09-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/fun/villain-name-generator.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/fun/warrior-name-generator.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/fun/xbox-username-generator.html</loc>
+    <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -2528,6 +2690,12 @@
     <priority>0.9</priority>
   </url>
 <url>
+    <loc>https://f9xr.org/troolify/tools/time/business-days-calculator.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
     <loc>https://f9xr.org/troolify/tools/time/countdown-timer.html</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
@@ -2540,7 +2708,31 @@
     <priority>0.9</priority>
   </url>
 <url>
+    <loc>https://f9xr.org/troolify/tools/time/date-format-converter.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/time/day-of-week-calculator.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/time/days-until-calculator.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
     <loc>https://f9xr.org/troolify/tools/time/eta-calculator.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/time/hours-calculator.html</loc>
     <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -2550,6 +2742,12 @@
     <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/time/pace-calculator.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 <url>
     <loc>https://f9xr.org/troolify/tools/time/sleep-time-calculator.html</loc>
@@ -2582,8 +2780,20 @@
     <priority>0.9</priority>
   </url>
 <url>
+    <loc>https://f9xr.org/troolify/tools/time/timesheet-calculator.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
     <loc>https://f9xr.org/troolify/tools/time/unix-timestamp-converter.html</loc>
     <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/time/week-number-calculator.html</loc>
+    <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
