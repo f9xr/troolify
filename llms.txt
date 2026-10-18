@@ -12,6 +12,7 @@ Key facts about Troolify:
 - [Word Counter](https://f9xr.org/troolify/tools/text/word-counter.html): Live word, character, sentence, paragraph and reading-time stats as you type. Text never leaves the browser.
 - [Numeronym Generator](https://f9xr.org/troolify/tools/text/numeronym-generator.html): Turn any phrase into an i18n-style numeronym (like i18n or k8s) or decode one back into its letter count.
 - [JSON Formatter](https://f9xr.org/troolify/tools/coding/json-formatter.html): Format, validate, minify and copy JSON instantly without sending it to a server.
+- [AI Model Explorer](https://f9xr.org/troolify/tools/ai/ai-model-explorer.html): Search and compare 550+ AI models across 230+ providers - live pricing, context windows and capabilities from models.dev, with a per-provider cost calculator. Runs in your browser.
 - [Code Beautifier](https://f9xr.org/troolify/tools/coding/code-beautifier.html): Turn source code into clean, colorful, self-contained HTML with syntax highlighting.
 - [Schema Markup Generator](https://f9xr.org/troolify/tools/seo/schema-markup-generator.html): Create clean JSON-LD schema markup for LocalBusiness, Product, Article, FAQPage, Event and Review.
 - [Multiline Slug Generator](https://f9xr.org/troolify/tools/seo/multiline-slug-generator.html): Convert multi-line text into SEO-friendly URL slugs with keyword optimization and stop-word removal.

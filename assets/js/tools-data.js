@@ -10,6 +10,7 @@ window.TOOLS = [
      AI
      =================================================================== */
   { name:"AI Prompt Enhancer", desc:"Rewrite a plain instruction into a structured, high-performing AI prompt with role, context, steps and output format - done locally in your tab.", icon:"fa-solid fa-wand-magic-sparkles", tag:"Prompt AI", category:"AI", href:"tools/ai/ai-prompt-enhancer.html", keywords:["ai prompt","prompt enhancer","prompt improver","chatgpt prompt","better prompts","llm prompting","prompt engineering","structured prompt","writing prompt","ai"] },
+  { name:"AI Model Explorer", desc:"Search, filter and compare 550+ AI models across 230+ providers - live pricing, context windows and capabilities from models.dev, plus a per-provider cost calculator - all in your browser.", icon:"fa-solid fa-satellite-dish", tag:"AI Models", category:"AI", href:"tools/ai/ai-model-explorer.html", keywords:["ai model comparison","llm pricing","model explorer","context window","ai models list","llm provider","models.dev","ai api pricing","compare ai models","open weights","reasoning model","ai model database"], recent:true },
 
   /* ===================================================================
      CODING
