@@ -180,22 +180,22 @@ function buildPage(spec) {
     '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9769892721842144"crossorigin="anonymous"></script></head>';
 
   const noscript = '<body data-layout="tool"><noscript><nav aria-label="Primary"style="position:static;display:block;padding:1rem 1.5rem;background:#212529;border-bottom:1px solid #343A40;text-align:center;font-size:0.9rem;">' +
-    '<a href="../../index.html"style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Home</a> ' +
-    '<a href="../../tools/index.html"style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Tools</a> ' +
+    '<a href="../../"style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Home</a> ' +
+    '<a href="../../tools/"style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Tools</a> ' +
     '<a href="../../pages/about.html"style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">About</a> ' +
     '<a href="../../pages/contact.html"style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Contact</a></nav></noscript>';
 
-  const hero = '<main class="tool-main"><div class="container"><div class="tool-head hero">' +
+  const hero = '<main class="tool-main"id="main"tabindex="-1"><div class="container"><div class="tool-head hero">' +
     '<nav class="breadcrumbs"aria-label="Breadcrumb"><ol>' +
-    '<li><a href="../../index.html"><i class="fa-solid fa-house"></i>Home</a></li>' +
-    '<li><a href="../../tools/index.html">Tools</a></li>' +
-    '<li><a href="./index.html">' + cat.name + '</a></li>' +
+    '<li><a href="../../"><i class="fa-solid fa-house"></i>Home</a></li>' +
+    '<li><a href="../../tools/">Tools</a></li>' +
+    '<li><a href="./">' + cat.name + '</a></li>' +
     '<li class="current"aria-current="page">' + spec.name + '</li></ol></nav>' +
     '<div class="hero-main"><span class="tool-badge"><span class="dot"></span>' + (spec.badge || '100% client-side &middot; zero data retention') + '</span>' +
     '<h1>' + spec.name + '</h1><p>' + spec.desc + '</p></div>' +
     '<div class="hero-box hero-cat"><h3 class="hero-box-title"><i class="fa-solid fa-folder-open"></i>Category</h3>' +
     '<div class="tool-meta"><span class="tool-tag"><i class="fa-solid fa-tag"></i>' + spec.tag + '</span> ' +
-    '<a class="tool-cat"href="./index.html"aria-label="Browse ' + esc(cat.name) + ' category"><i class="fa-solid fa-folder"></i>' + cat.name + '</a></div></div>' +
+    '<a class="tool-cat"href="./"aria-label="Browse ' + esc(cat.name) + ' category"><i class="fa-solid fa-folder"></i>' + cat.name + '</a></div></div>' +
     '<div class="hero-box hero-qa"><h3 class="hero-box-title"><i class="fa-solid fa-bolt"></i>Quick Actions</h3>' +
     '<div class="tool-actions"><button class="rt-btn"type="button"id="btnShare"><i class="fa-solid fa-share-nodes"></i>Share</button> ' +
     '<button class="rt-btn"type="button"id="btnEmbed"><i class="fa-solid fa-code"></i>Embed Tool</button> ' +
@@ -213,9 +213,9 @@ function buildPage(spec) {
 
   const keywordBox = '<section class="keyword-box"aria-label="Keywords and tags"><h2>Keyword &amp; Tags</h2><h3>Keywords</h3><div class="keywords">' +
     spec.keywords.map(k => '<span class="keyword">' + esc(k) + '</span>').join(' ') + '</div>' +
-    '<h3>Tags</h3><div class="tags"><a class="tag"href="./index.html"><i class="fa-solid fa-tag"></i>' + spec.tag + '</a> ' +
-    '<a class="tag"href="./index.html"><i class="fa-solid fa-folder"></i>' + cat.name + '</a> ' +
-    '<a class="tag"href="../../tools/index.html"><i class="fa-solid fa-cube"></i>' + spec.folder.charAt(0).toUpperCase() + spec.folder.slice(1) + '</a></div></section>';
+    '<h3>Tags</h3><div class="tags"><a class="tag"href="./"><i class="fa-solid fa-tag"></i>' + spec.tag + '</a> ' +
+    '<a class="tag"href="./"><i class="fa-solid fa-folder"></i>' + cat.name + '</a> ' +
+    '<a class="tag"href="../../tools/"><i class="fa-solid fa-cube"></i>' + spec.folder.charAt(0).toUpperCase() + spec.folder.slice(1) + '</a></div></section>';
 
   const authorBox = '<section class="author-box"aria-label="About the publisher"><div class="author-avatar"aria-hidden="true"><img src="https://f9xr.org/articles/logo.webp"alt="F9XR Development Team logo"loading="lazy"decoding="async"width="1407"height="768"></div><div>' +
     '<span class="author-role">Published by</span><h2>F9XR Development Team</h2>' +

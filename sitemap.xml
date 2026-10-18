@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-    <loc>https://f9xr.org/troolify/index.html</loc>
+    <loc>https://f9xr.org/troolify/</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -74,13 +74,25 @@
     <priority>0.5</priority>
   </url>
 <url>
+    <loc>https://f9xr.org/troolify/tools/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/ai/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
     <loc>https://f9xr.org/troolify/tools/ai/ai-prompt-enhancer.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 <url>
-    <loc>https://f9xr.org/troolify/tools/ai/index.html</loc>
+    <loc>https://f9xr.org/troolify/tools/audio/</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -90,12 +102,6 @@
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-<url>
-    <loc>https://f9xr.org/troolify/tools/audio/index.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 <url>
     <loc>https://f9xr.org/troolify/tools/audio/note-frequency-calculator.html</loc>
@@ -108,6 +114,12 @@
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/coding/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 <url>
     <loc>https://f9xr.org/troolify/tools/coding/api-key-hasher.html</loc>
@@ -158,6 +170,12 @@
     <priority>0.9</priority>
   </url>
 <url>
+    <loc>https://f9xr.org/troolify/tools/coding/camera-recorder.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
     <loc>https://f9xr.org/troolify/tools/coding/chmod-calculator.html</loc>
     <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -189,6 +207,12 @@
   </url>
 <url>
     <loc>https://f9xr.org/troolify/tools/coding/cors-policy-tester.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/coding/crontab-generator.html</loc>
     <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -226,6 +250,12 @@
 <url>
     <loc>https://f9xr.org/troolify/tools/coding/csv-validator.html</loc>
     <lastmod>2026-09-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/coding/device-information.html</loc>
+    <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -308,6 +338,12 @@
     <priority>0.9</priority>
   </url>
 <url>
+    <loc>https://f9xr.org/troolify/tools/coding/html-wysiwyg-editor.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
     <loc>https://f9xr.org/troolify/tools/coding/http-status-code-lookup.html</loc>
     <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -318,12 +354,6 @@
     <lastmod>2026-09-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-<url>
-    <loc>https://f9xr.org/troolify/tools/coding/index.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 <url>
     <loc>https://f9xr.org/troolify/tools/coding/ip-allowlist-generator.html</loc>
@@ -452,6 +482,12 @@
     <priority>0.9</priority>
   </url>
 <url>
+    <loc>https://f9xr.org/troolify/tools/coding/mime-types.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
     <loc>https://f9xr.org/troolify/tools/coding/oauth-scope-builder.html</loc>
     <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -471,6 +507,12 @@
   </url>
 <url>
     <loc>https://f9xr.org/troolify/tools/coding/pgp-key-generator.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/coding/phone-parser-and-formatter.html</loc>
     <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -514,6 +556,12 @@
 <url>
     <loc>https://f9xr.org/troolify/tools/coding/remove-html-tags.html</loc>
     <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/coding/safelink-decoder.html</loc>
+    <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -608,8 +656,20 @@
     <priority>0.9</priority>
   </url>
 <url>
+    <loc>https://f9xr.org/troolify/tools/coding/url-parser.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
     <loc>https://f9xr.org/troolify/tools/coding/url-shortener.html</loc>
     <lastmod>2026-09-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/coding/user-agent-parser.html</loc>
+    <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -644,6 +704,12 @@
     <priority>0.9</priority>
   </url>
 <url>
+    <loc>https://f9xr.org/troolify/tools/coding/yaml-to-json-converter.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
     <loc>https://f9xr.org/troolify/tools/coding/yaml-to-toml.html</loc>
     <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -654,6 +720,12 @@
     <lastmod>2026-09-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/color/</loc>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 <url>
     <loc>https://f9xr.org/troolify/tools/color/analogous-color-scheme.html</loc>
@@ -686,12 +758,6 @@
     <priority>0.9</priority>
   </url>
 <url>
-    <loc>https://f9xr.org/troolify/tools/color/index.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-<url>
     <loc>https://f9xr.org/troolify/tools/color/invert-color.html</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>monthly</changefreq>
@@ -708,6 +774,12 @@
     <lastmod>2026-09-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/construction/</loc>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 <url>
     <loc>https://f9xr.org/troolify/tools/construction/basement-floor-cost-calculator.html</loc>
@@ -854,12 +926,6 @@
     <priority>0.9</priority>
   </url>
 <url>
-    <loc>https://f9xr.org/troolify/tools/construction/index.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-<url>
     <loc>https://f9xr.org/troolify/tools/construction/pier-footing-calculator.html</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>monthly</changefreq>
@@ -920,6 +986,12 @@
     <priority>0.9</priority>
   </url>
 <url>
+    <loc>https://f9xr.org/troolify/tools/converters/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
     <loc>https://f9xr.org/troolify/tools/converters/celsius-fahrenheit-converter.html</loc>
     <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -936,12 +1008,6 @@
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-<url>
-    <loc>https://f9xr.org/troolify/tools/converters/index.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 <url>
     <loc>https://f9xr.org/troolify/tools/converters/markdown-to-pdf-converter.html</loc>
@@ -986,16 +1052,16 @@
     <priority>0.9</priority>
   </url>
 <url>
+    <loc>https://f9xr.org/troolify/tools/cooking/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
     <loc>https://f9xr.org/troolify/tools/cooking/cooking-time-calculator.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-<url>
-    <loc>https://f9xr.org/troolify/tools/cooking/index.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 <url>
     <loc>https://f9xr.org/troolify/tools/cooking/oven-temperature-converter.html</loc>
@@ -1016,6 +1082,12 @@
     <priority>0.9</priority>
   </url>
 <url>
+    <loc>https://f9xr.org/troolify/tools/crypto/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
     <loc>https://f9xr.org/troolify/tools/crypto/bitcoin-profit-calculator.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
@@ -1026,12 +1098,6 @@
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-<url>
-    <loc>https://f9xr.org/troolify/tools/crypto/index.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 <url>
     <loc>https://f9xr.org/troolify/tools/crypto/otp-code-generator-and-validator.html</loc>
@@ -1052,14 +1118,20 @@
     <priority>0.9</priority>
   </url>
 <url>
+    <loc>https://f9xr.org/troolify/tools/discord/</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
     <loc>https://f9xr.org/troolify/tools/discord/discord-timestamp-generator.html</loc>
     <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 <url>
-    <loc>https://f9xr.org/troolify/tools/discord/index.html</loc>
-    <lastmod>2026-09-27</lastmod>
+    <loc>https://f9xr.org/troolify/tools/files/</loc>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1074,12 +1146,6 @@
     <lastmod>2026-09-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-<url>
-    <loc>https://f9xr.org/troolify/tools/files/index.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 <url>
     <loc>https://f9xr.org/troolify/tools/files/join-files.html</loc>
@@ -1098,6 +1164,12 @@
     <lastmod>2026-09-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/finance/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 <url>
     <loc>https://f9xr.org/troolify/tools/finance/compound-interest-calculator.html</loc>
@@ -1122,12 +1194,6 @@
     <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-<url>
-    <loc>https://f9xr.org/troolify/tools/finance/index.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 <url>
     <loc>https://f9xr.org/troolify/tools/finance/loan-payment-calculator.html</loc>
@@ -1172,6 +1238,12 @@
     <priority>0.9</priority>
   </url>
 <url>
+    <loc>https://f9xr.org/troolify/tools/fun/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
     <loc>https://f9xr.org/troolify/tools/fun/anagram-solver.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
@@ -1214,6 +1286,12 @@
     <priority>0.9</priority>
   </url>
 <url>
+    <loc>https://f9xr.org/troolify/tools/fun/emoji-picker.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
     <loc>https://f9xr.org/troolify/tools/fun/greek-name-generator.html</loc>
     <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -1224,12 +1302,6 @@
     <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-<url>
-    <loc>https://f9xr.org/troolify/tools/fun/index.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 <url>
     <loc>https://f9xr.org/troolify/tools/fun/island-name-generator.html</loc>
@@ -1406,6 +1478,12 @@
     <priority>0.9</priority>
   </url>
 <url>
+    <loc>https://f9xr.org/troolify/tools/health/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
     <loc>https://f9xr.org/troolify/tools/health/bmi-calculator.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
@@ -1446,12 +1524,6 @@
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-<url>
-    <loc>https://f9xr.org/troolify/tools/health/index.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 <url>
     <loc>https://f9xr.org/troolify/tools/health/lean-body-mass-calculator.html</loc>
@@ -1506,6 +1578,12 @@
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/hvac/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 <url>
     <loc>https://f9xr.org/troolify/tools/hvac/ach-calculator.html</loc>
@@ -1622,12 +1700,6 @@
     <priority>0.9</priority>
   </url>
 <url>
-    <loc>https://f9xr.org/troolify/tools/hvac/index.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-<url>
     <loc>https://f9xr.org/troolify/tools/hvac/m3h-to-cfm.html</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
@@ -1694,6 +1766,12 @@
     <priority>0.9</priority>
   </url>
 <url>
+    <loc>https://f9xr.org/troolify/tools/image/</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
     <loc>https://f9xr.org/troolify/tools/image/adjust-light-color.html</loc>
     <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -1702,6 +1780,12 @@
 <url>
     <loc>https://f9xr.org/troolify/tools/image/aspect-ratio-calculator.html</loc>
     <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/image/bulk-image-resizer.html</loc>
+    <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -1748,6 +1832,24 @@
     <priority>0.9</priority>
   </url>
 <url>
+    <loc>https://f9xr.org/troolify/tools/image/heic-to-jpg-converter.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/image/image-color-picker.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/image/image-enlarger.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
     <loc>https://f9xr.org/troolify/tools/image/image-resizer.html</loc>
     <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -1758,12 +1860,6 @@
     <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-<url>
-    <loc>https://f9xr.org/troolify/tools/image/index.html</loc>
-    <lastmod>2026-09-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 <url>
     <loc>https://f9xr.org/troolify/tools/image/jpg-compressor.html</loc>
@@ -1798,6 +1894,12 @@
 <url>
     <loc>https://f9xr.org/troolify/tools/image/png-compressor.html</loc>
     <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/image/png-to-jpg-converter.html</loc>
+    <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -1838,6 +1940,12 @@
     <priority>0.9</priority>
   </url>
 <url>
+    <loc>https://f9xr.org/troolify/tools/image/svg-placeholder-generator.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
     <loc>https://f9xr.org/troolify/tools/image/text-logo-generator.html</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>monthly</changefreq>
@@ -1856,16 +1964,22 @@
     <priority>0.9</priority>
   </url>
 <url>
+    <loc>https://f9xr.org/troolify/tools/image/webp-to-jpg-converter.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
     <loc>https://f9xr.org/troolify/tools/image/webp-to-png-converter.html</loc>
     <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 <url>
-    <loc>https://f9xr.org/troolify/tools/index.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://f9xr.org/troolify/tools/math/</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 <url>
     <loc>https://f9xr.org/troolify/tools/math/area-calculator.html</loc>
@@ -1938,12 +2052,6 @@
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-<url>
-    <loc>https://f9xr.org/troolify/tools/math/index.html</loc>
-    <lastmod>2026-09-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 <url>
     <loc>https://f9xr.org/troolify/tools/math/inverse-rule-of-three-calculator.html</loc>
@@ -2030,7 +2138,7 @@
     <priority>0.9</priority>
   </url>
 <url>
-    <loc>https://f9xr.org/troolify/tools/misc/index.html</loc>
+    <loc>https://f9xr.org/troolify/tools/misc/</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -2108,6 +2216,12 @@
     <priority>0.9</priority>
   </url>
 <url>
+    <loc>https://f9xr.org/troolify/tools/pdf/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
     <loc>https://f9xr.org/troolify/tools/pdf/excel-to-pdf.html</loc>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -2118,12 +2232,6 @@
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-<url>
-    <loc>https://f9xr.org/troolify/tools/pdf/index.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 <url>
     <loc>https://f9xr.org/troolify/tools/pdf/merge-pdfs.html</loc>
@@ -2146,6 +2254,18 @@
 <url>
     <loc>https://f9xr.org/troolify/tools/pdf/pdf-to-grayscale.html</loc>
     <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/pdf/pdf-to-jpg-converter.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/pdf/pdf-to-png-converter.html</loc>
+    <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -2186,6 +2306,12 @@
     <priority>0.9</priority>
   </url>
 <url>
+    <loc>https://f9xr.org/troolify/tools/prompts/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
     <loc>https://f9xr.org/troolify/tools/prompts/advanced-monthly-website-audit-prompt-generator.html</loc>
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -2210,13 +2336,7 @@
     <priority>0.9</priority>
   </url>
 <url>
-    <loc>https://f9xr.org/troolify/tools/prompts/index.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-<url>
-    <loc>https://f9xr.org/troolify/tools/seo/index.html</loc>
+    <loc>https://f9xr.org/troolify/tools/seo/</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -2252,6 +2372,12 @@
     <priority>0.9</priority>
   </url>
 <url>
+    <loc>https://f9xr.org/troolify/tools/statistics/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
     <loc>https://f9xr.org/troolify/tools/statistics/ab-test-calculator.html</loc>
     <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -2264,12 +2390,6 @@
     <priority>0.9</priority>
   </url>
 <url>
-    <loc>https://f9xr.org/troolify/tools/statistics/index.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-<url>
     <loc>https://f9xr.org/troolify/tools/statistics/probability-calculator.html</loc>
     <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -2278,6 +2398,12 @@
 <url>
     <loc>https://f9xr.org/troolify/tools/statistics/standard-deviation-calculator.html</loc>
     <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/testing/</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -2312,12 +2438,6 @@
     <priority>0.9</priority>
   </url>
 <url>
-    <loc>https://f9xr.org/troolify/tools/testing/index.html</loc>
-    <lastmod>2026-09-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-<url>
     <loc>https://f9xr.org/troolify/tools/testing/random-address-generator.html</loc>
     <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
@@ -2336,6 +2456,12 @@
     <priority>0.9</priority>
   </url>
 <url>
+    <loc>https://f9xr.org/troolify/tools/text/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
     <loc>https://f9xr.org/troolify/tools/text/add-line-breaks.html</loc>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -2344,6 +2470,12 @@
 <url>
     <loc>https://f9xr.org/troolify/tools/text/add-text-to-each-line.html</loc>
     <lastmod>2026-09-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/text/ascii-text-drawer.html</loc>
+    <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -2418,12 +2550,6 @@
     <lastmod>2026-09-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-<url>
-    <loc>https://f9xr.org/troolify/tools/text/index.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 <url>
     <loc>https://f9xr.org/troolify/tools/text/letter-counter.html</loc>
@@ -2678,6 +2804,12 @@
     <priority>0.9</priority>
   </url>
 <url>
+    <loc>https://f9xr.org/troolify/tools/time/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
     <loc>https://f9xr.org/troolify/tools/time/add-to-date-calculator.html</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
@@ -2738,12 +2870,6 @@
     <priority>0.9</priority>
   </url>
 <url>
-    <loc>https://f9xr.org/troolify/tools/time/index.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-<url>
     <loc>https://f9xr.org/troolify/tools/time/pace-calculator.html</loc>
     <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -2798,6 +2924,12 @@
     <priority>0.9</priority>
   </url>
 <url>
+    <loc>https://f9xr.org/troolify/tools/units/</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
     <loc>https://f9xr.org/troolify/tools/units/area-converter.html</loc>
     <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -2808,12 +2940,6 @@
     <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-<url>
-    <loc>https://f9xr.org/troolify/tools/units/index.html</loc>
-    <lastmod>2026-09-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 <url>
     <loc>https://f9xr.org/troolify/tools/units/length-converter.html</loc>
@@ -2852,7 +2978,7 @@
     <priority>0.9</priority>
   </url>
 <url>
-    <loc>https://f9xr.org/troolify/tools/video/index.html</loc>
+    <loc>https://f9xr.org/troolify/tools/video/</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -2876,7 +3002,7 @@
     <priority>0.9</priority>
   </url>
 <url>
-    <loc>https://f9xr.org/troolify/tools/youtube/index.html</loc>
+    <loc>https://f9xr.org/troolify/tools/youtube/</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

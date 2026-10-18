@@ -39,7 +39,7 @@ TOOLS.forEach(t => {
   add(BASE + '/' + t.href, NEW, 'monthly', '0.9');
 });
 CATS.forEach(c => {
-  add(BASE + '/tools/' + c.folder.toLowerCase() + '/index.html', NEW, 'monthly', '0.8');
+  add(BASE + '/tools/' + c.folder.toLowerCase() + '/', NEW, 'monthly', '0.8');
 });
 ['pages/developers.html', 'pages/methodology.html'].forEach(p => {
   add(BASE + '/' + p, NEW, 'monthly', '0.5');
@@ -135,13 +135,13 @@ if (!llms.includes(unitsUrl) && llms.includes('## Categories')) {
 }
 
 // category links
-const catLine = { 'Color': '- [Color Tools](' + BASE + '/tools/color/index.html): Color mixing, blending, gradients, complementary and analogous scheme utilities.',
-  'Units': '- [Unit Converters](' + BASE + '/tools/units/index.html): Convert between length, weight, area, volume, temperature, speed, data and time - with the formulas shown.',
-  'Construction': '- [Construction Tools](' + BASE + '/tools/construction/index.html): Concrete, gravel, rebar, CMU and construction cost calculators - all client-side.',
-  'Files': '- [File Tools](' + BASE + '/tools/files/index.html): Split, join, generate and corrupt test files - entirely in your browser.',
-  'Discord': '- [Discord Tools](' + BASE + '/tools/discord/index.html): Discord timestamp generator and server utilities - client-side.' };
-const audioCatAnchor = '- [Audio Tools](https://f9xr.org/troolify/tools/audio/index.html)';
-if (!llms.includes('/tools/color/index.html')) {
+const catLine = { 'Color': '- [Color Tools](' + BASE + '/tools/color/): Color mixing, blending, gradients, complementary and analogous scheme utilities.',
+  'Units': '- [Unit Converters](' + BASE + '/tools/units/): Convert between length, weight, area, volume, temperature, speed, data and time - with the formulas shown.',
+  'Construction': '- [Construction Tools](' + BASE + '/tools/construction/): Concrete, gravel, rebar, CMU and construction cost calculators - all client-side.',
+  'Files': '- [File Tools](' + BASE + '/tools/files/): Split, join, generate and corrupt test files - entirely in your browser.',
+  'Discord': '- [Discord Tools](' + BASE + '/tools/discord/): Discord timestamp generator and server utilities - client-side.' };
+const audioCatAnchor = '- [Audio Tools](https://f9xr.org/troolify/tools/audio/)';
+if (!llms.includes('/tools/color/')) {
   llms = llms.replace(catLine['Construction'].split(':')[0] + '](', 'X'); // no-op guard
   const ai = llms.indexOf(audioCatAnchor);
   if (ai !== -1) {
@@ -149,15 +149,15 @@ if (!llms.includes('/tools/color/index.html')) {
     llms = llms.slice(0, end) + catLine['Color'] + '\n' + catLine['Construction'] + '\n' + llms.slice(end);
   } else console.log('WARN: Audio category anchor not found');
 }
-if (!llms.includes('/tools/files/index.html')) {
+if (!llms.includes('/tools/files/')) {
   const fin = llms.indexOf('- [Finance Tools](');
   if (fin !== -1) {
     const end = llms.indexOf('\n', fin) + 1;
     llms = llms.slice(0, end) + catLine['Files'] + '\n' + llms.slice(end);
   } else console.log('WARN: Finance category anchor not found');
 }
-if (!llms.includes('/tools/discord/index.html')) {
-  const devCatAnchor = '- [Developer Tools](' + BASE + '/tools/coding/index.html)';
+if (!llms.includes('/tools/discord/')) {
+  const devCatAnchor = '- [Developer Tools](' + BASE + '/tools/coding/)';
   const di = llms.indexOf(devCatAnchor);
   if (di !== -1) {
     const end = llms.indexOf('\n', di) + 1;
@@ -166,7 +166,7 @@ if (!llms.includes('/tools/discord/index.html')) {
 }
 
 // new pages in # LLMs section
-if (!llms.includes('/tools/units/index.html')) {
+if (!llms.includes('/tools/units/')) {
   try {
     const toolsCatAnchor = '- [YouTube Tools](';
     const ui = llms.indexOf(toolsCatAnchor);

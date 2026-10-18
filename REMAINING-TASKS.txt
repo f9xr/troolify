@@ -12,55 +12,57 @@ STATUS
       4a03140  batch 4   (JSON/XML converters, json-diff, sql-prettify)
       06186fd  batch 5   (TOML converters, ipv4-range-expander)
       711611b  batch 6   (regex, memo, keycode, docker, OTP, base64-file)
-  - Registry on main: 368 tools / 27 categories. sitemap.xml, llms.txt,
-    ai.txt and all minified assets regenerated on each batch.
+  - Batches 7-11 COMPLETE and pushed to main (different tool sets than the
+    original tracker draft; see git log d177e27 and bcd21a6):
+      d177e27  batch 7   (paragraph counter, duplicate word remover, syllable
+                          counter, text splitter, random paragraph generator,
+                          markdown editor, conversion rate calculator, A/B test
+                          calculator, markdown-to-Slack converter, UTM builder)
+      bcd21a6  batches 9-11 (27 fun + 8 time tools + site-wide structural pass)
+  - Batch 12 (uncommitted at the time): image/pdf conversion suite
+    (png-to-jpg, webp-to-jpg, heic-to-jpg, pdf-to-jpg, pdf-to-png,
+    bulk-image-resizer, image-enlarger, image-color-picker) + site-wide pass.
+  - Batch 13 COMPLETE (this session): the tracker's original batch 7+8 tool
+    set plus two genuine gaps, in troolify-gen/gen-tools-batch13.js:
+      coding: phone-parser-and-formatter, user-agent-parser,
+              device-information, url-parser, safelink-decoder, mime-types,
+              camera-recorder, html-wysiwyg-editor, yaml-to-json-converter,
+              crontab-generator
+      text:   ascii-text-drawer
+      image:  svg-placeholder-generator
+      fun:    emoji-picker
+  - Search bar fix COMPLETE (this session): .dash-left entrance animation in
+    assets/css/dashboard.css was overriding translateX(-100%) at <=1024px and
+    parking the search drawer over the navbar; animation now scoped to
+    >=1025px. Search relevance in assets/js/layout.js boosted with word-boundary
+    bonus. Verified on 375px mobile (drawer opens) and desktop.
+  - Registry on main (after this commit): 462 tools / 27 categories.
+    sitemap.xml, llms.txt, ai.txt and all minified assets regenerated.
 
-REMAINING BATCHES
+BATCH 9+ COVERAGE (candidates from the live it-tools audit - all resolved)
 ------------------------------------------------------------
-Batch 7 (9 tools) - generator file troolify-gen/gen-tools-batch7.js NOT YET WRITTEN
-  folder coding:
-    phone-parser-and-formatter
-    user-agent-parser
-    device-information
-    url-parser
-    safelink-decoder
-    mime-types
-  folder text:
-    ascii-text-drawer
-  folder image:
-    svg-placeholder-generator
-  folder fun:
-    emoji-picker
-
-Batch 8 (2 tools) - troolify-gen/gen-tools-batch8.js NOT YET WRITTEN
-  folder coding:
-    camera-recorder        (getUserMedia + MediaRecorder, download WebM)
-    html-wysiwyg-editor    (contenteditable + execCommand toolbar)
-
-Batch 9+ (candidate list from the live it-tools audit; not yet scheduled)
-  folder coding:
-    case-converter
-    integer-base-converter
-    json-minify          (verify vs existing JSON formatter to avoid a duplicate)
-    json-to-yaml-converter
-    json-viewer
-    jwt-parser
-    hash-text            (verify vs existing sha-hash-generator)
-    url-encoder
-    http-status-codes
-    text-diff
-    text-statistics
-    token-generator
-    crontab-generator
-    date-time-converter
-    chronometer
-    html-entities
-    slugify-string
-    password-strength-analyser
-    encryption
-    base64-string-converter (verify vs existing base64-encoder-decoder)
-    yaml-to-json-converter
-    docker-run-to-docker-compose-converter (already shipped as docker-run-to-compose)
+  Shipped by batch 13:            crontab-generator, yaml-to-json-converter
+  Already covered by existing tools (no action needed):
+    case-converter          -> text-case-converter
+    integer-base-converter  -> base-converter
+    json-minify             -> json-formatter (minify is part of it)
+    json-to-yaml-converter  -> json-to-yaml
+    json-viewer             -> json-formatter
+    jwt-parser              -> jwt-decoder
+    hash-text               -> hash-text-generator / sha-hash-generator
+    url-encoder             -> url-encoder-decoder
+    http-status-codes       -> http-status-code-reference
+    text-diff               -> text-diff-checker
+    text-statistics         -> word-counter and friends
+    token-generator         -> random-token-generator
+    date-time-converter     -> date-converter tools
+    chronometer             -> stopwatch / timer tools
+    html-entities           -> html-entity-encoder
+    slugify-string          -> slug-generator
+    password-strength-analyser -> password-strength-checker
+    encryption              -> aes-encrypt-decrypt etc.
+    base64-string-converter -> base64-encoder-decoder
+    docker-run-to-docker-compose-converter -> docker-run-to-compose
 
 SKIPPED (with reasons - accepted decision)
 ------------------------------------------------------------
@@ -73,19 +75,31 @@ SKIPPED (with reasons - accepted decision)
 PER-BATCH STANDARD PROCESS (follow for every batch)
 ------------------------------------------------------------
   1. Generate:        node troolify-gen/gen-tools-batchN.js
-  2. Static verify:   node "C:\Users\SKYLIMIT OFFICE\AppData\Local\Temp\opencode\verify-pages.js" <page...>
-                      PLUS check-scripts.js on every page (validates ALL inline
-                      scripts, not just the first) - base64 bug proved the first
-                      script passes while a later one has a syntax error.
+  2. Static verify:   validate ALL inline scripts with vm.Script / new Function
+                      (not just the first one) + JSON-LD parse + script-stripped
+                      h1/head/body counts - base64 bug proved the first script
+                      passes while a later one has a syntax error.
   3. Browser test on http://127.0.0.1:8123 for interactivity (each tool's
-     Go/Sample path, async via poll() for crypto.subtle / FileReader / MediaRecorder).
+      Go/Sample path, async via poll() for crypto.subtle / FileReader /
+      MediaRecorder; camera tool tested with --use-fake-device-for-media-stream).
   4. HTML-escape check: desc / metaDesc / hero <p> must NOT contain literal
-     <script>, <style>, etc. (unescaped <script> in an element context mangles
-     the whole page DOM - batch 6 base64-file-converter hit this).
+      <script>, <style>, etc. (unescaped <script> in an element context mangles
+      the whole page DOM - batch 6 base64-file-converter hit this).
   5. Conclusion links: use same-folder pages or ../folder/page.html (cross-
-     folder bare links 404 - batch 6 hit this on benchmark-builder).
+      folder bare links 404 - batch 6 hit this on benchmark-builder).
   6. Pipeline:  npm run minify   -->   node troolify-gen/update-site-meta.js
   7. Commit + push to main.
+
+FIXED IN THIS SESSION
+------------------------------------------------------------
+  - tools/coding/csp-nonce-generator.html: raw </script> inside a JS string
+    truncated the inline script; replaced with \x3Cscript escapes.
+  - tools/image/text-photo-gif-maker.html: mangled regex
+    decoding="async">/g restored to />/g.
+  - troolify-gen/minify.js: dead HTML-minify pass restored (regression from
+    e501b29); minified output now written again.
+  - Literal \n artifacts before the minify marker removed from 6 index pages
+    (tools/{audio,coding,misc,text,youtube}/index.html, tools/index.html).
 
 KNOWN NITS / FOLLOW-UPS
 ------------------------------------------------------------
@@ -100,3 +114,8 @@ KNOWN NITS / FOLLOW-UPS
     and its Clear handler contains a dead forEach(function(){}) - harmless.
   - otp-code-generator-and-validator needs a secure context (https or
     localhost) for crypto.subtle; secure-context fallback message is in place.
+  - yaml-to-json-converter loads js-yaml 4.1.0 from cdnjs on first use
+    (cdnjs preconnect added by minify); all other batch 13 tools are fully
+    self-contained.
+  - crontab-generator next-run preview steps minute-by-minute (guard 3M steps
+    ~= 5.7 years); impossible schedules show a friendly "none in ~5 years" note.

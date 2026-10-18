@@ -71,7 +71,7 @@
             "@context": "https://schema.org",
             "@type": "ItemList",
             "name": catName(category),
-            "url": window.location.origin + prefix + "tools/" + category.toLowerCase() + "/index.html",
+                "url": window.location.origin + prefix + "tools/" + category.toLowerCase() + "/",
             "numberOfItems": scoped.length,
             "itemListElement": scoped.map(function (t, i) {
                 return { "@type": "ListItem", "position": i + 1, "name": t.name, "url": window.location.origin + prefix + t.href };
@@ -146,7 +146,7 @@
             empty.querySelector("h3").textContent = "This category is coming soon";
             empty.querySelector("p").textContent = "We are actively building " + catName(category) + " utilities. They will appear here automatically.";
             empty.querySelector("a,button").textContent = "Browse all utilities";
-            empty.querySelector("a,button").setAttribute("href", prefix + "tools/index.html");
+                        empty.querySelector("a,button").setAttribute("href", prefix + "tools/");
         } else if (shown === 0) {
             count.textContent = "0 of " + scoped.length + " utilities match";
             empty.classList.add("show");

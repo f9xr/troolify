@@ -63,7 +63,7 @@ function countIn(tools, folder) {
 
 function catBlock(categories, tools) {
   const cards = categories.map(function (c) {
-    return '<a class="index-cat"href="' + slug(c.folder) + '/index.html">' +
+    return '<a class="index-cat"href="' + slug(c.folder) + '/">' +
       '<i class="' + c.icon + '"aria-hidden="true"></i>' +
       '<span class="index-cat-name">' + esc(c.name) + '</span>' +
       '<span class="index-cat-count">' + countIn(tools, c.folder) + ' tools</span></a>';
@@ -84,7 +84,7 @@ function toolBlock(cat, list) {
   return '<section class="index-links"id="toolIndex"><div class="container">' +
     '<h2>All ' + esc(cat.name) + '</h2>' +
     '<p class="index-note">' + esc(cat.desc || "") +
-    ' <a href="../index.html">Browse the full catalog</a>.</p>' +
+    ' <a href="../">Browse the full catalog</a>.</p>' +
     '<ul class="index-tools">' + items + '</ul></div></section>';
 }
 

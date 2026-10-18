@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             name: c.name,
                             folder: c.folder,
                             description: c.desc,
-                            url: BASE + "tools/" + lower(c.folder) + "/index.html"
+                            url: BASE + "tools/" + lower(c.folder) + "/"
                         };
                     })
                 };

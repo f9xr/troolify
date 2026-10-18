@@ -44,7 +44,7 @@
         var html = "";
         cats.forEach(function (c) {
             var n = count(c.folder);
-            html += '<a href="tools/' + escapeHtml(c.folder.toLowerCase()) + '/index.html" class="category-card">' +
+                html += '<a href="tools/' + escapeHtml(c.folder.toLowerCase()) + '/" class="category-card">' +
                 '<div class="category-icon"><i class="' + escapeHtml(c.icon) + '"></i></div>' +
                 '<h3 class="category-title">' + escapeHtml(c.name) + '</h3>' +
                 '<p class="category-desc">' + escapeHtml(c.desc) + '</p>' +

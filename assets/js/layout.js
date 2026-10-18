@@ -296,7 +296,7 @@
                 if (catFolder) {
                     html += '<div class="dash-rs-panel">' +
                                 '<div class="panel-title"><i class="fa-solid fa-folder-open"></i>Browse ' + (catInfo ? (catInfo.name || catFolder) : catFolder + " Tools") + '</div>' +
-                                '<a class="dash-rs-cat-badge" href="' + prefix + 'tools/' + catFolder.toLowerCase() + '/index.html">' +
+                                '<a class="dash-rs-cat-badge" href="' + prefix + 'tools/' + catFolder.toLowerCase() + '/">' +
                                     '<i class="fa-solid fa-folder"></i>' + (catInfo ? (catInfo.name || catFolder) : catFolder + " Tools") +
                                 '</a>' +
                             '</div>';
@@ -353,7 +353,7 @@
                             '<div class="panel-title"><i class="fa-solid fa-compass"></i>Browse</div>' +
                             '<div class="dash-related-mini">';
                 folders.slice(0, 9).forEach(function (c) {
-                    html += '<a class="dash-related-mini-card" href="' + prefix + 'tools/' + c.folder.toLowerCase() + '/index.html">' +
+                    html += '<a class="dash-related-mini-card" href="' + prefix + 'tools/' + c.folder.toLowerCase() + '/">' +
                                 '<span class="rmm-icon"><i class="' + (c.icon || "fa-solid fa-wrench") + '"></i></span>' +
                                 '<span class="rmm-name">' + (c.name || c.folder) + '</span>' +
                                 '<span class="rmm-arrow"><i class="fa-solid fa-arrow-right"></i></span>' +
@@ -567,8 +567,8 @@
         var prefix = rootPrefix();
 
         // Absolute (from this page) links to the two key destinations.
-        var homeHref = prefix + "index.html";
-        var toolsHref = pageDir === "tools" ? "./index.html" : prefix + "tools/index.html";
+        var homeHref = prefix || "./";
+        var toolsHref = pageDir === "tools" ? "./" : prefix + "tools/";
 
         /* --------------------------------------------------------------------
            MAIN theme - dark navbar + mobile menu + footer (style.css)
@@ -580,7 +580,7 @@
                     /* Left-side menu */
                     '<nav class="nav-links nav-links-left" aria-label="Primary">' +
                         '<a href="' + homeHref + '">Home</a>' +
-                        '<a href="' + prefix + 'tools/index.html">Tools</a>' +
+                        '<a href="' + prefix + 'tools/">Tools</a>' +
                         '<a href="' + homeHref + '#categories">Category</a>' +
                     '</nav>' +
                     /* Centered brand */
@@ -606,7 +606,7 @@
             '</header>' +
             '<div class="mobile-menu" aria-hidden="true">' +
                 '<a href="' + homeHref + '">Home</a>' +
-                '<a href="' + prefix + 'tools/index.html">Tools</a>' +
+                '<a href="' + prefix + 'tools/">Tools</a>' +
                 '<a href="' + homeHref + '#categories">Category</a>' +
                 '<a href="' + prefix + 'pages/about.html">About</a>' +
                 '<a href="' + prefix + 'pages/contact.html">Support</a>' +
@@ -627,7 +627,7 @@
         ];
         var footerCatsHtml = "";
         for (var fci = 0; fci < footerCategories.length; fci++) {
-            footerCatsHtml += '<a href="' + prefix + 'tools/' + footerCategories[fci][0].toLowerCase() + '/index.html" class="text-sm text-white/80 transition hover:text-[#3B82F6]">' + footerCategories[fci][1] + '</a>';
+            footerCatsHtml += '<a href="' + prefix + 'tools/' + footerCategories[fci][0].toLowerCase() + '/" class="text-sm text-white/80 transition hover:text-[#3B82F6]">' + footerCategories[fci][1] + '</a>';
         }
 
         var footerMain =
@@ -660,12 +660,13 @@
 
                             /* Middle column 1 - Company links */
                             '<nav aria-label="Company">' +
-                                '<h4 class="text-xs font-semibold uppercase tracking-[0.22em] text-[#E9ECEF]">Company</h4>' +
+                                '<h3 class="text-xs font-semibold uppercase tracking-[0.22em] text-[#E9ECEF]">Company</h3>' +
                                 '<ul class="mt-3.5 space-y-2">' +
                                     '<li><a href="' + prefix + 'pages/about.html" class="text-white/80 transition hover:text-[#3B82F6]">About</a></li>' +
                                     '<li><a href="' + prefix + 'pages/contact.html" class="text-white/80 transition hover:text-[#3B82F6]">Contact</a></li>' +
                                     '<li><a href="' + prefix + 'pages/feedback.html" class="text-white/80 transition hover:text-[#3B82F6]">Feedback</a></li>' +
-                                    '<li><a href="' + prefix + 'tools/index.html" class="text-white/80 transition hover:text-[#3B82F6]">Utilities</a></li>' +
+                                    '<li><a href="' + prefix + 'pages/changelogs.html" class="text-white/80 transition hover:text-[#3B82F6]">Changelogs</a></li>' +
+                                    '<li><a href="' + prefix + 'tools/" class="text-white/80 transition hover:text-[#3B82F6]">Utilities</a></li>' +
                                     '<li><a href="' + prefix + 'pages/sitemap.html" class="text-white/80 transition hover:text-[#3B82F6]">Sitemap</a></li>' +
                                     '<li><a href="' + prefix + 'pages/accessibility-statement.html" class="text-white/80 transition hover:text-[#3B82F6]">Accessibility</a></li>' +
                                     '<li><a href="' + prefix + 'press/editorial-policies.html" class="text-white/80 transition hover:text-[#3B82F6]">Editorial Policies</a></li>' +
@@ -676,7 +677,7 @@
 
                             /* Middle column 2 - F9XR network links */
                             '<nav aria-label="F9XR Network">' +
-                                '<h4 class="text-xs font-semibold uppercase tracking-[0.22em] text-[#E9ECEF]">F9XR Network</h4>' +
+                                '<h3 class="text-xs font-semibold uppercase tracking-[0.22em] text-[#E9ECEF]">F9XR Network</h3>' +
                                 '<ul class="mt-3.5 space-y-2">' +
                                     '<li><a href="https://f9xr.org/articles/" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-[#3B82F6]">Articles</a></li>' +
                                     '<li><a href="https://f9xr.org/directories" target="_blank" rel="noopener noreferrer" class="text-white/80 transition hover:text-[#3B82F6]">Directories</a></li>' +
@@ -690,7 +691,7 @@
 
                             /* Middle column 3 - Follow us social icons */
                             '<nav aria-label="Follow us">' +
-                                '<h4 class="text-xs font-semibold uppercase tracking-[0.22em] text-[#E9ECEF]">Follow us</h4>' +
+                                '<h3 class="text-xs font-semibold uppercase tracking-[0.22em] text-[#E9ECEF]">Follow us</h3>' +
                                 '<div class="mt-4 flex flex-wrap gap-2.5">' +
                                     '<a href="https://github.com/f9xr" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="grid h-10 w-10 place-items-center rounded-xl border border-[#343A40] bg-[#212529] text-[#9CA3AF] transition hover:border-[#3B82F6] hover:text-[#3B82F6]"><i class="fa-brands fa-github"></i></a>' +
                                     '<a href="https://linkedin.com/company/f9xrteam" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="grid h-10 w-10 place-items-center rounded-xl border border-[#343A40] bg-[#212529] text-[#9CA3AF] transition hover:border-[#3B82F6] hover:text-[#3B82F6]"><i class="fa-brands fa-linkedin"></i></a>' +
@@ -702,7 +703,7 @@
 
                             /* Categories nav */
                             '<nav aria-label="Categories">' +
-                                '<h4 class="text-xs font-semibold uppercase tracking-[0.22em] text-[#E9ECEF]">Categories</h4>' +
+                                '<h3 class="text-xs font-semibold uppercase tracking-[0.22em] text-[#E9ECEF]">Categories</h3>' +
                                 '<div class="mt-3.5 grid max-w-[17rem] grid-cols-2 gap-x-4 gap-y-2">' + footerCatsHtml + '</div>' +
                             '</nav>' +
                         '</div>' +
@@ -978,7 +979,7 @@
                 "@context": "https://schema.org",
                 "@type": "Organization",
                 "name": "Troolify",
-                "url": "https://f9xr.org/troolify/index.html",
+                "url": "https://f9xr.org/troolify/",
                 "logo": "https://f9xr.org/troolify/assets/images/logo_nobg.webp",
                 "email": "hello@f9xr.org",
                 "contactPoint": {
@@ -1192,6 +1193,11 @@
                 if (name === q) score += 200;
                 else if (name.indexOf(q) === 0) score += 120;
                 else if (name.indexOf(q) !== -1) score += 60;
+                /* Exact word hits beat compound-word prefixes: "JSON Formatter"
+                   must outrank "JSONPath Tester" for the query "json". */
+                var nameWords = name.split(/[^a-z0-9]+/);
+                if (nameWords[0] === q) score += 70;
+                else if (nameWords.indexOf(q) !== -1) score += 40;
                 if ((t.tag || "").toLowerCase() === q) score += 50;
                 if (body.indexOf(q) !== -1) score += 15;
                 kws.forEach(function (k) {

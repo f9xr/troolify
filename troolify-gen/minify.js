@@ -395,6 +395,7 @@ async function run() {
         minOut = out;
         console.error("  html-minify skipped for", file, "-", String(err && err.message).slice(0, 60));
       }
+      out = minOut + "\n<!-- data-minimized -->";
       if (out.trim() !== beforeMin.trim()) {
         fs.writeFileSync(file, out, "utf8");
         htmlMin++;

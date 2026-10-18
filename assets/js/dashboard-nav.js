@@ -111,7 +111,7 @@
                     if (filter && cname.indexOf(filter) === -1 && (c.folder || "").toLowerCase().indexOf(filter) === -1) return;
                     shown++;
                     var li = document.createElement("li");
-                    var href = rootPrefix() + "tools/" + (c.folder).toLowerCase() + "/index.html";
+                    var href = rootPrefix() + "tools/" + (c.folder).toLowerCase() + "/";
                     var isActive = current.toLowerCase() === (c.folder || "").toLowerCase();
                     var count = countFor(c.folder);
                     li.innerHTML =

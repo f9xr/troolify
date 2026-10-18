@@ -11,11 +11,12 @@ TOOLS.forEach(t => { (byFolder[t.category] = byFolder[t.category] || []).push(t)
 
 // Main + Information keep current links (static pages)
 const mainSection = { title: 'Main', icon: 'fa-house', links: [
-  ['../index.html', 'Home'],
-  ['../tools/index.html', 'Tools'],
+  ['../', 'Home'],
+  ['../tools/', 'Tools'],
   ['about.html', 'About'],
   ['contact.html', 'Contact'],
   ['feedback.html', 'Feedback & Suggestions'],
+  ['changelogs.html', 'Changelogs'],
   ['sitemap.html', 'Sitemap'],
 ]};
 const infoSection = { title: 'Information', icon: 'fa-circle-info', links: [
@@ -51,7 +52,7 @@ sectionsHtml += sectionHtml('Information', 'fa-circle-info', infoSection.links);
 CATS.forEach(c => {
   const tools = (byFolder[c.folder] || []).sort((a, b) => a.name.localeCompare(b.name));
   if (!tools.length) return;
-  const links = [['../tools/' + c.folder.toLowerCase() + '/index.html', c.name + ' Index']];
+  const links = [['../tools/' + c.folder.toLowerCase() + '/', c.name + ' Index']];
   tools.forEach(t => {
     // t.href is like "tools/audio/song-length-calculator.html"
     links.push(['../' + t.href, t.name]);
@@ -59,7 +60,7 @@ CATS.forEach(c => {
   sectionsHtml += sectionHtml(c.name, c.icon, links);
 });
 
-const main = `<main class="container sitemap-main"><div class="eyebrow">SITEMAP &middot; TROOLIFY</div><h1 class="heading-1">Sitemap</h1><p class="section-description sitemap-sub">Every page on Troolify, organized for easy browsing.</p><div class="sitemap-toolbar"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><input id="sitemapSearch" type="search" placeholder="Filter pages and tools&hellip;" aria-label="Filter sitemap links"><span id="sitemapCount" class="sitemap-count"></span></div>${sectionsHtml}</main>`;
+const main = `<main class="container sitemap-main" id="main" tabindex="-1"><div class="eyebrow">SITEMAP &middot; TROOLIFY</div><h1 class="heading-1">Sitemap</h1><p class="section-description sitemap-sub">Every page on Troolify, organized for easy browsing.</p><div class="sitemap-toolbar"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><input id="sitemapSearch" type="search" placeholder="Filter pages and tools&hellip;" aria-label="Filter sitemap links"><span id="sitemapCount" class="sitemap-count"></span></div>${sectionsHtml}</main>`;
 
 let t = fs.readFileSync('pages/sitemap.html', 'utf8');
 t = t.replace(/<main[\s\S]*?<\/main>/, main);

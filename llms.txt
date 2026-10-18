@@ -280,39 +280,39 @@ Key facts about Troolify:
 - [Time Converter](https://f9xr.org/troolify/tools/units/time-converter.html): Convert seconds, minutes, hours, days, weeks, months and years using common time constants.
 
 ## Categories
-- [AI Tools](https://f9xr.org/troolify/tools/ai/index.html): Prompt, text, image and code generation utilities.
-- [Audio Tools](https://f9xr.org/troolify/tools/audio/index.html): BPM, song length and audio production utilities.
-- [Color Tools](https://f9xr.org/troolify/tools/color/index.html): Color mixing, blending, gradients, complementary and analogous scheme utilities.
-- [Construction Tools](https://f9xr.org/troolify/tools/construction/index.html): Concrete, gravel, rebar, CMU and construction cost calculators - all client-side.
-  - [Developer Tools](https://f9xr.org/troolify/tools/coding/index.html): Coding, debugging and web development utilities.
-  - [Discord Tools](https://f9xr.org/troolify/tools/discord/index.html): Discord timestamp generator and server utilities - client-side.
-- [Converters](https://f9xr.org/troolify/tools/converters/index.html): Convert data between formats instantly.
-- [Cooking Tools](https://f9xr.org/troolify/tools/cooking/index.html): Cooking, recipe and kitchen helpers.
-- [Crypto Tools](https://f9xr.org/troolify/tools/crypto/index.html): Cryptocurrency and blockchain calculators.
-- [Finance Tools](https://f9xr.org/troolify/tools/finance/index.html): Money, savings and finance calculators.
-- [File Tools](https://f9xr.org/troolify/tools/files/index.html): Split, join, generate and corrupt test files - entirely in your browser.
-- [Fun & Games](https://f9xr.org/troolify/tools/fun/index.html): Fun, games and entertainment utilities.
-- [Health Tools](https://f9xr.org/troolify/tools/health/index.html): Health, fitness and wellness tools.
-- [HVAC Tools](https://f9xr.org/troolify/tools/hvac/index.html): Heating, ventilation and air conditioning - load, airflow, duct design, refrigeration and lab exhaust utilities.
-- [Image Tools](https://f9xr.org/troolify/tools/image/index.html): Resize, compress, convert and edit images.
-- [Math Tools](https://f9xr.org/troolify/tools/math/index.html): Number, algebra, geometry, trigonometry and unit conversion utilities.
-- [Misc Tools](https://f9xr.org/troolify/tools/misc/index.html): Useful utilities that don't fit anywhere else.
-- [PDF Tools](https://f9xr.org/troolify/tools/pdf/index.html): PDF creation, merging and conversion tools.
-- [Prompt Tools](https://f9xr.org/troolify/tools/prompts/index.html): Ready-made prompts for AI workflows.
-- [SEO & Marketing](https://f9xr.org/troolify/tools/seo/index.html): Search engine optimization and marketing tools.
-- [Statistics](https://f9xr.org/troolify/tools/statistics/index.html): Statistics, math and data analysis tools.
-- [Testing Tools](https://f9xr.org/troolify/tools/testing/index.html): QA test data generators and developer testing utilities.
-- [Text Tools](https://f9xr.org/troolify/tools/text/index.html): Format, convert, analyze and manipulate text.
-- [Time Tools](https://f9xr.org/troolify/tools/time/index.html): Time, date and scheduling tools.
-- [Video Tools](https://f9xr.org/troolify/tools/video/index.html): Video editing and conversion tools.
-- [YouTube Tools](https://f9xr.org/troolify/tools/youtube/index.html): YouTube utilities for creators, marketers and support teams.
-- [Unit Converters](https://f9xr.org/troolify/tools/units/index.html): Convert between length, weight, area, volume, temperature, speed, data and time - with the formulas shown.
+- [AI Tools](https://f9xr.org/troolify/tools/ai/): Prompt, text, image and code generation utilities.
+- [Audio Tools](https://f9xr.org/troolify/tools/audio/): BPM, song length and audio production utilities.
+- [Color Tools](https://f9xr.org/troolify/tools/color/): Color mixing, blending, gradients, complementary and analogous scheme utilities.
+- [Construction Tools](https://f9xr.org/troolify/tools/construction/): Concrete, gravel, rebar, CMU and construction cost calculators - all client-side.
+  - [Developer Tools](https://f9xr.org/troolify/tools/coding/): Coding, debugging and web development utilities.
+  - [Discord Tools](https://f9xr.org/troolify/tools/discord/): Discord timestamp generator and server utilities - client-side.
+- [Converters](https://f9xr.org/troolify/tools/converters/): Convert data between formats instantly.
+- [Cooking Tools](https://f9xr.org/troolify/tools/cooking/): Cooking, recipe and kitchen helpers.
+- [Crypto Tools](https://f9xr.org/troolify/tools/crypto/): Cryptocurrency and blockchain calculators.
+- [Finance Tools](https://f9xr.org/troolify/tools/finance/): Money, savings and finance calculators.
+- [File Tools](https://f9xr.org/troolify/tools/files/): Split, join, generate and corrupt test files - entirely in your browser.
+- [Fun & Games](https://f9xr.org/troolify/tools/fun/): Fun, games and entertainment utilities.
+- [Health Tools](https://f9xr.org/troolify/tools/health/): Health, fitness and wellness tools.
+- [HVAC Tools](https://f9xr.org/troolify/tools/hvac/): Heating, ventilation and air conditioning - load, airflow, duct design, refrigeration and lab exhaust utilities.
+- [Image Tools](https://f9xr.org/troolify/tools/image/): Resize, compress, convert and edit images.
+- [Math Tools](https://f9xr.org/troolify/tools/math/): Number, algebra, geometry, trigonometry and unit conversion utilities.
+- [Misc Tools](https://f9xr.org/troolify/tools/misc/): Useful utilities that don't fit anywhere else.
+- [PDF Tools](https://f9xr.org/troolify/tools/pdf/): PDF creation, merging and conversion tools.
+- [Prompt Tools](https://f9xr.org/troolify/tools/prompts/): Ready-made prompts for AI workflows.
+- [SEO & Marketing](https://f9xr.org/troolify/tools/seo/): Search engine optimization and marketing tools.
+- [Statistics](https://f9xr.org/troolify/tools/statistics/): Statistics, math and data analysis tools.
+- [Testing Tools](https://f9xr.org/troolify/tools/testing/): QA test data generators and developer testing utilities.
+- [Text Tools](https://f9xr.org/troolify/tools/text/): Format, convert, analyze and manipulate text.
+- [Time Tools](https://f9xr.org/troolify/tools/time/): Time, date and scheduling tools.
+- [Video Tools](https://f9xr.org/troolify/tools/video/): Video editing and conversion tools.
+- [YouTube Tools](https://f9xr.org/troolify/tools/youtube/): YouTube utilities for creators, marketers and support teams.
+- [Unit Converters](https://f9xr.org/troolify/tools/units/): Convert between length, weight, area, volume, temperature, speed, data and time - with the formulas shown.
 
 ## Catalog
-- [Utility Catalog](https://f9xr.org/troolify/tools/index.html): Browse every category and tool.
+- [Utility Catalog](https://f9xr.org/troolify/tools/): Browse every category and tool.
 
 # LLMs
-- [Home](https://f9xr.org/troolify/index.html): Site homepage.
+- [Home](https://f9xr.org/troolify/): Site homepage.
 - [About Us](https://f9xr.org/troolify/pages/about.html): The Troolify mission and the F9XR Team.
 - [Developers](https://f9xr.org/troolify/pages/developers.html): Site architecture, data and integration notes for developers.
 - [Methodology](https://f9xr.org/troolify/pages/methodology.html): How tools are researched, built and reviewed.
@@ -335,4 +335,4 @@ Key facts about Troolify:
 ## License
 - Code: open source under the repository license (see GitHub).
 - Website content: copyright (c) 2026 Troolify / F9XR Team. All rights reserved.
-- Citation: reference the site as "Troolify by F9XR Team" and link to https://f9xr.org/troolify/index.html
+- Citation: reference the site as "Troolify by F9XR Team" and link to https://f9xr.org/troolify/
