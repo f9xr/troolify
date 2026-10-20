@@ -280,6 +280,17 @@ Key facts about Troolify:
 - [Data Size Converter](https://f9xr.org/troolify/tools/units/data-size-converter.html): Convert bytes, kilobytes, megabytes, gigabytes and terabytes with 1024-based binary factors.
 - [Time Converter](https://f9xr.org/troolify/tools/units/time-converter.html): Convert seconds, minutes, hours, days, weeks, months and years using common time constants.
 
+
+- [Free Games & Giveaways Finder](https://f9xr.org/troolify/tools/fun/free-games-giveaways.html): Find live free games, beta keys and in-game loot from GamerPower giveaways - filter by platform and type, sort by value, then claim in one click.
+
+
+- [Banana for Scale Converter](https://f9xr.org/troolify/tools/fun/banana-for-scale.html): Convert any measurement into bananas, smoots, double-decker buses and other units nobody asked for - with the real unit basis shown.
+- [Moon Phase Checker](https://f9xr.org/troolify/tools/fun/moon-phase-checker.html): See the Moon for any date - phase name, live drawing, illumination, age, distance and the next new and full moons.
+- [Fake Country Generator](https://f9xr.org/troolify/tools/fun/fake-country-generator.html): Invent a country that does not exist - flag, map, capital, currency, motto and national dish - all generated from a seed.
+- [Dig to the Other Side Calculator](https://f9xr.org/troolify/tools/fun/dig-to-the-other-side.html): Dig straight down from any coordinates and see where you come out - antipode, fall time, top speed and the nearest shore.
+- [Life Stats Calculator](https://f9xr.org/troolify/tools/fun/life-stats-calculator.html): Your life in silly units - seconds, full moons, heartbeats, kilometres around the Sun - plus your age on every planet.
+- [Proverb Mashup Generator](https://f9xr.org/troolify/tools/fun/proverb-mashup-generator.html): Half of one real proverb glued to half of another - in Romanian or English - with every source linked.
+
 ## Categories
 - [AI Tools](https://f9xr.org/troolify/tools/ai/): Prompt, text, image and code generation utilities.
 - [Audio Tools](https://f9xr.org/troolify/tools/audio/): BPM, song length and audio production utilities.

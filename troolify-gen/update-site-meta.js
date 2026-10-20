@@ -5,7 +5,7 @@ const path = require('path');
 
 const REPO = path.resolve(__dirname, '..');
 const BASE = 'https://f9xr.org/troolify';
-const NEW = '2026-09-27';
+const NEW = '2026-10-19';
 
 /* ---------- load registry ---------- */
 const src = fs.readFileSync(path.join(REPO, 'assets', 'js', 'tools-data.js'), 'utf8');
@@ -114,16 +114,19 @@ const apiHrefs = [
   'tools/fun/joke-generator.html', 'tools/fun/roast-generator.html',
   'tools/fun/random-meme-generator.html', 'tools/fun/riddle-generator.html',
   'tools/fun/truth-or-dare-generator.html', 'tools/fun/anime-image-generator.html',
+  'tools/fun/free-games-giveaways.html',
+  'tools/fun/banana-for-scale.html', 'tools/fun/moon-phase-checker.html',
+  'tools/fun/fake-country-generator.html', 'tools/fun/dig-to-the-other-side.html',
+  'tools/fun/life-stats-calculator.html', 'tools/fun/proverb-mashup-generator.html',
   'tools/image/text-logo-generator.html', 'tools/image/text-photo-gif-maker.html',
   'tools/coding/url-shortener.html', 'tools/coding/github-profile-viewer.html',
   'tools/text/text-to-speech.html'
 ];
 const apiTools = apiHrefs.map(h => TOOLS.find(t => t.href === h)).filter(Boolean).map(toolLine);
-const apiBlock = '\n' + apiTools.join('\n') + '\n';
-const apiUrl = apiTools[0] ? apiTools[0].match(/\]\(([^)]+)\)/)[1] : '';
-if (!llms.includes(apiUrl) && llms.includes('## Categories')) {
-  llms = llms.replace('## Categories', apiBlock + '\n## Categories');
-  console.log('llms.txt: inserted ' + apiTools.length + ' api-powered tool lines');
+const missingApi = apiTools.filter(t => !llms.includes(t.match(/\]\(([^)]+)\)/)[1]));
+if (missingApi.length && llms.includes('## Categories')) {
+  llms = llms.replace('## Categories', '\n' + missingApi.join('\n') + '\n\n## Categories');
+  console.log('llms.txt: inserted ' + missingApi.length + ' api-powered tool line(s)');
 }
 
 // unit converters block before ## Categories
@@ -197,6 +200,10 @@ ai = ai.replace('- 290+ tools across 25 categories', '- 300+ tools across 25 cat
 if (!ai.includes('abhi-api.vercel.app')) {
   ai = ai.replace('- 300+ tools across 25 categories',
     '- 300+ tools across 25 categories\n- A few optional tools are powered by a public web API (abhi-api.vercel.app) and always labelled on-page - the rest stay 100% client-side');
+}
+if (!ai.includes('gamerpower.com')) {
+  ai = ai.replace('- A few optional tools are powered by a public web API (abhi-api.vercel.app) and always labelled on-page - the rest stay 100% client-side',
+    '- A few optional tools are powered by a public web API (abhi-api.vercel.app) and always labelled on-page - the rest stay 100% client-side\n- The free games giveaway finder pulls live listings from the free GamerPower API (www.gamerpower.com) with on-page attribution');
 }
 ai = ai.replace('All tools run 100% client-side in the browser - no data leaves your device.', 'Most tools run 100% client-side in the browser - a few are clearly labelled API-powered tools.');
 ai = ai.replace('- Each tool is self-contained with no external dependencies', '- Most tools are self-contained with no external dependencies; the labelled API-powered tools call abhi-api.vercel.app');

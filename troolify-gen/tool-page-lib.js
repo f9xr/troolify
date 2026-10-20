@@ -17,8 +17,8 @@ const CATMAP = {};
 /* URL folders are lower-case; alias them so lookups by spec.folder resolve. */
 (global.window.CATEGORIES || []).forEach(c => { CATMAP[c.folder.toLowerCase()] = CATMAP[c.folder]; });
 
-const DATE = '2026-10-10';
-const DATE_LABEL = '10 October 2026';
+const DATE = '2026-10-19';
+const DATE_LABEL = '19 October 2026';
 
 function esc(s) {
   return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');

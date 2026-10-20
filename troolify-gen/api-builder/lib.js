@@ -154,6 +154,11 @@ function page(cfg, scriptSrc) {
   var canonical = BASE + "/tools/" + cfg.folder + "/" + cfg.slug + ".html";
   var catIndex = BASE + "/tools/" + cfg.folder + "/index.html";
   var cleanDesc = cfg.desc.replace(/\.+$/, "");
+  var pubDate = cfg.pubDate || DATE;
+  var pubLabel = new Date(pubDate + "T00:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
+  var privacy = cfg.privacyNote != null
+    ? cfg.privacyNote
+    : '<b>Privacy note:</b> this tool is powered by a public web API. The text you enter is sent to the API provider (abhi-api.vercel.app) to generate the result' + cfg.extraProviders + ' - Troolify itself stores nothing, but data does leave your device.';
   var faqJ = cfg.faq.map(function (f) {
     return { "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } };
   });
@@ -172,12 +177,12 @@ function page(cfg, scriptSrc) {
       operatingSystem: "Any (web browser)", featureList: (cfg.features || []).concat(["Powered by a public web API"]),
       description: cfg.desc,
       offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-      datePublished: DATE, dateModified: DATE,
+      datePublished: pubDate, dateModified: pubDate,
       author: { "@type": "Organization", name: "F9XR Development Team", url: "https://f9xr.org/" },
       publisher: { "@type": "Organization", name: "Troolify", url: BASE + "/", logo: { "@type": "ImageObject", url: BASE + "/assets/images/logo_nobg.webp", width: 1407, height: 768 } } } },
     { data: {
       "@context": "https://schema.org", "@type": "Article", headline: cfg.name, description: cfg.desc,
-      image: BASE + "/assets/images/og-image.jpg", datePublished: DATE, dateModified: DATE,
+      image: BASE + "/assets/images/og-image.jpg", datePublished: pubDate, dateModified: pubDate,
       mainEntityOfPage: canonical,
       author: { "@type": "Organization", name: "F9XR Development Team", url: "https://f9xr.org/" },
       publisher: { "@type": "Organization", name: "Troolify", url: BASE + "/", logo: { "@type": "ImageObject", url: BASE + "/assets/images/logo_nobg.webp", width: 1407, height: 768 } } } },
@@ -203,8 +208,8 @@ function page(cfg, scriptSrc) {
     '<meta property="og:url" content="' + canonical + '">\n' +
     '<meta property="og:image" content="' + BASE + '/assets/images/og-image.jpg">\n' +
     '<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n' +
-    '<meta property="article:published_time" content="' + DATE + '">\n' +
-    '<meta property="article:modified_time" content="' + DATE + '">\n' +
+    '<meta property="article:published_time" content="' + pubDate + '">\n' +
+    '<meta property="article:modified_time" content="' + pubDate + '">\n' +
     '<meta property="article:section" content="' + esc(cfg.catLabel) + '">\n' +
     '<meta property="article:tag" content="' + esc(cfg.name) + '">\n' +
     '<meta name="twitter:card" content="summary_large_image">\n' +
@@ -256,7 +261,7 @@ function page(cfg, scriptSrc) {
     '        <div class="tool-details">\n' +
     '          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-pen-nib"></i>Published by</span><a class="detail-value" href="https://f9xr.org/" target="_blank" rel="noopener">F9XR Development Team</a></div>\n' +
     '          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-check-double"></i>Reviewed by</span><a class="detail-value" href="../../press/editorial-policies.html">Review Board</a></div>\n' +
-    '          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-clock-rotate-left"></i>Last updated</span><span class="detail-value">19 September 2026</span></div>\n' +
+    '          <div class="detail-row"><span class="detail-label"><i class="fa-solid fa-clock-rotate-left"></i>Last updated</span><span class="detail-value">' + pubLabel + '</span></div>\n' +
     "        </div>\n      </div>\n    </div>\n\n" +
     '    <div class="panel clean">\n      <div class="panel-inner">\n' +
     '        <div class="toolbar-row">\n' +
@@ -265,7 +270,7 @@ function page(cfg, scriptSrc) {
     "        </div>\n\n" +
     "    " + cfg.fields + "\n" +
     "    " + cfg.actions + "\n" +
-    '    <p class="note"><b>Privacy note:</b> this tool is powered by a public web API. The text you enter is sent to the API provider (abhi-api.vercel.app) to generate the result' + cfg.extraProviders + " - Troolify itself stores nothing, but data does leave your device.\n" +
+    '    <p class="note">' + privacy + "\n" +
     '    <p class="proc-line"><i class="fa-solid fa-bolt"></i><span id="procLine">' + esc(cfg.startHint) + "</span></p>\n" +
     '        <div class="result-card" id="results" aria-live="polite"></div>\n' +
     "      </div>\n    </div>\n" +
