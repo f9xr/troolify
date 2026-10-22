@@ -28,15 +28,21 @@
    7. Ships the below-fold article stylesheet (seo-article.min.css) as
       preload + media="print" onload swap with a noscript twin, keeping it out
       of the render-blocking chain. Idempotent (never re-wraps the noscript link).
-   8. Minifies each managed JS (terser) and CSS (clean-css) file in place,
+    8. Minifies each managed JS (terser) and CSS (clean-css) file in place,
        writing the sibling .min version. Local CSS @imports are kept and
        repointed at their .min sibling (clean-css would otherwise drop them).
+    9. Stamps the registry content hash onto every reference to the tool
+       registry (hub page <script> tags and the lazy loaders in the JS
+       runtime). The registry files are static assets behind a 4 hour
+       CDN/browser cache, so without this a newly added tool stays invisible
+       to returning visitors until the cache expires.
    ============================================================================ */
 
 "use strict";
 
 const fs = require("fs");
 const path = require("path");
+const crypto = require("crypto");
 const { minify } = require("terser");
 const CleanCSS = require("clean-css");
 
@@ -53,6 +59,38 @@ function walk(dir, ext, out = []) {
   return out;
 }
 function rel(file) { return path.relative(ROOT, file).split(path.sep).join("/"); }
+
+/* --------------------------- registry cache busting ---------------------- */
+/* assets/js/tools-data*.js are static files served with a long cache lifetime
+   (GitHub Pages + Cloudflare: 4 hours), so a browser that loaded the site
+   before a tool was added keeps the old registry and never shows the new
+   tool. Every reference to the registry therefore carries a version query
+   built from the hash of the registry source, which changes as soon as the
+   tool list changes. */
+
+function registryVersion() {
+  const src = fs.readFileSync(path.join(ROOT, "assets", "js", "tools-data.js"), "utf8");
+  return crypto.createHash("md5").update(src).digest("hex").slice(0, 8);
+}
+
+function stampRegistryRefs(text, v) {
+  return text
+    .replace(/assets\/js\/tools-data\.min\.js(\?v=[0-9a-z]+)?/g, "assets/js/tools-data.min.js?v=" + v)
+    .replace(/assets\/js\/tools-data-slim(\.min)?\.js(\?v=[0-9a-z]+)?/g, "assets/js/tools-data-slim$1.js?v=" + v);
+}
+
+/* Same job for HTML: only the <script src="..."> tags are real references.
+   A blanket replace would also rewrite file names quoted inside prose (the
+   developers page documents the registry path), so match the tags only. */
+function stampRegistryTags(html, v) {
+  return html.replace(
+    /(<script[^>]*src=")([^"]*assets\/js\/tools-data[^"]*)(")/g,
+    function (m, open, url, close) {
+      const clean = url.replace(/\?v=[0-9a-z]+/, "");
+      return open + clean + "?v=" + v + close;
+    }
+  );
+}
 
 /* --------------------------- asset registry ------------------------------ */
 
@@ -315,6 +353,9 @@ async function run() {
   // 0: keep the slim registry in sync with the full source of truth
   generateSlim();
 
+  // version query for every registry reference (see registryVersion)
+  const regVer = registryVersion();
+
   const { js, css } = assetRegistry();
   const rename = buildRenamer({ js, css });
 
@@ -322,7 +363,7 @@ async function run() {
   const htmlFiles = walk(ROOT, ".html").filter(
     (f) => !/\\node_modules\\/.test(f)
   );
-  let utt = 0, strip = 0, href = 0, refs = 0, fonts = 0, htmlMin = 0, slim = 0, preconnect = 0, jsonld = 0, inline = 0, articleAsync = 0;
+  let utt = 0, strip = 0, href = 0, refs = 0, fonts = 0, htmlMin = 0, slim = 0, preconnect = 0, jsonld = 0, inline = 0, articleAsync = 0, stamped = 0;
   for (const file of htmlFiles) {
     const before = fs.readFileSync(file, "utf8");
     let out = before;
@@ -374,6 +415,11 @@ async function run() {
     const renamed = rename(out);
     if (renamed !== out) { refs++; out = renamed; }
 
+    // stamp the registry reference with the registry content hash so a
+    // browser that cached the old registry picks up new tools immediately
+    const stampedOut = stampRegistryTags(out, regVer);
+    if (stampedOut !== out) { stamped++; out = stampedOut; }
+
     // ship the below-fold article stylesheet asynchronous on tool pages
     const art = deferArticleCss(out);
     if (art !== out) { articleAsync++; out = art; }
@@ -411,8 +457,9 @@ async function run() {
   let jsSrc = 0;
   for (const file of allJsAssets) {
     const raw = fs.readFileSync(file, "utf8");
-    const renamed = rename(raw);
-    if (renamed !== raw) { fs.writeFileSync(file, renamed, "utf8"); jsSrc++; }
+    let out = rename(raw);
+    out = stampRegistryRefs(out, regVer);
+    if (out !== raw) { fs.writeFileSync(file, out, "utf8"); jsSrc++; }
   }
 
   // 4: minify
@@ -451,6 +498,7 @@ async function run() {
   console.log("  inline JS terser'd:   " + inline);
   console.log("  article CSS async:    " + articleAsync);
   console.log("  asset refs bumped:   " + refs);
+  console.log("  registry stamped:    " + stamped + " pages (v=" + regVer + ")");
   console.log("HTML minified:         " + htmlMin);
   console.log("JS sources ref-bumped: " + jsSrc);
   console.log("JS minified:           " + js.length + " files, saved " + (jsBytes / 1024).toFixed(0) + " KB");

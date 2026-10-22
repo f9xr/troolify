@@ -397,7 +397,7 @@
         }
         window.__TOOLS_PENDING = [cb];
         var s = document.createElement("script");
-        s.src = rootPrefix() + "assets/js/tools-data.min.js";
+        s.src = rootPrefix() + "assets/js/tools-data.min.js?v=9376ceaa";
         s.onload = s.onerror = function () {
             var list = window.__TOOLS_PENDING || [];
             window.__TOOLS_PENDING = null;
@@ -1168,7 +1168,7 @@
             }
             window.__TOOLS_PENDING = [cb];
             var s = document.createElement("script");
-            s.src = prefix + "assets/js/tools-data.min.js";
+            s.src = prefix + "assets/js/tools-data.min.js?v=9376ceaa";
             s.onload = s.onerror = function () {
                 var list = window.__TOOLS_PENDING || [];
                 window.__TOOLS_PENDING = null;

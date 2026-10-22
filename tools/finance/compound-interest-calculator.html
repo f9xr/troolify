@@ -12,8 +12,10 @@
 .cic-header h2 { margin: 0; font-size: clamp(1.25rem, 3vw, 1.8rem); }
 .cic-header p { margin: 0; color: var(--muted); font-size: .95rem; }
 
-.cic-grid { display: grid; gap: 1.25rem; grid-template-columns: 1fr; }
-@media (min-width: 900px) { .cic-grid { grid-template-columns: 400px 1fr; align-items: start; } }
+/* Single column on every screen size: the results always sit BELOW the
+   input form instead of beside it. */
+.cic-grid { display: grid; gap: 1.5rem; grid-template-columns: 1fr; }
+.cic-grid > form.cic-card { max-width: 760px; }
 
 .cic-title { margin: 0 0 1rem; font-size: 1.1rem; display: flex; align-items: center; gap: .6rem; }
 .cic-title i { width: 30px; height: 30px; border-radius: 8px; background: var(--accent); color: #fff;

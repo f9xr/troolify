@@ -40,7 +40,7 @@
         window.__DASH_TOOLS_PENDING = [cb];
         var prefix = rootPrefix();
         var s = document.createElement("script");
-        s.src = prefix + "assets/js/tools-data.min.js";
+        s.src = prefix + "assets/js/tools-data.min.js?v=9376ceaa";
         s.onload = s.onerror = function () {
             var list = window.__DASH_TOOLS_PENDING || [];
             window.__DASH_TOOLS_PENDING = null;

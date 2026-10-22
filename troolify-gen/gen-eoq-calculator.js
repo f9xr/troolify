@@ -457,7 +457,7 @@ const JS = `
 
 /* -------------------------------------------------------------- ARTICLE --- */
 const ARTICLE = {
-  title: 'Economic Order Quantity (EOQ): Theory and Application',
+  title: 'EOQ Calculator Guide: Formula, Reorder Point and Cost Breakdown',
   lead: '<p>The <strong>Economic Order Quantity (EOQ)</strong> model answers one question better than any other in inventory management: <em>how many units should you buy each time you place an order?</em> Order too little and you pay a fortune in purchase-order admin and emergency freight. Order too much and your cash disappears into a warehouse. EOQ finds the single order size where those two costs balance, so your total inventory cost lands at its lowest possible point. This guide explains the theory behind the model, how the formula is derived, and how to apply it to real purchasing decisions.</p>',
   sections: [
     {
