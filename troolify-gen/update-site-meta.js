@@ -1,11 +1,11 @@
-/* Update sitemap.xml, llms.txt and ai.txt from the merged registry.
+﻿/* Update sitemap.xml, llms.txt and ai.txt from the merged registry.
    Run: node update-site-meta.js  (from the troolify-gen directory)  */
 const fs = require('fs');
 const path = require('path');
 
 const REPO = path.resolve(__dirname, '..');
 const BASE = 'https://f9xr.org/troolify';
-const NEW = '2026-10-19';
+const NEW = '2026-10-22';
 
 /* ---------- load registry ---------- */
 const src = fs.readFileSync(path.join(REPO, 'assets', 'js', 'tools-data.js'), 'utf8');

@@ -25,6 +25,8 @@ Key facts about Troolify:
 - [Markdown to Word Converter](https://f9xr.org/troolify/tools/converters/markdown-to-word-converter.html): Convert Markdown to Word instantly. Turn .md files into polished .docx documents, no signup needed.
 - [Markdown to PDF Converter](https://f9xr.org/troolify/tools/converters/markdown-to-pdf-converter.html): Convert Markdown to PDF instantly. Turn .md files into clean, shareable PDF documents, no signup needed.
 - [VAT Calculator](https://f9xr.org/troolify/tools/finance/vat-calculator.html): Add, remove or split VAT on any amount with tax rates for 50+ countries. 100% client-side.
+- [EOQ Calculator](https://f9xr.org/troolify/tools/finance/eoq-calculator.html): Find the economic order quantity, reorder point, cycle length and annual ordering plus holding cost - with a cost curve and sensitivity table. 100% client-side.
+- [Compound Interest Calculator](https://f9xr.org/troolify/tools/finance/compound-interest-calculator.html): Project compound interest with regular contributions, six currencies, inflation-adjusted real value, a growth chart and a step-by-step formula breakdown. 100% client-side.
 - [URL Encoder & Decoder](https://f9xr.org/troolify/tools/coding/url-encoder-decoder.html): Encode or percent-decode URLs and text instantly for safe links and API work.
 - [CSV to JSON Converter](https://f9xr.org/troolify/tools/coding/csv-to-json-converter.html): Convert CSV into clean JSON with custom keys and separators, fully in the browser.
 - [SHA Hash Generator](https://f9xr.org/troolify/tools/coding/sha-hash-generator.html): Generate SHA-1, SHA-256, SHA-384 or SHA-512 hashes via the native Web Crypto API.

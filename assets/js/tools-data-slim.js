@@ -575,6 +575,7 @@ window.TOOLS_SLIM = [
   {"name":"Dig to the Other Side Calculator","desc":"Dig straight down from any coordinates and see where you come out - antipode, fall time, top speed and the nearest shore.","icon":"fa-solid fa-earth-americas","tag":"Fun","category":"Fun","href":"tools/fun/dig-to-the-other-side.html"},
   {"name":"Life Stats Calculator","desc":"Your life in silly units - seconds, full moons, heartbeats, kilometres around the Sun - plus your age on every planet.","icon":"fa-solid fa-cake-candles","tag":"Fun","category":"Fun","href":"tools/fun/life-stats-calculator.html"},
   {"name":"Proverb Mashup Generator","desc":"Half of one real proverb glued to half of another - in Romanian or English - with every source linked.","icon":"fa-solid fa-quote-left","tag":"Fun","category":"Fun","href":"tools/fun/proverb-mashup-generator.html"},
+  {"name":"EOQ Calculator","desc":"Find the economic order quantity, reorder point and cycle length that minimise your total ordering and holding cost.","icon":"fa-solid fa-boxes-stacked","tag":"Inventory","category":"Finance","href":"tools/finance/eoq-calculator.html","recent":true},
 ];
 
 window.CATEGORIES = [
