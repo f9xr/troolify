@@ -1,23 +1,3 @@
-var TS = "https://api.tasta.space/v1";
-function tsGet(p) {
-  return new Promise(function (res, rej) {
-    var ctl = new AbortController();
-    var t = setTimeout(function () { ctl.abort(); }, 15000);
-    fetch(TS + p, { signal: ctl.signal }).then(function (r) {
-      clearTimeout(t);
-      return r.json().catch(function () { return null; }).then(function (j) {
-        if (j && j.error) { var e = new Error(j.error.message || "The API returned an error."); e.api = 1; throw e; }
-        if (!r.ok) throw new Error("The Tasta Space API responded with HTTP " + r.status + ".");
-        res(j && j.data != null ? j.data : j);
-      });
-    }).catch(function (e) {
-      clearTimeout(t);
-      if (e && e.name === "AbortError") { rej(new Error("The request timed out - the Tasta Space API may be busy. Try again in a moment.")); return; }
-      if (e && e.api) { rej(e); return; }
-      rej(new Error("Could not reach the Tasta Space API. It may be temporarily unavailable - please try again in a moment."));
-    });
-  });
-}
 function row(k, v) {
   return '<div class="result-row"><span>' + k + "</span><b>" + esc(v) + "</b></div>";
 }
@@ -26,8 +6,12 @@ function placeCard(title, p) {
   if (p.lat != null && p.lon != null) sub.push(p.lat + ", " + p.lon);
   if (p.surface) sub.push(p.surface + (p.water_type ? " (" + p.water_type + ")" : ""));
   if (p.island) sub.push("on " + p.island);
-  return '<div class="dg-card"><h4>' + esc(title) + '</h4><div class="dg-place">' + esc(p.place || p.country || "Open ocean") + "</div>" +
-    '<div class="dg-sub">' + (p.country && p.place ? esc(p.country) + " \u00b7 " : "") + esc(sub.join(" \u00b7 ")) + "</div></div>";
+  /* The place name and the country are the same string for most land points,
+     so the country is only added when it actually says something extra. */
+  var place = p.place || p.country || "Open ocean";
+  var country = p.country && p.country !== p.place ? p.country : "";
+  return '<div class="dg-card"><h4>' + esc(title) + '</h4><div class="dg-place">' + esc(place) + "</div>" +
+    '<div class="dg-sub">' + (country ? esc(country) + " \u00b7 " : "") + esc(sub.join(" \u00b7 ")) + "</div></div>";
 }
 function run() {
   var lat = parseFloat($("lat").value);
@@ -54,9 +38,13 @@ function run() {
         html += row("Nearest land", d.nearest_land.name + (d.nearest_land.country ? " (" + d.nearest_land.country + ")" : "") + " \u2014 " + Number(d.nearest_land.km || 0).toLocaleString() + " km away");
       }
       if (d.depth_record) {
-        html += row("Deepest hole ever dug", d.depth_record.name + " \u2014 " + Number(d.depth_record.depth_m || 0).toLocaleString() + " m (" + (d.depth_record.year || "?") + ")");
+        /* The share of the tunnel makes the comparison the page promises:
+           the record hole against this shaft. */
+        var dr = d.depth_record;
+        var pct = dr.share_of_tunnel_percent != null ? " \u2014 " + (Number(dr.share_of_tunnel_percent) * 100).toFixed(2) + "% of this tunnel" : "";
+        html += row("Deepest hole ever dug", dr.name + " \u2014 " + Number(dr.depth_m || 0).toLocaleString() + " m (" + (dr.year || "?") + ")" + pct);
       }
-      if (d.image) html += '<div class="media-host" style="margin-top:14px"><img class="media-prev" src="' + esc(d.image) + '" alt="Tunnel through the Earth diagram" loading="lazy"></div>';
+      if (d.image) html += '<div class="media-host" style="margin-top:14px"><img class="media-prev" src="' + esc(mediaUrl(d.image)) + '" alt="Tunnel through the Earth diagram" loading="lazy"></div>';
       $("results").innerHTML = html;
       proc((d.land ? "Land landing." : "Water landing.") + " Tunnel: " + Number(d.tunnel_km || 0).toLocaleString() + " km.");
       restore();

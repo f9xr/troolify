@@ -3,14 +3,20 @@
    from a tool config plus a plain JS file (scripts/<slug>.js) containing the
    tool's unique logic. The unique script runs inside a shared helper scope:
    {
-     $        -> getElementById
-     proc(m)  -> set the #procLine text
-     esc(s)   -> HTML-escape text
-     copyText(txt,btn) -> copy + "Copied!" feedback
-     downloadFromUrl(url,name) -> fetch->blob download, opens in a new tab on CORS failure
-     busify(btn) -> disable while working, returns a restore function
-apiGet('/api/path', cb) -> GET JSON from API_BASE, 15s timeout, renders errors into #results
+      $        -> getElementById
+      proc(m)  -> set the #procLine text
+      esc(s)   -> HTML-escape text (incl. ' and ")
+      safeUrl(u) -> "" unless u is an http(s) URL (use for every API URL)
+      mediaUrl(u) -> same, but also accepts protocol-relative // URLs
+      copyText(txt,btn) -> copy + "Copied!" feedback
+      downloadFromUrl(url,name) -> fetch->blob download, opens in a new tab on CORS failure
+      busify(btn) -> disable while working, returns a restore function
+      apiGet('/api/path', cb, end, onErr) -> GET JSON from API_BASE, 15s timeout, renders errors into #results
+      tsGet('/path') -> GET JSON from the Tasta Space API, 15s timeout, friendly upstream errors
+      todayLocal() -> today's date in the visitor's own timezone, as YYYY-MM-DD
+      visitorTz()  -> the visitor's IANA time zone, for APIs that date in a zone
       API_BASE  -> "https://abhi-api.vercel.app"
+      TS_BASE   -> "https://api.tasta.space/v1"
    }                                     */
 const fs = require("fs");
 const path = require("path");
@@ -22,7 +28,14 @@ const BASE = "https://f9xr.org/troolify";
 function esc(s) {
   return String(s == null ? "" : s)
     .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
+    .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+}
+
+/* Only http(s) URLs may ever reach an href/src/window.open. Escaping alone
+   stops attribute breakout but still allows "javascript:" payloads. */
+function safeUrl(u) {
+  var s = String(u == null ? "" : u).trim();
+  return /^https?:\/\//i.test(s) ? s : "";
 }
 
 const CSS = `<style>
@@ -86,9 +99,45 @@ const CSS = `<style>
 const HELPERS = `
 "use strict";
 var $=function(id){return document.getElementById(id);};
+/* Every tool exposes helpers on window.ap and the shared "clear" button calls
+   window.ap.clear - create the namespace up front so a tool script can never
+   die with "Cannot set properties of undefined". */
+window.ap=window.ap||{};
 var API_BASE="https://abhi-api.vercel.app";
+var TS_BASE="https://api.tasta.space/v1";
 function proc(m){var p=$("procLine");if(p)p.textContent=m;}
-function esc(s){return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}
+function esc(s){return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;");}
+/* Pull the text out of an upstream payload. Throws when the payload does not
+   carry usable text, so an unexpected shape surfaces as a friendly error
+   instead of rendering "[object Object]". */
+function apiText(d,keys){
+  var v=d;
+  if(d&&typeof d==="object"){
+    v="";
+    for(var i=0;i<keys.length;i++){
+      var t=d[keys[i]];
+      if(typeof t==="string"&&t.trim()){v=t;break;}
+      if(Array.isArray(t)&&t.length&&typeof t[0]==="string"){v=t[0];break;}
+    }
+  }
+  if(typeof v!=="string"||!v.trim())throw new Error("The API returned an unexpected response.");
+  return v;
+}
+function safeUrl(u){var s=String(u==null?"":u).trim();return /^https?:\\/\\//i.test(s)?s:"";}
+function mediaUrl(u){var s=String(u==null?"":u).trim();return /^https?:\\/\\//i.test(s)||s.indexOf("//")===0?s:"";}
+/* Today in the visitor's own timezone, never UTC. toISOString() can be a day
+   ahead of the user's calendar date east of Greenwich, which would reject a
+   birth date that is perfectly in the past. */
+function todayLocal(){var d=new Date();function p(n){return n<10?"0"+n:""+n;}return d.getFullYear()+"-"+p(d.getMonth()+1)+"-"+p(d.getDate());}
+/* The visitor's IANA time zone, so the hub dates a day in the zone the visitor
+   is actually in instead of the hub's own default. Anything that is not a
+   plain IANA name is dropped: the hub refuses a zone it does not know with a
+   422, and the hub default is a better answer than no answer. */
+function visitorTz(){try{var tz=Intl.DateTimeFormat().resolvedOptions().timeZone;if(!tz)return "";if(tz==="UTC")return "UTC";var p=tz.split("/");if(p.length<2)return "";for(var i=0;i<p.length;i++){if(!/^[A-Za-z0-9_+-]+$/.test(p[i]))return "";}return tz;}catch(e){return "";}}
+/* The Tasta Space hub accepts a seed of 1 to 64 letters, digits, dashes or
+   underscores. Anything else is refused by the hub, so it is checked here
+   first and the visitor gets a readable message instead of a raw 422. */
+function validSeed(s){return /^[A-Za-z0-9_-]{1,64}$/.test(String(s==null?"":s).trim());}
 function copyText(txt,btn){
   function ok(){if(btn){var o=btn.innerHTML;btn.innerHTML='<i class="fa-solid fa-check"></i>Copied!';setTimeout(function(){btn.innerHTML=o;},1500);}}
   if(window.Troolify&&window.Troolify.copyToClipboard){window.Troolify.copyToClipboard(txt,ok);}
@@ -96,27 +145,98 @@ function copyText(txt,btn){
   else{var ta=document.createElement("textarea");ta.value=txt;ta.setAttribute("readonly","");ta.style.position="fixed";ta.style.top="-9999px";document.body.appendChild(ta);ta.select();try{document.execCommand("copy");}catch(e){}document.body.removeChild(ta);ok();}
 }
 function downloadFromUrl(url,name){
-  fetch(url).then(function(r){if(!r.ok)throw 0;return r.blob();}).then(function(b){
+  var safe=safeUrl(url);
+  if(!safe){proc("That download link is not a valid http(s) URL.");return;}
+  fetch(safe).then(function(r){if(!r.ok)throw 0;return r.blob();}).then(function(b){
     var a=document.createElement("a");a.href=URL.createObjectURL(b);a.download=name||"troolify-download";
     document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(a.href);},5000);proc("Download started.");
-  }).catch(function(){window.open(url,"_blank");proc("Opened in a new tab (the host blocked direct download).");});
+  }).catch(function(){window.open(safe,"_blank","noopener");proc("Opened in a new tab (the host blocked direct download).");});
 }
 function busify(btn){
   var o=btn.innerHTML;btn.disabled=true;btn.innerHTML='<i class="fa-solid fa-circle-notch fa-spin"></i> Working...';
   return function(){btn.disabled=false;btn.innerHTML=o;};
 }
-function apiGet(p,cb,end){
+/* Upstream error codes -> a message a visitor can act on. The raw provider
+   text is dropped for not_found (the Tasta Space hub message leaks its own
+   catalogue URL) and for transport-level failures. */
+function friendlyApiError(code,msg){
+  var c=String(code==null?"":code).toLowerCase();
+  var s=String(msg==null?"":msg).trim();
+  var i=s.indexOf("The catalogue is at");
+  if(i>0){s=s.slice(0,i).trim();if(s.charAt(s.length-1)===".")s=s.slice(0,-1);}
+  if(c.indexOf("not_found")>=0||c.indexOf("notfound")>=0)return "The API could not find that resource.";
+  if(c.indexOf("rate")>=0||c.indexOf("limit")>=0||c.indexOf("quota")>=0)return "Too many requests - wait a moment and try again.";
+  if(!s)return "The API returned an error.";
+  return s.length>180?s.slice(0,180)+"...":s;
+}/* The Abhi wrapper reports upstream failures as {status:false,result:"..."}. */
+function apiMessage(d){
+  var m=d&&d.result;
+  if(typeof m!=="string")return "The API returned an error.";
+  var s=m.trim();
+  if(!s)return "The API returned an error.";
+  var mm=s.match(/status code\\s+(\\d{3})/i);
+  if(mm){
+    var code=mm[1];
+    if(code==="429")return "The service is rate-limiting requests right now - please wait a moment and try again.";
+    if(code==="404")return "The service could not find that resource.";
+    if(code==="504")return "The service timed out upstream - please try again in a moment.";
+    if(code.charAt(0)==="5")return "The service is having trouble right now (HTTP "+code+") - please try again in a moment.";
+  }
+  if(/rate.?limit/i.test(s))return "Too many requests - please wait a moment and try again.";
+  return s.length>200?s.slice(0,200)+"...":s;
+}
+/* cb   - success callback
+   end  - restore callback (button state)
+   onErr- optional mapper for the upstream error message */
+function apiGet(p,cb,end,onErr){
   var ctl=new AbortController();var t=setTimeout(function(){ctl.abort();},15000);
   proc("Contacting the web API...");
-  fetch(API_BASE+p,{signal:ctl.signal}).then(function(r){return r.json();}).then(function(d){
-    clearTimeout(t);
-    if(!d||d.status===false){throw new Error((d&&d.result)||"The API returned an error.");}
-    if(cb)cb(d.result);if(end)end();
-  }).catch(function(e){
-    clearTimeout(t);
-    var msg=(e&&e.name==="AbortError")?"The request timed out - the API may be down right now.":"Could not reach the web API. It may be temporarily unavailable - please try again in a moment.";
-    $("results").innerHTML='<div class="res-err"><i class="fa-solid fa-triangle-exclamation"></i> '+esc(msg)+'</div>';
-    proc("Request failed.");if(end)end();
+  fetch(API_BASE+p,{signal:ctl.signal})
+    .then(function(r){return r.json().catch(function(){return null;});})
+    .then(function(d){
+      clearTimeout(t);
+      if(!d||d.status===false){var msg=apiMessage(d);var e=new Error(msg);e.apiMessage=msg;throw e;}
+      if(cb){try{cb(d.result);}catch(err){err.renderError=true;throw err;}}
+      if(end)end();
+    })
+    .catch(function(e){
+      clearTimeout(t);
+      var msg;
+      if(e&&e.name==="AbortError")msg="The request timed out - the API may be down right now.";
+      else if(e&&e.renderError)msg="The API replied, but the result could not be displayed. Please try again.";
+      else if(e&&e.apiMessage)msg=e.apiMessage;
+      else msg="Could not reach the web API. It may be temporarily unavailable - please try again in a moment.";
+      if(onErr){var alt=onErr(msg,e);if(alt)msg=alt;}
+      $("results").innerHTML='<div class="res-err"><i class="fa-solid fa-triangle-exclamation"></i> '+esc(msg)+'</div>';
+      proc("Request failed.");if(end)end();
+    });
+}
+/* Shared Tasta Space client: 15s timeout, friendly upstream errors.
+   The hub rate-limits anonymous callers to 30 requests a minute per IP and
+   answers a 429 with a Retry-After header, so the wait is passed on. */
+function tsGet(p){
+  return new Promise(function(res,rej){
+    var ctl=new AbortController();var t=setTimeout(function(){ctl.abort();},15000);
+    fetch(TS_BASE+p,{signal:ctl.signal}).then(function(r){
+      clearTimeout(t);
+      return r.json().catch(function(){return null;}).then(function(j){
+        if(r.status===429){
+          var wait="";
+          try{var ra=r.headers&&r.headers.get&&r.headers.get("Retry-After");if(ra)wait=" Try again in "+ra+" seconds.";}catch(e){}
+          var e2=new Error("Too many requests - the Tasta Space hub allows 30 per minute per visitor."+wait);
+          e2.api=1;throw e2;
+        }
+        if(j&&j.error){var e=new Error(friendlyApiError(j.error.code,j.error.message));e.api=1;throw e;}
+        if(!r.ok)throw new Error("The Tasta Space API responded with HTTP "+r.status+".");
+        window.ap=window.ap||{};window.ap.meta=(j&&j.meta)?j.meta:null;
+        res(j&&j.data!=null?j.data:j);
+      });
+    }).catch(function(e){
+      clearTimeout(t);
+      if(e&&e.name==="AbortError"){rej(new Error("The request timed out - the Tasta Space API may be busy. Try again in a moment."));return;}
+      if(e&&e.api){rej(e);return;}
+      rej(new Error("Could not reach the Tasta Space API. It may be temporarily unavailable - please try again in a moment."));
+    });
   });
 }
 `;
@@ -145,6 +265,16 @@ function pageNiceNote(){
 hookClear();
 pageNiceNote();
 ` + "\n";
+
+/* Analytics + ad loader + view-transition styles. The builder emits these
+   itself so a rebuild never produces a page that silently loses them (the
+   repo-wide add-gtag.js / add-adsense.js passes are then no-ops). */
+const HEAD_EXTRAS =
+  '<script async src="https://www.googletagmanager.com/gtag/js?id=G-1D3C2DDCHV"></script>\n' +
+  '<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-1D3C2DDCHV");</script>\n' +
+  '<meta name="google-adsense-account" content="ca-pub-9769892721842144">\n' +
+  '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9769892721842144" crossorigin="anonymous"></script>\n' +
+  '<link rel="stylesheet" href="../../assets/css/view-transitions.min.css">\n';
 
 function jsonLd(blocks) {
   return blocks.map(function (b) { return '<script type="application/ld+json">' + JSON.stringify(b.data) + "</" + "script>"; }).join("\n");
@@ -228,7 +358,7 @@ function page(cfg, scriptSrc) {
     '<link rel="stylesheet" href="../../assets/css/site-shell.css">\n' +
     '<link rel="stylesheet" href="../../assets/css/tool-page.css">\n' +
     '<link rel="stylesheet" href="../../assets/css/seo-article.css">\n' +
-    CSS + "\n</head>\n" +
+    CSS + "\n" + HEAD_EXTRAS + "</head>\n" +
     '<body data-layout="tool">\n' +
     '<noscript>\n    <nav aria-label="Primary" style="position:static;display:block;padding:1rem 1.5rem;background:#212529;border-bottom:1px solid #343A40;text-align:center;font-size:0.9rem;">\n' +
     '        <a href="../../index.html" style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Home</a>\n' +

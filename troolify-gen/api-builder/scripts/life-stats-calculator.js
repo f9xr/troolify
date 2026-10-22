@@ -1,24 +1,3 @@
-var TS = "https://api.tasta.space/v1";
-function tsGet(p) {
-  return new Promise(function (res, rej) {
-    var ctl = new AbortController();
-    var t = setTimeout(function () { ctl.abort(); }, 15000);
-    fetch(TS + p, { signal: ctl.signal }).then(function (r) {
-      clearTimeout(t);
-      return r.json().catch(function () { return null; }).then(function (j) {
-        if (j && j.error) { var e = new Error(j.error.message || "The API returned an error."); e.api = 1; throw e; }
-        if (!r.ok) throw new Error("The Tasta Space API responded with HTTP " + r.status + ".");
-        window.ap.meta = j && j.meta ? j.meta : null;
-        res(j && j.data != null ? j.data : j);
-      });
-    }).catch(function (e) {
-      clearTimeout(t);
-      if (e && e.name === "AbortError") { rej(new Error("The request timed out - the Tasta Space API may be busy. Try again in a moment.")); return; }
-      if (e && e.api) { rej(e); return; }
-      rej(new Error("Could not reach the Tasta Space API. It may be temporarily unavailable - please try again in a moment."));
-    });
-  });
-}
 function tile(k, v) {
   return '<div class="gh-stat"><b>' + esc(v) + "</b><span>" + esc(k) + "</span></div>";
 }
@@ -38,14 +17,19 @@ var PLANETS = [
 function run() {
   var born = $("born").value;
   if (!born) { $("results").innerHTML = '<div class="res-err"><i class="fa-solid fa-triangle-exclamation"></i> Pick your date of birth first.</div>'; proc("Waiting for a date."); return; }
-  if (born > new Date().toISOString().slice(0, 10)) { $("results").innerHTML = '<div class="res-err"><i class="fa-solid fa-triangle-exclamation"></i> That date is in the future.</div>'; proc("Waiting for a real date."); return; }
+  /* The hub accepts 1900-01-01 to today. A future date is compared against
+     the visitor's own calendar day, not UTC, which can be a day ahead east
+     of Greenwich and would reject a birthday that has already happened. */
+  var today = todayLocal();
+  if (born > today) { $("results").innerHTML = '<div class="res-err"><i class="fa-solid fa-triangle-exclamation"></i> That date is in the future.</div>'; proc("Waiting for a real date."); return; }
+  if (born < "1900-01-01") { $("results").innerHTML = '<div class="res-err"><i class="fa-solid fa-triangle-exclamation"></i> The API counts from 1900 onwards - pick a later date.</div>'; proc("Waiting for a date from 1900 on."); return; }
   var restore = busify(runBtn);
   proc("Calculating your life in space time via the Tasta Space API...");
   tsGet("/life?born=" + encodeURIComponent(born))
     .then(function (d) {
       var meta = window.ap.meta || {};
       var html = "";
-      html += '<div class="bn-hero">' + d.age.years + " years, " + d.age.months + " months, " + d.age.days + " days</div>";
+      html += '<div class="bn-hero">' + esc(String(d.age.years)) + " years, " + esc(String(d.age.months)) + " months, " + esc(String(d.age.days)) + " days</div>";
       html += row("Born on", d.weekday + " \u00b7 " + fmtDate(d.born));
       html += '<div class="gh-grid" style="margin-top:14px">';
       html += tile("Days alive", Number(d.days).toLocaleString());
@@ -67,7 +51,8 @@ function run() {
       if (d.next_milestones && d.next_milestones.length) {
         html += '<p class="note" style="margin-top:16px"><b>Next planetary birthdays</b></p>';
         d.next_milestones.forEach(function (m) {
-          html += '<div class="result-row"><span>' + esc(m.name) + " \u00b7 " + fmtDate(m.date) + " \u00b7 in " + Number(m.days_until).toLocaleString() + ' days</span><b><a href="' + esc(m.certificate) + '" target="_blank" rel="noopener">certificate</a></b></div>';
+          var cert = safeUrl(m.certificate);
+          html += '<div class="result-row"><span>' + esc(m.name) + " \u00b7 " + esc(fmtDate(m.date)) + " \u00b7 in " + Number(m.days_until).toLocaleString() + ' days</span><b>' + (cert ? '<a href="' + esc(cert) + '" target="_blank" rel="noopener">certificate</a>' : "") + "</b></div>";
         });
       }
       var a = meta.assumptions || null;
@@ -89,3 +74,7 @@ runBtn.addEventListener("click", function () {
 });
 window.ap.go = function () { runBtn.click(); };
 window.ap.clear = function () { $("born").value = ""; };
+/* The hub only counts from 1900 to today, so the picker is bounded to the
+   same window and the browser refuses an impossible pick up front. */
+$("born").min = "1900-01-01";
+$("born").max = todayLocal();

@@ -1,23 +1,3 @@
-var TS = "https://api.tasta.space/v1";
-function tsGet(p) {
-  return new Promise(function (res, rej) {
-    var ctl = new AbortController();
-    var t = setTimeout(function () { ctl.abort(); }, 15000);
-    fetch(TS + p, { signal: ctl.signal }).then(function (r) {
-      clearTimeout(t);
-      return r.json().catch(function () { return null; }).then(function (j) {
-        if (j && j.error) { var e = new Error(j.error.message || "The API returned an error."); e.api = 1; throw e; }
-        if (!r.ok) throw new Error("The Tasta Space API responded with HTTP " + r.status + ".");
-        res(j && j.data != null ? j.data : j);
-      });
-    }).catch(function (e) {
-      clearTimeout(t);
-      if (e && e.name === "AbortError") { rej(new Error("The request timed out - the Tasta Space API may be busy. Try again in a moment.")); return; }
-      if (e && e.api) { rej(e); return; }
-      rej(new Error("Could not reach the Tasta Space API. It may be temporarily unavailable - please try again in a moment."));
-    });
-  });
-}
 function tile(k, v) {
   return '<div class="gh-stat"><b>' + esc(v) + "</b><span>" + esc(k) + "</span></div>";
 }
@@ -26,17 +6,31 @@ function row(k, v) {
 }
 function run() {
   var seed = $("seed").value.trim();
+  /* The hub only accepts a seed of 1 to 64 letters, digits, dashes or
+     underscores and answers anything else with a raw 422, so it is checked
+     here and the visitor gets a message they can act on. */
+  if (seed && !validSeed(seed)) {
+    $("results").innerHTML = '<div class="res-err"><i class="fa-solid fa-triangle-exclamation"></i> A seed can be up to 64 letters, digits, dashes or underscores - no spaces or punctuation.</div>';
+    proc("Waiting for a valid seed.");
+    return;
+  }
   var restore = busify(runBtn);
   proc("Inventing a country via the Tasta Space API...");
   tsGet("/countries/fake" + (seed ? "?seed=" + encodeURIComponent(seed) : ""))
     .then(function (d) {
-      window.ap.pl = d.permalink || "";
+      window.ap.pl = safeUrl(d.permalink);
       var cur = d.currency || {};
       var hp = d.highest_point || {};
       var flag = d.flag || {};
+      var flagImg = mediaUrl(flag.url);
+      var flagPng = safeUrl(flag.png);
+      var mapPng = safeUrl(d.map && d.map.png);
+      var mapImg = mediaUrl(d.map && d.map.url);
+      var cardPng = safeUrl(d.card && d.card.url);
+      var cardSvg = safeUrl(d.card && d.card.svg);
       var html = "";
       html += '<div class="fc-two">';
-      html += flag.url ? '<img class="fc-flag" src="' + esc(flag.url) + '" alt="Flag of ' + esc(d.name) + '" loading="lazy">' : "";
+      html += flagImg ? '<img class="fc-flag" src="' + esc(flagImg) + '" alt="Flag of ' + esc(d.name) + '" loading="lazy">' : "";
       html += "<div>";
       html += '<div class="fc-name">' + esc(d.name) + "</div>";
       html += '<div class="fc-official">' + esc(d.official_name || "") + " \u00b7 " + esc(d.demonym || "") + " \u00b7 " + esc(d.government || "") + "</div>";
@@ -62,10 +56,12 @@ function run() {
       html += row("Seed", d.seed || "-");
       html += '<div class="actions" style="margin-top:12px">';
       html += '<button class="rt-btn" type="button" onclick="ap.copy(this)"><i class="fa-solid fa-link"></i>Copy permalink</button>';
-      if (flag.png) html += '<a class="rt-btn" href="' + esc(flag.png) + '" target="_blank" rel="noopener"><i class="fa-solid fa-image"></i>Flag PNG</a>';
-      if (d.map && d.map.png) html += '<a class="rt-btn" href="' + esc(d.map.png) + '" target="_blank" rel="noopener"><i class="fa-solid fa-map"></i>Map PNG</a>';
+      if (flagPng) html += '<a class="rt-btn" href="' + esc(flagPng) + '" target="_blank" rel="noopener"><i class="fa-solid fa-image"></i>Flag PNG</a>';
+      if (mapPng) html += '<a class="rt-btn" href="' + esc(mapPng) + '" target="_blank" rel="noopener"><i class="fa-solid fa-map"></i>Map PNG</a>';
+      if (cardPng) html += '<a class="rt-btn" href="' + esc(cardPng) + '" target="_blank" rel="noopener"><i class="fa-solid fa-id-card"></i>Country card PNG</a>';
       html += "</div>";
-      if (d.map && d.map.url) html += '<div class="media-host" style="margin-top:14px"><img class="media-prev" src="' + esc(d.map.url) + '" alt="Map silhouette of ' + esc(d.name) + '" loading="lazy"></div>';
+      if (mapImg) html += '<div class="media-host" style="margin-top:14px"><img class="media-prev" src="' + esc(mapImg) + '" alt="Map silhouette of ' + esc(d.name) + '" loading="lazy"></div>';
+      if (cardSvg) html += '<div class="media-host" style="margin-top:14px"><img class="media-prev" src="' + esc(cardSvg) + '" alt="Country card for ' + esc(d.name) + '" loading="lazy"></div>';
       $("results").innerHTML = html;
       proc("Meet " + (d.name || "your country") + " - capital " + (d.capital || "?") + ".");
       restore();

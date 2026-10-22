@@ -5,7 +5,7 @@ runBtn.addEventListener("click",function(){
   if(this.disabled)return;var restore=busify(this);qTxt="";aTxt="";
   $("results").innerHTML='<div class="res-phase"><i class="fa-solid fa-brain"></i> Loading a riddle...</div>';
   apiGet("/api/game/riddle",function(d){
-    qTxt=String(d.question||d.riddle||d.q||"");aTxt=String(d.answer||d.ans||"");
+    qTxt=apiText(d,["question","riddle","q"]);aTxt=(d&&typeof d.answer==="string")?d.answer:((d&&typeof d.ans==="string")?d.ans:"");
     $("results").innerHTML=
       '<div class="quote-body"><i class="fa-solid fa-puzzle-piece"></i>'+esc(qTxt)+"</div>"+
       '<div class="quote-author" style="color:var(--muted)">Can you guess it?</div>'+

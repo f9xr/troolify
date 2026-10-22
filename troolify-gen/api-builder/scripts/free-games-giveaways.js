@@ -50,7 +50,7 @@ function fmtDate(s) {
   if (isNaN(d.getTime())) return String(s);
   return d.toLocaleDateString(undefined, { day: "numeric", month: "short", year: "numeric" });
 }
-function linkOf(g) { return g.open_giveaway_url || g.open_giveaway || g.gamerpower_url || ""; }
+function linkOf(g) { return safeUrl(g.open_giveaway_url || g.open_giveaway || g.gamerpower_url); }
 function filtered() {
   var k = $("kw").value.trim().toLowerCase();
   if (!k) return items;
@@ -66,7 +66,7 @@ function summaryHtml() {
     '<span class="gw-attr">Listings by <a href="https://www.gamerpower.com/" target="_blank" rel="noopener">GamerPower</a> &middot; refreshed on every search</span></div>';
 }
 function cardHtml(g, i) {
-  var thumb = g.thumbnail || g.image || "";
+  var thumb = mediaUrl(g.thumbnail || g.image);
   var title = g.title || g.title_long || "Free giveaway";
   var worth = (g.worth && g.worth !== "N/A") ? g.worth : "Free";
   var chips = '<span class="gw-chip worth"><i class="fa-solid fa-tag"></i> ' + esc(worth) + "</span>";
@@ -82,7 +82,7 @@ function cardHtml(g, i) {
     : '<span><i class="fa-solid fa-infinity"></i>No fixed end date</span>');
   var instr = String(g.instructions || "").replace(/\r/g, "");
   var link = linkOf(g);
-  var page = g.gamerpower_url || "";
+  var page = safeUrl(g.gamerpower_url);
   return '<div class="gw-card">' +
     (thumb ? '<img class="gw-thumb" src="' + esc(thumb) + '" alt="' + esc(title) + ' thumbnail" loading="lazy" onerror="this.style.visibility=\'hidden\'">' : "") +
     '<div class="gw-body">' +

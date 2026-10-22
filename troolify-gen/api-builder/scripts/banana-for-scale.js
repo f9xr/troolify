@@ -1,26 +1,8 @@
-var TS = "https://api.tasta.space/v1";
 var UNITS = null;
 var UBY = {};
 var FIRST = {};
-function tsGet(p) {
-  return new Promise(function (res, rej) {
-    var ctl = new AbortController();
-    var t = setTimeout(function () { ctl.abort(); }, 15000);
-    fetch(TS + p, { signal: ctl.signal }).then(function (r) {
-      clearTimeout(t);
-      return r.json().catch(function () { return null; }).then(function (j) {
-        if (j && j.error) { var e = new Error(j.error.message || "The API returned an error."); e.api = 1; throw e; }
-        if (!r.ok) throw new Error("The Tasta Space API responded with HTTP " + r.status + ".");
-        res(j && j.data != null ? j.data : j);
-      });
-    }).catch(function (e) {
-      clearTimeout(t);
-      if (e && e.name === "AbortError") { rej(new Error("The request timed out - the Tasta Space API may be busy. Try again in a moment.")); return; }
-      if (e && e.api) { rej(e); return; }
-      rej(new Error("Could not reach the Tasta Space API. It may be temporarily unavailable - please try again in a moment."));
-    });
-  });
-}
+var DEF_FROM = "";
+var DEF_TO = "";
 function fillSelects() {
   var dims = [];
   UNITS.forEach(function (u) {
@@ -28,6 +10,7 @@ function fillSelects() {
     if (dims.indexOf(u.dimension) < 0) dims.push(u.dimension);
     if (!FIRST[u.dimension]) FIRST[u.dimension] = u.id;
   });
+  if (!UNITS.length) return;
   var html = dims.map(function (d) {
     var opts = UNITS.filter(function (u) { return u.dimension === d; }).map(function (u) {
       return '<option value="' + esc(u.id) + '">' + esc(u.name + " (" + u.symbol + ")") + (u.kind === "silly" ? " \u00b7 silly" : "") + "</option>";
@@ -36,20 +19,28 @@ function fillSelects() {
   }).join("");
   $("from").innerHTML = html;
   $("to").innerHTML = html;
-  $("from").value = UBY.m ? "m" : UNITS[0].id;
-  $("to").value = UBY.banana ? "banana" : FIRST[UBY[$("from").value].dimension];
+  /* Remember the defaults instead of hard-coding "m"/"banana": the API decides
+     which unit ids exist. */
+  DEF_FROM = UBY.m ? "m" : UNITS[0].id;
+  var fromUnit = UBY[DEF_FROM];
+  DEF_TO = UBY.banana ? "banana" : (fromUnit ? (FIRST[fromUnit.dimension] || DEF_FROM) : UNITS[0].id);
+  $("from").value = DEF_FROM;
+  $("to").value = DEF_TO;
 }
 function loadUnits() {
   if (UNITS) return Promise.resolve();
   return tsGet("/scale/units").then(function (d) {
-    UNITS = d;
+    UNITS = Array.isArray(d) ? d : [];
+    if (!UNITS.length) throw new Error("The API returned no unit list - please try again in a moment.");
     fillSelects();
   });
 }
 function unitNote(u) {
   if (!u || (!u.basis && !u.note)) return "";
   var s = '<div class="bn-note"><b>' + esc(u.name) + ":</b> " + esc(u.basis || u.note || "");
-  if (u.source) s += ' <a href="' + esc(u.source) + '" target="_blank" rel="noopener">source</a>';
+  if (u.basis && u.note && u.basis !== u.note) s += " " + esc(u.note);
+  var src = safeUrl(u.source);
+  if (src) s += ' <a href="' + esc(src) + '" target="_blank" rel="noopener">source</a>';
   return s + "</div>";
 }
 function convert() {
@@ -69,7 +60,7 @@ function convert() {
         '<div class="bn-sent">' + esc(d.sentence || "") + "</div>" +
         '<div class="actions" style="justify-content:center;margin-top:10px"><button class="rt-btn" type="button" onclick="ap.copy(this)"><i class="fa-solid fa-copy"></i>Copy sentence</button></div>' +
         unitNote(d.from) + unitNote(d.to) +
-        (d.image ? '<div class="media-host"><img class="media-prev" src="' + esc(d.image) + '" alt="Conversion ruler drawing" loading="lazy"></div>' : "");
+        (d.image ? '<div class="media-host"><img class="media-prev" src="' + esc(mediaUrl(d.image)) + '" alt="Conversion ruler drawing" loading="lazy"></div>' : "");
       proc("Done - " + (d.display || "converted") + ".");
     });
 }
@@ -86,12 +77,22 @@ runBtn.addEventListener("click", function () {
       restore();
     });
 });
-$("from").addEventListener("change", function () {
-  if (!UNITS) return;
+/* The hub refuses a conversion between two different dimensions
+   ("dimension_mismatch"), so both selects are kept inside one dimension.
+   Without this on the "to" side a visitor could pick kilograms against
+   metres and get a raw API error instead of a usable answer. */
+function syncDimension() {
+  if (!UNITS || !UNITS.length) return;
   var fu = UBY[$("from").value];
+  if (!fu) return;
   var tu = UBY[$("to").value];
-  if (fu && tu && fu.dimension !== tu.dimension) $("to").value = FIRST[fu.dimension];
-});
+  if (tu && tu.dimension === fu.dimension) return;
+  var pick = FIRST[fu.dimension];
+  if (!pick || !UBY[pick] || UBY[pick].dimension !== fu.dimension) return;
+  $("to").value = pick;
+}
+$("from").addEventListener("change", syncDimension);
+$("to").addEventListener("change", syncDimension);
 $("swapBtn").addEventListener("click", function () {
   var a = $("from").value;
   var b = $("to").value;
@@ -102,5 +103,5 @@ $("swapBtn").addEventListener("click", function () {
 });
 window.ap.go = function () { runBtn.click(); };
 window.ap.copy = function (btn) { copyText(window.ap.cs || "", btn); };
-window.ap.clear = function () { window.ap.cs = ""; $("val").value = "1"; if (UNITS) { $("from").value = "m"; $("to").value = "banana"; } };
+window.ap.clear = function () { window.ap.cs = ""; $("val").value = "1"; if (UNITS && UNITS.length) { $("from").value = DEF_FROM; $("to").value = DEF_TO; } };
 setTimeout(function () { runBtn.click(); }, 100);

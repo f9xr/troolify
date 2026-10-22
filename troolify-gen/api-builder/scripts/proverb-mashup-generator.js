@@ -1,36 +1,30 @@
-var TS = "https://api.tasta.space/v1";
-function tsGet(p) {
-  return new Promise(function (res, rej) {
-    var ctl = new AbortController();
-    var t = setTimeout(function () { ctl.abort(); }, 15000);
-    fetch(TS + p, { signal: ctl.signal }).then(function (r) {
-      clearTimeout(t);
-      return r.json().catch(function () { return null; }).then(function (j) {
-        if (j && j.error) { var e = new Error(j.error.message || "The API returned an error."); e.api = 1; throw e; }
-        if (!r.ok) throw new Error("The Tasta Space API responded with HTTP " + r.status + ".");
-        res(j && j.data != null ? j.data : j);
-      });
-    }).catch(function (e) {
-      clearTimeout(t);
-      if (e && e.name === "AbortError") { rej(new Error("The request timed out - the Tasta Space API may be busy. Try again in a moment.")); return; }
-      if (e && e.api) { rej(e); return; }
-      rej(new Error("Could not reach the Tasta Space API. It may be temporarily unavailable - please try again in a moment."));
-    });
-  });
-}
 function srcCard(f, half) {
-  return '<div class="pb-src"><b>' + esc(half) + ":</b> &ldquo;" + esc(f.text) + "&rdquo; &mdash; via <a href=\"" + esc(f.url) + '" target="_blank" rel="noopener">the proverb API</a>' +
-    (f.source ? ' and <a href="' + esc(f.source) + '" target="_blank" rel="noopener">the source</a>' : "") + "</div>";
+  var api=safeUrl(f.url),src=safeUrl(f.source);
+  var html='<div class="pb-src"><b>'+esc(half)+":</b> &ldquo;"+esc(f.text)+"&rdquo;";
+  if(api) html+=' &mdash; via <a href="'+esc(api)+'" target="_blank" rel="noopener">the proverb API</a>';
+  if(src) html+=' and <a href="'+esc(src)+'" target="_blank" rel="noopener">the source</a>';
+  return html+"</div>";
 }
 function run() {
   var lang = $("lang").value;
-  var seed = Math.random().toString(36).slice(2, 10);
+  var typed = $("seed").value.trim();
+  /* The hub accepts a seed of 1 to 64 letters, digits, dashes or underscores
+     and refuses anything else with a raw 422. */
+  if (typed && !validSeed(typed)) {
+    $("results").innerHTML = '<div class="res-err"><i class="fa-solid fa-triangle-exclamation"></i> A seed can be up to 64 letters, digits, dashes or underscores - no spaces or punctuation.</div>';
+    proc("Waiting for a valid seed.");
+    return;
+  }
+  var seed = typed || Math.random().toString(36).slice(2, 10);
   var restore = busify(runBtn);
   proc("Mashing proverbs via the Tasta Space API...");
   tsGet("/proverbs/mashup?lang=" + encodeURIComponent(lang) + "&seed=" + encodeURIComponent(seed))
     .then(function (d) {
       window.ap.cs = d.mashup || "";
       window.ap.pl = d.permalink || "";
+      /* The hub echoes the seed it used - a random one when none was given -
+         so it is put back in the box and the mashup can be rebuilt later. */
+      if (d.seed) $("seed").value = d.seed;
       var html = "";
       html += '<div class="quote-body"><i class="fa-solid fa-quote-left"></i>' + esc(d.mashup || "") + "</div>";
       html += '<div class="actions" style="justify-content:center;margin-top:12px">';
@@ -43,7 +37,7 @@ function run() {
           html += srcCard(f, f.half === "first" ? "First half" : "Second half");
         });
       }
-      if (d.card) html += '<div class="media-host" style="margin-top:14px"><img class="media-prev" src="' + esc(d.card) + '" alt="Proverb mashup share card" loading="lazy"></div>';
+      if (d.card) html += '<div class="media-host" style="margin-top:14px"><img class="media-prev" src="' + esc(mediaUrl(d.card)) + '" alt="Proverb mashup share card" loading="lazy"></div>';
       $("results").innerHTML = html;
       proc("\u201c" + (d.mashup || "") + "\u201d");
       restore();
@@ -62,5 +56,5 @@ runBtn.addEventListener("click", function () {
 window.ap.go = function () { runBtn.click(); };
 window.ap.copy = function (btn) { copyText(window.ap.cs || "", btn); };
 window.ap.copyLink = function (btn) { copyText(window.ap.pl || "", btn); };
-window.ap.clear = function () { window.ap.cs = ""; window.ap.pl = ""; };
+window.ap.clear = function () { window.ap.cs = ""; window.ap.pl = ""; $("seed").value = ""; };
 setTimeout(function () { runBtn.click(); }, 100);

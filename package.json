@@ -4,7 +4,8 @@
   "private": true,
   "description": "Troolify - static tool hub build tooling (minify + asset reference rewrites)",
   "scripts": {
-    "minify": "node troolify-gen/minify.js"
+    "minify": "node troolify-gen/minify.js",
+    "build:api": "node troolify-gen/api-builder/build.js && node troolify-gen/apply-zc-fixes.js && node troolify-gen/minify.js"
   },
   "devDependencies": {
     "clean-css": "^5.3.2",

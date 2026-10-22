@@ -4,7 +4,7 @@ window.ap=window.ap||{};
 runBtn.addEventListener("click",function(){
   if(this.disabled)return;var restore=busify(this);lastR="";
   apiGet("/api/fun/roast",function(d){
-    lastR=String(d);
+    lastR=apiText(d,["roast","text","result"]);
     $("results").innerHTML=
       '<div class="quote-body"><i class="fa-solid fa-fire"></i>'+esc(lastR)+"</div>"+
       '<div class="actions" style="justify-content:center;margin-top:14px">'+

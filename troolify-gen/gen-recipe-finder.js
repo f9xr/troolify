@@ -48,8 +48,26 @@ const RF_CSS =
 
 const RF_JS = `
 var $=function(id){return document.getElementById(id)};
-function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');}
 function safeUrl(u){return /^https?:\\/\\//i.test(String(u||''))?String(u):'';}
+function rfFetch(url){
+  var ctl=new AbortController();
+  var timer=setTimeout(function(){ctl.abort();},15000);
+  return fetch(url,{signal:ctl.signal}).then(function(res){
+    clearTimeout(timer);
+    if(!res.ok)throw new Error('HTTP '+res.status);
+    return res.json();
+  }).catch(function(e){
+    clearTimeout(timer);
+    if(e&&e.name==='AbortError')throw new Error('timeout');
+    throw e;
+  });
+}
+function rfErrorText(e){
+  return e&&e.message==='timeout'
+    ?'The recipe API took too long to answer - please try again in a moment.'
+    :'Could not reach the recipe API. It may be temporarily unavailable - please try again in a moment.';
+}
 function setProc(m){var p=$('rfProc');if(p)p.textContent=m;}
 function showMsg(m,err){var el=$('rfMsg');el.textContent=m;el.className='rf-message show'+(err?' err':'');}
 function hideMsg(){var el=$('rfMsg');if(el)el.className='rf-message';}
@@ -76,31 +94,25 @@ function doSearch(q){
   if(!q){showMsg('Enter a dish name or ingredient first.',true);return;}
   hideMsg();renderCards(null);
   setProc('Searching TheMealDB for "'+q+'"...');
-  fetch(SEARCH_URL+encodeURIComponent(q)).then(function(res){
-    if(!res.ok)throw new Error('HTTP '+res.status);
-    return res.json();
-  }).then(function(data){
+  rfFetch(SEARCH_URL+encodeURIComponent(q)).then(function(data){
     var meals=(data&&data.meals)||[];
     if(meals.length){renderCards(meals);setProc(meals.length>1?meals.length+' recipes found for "'+q+'".':'One recipe found for "'+q+'".');}
     else{setProc('Search complete.');showMsg('No recipes found for "'+q+'". Try a different name or a main ingredient like "chicken" or "carrot".');}
-  }).catch(function(){
+  }).catch(function(e){
     setProc('Request failed.');
-    showMsg('Could not reach the recipe API. It may be temporarily unavailable - please try again in a moment.',true);
+    showMsg(rfErrorText(e),true);
   });
 }
 function getRandom(){
   hideMsg();renderCards(null);
   setProc('Fetching a random recipe...');
-  fetch(RANDOM_URL).then(function(res){
-    if(!res.ok)throw new Error('HTTP '+res.status);
-    return res.json();
-  }).then(function(data){
+  rfFetch(RANDOM_URL).then(function(data){
     var meal=data&&data.meals&&data.meals[0];
     if(meal){renderCards([meal]);setProc('Random pick ready - click the card to open the method.');}
     else{setProc('Request failed.');showMsg('Could not fetch a random recipe. Please try again.',true);}
-  }).catch(function(){
+  }).catch(function(e){
     setProc('Request failed.');
-    showMsg('Could not reach the recipe API. It may be temporarily unavailable - please try again in a moment.',true);
+    showMsg(rfErrorText(e),true);
   });
 }
 function showModal(){var m=$('rfModal');m.classList.add('open');document.body.style.overflow='hidden';}
@@ -136,15 +148,12 @@ function getDetails(id){
   if(!id)return;
   $('rfModalBody').innerHTML='<p class="rf-instr"><i class="fa-solid fa-circle-notch fa-spin"></i> Loading recipe details...</p>';
   showModal();setProc('Fetching recipe details...');
-  fetch(LOOKUP_URL+encodeURIComponent(id)).then(function(res){
-    if(!res.ok)throw new Error('HTTP '+res.status);
-    return res.json();
-  }).then(function(data){
+  rfFetch(LOOKUP_URL+encodeURIComponent(id)).then(function(data){
     var meal=data&&data.meals&&data.meals[0];
     if(meal){openModal(meal);setProc('Recipe details loaded.');}
     else{hideModal();setProc('Request failed.');showMsg('Could not load that recipe. Please try again.',true);}
-  }).catch(function(){
-    $('rfModalBody').innerHTML='<p class="rf-message show err">Failed to load recipe details. Check your connection and try again.</p>';
+  }).catch(function(e){
+    $('rfModalBody').innerHTML='<p class="rf-message show err">'+esc(rfErrorText(e))+'</p>';
     setProc('Request failed.');
   });
 }

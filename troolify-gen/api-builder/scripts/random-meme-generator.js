@@ -3,11 +3,11 @@ window.ap=window.ap||{};
 runBtn.addEventListener("click",function(){
   if(this.disabled)return;var restore=busify(this);
   apiGet("/api/fun/meme?nsfw="+(nsfw.checked?"true":"false"),function(d){
-    var img=d.meme_url||(d.preview_images&&d.preview_images[d.preview_images.length-1])||"";
+    var img=mediaUrl(d.meme_url)||mediaUrl(d.preview_images&&d.preview_images[d.preview_images.length-1]);
     var title=d.title||"Untitled meme";
     var sub=d.subreddit||"";
     var uv=(d.up_votes!=null)?d.up_votes:"";
-    var post=d.post_link||"";
+    var post=safeUrl(d.post_link);
     $("results").innerHTML=
       '<div class="meme-title">'+esc(title)+"</div>"+
       (img?'<div class="media-host"><img class="media-prev" src="'+esc(img)+'" alt="Random meme from r/'+esc(sub)+'" loading="lazy"></div>':'')+

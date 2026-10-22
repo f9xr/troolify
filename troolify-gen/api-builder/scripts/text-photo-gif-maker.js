@@ -31,5 +31,5 @@ runBtn.addEventListener("click",function(){
   },{once:true});
 });
 window.ap.go=function(){runBtn.click();};
-window.ap.open=function(){if(lastUrl)window.open(lastUrl,"_blank");};
-window.ap.dl=function(btn){if(!lastUrl){if(btn)btn.innerHTML="Generate first";return;}downloadFromUrl(lastUrl,"troolify-"+(lastMode==="attp"?"ttg":"ttp")+(lastMode==="attp"?".gif":".png"));};
+window.ap.open=function(){var s=safeUrl(lastUrl);if(s)window.open(s,"_blank","noopener");};
+window.ap.dl=function(btn){if(!lastUrl){if(btn)btn.innerHTML="Generate first";return;}downloadFromUrl(lastUrl,"troolify-"+(lastMode==="attp"?"text-gif":"text-photo")+(lastMode==="attp"?".gif":".png"));};

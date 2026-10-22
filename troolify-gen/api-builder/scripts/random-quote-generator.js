@@ -4,7 +4,7 @@ window.ap=window.ap||{};
 runBtn.addEventListener("click",function(){
   if(!this.disabled){var restore=busify(this);lastQ="";lastA="";
   apiGet("/api/fun/quotes",function(d){
-    lastQ=d.quotes||d.quote||d.result||String(d);lastA=d.author||"";
+    lastQ=apiText(d,["quotes","quote","text","result"]);lastA=(d&&typeof d.author==="string")?d.author:"";
     $("results").innerHTML=
       '<div class="quote-body" id="qBody">&ldquo;'+esc(lastQ)+'&rdquo;</div>'+
       (lastA?'<div class="quote-author">&mdash; '+esc(lastA)+'</div>':'')+

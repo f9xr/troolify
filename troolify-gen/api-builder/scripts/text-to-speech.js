@@ -7,7 +7,7 @@ runBtn.addEventListener("click",function(){
   if(!t){$("results").innerHTML='<div class="res-err"><i class="fa-solid fa-triangle-exclamation"></i> Type or paste some text first.</div>';proc("Ready.");return;}
   var restore=busify(this);lastAudio="";
   apiGet("/api/tool/tts?text="+encodeURIComponent(t),function(d){
-    lastAudio=(d.tts&&d.tts.url)||d.url||"";
+    lastAudio=mediaUrl((d.tts&&d.tts.url)||d.url);
     if(!lastAudio){$("results").innerHTML='<div class="res-err"><i class="fa-solid fa-triangle-exclamation"></i> The API returned no audio.</div>';return;}
     $("results").innerHTML=
       '<div class="media-host" style="margin-top:6px"><audio id="ttsAudio" controls autoplay style="width:100%;max-width:420px"><source src="'+esc(lastAudio)+'" type="audio/mpeg">Your browser does not support audio playback.</audio></div>'+
@@ -18,5 +18,5 @@ runBtn.addEventListener("click",function(){
       "</div>";restore();},restore);
 });
 window.ap.go=function(){runBtn.click();};
-window.ap.open=function(){if(lastAudio)window.open(lastAudio,"_blank");};
+window.ap.open=function(){var s=safeUrl(lastAudio);if(s)window.open(s,"_blank","noopener");};
 window.ap.dl=function(btn){if(!lastAudio){if(btn)btn.innerHTML="Speak first";return;}downloadFromUrl(lastAudio,"troolify-speech.mp3");};

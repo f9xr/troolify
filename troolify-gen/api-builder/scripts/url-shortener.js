@@ -5,10 +5,16 @@ runBtn.addEventListener("click",function(){
   if(this.disabled)return;
   var u=$("url").value.trim();
   if(!u){$("results").innerHTML='<div class="res-err"><i class="fa-solid fa-triangle-exclamation"></i> Paste a link first.</div>';proc("Ready.");return;}
+  if(/^[a-z][a-z0-9+.-]*:/i.test(u)&&!/^https?:\/\//i.test(u)){$("results").innerHTML='<div class="res-err"><i class="fa-solid fa-triangle-exclamation"></i> Only http:// and https:// links can be shortened.</div>';proc("Ready.");return;}
   if(!/^https?:\/\//i.test(u)){u="https://"+u;}
   var svc=$("svc").value;var restore=busify(this);lastShort="";
   apiGet("/api/tool/"+svc+"?url="+encodeURIComponent(u),function(d){
-    lastShort=(typeof d==="string")?d:(d.link||d.shorturl||d.shortUrl||d.url||String(d));
+    var raw=(typeof d==="string")?d:((d&&(d.link||d.shorturl||d.shortUrl||d.url))||"");
+    lastShort=safeUrl(raw);
+    if(!lastShort){
+      $("results").innerHTML='<div class="res-err"><i class="fa-solid fa-triangle-exclamation"></i> The API returned no usable short link - please try again.</div>';
+      return;
+    }
     $("results").innerHTML=
       '<div class="sh-link">'+
       '<i class="fa-solid fa-link" style="color:#60A5FA"></i>'+
@@ -16,7 +22,12 @@ runBtn.addEventListener("click",function(){
       '<button class="rt-btn" type="button" onclick="ap.copy(this)"><i class="fa-solid fa-copy"></i>Copy</button>'+
       '<button class="rt-btn" type="button" onclick="ap.open()"><i class="fa-solid fa-arrow-up-right-from-square"></i>Open</button>'+
       "</div>"+
-      '<div class="note" style="text-align:center"><b>Service:</b> '+(svc==="tinyurl"?"TinyURL":"Bitly")+" &middot; the short link redirects to your original URL.</div>";restore();},restore);
+      '<div class="note" style="text-align:center"><b>Service:</b> '+(svc==="tinyurl"?"TinyURL":"Bitly")+" &middot; the short link redirects to your original URL.</div>";},restore,function(msg){
+    /* Bitly's free tier is aggressively rate-limited - point people at the
+       alternative service instead of showing a raw upstream error. */
+    if(svc==="bitly"&&/rate|429/i.test(msg))return "Bitly is rate-limiting requests right now - wait a minute and try again, or switch the service to TinyURL.";
+    return null;
+  });
 });
 window.ap.copy=function(btn){if(!lastShort){if(btn)btn.innerHTML="Fetch first";return;}copyText(lastShort,btn);};
-window.ap.open=function(){if(lastShort)window.open(lastShort,"_blank","noopener");};
+window.ap.open=function(){var s=safeUrl(lastShort);if(s)window.open(s,"_blank","noopener");};

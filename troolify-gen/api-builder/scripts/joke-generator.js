@@ -5,7 +5,7 @@ $("jtype").addEventListener("change",function(){styleJ=this.value;});
 runBtn.addEventListener("click",function(){
   if(this.disabled)return;var restore=busify(this);setupTxt="";punchTxt="";
   apiGet("/api/fun/"+styleJ,function(d){
-    setupTxt=String(d.setup!=null?d.setup:d);punchTxt=String(d.punchline||"");
+    setupTxt=apiText(d,["setup","joke","text","result"]);punchTxt=(d&&typeof d.punchline==="string")?d.punchline:((d&&typeof d.punch==="string")?d.punch:"");
     $("results").innerHTML=
       '<div class="quote-body" id="setupCard">'+esc(setupTxt)+"</div>"+
       '<div class="quote-body" id="punchCard" style="font-size:.82rem;min-height:22px"><button class="rt-btn" type="button" onclick="ap.reveal(this)"><i class="fa-solid fa-eye"></i>Show punchline</button></div>'+

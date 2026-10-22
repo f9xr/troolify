@@ -368,12 +368,15 @@ async function run() {
       if (cur !== out) { inline++; out = cur; }
     }
 
+    // Point asset references at their minified siblings FIRST: the article
+    // stylesheet pass below matches the ".min.css" name, so renaming after
+    // it left every freshly built page with a render-blocking article CSS.
+    const renamed = rename(out);
+    if (renamed !== out) { refs++; out = renamed; }
+
     // ship the below-fold article stylesheet asynchronous on tool pages
     const art = deferArticleCss(out);
     if (art !== out) { articleAsync++; out = art; }
-
-    const renamed = rename(out);
-    if (renamed !== out) { refs++; out = renamed; }
 
     if (out !== before) {
       const isHref = /\.min\.(js|css)/.test(out)

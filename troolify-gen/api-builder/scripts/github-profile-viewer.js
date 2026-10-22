@@ -9,7 +9,7 @@ runBtn.addEventListener("click",function(){
   apiGet("/api/stalk/github?username="+encodeURIComponent(u),function(d){
     var user=d.username||u;
     var name=d.name||user;
-    var avatar=d.avatar||"";
+    var avatar=mediaUrl(d.avatar);
     var bio=d.bio||"";
     var followers=(d.followers!=null)?d.followers:0;
     var following=(d.following!=null)?d.following:0;
@@ -21,6 +21,7 @@ runBtn.addEventListener("click",function(){
     if(d.company)extras.push('<i class="fa-solid fa-building"></i> '+esc(d.company));
     if(d.location)extras.push('<i class="fa-solid fa-location-dot"></i> '+esc(d.location));
     if(d.website)extras.push('<i class="fa-solid fa-globe"></i> '+esc(d.website));
+    var profile=safeUrl(d.profile_url)||("https://github.com/"+encodeURIComponent(user));
     $("results").innerHTML=
       '<div class="gh-head">'+
       (avatar?'<img class="gh-avatar" src="'+esc(avatar)+'" alt="'+esc(user)+' avatar" loading="lazy">':'')+
@@ -34,7 +35,7 @@ runBtn.addEventListener("click",function(){
       "</div>"+
       (joined||extras.length?'<div class="meme-meta" style="margin-top:12px">'+(joined?'<span><i class="fa-solid fa-calendar"></i>Joined '+esc(joined)+"</span>":"")+extras.map(function(x){return "<span>"+x+"</span>";}).join("")+"</div>":"")+
       '<div class="actions" style="justify-content:center;margin-top:14px">'+
-      '<a class="rt-btn" href="'+esc(d.profile_url||("https://github.com/"+user))+'" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i>Visit GitHub</a>'+
+      '<a class="rt-btn" href="'+esc(profile)+'" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i>Visit GitHub</a>'+
       '<button class="rt-btn" type="button" onclick="ap.go()"><i class="fa-solid fa-rotate"></i>Look up again</button>'+
       "</div>";restore();},restore);
 });

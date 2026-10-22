@@ -1,7 +1,15 @@
-/* Builds the 14 API-powered tool pages and updates assets/js/tools-data.js.
+/* Builds the 20 API-powered tool pages and updates assets/js/tools-data.js.
    Run: node troolify-gen/api-builder/build.js [slug ...]
-   Pass one or more slugs to rebuild only those pages (other pages may carry
-   post-builder enhancements - gtag/AdSense/HowTo - that a rebuild would drop).
+   Pass one or more slugs to rebuild only those pages.
+
+   The generated page already carries gtag, AdSense and the view-transitions
+   stylesheet, so a rebuild no longer strips them. The HowTo/Article schema and
+   the "Quick answer" callout are added by the zero-click pass, and the local
+   asset references are restored by the minifier - so rebuild with the whole
+   pipeline instead of this file alone:
+
+       npm run build:api      (build -> apply-zc-fixes -> minify)
+
    Idempotent: registry lines are URL-guarded and pages are overwritten.      */
 const fs = require("fs");
 const path = require("path");
