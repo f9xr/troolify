@@ -28,7 +28,10 @@ const F = path.join(ROOT, 'tools', 'finance', 'compound-interest-calculator.html
 const ASSETS = path.join(__dirname, 'compound-interest');
 
 const css = fs.readFileSync(path.join(ASSETS, 'widget.css'), 'utf8').replace(/\r?\n/g, '\n');
-const widget = fs.readFileSync(path.join(ASSETS, 'widget.html'), 'utf8').replace(/\r?\n/g, '\n');
+/* widget.tpl, not widget.html: minify.js rewrites every .html file in the
+   repo (it appends a "data-minimized" marker), which would corrupt the
+   fragment this script embeds into the page. */
+const widget = fs.readFileSync(path.join(ASSETS, 'widget.tpl'), 'utf8').replace(/\r?\n/g, '\n');
 const js = fs.readFileSync(path.join(ASSETS, 'widget.js'), 'utf8').replace(/\r?\n/g, '\n');
 
 let h = fs.readFileSync(F, 'utf8');
@@ -148,6 +151,20 @@ replaceOnce(
   'article result sentence',
   '<p>The result shows your future value, total contributed, and the interest earned on top.</p>',
   '<p>The result shows your future value, total contributed, the interest earned on top, and the inflation-adjusted value in today&#39;s money - plus a year-by-year chart, table and a step-by-step explanation of every formula behind the numbers.</p>'
+);
+
+/* 5. the article gets the site-standard "On this page" table of contents
+      (batch 14 shipped the page without one). */
+replaceOnce(
+  'article table of contents',
+  '</aside><div class="article-layout">',
+  '</aside><details class="toc"><summary>On this page</summary><ol>' +
+  '<li><a href="#what-is-compound-interest"><i class="fa-solid fa-circle-info"></i>What is compound interest?</a></li>' +
+  '<li><a href="#how-to-use"><i class="fa-solid fa-list-ol"></i>How to use the Compound Interest Calculator</a></li>' +
+  '<li><a href="#why-it-matters"><i class="fa-solid fa-bullseye"></i>Why compound interest matters</a></li>' +
+  '<li><a href="#faq-title"><i class="fa-solid fa-circle-question"></i>Frequently asked questions</a></li>' +
+  '<li><a href="#conclusion"><i class="fa-solid fa-flag-checkered"></i>Conclusion</a></li>' +
+  '</ol></details><div class="article-layout">'
 );
 
 fs.writeFileSync(F, h, 'utf8');
