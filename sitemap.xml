@@ -333,7 +333,7 @@
   </url>
 <url>
     <loc>https://f9xr.org/troolify/tools/coding/html-table-generator.html</loc>
-    <lastmod>2026-09-09</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -1180,6 +1180,252 @@
 <url>
     <loc>https://f9xr.org/troolify/tools/discord/discord-timestamp-generator.html</loc>
     <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/embed/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/embed/abc-news-embed-code.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/embed/apple-music-embed-code.html</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/embed/bbc-embed-code.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/embed/bloomberg-embed-code.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/embed/business-insider-embed-code.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/embed/buzzfeed-embed-code.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/embed/canva-embed-code.html</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/embed/cbc-embed-code.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/embed/cbs-news-embed-code.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/embed/cnbc-embed-code.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/embed/cnn-embed-code.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/embed/discord-embed-code.html</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/embed/facebook-embed-code.html</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/embed/fox-news-embed-code.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/embed/giphy-embed-code.html</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/embed/global-news-embed-code.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/embed/google-maps-embed-code.html</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/embed/imgur-embed-code.html</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/embed/instagram-embed-code.html</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/embed/linkedin-embed-code.html</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/embed/mastodon-embed-code.html</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/embed/msnbc-embed-code.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/embed/nbc-news-embed-code.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/embed/new-york-times-embed-code.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/embed/npr-embed-code.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/embed/pinterest-embed-code.html</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/embed/reddit-embed-code.html</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/embed/reuters-embed-code.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/embed/soundcloud-embed-code.html</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/embed/spotify-embed-code.html</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/embed/telegram-embed-code.html</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/embed/the-independent-embed-code.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/embed/tiktok-embed-code.html</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/embed/twitch-embed-code.html</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/embed/twitter-embed-code.html</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/embed/usa-today-embed-code.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/embed/vimeo-embed-code.html</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/embed/wall-street-journal-embed-code.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/embed/washington-post-embed-code.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+<url>
+    <loc>https://f9xr.org/troolify/tools/embed/youtube-embed-code.html</loc>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>

@@ -174,12 +174,13 @@ function buildPage(spec) {
     '<link rel="stylesheet"href="../../assets/css/seo-article.min.css"media="print"onload="this.media=&#39;all&#39;">' +
     '<noscript><link rel="stylesheet"href="../../assets/css/seo-article.min.css"></noscript>' +
     '<style>' + BASE_CSS + (spec.css || '') + '</style>' +
+    (spec.extraHead || '') +
     '<script async src="https://www.googletagmanager.com/gtag/js?id=G-1D3C2DDCHV"></script>' +
     '<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-1D3C2DDCHV");</script>' +
     '<meta name="google-adsense-account"content="ca-pub-9769892721842144">' +
     '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9769892721842144"crossorigin="anonymous"></script></head>';
 
-  const noscript = '<body data-layout="tool"><noscript><nav aria-label="Primary"style="position:static;display:block;padding:1rem 1.5rem;background:#212529;border-bottom:1px solid #343A40;text-align:center;font-size:0.9rem;">' +
+  const noscript = '<body data-layout="tool"' + (spec.bodyAttrs ? ' ' + spec.bodyAttrs : '') + '><noscript><nav aria-label="Primary"style="position:static;display:block;padding:1rem 1.5rem;background:#212529;border-bottom:1px solid #343A40;text-align:center;font-size:0.9rem;">' +
     '<a href="../../"style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Home</a> ' +
     '<a href="../../tools/"style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">Tools</a> ' +
     '<a href="../../pages/about.html"style="color:#F8F9FA;margin:0 0.75rem;text-decoration:none;">About</a> ' +
@@ -240,6 +241,7 @@ function buildPage(spec) {
     '<div class="section-divider"aria-hidden="true"><span></span><i class="fa-solid fa-layer-group"></i><span></span></div></div></main>';
 
   const scripts = '<script src="../../assets/js/layout.min.js"defer></script><script src="../../assets/js/tool-page.min.js"defer></script>' +
+    (spec.scripts || '') +
     (spec.js ? '<script>!function(){"use strict";' + spec.js + '}();</script>' : '');
 
   const toolPanel = spec.panel;

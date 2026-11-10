@@ -1,4 +1,947 @@
+# Troolify - Embed Code Tools backlog
+#
+# Source directory: https://embedcodesgenerator.com/tools
+# Platforms found: 931 unique
+# Built: 40 | Remaining: 891
+#
+# Format: [status] Platform name -> tools/embed/<slug>-embed-code.html
+# Build one platform page per day from the pending list.
 
+## Built
+[x] TikTok -> tools/embed/tiktok-embed-code.html
+[x] X (Twitter) -> tools/embed/twitter-embed-code.html
+[x] YouTube -> tools/embed/youtube-embed-code.html
+[x] Instagram -> tools/embed/instagram-embed-code.html
+[x] Google Maps -> tools/embed/google-maps-embed-code.html
+[x] Facebook -> tools/embed/facebook-embed-code.html
+[x] Spotify -> tools/embed/spotify-embed-code.html
+[x] Canva -> tools/embed/canva-embed-code.html
+[x] Discord -> tools/embed/discord-embed-code.html
+[x] Reddit -> tools/embed/reddit-embed-code.html
+[x] Vimeo -> tools/embed/vimeo-embed-code.html
+[x] SoundCloud -> tools/embed/soundcloud-embed-code.html
+[x] Twitch -> tools/embed/twitch-embed-code.html
+[x] Linkedin -> tools/embed/linkedin-embed-code.html
+[x] Pinterest -> tools/embed/pinterest-embed-code.html
+[x] Telegram -> tools/embed/telegram-embed-code.html
+[x] Imgur -> tools/embed/imgur-embed-code.html
+[x] GIPHY -> tools/embed/giphy-embed-code.html
+[x] Apple Music -> tools/embed/apple-music-embed-code.html
+[x] Mastodon -> tools/embed/mastodon-embed-code.html
+
+## Pending
+[ ] 100X -> tools/embed/100x-embed-code.html
+[ ] 123FormBuilder -> tools/embed/123formbuilder-embed-code.html
+[ ] 1tv.ru -> tools/embed/1tvru-embed-code.html
+[ ] 23degrees -> tools/embed/23degrees-embed-code.html
+[ ] 23HQ -> tools/embed/23hq-embed-code.html
+[ ] 24liveblog -> tools/embed/24liveblog-embed-code.html
+[ ] 360 Stories -> tools/embed/360-stories-embed-code.html
+[ ] 3DCrafts -> tools/embed/3dcrafts-embed-code.html
+[ ] 500px -> tools/embed/500px-embed-code.html
+[ ] Ä°zlesene -> tools/embed/izlesene-embed-code.html
+[ ] Abacum -> tools/embed/abacum-embed-code.html
+[x] ABC News -> tools/embed/abc-news-embed-code.html
+[ ] Acast -> tools/embed/acast-embed-code.html
+[ ] ActionButton -> tools/embed/actionbutton-embed-code.html
+[ ] Acuity Scheduling -> tools/embed/acuity-scheduling-embed-code.html
+[ ] AddEvent -> tools/embed/addevent-embed-code.html
+[ ] Adilo -> tools/embed/adilo-embed-code.html
+[ ] Adobe -> tools/embed/adobe-embed-code.html
+[ ] Adobe Express -> tools/embed/adobe-express-embed-code.html
+[ ] Adobe XD -> tools/embed/adobe-xd-embed-code.html
+[ ] Adori Labs -> tools/embed/adori-labs-embed-code.html
+[ ] Adventr -> tools/embed/adventr-embed-code.html
+[ ] afreecaTV -> tools/embed/afreecatv-embed-code.html
+[ ] Aha.video -> tools/embed/ahavideo-embed-code.html
+[ ] Airbnb -> tools/embed/airbnb-embed-code.html
+[ ] AirDeck -> tools/embed/airdeck-embed-code.html
+[ ] Airtable -> tools/embed/airtable-embed-code.html
+[ ] ALIVE528 -> tools/embed/alive528-embed-code.html
+[ ] Allears -> tools/embed/allears-embed-code.html
+[ ] Allego -> tools/embed/allego-embed-code.html
+[ ] Allstar -> tools/embed/allstar-embed-code.html
+[ ] Alpaca Travel -> tools/embed/alpaca-travel-embed-code.html
+[ ] Altium 365 -> tools/embed/altium-365-embed-code.html
+[ ] Alugha -> tools/embed/alugha-embed-code.html
+[ ] Amazon -> tools/embed/amazon-embed-code.html
+[ ] amCharts -> tools/embed/amcharts-embed-code.html
+[ ] Anchor -> tools/embed/anchor-embed-code.html
+[ ] Anchor FM -> tools/embed/anchor-fm-embed-code.html
+[ ] Animoto -> tools/embed/animoto-embed-code.html
+[ ] AnswerGarden -> tools/embed/answergarden-embed-code.html
+[ ] Aparat -> tools/embed/aparat-embed-code.html
+[ ] Api Video -> tools/embed/api-video-embed-code.html
+[ ] api.video -> tools/embed/apivideo-embed-code.html
+[ ] Apple Keynote -> tools/embed/apple-keynote-embed-code.html
+[ ] Apple Newsroom -> tools/embed/apple-newsroom-embed-code.html
+[ ] Apple Podcasts -> tools/embed/apple-podcasts-embed-code.html
+[ ] Appointment Scheduling with Google Calendar -> tools/embed/appointment-scheduling-with-google-calendar-embed-code.html
+[ ] Arcade -> tools/embed/arcade-embed-code.html
+[ ] ArcGIS Online -> tools/embed/arcgis-online-embed-code.html
+[ ] ArcGIS StoryMaps -> tools/embed/arcgis-storymaps-embed-code.html
+[ ] Archilogic -> tools/embed/archilogic-embed-code.html
+[ ] Archivos -> tools/embed/archivos-embed-code.html
+[ ] ARD Mediathek -> tools/embed/ard-mediathek-embed-code.html
+[ ] Arqspin -> tools/embed/arqspin-embed-code.html
+[ ] ART19 -> tools/embed/art19-embed-code.html
+[ ] ArtStation -> tools/embed/artstation-embed-code.html
+[ ] Asana -> tools/embed/asana-embed-code.html
+[ ] Asset TV -> tools/embed/asset-tv-embed-code.html
+[ ] audio.com -> tools/embed/audiocom-embed-code.html
+[ ] AudioBoom -> tools/embed/audioboom-embed-code.html
+[ ] AudioClip -> tools/embed/audioclip-embed-code.html
+[ ] Audiomack -> tools/embed/audiomack-embed-code.html
+[ ] Audiomeans -> tools/embed/audiomeans-embed-code.html
+[ ] Audius -> tools/embed/audius-embed-code.html
+[ ] Ausha -> tools/embed/ausha-embed-code.html
+[ ] Austria Presse Agentur -> tools/embed/austria-presse-agentur-embed-code.html
+[ ] Autodesk -> tools/embed/autodesk-embed-code.html
+[ ] Backtracks -> tools/embed/backtracks-embed-code.html
+[ ] Balsamiq -> tools/embed/balsamiq-embed-code.html
+[ ] Bandcamp -> tools/embed/bandcamp-embed-code.html
+[ ] Bandsintown -> tools/embed/bandsintown-embed-code.html
+[ ] Bandzoogle -> tools/embed/bandzoogle-embed-code.html
+[x] BBC -> tools/embed/bbc-embed-code.html
+[ ] Beams.fm -> tools/embed/beamsfm-embed-code.html
+[ ] BeatStars -> tools/embed/beatstars-embed-code.html
+[ ] Beautiful Ai -> tools/embed/beautiful-ai-embed-code.html
+[ ] Beautiful.AI -> tools/embed/beautifulai-embed-code.html
+[ ] Behance -> tools/embed/behance-embed-code.html
+[ ] BeOp -> tools/embed/beop-embed-code.html
+[ ] Berliner Morgenpost -> tools/embed/berliner-morgenpost-embed-code.html
+[ ] Beyonk -> tools/embed/beyonk-embed-code.html
+[ ] Big Think -> tools/embed/big-think-embed-code.html
+[ ] BILD -> tools/embed/bild-embed-code.html
+[ ] Bilibili -> tools/embed/bilibili-embed-code.html
+[ ] Bing Maps -> tools/embed/bing-maps-embed-code.html
+[ ] BitChute -> tools/embed/bitchute-embed-code.html
+[ ] Blackfire.io -> tools/embed/blackfireio-embed-code.html
+[ ] Blogger -> tools/embed/blogger-embed-code.html
+[ ] BlogTalkRadio -> tools/embed/blogtalkradio-embed-code.html
+[x] Bloomberg -> tools/embed/bloomberg-embed-code.html
+[ ] Blossom -> tools/embed/blossom-embed-code.html
+[ ] Bluesky -> tools/embed/bluesky-embed-code.html
+[ ] Bonzo -> tools/embed/bonzo-embed-code.html
+[ ] Booking.com -> tools/embed/booking-embed-code.html
+[ ] Bookingmood -> tools/embed/bookingmood-embed-code.html
+[ ] Box -> tools/embed/box-embed-code.html
+[ ] Brainshark -> tools/embed/brainshark-embed-code.html
+[ ] BranchTrack -> tools/embed/branchtrack-embed-code.html
+[ ] Bravo TV -> tools/embed/bravo-tv-embed-code.html
+[ ] Brightcove -> tools/embed/brightcove-embed-code.html
+[ ] Bubbles -> tools/embed/bubbles-embed-code.html
+[ ] Bubbli -> tools/embed/bubbli-embed-code.html
+[ ] Bumper -> tools/embed/bumper-embed-code.html
+[ ] Buncee -> tools/embed/buncee-embed-code.html
+[ ] Bundle -> tools/embed/bundle-embed-code.html
+[ ] bunny.net -> tools/embed/bunnynet-embed-code.html
+[x] Business Insider -> tools/embed/business-insider-embed-code.html
+[ ] Buttondown -> tools/embed/buttondown-embed-code.html
+[ ] Buy Me a Coffee -> tools/embed/buymeacoffee-embed-code.html
+[x] BuzzFeed -> tools/embed/buzzfeed-embed-code.html
+[ ] Buzzsprout -> tools/embed/buzzsprout-embed-code.html
+[ ] Cadence 13 -> tools/embed/cadence-13-embed-code.html
+[ ] Cadence13 -> tools/embed/cadence13-embed-code.html
+[ ] CalamÃ©o -> tools/embed/calamo-embed-code.html
+[ ] CalamÃ©o -> tools/embed/calameo-embed-code.html
+[ ] Calendly -> tools/embed/calendly-embed-code.html
+[ ] CANAL+ -> tools/embed/canal-embed-code.html
+[ ] Cappasity -> tools/embed/cappasity-embed-code.html
+[ ] Captivate -> tools/embed/captivate-embed-code.html
+[ ] Captur3d -> tools/embed/captur3d-embed-code.html
+[ ] Carrd -> tools/embed/carrd-embed-code.html
+[ ] cars.com -> tools/embed/carscom-embed-code.html
+[ ] CARTO -> tools/embed/carto-embed-code.html
+[ ] Castbox -> tools/embed/castbox-embed-code.html
+[ ] Castopod -> tools/embed/castopod-embed-code.html
+[ ] Causal -> tools/embed/causal-embed-code.html
+[x] CBC -> tools/embed/cbc-embed-code.html
+[x] CBS News -> tools/embed/cbs-news-embed-code.html
+[ ] Cbsnews -> tools/embed/cbsnews-embed-code.html
+[ ] Ceros -> tools/embed/ceros-embed-code.html
+[ ] Changelog -> tools/embed/changelog-embed-code.html
+[ ] ChartBlocks -> tools/embed/chartblocks-embed-code.html
+[ ] ChartBrick -> tools/embed/chartbrick-embed-code.html
+[ ] Chess.com -> tools/embed/chesscom-embed-code.html
+[ ] chevereto.com -> tools/embed/cheveretocom-embed-code.html
+[ ] Chirbit -> tools/embed/chirbit-embed-code.html
+[ ] Chromatic -> tools/embed/chromatic-embed-code.html
+[ ] Cincopa -> tools/embed/cincopa-embed-code.html
+[ ] Cinema8 -> tools/embed/cinema8-embed-code.html
+[ ] Cinnamon -> tools/embed/cinnamon-embed-code.html
+[ ] CircuitLab -> tools/embed/circuitlab-embed-code.html
+[ ] CleanShot -> tools/embed/cleanshot-embed-code.html
+[ ] ClickUp -> tools/embed/clickup-embed-code.html
+[ ] Clipchamp -> tools/embed/clipchamp-embed-code.html
+[ ] CloudApp -> tools/embed/cloudapp-embed-code.html
+[ ] Cloudflare Stream -> tools/embed/cloudflare-stream-embed-code.html
+[ ] Cloudup -> tools/embed/cloudup-embed-code.html
+[ ] ClubSpace -> tools/embed/clubspace-embed-code.html
+[ ] Clyp -> tools/embed/clyp-embed-code.html
+[x] CNBC -> tools/embed/cnbc-embed-code.html
+[ ] CNE Video -> tools/embed/cnevids-embed-code.html
+[x] CNN -> tools/embed/cnn-embed-code.html
+[ ] Coda -> tools/embed/coda-embed-code.html
+[ ] Codeit -> tools/embed/codeit-embed-code.html
+[ ] CodePen -> tools/embed/codepen-embed-code.html
+[ ] Codeply -> tools/embed/codeply-embed-code.html
+[ ] Codepoints -> tools/embed/codepoints-embed-code.html
+[ ] CodeSandbox -> tools/embed/codesandbox-embed-code.html
+[ ] Collect.chat -> tools/embed/collectchat-embed-code.html
+[ ] Comcast Player -> tools/embed/comcast-player-embed-code.html
+[ ] Comedy Central -> tools/embed/comedy-central-embed-code.html
+[ ] Commaful -> tools/embed/commaful-embed-code.html
+[ ] Common Ninja -> tools/embed/commoninja-embed-code.html
+[ ] Common Ninja -> tools/embed/common-ninja-embed-code.html
+[ ] Concert -> tools/embed/concert-embed-code.html
+[ ] CondÃ© Nast Entertainment -> tools/embed/conde-nast-entertainment-embed-code.html
+[ ] CondÃ© Nast Entertainment -> tools/embed/cond-nast-entertainment-embed-code.html
+[ ] Consumer Reports -> tools/embed/consumer-reports-embed-code.html
+[ ] Contra -> tools/embed/contra-embed-code.html
+[ ] ConvertKit -> tools/embed/convertkit-embed-code.html
+[ ] Corriere Tv -> tools/embed/corriere-tv-embed-code.html
+[ ] CoStar -> tools/embed/costar-embed-code.html
+[ ] Coub -> tools/embed/coub-embed-code.html
+[ ] Creo Media Player -> tools/embed/creo-media-player-embed-code.html
+[ ] Crowdsignal -> tools/embed/crowdsignal-embed-code.html
+[ ] Crumb.sh -> tools/embed/crumbsh-embed-code.html
+[ ] Crunchbase -> tools/embed/crunchbase-embed-code.html
+[ ] C-SPAN -> tools/embed/c-span-embed-code.html
+[ ] CUBE365 -> tools/embed/cube365-embed-code.html
+[ ] Cueup DJ Booking -> tools/embed/cueup-dj-booking-embed-code.html
+[ ] Curated -> tools/embed/curated-embed-code.html
+[ ] Curioo -> tools/embed/curioo-embed-code.html
+[ ] Customer Voice -> tools/embed/customer-voice-embed-code.html
+[ ] Dabble -> tools/embed/dabble-embed-code.html
+[ ] Dacast -> tools/embed/dacast-embed-code.html
+[ ] dadan -> tools/embed/dadan-embed-code.html
+[ ] Daily Mail -> tools/embed/dailymail-embed-code.html
+[ ] Daily Mail Online -> tools/embed/daily-mail-online-embed-code.html
+[ ] Dailymotion -> tools/embed/dailymotion-embed-code.html
+[ ] Datapane -> tools/embed/datapane-embed-code.html
+[ ] Datawrapper -> tools/embed/datawrapper-embed-code.html
+[ ] dbdiagram.io -> tools/embed/dbdiagramio-embed-code.html
+[ ] Deepnote -> tools/embed/deepnote-embed-code.html
+[ ] Deezer -> tools/embed/deezer-embed-code.html
+[ ] Democracy Now! -> tools/embed/democracy-now-embed-code.html
+[ ] Descript -> tools/embed/descript-embed-code.html
+[ ] Deseret News -> tools/embed/deseret-news-embed-code.html
+[ ] detikcom -> tools/embed/detikcom-embed-code.html
+[ ] DeviantArt -> tools/embed/deviantart-embed-code.html
+[ ] Diagrams.net -> tools/embed/diagrams-embed-code.html
+[ ] Diario AS -> tools/embed/diario-as-embed-code.html
+[ ] Diario del Alto AragÃ³n -> tools/embed/diario-del-alto-aragn-embed-code.html
+[ ] Diario del Alto AragÃ³n -> tools/embed/diario-del-alto-aragon-embed-code.html
+[ ] Didacte -> tools/embed/didacte-embed-code.html
+[ ] Digiteka -> tools/embed/digiteka-embed-code.html
+[ ] Discovered -> tools/embed/discovered-embed-code.html
+[ ] Disney -> tools/embed/disney-embed-code.html
+[ ] DKN.TV -> tools/embed/dkntv-embed-code.html
+[ ] DNBRadio -> tools/embed/dnbradio-embed-code.html
+[ ] DocDroid -> tools/embed/docdroid-embed-code.html
+[ ] Docswell -> tools/embed/docswell-embed-code.html
+[ ] Doculet -> tools/embed/doculet-embed-code.html
+[ ] DocumentCloud -> tools/embed/documentcloud-embed-code.html
+[ ] DocuSign -> tools/embed/docusign-embed-code.html
+[ ] Dotsub -> tools/embed/dotsub-embed-code.html
+[ ] draw.io -> tools/embed/drawio-embed-code.html
+[ ] Dream Broker -> tools/embed/dream-broker-embed-code.html
+[ ] Dreambroker -> tools/embed/dreambroker-embed-code.html
+[ ] Dribbble -> tools/embed/dribbble-embed-code.html
+[ ] Drift -> tools/embed/drift-embed-code.html
+[ ] Dropbox -> tools/embed/dropbox-embed-code.html
+[ ] Dropbox Capture -> tools/embed/dropbox-capture-embed-code.html
+[ ] Dropbox Paper -> tools/embed/dropbox-paper-embed-code.html
+[ ] Dropdeck -> tools/embed/dropdeck-embed-code.html
+[ ] Droplr -> tools/embed/droplr-embed-code.html
+[ ] DTube -> tools/embed/dtube-embed-code.html
+[ ] DynTube -> tools/embed/dyntube-embed-code.html
+[ ] Dzen -> tools/embed/dzen-embed-code.html
+[ ] Edpuzzle -> tools/embed/edpuzzle-embed-code.html
+[ ] Educandy -> tools/embed/educandy-embed-code.html
+[ ] Educaplay -> tools/embed/educaplay-embed-code.html
+[ ] eduMedia -> tools/embed/edumedia-embed-code.html
+[ ] eFront -> tools/embed/efront-embed-code.html
+[ ] Eko -> tools/embed/eko-embed-code.html
+[ ] El Comercio -> tools/embed/el-comercio-embed-code.html
+[ ] Elfsight -> tools/embed/elfsight-embed-code.html
+[ ] Ellie -> tools/embed/ellie-embed-code.html
+[ ] Embedery -> tools/embed/embedery-embed-code.html
+[ ] Embedly -> tools/embed/embedly-embed-code.html
+[ ] Emberly -> tools/embed/emberly-embed-code.html
+[ ] emojicom -> tools/embed/emojicom-embed-code.html
+[ ] EngageVideo -> tools/embed/engagevideo-embed-code.html
+[ ] Esheeq Love Story -> tools/embed/esheeq-love-story-embed-code.html
+[ ] ESPN -> tools/embed/espn-embed-code.html
+[ ] Esri videos -> tools/embed/esri-videos-embed-code.html
+[ ] Essential -> tools/embed/essential-embed-code.html
+[ ] EthFiddle -> tools/embed/ethfiddle-embed-code.html
+[ ] Etsy -> tools/embed/etsy-embed-code.html
+[ ] Eurosport -> tools/embed/eurosport-embed-code.html
+[ ] Eventbrite -> tools/embed/eventbrite-embed-code.html
+[ ] EventLive -> tools/embed/eventlive-embed-code.html
+[ ] everviz -> tools/embed/everviz-embed-code.html
+[ ] Everwall -> tools/embed/everwall-embed-code.html
+[ ] Ex Co -> tools/embed/ex-co-embed-code.html
+[ ] Ex.Co -> tools/embed/exco-embed-code.html
+[ ] Excalidraw -> tools/embed/excalidraw-embed-code.html
+[ ] Exploratory -> tools/embed/exploratory-embed-code.html
+[ ] Expo Snack -> tools/embed/expo-snack-embed-code.html
+[ ] Expressen -> tools/embed/expressen-embed-code.html
+[ ] EyeEm -> tools/embed/eyeem-embed-code.html
+[ ] Eyrie -> tools/embed/eyrie-embed-code.html
+[ ] Facebook Gaming -> tools/embed/facebook-gaming-embed-code.html
+[ ] Facer -> tools/embed/facer-embed-code.html
+[ ] Fader -> tools/embed/fader-embed-code.html
+[ ] Faithlife -> tools/embed/faithlife-embed-code.html
+[ ] Faithlife TV -> tools/embed/faithlife-tv-embed-code.html
+[ ] Fanatik -> tools/embed/fanatik-embed-code.html
+[ ] Fathom Video -> tools/embed/fathom-video-embed-code.html
+[ ] Felt -> tools/embed/felt-embed-code.html
+[ ] Figma -> tools/embed/figma-embed-code.html
+[ ] figshare -> tools/embed/figshare-embed-code.html
+[ ] Fillout -> tools/embed/fillout-embed-code.html
+[ ] Find a COVID-19 Vaccination -> tools/embed/find-a-covid-19-vaccination-embed-code.html
+[ ] Fireflies.ai -> tools/embed/firefliesai-embed-code.html
+[ ] Firework -> tools/embed/firework-embed-code.html
+[ ] Firstory -> tools/embed/firstory-embed-code.html
+[ ] FITE -> tools/embed/fite-embed-code.html
+[ ] Flat -> tools/embed/flat-embed-code.html
+[ ] Flickr -> tools/embed/flickr-embed-code.html
+[ ] Flip -> tools/embed/flip-embed-code.html
+[ ] Flip.shop -> tools/embed/flipshop-embed-code.html
+[ ] Flipboard -> tools/embed/flipboard-embed-code.html
+[ ] FlipBooklets -> tools/embed/flipbooklets-embed-code.html
+[ ] FLIPHTML5 -> tools/embed/fliphtml5-embed-code.html
+[ ] FlippingBook -> tools/embed/flippingbook-embed-code.html
+[ ] Flipsnack -> tools/embed/flipsnack-embed-code.html
+[ ] Floik -> tools/embed/floik-embed-code.html
+[ ] Floorplanner -> tools/embed/floor-planner-embed-code.html
+[ ] Flourish -> tools/embed/flourish-embed-code.html
+[ ] Flourish Studio -> tools/embed/flourish-studio-embed-code.html
+[ ] Flowplayer -> tools/embed/flowplayer-embed-code.html
+[ ] FlowVella -> tools/embed/flowvella-embed-code.html
+[ ] Flux -> tools/embed/flux-embed-code.html
+[ ] Flytrap -> tools/embed/flytrap-embed-code.html
+[ ] Food Foundation Recipes -> tools/embed/food-foundation-recipes-embed-code.html
+[ ] Footpath -> tools/embed/footpath-embed-code.html
+[ ] Formaloo -> tools/embed/formaloo-embed-code.html
+[ ] FormBuilder123 -> tools/embed/formbuilder123-embed-code.html
+[ ] Forme -> tools/embed/forme-embed-code.html
+[ ] Formstack -> tools/embed/formstack-embed-code.html
+[ ] Fotor -> tools/embed/fotor-embed-code.html
+[ ] Fox Business -> tools/embed/fox-business-embed-code.html
+[x] Fox News -> tools/embed/fox-news-embed-code.html
+[ ] FOX Sports Australia -> tools/embed/fox-sports-australia-embed-code.html
+[ ] FOX Weather -> tools/embed/fox-weather-embed-code.html
+[ ] Framer -> tools/embed/framer-embed-code.html
+[ ] Future Tape -> tools/embed/future-tape-embed-code.html
+[ ] FWD:Everyone -> tools/embed/fwdeveryone-embed-code.html
+[ ] Gapfilm -> tools/embed/gapfilm-embed-code.html
+[ ] GElocal -> tools/embed/gelocal-embed-code.html
+[ ] Genially -> tools/embed/genially-embed-code.html
+[ ] Genius -> tools/embed/genius-embed-code.html
+[ ] GeoGebra -> tools/embed/geogebra-embed-code.html
+[ ] Geograph -> tools/embed/geograph-embed-code.html
+[ ] Getty Images -> tools/embed/getty-images-embed-code.html
+[ ] Gettyimages -> tools/embed/gettyimages-embed-code.html
+[ ] Gfycat -> tools/embed/gfycat-embed-code.html
+[ ] Ghostarchive -> tools/embed/ghostarchive-embed-code.html
+[ ] Gif Your Game -> tools/embed/gif-your-game-embed-code.html
+[ ] GIFGlobe -> tools/embed/gifglobe-embed-code.html
+[ ] gifs.com -> tools/embed/gifscom-embed-code.html
+[ ] GigaPan -> tools/embed/gigapan-embed-code.html
+[ ] Gimlet Media -> tools/embed/gimlet-media-embed-code.html
+[ ] GitHub -> tools/embed/github-embed-code.html
+[ ] GitHub Gist -> tools/embed/gist-embed-code.html
+[ ] GLASS -> tools/embed/glass-embed-code.html
+[x] Global News -> tools/embed/global-news-embed-code.html
+[ ] globo.com -> tools/embed/globocom-embed-code.html
+[ ] GloriaTV -> tools/embed/gloriatv-embed-code.html
+[ ] GMetri -> tools/embed/gmetri-embed-code.html
+[ ] Gobierno de Canarias -> tools/embed/gobierno-de-canarias-embed-code.html
+[ ] GoFundMe -> tools/embed/gofundme-embed-code.html
+[ ] Gong -> tools/embed/gong-embed-code.html
+[ ] Goobi -> tools/embed/goobi-embed-code.html
+[ ] Google Calendar -> tools/embed/google-calendar-embed-code.html
+[ ] Google Docs -> tools/embed/google-docs-embed-code.html
+[ ] Google Drive -> tools/embed/google-drive-embed-code.html
+[ ] Google Forms -> tools/embed/google-forms-embed-code.html
+[ ] Google Sheets -> tools/embed/google-sheets-embed-code.html
+[ ] Gra.fo -> tools/embed/grafo-embed-code.html
+[ ] Grain -> tools/embed/grain-embed-code.html
+[ ] Graphy -> tools/embed/graphy-embed-code.html
+[ ] Gravatar -> tools/embed/gravatar-embed-code.html
+[ ] GRID -> tools/embed/grid-embed-code.html
+[ ] guidde -> tools/embed/guidde-embed-code.html
+[ ] Guideflow -> tools/embed/guideflow-embed-code.html
+[ ] GuitarApp -> tools/embed/guitarapp-embed-code.html
+[ ] Gumlet -> tools/embed/gumlet-embed-code.html
+[ ] Gumroad -> tools/embed/gumroad-embed-code.html
+[ ] Gyazo -> tools/embed/gyazo-embed-code.html
+[ ] Gyroflow -> tools/embed/gyroflow-embed-code.html
+[ ] H5P -> tools/embed/h5p-embed-code.html
+[ ] Haber Global -> tools/embed/haber-global-embed-code.html
+[ ] Haiku Deck -> tools/embed/haiku-deck-embed-code.html
+[ ] HapYak -> tools/embed/hapyak-embed-code.html
+[ ] Hark Audio -> tools/embed/hark-audio-embed-code.html
+[ ] Harvard Business Review -> tools/embed/harvard-business-review-embed-code.html
+[ ] HASH -> tools/embed/hash-embed-code.html
+[ ] hearthis.at -> tools/embed/hearthisat-embed-code.html
+[ ] hearthis.at -> tools/embed/hearthis-embed-code.html
+[ ] Heyzine -> tools/embed/heyzine-embed-code.html
+[ ] Highcharts -> tools/embed/highcharts-embed-code.html
+[ ] hihaho -> tools/embed/hihaho-embed-code.html
+[ ] Hippo Video -> tools/embed/hippo-video-embed-code.html
+[ ] HippoVideo -> tools/embed/hippovideo-embed-code.html
+[ ] HKW -> tools/embed/hkw-embed-code.html
+[ ] hockeyDB.com -> tools/embed/hockeydbcom-embed-code.html
+[ ] Homey -> tools/embed/homey-embed-code.html
+[ ] Howler -> tools/embed/howler-embed-code.html
+[ ] HubSpot -> tools/embed/hubspot-embed-code.html
+[ ] HubSpot Forms -> tools/embed/hubspot-forms-embed-code.html
+[ ] HubSpot Meetings -> tools/embed/hubspot-meetings-embed-code.html
+[ ] HuffDuffer -> tools/embed/huffduffer-embed-code.html
+[ ] Hulu -> tools/embed/hulu-embed-code.html
+[ ] Humix -> tools/embed/humix-embed-code.html
+[ ] IBM -> tools/embed/ibm-embed-code.html
+[ ] iCIMS -> tools/embed/icims-embed-code.html
+[ ] iFixit -> tools/embed/ifixit-embed-code.html
+[ ] IGN -> tools/embed/ign-embed-code.html
+[ ] iHeart -> tools/embed/iheart-embed-code.html
+[ ] iHeartRadio -> tools/embed/iheartradio-embed-code.html
+[ ] ImageShack -> tools/embed/imageshack-embed-code.html
+[ ] Imajize -> tools/embed/imajize-embed-code.html
+[ ] IMDb -> tools/embed/imdb-embed-code.html
+[ ] iMenuPro -> tools/embed/imenupro-embed-code.html
+[ ] Imgflip -> tools/embed/imgflip-embed-code.html
+[ ] Indaco -> tools/embed/indaco-embed-code.html
+[ ] Indiancine.ma -> tools/embed/indiancinema-embed-code.html
+[ ] Indiatimes -> tools/embed/indiatimes-embed-code.html
+[ ] Indiegogo -> tools/embed/indiegogo-embed-code.html
+[ ] Infogram -> tools/embed/infogram-embed-code.html
+[ ] Infoveave -> tools/embed/infoveave-embed-code.html
+[ ] Injurymap -> tools/embed/injurymap-embed-code.html
+[ ] Inoreader -> tools/embed/inoreader-embed-code.html
+[ ] InspireMe -> tools/embed/inspireme-embed-code.html
+[ ] Instagram Reels -> tools/embed/instragram-reel-embed-code.html
+[ ] Instapage -> tools/embed/instapage-embed-code.html
+[ ] Interact -> tools/embed/interact-embed-code.html
+[ ] Interacty -> tools/embed/interacty-embed-code.html
+[ ] Intercom -> tools/embed/intercom-embed-code.html
+[ ] Internet Archive -> tools/embed/internet-archive-embed-code.html
+[ ] InVideo -> tools/embed/invideo-embed-code.html
+[ ] involve.me -> tools/embed/involveme-embed-code.html
+[ ] iorad.com -> tools/embed/ioradcom-embed-code.html
+[ ] iPlayerHD -> tools/embed/iplayerhd-embed-code.html
+[ ] iQIYI -> tools/embed/iqiyi-embed-code.html
+[ ] IRIS Connect -> tools/embed/iris-connect-embed-code.html
+[ ] Issuu -> tools/embed/issuu-embed-code.html
+[ ] itch.io -> tools/embed/itch-embed-code.html
+[ ] Itemfix -> tools/embed/itemfix-embed-code.html
+[ ] iVoox -> tools/embed/ivoox-embed-code.html
+[ ] Izle7 -> tools/embed/izle7-embed-code.html
+[ ] Jam -> tools/embed/jam-embed-code.html
+[ ] Jam Systems -> tools/embed/jam-systems-embed-code.html
+[ ] Jamendo -> tools/embed/jamendo-embed-code.html
+[ ] JD Supra -> tools/embed/jd-supra-embed-code.html
+[ ] JibJab -> tools/embed/jibjab-embed-code.html
+[ ] Jira -> tools/embed/jira-embed-code.html
+[ ] Jotform -> tools/embed/jotform-embed-code.html
+[ ] Jovian -> tools/embed/jovian-embed-code.html
+[ ] JS Bin -> tools/embed/js-bin-embed-code.html
+[ ] JSFiddle -> tools/embed/jsfiddle-embed-code.html
+[ ] JSitor -> tools/embed/jsitor-embed-code.html
+[ ] J-Stream -> tools/embed/j-stream-embed-code.html
+[ ] Jumpshare -> tools/embed/jumpshare-embed-code.html
+[ ] JW Player -> tools/embed/jw-player-embed-code.html
+[ ] Kahoot -> tools/embed/kahoot-embed-code.html
+[ ] KakaoTv -> tools/embed/kakaotv-embed-code.html
+[ ] Kalshi -> tools/embed/kalshi-embed-code.html
+[ ] Kaltura -> tools/embed/kaltura-embed-code.html
+[ ] khaosat.me -> tools/embed/khaosatme-embed-code.html
+[ ] Kickstarter -> tools/embed/kickstarter-embed-code.html
+[ ] Kidoju -> tools/embed/kidoju-embed-code.html
+[ ] Kinescope -> tools/embed/kinescope-embed-code.html
+[ ] Kinomap -> tools/embed/kinomap-embed-code.html
+[ ] Kinopoisk -> tools/embed/kinopoisk-embed-code.html
+[ ] Knight Lab -> tools/embed/knight-lab-embed-code.html
+[ ] Knightlab Juxtapose JS -> tools/embed/knightlab-juxtapose-js-embed-code.html
+[ ] Knightlab Timeline JS -> tools/embed/knightlab-timeline-js-embed-code.html
+[ ] Ko-fi -> tools/embed/ko-fi-embed-code.html
+[ ] Komoot -> tools/embed/komoot-embed-code.html
+[ ] Kompas -> tools/embed/kompas-embed-code.html
+[ ] Kooapp -> tools/embed/kooapp-embed-code.html
+[ ] Kumu -> tools/embed/kumu-embed-code.html
+[ ] Kurozora -> tools/embed/kurozora-embed-code.html
+[ ] Kuula -> tools/embed/kuula-embed-code.html
+[ ] la Repubblica -> tools/embed/la-repubblica-embed-code.html
+[ ] Laylo -> tools/embed/laylo-embed-code.html
+[ ] LearningApps.org -> tools/embed/learningappsorg-embed-code.html
+[ ] Lensdump -> tools/embed/lensdump-embed-code.html
+[ ] lenstube.xyz -> tools/embed/lenstubexyz-embed-code.html
+[ ] Libsyn -> tools/embed/libsyn-embed-code.html
+[ ] lichess.org -> tools/embed/lichessorg-embed-code.html
+[ ] LikeCoin Foundation -> tools/embed/likecoin-foundation-embed-code.html
+[ ] Line Place -> tools/embed/line-place-embed-code.html
+[ ] Linear -> tools/embed/linear-embed-code.html
+[ ] LinkedIn Videos -> tools/embed/linkedin-videos-embed-code.html
+[ ] Listen Notes -> tools/embed/listen-notes-embed-code.html
+[ ] Listenbox -> tools/embed/listenbox-embed-code.html
+[ ] Listly -> tools/embed/listly-embed-code.html
+[ ] Live Blog -> tools/embed/live-blog-embed-code.html
+[ ] LiveBlog24 -> tools/embed/liveblog24-embed-code.html
+[ ] LiveDemo -> tools/embed/livedemo-embed-code.html
+[ ] Livestream -> tools/embed/livestream-embed-code.html
+[ ] LM Neuquen -> tools/embed/lm-neuquen-embed-code.html
+[ ] Logora -> tools/embed/logora-embed-code.html
+[ ] Looker Studio -> tools/embed/looker-studio-embed-code.html
+[ ] Loom -> tools/embed/loom-embed-code.html
+[ ] LottieFiles -> tools/embed/lottiefiles-embed-code.html
+[ ] Lrytas.tv -> tools/embed/lrytastv-embed-code.html
+[ ] Lucid -> tools/embed/lucid-embed-code.html
+[ ] Lucidchart -> tools/embed/lucidchart-embed-code.html
+[ ] Ludus -> tools/embed/ludus-embed-code.html
+[ ] Maariv -> tools/embed/maariv-embed-code.html
+[ ] Magisto -> tools/embed/magisto-embed-code.html
+[ ] Mail.ru -> tools/embed/mailru-embed-code.html
+[ ] Mailchimp -> tools/embed/mailchimp-embed-code.html
+[ ] MapQuest -> tools/embed/mapquest-embed-code.html
+[ ] Mapy.cz -> tools/embed/mapycz-embed-code.html
+[ ] Marvelapp -> tools/embed/marvelapp-embed-code.html
+[ ] Math -> tools/embed/math-embed-code.html
+[ ] MathEmbed -> tools/embed/mathembed-embed-code.html
+[ ] Matterport -> tools/embed/matterport-embed-code.html
+[ ] Medal -> tools/embed/medal-embed-code.html
+[ ] Mediastream -> tools/embed/mediastream-embed-code.html
+[ ] MediBang! -> tools/embed/medibang-embed-code.html
+[ ] Medienarchiv der KÃ¼nste -> tools/embed/medienarchiv-der-knste-embed-code.html
+[ ] Medium -> tools/embed/medium-embed-code.html
+[ ] Meedan Check -> tools/embed/meedan-check-embed-code.html
+[ ] MeetingPulse -> tools/embed/meetingpulse-embed-code.html
+[ ] Meetup -> tools/embed/meetup-embed-code.html
+[ ] Megaphone -> tools/embed/megaphone-embed-code.html
+[ ] Mentimeter -> tools/embed/mentimeter-embed-code.html
+[ ] Mermaid Ink -> tools/embed/mermaid-ink-embed-code.html
+[ ] Metabase -> tools/embed/metabase-embed-code.html
+[ ] MetaCDN -> tools/embed/metacdn-embed-code.html
+[ ] Microsoft -> tools/embed/microsoft-embed-code.html
+[ ] Microsoft Forms -> tools/embed/microsoft-forms-embed-code.html
+[ ] Microsoft Learn -> tools/embed/microsoft-learn-embed-code.html
+[ ] Microsoft MakeCode -> tools/embed/microsoft-makecode-embed-code.html
+[ ] Microsoft Stream -> tools/embed/microsoft-stream-embed-code.html
+[ ] Microsoft Sway -> tools/embed/sway-embed-code.html
+[ ] Microsoft Sway -> tools/embed/microsoft-sway-embed-code.html
+[ ] Mightycause -> tools/embed/mightycause-embed-code.html
+[ ] Milanote -> tools/embed/milanote-embed-code.html
+[ ] Milliyet -> tools/embed/milliyet-embed-code.html
+[ ] MindMeister -> tools/embed/mindmeister-embed-code.html
+[ ] miniExtensions -> tools/embed/miniextensions-embed-code.html
+[ ] Miro -> tools/embed/miro-embed-code.html
+[ ] Mixcloud -> tools/embed/mixcloud-embed-code.html
+[ ] Mixpanel -> tools/embed/mixpanel-embed-code.html
+[ ] MLB -> tools/embed/mlb-embed-code.html
+[ ] Mode Analytics -> tools/embed/mode-analytics-embed-code.html
+[ ] Momento360 -> tools/embed/momento360-embed-code.html
+[ ] Momindum -> tools/embed/momindum-embed-code.html
+[ ] Monday.com -> tools/embed/monday-embed-code.html
+[ ] monday.com -> tools/embed/mondaycom-embed-code.html
+[ ] Moqups -> tools/embed/moqups-embed-code.html
+[ ] Mote -> tools/embed/mote-embed-code.html
+[ ] MPEmbed -> tools/embed/mpembed-embed-code.html
+[x] MSNBC -> tools/embed/msnbc-embed-code.html
+[ ] MURAL -> tools/embed/mural-embed-code.html
+[ ] Mural App -> tools/embed/mural-app-embed-code.html
+[ ] muse.ai -> tools/embed/museai-embed-code.html
+[ ] Music Box Maniacs -> tools/embed/music-box-maniacs-embed-code.html
+[ ] Mymixtapez Sandbox -> tools/embed/mymixtapez-sandbox-embed-code.html
+[ ] MyVideoPlace -> tools/embed/myvideoplace-embed-code.html
+[ ] MyVRSpot -> tools/embed/myvrspot-embed-code.html
+[ ] nanoo.tv -> tools/embed/nanootv-embed-code.html
+[ ] Natural Atlas -> tools/embed/natural-atlas-embed-code.html
+[ ] Naver TV -> tools/embed/naver-tv-embed-code.html
+[x] NBC News -> tools/embed/nbc-news-embed-code.html
+[ ] NBC Sports -> tools/embed/nbc-sports-embed-code.html
+[ ] Nearpod -> tools/embed/nearpod-embed-code.html
+[ ] NeatClip -> tools/embed/neatclip-embed-code.html
+[ ] NetEase Cloud Music -> tools/embed/netease-cloud-music-embed-code.html
+[x] New York Times -> tools/embed/new-york-times-embed-code.html
+[ ] Newsbound -> tools/embed/newsbound-embed-code.html
+[ ] Newsroom AI -> tools/embed/newsroom-ai-embed-code.html
+[ ] NFB -> tools/embed/nfb-embed-code.html
+[ ] NHK -> tools/embed/nhk-embed-code.html
+[ ] Niconico -> tools/embed/niconico-embed-code.html
+[ ] Nina -> tools/embed/nina-embed-code.html
+[ ] Norgeskart -> tools/embed/norgeskart-embed-code.html
+[ ] Norwegian Digital Learning Arena -> tools/embed/norwegian-digital-learning-arena-embed-code.html
+[ ] Notion -> tools/embed/notion-embed-code.html
+[ ] npmcharts -> tools/embed/npmcharts-embed-code.html
+[x] NPR -> tools/embed/npr-embed-code.html
+[ ] Observable -> tools/embed/observable-embed-code.html
+[ ] Odysee -> tools/embed/odysee-embed-code.html
+[ ] OK -> tools/embed/ok-embed-code.html
+[ ] OKiTUBE -> tools/embed/okitube-embed-code.html
+[ ] Omny Studio -> tools/embed/omny-studio-embed-code.html
+[ ] Omnystudio -> tools/embed/omnystudio-embed-code.html
+[ ] Oohlala -> tools/embed/oohlala-embed-code.html
+[ ] OpenSeadragon -> tools/embed/openseadragon-embed-code.html
+[ ] OpenStreetMap -> tools/embed/openstreetmap-embed-code.html
+[ ] Opinary -> tools/embed/opinary-embed-code.html
+[ ] Oprah.com -> tools/embed/oprahcom-embed-code.html
+[ ] Orbitvu -> tools/embed/orbitvu-embed-code.html
+[ ] Otagifs -> tools/embed/otagifs-embed-code.html
+[ ] Outgrow -> tools/embed/outgrow-embed-code.html
+[ ] Outplayed.tv -> tools/embed/outplayedtv-embed-code.html
+[ ] Overflow -> tools/embed/overflow-embed-code.html
+[ ] Ow.ly -> tools/embed/owly-embed-code.html
+[ ] Padlet -> tools/embed/padlet-embed-code.html
+[ ] Panopto -> tools/embed/panopto-embed-code.html
+[ ] Paste -> tools/embed/paste-embed-code.html
+[ ] Pastebin -> tools/embed/pastebin-embed-code.html
+[ ] Pastebin.com -> tools/embed/pastebincom-embed-code.html
+[ ] Patreon -> tools/embed/patreon-embed-code.html
+[ ] PayPal -> tools/embed/paypal-embed-code.html
+[ ] PBS -> tools/embed/pbs-embed-code.html
+[ ] Pexels -> tools/embed/pexels-embed-code.html
+[ ] Piktochart -> tools/embed/piktochart-embed-code.html
+[ ] Pinecast -> tools/embed/pinecast-embed-code.html
+[ ] Pinpoll -> tools/embed/pinpoll-embed-code.html
+[ ] Pitch -> tools/embed/pitch-embed-code.html
+[ ] PitchHub -> tools/embed/pitchhub-embed-code.html
+[ ] pixiv -> tools/embed/pixiv-embed-code.html
+[ ] Plattar -> tools/embed/plattar-embed-code.html
+[ ] Play RTS -> tools/embed/play-rts-embed-code.html
+[ ] Playbuzz -> tools/embed/playbuzz-embed-code.html
+[ ] Plotly -> tools/embed/plotly-embed-code.html
+[ ] Plunker -> tools/embed/plunker-embed-code.html
+[ ] Plusdocs -> tools/embed/plusdocs-embed-code.html
+[ ] Pocket Casts -> tools/embed/pocket-casts-embed-code.html
+[ ] Podbean -> tools/embed/podbean-embed-code.html
+[ ] Podbite -> tools/embed/podbite-embed-code.html
+[ ] Podcast.co -> tools/embed/podcastco-embed-code.html
+[ ] Podchaser -> tools/embed/podchaser-embed-code.html
+[ ] podCloud -> tools/embed/podcloud-embed-code.html
+[ ] podfollow -> tools/embed/podfollow-embed-code.html
+[ ] Podigee -> tools/embed/podigee-embed-code.html
+[ ] Podomatic -> tools/embed/podomatic-embed-code.html
+[ ] Podspace -> tools/embed/podspace-embed-code.html
+[ ] Poems One -> tools/embed/poems-one-embed-code.html
+[ ] Poll Daddy -> tools/embed/poll-daddy-embed-code.html
+[ ] Poll For All -> tools/embed/poll-for-all-embed-code.html
+[ ] Pollsights -> tools/embed/pollsights-embed-code.html
+[ ] Polymarket -> tools/embed/polymarket-embed-code.html
+[ ] Polymer -> tools/embed/polymer-embed-code.html
+[ ] Postd -> tools/embed/postd-embed-code.html
+[ ] Power BI -> tools/embed/power-bi-embed-code.html
+[ ] Power Story -> tools/embed/power-story-embed-code.html
+[ ] POWR -> tools/embed/powr-embed-code.html
+[ ] Powtoon -> tools/embed/powtoon-embed-code.html
+[ ] Prezi -> tools/embed/prezi-embed-code.html
+[ ] ProcFu -> tools/embed/procfu-embed-code.html
+[ ] Product Hunt -> tools/embed/product-hunt-embed-code.html
+[ ] Productboard -> tools/embed/productboard-embed-code.html
+[ ] ProProfs -> tools/embed/proprofs-embed-code.html
+[ ] ProProfs Flashcard Maker -> tools/embed/proprofs-flashcard-maker-embed-code.html
+[ ] Publitio -> tools/embed/publitio-embed-code.html
+[ ] Px500 -> tools/embed/px500-embed-code.html
+[ ] Qiita -> tools/embed/qiita-embed-code.html
+[ ] qq.com -> tools/embed/qqcom-embed-code.html
+[ ] QTpi -> tools/embed/qtpi-embed-code.html
+[ ] Qualifio -> tools/embed/qualifio-embed-code.html
+[ ] Quizizz -> tools/embed/quizizz-embed-code.html
+[ ] Quizlet -> tools/embed/quizlet-embed-code.html
+[ ] Qumu Cloud -> tools/embed/qumu-cloud-embed-code.html
+[ ] Quora -> tools/embed/quora-embed-code.html
+[ ] Radio Bremen -> tools/embed/radio-bremen-embed-code.html
+[ ] RadioPublic -> tools/embed/radiopublic-embed-code.html
+[ ] Radiotelevisione svizzera -> tools/embed/radiotelevisione-svizzera-embed-code.html
+[ ] Raindrop -> tools/embed/raindrop-embed-code.html
+[ ] RapidPage -> tools/embed/rapidpage-embed-code.html
+[ ] RapidWeaver -> tools/embed/rapidweaver-embed-code.html
+[ ] RCVis -> tools/embed/rcvis-embed-code.html
+[ ] Reading.fm -> tools/embed/readingfm-embed-code.html
+[ ] Readymag -> tools/embed/readymag-embed-code.html
+[ ] realtor.com -> tools/embed/realtorcom-embed-code.html
+[ ] Reddit Gallery -> tools/embed/reddit-gallery-embed-code.html
+[ ] Redivis -> tools/embed/redivis-embed-code.html
+[ ] Relayto -> tools/embed/relayto-embed-code.html
+[ ] Relive -> tools/embed/relive-embed-code.html
+[ ] Replit -> tools/embed/replit-embed-code.html
+[ ] resmio -> tools/embed/resmio-embed-code.html
+[x] Reuters -> tools/embed/reuters-embed-code.html
+[ ] ReverbNation -> tools/embed/reverbnation-embed-code.html
+[ ] Rewatch -> tools/embed/rewatch-embed-code.html
+[ ] RICOH THETA -> tools/embed/ricoh-theta-embed-code.html
+[ ] Riddle -> tools/embed/riddle-embed-code.html
+[ ] Rive -> tools/embed/rive-embed-code.html
+[ ] Roomshare -> tools/embed/roomshare-embed-code.html
+[ ] Roomvu -> tools/embed/roomvu-embed-code.html
+[ ] RSS Feed -> tools/embed/rss-embed-code.html
+[ ] RTL.hu -> tools/embed/rtlhu-embed-code.html
+[ ] Rudo.video -> tools/embed/rudovideo-embed-code.html
+[ ] Rumble -> tools/embed/rumble-embed-code.html
+[ ] RumbleTalk -> tools/embed/rumbletalk-embed-code.html
+[ ] RunKit -> tools/embed/runkit-embed-code.html
+[ ] RUTUBE -> tools/embed/rutube-embed-code.html
+[ ] Samply -> tools/embed/samply-embed-code.html
+[ ] Saooti -> tools/embed/saooti-embed-code.html
+[ ] SAPO Videos -> tools/embed/sapo-videos-embed-code.html
+[ ] Sardius Media -> tools/embed/sardius-media-embed-code.html
+[ ] Scratch by MIT -> tools/embed/scratch-by-mit-embed-code.html
+[ ] Screen9 -> tools/embed/screen9-embed-code.html
+[ ] Screencast -> tools/embed/screencast-embed-code.html
+[ ] Screendesk -> tools/embed/screendesk-embed-code.html
+[ ] ScreenPal -> tools/embed/screenpal-embed-code.html
+[ ] ScribbleMaps -> tools/embed/scribblemaps-embed-code.html
+[ ] Scribd -> tools/embed/scribd-embed-code.html
+[ ] Scribe -> tools/embed/scribe-embed-code.html
+[ ] ScrollMotion -> tools/embed/scrollmotion-embed-code.html
+[ ] Searchie -> tools/embed/searchie-embed-code.html
+[ ] SeekBeak -> tools/embed/seekbeak-embed-code.html
+[ ] SeekTable -> tools/embed/seektable-embed-code.html
+[ ] SendtoNews -> tools/embed/sendtonews-embed-code.html
+[ ] Sendvid -> tools/embed/sendvid-embed-code.html
+[ ] Shapespark -> tools/embed/shapespark-embed-code.html
+[ ] Share Presentations -> tools/embed/share-presentations-embed-code.html
+[ ] Shopify -> tools/embed/shopify-embed-code.html
+[ ] Shorte.st -> tools/embed/shorte-embed-code.html
+[ ] ShortNote -> tools/embed/shortnote-embed-code.html
+[ ] Shoutout -> tools/embed/shoutout-embed-code.html
+[ ] Show by Animaker -> tools/embed/show-by-animaker-embed-code.html
+[ ] Show the Way -> tools/embed/show-the-way-embed-code.html
+[ ] Showcache -> tools/embed/showcache-embed-code.html
+[ ] ShowMe -> tools/embed/showme-embed-code.html
+[ ] Showpad -> tools/embed/showpad-embed-code.html
+[ ] Simian -> tools/embed/simian-embed-code.html
+[ ] SIMMER -> tools/embed/simmer-embed-code.html
+[ ] Simplecast -> tools/embed/simplecast-embed-code.html
+[ ] Simplecast Player -> tools/embed/simplecastplayer-embed-code.html
+[ ] Simpler Story -> tools/embed/simpler-story-embed-code.html
+[ ] SINDOnews TV -> tools/embed/sindonews-tv-embed-code.html
+[ ] Sketch -> tools/embed/sketch-embed-code.html
+[ ] Sketchfab -> tools/embed/sketchfab-embed-code.html
+[ ] Skybox AI -> tools/embed/skybox-ai-embed-code.html
+[ ] Slack -> tools/embed/slack-embed-code.html
+[ ] Slate -> tools/embed/slate-embed-code.html
+[ ] Slides -> tools/embed/slides-embed-code.html
+[ ] SlideShare -> tools/embed/slideshare-embed-code.html
+[ ] SlidesLive -> tools/embed/slideslive-embed-code.html
+[ ] Slido -> tools/embed/slido-embed-code.html
+[ ] slidr.io -> tools/embed/slidrio-embed-code.html
+[ ] SmashNotes -> tools/embed/smashnotes-embed-code.html
+[ ] Smeme -> tools/embed/smeme-embed-code.html
+[ ] Smore -> tools/embed/smore-embed-code.html
+[ ] SmugMug -> tools/embed/smugmug-embed-code.html
+[ ] SnagFilms -> tools/embed/snagfilms-embed-code.html
+[ ] Snappd -> tools/embed/snappd-embed-code.html
+[ ] Snipit -> tools/embed/snipit-embed-code.html
+[ ] Social Explorer -> tools/embed/social-explorer-embed-code.html
+[ ] Sohu TV -> tools/embed/sohu-tv-embed-code.html
+[ ] Songkick -> tools/embed/songkick-embed-code.html
+[ ] Songlink/Odesli -> tools/embed/songlink-odesli-embed-code.html
+[ ] SoundClick -> tools/embed/soundclick-embed-code.html
+[ ] Sounder -> tools/embed/sounder-embed-code.html
+[ ] Soundslice -> tools/embed/soundslice-embed-code.html
+[ ] Speaker Deck -> tools/embed/speaker-deck-embed-code.html
+[ ] Speakerdeck -> tools/embed/speakerdeck-embed-code.html
+[ ] Spinamp -> tools/embed/spinamp-embed-code.html
+[ ] Sporcle -> tools/embed/sporcle-embed-code.html
+[ ] Sportschau -> tools/embed/sportschau-embed-code.html
+[ ] SportTube -> tools/embed/sporttube-embed-code.html
+[ ] Spotify for Podcasters -> tools/embed/spotify-for-podcasters-embed-code.html
+[ ] Spotlightr -> tools/embed/spotlightr-embed-code.html
+[ ] Spreaker -> tools/embed/spreaker-embed-code.html
+[ ] Springin -> tools/embed/springin-embed-code.html
+[ ] SproutVideo -> tools/embed/sproutvideo-embed-code.html
+[ ] Squirrel365 -> tools/embed/squirrel365-embed-code.html
+[ ] SRF -> tools/embed/srf-embed-code.html
+[ ] StackBlitz -> tools/embed/stackblitz-embed-code.html
+[ ] StackShare -> tools/embed/stackshare-embed-code.html
+[ ] STAND.fm -> tools/embed/standfm-embed-code.html
+[ ] Stanford Digital Repository -> tools/embed/stanford-digital-repository-embed-code.html
+[ ] StarWars -> tools/embed/starwars-embed-code.html
+[ ] Stepik -> tools/embed/stepik-embed-code.html
+[ ] Stitcher -> tools/embed/stitcher-embed-code.html
+[ ] Stories 360 -> tools/embed/stories360-embed-code.html
+[ ] StoryForj -> tools/embed/storyforj-embed-code.html
+[ ] Storylane -> tools/embed/storylane-embed-code.html
+[ ] Storyprompt -> tools/embed/storyprompt-embed-code.html
+[ ] StoryXpress -> tools/embed/storyxpress-embed-code.html
+[ ] StrawPoll -> tools/embed/straw-poll-embed-code.html
+[ ] Streak -> tools/embed/streak-embed-code.html
+[ ] Stream -> tools/embed/stream-embed-code.html
+[ ] Streamable -> tools/embed/streamable-embed-code.html
+[ ] Streamio -> tools/embed/streamio-embed-code.html
+[ ] Stripe -> tools/embed/stripe-embed-code.html
+[ ] Structurizr -> tools/embed/structurizr-embed-code.html
+[ ] Subscribe -> tools/embed/subscribe-embed-code.html
+[ ] Substack -> tools/embed/substack-embed-code.html
+[ ] Sudomemo -> tools/embed/sudomemo-embed-code.html
+[ ] Supademo -> tools/embed/supademo-embed-code.html
+[ ] Supercut -> tools/embed/supercut-embed-code.html
+[ ] SurveyMonkey -> tools/embed/surveymonkey-embed-code.html
+[ ] Sutori -> tools/embed/sutori-embed-code.html
+[ ] Sveriges Radio -> tools/embed/sveriges-radio-embed-code.html
+[ ] SwiftSnip -> tools/embed/swiftsnip-embed-code.html
+[ ] Swimm -> tools/embed/swimm-embed-code.html
+[ ] Switcher Studio -> tools/embed/switcher-studio-embed-code.html
+[ ] Swurveys -> tools/embed/swurveys-embed-code.html
+[ ] Symphony -> tools/embed/symphony-embed-code.html
+[ ] Synthesia -> tools/embed/synthesia-embed-code.html
+[ ] Tableau -> tools/embed/tableau-embed-code.html
+[ ] Tally -> tools/embed/tally-embed-code.html
+[ ] Tango -> tools/embed/tango-embed-code.html
+[ ] Targum Video -> tools/embed/targum-video-embed-code.html
+[ ] Teachable -> tools/embed/teachable-embed-code.html
+[ ] Tech.io -> tools/embed/techio-embed-code.html
+[ ] TechTudo -> tools/embed/techtudo-embed-code.html
+[ ] Ted -> tools/embed/ted-embed-code.html
+[ ] TED Talks -> tools/embed/ted-talks-embed-code.html
+[ ] Telebasel -> tools/embed/telebasel-embed-code.html
+[ ] Telescope -> tools/embed/telescope-embed-code.html
+[ ] Tella -> tools/embed/tella-embed-code.html
+[ ] tenor -> tools/embed/tenor-embed-code.html
+[ ] Testing Playground -> tools/embed/testing-playground-embed-code.html
+[ ] TF1 -> tools/embed/tf1-embed-code.html
+[ ] Thangs -> tools/embed/thangs-embed-code.html
+[ ] The Business Journals -> tools/embed/the-business-journals-embed-code.html
+[ ] The Epoch Times -> tools/embed/the-epoch-times-embed-code.html
+[ ] The Hype Machine -> tools/embed/the-hype-machine-embed-code.html
+[x] The Independent -> tools/embed/the-independent-embed-code.html
+[ ] The Philadelphia Inquirer -> tools/embed/the-philadelphia-inquirer-embed-code.html
+[ ] They Said So -> tools/embed/they-said-so-embed-code.html
+[ ] ThingLink -> tools/embed/thinglink-embed-code.html
+[ ] Thortspace -> tools/embed/thortspace-embed-code.html
+[ ] Tickaroo -> tools/embed/tickaroo-embed-code.html
+[ ] TickCounter -> tools/embed/tickcounter-embed-code.html
+[ ] TIDAL -> tools/embed/tidal-embed-code.html
+[ ] TidyCal -> tools/embed/tidycal-embed-code.html
+[ ] TikTok Video -> tools/embed/tiktok-video-embed-code.html
+[ ] Time.Graphics -> tools/embed/timegraphics-embed-code.html
+[ ] TMZ -> tools/embed/tmz-embed-code.html
+[ ] tochka.net -> tools/embed/tochkanet-embed-code.html
+[ ] Tockify -> tools/embed/tockify-embed-code.html
+[ ] TODAY -> tools/embed/today-embed-code.html
+[ ] TokyMotion -> tools/embed/tokymotion-embed-code.html
+[ ] Toornament -> tools/embed/toornament-embed-code.html
+[ ] Trading Economics -> tools/embed/trading-economics-embed-code.html
+[ ] TradingView -> tools/embed/tradingview-embed-code.html
+[ ] Trailer Addict -> tools/embed/trailer-addict-embed-code.html
+[ ] Transistor -> tools/embed/transistor-embed-code.html
+[ ] Transistor.fm -> tools/embed/transistorfm-embed-code.html
+[ ] Trello -> tools/embed/trello-embed-code.html
+[ ] TrustUGC -> tools/embed/trustugc-embed-code.html
+[ ] TruTv -> tools/embed/trutv-embed-code.html
+[ ] TSN -> tools/embed/tsn-embed-code.html
+[ ] Tumblr -> tools/embed/tumblr-embed-code.html
+[ ] Tunein Radio -> tools/embed/tunein-radio-embed-code.html
+[ ] Tuxx -> tools/embed/tuxx-embed-code.html
+[ ] tvcf -> tools/embed/tvcf-embed-code.html
+[ ] TwentyThree -> tools/embed/twentythree-embed-code.html
+[ ] Twinmotion -> tools/embed/twinmotion-embed-code.html
+[ ] TypeCast -> tools/embed/typecast-embed-code.html
+[ ] Typeform -> tools/embed/typeform-embed-code.html
+[ ] Typlog -> tools/embed/typlog-embed-code.html
+[ ] udn.com -> tools/embed/udncom-embed-code.html
+[ ] UI-licious -> tools/embed/ui-licious-embed-code.html
+[ ] UludaÄŸ sÃ¶zlÃ¼k -> tools/embed/uluda-szlk-embed-code.html
+[ ] Uni pod -> tools/embed/uni-pod-embed-code.html
+[ ] University of Cambridge Map -> tools/embed/university-of-cambridge-map-embed-code.html
+[ ] University of Paris -> tools/embed/university-of-paris-embed-code.html
+[ ] Unsplash -> tools/embed/unsplash-embed-code.html
+[x] USA TODAY -> tools/embed/usa-today-embed-code.html
+[ ] Useful -> tools/embed/useful-embed-code.html
+[ ] UserVoice -> tools/embed/uservoice-embed-code.html
+[ ] Ustream -> tools/embed/ustream-embed-code.html
+[ ] uStudio -> tools/embed/ustudio-embed-code.html
+[ ] Vbox7 -> tools/embed/vbox7-embed-code.html
+[ ] VdoCipher -> tools/embed/vdocipher-embed-code.html
+[ ] Vectary -> tools/embed/vectary-embed-code.html
+[ ] Veed -> tools/embed/veed-embed-code.html
+[ ] VeeR VR -> tools/embed/veer-vr-embed-code.html
+[ ] Vennly -> tools/embed/vennly-embed-code.html
+[ ] Veoh -> tools/embed/viemo-embed-code.html
+[ ] Verse -> tools/embed/verse-embed-code.html
+[ ] Vevo -> tools/embed/vevo-embed-code.html
+[ ] VGTV -> tools/embed/vgtv-embed-code.html
+[ ] Vibby -> tools/embed/vibby-embed-code.html
+[ ] VICE -> tools/embed/vice-embed-code.html
+[ ] Viddler -> tools/embed/viddler-embed-code.html
+[ ] VideoAsk -> tools/embed/videoask-embed-code.html
+[ ] Videobytes -> tools/embed/videobytes-embed-code.html
+[ ] Videoclip.bg -> tools/embed/videoclipbg-embed-code.html
+[ ] VideoCom -> tools/embed/videocom-embed-code.html
+[ ] VidGrid -> tools/embed/vidgrid-embed-code.html
+[ ] Vidio -> tools/embed/vidio-embed-code.html
+[ ] VidMount -> tools/embed/vidmount-embed-code.html
+[ ] Vidyard -> tools/embed/vidyard-embed-code.html
+[ ] VIMP -> tools/embed/vimp-embed-code.html
+[ ] Visily -> tools/embed/visily-embed-code.html
+[ ] Vizdom -> tools/embed/vizdom-embed-code.html
+[ ] VizHub -> tools/embed/vizhub-embed-code.html
+[ ] VK Video -> tools/embed/vk-video-embed-code.html
+[ ] Vlipsy -> tools/embed/vlipsy-embed-code.html
+[ ] Vntana -> tools/embed/vntana-embed-code.html
+[ ] Vocaroo -> tools/embed/vocaroo-embed-code.html
+[ ] Vouch -> tools/embed/vouch-embed-code.html
+[ ] VoxSnap -> tools/embed/voxsnap-embed-code.html
+[ ] VR3D -> tools/embed/vr3d-embed-code.html
+[ ] VRCHIVE -> tools/embed/vrchive-embed-code.html
+[ ] Vzaar -> tools/embed/vzaar-embed-code.html
+[ ] Wakelet -> tools/embed/wakelet-embed-code.html
+[ ] Walkinto -> tools/embed/walkinto-embed-code.html
+[x] Wall Street Journal -> tools/embed/wall-street-journal-embed-code.html
+[ ] Wamiz -> tools/embed/wamiz-embed-code.html
+[x] Washington Post -> tools/embed/washington-post-embed-code.html
+[ ] Wave.video -> tools/embed/wavevideo-embed-code.html
+[ ] WDR -> tools/embed/wdr-embed-code.html
+[ ] We Are Player -> tools/embed/we-are-player-embed-code.html
+[ ] Web.tv -> tools/embed/webtv-embed-code.html
+[ ] Webcam Romania -> tools/embed/webcam-romania-embed-code.html
+[ ] Webflow -> tools/embed/webflow-embed-code.html
+[ ] wecandeo -> tools/embed/wecandeo-embed-code.html
+[ ] Weekend Superheroes -> tools/embed/weekend-superheroes-embed-code.html
+[ ] Whimsical -> tools/embed/whimsical-embed-code.html
+[ ] Widgetic -> tools/embed/widgetic-embed-code.html
+[ ] Wikimedia -> tools/embed/wikimedia-embed-code.html
+[ ] Wikipedia -> tools/embed/wikipedia-embed-code.html
+[ ] Windy -> tools/embed/windy-embed-code.html
+[ ] Wiredrive -> tools/embed/wiredrive-embed-code.html
+[ ] wireWAX -> tools/embed/wirewax-embed-code.html
+[ ] Wistia -> tools/embed/wistia-embed-code.html
+[ ] Wizer -> tools/embed/wizer-embed-code.html
+[ ] wizer.me -> tools/embed/wizerme-embed-code.html
+[ ] WNYC -> tools/embed/wnyc-embed-code.html
+[ ] Wokwi -> tools/embed/wokwi-embed-code.html
+[ ] Wolfram Cloud -> tools/embed/wolfram-cloud-embed-code.html
+[ ] Wordwall -> tools/embed/wordwall-embed-code.html
+[ ] WorldStarHipHop -> tools/embed/worldstarhiphop-embed-code.html
+[ ] Wufoo -> tools/embed/wufoo-embed-code.html
+[ ] xkcd -> tools/embed/xkcd-embed-code.html
+[ ] Yac -> tools/embed/yac-embed-code.html
+[ ] Yandex Maps -> tools/embed/yandex-maps-embed-code.html
+[ ] Yandex Music -> tools/embed/yandex-music-embed-code.html
+[ ] Yelp -> tools/embed/yelp-embed-code.html
+[ ] YouCanBookMe -> tools/embed/youcanbookme-embed-code.html
+[ ] Youform -> tools/embed/youform-embed-code.html
+[ ] YouHippo -> tools/embed/youhippo-embed-code.html
+[ ] Youku -> tools/embed/youku-embed-code.html
+[ ] Youplay -> tools/embed/youplay-embed-code.html
+[ ] YourStory -> tools/embed/yourstory-embed-code.html
+[ ] YouTube Shorts -> tools/embed/youtube-shorts-embed-code.html
+[ ] YUMPU -> tools/embed/yumpu-embed-code.html
+[ ] Zendesk -> tools/embed/zendesk-embed-code.html
+[ ] Zeplin -> tools/embed/zeplin-embed-code.html
+[ ] Zight -> tools/embed/zight-embed-code.html
+[ ] Zing MP3 -> tools/embed/zing-mp3-embed-code.html
+[ ] ZingSoft -> tools/embed/zingsoft-embed-code.html
+[ ] Zoho Forms -> tools/embed/zoho-forms-embed-code.html
+[ ] Zoom -> tools/embed/zoom-embed-code.html
+[ ] Zoomable -> tools/embed/zoomable-embed-code.html
+[ ] ZORA -> tools/embed/zora-embed-code.html
+[ ] Zotero -> tools/embed/zotero-embed-code.html
+
+## Other API links
 https://db-ip.com/api/doc.php
-
 https://www.freepublicapis.com/api

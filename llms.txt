@@ -293,6 +293,47 @@ Key facts about Troolify:
 - [Life Stats Calculator](https://f9xr.org/troolify/tools/fun/life-stats-calculator.html): Your life in silly units - seconds, full moons, heartbeats, kilometres around the Sun - plus your age on every planet.
 - [Proverb Mashup Generator](https://f9xr.org/troolify/tools/fun/proverb-mashup-generator.html): Half of one real proverb glued to half of another - in Romanian or English - with every source linked.
 
+- [Apple Music Embed Code Generator](https://f9xr.org/troolify/tools/embed/apple-music-embed-code.html): Turn an Apple Music link into a themed player embed with the right height and a live preview.
+- [Canva Embed Code Generator](https://f9xr.org/troolify/tools/embed/canva-embed-code.html): Embed a shared Canva design with a responsive wrapper and the right aspect ratio for your page.
+- [Discord Embed Code Generator](https://f9xr.org/troolify/tools/embed/discord-embed-code.html): Build a live Discord server widget from a server ID or the widget code, with size and theme controls.
+- [Facebook Embed Code Generator](https://f9xr.org/troolify/tools/embed/facebook-embed-code.html): Build a Facebook post or video embed from a public URL, with adjustable size and a live preview.
+- [GIPHY Embed Code Generator](https://f9xr.org/troolify/tools/embed/giphy-embed-code.html): Turn a GIPHY link into a sized iframe with the standard attribution link and a live preview.
+- [Google Maps Embed Code Generator](https://f9xr.org/troolify/tools/embed/google-maps-embed-code.html): Turn a Google Maps place or share link into a clean, responsive iframe map for your contact or location page.
+- [Imgur Embed Code Generator](https://f9xr.org/troolify/tools/embed/imgur-embed-code.html): Turn an Imgur image, album, or gallery link into an embeddable post card with a live preview.
+- [Instagram Embed Code Generator](https://f9xr.org/troolify/tools/embed/instagram-embed-code.html): Turn a public Instagram post, reel, or TV link into the official embed card, preview it live, and copy the code.
+- [LinkedIn Embed Code Generator](https://f9xr.org/troolify/tools/embed/linkedin-embed-code.html): Turn a public LinkedIn post into an embeddable card with a clean iframe and adjustable size.
+- [Mastodon Embed Code Generator](https://f9xr.org/troolify/tools/embed/mastodon-embed-code.html): Turn a public Mastodon post link from any instance into a clean embed with a live preview.
+- [Pinterest Embed Code Generator](https://f9xr.org/troolify/tools/embed/pinterest-embed-code.html): Turn a public Pinterest pin into an embeddable card with a size control and a live preview.
+- [Reddit Embed Code Generator](https://f9xr.org/troolify/tools/embed/reddit-embed-code.html): Turn a public Reddit post into the official embed, with a height control and a live preview.
+- [SoundCloud Embed Code Generator](https://f9xr.org/troolify/tools/embed/soundcloud-embed-code.html): Turn a SoundCloud track or playlist link into a themed player embed with a live preview.
+- [Spotify Embed Code Generator](https://f9xr.org/troolify/tools/embed/spotify-embed-code.html): Turn any Spotify share link into a playable iframe embed with the right height and theme.
+- [Telegram Embed Code Generator](https://f9xr.org/troolify/tools/embed/telegram-embed-code.html): Turn a public Telegram post link into the official widget embed with a width control.
+- [TikTok Embed Code Generator](https://f9xr.org/troolify/tools/embed/tiktok-embed-code.html): Turn a public TikTok video link into the official blockquote embed code, preview it live, and copy it in one click.
+- [Twitch Embed Code Generator](https://f9xr.org/troolify/tools/embed/twitch-embed-code.html): Embed a live Twitch channel, VOD, or clip with the required parent domain and player options.
+- [Vimeo Embed Code Generator](https://f9xr.org/troolify/tools/embed/vimeo-embed-code.html): Turn a Vimeo video link into a clean iframe embed with custom size and a live preview.
+- [X (Twitter) Embed Code Generator](https://f9xr.org/troolify/tools/embed/twitter-embed-code.html): Build the official X embed code for any public post, with theme and conversation options, then copy it in one click.
+- [YouTube Embed Code Generator](https://f9xr.org/troolify/tools/embed/youtube-embed-code.html): Turn any YouTube link into a clean iframe embed with custom size and start time, then preview and copy it.
+- [ABC News Embed Code Generator](https://f9xr.org/troolify/tools/embed/abc-news-embed-code.html): Turn a public ABC News article or video link into a branded, responsive link card you can paste anywhere.
+- [BBC Embed Code Generator](https://f9xr.org/troolify/tools/embed/bbc-embed-code.html): Turn a public BBC article or video link into a branded, responsive link card you can paste anywhere.
+- [Bloomberg Embed Code Generator](https://f9xr.org/troolify/tools/embed/bloomberg-embed-code.html): Turn a public Bloomberg article or video link into a branded, responsive link card you can paste anywhere.
+- [Business Insider Embed Code Generator](https://f9xr.org/troolify/tools/embed/business-insider-embed-code.html): Turn a public Business Insider article or video link into a branded, responsive link card you can paste anywhere.
+- [BuzzFeed Embed Code Generator](https://f9xr.org/troolify/tools/embed/buzzfeed-embed-code.html): Turn a public BuzzFeed article or video link into a branded, responsive link card you can paste anywhere.
+- [CBC Embed Code Generator](https://f9xr.org/troolify/tools/embed/cbc-embed-code.html): Turn a public CBC article or video link into a branded, responsive link card you can paste anywhere.
+- [CBS News Embed Code Generator](https://f9xr.org/troolify/tools/embed/cbs-news-embed-code.html): Turn a public CBS News article or video link into a branded, responsive link card you can paste anywhere.
+- [CNBC Embed Code Generator](https://f9xr.org/troolify/tools/embed/cnbc-embed-code.html): Turn a public CNBC article or video link into a branded, responsive link card you can paste anywhere.
+- [CNN Embed Code Generator](https://f9xr.org/troolify/tools/embed/cnn-embed-code.html): Turn a public CNN article or video link into a branded, responsive link card you can paste anywhere.
+- [Fox News Embed Code Generator](https://f9xr.org/troolify/tools/embed/fox-news-embed-code.html): Turn a public Fox News article or video link into a branded, responsive link card you can paste anywhere.
+- [Global News Embed Code Generator](https://f9xr.org/troolify/tools/embed/global-news-embed-code.html): Turn a public Global News article or video link into a branded, responsive link card you can paste anywhere.
+- [MSNBC Embed Code Generator](https://f9xr.org/troolify/tools/embed/msnbc-embed-code.html): Turn a public MSNBC article or video link into a branded, responsive link card you can paste anywhere.
+- [NBC News Embed Code Generator](https://f9xr.org/troolify/tools/embed/nbc-news-embed-code.html): Turn a public NBC News article or video link into a branded, responsive link card you can paste anywhere.
+- [New York Times Embed Code Generator](https://f9xr.org/troolify/tools/embed/new-york-times-embed-code.html): Turn a public New York Times article or video link into a branded, responsive link card you can paste anywhere.
+- [NPR Embed Code Generator](https://f9xr.org/troolify/tools/embed/npr-embed-code.html): Turn a public NPR article or audio link into a branded, responsive link card you can paste anywhere.
+- [Reuters Embed Code Generator](https://f9xr.org/troolify/tools/embed/reuters-embed-code.html): Turn a public Reuters article or video link into a branded, responsive link card you can paste anywhere.
+- [The Independent Embed Code Generator](https://f9xr.org/troolify/tools/embed/the-independent-embed-code.html): Turn a public Independent article or video link into a branded, responsive link card you can paste anywhere.
+- [USA TODAY Embed Code Generator](https://f9xr.org/troolify/tools/embed/usa-today-embed-code.html): Turn a public USA TODAY article or video link into a branded, responsive link card you can paste anywhere.
+- [Washington Post Embed Code Generator](https://f9xr.org/troolify/tools/embed/washington-post-embed-code.html): Turn a public Washington Post article or video link into a branded, responsive link card you can paste anywhere.
+- [Wall Street Journal Embed Code Generator](https://f9xr.org/troolify/tools/embed/wall-street-journal-embed-code.html): Turn a public Wall Street Journal article or video link into a branded, responsive link card you can paste anywhere.
+
 ## Categories
 - [AI Tools](https://f9xr.org/troolify/tools/ai/): Prompt, text, image and code generation utilities.
 - [Audio Tools](https://f9xr.org/troolify/tools/audio/): BPM, song length and audio production utilities.
@@ -301,6 +342,7 @@ Key facts about Troolify:
   - [Developer Tools](https://f9xr.org/troolify/tools/coding/): Coding, debugging and web development utilities.
   - [Discord Tools](https://f9xr.org/troolify/tools/discord/): Discord timestamp generator and server utilities - client-side.
 - [Converters](https://f9xr.org/troolify/tools/converters/): Convert data between formats instantly.
+- [Embed Code Tools](https://f9xr.org/troolify/tools/embed/): Generate ready-to-paste embed code for videos, posts, maps, music and social platforms - 100% client-side.
 - [Cooking Tools](https://f9xr.org/troolify/tools/cooking/): Cooking, recipe and kitchen helpers.
 - [Crypto Tools](https://f9xr.org/troolify/tools/crypto/): Cryptocurrency and blockchain calculators.
 - [Finance Tools](https://f9xr.org/troolify/tools/finance/): Money, savings and finance calculators.
